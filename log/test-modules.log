@@ -1,0 +1,249 @@
+/usr/bin/perl tools/build/modules-test.pl /home/coke/sandbox/star-ci/star/rakudo-star-daily /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 modules/MODULES.txt
+Testing modules/zavolaj...
+[22:36:58] t/01-argless.t ......... ok    19860 ms
+[22:37:20] t/02-simple-args.t ..... ok    22554 ms
+[22:37:30] t/03-simple-returns.t .. 
+Failed 1/7 subtests 
+[22:38:35] t/04-pointers.t ........ ok    64808 ms
+[22:38:47] t/05-arrays.t .......... ok    11745 ms
+[22:39:01] t/06-struct.t .......... ok    14654 ms
+[22:40:13] t/07-writebarrier.t .... ok    71464 ms
+[22:40:21] t/08-callbacks.t ....... ok     8184 ms
+[22:40:21]
+
+Test Summary Report
+-------------------
+t/03-simple-returns.t (Wstat: 11 Tests: 6 Failed: 0)
+  Non-zero wait status: 11
+  Parse errors: Bad plan.  You planned 7 tests but ran 6.
+Files=8, Tests=94, 223 wallclock secs ( 0.04 usr  0.00 sys + 12.18 cusr  0.56 csys = 12.78 CPU)
+Result: FAIL
+
+Testing modules/xml-writer...
+[22:40:30] t/escaping.t ... ok     8655 ms
+[22:40:35] t/structure.t .. ok     5562 ms
+[22:40:35]
+All tests successful.
+Files=2, Tests=11, 14 wallclock secs ( 0.02 usr  0.00 sys +  2.04 cusr  0.08 csys =  2.14 CPU)
+Result: PASS
+
+Testing modules/svg...
+[22:40:44] t/basics.t .. ok     4981 ms
+[22:40:44]
+All tests successful.
+Files=1, Tests=3,  5 wallclock secs ( 0.02 usr  0.00 sys +  0.86 cusr  0.06 csys =  0.94 CPU)
+Result: PASS
+
+Testing modules/svg-plot...
+[22:42:09] t/series.t .. ok    81979 ms
+[22:43:10] t/ticks.t ... ok    61260 ms
+[22:43:10]
+All tests successful.
+Files=2, Tests=10, 143 wallclock secs ( 0.02 usr  0.00 sys +  1.62 cusr  0.12 csys =  1.76 CPU)
+Result: PASS
+
+Testing modules/Math-RungeKutta...
+[22:43:22] t/01-rk-integrate.t .. ok    10565 ms
+[22:43:22]
+All tests successful.
+Files=1, Tests=6, 11 wallclock secs ( 0.02 usr  0.00 sys +  6.94 cusr  0.06 csys =  7.02 CPU)
+Result: PASS
+
+Testing modules/Math-Model...
+[22:43:46] t/basic.t .. ok    24592 ms
+[22:43:46]
+All tests successful.
+Files=1, Tests=6, 24 wallclock secs ( 0.02 usr  0.00 sys +  9.72 cusr  0.12 csys =  9.86 CPU)
+Result: PASS
+
+Testing modules/perl6-Term-ANSIColor...
+[22:43:57] t/00-load.t .. ok     6844 ms
+[22:43:57]
+All tests successful.
+Files=1, Tests=1,  6 wallclock secs ( 0.02 usr  0.00 sys +  0.56 cusr  0.04 csys =  0.62 CPU)
+Result: PASS
+
+Testing modules/test-mock...
+[22:44:12] t/returning.t .. ok    12409 ms
+[22:44:18] t/synopsis.t ... ok     5586 ms
+[22:45:03] t/with.t ....... ok    45459 ms
+[22:45:03]
+All tests successful.
+Files=3, Tests=13, 63 wallclock secs ( 0.02 usr  0.00 sys +  2.58 cusr  0.20 csys =  2.80 CPU)
+Result: PASS
+
+Testing modules/Grammar-Profiler-Simple...
+...no t/ directory found.
+
+Testing modules/grammar-debugger...
+[22:45:38] t/tracer.t .. ok    33923 ms
+[22:45:38]
+All tests successful.
+Files=1, Tests=1, 34 wallclock secs ( 0.02 usr  0.00 sys +  0.84 cusr  0.06 csys =  0.92 CPU)
+Result: PASS
+
+Testing modules/Perl6-MIME-Base64...
+[22:46:37] t/parrot.t .. ok    54038 ms
+[22:46:37]
+All tests successful.
+Files=1, Tests=9, 54 wallclock secs ( 0.00 usr  0.00 sys +  0.72 cusr  0.04 csys =  0.76 CPU)
+Result: PASS
+
+Testing modules/uri...
+[22:46:42] t/01.t ................... ok     4613 ms
+[22:46:44] t/escape.t ............... ok     1325 ms
+[22:46:45] t/november-urlencoded.t .. ok     1516 ms
+[22:46:47] t/rfc-3986-examples.t .... ok     1937 ms
+[22:46:47]
+All tests successful.
+Files=4, Tests=91,  9 wallclock secs ( 0.04 usr  0.00 sys +  7.34 cusr  0.26 csys =  7.64 CPU)
+Result: PASS
+
+Testing modules/perl6-lwp-simple...
+[22:46:49] t/000-load-module.t ............. ok     1254 ms
+[22:46:51] t/basic-auth.t .................. ok     2193 ms
+Cannot call 'match'; none of these signatures match:
+:(Cool:D : $target, *%adverbs)
+  in method match at src/gen/CORE.setting:2477
+  in block  at t/custom-headers-and-content.t:12
+
+[22:46:53] t/custom-headers-and-content.t .. 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+[22:46:55] t/get-binary-camelia.t .......... ok     1790 ms
+[22:48:36] t/get-chunked-6guts.t ........... ok   101159 ms
+[22:49:23] t/get-perl6-org.t ............... ok    46596 ms
+Cannot call 'match'; none of these signatures match:
+:(Cool:D : $target, *%adverbs)
+  in method match at src/gen/CORE.setting:2477
+  in block  at t/get-unsized.t:10
+
+[22:49:34] t/get-unsized.t ................. 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+[22:49:57] t/get-w3-latin1-utf8.t .......... ok    22525 ms
+[22:50:18] t/get-w3-redirect.t ............. ok    21749 ms
+[22:50:40] t/getstore.t .................... ok    21239 ms
+[22:50:49] t/parse-url.t ................... ok     8967 ms
+[22:50:54] t/socket-sanity.t ............... ok     5297 ms
+[22:50:55] t/stringify-headers.t ........... ok     1637 ms
+[22:50:55]
+
+Test Summary Report
+-------------------
+t/custom-headers-and-content.t (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/get-unsized.t               (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+Files=13, Tests=54, 248 wallclock secs ( 0.04 usr  0.00 sys + 107.74 cusr  1.34 csys = 109.12 CPU)
+Result: FAIL
+
+Testing modules/json...
+[22:50:58] t/01-parse.t ...... ok     2823 ms
+[22:51:01] t/02-structure.t .. ok     2643 ms
+[22:51:02] t/03-unicode.t .... ok     1206 ms
+[22:51:05] t/04-roundtrip.t .. ok     2976 ms
+[22:51:05]
+All tests successful.
+Files=4, Tests=119,  9 wallclock secs ( 0.04 usr  0.00 sys +  7.86 cusr  0.24 csys =  8.14 CPU)
+Result: PASS
+
+Testing modules/perl6-digest-md5...
+[22:51:38] t/0-load-module.t .. ok    18742 ms
+[22:51:53] t/perl5-compat.t ... ok    14502 ms
+[22:51:53]
+All tests successful.
+Files=2, Tests=7, 34 wallclock secs ( 0.02 usr  0.00 sys +  1.12 cusr  0.10 csys =  1.24 CPU)
+Result: PASS
+
+Testing modules/perl6-File-Tools...
+[22:52:11] t/01-file-find.t ...... ok     6615 ms
+[22:52:40] t/02-shell-command.t .. ok    29271 ms
+[22:52:40]
+All tests successful.
+Files=2, Tests=20, 36 wallclock secs ( 0.02 usr  0.00 sys +  2.30 cusr  0.14 csys =  2.46 CPU)
+Result: PASS
+
+Testing modules/panda...
+[22:52:58] t/panda/builder.t .... ok    16565 ms
+[22:53:02] t/panda/common.t ..... ok     4637 ms
+[22:53:42] t/panda/ecosystem.t .. ok    39614 ms
+[22:53:50] t/panda/fetcher.t .... ok     8017 ms
+[22:54:14] t/panda/installer.t .. ok    23862 ms
+[22:55:18] t/panda/tester.t ..... ok    63638 ms
+[22:55:28] t/stubs.t ............ ok    10382 ms
+[22:55:28]
+All tests successful.
+Files=7, Tests=51, 167 wallclock secs ( 0.04 usr  0.00 sys +  9.28 cusr  0.58 csys =  9.90 CPU)
+Result: PASS
+
+Testing modules/perl6-http-status...
+[22:55:40] t/01-basic.t .. ok    11587 ms
+[22:55:40]
+All tests successful.
+Files=1, Tests=4, 12 wallclock secs ( 0.02 usr  0.00 sys +  0.62 cusr  0.06 csys =  0.70 CPU)
+Result: PASS
+
+Testing modules/perl6-http-easy...
+...no t/ directory found.
+
+Testing modules/Template-Mojo...
+[22:55:53] t/00-basic.t .. ok    10360 ms
+[22:55:53]
+All tests successful.
+Files=1, Tests=18, 10 wallclock secs ( 0.02 usr  0.00 sys +  3.02 cusr  0.10 csys =  3.14 CPU)
+Result: PASS
+
+Testing modules/perl6-psgi...
+[22:55:58] t/encode-psgi-response.t .. ok     4834 ms
+[22:55:58]
+All tests successful.
+Files=1, Tests=24,  5 wallclock secs ( 0.02 usr  0.00 sys +  1.34 cusr  0.06 csys =  1.42 CPU)
+Result: PASS
+
+Testing modules/Bailador...
+[22:56:09] t/01-route-existance.t ... ok    11008 ms
+[22:56:16] t/02-response-status.t ... ok     6987 ms
+[22:56:28] t/03-response-content.t .. ok    12066 ms
+[22:57:22] t/04-templates.t ......... ok    53544 ms
+[22:57:27] t/05-post-content.t ...... ok     5195 ms
+[22:57:27]
+All tests successful.
+Files=5, Tests=19, 89 wallclock secs ( 0.04 usr  0.00 sys + 16.68 cusr  0.44 csys = 17.16 CPU)
+Result: PASS
+
+Testing modules/DBIish...
+[22:57:42] t/05-mock.t ........... ok    15196 ms
+[22:58:07] t/10-mysql.t .......... ok    24533 ms
+[22:58:11] t/25-mysql-common.t ... ok     4320 ms
+[22:58:35] t/30-Pg.t ............. ok    23962 ms
+[22:58:56] t/35-Pg-common.t ...... ok    21049 ms
+[22:59:43] t/40-sqlite-common.t .. ok    46546 ms
+[22:59:43]
+All tests successful.
+Files=6, Tests=218, 136 wallclock secs ( 0.06 usr  0.00 sys + 25.38 cusr  0.54 csys = 25.98 CPU)
+Result: PASS
+
+Testing modules/jsonrpc...
+[23:00:34] t/client.t .. ok    50469 ms
+[23:01:39] t/server.t .. ok    64975 ms
+[23:01:39]
+All tests successful.
+Files=2, Tests=68, 116 wallclock secs ( 0.04 usr  0.00 sys + 28.68 cusr  0.28 csys = 29.00 CPU)
+Result: PASS
+
+Testing modules/Pod-To-HTML...
+...no t/ directory found.
+
+Testing modules/doc...
+[23:03:16] t/typegraph.t .. ok    76697 ms
+[23:03:16]
+All tests successful.
+Files=1, Tests=8, 77 wallclock secs ( 0.04 usr  0.00 sys +  6.22 cusr  0.08 csys =  6.34 CPU)
+Result: PASS
+
+Testing modules/rakudo-debugger...
+...no t/ directory found.
+

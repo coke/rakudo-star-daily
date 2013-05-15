@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 
 # default to sysperl
 PATH=/usr/local/bin:$PATH

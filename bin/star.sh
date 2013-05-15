@@ -15,10 +15,10 @@ cd star
 make -f tools/star/Makefile
 
 # get submodules
-git submodule foreach git pull origin master
+git submodule foreach git pull origin master 2>&1 | tee submodule.log
 
 # make a release candidate
-make -f tools/star/Makefile release VERSION=daily
+make -f tools/star/Makefile release VERSION=daily 2>&1 | tee makefile.log
 
 # explode the release candidate
 tar xvf rakudo-star-daily.tar.gz

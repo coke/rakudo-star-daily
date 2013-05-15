@@ -9,7 +9,7 @@ LOG_DIR=`pwd`/log
 # start fresh
 rm -rf star
 
-git clone git@github.com:rakudo/star.git
+git clone git://github.com/rakudo/star.git
 cd star
 # get skeleton
 make -f tools/star/Makefile

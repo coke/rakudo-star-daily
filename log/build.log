@@ -20,8 +20,8 @@ cc -o src/pmc/perl6_group.so perl6_group.o src/pmc/*.o -fstack-protector -L/usr/
 /usr/bin/perl -MExtUtils::Command -e chmod 755 dynext/perl6_group.so
 cd src/ops && /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/ops2c C --dynamic perl6.ops
 # Parsing perl6.ops...
-# Parsed perl6.ops in 3.471 seconds; found 214 ops.
-# Ops parsed in 3.472 seconds.
+# Parsed perl6.ops in 3.456 seconds; found 214 ops.
+# Ops parsed in 3.457 seconds.
 cd src/ops && cc -c -o perl6_ops.o -I/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/include/parrot/5.2.0 -I/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/include/parrot/5.2.0/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Wmissing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Wmissing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g perl6_ops.c
 perl6_ops.c: In function ‘run_leave_phasers’:
 perl6_ops.c:138:10: warning: variable ‘oldctx’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
@@ -104,12 +104,12 @@ Linked: perl6
 The following step can take a long time, please be patient.
 ./perl6 --setting=NULL --optimize=3 --target=pir --stagestats --output=src/gen/CORE.setting.pir src/gen/CORE.setting
 Stage start      :   0.000
-Stage parse      : 157.110
+Stage parse      : 158.205
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :  17.291
-Stage post       :  51.881
-Stage pir        :   2.620
+Stage post       :  51.875
+Stage pir        :   2.674
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/parrot  -o CORE.setting.pbc src/gen/CORE.setting.pir
 ./perl6 --target=pir  --output=src/gen/RESTRICTED.setting.pir src/RESTRICTED.setting
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/parrot  -o RESTRICTED.setting.pbc src/gen/RESTRICTED.setting.pir
@@ -207,10 +207,10 @@ modules/perl6-File-Tools/lib/Shell/Command.pm => /home/coke/sandbox/star-ci/star
 modules/perl6-File-Tools/lib/File/Find.pm => /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/File/Find.pm
 == Installing modules/panda
 modules/panda/lib/Panda.pm => /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda.pm
-modules/panda/lib/Pies.pm => /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Pies.pm
 modules/panda/lib/Panda/Installer.pm => /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Installer.pm
-modules/panda/lib/Panda/Resources.pm => /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Resources.pm
+modules/panda/lib/Panda/Project.pm => /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Project.pm
 modules/panda/lib/Panda/Tester.pm => /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Tester.pm
+modules/panda/lib/Panda/App.pm => /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/App.pm
 modules/panda/lib/Panda/Builder.pm => /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Builder.pm
 modules/panda/lib/Panda/Fetcher.pm => /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Fetcher.pm
 modules/panda/lib/Panda/Ecosystem.pm => /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Ecosystem.pm
@@ -440,15 +440,15 @@ Obsolete use of | or \ with sigil on param $args
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Digest/MD5.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Digest/MD5.pm
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/File/Find.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/File/Find.pm
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Shell/Command.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Shell/Command.pm
-/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Pies.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Pies.pm
+/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Project.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Project.pm
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Ecosystem.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Ecosystem.pm
-/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Common.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Common.pm
-/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Resources.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Resources.pm
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Fetcher.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Fetcher.pm
+/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Common.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Common.pm
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Builder.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Builder.pm
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Tester.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Tester.pm
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Installer.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/Installer.pm
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda.pm
+/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/App.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/Panda/App.pm
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/HTTP/Status.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/HTTP/Status.pm6
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/HTTP/Easy.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/HTTP/Easy.pm6
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/perl6 --target=pir --output=/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/HTTP/Easy/PSGI.pir /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/lib/parrot/5.2.0/languages/perl6/lib/HTTP/Easy/PSGI.pm6

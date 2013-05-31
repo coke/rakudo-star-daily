@@ -20,8 +20,8 @@ cc -o src/vm/parrot/pmc/perl6_group.so perl6_group.o src/vm/parrot/pmc/*.o -fsta
 /usr/bin/perl -MExtUtils::Command -e chmod 755 dynext/perl6_group.so
 cd src/vm/parrot/ops && /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/ops2c C --dynamic perl6.ops
 # Parsing perl6.ops...
-# Parsed perl6.ops in 3.365 seconds; found 214 ops.
-# Ops parsed in 3.367 seconds.
+# Parsed perl6.ops in 3.386 seconds; found 214 ops.
+# Ops parsed in 3.387 seconds.
 cd src/vm/parrot/ops && cc -c -o perl6_ops.o -I/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/include/parrot/5.3.0 -I/home/coke/sandbox/star-ci/star/rakudo-star-daily/install/include/parrot/5.3.0/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Wmissing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Wmissing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g perl6_ops.c
 perl6_ops.c: In function 'run_leave_phasers':
 perl6_ops.c:138:10: warning: variable 'oldctx' might be clobbered by 'longjmp' or 'vfork' [-Wclobbered]
@@ -104,12 +104,12 @@ Linked: perl6
 The following step can take a long time, please be patient.
 ./perl6 --setting=NULL --optimize=3 --target=pir --stagestats --output=src/gen/CORE.setting.pir src/gen/CORE.setting
 Stage start      :   0.000
-Stage parse      : 162.057
+Stage parse      : 161.647
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :  19.252
-Stage post       :  54.446
-Stage pir        :   2.547
+Stage optimize   :  19.230
+Stage post       :  53.594
+Stage pir        :   2.645
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/parrot  -o CORE.setting.pbc src/gen/CORE.setting.pir
 ./perl6 --target=pir  --output=src/gen/RESTRICTED.setting.pir src/RESTRICTED.setting
 /home/coke/sandbox/star-ci/star/rakudo-star-daily/install/bin/parrot  -o RESTRICTED.setting.pbc src/gen/RESTRICTED.setting.pir

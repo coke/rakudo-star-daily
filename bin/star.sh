@@ -11,8 +11,16 @@ rm -rf star
 
 git clone git://github.com/rakudo/star.git
 cd star
-# get skeleton
-make -f tools/star/Makefile
+
+# get skeleton - don't use the default target, since we are building
+# nqp-latest and rakudo-latest. (but keeping the defined version of parrot)
+
+make -f tools/star/Makefile parrot
+git clone https://github.com/perl6/nqp.git
+(cd nqp && git ls-files > MANIFEST; git describe > VERSION)
+git clone https://github.com/rakudo/rakudo.git
+(cd rakudo && git ls-files > MANIFEST; git describe > VERSION)
+make -f tools/star/Makefile manifest
 
 # get submodules
 git submodule foreach git pull origin master 2>&1 | tee submodule.log

@@ -20,6 +20,12 @@ git clone https://github.com/perl6/nqp.git
 (cd nqp && git ls-files > MANIFEST; git describe > VERSION)
 git clone https://github.com/rakudo/rakudo.git
 (cd rakudo && git ls-files > MANIFEST; git describe > VERSION)
+
+# setup the modules to pull the latest, not just the declared version)
+git submodule init
+git submodule update
+(cd modules; for file in * ; do (cd $file && git pull origin master); done)
+
 make -f tools/star/Makefile manifest
 
 # get submodules

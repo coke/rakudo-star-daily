@@ -30,5 +30,4 @@ make install 2>&1 | tee $LOG_DIR/build.log
 
 # run tests
 make rakudo-test 2>&1 | tee $LOG_DIR/test-rakudo.log
-make rakudo-spectest 2>&1 | tee $LOG_DIR/test-roast.log
 make modules-test 2>&1 | tee $LOG_DIR/test-modules.log

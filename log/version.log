@@ -1,0 +1,255 @@
+Rakudo
+Edinburgh-126-gbb86d1a
+NQP
+2013.07-31-gfffd8ee
+modules
+--------
+Bailador
+commit f1bd96b1e312ab7771c14e57d4b13276a24abdca
+Author: Solomon Foster <colomon@gmail.com>
+Date:   Wed Feb 27 23:07:26 2013 -0500
+
+    Workaround for properly producing a capture list from a path in the latest Rakudo.
+--------
+DBIish
+commit 0a0c4918e65cebcfede63c9d05d81307cd5b4d8e
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sat Jul 27 14:09:55 2013 +0200
+
+    fix location DBDish::mysql
+--------
+Grammar-Profiler-Simple
+commit cdfcdbaee70645fbc8d4fa6c5651f899fa1c9a6c
+Author: Jonathan Scott Duff <duff@pobox.com>
+Date:   Fri May 24 22:47:38 2013 -0500
+
+    Export via proto
+--------
+MODULES.txt
+commit 56fe5467a8876beee297b37a66e3db9eba83116e
+Author: pmichaud <pmichaud@pobox.com>
+Date:   Fri May 31 00:09:35 2013 -0500
+
+    Correct announcement to read Parrot 5.3.0 .
+--------
+Math-Model
+commit 26cf7c66f929edc1eb546355cf11ec2dcdee2ed4
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Wed Apr 25 12:24:19 2012 +0200
+
+    &defined is now a listop
+--------
+Math-RungeKutta
+commit 0803818548d90fbc9e1a1091d88b8ca220d5aedd
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Apr 28 13:44:28 2011 +0200
+
+    fix META.info
+--------
+Perl6-MIME-Base64
+commit 42bb15693c8549fc411c4b5e578642fab28fa155
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Wed Jul 25 09:07:15 2012 +0300
+
+    update META.info
+--------
+Pod-To-HTML
+commit 33d38234c5702cb54abdb4c5dff457bbf4096dd4
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Fri Jul 19 15:26:38 2013 +0200
+
+    properly escape interanl links beginning with #
+--------
+Template-Mojo
+commit efb671855d546025e82330117ab5c65cd7146379
+Author: Gabor Szabo <szabgab@gmail.com>
+Date:   Wed Mar 13 23:39:45 2013 +0200
+
+    expected output for the test
+--------
+doc
+commit 57f924765d6ffc41c3cf88c4d1b26c55017fdefd
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Fri Jul 19 23:19:34 2013 +0200
+
+    make indents for the classtut explicit again.
+--------
+grammar-debugger
+commit 96c0c4626ab582d1a8825da5a58bdea89de7a13a
+Merge: 6076757 db4c9fa
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Sun Jun 23 05:46:39 2013 -0700
+
+    Merge pull request #3 from timo/master
+    
+    fix use of |$.
+
+commit db4c9fabebdf001ad8bcfd66994fcd9fd761aa7b
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Fri Mar 29 20:37:58 2013 +0100
+
+    fix obsolete use of |$.
+--------
+json
+commit 2fe251e12bdc213783e5bdce6ac02178f3449d8c
+Author: Carl Masak <cmasak@gmail.com>
+Date:   Wed Jun 5 15:58:42 2013 +0200
+
+    remove unnecessary <?> assertions
+    
+    These were ostensibly for proper whitespace handling, but removing them doesn't
+    make tests fail. My guess is that they were required in a previous ws regime,
+    but not any more.
+--------
+jsonrpc
+commit 53154492294ecceea0689f8d61f376fd69c07580
+Author: Pawel Pabian <bbkr@post.pl>
+Date:   Mon Jun 3 22:02:11 2013 +0200
+
+    Remove invalid url param from example where transport is provided.
+--------
+panda
+commit 7b2d7b2afbba9e7c5ff0b1d4425b6aa6a8a6fd66
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Sat Jul 13 16:46:52 2013 +0200
+
+    Chase File::Find changes and IO::Handle.copy deprecations
+--------
+perl6-File-Tools
+commit 21850b9b04a5cea38ec21185203828ecb484e071
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Sat Jul 13 16:46:01 2013 +0200
+
+    Dedeprecate Shell::Command copying
+--------
+perl6-Term-ANSIColor
+commit 8068020c6f29442d99617bc491a30d6d066a4a02
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Sat Apr 21 19:40:43 2012 +0200
+
+    Remove NYI syntax
+--------
+perl6-digest-md5
+commit 95d623fce0f8050b067a97e0732ad210b35ac4aa
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Aug 2 17:27:21 2012 +0200
+
+    Patch from moritz++ to run on current rakudo/parrot
+    
+    It now requires explicit signatures on all pir:: opcodes
+    (most are replaced with nqp:: variants by now)
+--------
+perl6-http-easy
+commit b1fd1c2dd43835f0f14bbdc53cf694ae71bb0318
+Author: Tim Totten <2010@huri.net>
+Date:   Wed May 29 22:19:34 2013 -0700
+
+    Removing hack, as it now breaks things.
+--------
+perl6-http-status
+commit 3830979517b6c343db36d84d04390f90c267b8bd
+Author: Timothy Totten <2010@huri.net>
+Date:   Fri Oct 19 16:17:49 2012 -0700
+
+    Optimized test for panda
+--------
+perl6-lwp-simple
+commit 47a7ad80d523253fc7d7f951e2678be2104d614a
+Merge: e7ba7b8 57460b5
+Author: Cosimo Streppone <cosimo@cpan.org>
+Date:   Fri May 24 01:41:30 2013 -0700
+
+    Merge pull request #23 from FROGGS/patch-2
+    
+    '?' is not a list quantifier anymore, unbreaks basic-auth.t
+
+commit 57460b53967c15a3c413c439c30283e219669a47
+Author: Tobias Leich <email@froggs.de>
+Date:   Fri May 24 10:36:19 2013 +0300
+
+    '?' is not a list quantifier anymore, unbreaks basic-auth.t
+--------
+perl6-psgi
+commit 0ca58449ef7301c3db060538b87078b9a0fc59ee
+Author: Timothy Totten <2010@huri.net>
+Date:   Mon Apr 29 12:30:56 2013 -0700
+
+    gitignore
+--------
+rakudo-debugger
+commit 31763150227b59d2e88a7e572158817be967c86c
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Thu Jun 6 16:10:02 2013 +0200
+
+    Add breakpoint setting in code with "#?BREAK".
+--------
+svg
+commit fb3dcff25535c922cea5b74c1d3bb03f15aa0eb8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Wed Apr 25 11:55:28 2012 +0200
+
+    get rid of redundant plan(*)
+--------
+svg-plot
+commit 6b2eb8e4546b0adf53631bac1f2f2a64b7a3896c
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Mon Mar 5 17:31:38 2012 +0100
+
+    Make the title font size in pie charts 150% of the legend font size
+--------
+test-mock
+commit 3e9f613db5caec21817dad56a76d2977aae73f97
+Merge: 47dc390 fb89bb8
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Fri May 3 14:09:22 2013 -0700
+
+    Merge pull request #4 from tadzik/patch-1
+    
+    Remove deprecated repo-url from META.info
+
+commit fb89bb8344ae329256800e9977b58cfa610e9018
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Fri May 3 17:31:13 2013 +0300
+
+    Remove deprecated repo-url from META.info
+--------
+ufo
+commit 027fa5a22465b56d54c2475631c687755486c70a
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Aug 1 18:53:35 2013 +0200
+
+    fix infinite recursion in dirwalk
+    
+    also remove two redundant tests
+--------
+uri
+commit 76df29dd8e4d6b670a9a79e32928513d50418c1d
+Author: Solomon Foster <colomon@pogo.(none)>
+Date:   Fri Apr 19 20:55:16 2013 -0400
+
+    Change META to point at this fork.
+--------
+xml-writer
+commit 43fb8e707cfbd773de9b125850b2326504d69fd5
+Merge: fe9ece3 e7ce475
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Fri Jun 8 03:24:32 2012 -0700
+
+    Merge pull request #2 from GlitchMr/panda-badge
+    
+    Add panda badge
+
+commit e7ce475cbd9bc678df6702de3fc25715d99e1532
+Author: GlitchMr <glitchmr@myopera.com>
+Date:   Fri Jun 8 11:48:06 2012 +0200
+
+    Add panda badge
+--------
+zavolaj
+commit 693b7050318ed7f1182b251ab6502c285da2e8ef
+Author: Anthony Parsons <flussence+git@gmail.com>
+Date:   Sat Jun 8 14:59:15 2013 +0100
+
+    s/p6decont/decont/g
+    
+    Fix for changes made in rakudo f19881b, gets all but 1 test passing again

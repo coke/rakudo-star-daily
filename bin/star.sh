@@ -28,8 +28,16 @@ git submodule update
 
 make -f tools/star/Makefile manifest
 
-# get submodules
+# get submodules # ??? is this doing anything?
 git submodule foreach git pull origin master 2>&1 | tee submodule.log
+
+# log the versions used on everything
+echo "Rakudo" > $LOG_DIR/version.log
+cat rakudo/VERSION >> $LOG_DIR/version.log
+echo "NQP"   >> $LOG_DIR/version.log
+cat nqp/VERSION >> $LOG_DIR/version.log
+echo "modules"  >> $LOG_DIR/version.log
+(cd modules; for file in * ; do echo "--------"; echo $file; (cd $file; git log HEAD^..HEAD); done) >> $LOG_DIR/version.log
 
 # make a release candidate
 make -f tools/star/Makefile release VERSION=daily 2>&1 | tee makefile.log

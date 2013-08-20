@@ -1,7 +1,7 @@
 Rakudo
-Edinburgh-255-g13f2f97
+Edinburgh-270-g932bfc8
 NQP
-2013.07-90-g210cd15
+2013.07-94-ge5f1cd4
 modules
 --------
 Bailador
@@ -170,11 +170,23 @@ Date:   Fri May 24 10:36:19 2013 +0300
     '?' is not a list quantifier anymore, unbreaks basic-auth.t
 --------
 perl6-psgi
-commit 0ca58449ef7301c3db060538b87078b9a0fc59ee
-Author: Timothy Totten <2010@huri.net>
-Date:   Mon Apr 29 12:30:56 2013 -0700
+commit 76bc8612ed8444366a1ef1d6aaef0a40861e6456
+Merge: 0ca5844 160fcb2
+Author: Timothy Totten <2009@huri.net>
+Date:   Mon Aug 19 13:16:51 2013 -0700
 
-    gitignore
+    Merge pull request #1 from softmoth/test-dups
+    
+    Fix test typos - check all combinations
+
+commit 160fcb28fa809b309b2f1b566b0619e8acf6adca
+Author: Tim Smith <tim.dolores@gmail.com>
+Date:   Thu Aug 1 22:44:50 2013 -0600
+
+    Fix test typos - check all combinations
+    
+    Change %headers to @headers to appropriately check all combinations
+    in each set of tests.
 --------
 rakudo-debugger
 commit 31763150227b59d2e88a7e572158817be967c86c

@@ -1,1 +1,30 @@
-make: *** No rule to make target `rakudo-test'.  Stop.
+cd rakudo && make test
+make[1]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/rakudo'
+/usr/bin/perl t/harness t/00-parrot t/01-sanity
+t/00-parrot/01-literals.t .......... ok
+t/00-parrot/02-op-math.t ........... ok
+t/00-parrot/03-op-logic.t .......... ok
+t/00-parrot/04-op-cmp.t ............ ok
+t/00-parrot/05-var.t ............... ok
+t/00-parrot/06-op-inplace.t ........ ok
+t/00-parrot/07-op-string.t ......... ok
+t/00-parrot/08-var-array.t ......... ok
+t/00-parrot/09-pir.t ............... ok
+t/00-parrot/10-regex.t ............. ok
+t/01-sanity/01-tap.t ............... ok
+t/01-sanity/02-counter.t ........... ok
+t/01-sanity/03-equal.t ............. ok
+t/01-sanity/04-if.t ................ ok
+t/01-sanity/05-sub.t ............... ok
+t/01-sanity/06-eqv.t ............... ok
+t/01-sanity/07-isa.t ............... ok
+t/01-sanity/08-simple-multisubs.t .. ok
+t/01-sanity/09-end-blocks.t ........ ok
+t/01-sanity/10-say.t ............... ok
+t/01-sanity/11-defined.t ........... ok
+t/01-sanity/12-try.t ............... ok
+t/01-sanity/99-test-basic.t ........ ok
+All tests successful.
+Files=23, Tests=274, 33 wallclock secs ( 0.12 usr  0.02 sys + 26.75 cusr  6.06 csys = 32.95 CPU)
+Result: PASS
+make[1]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/rakudo'

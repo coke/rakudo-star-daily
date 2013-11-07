@@ -47,7 +47,7 @@ tar xvf rakudo-star-daily.tar.gz
 
 # build it.
 cd rakudo-star-daily
-perl Configure.pl --gen-nqp --gen-parrot 2>&1 | tee $LOG_DIR/configure.log
+perl Configure.pl --backend=parrot --gen-nqp --gen-parrot 2>&1 | tee $LOG_DIR/configure.log
 make install 2>&1 | tee $LOG_DIR/build.log
 
 # run tests

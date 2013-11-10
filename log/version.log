@@ -1,7 +1,7 @@
 Rakudo
-Roederbergweg-156-gabdccca
+Roederbergweg-178-g783666c
 NQP
-2013.10-207-g1f83be8
+2013.10-210-g40d723f
 modules
 --------
 Bailador
@@ -28,11 +28,11 @@ Date:   Fri May 24 22:47:38 2013 -0500
     Export via proto
 --------
 MODULES.txt
-commit cc5c2b11fc2d90b56a46d336fcfb57b23faef396
+commit c84c728ee5c58ca263d2e8ee34fb5f795e1b6159
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Thu Nov 7 04:20:16 2013 +0100
+Date:   Sun Nov 10 13:40:45 2013 +0100
 
-    start to adapt build to multiple backends
+    update submodule revisions
 --------
 Math-Model
 commit 26cf7c66f929edc1eb546355cf11ec2dcdee2ed4
@@ -126,11 +126,14 @@ Date:   Sun Oct 27 14:00:44 2013 +0100
     fix whitespace parsing under new sigspace rules, Mouq++
 --------
 jsonrpc
-commit 62df043250fbaca15a77dcbe8d9dc3407600b61e
+commit a92f4015bc5b648b4010270bf081c60506a353bf
 Author: Pawel Pabian <bbkr@post.pl>
-Date:   Wed Sep 25 19:11:29 2013 +0200
+Date:   Sun Nov 10 01:04:02 2013 +0100
 
-    fixed https://github.com/bbkr/jsonrpc/issues/8
+    Fix deprecated .delete and .exists methods
+    
+    https://github.com/perl6/specs/commit/126dd3b3cca08f6e94bba9cc409520078c
+    35088d
 --------
 panda
 commit 9f2591b3b0445b294db631e2d5f317b8480dd1c2
@@ -197,14 +200,20 @@ Date:   Thu Aug 1 22:44:50 2013 -0600
     in each set of tests.
 --------
 rakudo-debugger
-commit 33b17a7e0a8972f12f9017dae37ed5af8d5b071a
-Author: jnthn <jnthn@jnthn.net>
-Date:   Thu Oct 3 16:16:25 2013 +0200
+commit 68db53fbc0cb827a8152b19aca30165d1655b810
+Merge: 33b17a7 78d3547
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Sat Nov 9 09:02:34 2013 -0800
 
-    Final code tweaks to support Parrot and JVM.
+    Merge pull request #17 from stmuk/master
     
-    Still need to get proper build/runner stuff in place for JVM, but that
-    should be all that's needed now.
+    typo fix
+
+commit 78d354720b2bfdabd9c9820e8c1c6be29ee21ff4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Sat Nov 9 16:42:44 2013 +0000
+
+    typo fix
 --------
 shell-command
 commit 8f6f80ff9ac0fd4d56172f1c8ae2d4b2c0db93e3

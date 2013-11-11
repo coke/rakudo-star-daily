@@ -1,87 +1,429 @@
-/usr/bin/perl tools/build/modules-test.pl /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily /perl6 modules/MODULES.txt
+/usr/bin/perl tools/build/modules-test.pl /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/bin/perl6-p modules/MODULES.txt
 Testing modules/zavolaj...
-Could not execute (/perl6 t/01-argless.t): open3: exec of /perl6 t/01-argless.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+t/01-argless.t ......... ok
+t/02-simple-args.t ..... ok
+t/03-simple-returns.t .. ok
+t/04-pointers.t ........ ok
+t/05-arrays.t .......... ok
+t/06-struct.t .......... ok
+t/07-writebarrier.t .... ok
+t/08-callbacks.t ....... ok
+All tests successful.
+Files=8, Tests=95, 25 wallclock secs ( 0.07 usr  0.01 sys + 20.70 cusr  3.46 csys = 24.24 CPU)
+Result: PASS
 
 Testing modules/xml-writer...
-Could not execute (/perl6 t/escaping.t): open3: exec of /perl6 t/escaping.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+
+use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+
+use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+
+t/escaping.t ... ok
+use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+
+use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+
+use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+
+t/structure.t .. ok
+All tests successful.
+Files=2, Tests=11,  4 wallclock secs ( 0.02 usr  0.01 sys +  3.66 cusr  0.78 csys =  4.47 CPU)
+Result: PASS
 
 Testing modules/svg...
-Could not execute (/perl6 t/basics.t): open3: exec of /perl6 t/basics.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+
+use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+
+t/basics.t .. ok
+All tests successful.
+Files=1, Tests=3,  2 wallclock secs ( 0.02 usr  0.01 sys +  1.60 cusr  0.28 csys =  1.91 CPU)
+Result: PASS
 
 Testing modules/svg-plot...
-Could not execute (/perl6 t/series.t): open3: exec of /perl6 t/series.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+t/series.t .. ok
+t/ticks.t ... ok
+All tests successful.
+Files=2, Tests=10,  4 wallclock secs ( 0.03 usr  0.00 sys +  3.29 cusr  0.47 csys =  3.79 CPU)
+Result: PASS
 
 Testing modules/Math-RungeKutta...
-Could not execute (/perl6 t/01-rk-integrate.t): open3: exec of /perl6 t/01-rk-integrate.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+t/01-rk-integrate.t .. ok
+All tests successful.
+Files=1, Tests=6, 15 wallclock secs ( 0.02 usr  0.01 sys + 14.67 cusr  0.72 csys = 15.42 CPU)
+Result: PASS
 
 Testing modules/Math-Model...
-Could not execute (/perl6 t/basic.t): open3: exec of /perl6 t/basic.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+Saw 1 call to deprecated code during execution.
+================================================================================
+Method exists (from EnumMap) called at:
+  /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Math/Model.pm, lines 63,65,46,48
+Please use the :exists adverb instead.
+--------------------------------------------------------------------------------
+Please contact the author to have these calls to deprecated code adapted,
+so that this message will disappear!
+t/basic.t .. ok
+All tests successful.
+Files=1, Tests=6, 21 wallclock secs ( 0.02 usr  0.00 sys + 20.36 cusr  1.00 csys = 21.38 CPU)
+Result: PASS
 
 Testing modules/perl6-Term-ANSIColor...
-Could not execute (/perl6 t/00-load.t): open3: exec of /perl6 t/00-load.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+t/00-load.t .. ok
+All tests successful.
+Files=1, Tests=1,  1 wallclock secs ( 0.02 usr  0.01 sys +  0.93 cusr  0.26 csys =  1.22 CPU)
+Result: PASS
 
 Testing modules/test-mock...
-Could not execute (/perl6 t/returning.t): open3: exec of /perl6 t/returning.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+t/returning.t .. ok
+t/synopsis.t ... ok
+t/with.t ....... ok
+All tests successful.
+Files=3, Tests=13,  6 wallclock secs ( 0.03 usr  0.01 sys +  4.28 cusr  0.91 csys =  5.23 CPU)
+Result: PASS
 
 Testing modules/Grammar-Profiler-Simple...
-Could not execute (/perl6 t/csv.t): open3: exec of /perl6 t/csv.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+t/csv.t .. ok
+All tests successful.
+Files=1, Tests=15,  3 wallclock secs ( 0.02 usr  0.00 sys +  3.28 cusr  0.52 csys =  3.82 CPU)
+Result: PASS
 
 Testing modules/grammar-debugger...
-Could not execute (/perl6 t/tracer.t): open3: exec of /perl6 t/tracer.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+t/tracer.t .. ok
+All tests successful.
+Files=1, Tests=1,  2 wallclock secs ( 0.02 usr  0.00 sys +  1.48 cusr  0.34 csys =  1.84 CPU)
+Result: PASS
 
 Testing modules/Perl6-MIME-Base64...
-Could not execute (/perl6 t/basic.t): open3: exec of /perl6 t/basic.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+t/basic.t .. ok
+All tests successful.
+Files=1, Tests=18,  5 wallclock secs ( 0.02 usr  0.01 sys +  4.50 cusr  0.30 csys =  4.83 CPU)
+Result: PASS
 
 Testing modules/uri...
 ...no t/ directory found.
 
 Testing modules/perl6-lwp-simple...
-Could not execute (/perl6 t/000-load-module.t): open3: exec of /perl6 t/000-load-module.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+===SORRY!===
+Could not find URI in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/000-load-module.t ............. 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+===SORRY!===
+Could not find URI in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/basic-auth.t .................. 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+===SORRY!===
+Could not find URI in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/custom-headers-and-content.t .. 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+===SORRY!===
+Could not find URI in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/get-binary-camelia.t .......... 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+===SORRY!===
+Could not find URI in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/get-chunked-6guts.t ........... 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+===SORRY!===
+Could not find URI in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/get-perl6-org.t ............... 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+===SORRY!===
+Could not find URI in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/get-unsized.t ................. 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+===SORRY!===
+Could not find URI in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/get-w3-latin1-utf8.t .......... 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+===SORRY!===
+Could not find URI in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/get-w3-redirect.t ............. 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+===SORRY!===
+Could not find URI in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/getstore.t .................... 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+===SORRY!===
+Could not find URI in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/parse-url.t ................... 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+t/socket-sanity.t ............... ok
+===SORRY!===
+Could not find URI in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/stringify-headers.t ........... 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+
+Test Summary Report
+-------------------
+t/000-load-module.t           (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/basic-auth.t                (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/custom-headers-and-content.t (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/get-binary-camelia.t        (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/get-chunked-6guts.t         (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/get-perl6-org.t             (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/get-unsized.t               (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/get-w3-latin1-utf8.t        (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/get-w3-redirect.t           (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/getstore.t                  (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/parse-url.t                 (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/stringify-headers.t         (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+Files=13, Tests=2, 38 wallclock secs ( 0.06 usr  0.02 sys + 32.66 cusr  4.32 csys = 37.06 CPU)
+Result: FAIL
 
 Testing modules/json...
-Could not execute (/perl6 t/01-parse.t): open3: exec of /perl6 t/01-parse.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+t/01-parse.t ...... ok
+t/02-structure.t .. ok
+t/03-unicode.t .... ok
+t/04-roundtrip.t .. ok
+All tests successful.
+Files=4, Tests=119, 14 wallclock secs ( 0.05 usr  0.01 sys + 12.44 cusr  1.50 csys = 14.00 CPU)
+Result: PASS
 
 Testing modules/perl6-digest-md5...
-Could not execute (/perl6 t/0-load-module.t): open3: exec of /perl6 t/0-load-module.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+t/0-load-module.t .. ok
+t/perl5-compat.t ... ok
+All tests successful.
+Files=2, Tests=7,  2 wallclock secs ( 0.01 usr  0.02 sys +  1.95 cusr  0.47 csys =  2.45 CPU)
+Result: PASS
 
 Testing modules/file-find...
-Could not execute (/perl6 t/01-file-find.t): open3: exec of /perl6 t/01-file-find.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+t/01-file-find.t .. ok
+All tests successful.
+Files=1, Tests=10,  7 wallclock secs ( 0.02 usr  0.00 sys +  6.06 cusr  0.48 csys =  6.56 CPU)
+Result: PASS
 
 Testing modules/shell-command...
-Could not execute (/perl6 t/02-shell-command.t): open3: exec of /perl6 t/02-shell-command.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+t/02-shell-command.t .. ok
+All tests successful.
+Files=1, Tests=12,  5 wallclock secs ( 0.02 usr  0.02 sys +  4.61 cusr  0.54 csys =  5.19 CPU)
+Result: PASS
 
 Testing modules/panda...
-Could not execute (/perl6 t/builder.t): open3: exec of /perl6 t/builder.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+t/builder.t .... ok
+t/common.t ..... ok
+use of uninitialized value of type Any in string context  in sub warn at gen/parrot/CORE.setting:674
+
+use of uninitialized value of type Any in string context  in sub warn at gen/parrot/CORE.setting:674
+
+use of uninitialized value of type Any in string context  in sub warn at gen/parrot/CORE.setting:674
+
+t/ecosystem.t .. ok
+Copying blib/lib/bar.pod to /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/modules/panda/removeme/lib/bar.pod
+Copying blib/lib/foo.pm to /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/modules/panda/removeme/lib/foo.pm
+Copying blib/lib/foo.jar to /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/modules/panda/removeme/lib/foo.jar
+Copying blib/lib/baz.js to /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/modules/panda/removeme/lib/baz.js
+Copying blib/lib/foo.pir to /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/modules/panda/removeme/lib/foo.pir
+Copying bin/bar to /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/modules/panda/removeme/bin/bar
+t/installer.t .. ok
+t/tester.t ..... ok
+All tests successful.
+Files=5, Tests=33, 24 wallclock secs ( 0.03 usr  0.02 sys + 21.00 cusr  3.16 csys = 24.21 CPU)
+Result: PASS
 
 Testing modules/perl6-http-status...
-Could not execute (/perl6 t/01-basic.t): open3: exec of /perl6 t/01-basic.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+Saw 1 call to deprecated code during execution.
+================================================================================
+Method exists (from EnumMap) called at:
+  /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/HTTP/Status.pm6, line 82
+Please use the :exists adverb instead.
+--------------------------------------------------------------------------------
+Please contact the author to have these calls to deprecated code adapted,
+so that this message will disappear!
+t/01-basic.t .. ok
+All tests successful.
+Files=1, Tests=4,  1 wallclock secs ( 0.02 usr  0.00 sys +  1.26 cusr  0.29 csys =  1.57 CPU)
+Result: PASS
 
 Testing modules/PSGI...
-Could not execute (/perl6 t/encode-psgi-response.t): open3: exec of /perl6 t/encode-psgi-response.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+Saw 1 call to deprecated code during execution.
+================================================================================
+Method exists (from EnumMap) called at:
+  /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/HTTP/Status.pm6, line 82
+Please use the :exists adverb instead.
+--------------------------------------------------------------------------------
+Please contact the author to have these calls to deprecated code adapted,
+so that this message will disappear!
+t/encode-psgi-response.t .. ok
+All tests successful.
+Files=1, Tests=24,  5 wallclock secs ( 0.02 usr  0.01 sys +  4.32 cusr  0.33 csys =  4.68 CPU)
+Result: PASS
 
 Testing modules/perl6-http-easy...
 ...no t/ directory found.
 
 Testing modules/Template-Mojo...
-Could not execute (/perl6 t/00-basic.t): open3: exec of /perl6 t/00-basic.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+
+t/00-basic.t .. ok
+All tests successful.
+Files=1, Tests=18,  6 wallclock secs ( 0.03 usr  0.00 sys +  5.84 cusr  0.36 csys =  6.23 CPU)
+Result: PASS
 
 Testing modules/perl6-psgi...
-Could not execute (/perl6 t/encode-psgi-response.t): open3: exec of /perl6 t/encode-psgi-response.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+Saw 1 call to deprecated code during execution.
+================================================================================
+Method exists (from EnumMap) called at:
+  /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/HTTP/Status.pm6, line 82
+Please use the :exists adverb instead.
+--------------------------------------------------------------------------------
+Please contact the author to have these calls to deprecated code adapted,
+so that this message will disappear!
+t/encode-psgi-response.t .. ok
+All tests successful.
+Files=1, Tests=24,  5 wallclock secs ( 0.02 usr  0.01 sys +  4.38 cusr  0.32 csys =  4.73 CPU)
+Result: PASS
 
 Testing modules/Bailador...
-Could not execute (/perl6 t/01-route-existance.t): open3: exec of /perl6 t/01-route-existance.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+===SORRY!===
+Could not find URI::Escape in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/01-route-existance.t ... 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+===SORRY!===
+Could not find URI::Escape in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/02-response-status.t ... 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+===SORRY!===
+Could not find URI::Escape in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/03-response-content.t .. 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+===SORRY!===
+Could not find URI::Escape in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/04-templates.t ......... 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+===SORRY!===
+Could not find URI::Escape in any of: /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/05-post-content.t ...... 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+
+Test Summary Report
+-------------------
+t/01-route-existance.t (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/02-response-status.t (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/03-response-content.t (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/04-templates.t       (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+t/05-post-content.t    (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+Files=5, Tests=0,  8 wallclock secs ( 0.04 usr  0.00 sys +  6.20 cusr  1.72 csys =  7.96 CPU)
+Result: FAIL
 
 Testing modules/DBIish...
-Could not execute (/perl6 t/05-mock.t): open3: exec of /perl6 t/05-mock.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+t/05-mock.t ........... ok
+t/10-mysql.t .......... ok
+t/25-mysql-common.t ... ok
+t/30-Pg.t ............. ok
+t/35-Pg-common.t ...... ok
+t/40-sqlite-common.t .. ok
+All tests successful.
+Files=6, Tests=218, 45 wallclock secs ( 0.05 usr  0.02 sys + 42.47 cusr  2.32 csys = 44.86 CPU)
+Result: PASS
 
 Testing modules/jsonrpc...
-Could not execute (/perl6 t/client.t): open3: exec of /perl6 t/client.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+===SORRY!===
+Could not find URI in any of: lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/site/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/vendor/lib, /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib, /home/coke/.perl6/Roederbergweg-189-g2c40f65/lib
+t/client.t .. 
+Dubious, test returned 1 (wstat 256, 0x100)
+No subtests run 
+t/server.t .. ok
+
+Test Summary Report
+-------------------
+t/client.t (Wstat: 256 Tests: 0 Failed: 0)
+  Non-zero exit status: 1
+  Parse errors: No plan found in TAP output
+Files=2, Tests=29, 27 wallclock secs ( 0.03 usr  0.01 sys + 25.79 cusr  1.18 csys = 27.01 CPU)
+Result: FAIL
 
 Testing modules/Pod-To-HTML...
 ...no t/ directory found.
 
 Testing modules/doc...
-Could not execute (/perl6 t/typegraph.t): open3: exec of /perl6 t/typegraph.t failed at /usr/share/perl/5.14/TAP/Parser/Iterator/Process.pm line 168.
+t/typegraph.t .. ok
+All tests successful.
+Files=1, Tests=8, 12 wallclock secs ( 0.02 usr  0.00 sys + 11.02 cusr  0.84 csys = 11.88 CPU)
+Result: PASS
 
 Testing modules/rakudo-debugger...
 ...no t/ directory found.

@@ -1,7 +1,7 @@
 Rakudo
 Roederbergweg-207-g9f06098
 NQP
-2013.10-229-geada3ad
+2013.10-233-g75a03f2
 modules
 --------
 Bailador
@@ -28,11 +28,11 @@ Date:   Fri May 24 22:47:38 2013 -0500
     Export via proto
 --------
 MODULES.txt
-commit e31918b22f343c5d19f61c7a95642112145f4213
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Tue Nov 12 21:24:50 2013 +0100
+commit 517cc3765ce6d2d8178f7aabe584e14a55ea0fcd
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Wed Nov 13 20:37:18 2013 +0100
 
-    check out an actually existing commit in uri/
+    update MIME::Base64 to a version that hopefully precompiles
 --------
 Math-Model
 commit 26cf7c66f929edc1eb546355cf11ec2dcdee2ed4
@@ -68,11 +68,14 @@ Date:   Thu Aug 1 22:44:50 2013 -0600
     in each set of tests.
 --------
 Perl6-MIME-Base64
-commit 325bc86212eeed9c4e098ad31c28c2c9f792bcff
-Author: Andrew Egeler <root+github@retupmoca.com>
-Date:   Fri Nov 1 02:23:04 2013 -0400
+commit f5c25b20bbb9a334f487f48c9cd4cd98ccb25f8a
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Wed Nov 13 20:34:12 2013 +0100
 
-    more readme tweaks
+    workaround for automatic dependency detection
+    
+    it seems that "require" is not enough to bring our tools to precompile the
+    modules we need first
 --------
 Pod-To-HTML
 commit 33d38234c5702cb54abdb4c5dff457bbf4096dd4

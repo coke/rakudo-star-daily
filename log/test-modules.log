@@ -9,49 +9,49 @@ t/06-struct.t .......... ok
 t/07-writebarrier.t .... ok
 t/08-callbacks.t ....... ok
 All tests successful.
-Files=8, Tests=95, 21 wallclock secs ( 0.04 usr  0.02 sys + 18.46 cusr  2.83 csys = 21.35 CPU)
+Files=8, Tests=95, 23 wallclock secs ( 0.06 usr  0.01 sys + 18.84 cusr  3.00 csys = 21.91 CPU)
 Result: PASS
 
 Testing modules/xml-writer...
-use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+use of uninitialized value of type Nil in numeric context  in method serialize at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/XML/Writer.pm:9
 
-use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+use of uninitialized value of type Nil in numeric context  in method serialize at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/XML/Writer.pm:9
 
-use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+use of uninitialized value of type Nil in numeric context  in method serialize at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/XML/Writer.pm:9
 
 t/escaping.t ... ok
-use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+use of uninitialized value of type Nil in numeric context  in method serialize at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/XML/Writer.pm:12
 
-use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+use of uninitialized value of type Nil in numeric context  in method serialize at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/XML/Writer.pm:9
 
-use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+use of uninitialized value of type Nil in numeric context  in method serialize at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/XML/Writer.pm:9
 
 t/structure.t .. ok
 All tests successful.
-Files=2, Tests=11,  4 wallclock secs ( 0.02 usr  0.01 sys +  3.32 cusr  0.67 csys =  4.02 CPU)
+Files=2, Tests=11,  4 wallclock secs ( 0.02 usr  0.01 sys +  3.42 cusr  0.70 csys =  4.15 CPU)
 Result: PASS
 
 Testing modules/svg...
-use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+use of uninitialized value of type Nil in numeric context  in method serialize at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/XML/Writer.pm:9
 
-use of uninitialized value of type Nil in numeric context  in sub warn at gen/parrot/CORE.setting:674
+use of uninitialized value of type Nil in numeric context  in method serialize at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/XML/Writer.pm:9
 
 t/basics.t .. ok
 All tests successful.
-Files=1, Tests=3,  2 wallclock secs ( 0.02 usr  0.01 sys +  1.68 cusr  0.30 csys =  2.01 CPU)
+Files=1, Tests=3,  2 wallclock secs ( 0.01 usr  0.00 sys +  1.53 cusr  0.26 csys =  1.80 CPU)
 Result: PASS
 
 Testing modules/svg-plot...
 t/series.t .. ok
 t/ticks.t ... ok
 All tests successful.
-Files=2, Tests=10,  4 wallclock secs ( 0.03 usr  0.00 sys +  3.19 cusr  0.44 csys =  3.66 CPU)
+Files=2, Tests=10,  3 wallclock secs ( 0.02 usr  0.01 sys +  2.91 cusr  0.48 csys =  3.42 CPU)
 Result: PASS
 
 Testing modules/Math-RungeKutta...
 t/01-rk-integrate.t .. ok
 All tests successful.
-Files=1, Tests=6, 15 wallclock secs ( 0.02 usr  0.00 sys + 14.06 cusr  0.68 csys = 14.76 CPU)
+Files=1, Tests=6, 15 wallclock secs ( 0.02 usr  0.00 sys + 13.51 cusr  0.73 csys = 14.26 CPU)
 Result: PASS
 
 Testing modules/Math-Model...
@@ -65,13 +65,13 @@ Please contact the author to have these calls to deprecated code adapted,
 so that this message will disappear!
 t/basic.t .. ok
 All tests successful.
-Files=1, Tests=6, 21 wallclock secs ( 0.02 usr  0.01 sys + 20.04 cusr  0.80 csys = 20.87 CPU)
+Files=1, Tests=6, 21 wallclock secs ( 0.02 usr  0.00 sys + 20.56 cusr  0.90 csys = 21.48 CPU)
 Result: PASS
 
 Testing modules/perl6-Term-ANSIColor...
 t/00-load.t .. ok
 All tests successful.
-Files=1, Tests=1,  1 wallclock secs ( 0.02 usr  0.01 sys +  0.86 cusr  0.26 csys =  1.15 CPU)
+Files=1, Tests=1,  1 wallclock secs ( 0.01 usr  0.01 sys +  0.93 cusr  0.26 csys =  1.21 CPU)
 Result: PASS
 
 Testing modules/test-mock...
@@ -79,25 +79,25 @@ t/returning.t .. ok
 t/synopsis.t ... ok
 t/with.t ....... ok
 All tests successful.
-Files=3, Tests=13,  5 wallclock secs ( 0.01 usr  0.02 sys +  3.87 cusr  0.78 csys =  4.68 CPU)
+Files=3, Tests=13,  5 wallclock secs ( 0.03 usr  0.01 sys +  4.36 cusr  0.87 csys =  5.27 CPU)
 Result: PASS
 
 Testing modules/Grammar-Profiler-Simple...
 t/csv.t .. ok
 All tests successful.
-Files=1, Tests=15,  3 wallclock secs ( 0.02 usr  0.00 sys +  2.94 cusr  0.33 csys =  3.29 CPU)
+Files=1, Tests=15,  4 wallclock secs ( 0.02 usr  0.01 sys +  3.44 cusr  0.40 csys =  3.87 CPU)
 Result: PASS
 
 Testing modules/grammar-debugger...
 t/tracer.t .. ok
 All tests successful.
-Files=1, Tests=1,  2 wallclock secs ( 0.02 usr  0.02 sys +  1.31 cusr  0.31 csys =  1.66 CPU)
+Files=1, Tests=1,  2 wallclock secs ( 0.02 usr  0.01 sys +  1.48 cusr  0.36 csys =  1.87 CPU)
 Result: PASS
 
 Testing modules/Perl6-MIME-Base64...
 t/basic.t .. ok
 All tests successful.
-Files=1, Tests=18,  4 wallclock secs ( 0.02 usr  0.01 sys +  4.06 cusr  0.28 csys =  4.37 CPU)
+Files=1, Tests=18,  5 wallclock secs ( 0.02 usr  0.01 sys +  4.53 cusr  0.32 csys =  4.88 CPU)
 Result: PASS
 
 Testing modules/uri...
@@ -106,7 +106,7 @@ t/escape.t ............... ok
 t/november-urlencoded.t .. ok
 t/rfc-3986-examples.t .... ok
 All tests successful.
-Files=4, Tests=91, 17 wallclock secs ( 0.06 usr  0.01 sys + 14.28 cusr  2.11 csys = 16.46 CPU)
+Files=4, Tests=91, 16 wallclock secs ( 0.03 usr  0.03 sys + 14.78 cusr  1.84 csys = 16.68 CPU)
 Result: PASS
 
 Testing modules/perl6-lwp-simple...
@@ -210,7 +210,7 @@ t/parse-url.t                 (Wstat: 256 Tests: 0 Failed: 0)
 t/stringify-headers.t         (Wstat: 256 Tests: 0 Failed: 0)
   Non-zero exit status: 1
   Parse errors: No plan found in TAP output
-Files=13, Tests=2, 17 wallclock secs ( 0.05 usr  0.01 sys + 12.89 cusr  3.80 csys = 16.75 CPU)
+Files=13, Tests=2, 16 wallclock secs ( 0.04 usr  0.03 sys + 12.41 cusr  3.93 csys = 16.41 CPU)
 Result: FAIL
 
 Testing modules/json...
@@ -219,36 +219,36 @@ t/02-structure.t .. ok
 t/03-unicode.t .... ok
 t/04-roundtrip.t .. ok
 All tests successful.
-Files=4, Tests=119, 15 wallclock secs ( 0.04 usr  0.03 sys + 13.36 cusr  1.50 csys = 14.93 CPU)
+Files=4, Tests=119, 15 wallclock secs ( 0.05 usr  0.02 sys + 13.10 cusr  1.62 csys = 14.79 CPU)
 Result: PASS
 
 Testing modules/perl6-digest-md5...
 t/0-load-module.t .. ok
 t/perl5-compat.t ... ok
 All tests successful.
-Files=2, Tests=7,  2 wallclock secs ( 0.02 usr  0.01 sys +  1.85 cusr  0.58 csys =  2.46 CPU)
+Files=2, Tests=7,  3 wallclock secs ( 0.03 usr  0.00 sys +  1.94 cusr  0.59 csys =  2.56 CPU)
 Result: PASS
 
 Testing modules/file-find...
 t/01-file-find.t .. ok
 All tests successful.
-Files=1, Tests=10,  7 wallclock secs ( 0.02 usr  0.00 sys +  6.08 cusr  0.53 csys =  6.63 CPU)
+Files=1, Tests=10,  7 wallclock secs ( 0.02 usr  0.01 sys +  6.77 cusr  0.55 csys =  7.35 CPU)
 Result: PASS
 
 Testing modules/shell-command...
 t/02-shell-command.t .. ok
 All tests successful.
-Files=1, Tests=12,  5 wallclock secs ( 0.02 usr  0.01 sys +  4.60 cusr  0.48 csys =  5.11 CPU)
+Files=1, Tests=12,  6 wallclock secs ( 0.02 usr  0.02 sys +  5.06 cusr  0.52 csys =  5.62 CPU)
 Result: PASS
 
 Testing modules/panda...
 t/builder.t .... ok
 t/common.t ..... ok
-use of uninitialized value of type Any in string context  in sub warn at gen/parrot/CORE.setting:674
+use of uninitialized value of type Any in string context  in any  at gen/parrot/BOOTSTRAP.nqp:102
 
-use of uninitialized value of type Any in string context  in sub warn at gen/parrot/CORE.setting:674
+use of uninitialized value of type Any in string context  in any  at gen/parrot/BOOTSTRAP.nqp:102
 
-use of uninitialized value of type Any in string context  in sub warn at gen/parrot/CORE.setting:674
+use of uninitialized value of type Any in string context  in any  at gen/parrot/BOOTSTRAP.nqp:102
 
 t/ecosystem.t .. ok
 Copying blib/lib/bar.pod to /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/modules/panda/removeme/lib/bar.pod
@@ -260,7 +260,7 @@ Copying bin/bar to /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/m
 t/installer.t .. ok
 t/tester.t ..... ok
 All tests successful.
-Files=5, Tests=33, 25 wallclock secs ( 0.03 usr  0.02 sys + 21.58 cusr  3.14 csys = 24.77 CPU)
+Files=5, Tests=33, 25 wallclock secs ( 0.04 usr  0.01 sys + 21.36 cusr  3.42 csys = 24.83 CPU)
 Result: PASS
 
 Testing modules/perl6-http-status...
@@ -274,7 +274,7 @@ Please contact the author to have these calls to deprecated code adapted,
 so that this message will disappear!
 t/01-basic.t .. ok
 All tests successful.
-Files=1, Tests=4,  2 wallclock secs ( 0.02 usr  0.01 sys +  1.32 cusr  0.26 csys =  1.61 CPU)
+Files=1, Tests=4,  2 wallclock secs ( 0.02 usr  0.01 sys +  1.40 cusr  0.29 csys =  1.72 CPU)
 Result: PASS
 
 Testing modules/PSGI...
@@ -288,50 +288,50 @@ Please contact the author to have these calls to deprecated code adapted,
 so that this message will disappear!
 t/encode-psgi-response.t .. ok
 All tests successful.
-Files=1, Tests=24,  5 wallclock secs ( 0.03 usr  0.01 sys +  4.38 cusr  0.30 csys =  4.72 CPU)
+Files=1, Tests=24,  4 wallclock secs ( 0.02 usr  0.01 sys +  4.36 cusr  0.36 csys =  4.75 CPU)
 Result: PASS
 
 Testing modules/perl6-http-easy...
 ...no t/ directory found.
 
 Testing modules/Template-Mojo...
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
 t/00-basic.t .. ok
 All tests successful.
-Files=1, Tests=18,  7 wallclock secs ( 0.03 usr  0.01 sys +  6.46 cusr  0.28 csys =  6.78 CPU)
+Files=1, Tests=18,  6 wallclock secs ( 0.03 usr  0.01 sys +  5.50 cusr  0.26 csys =  5.80 CPU)
 Result: PASS
 
 Testing modules/perl6-psgi...
@@ -345,19 +345,19 @@ Please contact the author to have these calls to deprecated code adapted,
 so that this message will disappear!
 t/encode-psgi-response.t .. ok
 All tests successful.
-Files=1, Tests=24,  5 wallclock secs ( 0.02 usr  0.00 sys +  4.50 cusr  0.35 csys =  4.87 CPU)
+Files=1, Tests=24,  5 wallclock secs ( 0.03 usr  0.01 sys +  4.12 cusr  0.32 csys =  4.48 CPU)
 Result: PASS
 
 Testing modules/Bailador...
 t/01-route-existance.t ... ok
 t/02-response-status.t ... ok
 t/03-response-content.t .. ok
-Passing an object candidate to Mu.bless is deprecated  in method bless at gen/parrot/CORE.setting:809
+Passing an object candidate to Mu.bless is deprecated  in method new at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Template/Mojo.pm:80
 
 t/04-templates.t ......... ok
 t/05-post-content.t ...... ok
 All tests successful.
-Files=5, Tests=19, 19 wallclock secs ( 0.03 usr  0.02 sys + 16.60 cusr  2.33 csys = 18.98 CPU)
+Files=5, Tests=19, 19 wallclock secs ( 0.04 usr  0.00 sys + 16.44 cusr  2.20 csys = 18.68 CPU)
 Result: PASS
 
 Testing modules/DBIish...
@@ -368,7 +368,7 @@ t/30-Pg.t ............. ok
 t/35-Pg-common.t ...... ok
 t/40-sqlite-common.t .. ok
 All tests successful.
-Files=6, Tests=218, 44 wallclock secs ( 0.04 usr  0.03 sys + 41.86 cusr  2.00 csys = 43.93 CPU)
+Files=6, Tests=218, 44 wallclock secs ( 0.05 usr  0.02 sys + 42.50 cusr  2.09 csys = 44.66 CPU)
 Result: PASS
 
 Testing modules/jsonrpc...
@@ -384,7 +384,7 @@ Test Summary Report
 t/client.t (Wstat: 256 Tests: 0 Failed: 0)
   Non-zero exit status: 1
   Parse errors: No plan found in TAP output
-Files=2, Tests=29, 26 wallclock secs ( 0.04 usr  0.01 sys + 24.94 cusr  1.24 csys = 26.23 CPU)
+Files=2, Tests=29, 28 wallclock secs ( 0.02 usr  0.02 sys + 26.30 cusr  1.26 csys = 27.60 CPU)
 Result: FAIL
 
 Testing modules/Pod-To-HTML...
@@ -393,7 +393,7 @@ Testing modules/Pod-To-HTML...
 Testing modules/doc...
 t/typegraph.t .. ok
 All tests successful.
-Files=1, Tests=8, 10 wallclock secs ( 0.02 usr  0.01 sys +  9.75 cusr  0.67 csys = 10.45 CPU)
+Files=1, Tests=8, 12 wallclock secs ( 0.02 usr  0.01 sys + 10.70 cusr  0.80 csys = 11.53 CPU)
 Result: PASS
 
 Testing modules/rakudo-debugger...

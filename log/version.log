@@ -1,7 +1,7 @@
 Rakudo
-Roederbergweg-224-g75c45f3
+Roederbergweg-235-g180fcac
 NQP
-2013.10-253-gcf04d56
+2013.10-254-gaf22bef
 modules
 --------
 Bailador
@@ -122,11 +122,14 @@ Date:   Fri Mar 29 20:37:58 2013 +0100
     fix obsolete use of |$.
 --------
 json
-commit 79a707fa6161a3bcd348e850c55e749153132af8
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Oct 27 14:00:44 2013 +0100
+commit 968012ce88ae8c223ba8098f680b09030118761e
+Author: Tobias Leich <email@froggs.de>
+Date:   Tue Nov 19 22:29:08 2013 +0100
 
-    fix whitespace parsing under new sigspace rules, Mouq++
+    optimize method string ans str_escape
+    
+    Especially method string is now five perent faster. Tested with panda's
+    35kB projects.json.
 --------
 jsonrpc
 commit a92f4015bc5b648b4010270bf081c60506a353bf
@@ -139,11 +142,22 @@ Date:   Sun Nov 10 01:04:02 2013 +0100
     35088d
 --------
 panda
-commit 9f2591b3b0445b294db631e2d5f317b8480dd1c2
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Tue Oct 29 23:59:17 2013 +0100
+commit 41a73f3e2a3faa5a5374b83723df668cf11f8683
+Merge: 9f2591b 8375930
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Tue Nov 19 14:29:58 2013 -0800
 
-    shell now returns a Proc::Status object that bools.
+    Merge pull request #60 from FROGGS/master
+    
+    use $*EXECUTABLE_NAME instead of hard-coded 'perl6'
+
+commit 837593022d4347b4ca49625b5b0130566697b923
+Author: Tobias Leich <email@froggs.de>
+Date:   Tue Nov 19 19:57:55 2013 +0100
+
+    use $*EXECUTABLE_NAME instead of hard-coded 'perl6'
+    
+    Because we now have perl6-p and perl6-j binaries.
 --------
 perl6-Term-ANSIColor
 commit d0af2ab20fc0b2f4152798f3c2c21574b3088711

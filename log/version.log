@@ -1,7 +1,7 @@
 Rakudo
-Malmö-12-gb063f81
+Malmö-14-ga7ee091
 NQP
-2013.11-2-g2339be2
+2013.11.1
 modules
 --------
 Bailador
@@ -28,11 +28,11 @@ Date:   Fri May 24 22:47:38 2013 -0500
     Export via proto
 --------
 MODULES.txt
-commit 517cc3765ce6d2d8178f7aabe584e14a55ea0fcd
+commit fab1ecdbd4e64cf43c602b38920b5109c3c5272c
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Wed Nov 13 20:37:18 2013 +0100
+Date:   Sun Nov 24 15:36:56 2013 +0100
 
-    update MIME::Base64 to a version that hopefully precompiles
+    update release guide with 2013.11 release
 --------
 Math-Model
 commit 26cf7c66f929edc1eb546355cf11ec2dcdee2ed4
@@ -68,14 +68,18 @@ Date:   Thu Aug 1 22:44:50 2013 -0600
     in each set of tests.
 --------
 Perl6-MIME-Base64
-commit f5c25b20bbb9a334f487f48c9cd4cd98ccb25f8a
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Wed Nov 13 20:34:12 2013 +0100
+commit a94a09c60ca2232689faae6d232a8ef11c907c04
+Merge: 76fd9de b89197e
+Author: Will "Coke" Coleda <will@coleda.com>
+Date:   Sun Nov 24 15:00:39 2013 +0000
 
-    workaround for automatic dependency detection
-    
-    it seems that "require" is not enough to bring our tools to precompile the
-    modules we need first
+    Merge branch 'master' of git://github.com/perl6/Perl6-MIME-Base64 into HEAD
+
+commit b89197eb37d68bad2b44d2307f12e8ae537c88dc
+Author: Andrew Egeler <root+github@retupmoca.com>
+Date:   Sat Nov 23 16:03:39 2013 -0500
+
+    Add known issue
 --------
 Pod-To-HTML
 commit 33d38234c5702cb54abdb4c5dff457bbf4096dd4
@@ -85,11 +89,20 @@ Date:   Fri Jul 19 15:26:38 2013 +0200
     properly escape interanl links beginning with #
 --------
 Template-Mojo
-commit efb671855d546025e82330117ab5c65cd7146379
-Author: Gabor Szabo <szabgab@gmail.com>
-Date:   Wed Mar 13 23:39:45 2013 +0200
+commit 6df40faacf24d5fd97212b30d811bc79b264bd09
+Merge: efb6718 d75da89
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Sat Nov 23 08:54:15 2013 -0800
 
-    expected output for the test
+    Merge pull request #5 from moritz/master
+    
+    do not use self.bless: *
+
+commit d75da893d0eb552ff53be77b1973ae4b0f43d680
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sat Nov 23 17:02:13 2013 +0100
+
+    do not use self.bless: *
 --------
 doc
 commit b3c7bd2fe4327ee801b5c0e4d6c65bcb70a1f0d5
@@ -200,11 +213,11 @@ Date:   Fri Nov 15 18:20:37 2013 +0000
     use :exists instead of deprecated .exists
 --------
 perl6-lwp-simple
-commit 8817dbd66f312d35eafa80c01a5b7cb6f5e4bf85
-Author: Moritz Lenz <mlenz@noris.net>
-Date:   Fri Aug 23 16:34:55 2013 +0200
+commit 97fd14b862a420a53d1e906ac4e20035318cb74a
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sat Nov 23 22:29:13 2013 +0100
 
-    make it run on latest rakudo
+    avoid querying a broken server
 --------
 perl6-psgi
 commit 76bc8612ed8444366a1ef1d6aaef0a40861e6456

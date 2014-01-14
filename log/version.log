@@ -1,24 +1,35 @@
 Rakudo
-2013.12-31-geb1aa54
+2013.12-34-g4f66cec
 NQP
-2013.12.1-28-g08d6968
+2013.12.1-31-gd70f835
 modules
 --------
 Bailador
-commit f1bd96b1e312ab7771c14e57d4b13276a24abdca
-Author: Solomon Foster <colomon@gmail.com>
-Date:   Wed Feb 27 23:07:26 2013 -0500
+commit 9214b655d57ea87e40aa7116409f3bb41cb0a856
+Merge: f1bd96b 01155d4
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Mon Jan 13 08:01:52 2014 -0800
 
-    Workaround for properly producing a capture list from a path in the latest Rakudo.
+    Merge pull request #7 from FROGGS/patch-1
+    
+    use "EVAL" instead of deprecated "eval"
+
+commit 01155d41515e1a855c2a5d0e5f5e129da0cd83bc
+Author: Tobias Leich <email@froggs.de>
+Date:   Mon Jan 13 17:01:32 2014 +0100
+
+    use "EVAL" instead of deprecated "eval"
+    
+    Both niecza and rakudo support EVAL.
 --------
 DBIish
-commit b0c5d75f7fd8d00d44748169f53c4e515e7b1055
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Oct 28 06:53:10 2013 +0100
+commit b17830cd34724d18e4c54a18de49589863d8021e
+Author: Tobias Leich <email@froggs.de>
+Date:   Mon Jan 13 17:05:25 2014 +0100
 
-    work around rakudo regression
+    use "EVAL" instead of deprecated "eval"
     
-    lue++ for noticing it during the R* release process
+    Both niecza and rakudo support EVAL.
 --------
 Grammar-Profiler-Simple
 commit cdfcdbaee70645fbc8d4fa6c5651f899fa1c9a6c
@@ -68,10 +79,10 @@ Date:   Thu Aug 1 22:44:50 2013 -0600
     in each set of tests.
 --------
 Perl6-MIME-Base64
-commit 2ded8c49cc7080ac331102a88e2d8775c133378b
+commit 515d8fdfe5b4c3851f9c43697d0b121c9c643364
 Merge: 76fd9de 43e4c99
 Author: Will "Coke" Coleda <will@coleda.com>
-Date:   Mon Jan 13 14:00:44 2014 +0000
+Date:   Tue Jan 14 14:00:43 2014 +0000
 
     Merge branch 'master' of git://github.com/perl6/Perl6-MIME-Base64 into HEAD
 
@@ -116,27 +127,31 @@ Date:   Fri Jul 19 15:26:38 2013 +0200
     properly escape interanl links beginning with #
 --------
 Template-Mojo
-commit 6df40faacf24d5fd97212b30d811bc79b264bd09
-Merge: efb6718 d75da89
+commit 9a3140e72b70d18844000010bd29c8ddb63090a5
+Merge: 6df40fa f5cc957
 Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Sat Nov 23 08:54:15 2013 -0800
+Date:   Mon Jan 13 08:00:43 2014 -0800
 
-    Merge pull request #5 from moritz/master
+    Merge pull request #7 from FROGGS/patch-1
     
-    do not use self.bless: *
+    use "EVAL" instead of deprecated "eval"
 
-commit d75da893d0eb552ff53be77b1973ae4b0f43d680
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Nov 23 17:02:13 2013 +0100
+commit f5cc9573f4bc4e7626c7647af3581dbf919b21d3
+Author: Tobias Leich <email@froggs.de>
+Date:   Mon Jan 13 16:59:33 2014 +0100
 
-    do not use self.bless: *
+    use "EVAL" instead of deprecated "eval"
+    
+    Both niecza and rakudo support EVAL.
 --------
 doc
-commit b3c7bd2fe4327ee801b5c0e4d6c65bcb70a1f0d5
-Author: Moritz Lenz <mlenz@noris.net>
-Date:   Tue Sep 24 14:43:03 2013 +0200
+commit 9110ff08dfcdec0ff91ef4ea94b3b9d78e9e8ead
+Author: lue <rnddim@gmail.com>
+Date:   Mon Jan 13 13:07:46 2014 -0800
 
-    remove * from bless
+    Fix incorrect containers.pod example.
+    
+    Just the descriptive comment that was wrong, is all.
 --------
 file-find
 commit 84e955bd09c9081f396aa01e99b9278105d9deed
@@ -162,14 +177,11 @@ Date:   Fri Mar 29 20:37:58 2013 +0100
     fix obsolete use of |$.
 --------
 json
-commit 968012ce88ae8c223ba8098f680b09030118761e
-Author: Tobias Leich <email@froggs.de>
-Date:   Tue Nov 19 22:29:08 2013 +0100
+commit 9dec815c075c77e2f5066fe819523867f625f15e
+Author: Moritz Lenz <mlenz@noris.net>
+Date:   Mon Jan 13 16:49:43 2014 +0100
 
-    optimize method string ans str_escape
-    
-    Especially method string is now five perent faster. Tested with panda's
-    35kB projects.json.
+    get rid of eval
 --------
 jsonrpc
 commit 15c8904baa92b4730a5d973a2a4650b2b684b520
@@ -328,23 +340,22 @@ Date:   Fri Sep 20 19:39:10 2013 +0200
     This reverts commit 18a5e5a1fa77a58abcf39e0aa008a11cd28e5b94.
 --------
 uri
-commit a5a9bfcf1b4289edccd9fc8bf595299c92e52ccd
-Merge: 6afdf72 1ca2f74
+commit 3c674b6bb5f54913fb15d030f197a81af7af5403
+Merge: a5a9bfc a005e87
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Nov 11 03:32:59 2013 -0800
+Date:   Tue Jan 14 00:55:35 2014 -0800
 
-    Merge pull request #2 from bbkr/master
+    Merge pull request #3 from FROGGS/patch-2
     
-    Fix deprecated .exists warning
+    use "EVAL" instead of deprecated "eval"
 
-commit 1ca2f744721f89cfb53a5ac4c9366f3287fe7048
-Author: Pawel Pabian <bbkr@post.pl>
-Date:   Mon Nov 11 12:24:51 2013 +0100
+commit a005e87b78fb5b8830dc1aca97bb9bc413f5953a
+Author: Tobias Leich <email@froggs.de>
+Date:   Tue Jan 14 09:30:01 2014 +0100
 
-    Fix deprecated .exists warning
+    use "EVAL" instead of deprecated "eval"
     
-    https://github.com/perl6/specs/commit/126dd3b3cca08f6e94bba9cc409520078c
-    35088d
+    Both niecza and rakudo support EVAL.
 --------
 xml-writer
 commit 43fb8e707cfbd773de9b125850b2326504d69fd5

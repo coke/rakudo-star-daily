@@ -9,45 +9,45 @@ t/06-struct.t .......... ok
 t/07-writebarrier.t .... ok
 t/08-callbacks.t ....... ok
 All tests successful.
-Files=8, Tests=95, 22 wallclock secs ( 0.06 usr  0.01 sys + 19.10 cusr  2.82 csys = 21.99 CPU)
+Files=8, Tests=95, 23 wallclock secs ( 0.05 usr  0.02 sys + 19.46 cusr  2.95 csys = 22.48 CPU)
 Result: PASS
 
 Testing modules/xml-writer...
 t/escaping.t ... ok
 t/structure.t .. ok
 All tests successful.
-Files=2, Tests=11,  4 wallclock secs ( 0.01 usr  0.02 sys +  3.23 cusr  0.62 csys =  3.88 CPU)
+Files=2, Tests=11,  3 wallclock secs ( 0.02 usr  0.01 sys +  2.76 cusr  0.45 csys =  3.24 CPU)
 Result: PASS
 
 Testing modules/svg...
 t/basics.t .. ok
 All tests successful.
-Files=1, Tests=3,  1 wallclock secs ( 0.02 usr  0.01 sys +  1.28 cusr  0.30 csys =  1.61 CPU)
+Files=1, Tests=3,  2 wallclock secs ( 0.02 usr  0.00 sys +  1.21 cusr  0.22 csys =  1.45 CPU)
 Result: PASS
 
 Testing modules/svg-plot...
 t/series.t .. ok
 t/ticks.t ... ok
 All tests successful.
-Files=2, Tests=10,  4 wallclock secs ( 0.02 usr  0.01 sys +  3.22 cusr  0.54 csys =  3.79 CPU)
+Files=2, Tests=10,  3 wallclock secs ( 0.02 usr  0.00 sys +  3.04 cusr  0.57 csys =  3.63 CPU)
 Result: PASS
 
 Testing modules/Math-RungeKutta...
 t/01-rk-integrate.t .. ok
 All tests successful.
-Files=1, Tests=6, 12 wallclock secs ( 0.04 usr  0.01 sys + 11.34 cusr  0.36 csys = 11.75 CPU)
+Files=1, Tests=6, 13 wallclock secs ( 0.02 usr  0.01 sys + 12.29 cusr  0.38 csys = 12.70 CPU)
 Result: PASS
 
 Testing modules/Math-Model...
 t/basic.t .. ok
 All tests successful.
-Files=1, Tests=6, 17 wallclock secs ( 0.02 usr  0.01 sys + 16.40 cusr  0.33 csys = 16.76 CPU)
+Files=1, Tests=6, 18 wallclock secs ( 0.02 usr  0.01 sys + 17.40 cusr  0.38 csys = 17.81 CPU)
 Result: PASS
 
 Testing modules/perl6-Term-ANSIColor...
 t/00-load.t .. ok
 All tests successful.
-Files=1, Tests=1,  2 wallclock secs ( 0.04 usr  0.00 sys +  1.16 cusr  0.36 csys =  1.56 CPU)
+Files=1, Tests=1,  1 wallclock secs ( 0.02 usr  0.00 sys +  0.90 cusr  0.19 csys =  1.11 CPU)
 Result: PASS
 
 Testing modules/test-mock...
@@ -55,19 +55,19 @@ t/returning.t .. ok
 t/synopsis.t ... ok
 t/with.t ....... ok
 All tests successful.
-Files=3, Tests=13,  5 wallclock secs ( 0.02 usr  0.01 sys +  4.35 cusr  0.70 csys =  5.08 CPU)
+Files=3, Tests=13,  5 wallclock secs ( 0.03 usr  0.01 sys +  3.99 cusr  0.74 csys =  4.77 CPU)
 Result: PASS
 
 Testing modules/Grammar-Profiler-Simple...
 t/csv.t .. ok
 All tests successful.
-Files=1, Tests=15,  4 wallclock secs ( 0.03 usr  0.01 sys +  3.40 cusr  0.38 csys =  3.82 CPU)
+Files=1, Tests=15,  3 wallclock secs ( 0.02 usr  0.00 sys +  2.76 cusr  0.30 csys =  3.08 CPU)
 Result: PASS
 
 Testing modules/grammar-debugger...
 t/tracer.t .. ok
 All tests successful.
-Files=1, Tests=1,  1 wallclock secs ( 0.02 usr  0.00 sys +  1.25 cusr  0.26 csys =  1.53 CPU)
+Files=1, Tests=1,  2 wallclock secs ( 0.01 usr  0.01 sys +  1.32 cusr  0.21 csys =  1.55 CPU)
 Result: PASS
 
 Testing modules/Perl6-MIME-Base64...
@@ -75,7 +75,7 @@ t/basic.t ................. ok
 t/binary-and-long-line.t .. ok
 t/rfc4648-test-vector.t ... ok
 All tests successful.
-Files=3, Tests=44, 15 wallclock secs ( 0.03 usr  0.01 sys + 13.16 cusr  0.99 csys = 14.19 CPU)
+Files=3, Tests=44, 13 wallclock secs ( 0.02 usr  0.02 sys + 11.99 cusr  0.91 csys = 12.94 CPU)
 Result: PASS
 
 Testing modules/uri...
@@ -84,7 +84,7 @@ t/escape.t ............... ok
 t/november-urlencoded.t .. ok
 t/rfc-3986-examples.t .... ok
 All tests successful.
-Files=4, Tests=91, 15 wallclock secs ( 0.06 usr  0.02 sys + 13.41 cusr  1.18 csys = 14.67 CPU)
+Files=4, Tests=91, 15 wallclock secs ( 0.04 usr  0.01 sys + 12.97 cusr  1.37 csys = 14.39 CPU)
 Result: PASS
 
 Testing modules/perl6-lwp-simple...
@@ -94,31 +94,16 @@ t/custom-headers-and-content.t .. ok
 t/get-binary-camelia.t .......... ok
 t/get-chunked-6guts.t ........... ok
 t/get-perl6-org.t ............... ok
-Could not parse chunk header
-  in method parse_chunks at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/LWP/Simple.pm:178
-  in block  at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/LWP/Simple.pm:213
-  in method make_request at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/LWP/Simple.pm:203
-  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/LWP/Simple.pm:64
-  in method get at /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/LWP/Simple.pm:29
-  in block  at t/get-unsized.t:2
-
-t/get-unsized.t ................. 
-Dubious, test returned 1 (wstat 256, 0x100)
-No subtests run 
+t/get-unsized.t ................. ok
 t/get-w3-latin1-utf8.t .......... ok
 t/get-w3-redirect.t ............. ok
 t/getstore.t .................... ok
 t/parse-url.t ................... ok
 t/socket-sanity.t ............... ok
 t/stringify-headers.t ........... ok
-
-Test Summary Report
--------------------
-t/get-unsized.t               (Wstat: 256 Tests: 0 Failed: 0)
-  Non-zero exit status: 1
-  Parse errors: No plan found in TAP output
-Files=13, Tests=54, 63 wallclock secs ( 0.07 usr  0.01 sys + 55.39 cusr  5.20 csys = 60.67 CPU)
-Result: FAIL
+All tests successful.
+Files=13, Tests=55, 65 wallclock secs ( 0.06 usr  0.02 sys + 57.83 cusr  4.84 csys = 62.75 CPU)
+Result: PASS
 
 Testing modules/json...
 t/01-parse.t ...... ok
@@ -126,26 +111,26 @@ t/02-structure.t .. ok
 t/03-unicode.t .... ok
 t/04-roundtrip.t .. ok
 All tests successful.
-Files=4, Tests=119, 13 wallclock secs ( 0.04 usr  0.02 sys + 11.53 cusr  1.29 csys = 12.88 CPU)
+Files=4, Tests=119, 13 wallclock secs ( 0.05 usr  0.01 sys + 11.19 cusr  1.12 csys = 12.37 CPU)
 Result: PASS
 
 Testing modules/perl6-digest-md5...
 t/0-load-module.t .. ok
 t/perl5-compat.t ... ok
 All tests successful.
-Files=2, Tests=7,  3 wallclock secs ( 0.02 usr  0.01 sys +  1.77 cusr  0.51 csys =  2.31 CPU)
+Files=2, Tests=7,  3 wallclock secs ( 0.03 usr  0.00 sys +  2.06 cusr  0.59 csys =  2.68 CPU)
 Result: PASS
 
 Testing modules/file-find...
 t/01-file-find.t .. ok
 All tests successful.
-Files=1, Tests=10,  6 wallclock secs ( 0.03 usr  0.00 sys +  5.65 cusr  0.39 csys =  6.07 CPU)
+Files=1, Tests=10,  6 wallclock secs ( 0.03 usr  0.00 sys +  5.50 cusr  0.36 csys =  5.89 CPU)
 Result: PASS
 
 Testing modules/shell-command...
 t/02-shell-command.t .. ok
 All tests successful.
-Files=1, Tests=12,  4 wallclock secs ( 0.02 usr  0.01 sys +  3.80 cusr  0.28 csys =  4.11 CPU)
+Files=1, Tests=12,  4 wallclock secs ( 0.03 usr  0.00 sys +  4.05 cusr  0.28 csys =  4.36 CPU)
 Result: PASS
 
 Testing modules/panda...
@@ -167,19 +152,19 @@ Copying bin/bar to /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/m
 t/installer.t .. ok
 t/tester.t ..... ok
 All tests successful.
-Files=5, Tests=33, 20 wallclock secs ( 0.04 usr  0.02 sys + 17.26 cusr  2.08 csys = 19.40 CPU)
+Files=5, Tests=33, 20 wallclock secs ( 0.05 usr  0.01 sys + 17.88 cusr  2.40 csys = 20.34 CPU)
 Result: PASS
 
 Testing modules/perl6-http-status...
 t/01-basic.t .. ok
 All tests successful.
-Files=1, Tests=4,  1 wallclock secs ( 0.02 usr  0.00 sys +  0.91 cusr  0.22 csys =  1.15 CPU)
+Files=1, Tests=4,  2 wallclock secs ( 0.01 usr  0.01 sys +  0.90 cusr  0.24 csys =  1.16 CPU)
 Result: PASS
 
 Testing modules/PSGI...
 t/encode-psgi-response.t .. ok
 All tests successful.
-Files=1, Tests=24,  2 wallclock secs ( 0.02 usr  0.00 sys +  2.18 cusr  0.27 csys =  2.47 CPU)
+Files=1, Tests=24,  3 wallclock secs ( 0.04 usr  0.02 sys +  2.52 cusr  0.32 csys =  2.90 CPU)
 Result: PASS
 
 Testing modules/perl6-http-easy...
@@ -188,13 +173,13 @@ Testing modules/perl6-http-easy...
 Testing modules/Template-Mojo...
 t/00-basic.t .. ok
 All tests successful.
-Files=1, Tests=18,  5 wallclock secs ( 0.03 usr  0.00 sys +  4.63 cusr  0.25 csys =  4.91 CPU)
+Files=1, Tests=18,  4 wallclock secs ( 0.02 usr  0.01 sys +  3.91 cusr  0.24 csys =  4.18 CPU)
 Result: PASS
 
 Testing modules/perl6-psgi...
 t/encode-psgi-response.t .. ok
 All tests successful.
-Files=1, Tests=24,  3 wallclock secs ( 0.02 usr  0.01 sys +  2.17 cusr  0.25 csys =  2.45 CPU)
+Files=1, Tests=24,  3 wallclock secs ( 0.02 usr  0.01 sys +  2.17 cusr  0.27 csys =  2.47 CPU)
 Result: PASS
 
 Testing modules/Bailador...
@@ -204,7 +189,7 @@ t/03-response-content.t .. ok
 t/04-templates.t ......... ok
 t/05-post-content.t ...... ok
 All tests successful.
-Files=5, Tests=19, 17 wallclock secs ( 0.04 usr  0.00 sys + 15.74 cusr  1.46 csys = 17.24 CPU)
+Files=5, Tests=19, 18 wallclock secs ( 0.03 usr  0.01 sys + 17.01 cusr  1.62 csys = 18.67 CPU)
 Result: PASS
 
 Testing modules/DBIish...
@@ -215,14 +200,14 @@ t/30-Pg.t ............. ok
 t/35-Pg-common.t ...... ok
 t/40-sqlite-common.t .. ok
 All tests successful.
-Files=6, Tests=218, 45 wallclock secs ( 0.05 usr  0.03 sys + 42.25 cusr  2.07 csys = 44.40 CPU)
+Files=6, Tests=218, 48 wallclock secs ( 0.08 usr  0.02 sys + 45.02 cusr  2.25 csys = 47.37 CPU)
 Result: PASS
 
 Testing modules/jsonrpc...
 t/client.t .. ok
 t/server.t .. ok
 All tests successful.
-Files=2, Tests=68, 42 wallclock secs ( 0.04 usr  0.01 sys + 41.35 cusr  0.81 csys = 42.21 CPU)
+Files=2, Tests=68, 44 wallclock secs ( 0.06 usr  0.01 sys + 42.47 cusr  0.90 csys = 43.44 CPU)
 Result: PASS
 
 Testing modules/Pod-To-HTML...
@@ -231,7 +216,7 @@ Testing modules/Pod-To-HTML...
 Testing modules/doc...
 t/typegraph.t .. ok
 All tests successful.
-Files=1, Tests=8, 10 wallclock secs ( 0.02 usr  0.01 sys +  9.60 cusr  0.36 csys =  9.99 CPU)
+Files=1, Tests=8,  9 wallclock secs ( 0.02 usr  0.01 sys +  9.30 cusr  0.37 csys =  9.70 CPU)
 Result: PASS
 
 Testing modules/rakudo-debugger...

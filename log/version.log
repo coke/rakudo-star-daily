@@ -1,5 +1,5 @@
 Rakudo
-Plano-56-gdc42ad8
+Plano-58-g535d912
 NQP
 2014.01-8-gbbb81a1
 modules
@@ -26,11 +26,13 @@ Date:   Fri May 24 22:47:38 2013 -0500
     Export via proto
 --------
 MODULES.txt
-commit a48e619755aa1c6cda9358dfdd363e1605fe279d
-Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Fri Jan 31 17:55:54 2014 +0100
+commit a49cc417e1258da46501bd5e7061f10daa76325a
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sat Feb 1 17:23:14 2014 +0100
 
-    Update release guide
+    [Configure.pl] properly parentize.
+    
+    This is not Perl 6 code. spider-mario++
 --------
 Math-Model
 commit aacc103f76d6cdee856d457523a87c1eea9b0ac2
@@ -66,10 +68,10 @@ Date:   Thu Aug 1 22:44:50 2013 -0600
     in each set of tests.
 --------
 Perl6-MIME-Base64
-commit 733c1ae943bb8d20e419b7346c03735c29e59dce
+commit d476a5203d2db58358c370717c91c57949a8096d
 Merge: 76fd9de 43e4c99
 Author: Will "Coke" Coleda <will@coleda.com>
-Date:   Sat Feb 1 14:00:46 2014 +0000
+Date:   Sun Feb 2 14:00:43 2014 +0000
 
     Merge branch 'master' of git://github.com/perl6/Perl6-MIME-Base64 into HEAD
 
@@ -114,22 +116,26 @@ Date:   Fri Jul 19 15:26:38 2013 +0200
     properly escape interanl links beginning with #
 --------
 Template-Mojo
-commit 9a3140e72b70d18844000010bd29c8ddb63090a5
-Merge: 6df40fa f5cc957
+commit 43b7f46591a50a3824f46c9d8e535a6a6ce7feef
+Merge: a03001d a6f27e4
 Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Mon Jan 13 08:00:43 2014 -0800
+Date:   Sat Feb 1 07:24:29 2014 -0800
 
-    Merge pull request #7 from FROGGS/patch-1
+    Merge pull request #6 from szabgab/documentation
     
-    use "EVAL" instead of deprecated "eval"
+    Documentation
 
-commit f5cc9573f4bc4e7626c7647af3581dbf919b21d3
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jan 13 16:59:33 2014 +0100
+commit a6f27e46e9e86de44e7529da81a28ce25d9df1d4
+Author: Gabor Szabo <gabor@szabgab.com>
+Date:   Sat Dec 7 00:06:57 2013 +0200
 
-    use "EVAL" instead of deprecated "eval"
-    
-    Both niecza and rakudo support EVAL.
+    add complex example to pod
+
+commit baaa730bd88d5693256751881d0467834935f46d
+Author: Gabor Szabo <gabor@szabgab.com>
+Date:   Sat Dec 7 00:03:47 2013 +0200
+
+    add a more complex example and test case
 --------
 doc
 commit 57b9dd3c4f9a4cc7c5d2dcb9ba894281bfc0db71
@@ -139,11 +145,11 @@ Date:   Sun Jan 19 20:08:02 2014 +0100
     Fix heading, raiph++
 --------
 file-find
-commit 84e955bd09c9081f396aa01e99b9278105d9deed
+commit cd3769d11db0e83dbbedadb78544cd0e5dc6dc9c
 Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Sun Aug 11 10:01:45 2013 +0200
+Date:   Sat Feb 1 16:29:55 2014 +0100
 
-    Comment out File::Find tests
+    Cleanup some unnecessary stuff
 --------
 grammar-debugger
 commit 96c0c4626ab582d1a8825da5a58bdea89de7a13a
@@ -178,11 +184,11 @@ Date:   Fri Jan 3 00:21:38 2014 +0100
     http://perl6advent.wordpress.com/2013/12/11/day-11-installing-modules/
 --------
 panda
-commit 640d8495031b865d1838970b219a602eb847c40d
+commit adb71951be69755358b057b2e704fbe1b0973531
 Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Fri Jan 24 16:23:49 2014 +0100
+Date:   Sat Feb 1 17:04:36 2014 +0100
 
-    Get rid of warnings in tests, timotimo++
+    Make "panda info" output nicer and more useful. Closes #49
 --------
 perl6-Term-ANSIColor
 commit d0af2ab20fc0b2f4152798f3c2c21574b3088711
@@ -276,11 +282,20 @@ Date:   Sat Nov 9 16:42:44 2013 +0000
     typo fix
 --------
 shell-command
-commit 8f6f80ff9ac0fd4d56172f1c8ae2d4b2c0db93e3
+commit bc4f3a796b9d281e0bf46e5827ab6c4501f0500a
+Merge: 8f6f80f 6da59c3
 Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Fri Nov 1 16:23:16 2013 +0100
+Date:   Sat Feb 1 07:25:25 2014 -0800
 
-    Remove accidental Shell directory, but keep the changes made in it
+    Merge pull request #2 from FROGGS/patch-2
+    
+    make mkpath() handle windows paths
+
+commit 6da59c3a6d49c0e9b74437bee0d6c20448dcd580
+Author: Tobias Leich <email@froggs.de>
+Date:   Fri Nov 1 18:42:04 2013 +0100
+
+    make mkpath() handle windows paths
 --------
 svg
 commit fb3dcff25535c922cea5b74c1d3bb03f15aa0eb8

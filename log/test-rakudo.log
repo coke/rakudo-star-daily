@@ -1,30 +1,26 @@
 cd rakudo && make test
 make[1]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/rakudo'
-/usr/bin/perl t/harness t/00-parrot t/01-sanity
-t/00-parrot/09-pir.t ............... ok
-t/01-sanity/01-literals.t .......... ok
-t/01-sanity/02-op-math.t ........... ok
-t/01-sanity/03-op-logic.t .......... ok
-t/01-sanity/04-op-cmp.t ............ ok
-t/01-sanity/05-var.t ............... ok
-t/01-sanity/06-op-inplace.t ........ ok
-t/01-sanity/07-op-string.t ......... ok
-t/01-sanity/08-var-array.t ......... ok
-t/01-sanity/09-end-blocks.t ........ ok
-t/01-sanity/10-regex.t ............. ok
-t/01-sanity/11-tap.t ............... ok
-t/01-sanity/12-counter.t ........... ok
-t/01-sanity/13-equal.t ............. ok
-t/01-sanity/14-if.t ................ ok
-t/01-sanity/15-sub.t ............... ok
-t/01-sanity/16-eqv.t ............... ok
-t/01-sanity/17-isa.t ............... ok
-t/01-sanity/18-simple-multisubs.t .. ok
-t/01-sanity/19-say.t ............... ok
-t/01-sanity/20-defined.t ........... ok
-t/01-sanity/21-try.t ............... ok
-t/01-sanity/99-test-basic.t ........ ok
-All tests successful.
-Files=23, Tests=274, 30 wallclock secs ( 0.10 usr  0.03 sys + 24.58 cusr  5.33 csys = 30.04 CPU)
-Result: PASS
+/usr/bin/perl tools/build/gen-cat.pl parrot src/core/core_prologue.pm src/core/traits.pm src/core/Positional.pm src/core/Associative.pm src/core/Callable.pm src/core/natives.pm src/core/stubs.pm src/core/control.pm src/core/Mu.pm src/core/Stringy.pm src/core/Any.pm src/core/array_slice.pm src/core/hash_slice.pm src/core/Scalar.pm src/core/Code.pm src/core/WhateverCode.pm src/core/Block.pm src/core/Attribute.pm src/core/Variable.pm src/core/Routine.pm src/core/Sub.pm src/core/Macro.pm src/core/Method.pm src/core/Submethod.pm src/core/Junction.pm src/core/Cool.pm src/core/Enumeration.pm src/core/Whatever.pm src/core/Bool.pm src/core/Numeric.pm src/core/Real.pm src/core/Int.pm src/core/Order.pm src/core/UInt64.pm src/core/Num.pm src/core/Buf.pm src/core/Str.pm src/core/Capture.pm src/core/Parcel.pm src/core/Iterable.pm src/core/Iterator.pm src/core/Nil.pm src/core/Range.pm src/core/ListIter.pm src/core/MapIter.pm src/core/GatherIter.pm src/core/List.pm src/core/LoL.pm src/core/Array.pm src/core/Enum.pm src/core/Pair.pm src/core/HashIter.pm src/core/EnumMap.pm src/core/Hash.pm src/core/Stash.pm src/core/PseudoStash.pm src/core/Parameter.pm src/core/Signature.pm src/core/Rational.pm src/core/Rat.pm src/core/Complex.pm src/core/Backtrace.pm src/core/Exception.pm src/core/Failure.pm src/core/Match.pm src/core/Cursor.pm src/core/Grammar.pm src/core/Regex.pm src/core/IO/Spec/Unix.pm src/core/IO/Spec/Win32.pm src/core/IO/Spec/Cygwin.pm src/core/IO/Spec/QNX.pm src/core/IO/Spec.pm src/core/IO.pm src/core/IO/ArgFiles.pm src/core/IO/Socket.pm src/core/IO/Socket/INET.pm src/core/AST.pm src/core/CallFrame.pm src/core/Main.pm src/core/tai-utc.pm src/core/Instant.pm src/core/Duration.pm src/core/Temporal.pm src/core/EXPORTHOW.pm src/core/Pod.pm src/core/QuantHash.pm src/core/Setty.pm src/core/Set.pm src/core/SetHash.pm src/core/Baggy.pm src/core/Bag.pm src/core/BagHash.pm src/core/Mixy.pm src/core/Mix.pm src/core/MixHash.pm src/core/set_operators.pm src/core/ObjAt.pm src/core/Version.pm src/core/ForeignCode.pm src/core/operators.pm src/core/metaops.pm src/core/precedence.pm src/core/terms.pm src/core/Deprecations.pm src/core/OS.pm src/core/core_epilogue.pm  > gen/parrot/CORE.setting
+The following step can take a long time, please be patient.
+./perl6-p --setting=NULL --optimize=3 --target=pir --stagestats --output=src/gen/p-CORE.setting.pir gen/parrot/CORE.setting
+Stage start      :   0.000
+too many named arguments: 1 passed, 0 used
+current instr.: 'add_load_dependency_task' pc 38480 (gen/parrot/stage2/NQPHLL.pir:15494) (gen/parrot/stage2/NQPHLL.nqp:1988)
+called from Sub 'add_initializations' pc 35100 (src/gen/perl6-symboltable.pir:13899) (src/Perl6/World.nqp:2430)
+called from Sub 'TOP' pc 17524 (src/gen/perl6-grammar.pir:7135) (src/Perl6/Grammar.nqp:343)
+called from Sub 'parse' pc 20104 (gen/parrot/stage2/QRegex.pir:8149) (gen/parrot/stage2/QRegex.nqp:1292)
+called from Sub 'parse' pc 32920 (gen/parrot/stage2/NQPHLL.pir:13077) (gen/parrot/stage2/NQPHLL.nqp:1424)
+called from Sub '' pc 32358 (gen/parrot/stage2/NQPHLL.pir:12869) (gen/parrot/stage2/NQPHLL.nqp:1379)
+called from Sub 'compile' pc 32149 (gen/parrot/stage2/NQPHLL.pir:12784) (gen/parrot/stage2/NQPHLL.nqp:1371)
+called from Sub 'eval' pc 27834 (gen/parrot/stage2/NQPHLL.pir:10969) (gen/parrot/stage2/NQPHLL.nqp:1128)
+called from Sub 'evalfiles' pc 31129 (gen/parrot/stage2/NQPHLL.pir:12363) (gen/parrot/stage2/NQPHLL.nqp:1338)
+called from Sub 'command_eval' pc 29929 (gen/parrot/stage2/NQPHLL.pir:11889) (gen/parrot/stage2/NQPHLL.nqp:1267)
+called from Sub 'command_eval' pc 355 (src/gen/perl6-compiler.pir:190) (src/Perl6/Compiler.nqp:17)
+called from Sub 'command_line' pc 28965 (gen/parrot/stage2/NQPHLL.pir:11488) (gen/parrot/stage2/NQPHLL.nqp:1217)
+called from Sub 'MAIN' pc 345 (src/gen/perl6.pir:128) (gen/parrot/main.nqp:45)
+called from Sub '' pc 317 (src/gen/perl6.pir:112) (gen/parrot/main.nqp:35)
+called from Sub '' pc 1220 (src/gen/perl6.pir:447) (gen/parrot/main.nqp:60)
+
+make[1]: *** [CORE.setting.pbc] Error 1
 make[1]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/rakudo'
+make: *** [rakudo-test] Error 2

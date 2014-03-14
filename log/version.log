@@ -1,7 +1,7 @@
 Rakudo
-Karlsruhe-92-g5b109d6
+Karlsruhe-99-g656089e
 NQP
-2014.02-23-g05ab5cd
+2014.02-30-g74c2c59
 modules
 --------
 Bailador
@@ -54,45 +54,14 @@ Date:   Tue Feb 18 11:36:04 2014 -0800
     Added S11 provides
 --------
 Perl6-MIME-Base64
-commit 4cb7bf944bae243ee3253a56a501fb322a1ea631
-Merge: 76fd9de 43e4c99
-Author: Will "Coke" Coleda <will@coleda.com>
-Date:   Thu Mar 13 08:00:58 2014 +0000
-
-    Merge branch 'master' of git://github.com/perl6/Perl6-MIME-Base64 into HEAD
-
-commit 43e4c991d6c58e43cc0014c88284871dd8d22269
-Merge: 4099f5a 37ec73d
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue Jan 7 01:02:55 2014 -0800
-
-    Merge pull request #1 from ronaldxs/master
-    
-    Add binary and other useful tests.
-
-commit 37ec73db14644afe6485662245c53cf6392a7ee2
-Author: Ronald Schmidt <ronaldxs@software-path.com>
-Date:   Mon Jan 6 18:01:37 2014 -0500
-
-    Add file of tests for binary data and line wrap.
-
-commit 73a6539b9d97d52404eb52961bc1e4185404b005
-Author: Ronald Schmidt <ronaldxs@software-path.com>
-Date:   Mon Jan 6 17:59:16 2014 -0500
-
-    Add test vectors from rfc4648 proposed standard for Base-N encodings.
-
-commit 4099f5af55016c4dfa285274d2fe46b2b260a15d
-Author: Andrew Egeler <aegeler@neuralplanet.net>
-Date:   Wed Dec 11 12:52:07 2013 -0500
-
-    S11-style META.info!
-
-commit b89197eb37d68bad2b44d2307f12e8ae537c88dc
+commit 76fd9decc7c1445390b0ab5a1296e9d244f8e1fd
 Author: Andrew Egeler <root+github@retupmoca.com>
-Date:   Sat Nov 23 16:03:39 2013 -0500
+Date:   Sat Nov 23 15:47:34 2013 -0500
 
-    Add known issue
+    Remove conditional requires.
+    
+    Conditional requires currently break precompilation, so we just do
+    a straight use for now (as Rakudo Star isn't doing JVM releases yet)
 --------
 Pod-To-HTML
 commit 49871b44c2134638c9f55e171af8a087ec161f79
@@ -109,11 +78,11 @@ Date:   Wed Feb 26 18:28:04 2014 +0100
     Add License
 --------
 doc
-commit 9da5a039adb1c648955fd430ba0c133e2de67b49
-Author: Mouq <alexmoquin@gmail.com>
-Date:   Mon Mar 3 05:04:49 2014 -0500
+commit 027778e092e69ed4f7c69c5b295014102181bc74
+Author: Alexander Moquin <alexmoquin@gmail.com>
+Date:   Thu Mar 13 18:56:38 2014 -0400
 
-    Fix htmlify.pl for the latest Rakudo
+    Update WANTED
 --------
 file-find
 commit d79a83184da825f61d8c481050f931b511d74cae
@@ -314,8 +283,8 @@ Date:   Wed Jan 15 19:41:26 2014 +0100
     gets rid of a "use of Nil in numeric context" warning
 --------
 zavolaj
-commit 6c38010e42f6197746097a2c38fb5be449dba43d
+commit c7747054fa490fb446b34ab9231d227d4e0624b4
 Author: Arne Skjærholt <arnsholt@gmail.com>
-Date:   Tue Feb 18 00:46:33 2014 +0100
+Date:   Thu Mar 13 22:00:20 2014 +0100
 
-    Also update test count. Derp.
+    Let test suite compile libraries on JVM too.

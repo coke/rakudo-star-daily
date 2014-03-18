@@ -24,7 +24,7 @@ git clone https://github.com/rakudo/rakudo.git
 # setup the modules to pull the latest, not just the declared version)
 git submodule init
 git submodule update
-(cd modules; for file in * ; do (cd $file && git pull origin master); done)
+(cd modules; for file in * ; do (cd $file && git fetch origin; git reset --hard origin/master); done)
 
 make -f tools/star/Makefile manifest
 

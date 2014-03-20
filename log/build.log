@@ -11,8 +11,8 @@ After that, 'make test' will run some tests and
 make[1]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/rakudo'
 cd src/vm/parrot/ops && /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/bin/ops2c C --dynamic perl6.ops
 # Parsing perl6.ops...
-# Parsed perl6.ops in 3.677 seconds; found 121 ops.
-# Ops parsed in 3.678 seconds.
+# Parsed perl6.ops in 3.862 seconds; found 121 ops.
+# Ops parsed in 3.863 seconds.
 cd src/vm/parrot/ops && cc -c -o perl6_ops.o -I/home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/include/parrot/5.9.0 -I/home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/include/parrot/5.9.0/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Wmissing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Wmissing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g perl6_ops.c
 In file included from /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/include/parrot/5.9.0/parrot/string.h:19:0,
                  from /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/include/parrot/5.9.0/parrot/context.h:10,
@@ -38,10 +38,6 @@ perl6_ops.c: In function ‘find_common_ctx’:
 perl6_ops.c:243:29: note: in expansion of macro ‘PARROT_INTERP’
  static PMC *find_common_ctx(PARROT_INTERP, ARGIN_NULLOK(PMC *ctx1), ARGIN_NULLOK(PMC *ctx2))
                              ^
-perl6_ops.c: At top level:
-perl6_ops.c:294:1: warning: no previous prototype for ‘Parrot_lib_perl6_ops_init’ [-Wmissing-prototypes]
- Parrot_lib_perl6_ops_init(PARROT_INTERP) {
- ^
 perl6_ops.c: In function ‘Parrot_perl6_type_check_return_value_p_p’:
 perl6_ops.c:3469:28: warning: function call has aggregate value [-Waggregate-return]
              storage_spec   spec = REPR(rtype)->get_storage_spec(interp, STABLE(rtype));
@@ -310,12 +306,12 @@ Linked: perl6-p
 The following step can take a long time, please be patient.
 ./perl6-p --setting=NULL --optimize=3 --target=pir --stagestats --output=src/gen/p-CORE.setting.pir gen/parrot/CORE.setting
 Stage start      :   0.000
-Stage parse      : 246.332
+Stage parse      : 246.356
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :  22.733
-Stage post       :  86.385
-Stage pir        :   8.406
+Stage optimize   :  21.582
+Stage post       :  84.545
+Stage pir        :   7.546
 /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/bin/parrot  -o CORE.setting.pbc src/gen/p-CORE.setting.pir
 ./perl6-p --target=pir  --output=src/gen/RESTRICTED.setting.pir src/RESTRICTED.setting
 /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/bin/parrot  -o RESTRICTED.setting.pbc src/gen/RESTRICTED.setting.pir
@@ -472,6 +468,7 @@ modules/Pod-To-HTML/lib/Pod/To/HTML.pm => /home/coke/sandbox/rakudo-star-daily/s
 == Installing modules/doc
 modules/doc/lib/Bag.pod => /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Bag.pod
 modules/doc/lib/Bool.pod => /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Bool.pod
+modules/doc/lib/modules.pod => /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/modules.pod
 modules/doc/lib/Exception.pod => /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Exception.pod
 modules/doc/lib/Capture.pod => /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Capture.pod
 modules/doc/lib/Complex.pod => /home/coke/sandbox/rakudo-star-daily/star/rakudo-star-daily/install/lib/parrot/5.9.0/languages/perl6/lib/Complex.pod

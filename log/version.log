@@ -1,7 +1,7 @@
 Rakudo
-2014.03.01-3-gaf8d426
+2014.03.01-6-g15ece87
 NQP
-2014.03-2-g9ef5690
+2014.03-7-g73721c4
 modules
 --------
 Bailador
@@ -21,11 +21,23 @@ Date:   Mon Mar 24 12:32:29 2014 -0400
     Allow use of ports other than 3000.
 --------
 DBIish
-commit bf5de44646d5c00ce77df5b919cbf174a9fb6244
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Thu Jan 30 18:19:15 2014 +0100
+commit c9c012d0d9a829614dbad903fec46103a146da56
+Merge: bf5de44 054bf43
+Author: Andrew Egeler <root+github@retupmoca.com>
+Date:   Tue Mar 25 21:26:56 2014 -0400
 
-    use the now public errstr in one more place.
+    Merge pull request #2 from retupmoca/master
+    
+    Fix compile (for moarvm at least)
+
+commit 054bf4371a78dcf2ac48187c1d566d56f7a72837
+Author: Andrew Egeler <andrew@egeler.us>
+Date:   Tue Mar 25 21:13:50 2014 -0400
+
+    Fix compile (for moarvm at least)
+    
+    Rakudo on MoarVM was refusing to compile CArray[Int], as Int isn't a
+    native type.
 --------
 Grammar-Profiler-Simple
 commit cdfcdbaee70645fbc8d4fa6c5651f899fa1c9a6c

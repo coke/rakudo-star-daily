@@ -303,8 +303,20 @@ Date:   Wed Jan 15 19:41:26 2014 +0100
     gets rid of a "use of Nil in numeric context" warning
 --------
 zavolaj
-commit 115d5ce799798a18b8ddf6d24eaffee77ceae789
-Author: jnthn <jnthn@jnthn.net>
-Date:   Sat Mar 15 12:56:47 2014 +0100
+commit 7f7c84988c2f445ec3026f7b6b95c55f0731c2da
+Merge: 115d5ce 7489ec0
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Wed Mar 26 10:55:06 2014 +0100
 
-    Emit missing newline after a test.
+    Merge pull request #32 from retupmoca/master
+    
+    Fix library extension guessing for MoarVM
+
+commit 7489ec0374722af4e8c112e06b3e943b21d0b0b5
+Author: Andrew Egeler <andrew@egeler.us>
+Date:   Tue Mar 25 21:27:55 2014 -0400
+
+    Fix library extension guessing for MoarVM
+    
+    Without this patch, is native('libfoo') would try and load libfoolib.so
+    instead of libfoo.so

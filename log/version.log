@@ -1,7 +1,7 @@
 Rakudo
-2014.03.01-39-gdfc7d72
+2014.03.01-45-gb126071
 NQP
-2014.03-25-gbe9062d
+2014.03-29-gb9f25b1
 modules
 --------
 Bailador
@@ -75,11 +75,11 @@ Date:   Tue Feb 18 11:36:04 2014 -0800
     Added S11 provides
 --------
 Perl6-MIME-Base64
-commit 9c39b28b4882dffe2c7fb8989aab7fcea3cc9531
-Author: Andrew Egeler <root+github@retupmoca.com>
-Date:   Thu Mar 13 14:43:53 2014 -0400
+commit a6f34dd6443fba56df8f45be63ea600c9d066e89
+Author: Andrew Egeler <andrew@egeler.us>
+Date:   Sat Mar 29 12:15:27 2014 -0400
 
-    Update readme to reflect precompilation fix.
+    Support non-Build.pm installers
 --------
 Pod-To-HTML
 commit c95ef03c7bb7e5fcd86d35800b9c87d756d418a0
@@ -305,20 +305,17 @@ Date:   Wed Jan 15 19:41:26 2014 +0100
     gets rid of a "use of Nil in numeric context" warning
 --------
 zavolaj
-commit 7f7c84988c2f445ec3026f7b6b95c55f0731c2da
-Merge: 115d5ce 7489ec0
+commit 1662d4a797b78324c6554209ab44b2e8683e6f19
+Merge: 05ba4c3 4330e29
 Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Wed Mar 26 10:55:06 2014 +0100
+Date:   Sun Mar 30 00:18:23 2014 +0100
 
-    Merge pull request #32 from retupmoca/master
+    Merge pull request #33 from FROGGS/patch-1
     
-    Fix library extension guessing for MoarVM
+    fix for: warning: too many arguments for format [-Wformat-extra-args]
 
-commit 7489ec0374722af4e8c112e06b3e943b21d0b0b5
-Author: Andrew Egeler <andrew@egeler.us>
-Date:   Tue Mar 25 21:27:55 2014 -0400
+commit 4330e29afb4b57c9cb4a97d60c9c33688e27c18f
+Author: Tobias Leich <email@froggs.de>
+Date:   Sun Mar 30 00:03:18 2014 +0100
 
-    Fix library extension guessing for MoarVM
-    
-    Without this patch, is native('libfoo') would try and load libfoolib.so
-    instead of libfoo.so
+    fix for: warning: too many arguments for format [-Wformat-extra-args]

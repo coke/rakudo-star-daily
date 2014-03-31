@@ -1,7 +1,7 @@
 Rakudo
-2014.03.01-45-gb126071
+2014.03.01-49-g5a1c937
 NQP
-2014.03-29-gb9f25b1
+2014.03-39-ga2bb2db
 modules
 --------
 Bailador
@@ -75,11 +75,13 @@ Date:   Tue Feb 18 11:36:04 2014 -0800
     Added S11 provides
 --------
 Perl6-MIME-Base64
-commit a6f34dd6443fba56df8f45be63ea600c9d066e89
-Author: Andrew Egeler <andrew@egeler.us>
-Date:   Sat Mar 29 12:15:27 2014 -0400
+commit 37f9c1efd1aad04e20f5b0e0ee2073df39266773
+Author: Tobias Leich <email@froggs.de>
+Date:   Sun Mar 30 21:19:42 2014 +0200
 
-    Support non-Build.pm installers
+    jvm does not know about MATHEMATICAL ITALIC SMALL N
+    
+    So we use NEITHER LESS-THAN NOR EQUIVALENT TO which works on all backends.
 --------
 Pod-To-HTML
 commit c95ef03c7bb7e5fcd86d35800b9c87d756d418a0
@@ -209,11 +211,20 @@ Date:   Sat Nov 23 22:29:13 2013 +0100
     avoid querying a broken server
 --------
 rakudo-debugger
-commit 93e4b517e142e4c0de386b6c45f145d03b62979e
-Author: jnthn <jnthn@jnthn.net>
-Date:   Thu Mar 20 13:03:36 2014 +0100
+commit 30c847500f10631dc447ae557a59a5211178d4bd
+Merge: 93e4b51 ef18b17
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Mon Mar 31 00:26:52 2014 +0200
 
-    Fix broken &fail detection in thrown.
+    Merge pull request #18 from timo/patch-2
+    
+    this repo is now only for the frontend
+
+commit ef18b17c7ef5cbf3e04324b45af0bdaf4f892f50
+Author: timo <timonator@perpetuum-immobile.de>
+Date:   Mon Mar 31 00:05:51 2014 +0200
+
+    this repo is now only for the frontend
 --------
 shell-command
 commit bc4f3a796b9d281e0bf46e5827ab6c4501f0500a
@@ -305,17 +316,23 @@ Date:   Wed Jan 15 19:41:26 2014 +0100
     gets rid of a "use of Nil in numeric context" warning
 --------
 zavolaj
-commit 1662d4a797b78324c6554209ab44b2e8683e6f19
-Merge: 05ba4c3 4330e29
+commit b211b809407bf5dadf8ba24895ed9c925a455fa4
+Merge: 1662d4a f7422ef
 Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Sun Mar 30 00:18:23 2014 +0100
+Date:   Sun Mar 30 17:56:43 2014 +0200
 
-    Merge pull request #33 from FROGGS/patch-1
+    Merge pull request #35 from FROGGS/patch-3
     
-    fix for: warning: too many arguments for format [-Wformat-extra-args]
+    use perllibs, because libs contains boilerplate
 
-commit 4330e29afb4b57c9cb4a97d60c9c33688e27c18f
+commit f7422efef8fd77432a1768acc483050ede94287e
 Author: Tobias Leich <email@froggs.de>
-Date:   Sun Mar 30 00:03:18 2014 +0100
+Date:   Sun Mar 30 17:29:24 2014 +0200
 
-    fix for: warning: too many arguments for format [-Wformat-extra-args]
+    use perllibs, because libs contains boilerplate
+    
+    On my ubunto box nativecall.libs contains -lgdbm which is not needed, and is not found by the linker for some reason.
+    $ perl -MConfig -E 'say $Config{libs}'
+    -lgdbm -lgdbm_compat -ldb -ldl -lm -lpthread -lc -lcrypt
+    $ perl -MConfig -E 'say $Config{perllibs}'
+    -ldl -lm -lpthread -lc -lcrypt

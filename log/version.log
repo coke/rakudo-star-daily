@@ -1,5 +1,5 @@
 Rakudo
-2014.03.01-72-gc2cc4fd
+2014.03.01-74-geb85757
 NQP
 2014.03-48-gd317008
 modules
@@ -166,20 +166,36 @@ Date:   Sun Mar 30 23:13:47 2014 +0200
     The data field will contain the message of an exception of the parser in case of an error.
 --------
 panda
-commit d37c0173923d0bee7f43b4daa544f838abab33bf
-Merge: 0fb7039 026cd23
+commit c19fb6b854384dbb96cd2389b70ea2e30f8e0754
+Merge: b24c561 73c2ade
 Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Fri Feb 28 13:43:26 2014 +0100
+Date:   Sun Apr 6 11:22:34 2014 +0200
 
-    Merge pull request #71 from tadzik/absolute
+    Merge pull request #76 from retupmoca/multistate
     
-    use absolute paths where possible [based on moar-support branch]
+    Read from all state files we can find
 
-commit 026cd233677254a86bd7ea1224da418ef53d2c17
-Author: Tobias Leich <email@froggs.de>
-Date:   Thu Feb 27 22:12:07 2014 +0100
+commit 73c2ade89cddb10c624476a738e44a2ae31855aa
+Author: Andrew Egeler <andrew@egeler.us>
+Date:   Sat Apr 5 12:45:24 2014 -0400
 
-    use absolute paths where possible
+    Don't read extra statefiles if doing site install
+    
+    This could cause problems if there were modules installed in
+    /root/.perl6 for example. If we're doing a site install, all
+    dependents need to be in site as well.
+
+commit 99da3b3a8298c61c49a0b3364c11a29923c8a5e0
+Author: Andrew Egeler <andrew@egeler.us>
+Date:   Sat Apr 5 12:37:01 2014 -0400
+
+    Read from all state files we can find
+    
+    Not just the first writable one we find. This (for example) allows a (root) install of
+    perl6+panda into /usr/local; along with some modules such as URI and
+    MIME::Base64. A user can then run 'panda install LWP::Simple' and will
+    not need to reinstall URI and MIME::Base64, because panda will now see
+    the modules installed in /usr/local
 --------
 perl6-Term-ANSIColor
 commit d0af2ab20fc0b2f4152798f3c2c21574b3088711

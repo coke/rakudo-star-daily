@@ -1,7 +1,7 @@
 Rakudo
-2014.03.01-111-ge498597
+2014.03.01-128-gaeda9d0
 NQP
-2014.03-62-g80fcbf7
+2014.03-64-g6344535
 modules
 --------
 Bailador
@@ -164,36 +164,25 @@ Date:   Sun Mar 30 23:13:47 2014 +0200
     The data field will contain the message of an exception of the parser in case of an error.
 --------
 panda
-commit c19fb6b854384dbb96cd2389b70ea2e30f8e0754
-Merge: b24c561 73c2ade
+commit 2693bbc536bb02930a1a2ba38fcd2f194f748b48
+Merge: c19fb6b 7ead09e
 Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Sun Apr 6 11:22:34 2014 +0200
+Date:   Fri Apr 11 20:09:46 2014 +0200
 
-    Merge pull request #76 from retupmoca/multistate
+    Merge pull request #77 from retupmoca/master
     
-    Read from all state files we can find
+    Allow non-ecosystem dependencies
 
-commit 73c2ade89cddb10c624476a738e44a2ae31855aa
+commit 7ead09e4f3d294246145f6e48927c1611c8d1833
 Author: Andrew Egeler <andrew@egeler.us>
-Date:   Sat Apr 5 12:45:24 2014 -0400
+Date:   Fri Apr 11 13:45:57 2014 -0400
 
-    Don't read extra statefiles if doing site install
+    Allow non-ecosystem dependencies
     
-    This could cause problems if there were modules installed in
-    /root/.perl6 for example. If we're doing a site install, all
-    dependents need to be in site as well.
-
-commit 99da3b3a8298c61c49a0b3364c11a29923c8a5e0
-Author: Andrew Egeler <andrew@egeler.us>
-Date:   Sat Apr 5 12:37:01 2014 -0400
-
-    Read from all state files we can find
-    
-    Not just the first writable one we find. This (for example) allows a (root) install of
-    perl6+panda into /usr/local; along with some modules such as URI and
-    MIME::Base64. A user can then run 'panda install LWP::Simple' and will
-    not need to reinstall URI and MIME::Base64, because panda will now see
-    the modules installed in /usr/local
+    If a module is installed, we can now use it as a dependency without
+    needing it in the ecosystem. This allows you to use panda to install
+    private modules that never see the ecosystem, or to test a set of
+    modules before adding them to the ecosystem.
 --------
 perl6-Term-ANSIColor
 commit d0af2ab20fc0b2f4152798f3c2c21574b3088711

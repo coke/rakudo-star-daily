@@ -1,7 +1,7 @@
 Rakudo
-2014.03.01-128-gaeda9d0
+2014.03.01-131-g25c75c0
 NQP
-2014.03-64-g6344535
+2014.03-66-g1cf05eb
 modules
 --------
 Bailador
@@ -164,25 +164,22 @@ Date:   Sun Mar 30 23:13:47 2014 +0200
     The data field will contain the message of an exception of the parser in case of an error.
 --------
 panda
-commit 2693bbc536bb02930a1a2ba38fcd2f194f748b48
-Merge: c19fb6b 7ead09e
+commit abafd49eaa033893a93185a6cf803ad5b890e692
+Merge: 2693bbc 78bb1e0
 Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Fri Apr 11 20:09:46 2014 +0200
+Date:   Sat Apr 12 22:21:03 2014 +0200
 
-    Merge pull request #77 from retupmoca/master
+    Merge pull request #78 from retupmoca/master
     
-    Allow non-ecosystem dependencies
+    s/EXECUTABLE_NAME/EXECUTABLE/ (for GH #73)
 
-commit 7ead09e4f3d294246145f6e48927c1611c8d1833
+commit 78bb1e080912db62255c05c5b09a464170a8c5e9
 Author: Andrew Egeler <andrew@egeler.us>
-Date:   Fri Apr 11 13:45:57 2014 -0400
+Date:   Sat Apr 12 16:18:17 2014 -0400
 
-    Allow non-ecosystem dependencies
+    s/EXECUTABLE_NAME/EXECUTABLE/ (for GH #73)
     
-    If a module is installed, we can now use it as a dependency without
-    needing it in the ecosystem. This allows you to use panda to install
-    private modules that never see the ecosystem, or to test a set of
-    modules before adding them to the ecosystem.
+    This lets us use panda with a perl6 that isn't in the current path.
 --------
 perl6-Term-ANSIColor
 commit d0af2ab20fc0b2f4152798f3c2c21574b3088711

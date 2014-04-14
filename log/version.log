@@ -1,5 +1,5 @@
 Rakudo
-2014.03.01-131-g25c75c0
+2014.03.01-147-g79167a1
 NQP
 2014.03-66-g1cf05eb
 modules
@@ -47,11 +47,14 @@ Date:   Fri May 24 22:47:38 2013 -0500
     Export via proto
 --------
 MODULES.txt
-commit f79eaed04e7027591c83ac01120a170d277eaee3
-Author: Tobias Leich <email@froggs.de>
-Date:   Wed Apr 2 16:40:56 2014 +0200
+commit e0657f2cfe7e5327b1a995acb226218a31bc446a
+Author: jnthn <jnthn@jnthn.net>
+Date:   Sun Apr 13 14:11:26 2014 +0200
 
-    fix VCS conflict
+    Bump various modules.
+    
+    With this, we can now build a Rakudo Star that passes module tests on
+    MoarVM.
 --------
 Math-Model
 commit aacc103f76d6cdee856d457523a87c1eea9b0ac2
@@ -189,14 +192,11 @@ Date:   Thu Oct 3 13:24:33 2013 +0200
     Stop using deprecated .exists method.
 --------
 perl6-digest-md5
-commit 95d623fce0f8050b067a97e0732ad210b35ac4aa
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Thu Aug 2 17:27:21 2012 +0200
+commit 709c392136674d23b8eb3083fe25d02c177957ad
+Author: Tobias Leich <email@froggs.de>
+Date:   Sun Mar 30 13:47:36 2014 +0200
 
-    Patch from moritz++ to run on current rakudo/parrot
-    
-    It now requires explicit signatures on all pir:: opcodes
-    (most are replaced with nqp:: variants by now)
+    s/constant/my \\/ because of a precomp bug
 --------
 perl6-http-easy
 commit 2fd947bc09a4d27363dd7cefb78ebc05b9f75ce8

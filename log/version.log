@@ -1,7 +1,7 @@
 Rakudo
-2014.04-29-gae2bc53
+2014.04-39-g3492812
 NQP
-2014.04-6-g0ef8041
+2014.04-7-g2a31697
 modules
 --------
 Bailador
@@ -21,23 +21,11 @@ Date:   Mon Mar 24 12:32:29 2014 -0400
     Allow use of ports other than 3000.
 --------
 DBIish
-commit c9c012d0d9a829614dbad903fec46103a146da56
-Merge: bf5de44 054bf43
-Author: Andrew Egeler <root+github@retupmoca.com>
-Date:   Tue Mar 25 21:26:56 2014 -0400
+commit 1ef45843c78de57c16763b90ed852f835067b739
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sun Apr 20 12:35:56 2014 +0200
 
-    Merge pull request #2 from retupmoca/master
-    
-    Fix compile (for moarvm at least)
-
-commit 054bf4371a78dcf2ac48187c1d566d56f7a72837
-Author: Andrew Egeler <andrew@egeler.us>
-Date:   Tue Mar 25 21:13:50 2014 -0400
-
-    Fix compile (for moarvm at least)
-    
-    Rakudo on MoarVM was refusing to compile CArray[Int], as Int isn't a
-    native type.
+    Work around precompilation issue on rakudo-j
 --------
 Grammar-Profiler-Simple
 commit cdfcdbaee70645fbc8d4fa6c5651f899fa1c9a6c
@@ -47,11 +35,11 @@ Date:   Fri May 24 22:47:38 2013 -0500
     Export via proto
 --------
 MODULES.txt
-commit a6cac5b692fd7ca32ca0ebd18ac867a3afc4d049
+commit 0e87ffeb33918eadd85f658d9cae8fc2c4750766
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Fri Apr 18 18:42:42 2014 +0200
+Date:   Sun Apr 20 13:52:42 2014 +0200
 
-    Include $perl6 in testing output
+    Add "verbose-modules-test" target
 --------
 Math-Model
 commit aacc103f76d6cdee856d457523a87c1eea9b0ac2
@@ -98,11 +86,11 @@ Date:   Wed Feb 26 18:28:04 2014 +0100
     Add License
 --------
 doc
-commit 8fe2c1574743c71f0a27547bf1dc5f1c9afd2ea1
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Fri Apr 18 01:27:38 2014 +0200
+commit 2c42a1c61804ba2146b6301eff2499c6dc6a6c36
+Author: Carl Masak <cmasak@gmail.com>
+Date:   Mon Apr 21 09:02:31 2014 +0200
 
-    a bit on character ranges
+    s/defined by/defined as/
 --------
 file-find
 commit d79a83184da825f61d8c481050f931b511d74cae

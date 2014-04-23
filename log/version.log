@@ -1,5 +1,5 @@
 Rakudo
-2014.04-76-g383ba3b
+2014.04-78-g631f02e
 NQP
 2014.04-19-g8ac1a92
 modules
@@ -196,20 +196,14 @@ Date:   Tue Feb 18 11:00:11 2014 -0800
     Added S11 provides
 --------
 perl6-lwp-simple
-commit 7043eca43dee228b6ff05b12c8479f723c692cde
-Merge: 97fd14b 49cc497
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue Apr 1 10:03:12 2014 +0200
+commit 267ac05bbf2534005f95ab39a0d62ec71ccc014a
+Author: Andrew Egeler <root+github@retupmoca.com>
+Date:   Mon Apr 21 12:13:58 2014 -0400
 
-    Merge pull request #28 from FROGGS/patch-5
+    Fix chunked transfer-encoding
     
-    The wiki has moved, so pick another big page
-
-commit 49cc497bb72849767a730c923bacfabc64c3eaad
-Author: Tobias Leich <email@froggs.de>
-Date:   Sun Mar 30 21:34:44 2014 +0200
-
-    The wiki has moved, so pick another big page
+    If a chunk header line fell on a buffer boundary just right, parsing
+    would fail.
 --------
 rakudo-debugger
 commit 30c847500f10631dc447ae557a59a5211178d4bd

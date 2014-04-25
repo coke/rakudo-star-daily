@@ -1,5 +1,5 @@
 Rakudo
-2014.04-96-g375404d
+2014.04-97-g1ae0b29
 NQP
 2014.04-21-gb596f16
 modules
@@ -268,13 +268,22 @@ Date:   Fri May 3 17:31:13 2013 +0300
     Remove deprecated repo-url from META.info
 --------
 ufo
-commit 25c12a6b0170357865da85da59f82f556144bca1
-Author: Carl Masak <cmasak@gmail.com>
-Date:   Fri Feb 14 21:41:28 2014 +0100
+commit 85b015a07b2babbe1dcacb39e25f3c05cacdb8a4
+Merge: 25c12a6 db7e553
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Thu Apr 24 15:06:38 2014 +0200
 
-    [bin/ufo] fix typo
+    Merge pull request #11 from hoelzro/master
     
-    itz++
+    Actually filter dirwalk entries
+
+commit db7e553d2edc9d3d8756a29a421b577429a0233a
+Author: Rob Hoelz <rob@hoelz.ro>
+Date:   Mon Apr 14 08:30:03 2014 -0500
+
+    Actually filter dirwalk entries
+    
+    We pass in a filter argument via $f, but it never gets used.
 --------
 uri
 commit 15afe452abdf609e382f81377f0f96f4a3e05aba

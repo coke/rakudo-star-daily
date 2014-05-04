@@ -1,5 +1,5 @@
 Rakudo
-2014.04-152-g941f677
+2014.04-161-g70e580b
 NQP
 2014.04-38-g6c1ac9f
 modules
@@ -35,11 +35,30 @@ Date:   Fri May 24 22:47:38 2013 -0500
     Export via proto
 --------
 MODULES.txt
-commit b01b40e8e27eb038b1d3d54624aafa9d09920161
+commit 43a3df0d8cb7bd9a46579eef7254c1197a708210
+Merge: 8a79b98 5bbf9d6
 Author: jnthn <jnthn@jnthn.net>
-Date:   Fri May 2 22:17:32 2014 +0200
+Date:   Sat May 3 17:48:30 2014 +0200
 
-    Release announce is markdown; PerlJam++.
+    Merge branch 'master' of github.com:rakudo/star
+
+commit 5bbf9d6245aed2cae58b1f76b39d7c6dbf97fc81
+Author: Tobias Leich <email@froggs.de>
+Date:   Sat May 3 13:46:41 2014 +0200
+
+    more guidance to build rakudo
+    
+    It shows examples what option can be passes, and it also mentiones
+    other backends than Parrot when someone tried to build for several
+    backends but did not supply the right flags.
+
+commit 1f7afaabdbe35e2737c1709dc239fba563e0bf31
+Author: Tobias Leich <email@froggs.de>
+Date:   Sat May 3 13:25:12 2014 +0200
+
+    tools: only set $impl{config} when it is trueish
+    
+    Otherwise we pass a ref of an empty hash around, wich will be treated truesh later.
 --------
 Math-Model
 commit aacc103f76d6cdee856d457523a87c1eea9b0ac2
@@ -132,22 +151,22 @@ Date:   Fri Jan 31 17:24:00 2014 +0100
     Fix for flat $/.ast
 --------
 jsonrpc
-commit 8349d6d0c0c7edcf4d965eac7e9e8ca2dfc44937
-Merge: 15c8904 05fd0a4
+commit 9051bfd594727b904678cb884378d53acd92ee02
+Merge: 8349d6d 1712bb7
 Author: Pawel Pabian <bbkr@post.pl>
-Date:   Mon Mar 31 12:33:33 2014 +0200
+Date:   Sat May 3 10:01:18 2014 +0200
 
-    Merge pull request #9 from FROGGS/patch-1
+    Merge pull request #11 from FROGGS/patch-2
     
-    discard data section in comparision
+    fix: add_fallback needs to happen at BEGIN time
 
-commit 05fd0a4663811e774d67f2d4e818229f8191e795
+commit 1712bb7846224ee70849aa4dba3322e61e210de4
 Author: Tobias Leich <email@froggs.de>
-Date:   Sun Mar 30 23:13:47 2014 +0200
+Date:   Fri May 2 11:51:58 2014 +0200
 
-    discard data section in comparision
+    fix: add_fallback needs to happen at BEGIN time
     
-    The data field will contain the message of an exception of the parser in case of an error.
+    Also, the s/^/.HOW/ change should not be necessary, but there seems to be a bug in rakudo@moarvm that shows up when the code gets precompiled.
 --------
 panda
 commit abafd49eaa033893a93185a6cf803ad5b890e692

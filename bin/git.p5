@@ -1,0 +1,34 @@
+#!/usr/bin/env perl
+
+# Pull down all the repositories that we need to work with, and
+# keep a pristine copy locally.
+
+my $repo_dir = "repos";
+
+if (! -d $repo_dir) {
+    mkdir $repo_dir;
+}
+
+my %repos = (
+    "star"    => "https://github.com/rakudo/star.git",
+    "rakudo"  => "https://github.com/rakudo/rakudo.git",
+    "parrot"  => "https://github.com/parrot/parrot.git",
+    "roast"   => "https://github.com/perl6/roast.git",
+    "nqp"     => "https://github.com/perl6/nqp.git",
+    "MoarVM"  => "https://github.com/MoarVM/MoarVM.git",
+);
+
+for my $repo (keys %repos) {
+    my $dir = $repo_dir . "/" . $repo . ".git" ;
+    if (-d $dir) {
+        chdir $dir;
+        print "Fetching $repo\n";
+        qx(git fetch);
+	chdir "../../";
+    } else {
+        chdir $repo_dir;
+        print "Cloning $repo\n";
+        qx(git clone --mirror $repos{$repo});
+	chdir "../";
+    }
+}

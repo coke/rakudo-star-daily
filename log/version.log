@@ -1,7 +1,7 @@
 Rakudo
-2014.04-244-g875ce09
+2014.04-256-g8aa5c73
 NQP
-2014.04-49-g25d9faa
+2014.04-50-g6a7aa4b
 modules
 --------
 Bailador
@@ -169,22 +169,20 @@ Date:   Fri May 2 11:51:58 2014 +0200
     Also, the s/^/.HOW/ change should not be necessary, but there seems to be a bug in rakudo@moarvm that shows up when the code gets precompiled.
 --------
 panda
-commit abafd49eaa033893a93185a6cf803ad5b890e692
-Merge: 2693bbc 78bb1e0
+commit 05af3614784002c85dfda099cef2fd884a82a579
+Merge: abafd49 d47e254
 Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Sat Apr 12 22:21:03 2014 +0200
+Date:   Fri May 16 14:24:33 2014 +0200
 
-    Merge pull request #78 from retupmoca/master
+    Merge pull request #81 from kanatohodets/master
     
-    s/EXECUTABLE_NAME/EXECUTABLE/ (for GH #73)
+    Track change in $*VM name access
 
-commit 78bb1e080912db62255c05c5b09a464170a8c5e9
-Author: Andrew Egeler <andrew@egeler.us>
-Date:   Sat Apr 12 16:18:17 2014 -0400
+commit d47e254575717358f0cb14d22763cc7d31c43dfd
+Author: Ben Tyler <benjamin.tyler@gmail.com>
+Date:   Mon May 12 22:24:16 2014 -0500
 
-    s/EXECUTABLE_NAME/EXECUTABLE/ (for GH #73)
-    
-    This lets us use panda with a perl6 that isn't in the current path.
+    Track change in $*VM name access
 --------
 perl6-Term-ANSIColor
 commit 0e92caf09397f458314d4a30974618628a3e5600

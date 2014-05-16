@@ -5,20 +5,22 @@ PATH=/usr/local/bin:$PATH
 
 # save current directory
 LOG_DIR=`pwd`/log
+REPO_DIR=`pwd`/repos
 
 # start fresh
 rm -rf star
 
-git clone git://github.com/rakudo/star.git
+git clone $REPO_DIR/star.git
 cd star
+
 
 # get skeleton - don't use the default target, since we are building
 # nqp-latest and rakudo-latest. (but keeping the defined version of parrot)
 
 make -f tools/star/Makefile parrot
-git clone https://github.com/perl6/nqp.git
+git clone $REPO_DIR/nqp.git
 (cd nqp && git ls-files > MANIFEST; git describe > VERSION)
-git clone https://github.com/rakudo/rakudo.git
+git clone $REPO_DIR/rakudo.git
 (cd rakudo && git ls-files > MANIFEST; git describe > VERSION)
 
 # setup the modules to pull the latest, not just the declared version)
@@ -32,6 +34,8 @@ make -f tools/star/Makefile manifest
 git submodule foreach git pull origin master 2>&1 | tee submodule.log
 
 # log the versions used on everything
+echo "parrot" > $LOG_DIR/version.log
+cat parrot/VERSION >> $LOG_DIR/version.log
 echo "Rakudo" > $LOG_DIR/version.log
 cat rakudo/VERSION >> $LOG_DIR/version.log
 echo "NQP"   >> $LOG_DIR/version.log

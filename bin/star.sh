@@ -16,7 +16,7 @@ cd star
 # get the latest everything
 
 git clone $REPO_DIR/parrot.git
-(cd parrot && git describe --tags > VERSION)
+(cd parrot && git describe --tags > VERSION_GIT)
 git clone $REPO_DIR/nqp.git
 (cd nqp && git ls-files > MANIFEST; git describe > VERSION)
 git clone $REPO_DIR/rakudo.git
@@ -34,7 +34,7 @@ git submodule foreach git pull origin master 2>&1 | tee submodule.log
 
 # log the versions used on everything
 echo "parrot" > $LOG_DIR/version.log
-cat parrot/VERSION >> $LOG_DIR/version.log
+cat parrot/VERSION_GIT >> $LOG_DIR/version.log
 echo "Rakudo" > $LOG_DIR/version.log
 cat rakudo/VERSION >> $LOG_DIR/version.log
 echo "NQP"   >> $LOG_DIR/version.log

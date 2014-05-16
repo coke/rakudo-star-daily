@@ -33,14 +33,14 @@ make -f tools/star/Makefile manifest
 git submodule foreach git pull origin master 2>&1 | tee submodule.log
 
 # log the versions used on everything
-echo "parrot" > $LOG_DIR/version.log
-cat parrot/VERSION_GIT >> $LOG_DIR/version.log
-echo "Rakudo" > $LOG_DIR/version.log
-cat rakudo/VERSION >> $LOG_DIR/version.log
-echo "NQP"   >> $LOG_DIR/version.log
-cat nqp/VERSION >> $LOG_DIR/version.log
-echo "modules"  >> $LOG_DIR/version.log
-(cd modules; for file in * ; do echo "--------"; echo $file; (cd $file; git log HEAD^..HEAD); done) >> $LOG_DIR/version.log
+echo "parrot" > $LOG_DIR/parrot-version.log
+cat parrot/VERSION_GIT >> $LOG_DIR/parrot-version.log
+echo "Rakudo" > $LOG_DIR/parrot-version.log
+cat rakudo/VERSION >> $LOG_DIR/parrot-version.log
+echo "NQP"   >> $LOG_DIR/parrot-version.log
+cat nqp/VERSION >> $LOG_DIR/parrot-version.log
+echo "modules"  >> $LOG_DIR/parrot-version.log
+(cd modules; for file in * ; do echo "--------"; echo $file; (cd $file; git log HEAD^..HEAD); done) >> $LOG_DIR/parrot-version.log
 
 # make a release candidate
 make -f tools/star/Makefile release VERSION=daily 2>&1 | tee makefile.log
@@ -50,9 +50,9 @@ tar xvf rakudo-star-daily.tar.gz
 
 # build it.
 cd rakudo-star-daily
-perl Configure.pl --backend=parrot --gen-nqp --gen-parrot 2>&1 | tee $LOG_DIR/configure.log
-make install 2>&1 | tee $LOG_DIR/build.log
+perl Configure.pl --backend=parrot --gen-nqp --gen-parrot 2>&1 | tee $LOG_DIR/parrot-configure.log
+make install 2>&1 | tee $LOG_DIR/parrot-build.log
 
 # run tests
-make rakudo-test 2>&1 | tee $LOG_DIR/test-rakudo.log
-make modules-test 2>&1 | tee $LOG_DIR/test-modules.log
+make rakudo-test 2>&1 | tee $LOG_DIR/parrot-test-rakudo.log
+make modules-test 2>&1 | tee $LOG_DIR/parrot-test-modules.log

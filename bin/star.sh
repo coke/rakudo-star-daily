@@ -13,11 +13,10 @@ rm -rf star
 git clone $REPO_DIR/star.git
 cd star
 
+# get the latest everything
 
-# get skeleton - don't use the default target, since we are building
-# nqp-latest and rakudo-latest. (but keeping the defined version of parrot)
-
-make -f tools/star/Makefile parrot
+git clone $REPO_DIR/parrot.git
+(cd parrot && git describe --tags > VERSION)
 git clone $REPO_DIR/nqp.git
 (cd nqp && git ls-files > MANIFEST; git describe > VERSION)
 git clone $REPO_DIR/rakudo.git

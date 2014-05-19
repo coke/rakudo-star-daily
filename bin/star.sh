@@ -10,7 +10,7 @@ REPO_DIR=`pwd`/repos
 
 # start fresh
 
-for impl in parrot; do
+for impl in MoarVM; do
     cd $TOP_DIR;
     rm -rf star-$impl
     git clone $REPO_DIR/star.git star-$impl
@@ -55,11 +55,13 @@ for impl in parrot; do
     
     # build it.
     cd rakudo-star-daily
-    config_args="";
+    config_args=""
+    backend=$impl
     if [ "$impl" = "parrot" ] ; then 
         config_args="--gen-parrot"
     elif [ "$impl" = "MoarVM" ] ; then
         config_args="--gen-moar"
+        backend="moar"
     fi
     perl Configure.pl --backend=$impl --gen-nqp $config_args 2>&1 | tee $LOG_DIR/$impl-configure.log
 

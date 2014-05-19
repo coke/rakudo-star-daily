@@ -63,7 +63,7 @@ for impl in MoarVM; do
         config_args="--gen-moar"
         backend="moar"
     fi
-    perl Configure.pl --backend=$impl --gen-nqp $config_args 2>&1 | tee $LOG_DIR/$impl-configure.log
+    perl Configure.pl --backend=$backend --gen-nqp $config_args 2>&1 | tee $LOG_DIR/$impl-configure.log
 
     make install 2>&1 | tee $LOG_DIR/$impl-build.log
     

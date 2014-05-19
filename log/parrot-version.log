@@ -1,7 +1,7 @@
 Rakudo
-2014.04-257-g6413980
+2014.04-269-gbcb3934
 NQP
-2014.04-57-g612cf2d
+2014.04-59-gb85f70e
 modules
 --------
 Bailador
@@ -352,23 +352,23 @@ Date:   Wed Jan 15 19:41:26 2014 +0100
     gets rid of a "use of Nil in numeric context" warning
 --------
 zavolaj
-commit b211b809407bf5dadf8ba24895ed9c925a455fa4
-Merge: 1662d4a f7422ef
+commit 2cd79b0e87058f30b156b68ee0fe7012a8e2db1e
+Merge: b211b80 92c8f2d
 Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Sun Mar 30 17:56:43 2014 +0200
+Date:   Sat May 17 14:49:16 2014 +0200
 
-    Merge pull request #35 from FROGGS/patch-3
+    Merge pull request #40 from timo/assign_pos_carray
     
-    use perllibs, because libs contains boilerplate
+    assign_pos for CArray
 
-commit f7422efef8fd77432a1768acc483050ede94287e
-Author: Tobias Leich <email@froggs.de>
-Date:   Sun Mar 30 17:29:24 2014 +0200
+commit 92c8f2d0121dcdf991f9ead27ccb7ad894705409
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Sat May 17 09:28:36 2014 +0200
 
-    use perllibs, because libs contains boilerplate
-    
-    On my ubunto box nativecall.libs contains -lgdbm which is not needed, and is not found by the linker for some reason.
-    $ perl -MConfig -E 'say $Config{libs}'
-    -lgdbm -lgdbm_compat -ldb -ldl -lm -lpthread -lc -lcrypt
-    $ perl -MConfig -E 'say $Config{perllibs}'
-    -ldl -lm -lpthread -lc -lcrypt
+    these weren't meant to be num methods.
+
+commit ac41467a3db086dd0e1b7fee932295c4b695156e
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Fri May 16 23:48:33 2014 +0200
+
+    assign_pos for CArray

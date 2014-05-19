@@ -21,21 +21,21 @@ for impl in MoarVM; do
     git clone $REPO_DIR/parrot.git
     (cd parrot && git describe --tags > VERSION_GIT)
     git clone $REPO_DIR/MoarVM.git
-    (cd MoarVM && git describe --tags > VERSION_GIT)
+    (cd MoarVM && git ls-files > MANIFEST; git describe > VERSION_GIT)
     git clone $REPO_DIR/nqp.git
     (cd nqp && git ls-files > MANIFEST; git describe > VERSION)
     git clone $REPO_DIR/rakudo.git
     (cd rakudo && git ls-files > MANIFEST; git describe > VERSION)
 
     # setup the modules to pull the latest, not just the declared version)
-    #git submodule init
-    #git submodule update
-    #(cd modules; for file in * ; do (cd $file && git fetch origin; git reset --hard origin/master); done)
+    git submodule init
+    git submodule update
+    (cd modules; for file in * ; do (cd $file && git fetch origin; git reset --hard origin/master); done)
 
     make -f tools/star/Makefile manifest
 
     # get submodules # ??? is this doing anything?
-    #git submodule foreach git pull origin master 2>&1 | tee submodule.log
+    git submodule foreach git pull origin master 2>&1 | tee submodule.log
 
     # log the versions used on everything
     echo $impl > $LOG_DIR/$impl-version.log
@@ -45,7 +45,7 @@ for impl in MoarVM; do
     echo "NQP"   >> $LOG_DIR/$impl-version.log
     cat nqp/VERSION >> $LOG_DIR/$impl-version.log
     echo "modules"  >> $LOG_DIR/$impl-version.log
-    #(cd modules; for file in * ; do echo "--------"; echo $file; (cd $file; git log HEAD^..HEAD); done) >> $LOG_DIR/$impl-version.log
+    (cd modules; for file in * ; do echo "--------"; echo $file; (cd $file; git log HEAD^..HEAD); done) >> $LOG_DIR/$impl-version.log
     
     # make a release candidate
     make -f tools/star/Makefile release VERSION=daily 2>&1 | tee makefile.log

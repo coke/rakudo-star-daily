@@ -21,7 +21,7 @@ for impl in MoarVM; do
     git clone $REPO_DIR/parrot.git
     (cd parrot && git describe --tags > VERSION_GIT)
     git clone $REPO_DIR/MoarVM.git
-    (cd MoarVM && git ls-files > MANIFEST; git describe > VERSION_GIT)
+    (cd MoarVM && git ls-files > MANIFEST; git describe > VERSION)
     git clone $REPO_DIR/nqp.git
     (cd nqp && git ls-files > MANIFEST; git describe > VERSION)
     git clone $REPO_DIR/rakudo.git
@@ -38,8 +38,10 @@ for impl in MoarVM; do
     git submodule foreach git pull origin master 2>&1 | tee submodule.log
 
     # log the versions used on everything
-    echo $impl > $LOG_DIR/$impl-version.log
-    cat $impl/VERSION_GIT >> $LOG_DIR/$impl-version.log
+    echo "parrot" > $LOG_DIR/$impl-version.log
+    cat parrot/VERSION_GIT >> $LOG_DIR/$impl-version.log
+    echo "MoarVM" >> $LOG_DIR/$impl-version.log
+    cat MoarVM/VERSION >> $LOG_DIR/$impl-version.log
     echo "Rakudo" > $LOG_DIR/$impl-version.log
     cat rakudo/VERSION >> $LOG_DIR/$impl-version.log
     echo "NQP"   >> $LOG_DIR/$impl-version.log

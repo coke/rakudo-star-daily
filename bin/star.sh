@@ -18,12 +18,15 @@ for impl in MoarVM parrot; do
 
     # get the latest everything... except submodules of VMs
 
-    git clone $REPO_DIR/parrot.git
-    (cd parrot && git describe --tags > VERSION_GIT)
-    git clone $REPO_DIR/MoarVM.git
-    (cd MoarVM && git submodule init && git submodule update)
-    (cd MoarVM && git ls-files > MANIFEST; git describe > VERSION)
-    (cd MoarVM && for dir in $(git submodule status | awk '{print $2}') ; do export PDIR=$dir; (cd $dir && git ls-files | perl -ne 'print "$ENV{PDIR}/$_"') ; done  >> MANIFEST)
+    if [ "$impl" = "parrot" ] ; then 
+        git clone $REPO_DIR/parrot.git
+        (cd parrot && git describe --tags > VERSION_GIT)
+    elif [ "$impl" = "MoarVM" ] ; then
+        git clone $REPO_DIR/MoarVM.git
+        (cd MoarVM && git submodule init && git submodule update)
+        (cd MoarVM && git ls-files > MANIFEST; git describe > VERSION)
+        (cd MoarVM && for dir in $(git submodule status | awk '{print $2}') ; do export PDIR=$dir; (cd $dir && git ls-files | perl -ne 'print "$ENV{PDIR}/$_"') ; done  >> MANIFEST)
+    fi
     git clone $REPO_DIR/nqp.git
     (cd nqp && git ls-files > MANIFEST; git describe > VERSION)
     git clone $REPO_DIR/rakudo.git
@@ -40,10 +43,15 @@ for impl in MoarVM parrot; do
     git submodule foreach git pull origin master 2>&1 | tee submodule.log
 
     # log the versions used on everything
-    echo "parrot" > $LOG_DIR/$impl-version.log
-    cat parrot/VERSION_GIT >> $LOG_DIR/$impl-version.log
-    echo "MoarVM" >> $LOG_DIR/$impl-version.log
-    cat MoarVM/VERSION >> $LOG_DIR/$impl-version.log
+    if [ "$impl" = "parrot" ] ; then 
+        echo "parrot" > $LOG_DIR/$impl-version.log
+        cat parrot/VERSION_GIT >> $LOG_DIR/$impl-version.log
+    elif [ "$impl" = "MoarVM" ] ; then
+        echo "MoarVM" > $LOG_DIR/$impl-version.log
+        cat MoarVM/VERSION >> $LOG_DIR/$impl-version.log
+    elif [ "$impl" = "jvm" ] ; then
+        java --version > $LOG_DIR/$impl-version.log
+    fi
     echo "Rakudo" > $LOG_DIR/$impl-version.log
     cat rakudo/VERSION >> $LOG_DIR/$impl-version.log
     echo "NQP"   >> $LOG_DIR/$impl-version.log

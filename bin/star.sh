@@ -10,18 +10,20 @@ REPO_DIR=`pwd`/repos
 
 # start fresh
 
-for impl in MoarVM; do
+for impl in MoarVM parrot; do
     cd $TOP_DIR;
     rm -rf star-$impl
     git clone $REPO_DIR/star.git star-$impl
     cd star-$impl
 
-    # get the latest everything
+    # get the latest everything... except submodules of VMs
 
     git clone $REPO_DIR/parrot.git
     (cd parrot && git describe --tags > VERSION_GIT)
     git clone $REPO_DIR/MoarVM.git
+    (cd MoarVM && git submodule init && git submodule update)
     (cd MoarVM && git ls-files > MANIFEST; git describe > VERSION)
+    (cd MoarVM && for dir in $(git submodule status | awk '{print $2}') ; do export PDIR=$dir; (cd $dir && git ls-files | perl -ne 'print "$ENV{PDIR}/$_"') ; done  >> MANIFEST)
     git clone $REPO_DIR/nqp.git
     (cd nqp && git ls-files > MANIFEST; git describe > VERSION)
     git clone $REPO_DIR/rakudo.git

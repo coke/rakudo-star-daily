@@ -10,7 +10,7 @@ REPO_DIR=`pwd`/repos
 
 # start fresh
 
-for impl in MoarVM parrot; do
+for impl in MoarVM parrot jvm; do
     cd $TOP_DIR;
     rm -rf star-$impl
     git clone $REPO_DIR/star.git star-$impl

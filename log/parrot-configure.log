@@ -2156,11 +2156,6 @@ Building NQP ...
 /usr/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install --backends=parrot --make-install
 Verifying installation ...
 Using /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot (version 0).
-* configure package dyncall
-guess operating system linux
-guess arch x64
-guess tool gcc
-guess assembler as
 
 Creating gen/parrot/nqp_launcher ...
 Cleaning up ...
@@ -2173,8 +2168,8 @@ cd src/vm/parrot/pmc && cc -c -I/home/coke/sandbox/rakudo-star-daily/star-parrot
 cc -o src/vm/parrot/pmc/nqp_group.so nqp_group.o src/vm/parrot/pmc/*.o -fstack-protector -L/usr/local/lib  -shared -L/usr/local/lib -fstack-protector -fPIC  -ldl -lm -lpthread -lcrypt -lrt -lgmp -lreadline  -lffi   -L/usr/lib/x86_64-linux-gnu  -licuuc -licudata 
 cd src/vm/parrot/ops && /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/ops2c C --dynamic nqp.ops
 # Parsing nqp.ops...
-# Parsed nqp.ops in 9.724 seconds; found 324 ops.
-# Ops parsed in 9.727 seconds.
+# Parsed nqp.ops in 9.568 seconds; found 324 ops.
+# Ops parsed in 9.571 seconds.
 cd src/vm/parrot/ops && cc -c -o nqp_ops.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.4.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.4.0-devel/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g nqp_ops.c
 nqp_ops.c: In function ‘Parrot_multi_cache_add_p_p_p_p’:
 nqp_ops.c:7410:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
@@ -4453,8 +4448,8 @@ cd 3rdparty/libtommath && cc -c -o bn_s_mp_sqr.o -I. -D_REENTRANT -D_GNU_SOURCE 
 cd 3rdparty/libtommath && cc -c -o bn_s_mp_sub.o -I. -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g bn_s_mp_sub.c
 cd src/vm/parrot/ops && /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/ops2c C --dynamic nqp_bigint.ops
 # Parsing nqp_bigint.ops...
-# Parsed nqp_bigint.ops in 2.547 seconds; found 58 ops.
-# Ops parsed in 2.548 seconds.
+# Parsed nqp_bigint.ops in 2.699 seconds; found 58 ops.
+# Ops parsed in 2.700 seconds.
 cd src/vm/parrot/ops && cc -c -o nqp_bigint_ops.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.4.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.4.0-devel/pmc -I../../../../3rdparty/libtommath -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g nqp_bigint_ops.c
 cd src/vm/parrot/6model/reprs && cc -c -o P6bigint.o -I../../../../../src/vm/parrot/pmc -I../../../../../3rdparty/libtommath -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.4.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.4.0-devel/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g P6bigint.c
 In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.4.0-devel/parrot/string.h:19:0,
@@ -4678,40 +4673,54 @@ P6bigint.c:143:21: warning: function returns an aggregate [-Waggregate-return]
 cd src/vm/parrot/ops && cc -o nqp_bigint_ops.so nqp_bigint_ops.o ../../../../3rdparty/libtommath/*.o ../6model/reprs/P6bigint.o -fstack-protector -L/usr/local/lib  -shared -L/usr/local/lib -fstack-protector -fPIC  -ldl -lm -lpthread -lcrypt -lrt -lgmp -lreadline  -lffi   -L/usr/lib/x86_64-linux-gnu  -licuuc -licudata 
 cd 3rdparty/dyncall && BUILD_DIR=. make
 make[1]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall'
-make -C dyncall 
+cd dyncall && make all
 make[2]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall/dyncall'
-gcc -O3 -fPIC   -c dyncall_vector.c -o dyncall_vector.o
-gcc -O3 -fPIC   -c dyncall_api.c -o dyncall_api.o
-gcc -O3 -fPIC   -c dyncall_callvm.c -o dyncall_callvm.o
-gcc -O3 -fPIC   -c dyncall_callvm_base.c -o dyncall_callvm_base.o
-gcc -O3 -fPIC   -c dyncall_struct.c -o dyncall_struct.o
-gcc -O3 -fPIC   -c dyncall_callf.c -o dyncall_callf.o
-gcc    -c -o dyncall_call.o dyncall_call.S
-rm -f ./libdyncall_s.a
-ar -rcs libdyncall_s.a dyncall_vector.o dyncall_api.o dyncall_callvm.o dyncall_callvm_base.o dyncall_struct.o dyncall_callf.o dyncall_call.o 
+cc -fPIC   -c -o dyncall_vector.o dyncall_vector.c
+cc -fPIC   -c -o dyncall_api.o dyncall_api.c
+cc -fPIC   -c -o dyncall_callvm.o dyncall_callvm.c
+cc -fPIC   -c -o dyncall_callvm_base.o dyncall_callvm_base.c
+cc    -c -o dyncall_call.o dyncall_call.S
+cc -fPIC   -c -o dyncall_callf.o dyncall_callf.c
+cc -fPIC   -c -o dyncall_struct.o dyncall_struct.c
+ar rv libdyncall_s.a dyncall_vector.o dyncall_api.o dyncall_callvm.o dyncall_callvm_base.o dyncall_call.o dyncall_callf.o dyncall_struct.o
+ar: creating libdyncall_s.a
+a - dyncall_vector.o
+a - dyncall_api.o
+a - dyncall_callvm.o
+a - dyncall_callvm_base.o
+a - dyncall_call.o
+a - dyncall_callf.o
+a - dyncall_struct.o
 make[2]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall/dyncall'
-make -C dynload 
-make[2]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall/dynload'
-gcc -O3 -fPIC   -c dynload.c -o dynload.o
-gcc -O3 -fPIC   -c dynload_syms.c -o dynload_syms.o
-rm -f ./libdynload_s.a
-ar -rcs libdynload_s.a dynload.o dynload_syms.o 
-make[2]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall/dynload'
-make -C dyncallback 
+cd dyncallback && make all
 make[2]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall/dyncallback'
-gcc -O3 -fPIC -I../dyncall  -c dyncall_thunk.c -o dyncall_thunk.o
-gcc -O3 -fPIC -I../dyncall  -c dyncall_alloc_wx.c -o dyncall_alloc_wx.o
-gcc -O3 -fPIC -I../dyncall  -c dyncall_args.c -o dyncall_args.o
-gcc -O3 -fPIC -I../dyncall  -c dyncall_callback.c -o dyncall_callback.o
-gcc  -I../dyncall  -c -o dyncall_callback_arch.o dyncall_callback_arch.S
-rm -f ./libdyncallback_s.a
-ar -rcs libdyncallback_s.a dyncall_thunk.o dyncall_alloc_wx.o dyncall_args.o dyncall_callback.o dyncall_callback_arch.o 
+cc -fPIC -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall/./dyncallback/../dyncall    -c -o dyncall_alloc_wx.o dyncall_alloc_wx.c
+cc -fPIC -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall/./dyncallback/../dyncall    -c -o dyncall_args.o dyncall_args.c
+cc -fPIC -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall/./dyncallback/../dyncall    -c -o dyncall_callback.o dyncall_callback.c
+cc    -c -o dyncall_callback_arch.o dyncall_callback_arch.S
+cc -fPIC -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall/./dyncallback/../dyncall    -c -o dyncall_thunk.o dyncall_thunk.c
+ar rv libdyncallback_s.a dyncall_alloc_wx.o dyncall_args.o dyncall_callback.o dyncall_callback_arch.o dyncall_thunk.o
+ar: creating libdyncallback_s.a
+a - dyncall_alloc_wx.o
+a - dyncall_args.o
+a - dyncall_callback.o
+a - dyncall_callback_arch.o
+a - dyncall_thunk.o
 make[2]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall/dyncallback'
+cd dynload && make all
+make[2]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall/dynload'
+cc -fPIC   -c -o dynload.o dynload.c
+cc -fPIC   -c -o dynload_syms.o dynload_syms.c
+ar rv libdynload_s.a dynload.o dynload_syms.o
+ar: creating libdynload_s.a
+a - dynload.o
+a - dynload_syms.o
+make[2]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall/dynload'
 make[1]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall'
 cd src/vm/parrot/ops && /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/ops2c C --dynamic nqp_dyncall.ops
 # Parsing nqp_dyncall.ops...
-# Parsed nqp_dyncall.ops in 1.824 seconds; found 11 ops.
-# Ops parsed in 1.825 seconds.
+# Parsed nqp_dyncall.ops in 1.566 seconds; found 11 ops.
+# Ops parsed in 1.567 seconds.
 cd src/vm/parrot/ops && cc -c -o nqp_dyncall_ops.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.4.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.4.0-devel/pmc -I../../../../3rdparty/dyncall/dyncall -I../../../../3rdparty/dyncall/dyncallback -I../../../../3rdparty/dyncall/dynload -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g nqp_dyncall_ops.c
 nqp_dyncall_ops.c: In function ‘unmarshal_callback’:
 nqp_dyncall_ops.c:571:9: warning: passing argument 2 of ‘dcbNewCallback’ from incompatible pointer type [enabled by default]
@@ -5640,7 +5649,7 @@ Linked: nqp-p
 
 NQP has been built and installed.
 Verifying installation ...
-Using /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p (version 2014.05-7-g7a36ff2).
+Using /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p (version 2014.05-10-g69c7822).
 
 Creating Makefile ...
 Cleaning up ...

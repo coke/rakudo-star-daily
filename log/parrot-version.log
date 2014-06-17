@@ -1,7 +1,7 @@
 Rakudo
-Bajor-194-gf1b05d1
+Bajor-208-g354c5c5
 NQP
-2014.05-10-g69c7822
+2014.05-12-g9bb18da
 modules
 --------
 Bailador
@@ -150,11 +150,29 @@ Date:   Fri May 2 11:51:58 2014 +0200
     Also, the s/^/.HOW/ change should not be necessary, but there seems to be a bug in rakudo@moarvm that shows up when the code gets precompiled.
 --------
 panda
-commit 43822c6c64fea1730e02ff7ff787883a81a05fad
-Author: Tobias Leich <email@froggs.de>
-Date:   Sun May 25 18:29:10 2014 +0200
+commit 2714f9f7ffa9aaad5a87c32fed9a1c9b31ce076a
+Merge: 43822c6 035ffc6
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Mon Jun 16 13:05:25 2014 +0200
 
-    optimize local-fetch by moving things out of the loop
+    Merge pull request #80 from softmoth/master
+    
+    Factor out make-default-ecosystem() for external scripts
+
+commit 035ffc6995cfee257f84457ba29446cc9d8f5618
+Author: Tim Smith <tim.dolores@gmail.com>
+Date:   Fri May 9 12:19:49 2014 -0600
+
+    Rename '.work' to '.panda-work'
+
+commit da6558d3f24d0239091ffbc62ab45a1fd5899378
+Author: Tim Smith <tim.dolores@gmail.com>
+Date:   Fri May 9 12:14:13 2014 -0600
+
+    Define make-default-ecosystem in Panda::App
+    
+    Enable Panda::App to be used by other tools to set up the same
+    ecosystem that bin/panda uses.
 --------
 perl6-Term-ANSIColor
 commit 0e92caf09397f458314d4a30974618628a3e5600

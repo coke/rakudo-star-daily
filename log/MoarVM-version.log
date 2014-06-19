@@ -1,7 +1,7 @@
 Rakudo
-Bajor-220-g61eaba6
+Bajor-223-g5fdfc78
 NQP
-2014.05-15-gadf65bf
+2014.05-16-gf050c36
 modules
 --------
 Bailador
@@ -86,11 +86,13 @@ Date:   Wed Feb 26 18:28:04 2014 +0100
     Add License
 --------
 doc
-commit f7c8b4f5f36d281fdfab1e4c29d2a281ef2cb7c5
+commit 5aeb7856d38fcf50741aca529d6fc6187a9ba99b
 Author: Mouq <alexmoquin@gmail.com>
-Date:   Wed Jun 18 03:37:39 2014 -0400
+Date:   Thu Jun 19 03:44:38 2014 -0400
 
-    Add "All" section to sub-menus
+    Inline &add-new in &find-definitions
+    
+    There used to be a reason for it to be a sub; no longer
 --------
 file-find
 commit d79a83184da825f61d8c481050f931b511d74cae
@@ -214,11 +216,20 @@ Date:   Tue Feb 18 11:00:11 2014 -0800
     Added S11 provides
 --------
 perl6-lwp-simple
-commit d11d5a17f9588ccc535d010ef5f706baa6ed6135
-Author: Cosimo Streppone <cosimo@opera.com>
-Date:   Sat May 31 21:34:54 2014 +0200
+commit d52b3bd76a5f9354030b475c1268ea7d582f359f
+Merge: 7e7de9e 16674f1
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Wed Jun 18 14:28:57 2014 -0700
 
-    $*PERL<compiler><name> is now deprecated.
+    Merge pull request #32 from FROGGS/patch-5
+    
+    fix UA string: method calls in quotes need parens
+
+commit 16674f1db5a382dd09ff7da905c00092e22be0f9
+Author: Tobias Leich <email@froggs.de>
+Date:   Tue Jun 17 20:59:27 2014 +0200
+
+    fix UA string: method calls in quotes need parens
 --------
 rakudo-debugger
 commit e9cc44ea76dcf8da9addddff9c4692d7b1cae997

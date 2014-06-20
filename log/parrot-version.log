@@ -1,7 +1,7 @@
 Rakudo
-Bajor-223-g5fdfc78
+Gdansk-1-g8812ca4
 NQP
-2014.05-16-gf050c36
+2014.06
 modules
 --------
 Bailador
@@ -70,13 +70,11 @@ Date:   Fri May 30 01:24:06 2014 +1200
     $*VM<name> is deprecated
 --------
 Pod-To-HTML
-commit 942c233321a86e0652c71b14d1aad4a9b0bd3deb
+commit c400b666549fbca40664112ee4bce4418cec5380
 Author: Mouq <alexmoquin@gmail.com>
-Date:   Wed Jun 18 02:21:39 2014 -0400
+Date:   Thu Jun 19 14:33:29 2014 -0400
 
-    Fix =Html
-    
-    Simple, huh?
+    Display DESCRIPTION below the TITLE, if applicable
 --------
 Template-Mojo
 commit b1b6fa6c626575385b334bb423d66111598fb0bf
@@ -86,13 +84,11 @@ Date:   Wed Feb 26 18:28:04 2014 +0100
     Add License
 --------
 doc
-commit 5aeb7856d38fcf50741aca529d6fc6187a9ba99b
+commit 7920acd3e954c2a8e43c7d6c28df8293ba00914f
 Author: Mouq <alexmoquin@gmail.com>
-Date:   Thu Jun 19 03:44:38 2014 -0400
+Date:   Fri Jun 20 02:42:17 2014 -0400
 
-    Inline &add-new in &find-definitions
-    
-    There used to be a reason for it to be a sub; no longer
+    Add Whatever to terms.pod
 --------
 file-find
 commit d79a83184da825f61d8c481050f931b511d74cae
@@ -216,20 +212,22 @@ Date:   Tue Feb 18 11:00:11 2014 -0800
     Added S11 provides
 --------
 perl6-lwp-simple
-commit d52b3bd76a5f9354030b475c1268ea7d582f359f
-Merge: 7e7de9e 16674f1
+commit 2944981e4a9ff428c34f1a32e536e07eb6f8aa19
+Merge: d52b3bd 971a7ee
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Wed Jun 18 14:28:57 2014 -0700
+Date:   Thu Jun 19 06:09:55 2014 -0700
 
-    Merge pull request #32 from FROGGS/patch-5
+    Merge pull request #34 from FROGGS/patch-7
     
-    fix UA string: method calls in quotes need parens
+    do not check for document size
 
-commit 16674f1db5a382dd09ff7da905c00092e22be0f9
+commit 971a7eeec7fd9bb44a68c771b6e57f1d71daad23
 Author: Tobias Leich <email@froggs.de>
-Date:   Tue Jun 17 20:59:27 2014 +0200
+Date:   Thu Jun 19 15:08:52 2014 +0200
 
-    fix UA string: method calls in quotes need parens
+    do not check for document size
+    
+    Otherwise we have to adjust this test every week or two.
 --------
 rakudo-debugger
 commit e9cc44ea76dcf8da9addddff9c4692d7b1cae997
@@ -350,23 +348,17 @@ Date:   Wed Jan 15 19:41:26 2014 +0100
     gets rid of a "use of Nil in numeric context" warning
 --------
 zavolaj
-commit 2cd79b0e87058f30b156b68ee0fe7012a8e2db1e
-Merge: b211b80 92c8f2d
+commit 265e5046408e795acb72d5a58c2b2650d6450c34
+Merge: 2cd79b0 53317e5
 Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Sat May 17 14:49:16 2014 +0200
+Date:   Fri Jun 20 00:45:36 2014 +0200
 
-    Merge pull request #40 from timo/assign_pos_carray
+    Merge pull request #39 from jnthn/tadzik/deprecations
     
-    assign_pos for CArray
+    Get rid of deprecation messages
 
-commit 92c8f2d0121dcdf991f9ead27ccb7ad894705409
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Sat May 17 09:28:36 2014 +0200
+commit 53317e52497ecb5625727ecdc0571ec0e1d3226f
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Fri May 16 15:58:04 2014 +0200
 
-    these weren't meant to be num methods.
-
-commit ac41467a3db086dd0e1b7fee932295c4b695156e
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Fri May 16 23:48:33 2014 +0200
-
-    assign_pos for CArray
+    Get rid of deprecation messages

@@ -2,7 +2,7 @@
 cd rakudo && /usr/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install && make
 Found /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p (backend parrot)
 Verifying installation ...
-Using /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p (version 2014.05-16-gf050c36 / Parrot 6.5.0).
+Using /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p (version 2014.06 / Parrot 6.5.0).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -11,8 +11,8 @@ After that, 'make test' will run some tests and
 make[1]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/rakudo'
 cd src/vm/parrot/ops && /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/ops2c C --dynamic perl6.ops
 # Parsing perl6.ops...
-# Parsed perl6.ops in 3.730 seconds; found 121 ops.
-# Ops parsed in 3.731 seconds.
+# Parsed perl6.ops in 4.436 seconds; found 121 ops.
+# Ops parsed in 4.437 seconds.
 cd src/vm/parrot/ops && cc -c -o perl6_ops.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.5.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.5.0-devel/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g perl6_ops.c
 In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.5.0-devel/parrot/string.h:19:0,
                  from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.5.0-devel/parrot/context.h:10,
@@ -306,12 +306,12 @@ Linked: perl6-p
 The following step can take a long time, please be patient.
 ./perl6-p --setting=NULL --ll-exception --optimize=3 --target=pir --stagestats --output=src/gen/p-CORE.setting.pir gen/parrot/CORE.setting
 Stage start      :   0.000
-Stage parse      : 269.006
+Stage parse      : 267.942
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :  25.839
-Stage post       :  85.886
-Stage pir        :   6.738
+Stage optimize   :  24.558
+Stage post       :  85.195
+Stage pir        :   7.188
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot  -o CORE.setting.pbc src/gen/p-CORE.setting.pir
 ./perl6-p --target=pir  --output=src/gen/RESTRICTED.setting.pir src/RESTRICTED.setting
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot  -o RESTRICTED.setting.pbc src/gen/RESTRICTED.setting.pir
@@ -476,6 +476,7 @@ modules/doc/lib/Language/regexes.pod => /home/coke/sandbox/rakudo-star-daily/sta
 modules/doc/lib/Language/classtut.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Language/classtut.pod
 modules/doc/lib/Language/containers.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Language/containers.pod
 modules/doc/lib/Language/terms.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Language/terms.pod
+modules/doc/lib/Language/quoting.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Language/quoting.pod
 modules/doc/lib/Language/operators.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Language/operators.pod
 modules/doc/lib/Type/Bool.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/Bool.pod
 modules/doc/lib/Type/Exception.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/Exception.pod
@@ -493,7 +494,6 @@ modules/doc/lib/Type/Code.pod => /home/coke/sandbox/rakudo-star-daily/star-parro
 modules/doc/lib/Type/WhateverCode.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/WhateverCode.pod
 modules/doc/lib/Type/Cool.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/Cool.pod
 modules/doc/lib/Type/Stringy.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/Stringy.pod
-modules/doc/lib/Type/MixHash.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/MixHash.pod
 modules/doc/lib/Type/Mu.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/Mu.pod
 modules/doc/lib/Type/Str.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/Str.pod
 modules/doc/lib/Type/Failure.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/Failure.pod
@@ -522,13 +522,11 @@ modules/doc/lib/Type/Junction.pod => /home/coke/sandbox/rakudo-star-daily/star-p
 modules/doc/lib/Type/Method.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/Method.pod
 modules/doc/lib/Type/Macro.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/Macro.pod
 modules/doc/lib/Type/IO.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/IO.pod
-modules/doc/lib/Type/BagHash.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/BagHash.pod
 modules/doc/lib/Type/Date.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/Date.pod
 modules/doc/lib/Type/EnumMap.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/EnumMap.pod
 modules/doc/lib/Type/Rational.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/Rational.pod
 modules/doc/lib/Type/Block.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/Block.pod
 modules/doc/lib/Type/Whatever.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/Whatever.pod
-modules/doc/lib/Type/SetHash.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/SetHash.pod
 modules/doc/lib/Type/Parameter.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/Parameter.pod
 modules/doc/lib/Type/AST.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/AST.pod
 modules/doc/lib/Type/Grammar.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.5.0-devel/languages/perl6/lib/Type/Grammar.pod

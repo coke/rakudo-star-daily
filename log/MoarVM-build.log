@@ -48,12 +48,12 @@ gcc  -shared -fPIC -O1 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm src/gen/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  75.240
+Stage parse      :  75.689
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   8.576
-Stage mast       :  25.822
-Stage mbc        :   1.667
+Stage optimize   :   7.573
+Stage mast       :  26.634
+Stage mbc        :   2.019
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --target=mbc --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /usr/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" .
 ./perl6-m --target=mbc --output=lib/Test.moarvm lib/Test.pm
@@ -185,6 +185,7 @@ modules/jsonrpc/lib/JSON/RPC/Server.pm => /home/coke/sandbox/rakudo-star-daily/s
 modules/Pod-To-HTML/lib/Pod/To/HTML.pm => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/To/HTML.pm
 == Installing modules/doc
 modules/doc/lib/HomePage.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/HomePage.pod
+modules/doc/lib/Language/grammars.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Language/grammars.pod
 modules/doc/lib/Language/Sets_Bags_and_Mixes.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Language/Sets_Bags_and_Mixes.pod
 modules/doc/lib/Language/modules.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Language/modules.pod
 modules/doc/lib/Language/objects.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Language/objects.pod
@@ -247,7 +248,6 @@ modules/doc/lib/Type/Block.pod => /home/coke/sandbox/rakudo-star-daily/star-Moar
 modules/doc/lib/Type/Whatever.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Whatever.pod
 modules/doc/lib/Type/Parameter.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Parameter.pod
 modules/doc/lib/Type/AST.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/AST.pod
-modules/doc/lib/Type/Grammar.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Grammar.pod
 modules/doc/lib/Type/Regex.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Regex.pod
 modules/doc/lib/Type/Iterator.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Iterator.pod
 modules/doc/lib/Type/Any.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Any.pod
@@ -269,6 +269,7 @@ modules/doc/lib/Type/X/NYI.pod => /home/coke/sandbox/rakudo-star-daily/star-Moar
 modules/doc/lib/Type/X/Comp.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Comp.pod
 modules/doc/lib/Type/X/Syntax.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax.pod
 modules/doc/lib/Type/X/IO.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/IO.pod
+modules/doc/lib/Type/X/Obsolete.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Obsolete.pod
 modules/doc/lib/Type/X/Redeclaration.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Redeclaration.pod
 modules/doc/lib/Type/X/Sequence/Deduction.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Sequence/Deduction.pod
 modules/doc/lib/Type/X/Attribute/Undeclared.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Attribute/Undeclared.pod
@@ -285,11 +286,9 @@ modules/doc/lib/Type/X/Syntax/P5.pod => /home/coke/sandbox/rakudo-star-daily/sta
 modules/doc/lib/Type/X/Syntax/Reserved.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Reserved.pod
 modules/doc/lib/Type/X/Syntax/Missing.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Missing.pod
 modules/doc/lib/Type/X/Syntax/NegatedPair.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/NegatedPair.pod
-modules/doc/lib/Type/X/Syntax/Placeholder.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Placeholder.pod
 modules/doc/lib/Type/X/Syntax/NoSelf.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/NoSelf.pod
 modules/doc/lib/Type/X/Syntax/InfixInTermPosition.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/InfixInTermPosition.pod
 modules/doc/lib/Type/X/Syntax/Confused.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Confused.pod
-modules/doc/lib/Type/X/Syntax/Obsolete.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Obsolete.pod
 modules/doc/lib/Type/X/Syntax/Signature/InvocantMarker.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Signature/InvocantMarker.pod
 modules/doc/lib/Type/X/Syntax/Self/WithoutObject.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Self/WithoutObject.pod
 modules/doc/lib/Type/X/Syntax/Number/RadixOutOfRange.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Number/RadixOutOfRange.pod

@@ -41,13 +41,13 @@ jar cf0 rakudo-runtime.jar -C bin/ .
 /usr/bin/perl tools/build/gen-cat.pl jvm src/core/core_prologue.pm src/core/traits.pm src/core/Positional.pm src/core/Associative.pm src/core/Callable.pm src/core/natives.pm src/core/stubs.pm src/core/control.pm src/core/Mu.pm src/core/Stringy.pm src/core/Any.pm src/core/array_slice.pm src/core/hash_slice.pm src/core/Scalar.pm src/core/Code.pm src/core/WhateverCode.pm src/core/Block.pm src/core/Attribute.pm src/core/Variable.pm src/core/Routine.pm src/core/Sub.pm src/core/Macro.pm src/core/Method.pm src/core/Submethod.pm src/core/Junction.pm src/core/Cool.pm src/core/Enumeration.pm src/core/Whatever.pm src/core/Bool.pm src/core/Numeric.pm src/core/Real.pm src/core/Int.pm src/core/Order.pm src/core/UInt64.pm src/core/Num.pm src/core/Buf.pm src/core/Str.pm src/core/Capture.pm src/core/Parcel.pm src/core/Iterable.pm src/core/Iterator.pm src/core/Nil.pm src/core/Range.pm src/core/ListIter.pm src/core/MapIter.pm src/core/GatherIter.pm src/core/List.pm src/core/LoL.pm src/core/Array.pm src/core/Enum.pm src/core/Pair.pm src/core/HashIter.pm src/core/EnumMap.pm src/core/Hash.pm src/core/Stash.pm src/core/Label.pm src/core/PseudoStash.pm src/core/Parameter.pm src/core/Signature.pm src/core/Rational.pm src/core/Rat.pm src/core/Complex.pm src/core/Backtrace.pm src/core/Exception.pm src/core/Failure.pm src/core/Match.pm src/core/Cursor.pm src/core/Grammar.pm src/core/Regex.pm src/core/IO/Spec/Unix.pm src/core/IO/Spec/Win32.pm src/core/IO/Spec/Cygwin.pm src/core/IO/Spec.pm src/core/IO.pm src/core/IO/ArgFiles.pm src/core/AST.pm src/core/CallFrame.pm src/core/Main.pm src/core/tai-utc.pm src/core/Instant.pm src/core/Duration.pm src/core/Temporal.pm src/core/EXPORTHOW.pm src/core/Pod.pm src/core/QuantHash.pm src/core/Setty.pm src/core/Set.pm src/core/SetHash.pm src/core/Baggy.pm src/core/Bag.pm src/core/BagHash.pm src/core/Mixy.pm src/core/Mix.pm src/core/MixHash.pm src/core/set_operators.pm src/core/ObjAt.pm src/core/Version.pm src/core/ForeignCode.pm src/core/operators.pm src/core/metaops.pm src/core/precedence.pm src/core/Deprecations.pm src/core/Thread.pm src/core/Lock.pm src/core/Semaphore.pm src/core/Cancellation.pm src/core/Scheduler.pm src/core/ThreadPoolScheduler.pm src/core/CurrentThreadScheduler.pm src/core/Promise.pm src/core/Channel.pm src/core/Supply.pm src/core/SupplyOperations.pm src/vm/jvm/core/KeyReducer.pm src/vm/jvm/core/IOAsyncFile.pm src/core/asyncops.pm src/core/IO/Notification.pm src/core/IO/Socket.pm src/core/IO/Socket/Async.pm src/core/IO/Socket/INET.pm src/core/Env.pm src/core/Systemic.pm src/core/VM.pm src/core/Distro.pm src/core/Kernel.pm src/core/Compiler.pm src/core/Perl.pm src/core/OS.pm src/core/JSON/Pretty.pm src/core/Distribution.pm src/core/CompUnitRepo.pm src/core/CompUnitRepo/Locally.pm src/core/CompUnitRepo/Local/File.pm src/core/CompUnitRepo/Local/Installation.pm src/core/Argfiles.pm src/core/Inc.pm src/core/Process.pm src/core/core_epilogue.pm  > gen/jvm/CORE.setting
 The following step can take a long time, please be patient.
 java -Xss1m -Xms500m -Xmx1000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib/nqp.jar:rakudo-runtime.jar:perl6.jar -cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib perl6 --setting=NULL --ll-exception --optimize=3 --target=jar --stagestats --output=CORE.setting.jar gen/jvm/CORE.setting
-Stage start      :   0.000
-Stage parse      : 124.583
+Stage start      :   0.001
+Stage parse      : 189.818
 Stage syntaxcheck:   0.000
-Stage ast        :   0.002
-Stage optimize   :  11.070
-Stage jast       :  67.971
-Stage classfile  :  10.926
+Stage ast        :   0.001
+Stage optimize   :  31.047
+Stage jast       :  72.126
+Stage classfile  :  14.147
 Stage jar        :   0.000
 /usr/bin/perl tools/build/create-jvm-runner.pl dev . . /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib/nqp.jar
 Creating './perl6-j'
@@ -187,6 +187,7 @@ modules/jsonrpc/lib/JSON/RPC/Server.pm => /home/coke/sandbox/rakudo-star-daily/s
 modules/Pod-To-HTML/lib/Pod/To/HTML.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Pod/To/HTML.pm
 == Installing modules/doc
 modules/doc/lib/HomePage.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/HomePage.pod
+modules/doc/lib/Language/grammars.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Language/grammars.pod
 modules/doc/lib/Language/Sets_Bags_and_Mixes.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Language/Sets_Bags_and_Mixes.pod
 modules/doc/lib/Language/modules.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Language/modules.pod
 modules/doc/lib/Language/objects.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Language/objects.pod
@@ -249,7 +250,6 @@ modules/doc/lib/Type/Block.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/
 modules/doc/lib/Type/Whatever.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/Whatever.pod
 modules/doc/lib/Type/Parameter.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/Parameter.pod
 modules/doc/lib/Type/AST.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/AST.pod
-modules/doc/lib/Type/Grammar.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/Grammar.pod
 modules/doc/lib/Type/Regex.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/Regex.pod
 modules/doc/lib/Type/Iterator.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/Iterator.pod
 modules/doc/lib/Type/Any.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/Any.pod
@@ -271,6 +271,7 @@ modules/doc/lib/Type/X/NYI.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/
 modules/doc/lib/Type/X/Comp.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Comp.pod
 modules/doc/lib/Type/X/Syntax.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax.pod
 modules/doc/lib/Type/X/IO.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/IO.pod
+modules/doc/lib/Type/X/Obsolete.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Obsolete.pod
 modules/doc/lib/Type/X/Redeclaration.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Redeclaration.pod
 modules/doc/lib/Type/X/Sequence/Deduction.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Sequence/Deduction.pod
 modules/doc/lib/Type/X/Attribute/Undeclared.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Attribute/Undeclared.pod
@@ -287,11 +288,9 @@ modules/doc/lib/Type/X/Syntax/P5.pod => /home/coke/sandbox/rakudo-star-daily/sta
 modules/doc/lib/Type/X/Syntax/Reserved.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Reserved.pod
 modules/doc/lib/Type/X/Syntax/Missing.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Missing.pod
 modules/doc/lib/Type/X/Syntax/NegatedPair.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/NegatedPair.pod
-modules/doc/lib/Type/X/Syntax/Placeholder.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Placeholder.pod
 modules/doc/lib/Type/X/Syntax/NoSelf.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/NoSelf.pod
 modules/doc/lib/Type/X/Syntax/InfixInTermPosition.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/InfixInTermPosition.pod
 modules/doc/lib/Type/X/Syntax/Confused.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Confused.pod
-modules/doc/lib/Type/X/Syntax/Obsolete.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Obsolete.pod
 modules/doc/lib/Type/X/Syntax/Signature/InvocantMarker.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Signature/InvocantMarker.pod
 modules/doc/lib/Type/X/Syntax/Self/WithoutObject.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Self/WithoutObject.pod
 modules/doc/lib/Type/X/Syntax/Number/RadixOutOfRange.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Number/RadixOutOfRange.pod

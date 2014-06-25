@@ -8,6 +8,7 @@ Configuring native build environment ................... OK
     probing how your compiler does static inline ....... static __inline__
     your CPU can read unaligned values for all of int32 int64 num64
     probing the size of pointers ....................... 8
+    probing computed goto support ...................... YES
 
         make: make
      compile: gcc  -O1 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC
@@ -353,7 +354,7 @@ config.status: executing default commands
 make[1]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/MoarVM/3rdparty/libatomic_ops/src'
 make  all-am
 make[2]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/MoarVM/3rdparty/libatomic_ops/src'
-gcc -DHAVE_CONFIG_H   -I../src -I../src  -fPIC -Wall -Wextra -O1 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC -DMVM_TRACING=0 -DMVM_CGOTO=0 -MT atomic_ops.o -MD -MP -MF .deps/atomic_ops.Tpo -c -o atomic_ops.o atomic_ops.c
+gcc -DHAVE_CONFIG_H   -I../src -I../src  -fPIC -Wall -Wextra -O1 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC -DMVM_TRACING=0 -DMVM_CGOTO=1 -MT atomic_ops.o -MD -MP -MF .deps/atomic_ops.Tpo -c -o atomic_ops.o atomic_ops.c
 mv -f .deps/atomic_ops.Tpo .deps/atomic_ops.Po
 rm -f libatomic_ops.a
 ar cru libatomic_ops.a atomic_ops.o 
@@ -458,7 +459,7 @@ linking moar
 /usr/bin/perl -MExtUtils::Command -e cp 3rdparty/dyncall/dyncallback/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/dyncall
 Building NQP ...
 /usr/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar --make-install
-Found /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar version 2014.06-6-gd2e0732, which is new enough.
+Found /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar version 2014.06-7-g722c847, which is new enough.
 Cleaning up ...
 /usr/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage1/gen
 /usr/bin/perl tools/build/gen-cat.pl moar src/how/Archetypes.nqp src/how/RoleToRoleApplier.nqp src/how/NQPConcreteRoleHOW.nqp src/how/RoleToClassApplier.nqp src/how/NQPCurriedRoleHOW.nqp src/how/NQPParametricRoleHOW.nqp src/how/NQPClassHOW.nqp src/how/NQPNativeHOW.nqp src/how/NQPAttribute.nqp src/how/NQPModuleHOW.nqp src/how/EXPORTHOW.nqp  > gen/moar/stage1/nqpmo.nqp
@@ -589,7 +590,7 @@ Cleaning up ...
 /usr/bin/perl tools/build/install-moar-runner.pl "" /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install
 
 NQP has been built and installed.
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.06 / MoarVM 2014.06-6-gd2e0732).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.06 / MoarVM 2014.06-7-g722c847).
 
 Creating Makefile ...
 Cleaning up ...

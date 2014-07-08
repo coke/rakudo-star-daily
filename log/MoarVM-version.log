@@ -1,7 +1,7 @@
 Rakudo
-Gdansk-48-g5613bea
+Gdansk-70-g6fab386
 NQP
-2014.06-6-g5b5fe31
+2014.06-24-gba3354c
 modules
 --------
 Bailador
@@ -35,11 +35,11 @@ Date:   Fri May 24 22:47:38 2013 -0500
     Export via proto
 --------
 MODULES.txt
-commit c9969dd0d83d70bc32805143b4ac4a61b65707b3
+commit 7377a69e0c7ef673b165fdff41299f67eb0f639d
 Author: Moritz Lenz <mlenz@noris.net>
-Date:   Fri May 23 10:14:50 2014 +0200
+Date:   Wed Jul 2 16:07:15 2014 +0200
 
-    bump version in README and Makefile.in
+    bump more versions
 --------
 Math-Model
 commit aacc103f76d6cdee856d457523a87c1eea9b0ac2
@@ -70,11 +70,11 @@ Date:   Fri May 30 01:24:06 2014 +1200
     $*VM<name> is deprecated
 --------
 Pod-To-HTML
-commit c400b666549fbca40664112ee4bce4418cec5380
-Author: Mouq <alexmoquin@gmail.com>
-Date:   Thu Jun 19 14:33:29 2014 -0400
+commit 4c5293ec153c1dffc711d82ccd74248db9017cc8
+Author: Elizabeth Mattijsen <liz@dijkmat.nl>
+Date:   Tue Jul 8 01:29:08 2014 +0200
 
-    Display DESCRIPTION below the TITLE, if applicable
+    Fix %h = {...} deprecation warning
 --------
 Template-Mojo
 commit b1b6fa6c626575385b334bb423d66111598fb0bf
@@ -84,11 +84,27 @@ Date:   Wed Feb 26 18:28:04 2014 +0100
     Add License
 --------
 doc
-commit 3c8057545695748505b120b0464cd6c4f55ec2d2
-Author: Kamil <teodozjan@gmail.com>
-Date:   Wed Jun 18 23:05:29 2014 +0200
+commit 7d5d908ec9f97a803913a43df10c2755fef5db7f
+Merge: 3c80575 9ab09e5
+Author: Alexander Moquin <alexmoquin@gmail.com>
+Date:   Sun Jul 6 03:15:37 2014 -0400
 
-    Replaced tab with spaces. POD parsing is very sensitive to that
+    Merge pull request #22 from ronaldxs/patch-1
+    
+    Update classtut.pod
+
+commit 9ab09e568ad82ed9f397aa9349313905f9e41db8
+Author: ronaldxs <ronaldxs@software-path.com>
+Date:   Fri Jul 4 22:31:28 2014 -0400
+
+    Update classtut.pod
+    
+    Rakudo now appears to support at least enough autovivification to remove this line.
+    
+    The program below does the right thing and the examples appear to work without the initialization.
+    perl6 -e 'my %h; push(%h<k>, "v"); %h.say'
+    
+    That part of the code seems to date back to September 2012 or earlier.
 --------
 file-find
 commit d79a83184da825f61d8c481050f931b511d74cae
@@ -148,20 +164,11 @@ Date:   Fri May 2 11:51:58 2014 +0200
     Also, the s/^/.HOW/ change should not be necessary, but there seems to be a bug in rakudo@moarvm that shows up when the code gets precompiled.
 --------
 panda
-commit f18433530bae1093045f75a0db01c08a43f87242
-Merge: 2714f9f 4073c98
-Author: Tobias Leich <email@froggs.de>
-Date:   Fri Jun 20 12:38:18 2014 +0200
+commit 246ad58c593f633b936a8a9f109a95e0ea21ba8e
+Author: Solomon Foster <colomon@gmail.com>
+Date:   Thu Jul 3 08:49:11 2014 -0400
 
-    Merge pull request #86 from teodozjan/patch-1
-    
-    typo in test messaage
-
-commit 4073c98d8f629c2b8ec4bfa801603d5ed5c9fff5
-Author: Kamil Kułaga <teodozjan@users.noreply.github.com>
-Date:   Fri Jun 20 12:35:25 2014 +0200
-
-    typo in test
+    Rename method destdir so it doesn't hide $.destdir.
 --------
 perl6-Term-ANSIColor
 commit 0e92caf09397f458314d4a30974618628a3e5600
@@ -339,17 +346,11 @@ Date:   Wed Jan 15 19:41:26 2014 +0100
     gets rid of a "use of Nil in numeric context" warning
 --------
 zavolaj
-commit 265e5046408e795acb72d5a58c2b2650d6450c34
-Merge: 2cd79b0 53317e5
-Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Fri Jun 20 00:45:36 2014 +0200
+commit ec3f50927bd5a658604da837e8ea51361fba1e32
+Author: Tobias Leich <email@froggs.de>
+Date:   Mon Jul 7 00:09:42 2014 +0200
 
-    Merge pull request #39 from jnthn/tadzik/deprecations
+    simplify sub nativecast
     
-    Get rid of deprecation messages
-
-commit 53317e52497ecb5625727ecdc0571ec0e1d3226f
-Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Fri May 16 15:58:04 2014 +0200
-
-    Get rid of deprecation messages
+    We do not need to box the return value anymore since we provide the proper
+    box target now. A call looks now like: nativecast(int32, Int, $opaque-pointer)

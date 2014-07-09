@@ -41,13 +41,13 @@ jar cf0 rakudo-runtime.jar -C bin/ .
 /usr/bin/perl tools/build/gen-cat.pl jvm src/core/core_prologue.pm src/core/traits.pm src/core/Positional.pm src/core/Associative.pm src/core/Callable.pm src/core/natives.pm src/core/stubs.pm src/core/control.pm src/core/Mu.pm src/core/Stringy.pm src/core/Any.pm src/core/array_slice.pm src/core/hash_slice.pm src/core/Scalar.pm src/core/Code.pm src/core/WhateverCode.pm src/core/Block.pm src/core/Attribute.pm src/core/Variable.pm src/core/Routine.pm src/core/Sub.pm src/core/Macro.pm src/core/Method.pm src/core/Submethod.pm src/core/Junction.pm src/core/Cool.pm src/core/Enumeration.pm src/core/Whatever.pm src/core/Bool.pm src/core/Numeric.pm src/core/Real.pm src/core/Int.pm src/core/Order.pm src/core/UInt64.pm src/core/Num.pm src/core/Buf.pm src/core/Str.pm src/core/Capture.pm src/core/Parcel.pm src/core/Iterable.pm src/core/Iterator.pm src/core/Nil.pm src/core/Range.pm src/core/ListIter.pm src/core/MapIter.pm src/core/GatherIter.pm src/core/List.pm src/core/LoL.pm src/core/Array.pm src/core/Enum.pm src/core/Pair.pm src/core/HashIter.pm src/core/EnumMap.pm src/core/Hash.pm src/core/Stash.pm src/core/Label.pm src/core/PseudoStash.pm src/core/Parameter.pm src/core/Signature.pm src/core/Rational.pm src/core/Rat.pm src/core/Complex.pm src/core/Backtrace.pm src/core/Exception.pm src/core/Failure.pm src/core/Match.pm src/core/Cursor.pm src/core/Grammar.pm src/core/Regex.pm src/core/IO/Spec/Unix.pm src/core/IO/Spec/Win32.pm src/core/IO/Spec/Cygwin.pm src/core/IO/Spec.pm src/core/IO.pm src/core/IO/ArgFiles.pm src/core/AST.pm src/core/CallFrame.pm src/core/Main.pm src/core/tai-utc.pm src/core/Instant.pm src/core/Duration.pm src/core/Temporal.pm src/core/EXPORTHOW.pm src/core/Pod.pm src/core/QuantHash.pm src/core/Setty.pm src/core/Set.pm src/core/SetHash.pm src/core/Baggy.pm src/core/Bag.pm src/core/BagHash.pm src/core/Mixy.pm src/core/Mix.pm src/core/MixHash.pm src/core/set_operators.pm src/core/ObjAt.pm src/core/Version.pm src/core/ForeignCode.pm src/core/operators.pm src/core/metaops.pm src/core/precedence.pm src/core/Deprecations.pm src/core/Thread.pm src/core/Lock.pm src/core/Semaphore.pm src/core/Cancellation.pm src/core/Scheduler.pm src/core/ThreadPoolScheduler.pm src/core/CurrentThreadScheduler.pm src/core/Promise.pm src/core/Channel.pm src/core/Supply.pm src/core/SupplyOperations.pm src/vm/jvm/core/KeyReducer.pm src/vm/jvm/core/IOAsyncFile.pm src/core/asyncops.pm src/core/IO/Notification.pm src/core/IO/Socket.pm src/core/IO/Socket/Async.pm src/core/IO/Socket/INET.pm src/core/Env.pm src/core/Systemic.pm src/core/VM.pm src/core/Distro.pm src/core/Kernel.pm src/core/Compiler.pm src/core/Perl.pm src/core/OS.pm src/core/JSON/Pretty.pm src/core/Distribution.pm src/core/CompUnit.pm src/core/CompUnitRepo.pm src/core/CompUnitRepo/Locally.pm src/core/CompUnitRepo/Local/File.pm src/core/CompUnitRepo/Local/Installation.pm src/core/Argfiles.pm src/core/Inc.pm src/core/Process.pm src/core/core_epilogue.pm  > gen/jvm/CORE.setting
 The following step can take a long time, please be patient.
 java -Xss1m -Xms500m -Xmx1000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib/nqp.jar:rakudo-runtime.jar:perl6.jar -cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib perl6 --setting=NULL --ll-exception --optimize=3 --target=jar --stagestats --output=CORE.setting.jar gen/jvm/CORE.setting
-Stage start      :   0.001
-Stage parse      : 214.798
+Stage start      :   0.000
+Stage parse      : 420.214
 Stage syntaxcheck:   0.000
 Stage ast        :   0.001
-Stage optimize   :  26.978
-Stage jast       :  71.751
-Stage classfile  :   9.755
+Stage optimize   :  53.290
+Stage jast       : 137.528
+Stage classfile  :  18.214
 Stage jar        :   0.000
 /usr/bin/perl tools/build/create-jvm-runner.pl dev . . /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib/nqp.jar
 Creating './perl6-j'
@@ -370,9 +370,6 @@ modules/rakudo-debugger/lib/Debugger/UI/CommandLine.pm => /home/coke/sandbox/rak
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/SVG/Plot/Data/Series.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/SVG/Plot/Data/Series.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Math/RungeKutta.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Math/RungeKutta.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Math/Model.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Math/Model.pm
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/SVG.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Term/ANSIColor.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Term/ANSIColor.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Test/Mock.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Test/Mock.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Grammar/Profiler/Simple.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Grammar/Profiler/Simple.pm
@@ -387,9 +384,6 @@ Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-dai
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/JSON/Tiny/Actions.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/JSON/Tiny/Actions.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/JSON/Tiny/Grammar.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/JSON/Tiny/Grammar.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/JSON/Tiny.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/JSON/Tiny.pm
@@ -425,9 +419,6 @@ Please use %HTTPCODES = ... instead.
 Please contact the author to have these calls to deprecated code adapted,
 so that this message will disappear!
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/HTTP/Easy/PSGI.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/HTTP/Easy/PSGI.pm6
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/PSGI.pm6
 Saw 1 call to deprecated code during execution.
 ================================================================================
 %HTTPCODES = { ... } called at:
@@ -444,11 +435,12 @@ so that this message will disappear!
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador/Template/Mojo.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador/Template/Mojo.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador/App.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador/App.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador.pm
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/HTTP/Easy/PSGI.pm6
-Saw 1 call to deprecated code during execution.
+Saw 2 calls to deprecated code during execution.
 ================================================================================
+%HTTPCODES = { ... } called at:
+  /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/HTTP/Status.pm6, line 9
+Please use %HTTPCODES = ... instead.
+--------------------------------------------------------------------------------
 %!routes = { ... } called at:
   gen/jvm/CORE.setting, line 895
 Please use %!routes = ... instead.
@@ -456,36 +448,35 @@ Please use %!routes = ... instead.
 Please contact the author to have these calls to deprecated code adapted,
 so that this message will disappear!
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador/Test.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador/Test.pm
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador.pm
+Saw 2 calls to deprecated code during execution.
+================================================================================
+%HTTPCODES = { ... } called at:
+  /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/HTTP/Status.pm6, line 9
+Please use %HTTPCODES = ... instead.
+--------------------------------------------------------------------------------
+%!routes = { ... } called at:
+  gen/jvm/CORE.setting, line 895
+Please use %!routes = ... instead.
+--------------------------------------------------------------------------------
+Please contact the author to have these calls to deprecated code adapted,
+so that this message will disappear!
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/DBIish.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/DBIish.pm6
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/DBDish.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/DBDish.pm6
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/DBDish/Pg.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/DBDish/Pg.pm6
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/NativeCall.pm6
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/DBDish/SQLite.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/DBDish/SQLite.pm6
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/NativeCall.pm6
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/DBDish/TestMock.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/DBDish/TestMock.pm6
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/DBDish.pm6
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/DBDish/mysql.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/DBDish/mysql.pm6
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/NativeCall.pm6
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/X/JSON/RPC.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/X/JSON/RPC.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/JSON/RPC/Client.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/JSON/RPC/Client.pm
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/JSON/RPC/Server.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/JSON/RPC/Server.pm
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/HTTP/Easy/PSGI.pm6
+Saw 1 call to deprecated code during execution.
+================================================================================
+%HTTPCODES = { ... } called at:
+  /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/HTTP/Status.pm6, line 9
+Please use %HTTPCODES = ... instead.
+--------------------------------------------------------------------------------
+Please contact the author to have these calls to deprecated code adapted,
+so that this message will disappear!
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Pod/To/HTML.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Pod/To/HTML.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Perl6/Type.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Perl6/Type.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Perl6/TypeGraph.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Perl6/TypeGraph.pm

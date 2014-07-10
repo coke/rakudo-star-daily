@@ -1,7 +1,7 @@
 == Configuring and building Rakudo
 cd rakudo && /usr/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install && make
 Found /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (backend moar)
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.06-24-gba3354c / MoarVM 2014.06-57-g0225dc5).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.06-25-g346e6e9 / MoarVM 2014.06-61-g1d89654).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -48,12 +48,12 @@ gcc  -shared -fPIC -O1 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm src/gen/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  86.833
-Stage syntaxcheck:   0.011
+Stage parse      :  85.350
+Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   8.433
-Stage mast       :  29.000
-Stage mbc        :   1.843
+Stage optimize   :   7.900
+Stage mast       :  25.272
+Stage mbc        :   1.925
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --target=mbc --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /usr/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" .
 ./perl6-m --target=mbc --output=lib/Test.moarvm lib/Test.pm
@@ -401,27 +401,27 @@ modules/rakudo-debugger/lib/Debugger/UI/CommandLine.pm => /home/coke/sandbox/rak
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/PSGI.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/PSGI.pm6
 Saw 1 call to deprecated code during execution.
 ================================================================================
-%HTTPCODES = { ... } called at:
+%HTTPCODES = itemized hash called at:
   /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/HTTP/Status.pm6, line 9
-Please use %HTTPCODES = ... instead.
+Please use %HTTPCODES = %(itemized hash) instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these calls to deprecated code adapted,
 so that this message will disappear!
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/HTTP/Easy.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/HTTP/Easy.pm6
 Saw 1 call to deprecated code during execution.
 ================================================================================
-%HTTPCODES = { ... } called at:
+%HTTPCODES = itemized hash called at:
   /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/HTTP/Status.pm6, line 9
-Please use %HTTPCODES = ... instead.
+Please use %HTTPCODES = %(itemized hash) instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these calls to deprecated code adapted,
 so that this message will disappear!
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/HTTP/Easy/PSGI.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/HTTP/Easy/PSGI.pm6
 Saw 1 call to deprecated code during execution.
 ================================================================================
-%HTTPCODES = { ... } called at:
+%HTTPCODES = itemized hash called at:
   /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/HTTP/Status.pm6, line 9
-Please use %HTTPCODES = ... instead.
+Please use %HTTPCODES = %(itemized hash) instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these calls to deprecated code adapted,
 so that this message will disappear!
@@ -435,26 +435,26 @@ so that this message will disappear!
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Bailador.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Bailador.pm
 Saw 2 calls to deprecated code during execution.
 ================================================================================
-%!routes = { ... } called at:
-  src/gen/m-CORE.setting, line 895
-Please use %!routes = ... instead.
+%!routes = itemized hash called at:
+  src/gen/m-CORE.setting, line 882
+Please use %!routes = %(itemized hash) instead.
 --------------------------------------------------------------------------------
-%HTTPCODES = { ... } called at:
+%HTTPCODES = itemized hash called at:
   /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/HTTP/Status.pm6, line 9
-Please use %HTTPCODES = ... instead.
+Please use %HTTPCODES = %(itemized hash) instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these calls to deprecated code adapted,
 so that this message will disappear!
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Bailador/Test.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Bailador/Test.pm
 Saw 2 calls to deprecated code during execution.
 ================================================================================
-%!routes = { ... } called at:
-  src/gen/m-CORE.setting, line 895
-Please use %!routes = ... instead.
+%!routes = itemized hash called at:
+  src/gen/m-CORE.setting, line 882
+Please use %!routes = %(itemized hash) instead.
 --------------------------------------------------------------------------------
-%HTTPCODES = { ... } called at:
+%HTTPCODES = itemized hash called at:
   /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/HTTP/Status.pm6, line 9
-Please use %HTTPCODES = ... instead.
+Please use %HTTPCODES = %(itemized hash) instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these calls to deprecated code adapted,
 so that this message will disappear!
@@ -469,9 +469,9 @@ so that this message will disappear!
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/JSON/RPC/Server.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/JSON/RPC/Server.pm
 Saw 1 call to deprecated code during execution.
 ================================================================================
-%HTTPCODES = { ... } called at:
+%HTTPCODES = itemized hash called at:
   /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/HTTP/Status.pm6, line 9
-Please use %HTTPCODES = ... instead.
+Please use %HTTPCODES = %(itemized hash) instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these calls to deprecated code adapted,
 so that this message will disappear!

@@ -1,7 +1,7 @@
 == Configuring and building Rakudo
 cd rakudo && /usr/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install && make
 Found /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (backend moar)
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.06-29-g883107f / MoarVM 2014.06-76-gf6e89c4).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.07 / MoarVM 2014.07-3-g40120f0).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -48,12 +48,12 @@ gcc  -shared -fPIC -O1 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm src/gen/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  69.334
+Stage parse      :  72.399
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   8.246
-Stage mast       :  28.725
-Stage mbc        :   1.771
+Stage optimize   :   8.251
+Stage mast       :  25.577
+Stage mbc        :   1.778
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --target=mbc --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /usr/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" .
 ./perl6-m --target=mbc --output=lib/Test.moarvm lib/Test.pm
@@ -411,23 +411,7 @@ modules/rakudo-debugger/lib/Debugger/UI/CommandLine.pm => /home/coke/sandbox/rak
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Bailador/Template/Mojo.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Bailador/Template/Mojo.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Bailador/App.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Bailador/App.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Bailador.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Bailador.pm
-Saw 1 call to deprecated code during execution.
-================================================================================
-%!routes = itemized hash called at:
-  src/gen/m-CORE.setting, line 882
-Please use %!routes = %(itemized hash) instead.
---------------------------------------------------------------------------------
-Please contact the author to have these calls to deprecated code adapted,
-so that this message will disappear!
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Bailador/Test.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Bailador/Test.pm
-Saw 1 call to deprecated code during execution.
-================================================================================
-%!routes = itemized hash called at:
-  src/gen/m-CORE.setting, line 882
-Please use %!routes = %(itemized hash) instead.
---------------------------------------------------------------------------------
-Please contact the author to have these calls to deprecated code adapted,
-so that this message will disappear!
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/DBIish.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/DBIish.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/DBDish.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/DBDish.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/DBDish/Pg.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/DBDish/Pg.pm6

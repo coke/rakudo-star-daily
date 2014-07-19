@@ -1,30 +1,335 @@
-cd rakudo && make test
+== Configuring and building Rakudo
+cd rakudo && /usr/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install && make
+Found /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p (backend parrot)
+Verifying installation ...
+Using /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p (version 2014.07-5-g5c191ee / Parrot 6.6.0).
+Cleaning up ...
+
+You can now use 'make' to build Rakudo.
+After that, 'make test' will run some tests and
+'make install' will install Rakudo.
 make[1]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/rakudo'
-/usr/bin/perl t/harness t/00-parrot t/01-sanity
-t/00-parrot/09-pir.t ............... ok
-t/01-sanity/01-literals.t .......... ok
-t/01-sanity/02-op-math.t ........... ok
-t/01-sanity/03-op-logic.t .......... ok
-t/01-sanity/04-op-cmp.t ............ ok
-t/01-sanity/05-var.t ............... ok
-t/01-sanity/06-op-inplace.t ........ ok
-t/01-sanity/07-op-string.t ......... ok
-t/01-sanity/08-var-array.t ......... ok
-t/01-sanity/09-end-blocks.t ........ ok
-t/01-sanity/10-regex.t ............. ok
-t/01-sanity/11-tap.t ............... ok
-t/01-sanity/12-counter.t ........... ok
-t/01-sanity/13-equal.t ............. ok
-t/01-sanity/14-if.t ................ ok
-t/01-sanity/15-sub.t ............... ok
-t/01-sanity/16-eqv.t ............... ok
-t/01-sanity/17-isa.t ............... ok
-t/01-sanity/18-simple-multisubs.t .. ok
-t/01-sanity/19-say.t ............... ok
-t/01-sanity/20-defined.t ........... ok
-t/01-sanity/21-try.t ............... ok
-t/01-sanity/99-test-basic.t ........ ok
-All tests successful.
-Files=23, Tests=274, 35 wallclock secs ( 0.08 usr  0.03 sys + 28.88 cusr  5.45 csys = 34.44 CPU)
-Result: PASS
+cd src/vm/parrot/ops && /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/ops2c C --dynamic perl6.ops
+# Parsing perl6.ops...
+# Parsed perl6.ops in 3.476 seconds; found 121 ops.
+# Ops parsed in 3.477 seconds.
+cd src/vm/parrot/ops && cc -c -o perl6_ops.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g perl6_ops.c
+In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/string.h:19:0,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/context.h:10,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:154,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/platform_interface.h:11,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/parrot.h:245,
+                 from perl6_ops.h:17,
+                 from perl6_ops.c:13:
+perl6_ops.c: In function ‘build_sig_object’:
+perl6_ops.c:64:63: warning: unused parameter ‘signature’ [-Wunused-parameter]
+ static PMC *build_sig_object(PARROT_INTERP, ARGIN_NULLOK(PMC *signature), ARGIN(const char *sig), ...)
+                                                               ^
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/compiler.h:218:59: note: in definition of macro ‘ARGIN_NULLOK’
+ #  define ARGIN_NULLOK(x)             /*@in@*/ /*@null@*/ x
+                                                           ^
+perl6_ops.c: In function ‘find_common_ctx’:
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:126:67: warning: unused parameter ‘interp’ [-Wunused-parameter]
+ #define PARROT_INTERP /*@notnull@*/ /*@in@*/ ARGMOD(Parrot_Interp interp)
+                                                                   ^
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/compiler.h:226:62: note: in definition of macro ‘ARGMOD’
+ #  define ARGMOD(x)                   /*@in@*/ /*@notnull@*/ x
+                                                              ^
+perl6_ops.c:242:29: note: in expansion of macro ‘PARROT_INTERP’
+ static PMC *find_common_ctx(PARROT_INTERP, ARGIN_NULLOK(PMC *ctx1), ARGIN_NULLOK(PMC *ctx2))
+                             ^
+perl6_ops.c: In function ‘Parrot_perl6_type_check_return_value_p_p’:
+perl6_ops.c:3468:28: warning: function call has aggregate value [-Waggregate-return]
+             storage_spec   spec = REPR(rtype)->get_storage_spec(interp, STABLE(rtype));
+                            ^
+perl6_ops.c: In function ‘run_leave_phasers’:
+perl6_ops.c:134:10: warning: variable ‘oldctx’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+     PMC *oldctx;
+          ^
+perl6_ops.c:130:91: warning: argument ‘exceptions’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+ static PMC *run_leave_phasers(PARROT_INTERP, PMC *ctx, PMC *perl6_code, PMC *result, PMC *exceptions)
+                                                                                           ^
+cd src/vm/parrot/guts && cc -c -o exceptions.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g exceptions.c
+cd src/vm/parrot/guts && cc -c -o bind.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g bind.c
+bind.c: In function ‘create_box’:
+bind.c:99:5: warning: switch missing default case [-Wswitch-default]
+     switch (bv.type) {
+     ^
+In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/string.h:19:0,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/context.h:10,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:154,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/platform_interface.h:11,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/parrot.h:245,
+                 from bind.c:7:
+bind.c: In function ‘junc_or_fail’:
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:126:67: warning: unused parameter ‘interp’ [-Wunused-parameter]
+ #define PARROT_INTERP /*@notnull@*/ /*@in@*/ ARGMOD(Parrot_Interp interp)
+                                                                   ^
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/compiler.h:226:62: note: in definition of macro ‘ARGMOD’
+ #  define ARGMOD(x)                   /*@in@*/ /*@notnull@*/ x
+                                                              ^
+bind.c:305:28: note: in expansion of macro ‘PARROT_INTERP’
+ static INTVAL junc_or_fail(PARROT_INTERP, PMC *value) {
+                            ^
+bind.c: In function ‘Rakudo_binding_bind_one_param’:
+bind.c:554:13: warning: switch missing default case [-Wswitch-default]
+             switch (bv.type) {
+             ^
+bind.c:634:13: warning: switch missing default case [-Wswitch-default]
+             switch (bv.type) {
+             ^
+bind.c:317:77: warning: unused parameter ‘signature’ [-Wunused-parameter]
+ Rakudo_binding_bind_one_param(PARROT_INTERP, PMC *lexpad, Rakudo_Signature *signature, Rakudo_Parameter *param,
+                                                                             ^
+bind.c: In function ‘Rakudo_binding_handle_optional’:
+bind.c:714:77: warning: unused parameter ‘lexpad’ [-Wunused-parameter]
+ Rakudo_binding_handle_optional(PARROT_INTERP, Rakudo_Parameter *param, PMC *lexpad) {
+                                                                             ^
+bind.c: In function ‘get_positional_bind_val’:
+bind.c:757:1: warning: function returns an aggregate [-Waggregate-return]
+ get_positional_bind_val(PARROT_INTERP, struct Pcc_cell *pc_positionals, PMC *capture, INTVAL cur_pos_arg) {
+ ^
+bind.c: In function ‘Rakudo_binding_bind’:
+bind.c:883:28: warning: function call has aggregate value [-Waggregate-return]
+                     cur_bv = get_positional_bind_val(interp, pc_positionals, capture, k);
+                            ^
+bind.c:947:28: warning: function call has aggregate value [-Waggregate-return]
+                     cur_bv = get_positional_bind_val(interp, pc_positionals, capture, cur_pos_arg);
+                            ^
+bind.c:970:28: warning: function call has aggregate value [-Waggregate-return]
+                     cur_bv = get_positional_bind_val(interp, pc_positionals, capture, cur_pos_arg);
+                            ^
+bind.c: In function ‘Rakudo_binding_bind_one_param.isra.7’:
+bind.c:341:14: warning: function call has aggregate value [-Waggregate-return]
+         spec = REPR(decont_value)->get_storage_spec(interp, STABLE(decont_value));
+              ^
+bind.c: In function ‘Rakudo_binding_trial_bind’:
+bind.c:1147:34: warning: function call has aggregate value [-Waggregate-return]
+                     storage_spec spec = REPR(arg)->get_storage_spec(interp, STABLE(arg));
+                                  ^
+cd src/vm/parrot/guts && cc -c -o container.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g container.c
+In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/string.h:19:0,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/context.h:10,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:154,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/platform_interface.h:11,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/parrot.h:245,
+                 from container.c:2:
+container.c: In function ‘rakudo_scalar_fetch’:
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:126:67: warning: unused parameter ‘interp’ [-Wunused-parameter]
+ #define PARROT_INTERP /*@notnull@*/ /*@in@*/ ARGMOD(Parrot_Interp interp)
+                                                                   ^
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/compiler.h:226:62: note: in definition of macro ‘ARGMOD’
+ #  define ARGMOD(x)                   /*@in@*/ /*@notnull@*/ x
+                                                              ^
+container.c:27:34: note: in expansion of macro ‘PARROT_INTERP’
+ static PMC * rakudo_scalar_fetch(PARROT_INTERP, PMC *cont) {
+                                  ^
+container.c: In function ‘rakudo_scalar_gc_mark_data’:
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:126:67: warning: unused parameter ‘interp’ [-Wunused-parameter]
+ #define PARROT_INTERP /*@notnull@*/ /*@in@*/ ARGMOD(Parrot_Interp interp)
+                                                                   ^
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/compiler.h:226:62: note: in definition of macro ‘ARGMOD’
+ #  define ARGMOD(x)                   /*@in@*/ /*@notnull@*/ x
+                                                              ^
+container.c:92:40: note: in expansion of macro ‘PARROT_INTERP’
+ static void rakudo_scalar_gc_mark_data(PARROT_INTERP, STable *st) {
+                                        ^
+container.c:92:63: warning: unused parameter ‘st’ [-Wunused-parameter]
+ static void rakudo_scalar_gc_mark_data(PARROT_INTERP, STable *st) {
+                                                               ^
+In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/string.h:19:0,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/context.h:10,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:154,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/platform_interface.h:11,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/parrot.h:245,
+                 from container.c:2:
+container.c: In function ‘rakudo_scalar_gc_free_data’:
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:126:67: warning: unused parameter ‘interp’ [-Wunused-parameter]
+ #define PARROT_INTERP /*@notnull@*/ /*@in@*/ ARGMOD(Parrot_Interp interp)
+                                                                   ^
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/compiler.h:226:62: note: in definition of macro ‘ARGMOD’
+ #  define ARGMOD(x)                   /*@in@*/ /*@notnull@*/ x
+                                                              ^
+container.c:96:40: note: in expansion of macro ‘PARROT_INTERP’
+ static void rakudo_scalar_gc_free_data(PARROT_INTERP, STable *st) {
+                                        ^
+container.c:96:63: warning: unused parameter ‘st’ [-Wunused-parameter]
+ static void rakudo_scalar_gc_free_data(PARROT_INTERP, STable *st) {
+                                                               ^
+In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/string.h:19:0,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/context.h:10,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:154,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/platform_interface.h:11,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/parrot.h:245,
+                 from container.c:2:
+container.c: In function ‘rakudo_scalar_serialize’:
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:126:67: warning: unused parameter ‘interp’ [-Wunused-parameter]
+ #define PARROT_INTERP /*@notnull@*/ /*@in@*/ ARGMOD(Parrot_Interp interp)
+                                                                   ^
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/compiler.h:226:62: note: in definition of macro ‘ARGMOD’
+ #  define ARGMOD(x)                   /*@in@*/ /*@notnull@*/ x
+                                                              ^
+container.c:100:37: note: in expansion of macro ‘PARROT_INTERP’
+ static void rakudo_scalar_serialize(PARROT_INTERP, STable *st, SerializationWriter *writer) {
+                                     ^
+container.c:100:60: warning: unused parameter ‘st’ [-Wunused-parameter]
+ static void rakudo_scalar_serialize(PARROT_INTERP, STable *st, SerializationWriter *writer) {
+                                                            ^
+container.c:100:85: warning: unused parameter ‘writer’ [-Wunused-parameter]
+ static void rakudo_scalar_serialize(PARROT_INTERP, STable *st, SerializationWriter *writer) {
+                                                                                     ^
+In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/string.h:19:0,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/context.h:10,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:154,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/platform_interface.h:11,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/parrot.h:245,
+                 from container.c:2:
+container.c: In function ‘rakudo_scalar_deserialize’:
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:126:67: warning: unused parameter ‘interp’ [-Wunused-parameter]
+ #define PARROT_INTERP /*@notnull@*/ /*@in@*/ ARGMOD(Parrot_Interp interp)
+                                                                   ^
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/compiler.h:226:62: note: in definition of macro ‘ARGMOD’
+ #  define ARGMOD(x)                   /*@in@*/ /*@notnull@*/ x
+                                                              ^
+container.c:104:39: note: in expansion of macro ‘PARROT_INTERP’
+ static void rakudo_scalar_deserialize(PARROT_INTERP, STable *st, SerializationReader *reader) {
+                                       ^
+container.c:104:62: warning: unused parameter ‘st’ [-Wunused-parameter]
+ static void rakudo_scalar_deserialize(PARROT_INTERP, STable *st, SerializationReader *reader) {
+                                                              ^
+container.c:104:87: warning: unused parameter ‘reader’ [-Wunused-parameter]
+ static void rakudo_scalar_deserialize(PARROT_INTERP, STable *st, SerializationReader *reader) {
+                                                                                       ^
+In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/string.h:19:0,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/context.h:10,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:154,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/platform_interface.h:11,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/parrot.h:245,
+                 from container.c:2:
+container.c: In function ‘rakudo_scalar_set_container_spec’:
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:126:67: warning: unused parameter ‘interp’ [-Wunused-parameter]
+ #define PARROT_INTERP /*@notnull@*/ /*@in@*/ ARGMOD(Parrot_Interp interp)
+                                                                   ^
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/compiler.h:226:62: note: in definition of macro ‘ARGMOD’
+ #  define ARGMOD(x)                   /*@in@*/ /*@notnull@*/ x
+                                                              ^
+container.c:110:46: note: in expansion of macro ‘PARROT_INTERP’
+ static void rakudo_scalar_set_container_spec(PARROT_INTERP, STable *st) {
+                                              ^
+container.c: In function ‘rakudo_scalar_configure_container_spec’:
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:126:67: warning: unused parameter ‘interp’ [-Wunused-parameter]
+ #define PARROT_INTERP /*@notnull@*/ /*@in@*/ ARGMOD(Parrot_Interp interp)
+                                                                   ^
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/compiler.h:226:62: note: in definition of macro ‘ARGMOD’
+ #  define ARGMOD(x)                   /*@in@*/ /*@notnull@*/ x
+                                                              ^
+container.c:115:52: note: in expansion of macro ‘PARROT_INTERP’
+ static void rakudo_scalar_configure_container_spec(PARROT_INTERP, STable *st, PMC *config) {
+                                                    ^
+container.c:115:75: warning: unused parameter ‘st’ [-Wunused-parameter]
+ static void rakudo_scalar_configure_container_spec(PARROT_INTERP, STable *st, PMC *config) {
+                                                                           ^
+container.c:115:84: warning: unused parameter ‘config’ [-Wunused-parameter]
+ static void rakudo_scalar_configure_container_spec(PARROT_INTERP, STable *st, PMC *config) {
+                                                                                    ^
+container.c: In function ‘Rakudo_cont_register’:
+container.c:121:31: warning: request for implicit conversion from ‘void *’ to ‘struct ContainerConfigurer *’ not permitted in C++ [-Wc++-compat]
+     ContainerConfigurer *cc = mem_sys_allocate(sizeof(ContainerConfigurer));
+                               ^
+container.c:123:24: warning: request for implicit conversion from ‘void *’ to ‘struct ContainerSpec *’ not permitted in C++ [-Wc++-compat]
+     rakudo_scalar_spec = mem_sys_allocate(sizeof(ContainerSpec));
+                        ^
+In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/string.h:19:0,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/context.h:10,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:154,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/platform_interface.h:11,
+                 from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/parrot.h:245,
+                 from container.c:2:
+container.c: In function ‘Rakudo_cont_is_rw_scalar’:
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/interpreter.h:126:67: warning: unused parameter ‘interp’ [-Wunused-parameter]
+ #define PARROT_INTERP /*@notnull@*/ /*@in@*/ ARGMOD(Parrot_Interp interp)
+                                                                   ^
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/compiler.h:226:62: note: in definition of macro ‘ARGMOD’
+ #  define ARGMOD(x)                   /*@in@*/ /*@notnull@*/ x
+                                                              ^
+container.c:186:33: note: in expansion of macro ‘PARROT_INTERP’
+ INTVAL Rakudo_cont_is_rw_scalar(PARROT_INTERP, PMC *check) {
+                                 ^
+cd src/vm/parrot/guts && cc -c -o types.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g types.c
+cd src/vm/parrot/ops && cc -o perl6_ops.so perl6_ops.o ../guts/bind.o ../guts/exceptions.o ../guts/container.o ../guts/types.o -fstack-protector -L/usr/local/lib  -shared -L/usr/local/lib -fstack-protector -fPIC  -ldl -lm -lpthread -lcrypt -lrt -lgmp -lreadline  -lffi   -L/usr/lib/x86_64-linux-gnu  -licuuc -licudata 
+/usr/bin/perl -MExtUtils::Command -e cp src/vm/parrot/ops/perl6_ops.so dynext
+/usr/bin/perl -MExtUtils::Command -e chmod 755 dynext/perl6_ops.so
+/usr/bin/perl tools/build/gen-cat.pl parrot src/vm/parrot/ModuleLoaderVMConfig.nqp src/Perl6/ModuleLoader.nqp > gen/parrot/ModuleLoader.nqp
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p --target=pir --output=src/gen/perl6-moduleloader.pir --encoding=utf8 \
+	    gen/parrot/ModuleLoader.nqp
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot  -o blib/Perl6/ModuleLoader.pbc src/gen/perl6-moduleloader.pir
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p --vmlibs=perl6_ops  --target=pir --output=src/gen/perl6-ops.pir --encoding=utf8 \
+	    src/vm/parrot/Perl6/Ops.nqp
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot  -o blib/Perl6/Ops.pbc src/gen/perl6-ops.pir
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p --vmlibs=perl6_ops --target=pir --output=src/gen/perl6-symboltable.pir --encoding=utf8 \
+	    src/Perl6/World.nqp
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot  -o blib/Perl6/World.pbc src/gen/perl6-symboltable.pir
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p --vmlibs=perl6_ops  --target=pir --output=src/gen/perl6-pod.pir --encoding=utf8 \
+	    src/Perl6/Pod.nqp
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot  -o blib/Perl6/Pod.pbc src/gen/perl6-pod.pir
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p --vmlibs=perl6_ops  --target=pir --output=src/gen/perl6-actions.pir --encoding=utf8 \
+	    src/Perl6/Actions.nqp
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot  -o blib/Perl6/Actions.pbc src/gen/perl6-actions.pir
+/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p --target=pir --output=src/gen/perl6-grammar.pir --encoding=utf8 \
+	    src/Perl6/Grammar.nqp
+Unrecognized regex modifier :my at line 903, near " $*POD_ALL"
+current instr.: 'panic' pc 15702 (gen/parrot/stage2/NQPHLL.pir:5759) (gen/parrot/stage2/NQPHLL.nqp:425)
+called from Sub '' pc 39807 (gen/parrot/stage2/NQPP6QRegex.pir:13896) (gen/parrot/stage2/NQPP6QRegex.nqp:395)
+called from Sub 'mod_ident:sym<oops>' pc 39445 (gen/parrot/stage2/NQPP6QRegex.pir:13754) (gen/parrot/stage2/NQPP6QRegex.nqp:395)
+called from Sub '!protoregex' pc 11762 (gen/parrot/stage2/QRegex.pir:4681) (gen/parrot/stage2/QRegex.nqp:791)
+called from Sub 'mod_ident' pc 38022 (gen/parrot/stage2/NQPP6QRegex.pir:13254) (gen/parrot/stage2/NQPP6QRegex.nqp:390)
+called from Sub 'mod_internal' pc 36854 (gen/parrot/stage2/NQPP6QRegex.pir:12826) (gen/parrot/stage2/NQPP6QRegex.nqp:368)
+called from Sub 'metachar:sym<mod>' pc 20181 (gen/parrot/stage2/NQPP6QRegex.pir:7041) (gen/parrot/stage2/NQPP6QRegex.nqp:251)
+called from Sub '!protoregex' pc 11762 (gen/parrot/stage2/QRegex.pir:4681) (gen/parrot/stage2/QRegex.nqp:791)
+called from Sub 'metachar' pc 15489 (gen/parrot/stage2/NQPP6QRegex.pir:5408) (gen/parrot/stage2/NQPP6QRegex.nqp:234)
+called from Sub 'atom' pc 11001 (gen/parrot/stage2/NQPP6QRegex.pir:3851) (gen/parrot/stage2/NQPP6QRegex.nqp:188)
+called from Sub 'quantified_atom' pc 9305 (gen/parrot/stage2/NQPP6QRegex.pir:3322) (gen/parrot/stage2/NQPP6QRegex.nqp:165)
+called from Sub 'termish' pc 7923 (gen/parrot/stage2/NQPP6QRegex.pir:2843) (gen/parrot/stage2/NQPP6QRegex.nqp:150)
+called from Sub 'termconj' pc 7445 (gen/parrot/stage2/NQPP6QRegex.pir:2685) (gen/parrot/stage2/NQPP6QRegex.nqp:145)
+called from Sub 'termalt' pc 7020 (gen/parrot/stage2/NQPP6QRegex.pir:2547) (gen/parrot/stage2/NQPP6QRegex.nqp:140)
+called from Sub 'termconjseq' pc 6611 (gen/parrot/stage2/NQPP6QRegex.pir:2413) (gen/parrot/stage2/NQPP6QRegex.nqp:135)
+called from Sub 'termaltseq' pc 6202 (gen/parrot/stage2/NQPP6QRegex.pir:2279) (gen/parrot/stage2/NQPP6QRegex.nqp:130)
+called from Sub 'termseq' pc 5979 (gen/parrot/stage2/NQPP6QRegex.pir:2195) (gen/parrot/stage2/NQPP6QRegex.nqp:126)
+called from Sub 'nibbler' pc 4508 (gen/parrot/stage2/NQPP6QRegex.pir:1641) (gen/parrot/stage2/NQPP6QRegex.nqp:87)
+called from Sub 'LANG' pc 20790 (gen/parrot/stage2/NQPHLL.pir:7848) (gen/parrot/stage2/NQPHLL.nqp:785)
+called from Sub 'regex_declarator' pc 71188 (gen/parrot/stage2/NQP.pir:23506) (gen/parrot/stage2/NQP.nqp:1323)
+called from Sub 'term:sym<regex_declarator>' pc 38278 (gen/parrot/stage2/NQP.pir:13383) (gen/parrot/stage2/NQP.nqp:1063)
+called from Sub '!protoregex' pc 11762 (gen/parrot/stage2/QRegex.pir:4681) (gen/parrot/stage2/QRegex.nqp:791)
+called from Sub 'term' pc 2791 (gen/parrot/stage2/NQPHLL.pir:1228) (gen/parrot/stage2/NQPHLL.nqp:168)
+called from Sub 'termish' pc 2548 (gen/parrot/stage2/NQPHLL.pir:1154) (gen/parrot/stage2/NQPHLL.nqp:162)
+called from Sub 'EXPR' pc 18161 (gen/parrot/stage2/NQPHLL.pir:6821) (gen/parrot/stage2/NQPHLL.nqp:577)
+called from Sub 'statement' pc 22019 (gen/parrot/stage2/NQP.pir:8120) (gen/parrot/stage2/NQP.nqp:911)
+called from Sub 'statementlist' pc 20327 (gen/parrot/stage2/NQP.pir:7562) (gen/parrot/stage2/NQP.nqp:892)
+called from Sub 'blockoid' pc 24605 (gen/parrot/stage2/NQP.pir:8984) (gen/parrot/stage2/NQP.nqp:955)
+called from Sub 'package_def' pc 49499 (gen/parrot/stage2/NQP.pir:16857) (gen/parrot/stage2/NQP.nqp:1136)
+called from Sub 'package_declarator:sym<grammar>' pc 44128 (gen/parrot/stage2/NQP.pir:15371) (gen/parrot/stage2/NQP.nqp:1111)
+called from Sub '!protoregex' pc 11762 (gen/parrot/stage2/QRegex.pir:4681) (gen/parrot/stage2/QRegex.nqp:791)
+called from Sub 'package_declarator' pc 42740 (gen/parrot/stage2/NQP.pir:14871) (gen/parrot/stage2/NQP.nqp:1095)
+called from Sub 'term:sym<package_declarator>' pc 36797 (gen/parrot/stage2/NQP.pir:12851) (gen/parrot/stage2/NQP.nqp:1055)
+called from Sub '!protoregex' pc 11762 (gen/parrot/stage2/QRegex.pir:4681) (gen/parrot/stage2/QRegex.nqp:791)
+called from Sub 'term' pc 2791 (gen/parrot/stage2/NQPHLL.pir:1228) (gen/parrot/stage2/NQPHLL.nqp:168)
+called from Sub 'termish' pc 2548 (gen/parrot/stage2/NQPHLL.pir:1154) (gen/parrot/stage2/NQPHLL.nqp:162)
+called from Sub 'EXPR' pc 18161 (gen/parrot/stage2/NQPHLL.pir:6821) (gen/parrot/stage2/NQPHLL.nqp:577)
+called from Sub 'statement' pc 22019 (gen/parrot/stage2/NQP.pir:8120) (gen/parrot/stage2/NQP.nqp:911)
+called from Sub 'statementlist' pc 20327 (gen/parrot/stage2/NQP.pir:7562) (gen/parrot/stage2/NQP.nqp:892)
+called from Sub 'comp_unit' pc 18222 (gen/parrot/stage2/NQP.pir:6725) (gen/parrot/stage2/NQP.nqp:861)
+called from Sub 'TOP' pc 12716 (gen/parrot/stage2/NQP.pir:4842) (gen/parrot/stage2/NQP.nqp:782)
+called from Sub 'parse' pc 19241 (gen/parrot/stage2/QRegex.pir:7522) (gen/parrot/stage2/QRegex.nqp:1308)
+called from Sub 'parse' pc 32477 (gen/parrot/stage2/NQPHLL.pir:12605) (gen/parrot/stage2/NQPHLL.nqp:1443)
+called from Sub 'compile' pc 31852 (gen/parrot/stage2/NQPHLL.pir:12378) (gen/parrot/stage2/NQPHLL.nqp:1398)
+called from Sub 'eval' pc 27535 (gen/parrot/stage2/NQPHLL.pir:10616) (gen/parrot/stage2/NQPHLL.nqp:1146)
+called from Sub 'evalfiles' pc 30725 (gen/parrot/stage2/NQPHLL.pir:11929) (gen/parrot/stage2/NQPHLL.nqp:1356)
+called from Sub 'command_eval' pc 29728 (gen/parrot/stage2/NQPHLL.pir:11536) (gen/parrot/stage2/NQPHLL.nqp:1286)
+called from Sub 'command_line' pc 28650 (gen/parrot/stage2/NQPHLL.pir:11104) (gen/parrot/stage2/NQPHLL.nqp:1235)
+called from Sub 'MAIN' pc 601 (gen/parrot/stage2/NQP.pir:203) (gen/parrot/stage2/NQP.nqp:4018)
+called from Sub '' pc 578 (gen/parrot/stage2/NQP.pir:191) (gen/parrot/stage2/NQP.nqp:4013)
+called from Sub '' pc 165653 (gen/parrot/stage2/NQP.pir:58467) (gen/parrot/stage2/NQP.nqp:3990)
+
+make[1]: *** [blib/Perl6/Grammar.pbc] Error 1
 make[1]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/rakudo'
+make: *** [rakudo/perl6-p] Error 2

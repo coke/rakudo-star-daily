@@ -1,29 +1,86 @@
-cd rakudo && make test
+== Configuring and building Rakudo
+cd rakudo && /usr/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install && make
+Found /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (backend moar)
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.07-5-g5c191ee / MoarVM 2014.07-4-g9a0099d).
+Cleaning up ...
+
+You can now use 'make' to build Rakudo.
+After that, 'make test' will run some tests and
+'make install' will install Rakudo.
 make[1]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/rakudo'
-/usr/bin/perl t/harness --moar t/01-sanity
-t/01-sanity/01-literals.t .......... ok
-t/01-sanity/02-op-math.t ........... ok
-t/01-sanity/03-op-logic.t .......... ok
-t/01-sanity/04-op-cmp.t ............ ok
-t/01-sanity/05-var.t ............... ok
-t/01-sanity/06-op-inplace.t ........ ok
-t/01-sanity/07-op-string.t ......... ok
-t/01-sanity/08-var-array.t ......... ok
-t/01-sanity/09-end-blocks.t ........ ok
-t/01-sanity/10-regex.t ............. ok
-t/01-sanity/11-tap.t ............... ok
-t/01-sanity/12-counter.t ........... ok
-t/01-sanity/13-equal.t ............. ok
-t/01-sanity/14-if.t ................ ok
-t/01-sanity/15-sub.t ............... ok
-t/01-sanity/16-eqv.t ............... ok
-t/01-sanity/17-isa.t ............... ok
-t/01-sanity/18-simple-multisubs.t .. ok
-t/01-sanity/19-say.t ............... ok
-t/01-sanity/20-defined.t ........... ok
-t/01-sanity/21-try.t ............... ok
-t/01-sanity/99-test-basic.t ........ ok
-All tests successful.
-Files=22, Tests=271, 14 wallclock secs ( 0.08 usr  0.04 sys + 12.65 cusr  1.92 csys = 14.69 CPU)
-Result: PASS
+/usr/bin/perl tools/build/gen-cat.pl moar src/vm/moar/ModuleLoaderVMConfig.nqp src/Perl6/ModuleLoader.nqp > src/gen/m-ModuleLoader.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/ModuleLoader.moarvm --encoding=utf8 \
+	    src/gen/m-ModuleLoader.nqp
+gcc -c -fPIC -O1 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC  -O1 -DNDEBUG  -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops \
+	    -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/dyncall -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/linenoise -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar \
+	    -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/sha1 -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/tinymt  -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libtommath \
+	    -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libuv -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include -o dynext/perl6_ops.o src/vm/moar/ops/perl6_ops.c
+gcc -c -fPIC -O1 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC  -O1 -DNDEBUG  -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops \
+	    -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/dyncall -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/linenoise -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar \
+	    -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/sha1 -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/tinymt  -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libtommath \
+	    -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libuv -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include -o dynext/container.o src/vm/moar/ops/container.c
+gcc  -shared -fPIC -O1 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/lib  -O1 -DNDEBUG -lm -lpthread -lrt -ldl -o dynext/libperl6_ops_moar.so dynext/perl6_ops.o dynext/container.o 
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/Ops.moarvm --encoding=utf8 \
+	    src/vm/moar/Perl6/Ops.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/World.moarvm --encoding=utf8 \
+	    src/Perl6/World.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/Pod.moarvm --encoding=utf8 \
+	    src/Perl6/Pod.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/Actions.moarvm --encoding=utf8 \
+	    src/Perl6/Actions.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/Grammar.moarvm --encoding=utf8 \
+	    src/Perl6/Grammar.nqp
+Unrecognized regex modifier :my at line 903, near " $*POD_ALL"
+   at gen/moar/stage2/NQPHLL.nqp:369  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPHLL.moarvm:panic:106)
+ from gen/moar/stage2/NQPP6QRegex.nqp:395  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPP6QRegex.moarvm::31)
+ from gen/moar/stage2/NQPP6QRegex.nqp:395  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPP6QRegex.moarvm:mod_ident:sym<oops>:108)
+ from gen/moar/stage2/QRegex.nqp:792  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/QRegex.moarvm:!protoregex:4294967295)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPP6QRegex.moarvm:mod_ident:10)
+ from gen/moar/stage2/NQPP6QRegex.nqp:382  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPP6QRegex.moarvm:mod_internal:224)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPP6QRegex.moarvm:metachar:sym<mod>:57)
+ from gen/moar/stage2/QRegex.nqp:792  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/QRegex.moarvm:!protoregex:4294967295)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPP6QRegex.moarvm:atom:4294967295)
+ from gen/moar/stage2/NQPP6QRegex.nqp:174  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPP6QRegex.moarvm:quantified_atom:4294967295)
+ from gen/moar/stage2/NQPP6QRegex.nqp:158  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPP6QRegex.moarvm:termish:99)
+ from gen/moar/stage2/NQPP6QRegex.nqp:147  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPP6QRegex.moarvm:termconj:4294967295)
+ from gen/moar/stage2/NQPP6QRegex.nqp:142  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPP6QRegex.moarvm:termalt:4294967295)
+ from gen/moar/stage2/NQPP6QRegex.nqp:137  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPP6QRegex.moarvm:termconjseq:4294967295)
+ from gen/moar/stage2/NQPP6QRegex.nqp:132  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPP6QRegex.moarvm:termaltseq:4294967295)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPP6QRegex.moarvm:termseq:4294967295)
+ from gen/moar/stage2/NQPP6QRegex.nqp:98  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPP6QRegex.moarvm:nibbler:304)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPHLL.moarvm:LANG:4294967295)
+ from gen/moar/stage2/NQP.nqp:1377  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm:regex_declarator:1567)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm:term:sym<regex_declarator>:4294967295)
+ from gen/moar/stage2/QRegex.nqp:791  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/QRegex.moarvm:!protoregex:99)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPHLL.moarvm:termish:4294967295)
+ from gen/moar/stage2/NQPHLL.nqp:520  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPHLL.moarvm:EXPR:4294967295)
+ from gen/moar/stage2/NQP.nqp:947  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm:statement:224)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm:statementlist:199)
+ from gen/moar/stage2/NQP.nqp:989  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm:blockoid:150)
+ from gen/moar/stage2/NQP.nqp:1177  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm:package_def:1419)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm:package_declarator:sym<grammar>:137)
+ from gen/moar/stage2/QRegex.nqp:791  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/QRegex.moarvm:!protoregex:99)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm:package_declarator:10)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm:term:sym<package_declarator>:57)
+ from gen/moar/stage2/QRegex.nqp:791  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/QRegex.moarvm:!protoregex:99)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPHLL.moarvm:term:10)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPHLL.moarvm:termish:159)
+ from gen/moar/stage2/NQPHLL.nqp:521  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPHLL.moarvm:EXPR:75)
+ from gen/moar/stage2/NQP.nqp:947  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm:statement:229)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm:statementlist:199)
+ from gen/moar/stage2/NQP.nqp:917  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm:comp_unit:300)
+ from gen/moar/stage2/NQP.nqp:815  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm:TOP:438)
+ from gen/moar/stage2/QRegex.nqp:1306  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/QRegex.moarvm:parse:44)
+ from gen/moar/stage2/NQPHLL.nqp:1387  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPHLL.moarvm:parse:80)
+ from gen/moar/stage2/NQPHLL.nqp:1343  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPHLL.moarvm:compile:197)
+ from gen/moar/stage2/NQPHLL.nqp:1091  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPHLL.moarvm:eval:55)
+ from gen/moar/stage2/NQPHLL.nqp:1300  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPHLL.moarvm:evalfiles:90)
+ from gen/moar/stage2/NQPHLL.nqp:1204  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPHLL.moarvm:command_eval:212)
+ from gen/moar/stage2/NQPHLL.nqp:1179  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/NQPHLL.moarvm:command_line:116)
+ from gen/moar/stage2/NQP.nqp:4051  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm:MAIN:16)
+ from gen/moar/stage2/NQP.nqp:4046  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm::337)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm::8)
+ from <unknown>:1  (/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/nqp.moarvm::9)
+make[1]: *** [blib/Perl6/Grammar.moarvm] Error 1
 make[1]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/rakudo'
+make: *** [rakudo/perl6-m] Error 2

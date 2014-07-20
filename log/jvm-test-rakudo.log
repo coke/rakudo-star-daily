@@ -1,81 +1,29 @@
-== Configuring and building Rakudo
-cd rakudo && /usr/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install && make
-Found /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (backend jvm)
-Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2014.07-5-g5c191ee / Java(TM) 1.7.0_60).
-Cleaning up ...
-
-You can now use 'make' to build Rakudo.
-After that, 'make test' will run some tests and
-'make install' will install Rakudo.
+cd rakudo && make test
 make[1]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'
-/usr/bin/perl -MExtUtils::Command -e mkpath bin
-javac -source 1.7 -cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib/nqp.jar -g -d bin src/vm/jvm/runtime/org/perl6/rakudo/*.java
-jar cf0 rakudo-runtime.jar -C bin/ .
-/usr/bin/perl tools/build/gen-cat.pl jvm src/vm/jvm/ModuleLoaderVMConfig.nqp src/Perl6/ModuleLoader.nqp src/vm/jvm/Perl6/JavaModuleLoader.nqp > gen/jvm/ModuleLoader.nqp
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j --target=jar --output=blib/Perl6/ModuleLoader.jar --encoding=utf8 \
-	    gen/jvm/ModuleLoader.nqp
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j --target=jar --output=blib/Perl6/Ops.jar --encoding=utf8 \
-	    src/vm/jvm/Perl6/Ops.nqp
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j --target=jar --output=blib/Perl6/World.jar --encoding=utf8 \
-	    src/Perl6/World.nqp
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j --target=jar --output=blib/Perl6/Pod.jar --encoding=utf8 \
-	    src/Perl6/Pod.nqp
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j --target=jar --output=blib/Perl6/Actions.jar --encoding=utf8 \
-	    src/Perl6/Actions.nqp
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j --target=jar --output=blib/Perl6/Grammar.jar --encoding=utf8 \
-	    src/Perl6/Grammar.nqp
-Unrecognized regex modifier :my at line 903, near " $*POD_ALL"
-  in panic (gen/jvm/stage2/NQPHLL.nqp:396)
-  in  (gen/jvm/stage2/NQPP6QRegex.nqp:395)
-  in mod_ident:sym<oops> (gen/jvm/stage2/NQPP6QRegex.nqp:395)
-  in !protoregex (gen/jvm/stage2/QRegex.nqp:791)
-  in mod_ident (gen/jvm/stage2/NQPP6QRegex.nqp)
-  in mod_internal (gen/jvm/stage2/NQPP6QRegex.nqp)
-  in metachar:sym<mod> (gen/jvm/stage2/NQPP6QRegex.nqp)
-  in !protoregex (gen/jvm/stage2/QRegex.nqp:791)
-  in metachar (gen/jvm/stage2/NQPP6QRegex.nqp)
-  in atom (gen/jvm/stage2/NQPP6QRegex.nqp)
-  in quantified_atom (gen/jvm/stage2/NQPP6QRegex.nqp)
-  in termish (gen/jvm/stage2/NQPP6QRegex.nqp)
-  in termconj (gen/jvm/stage2/NQPP6QRegex.nqp)
-  in termalt (gen/jvm/stage2/NQPP6QRegex.nqp)
-  in termconjseq (gen/jvm/stage2/NQPP6QRegex.nqp)
-  in termaltseq (gen/jvm/stage2/NQPP6QRegex.nqp)
-  in termseq (gen/jvm/stage2/NQPP6QRegex.nqp)
-  in nibbler (gen/jvm/stage2/NQPP6QRegex.nqp:98)
-  in LANG (gen/jvm/stage2/NQPHLL.nqp:756)
-  in regex_declarator (gen/jvm/stage2/NQP.nqp:1382)
-  in term:sym<regex_declarator> (gen/jvm/stage2/NQP.nqp)
-  in !protoregex (gen/jvm/stage2/QRegex.nqp:791)
-  in term (gen/jvm/stage2/NQPHLL.nqp)
-  in termish (gen/jvm/stage2/NQPHLL.nqp)
-  in EXPR (gen/jvm/stage2/NQPHLL.nqp:548)
-  in statement (gen/jvm/stage2/NQP.nqp:952)
-  in statementlist (gen/jvm/stage2/NQP.nqp)
-  in blockoid (gen/jvm/stage2/NQP.nqp:994)
-  in package_def (gen/jvm/stage2/NQP.nqp:1182)
-  in package_declarator:sym<grammar> (gen/jvm/stage2/NQP.nqp)
-  in !protoregex (gen/jvm/stage2/QRegex.nqp:791)
-  in package_declarator (gen/jvm/stage2/NQP.nqp)
-  in term:sym<package_declarator> (gen/jvm/stage2/NQP.nqp)
-  in !protoregex (gen/jvm/stage2/QRegex.nqp:791)
-  in term (gen/jvm/stage2/NQPHLL.nqp)
-  in termish (gen/jvm/stage2/NQPHLL.nqp)
-  in EXPR (gen/jvm/stage2/NQPHLL.nqp:548)
-  in statement (gen/jvm/stage2/NQP.nqp:952)
-  in statementlist (gen/jvm/stage2/NQP.nqp)
-  in comp_unit (gen/jvm/stage2/NQP.nqp:922)
-  in TOP (gen/jvm/stage2/NQP.nqp:820)
-  in parse (gen/jvm/stage2/QRegex.nqp:1306)
-  in parse (gen/jvm/stage2/NQPHLL.nqp:1414)
-  in compile (gen/jvm/stage2/NQPHLL.nqp:1370)
-  in eval (gen/jvm/stage2/NQPHLL.nqp:1118)
-  in evalfiles (gen/jvm/stage2/NQPHLL.nqp:1327)
-  in command_eval (gen/jvm/stage2/NQPHLL.nqp:1231)
-  in command_line (gen/jvm/stage2/NQPHLL.nqp:1206)
-  in MAIN (gen/jvm/stage2/NQP.nqp:4056)
-  in  (gen/jvm/stage2/NQP.nqp:4052)
-  in  (gen/jvm/stage2/NQP.nqp)
-make[1]: *** [blib/Perl6/Grammar.jar] Error 1
+/usr/bin/perl t/harness --jvm t/01-sanity
+t/01-sanity/01-literals.t .......... ok
+t/01-sanity/02-op-math.t ........... ok
+t/01-sanity/03-op-logic.t .......... ok
+t/01-sanity/04-op-cmp.t ............ ok
+t/01-sanity/05-var.t ............... ok
+t/01-sanity/06-op-inplace.t ........ ok
+t/01-sanity/07-op-string.t ......... ok
+t/01-sanity/08-var-array.t ......... ok
+t/01-sanity/09-end-blocks.t ........ ok
+t/01-sanity/10-regex.t ............. ok
+t/01-sanity/11-tap.t ............... ok
+t/01-sanity/12-counter.t ........... ok
+t/01-sanity/13-equal.t ............. ok
+t/01-sanity/14-if.t ................ ok
+t/01-sanity/15-sub.t ............... ok
+t/01-sanity/16-eqv.t ............... ok
+t/01-sanity/17-isa.t ............... ok
+t/01-sanity/18-simple-multisubs.t .. ok
+t/01-sanity/19-say.t ............... ok
+t/01-sanity/20-defined.t ........... ok
+t/01-sanity/21-try.t ............... ok
+t/01-sanity/99-test-basic.t ........ ok
+All tests successful.
+Files=22, Tests=271, 54 wallclock secs ( 0.08 usr  0.03 sys +  0.49 cusr  0.14 csys =  0.74 CPU)
+Result: PASS
 make[1]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'
-make: *** [rakudo/perl6-j] Error 2

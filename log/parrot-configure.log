@@ -2366,39 +2366,39 @@ cd src/vm/parrot/pmc && cc -c -I/home/coke/sandbox/rakudo-star-daily/star-parrot
 cc -o src/vm/parrot/pmc/nqp_group.so nqp_group.o src/vm/parrot/pmc/*.o -fstack-protector -L/usr/local/lib  -shared -L/usr/local/lib -fstack-protector -fPIC  -ldl -lm -lpthread -lcrypt -lrt -lgmp -lreadline  -lffi   -L/usr/lib/x86_64-linux-gnu  -licuuc -licudata 
 cd src/vm/parrot/ops && /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/ops2c C --dynamic nqp.ops
 # Parsing nqp.ops...
-# Parsed nqp.ops in 9.301 seconds; found 325 ops.
-# Ops parsed in 9.303 seconds.
+# Parsed nqp.ops in 10.028 seconds; found 325 ops.
+# Ops parsed in 10.030 seconds.
 cd src/vm/parrot/ops && cc -c -o nqp_ops.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g nqp_ops.c
 nqp_ops.c: In function ‘Parrot_multi_cache_add_p_p_p_p’:
-nqp_ops.c:7422:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:7436:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
          NQP_md_cache  * c = mem_sys_allocate_zeroed(sizeof(NQP_md_cache));
                              ^
 nqp_ops.c: In function ‘Parrot_multi_cache_add_p_pc_p_p’:
-nqp_ops.c:7439:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:7453:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
          NQP_md_cache  * c = mem_sys_allocate_zeroed(sizeof(NQP_md_cache));
                              ^
 nqp_ops.c: In function ‘Parrot_multi_cache_add_p_p_pc_p’:
-nqp_ops.c:7456:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:7470:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
          NQP_md_cache  * c = mem_sys_allocate_zeroed(sizeof(NQP_md_cache));
                              ^
 nqp_ops.c: In function ‘Parrot_multi_cache_add_p_pc_pc_p’:
-nqp_ops.c:7473:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:7487:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
          NQP_md_cache  * c = mem_sys_allocate_zeroed(sizeof(NQP_md_cache));
                              ^
 nqp_ops.c: In function ‘Parrot_multi_cache_add_p_p_p_pc’:
-nqp_ops.c:7490:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:7504:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
          NQP_md_cache  * c = mem_sys_allocate_zeroed(sizeof(NQP_md_cache));
                              ^
 nqp_ops.c: In function ‘Parrot_multi_cache_add_p_pc_p_pc’:
-nqp_ops.c:7507:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:7521:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
          NQP_md_cache  * c = mem_sys_allocate_zeroed(sizeof(NQP_md_cache));
                              ^
 nqp_ops.c: In function ‘Parrot_multi_cache_add_p_p_pc_pc’:
-nqp_ops.c:7524:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:7538:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
          NQP_md_cache  * c = mem_sys_allocate_zeroed(sizeof(NQP_md_cache));
                              ^
 nqp_ops.c: In function ‘Parrot_multi_cache_add_p_pc_pc_pc’:
-nqp_ops.c:7541:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:7555:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
          NQP_md_cache  * c = mem_sys_allocate_zeroed(sizeof(NQP_md_cache));
                              ^
 In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/string.h:19:0,
@@ -2415,7 +2415,7 @@ nqp_ops.c: In function ‘Parrot_nqp_disable_sc_write_barrier’:
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/compiler.h:226:62: note: in definition of macro ‘ARGMOD’
  #  define ARGMOD(x)                   /*@in@*/ /*@notnull@*/ x
                                                               ^
-nqp_ops.c:8067:59: note: in expansion of macro ‘PARROT_INTERP’
+nqp_ops.c:8081:59: note: in expansion of macro ‘PARROT_INTERP’
  Parrot_nqp_disable_sc_write_barrier(opcode_t *cur_opcode, PARROT_INTERP) {
                                                            ^
 nqp_ops.c: In function ‘Parrot_nqp_enable_sc_write_barrier’:
@@ -2425,7 +2425,7 @@ nqp_ops.c: In function ‘Parrot_nqp_enable_sc_write_barrier’:
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/compiler.h:226:62: note: in definition of macro ‘ARGMOD’
  #  define ARGMOD(x)                   /*@in@*/ /*@notnull@*/ x
                                                               ^
-nqp_ops.c:8073:58: note: in expansion of macro ‘PARROT_INTERP’
+nqp_ops.c:8087:58: note: in expansion of macro ‘PARROT_INTERP’
  Parrot_nqp_enable_sc_write_barrier(opcode_t *cur_opcode, PARROT_INTERP) {
                                                           ^
 nqp_ops.c: In function ‘Parrot_nqpdebskip_ic_ic’:
@@ -2435,189 +2435,189 @@ nqp_ops.c: In function ‘Parrot_nqpdebskip_ic_ic’:
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/compiler.h:226:62: note: in definition of macro ‘ARGMOD’
  #  define ARGMOD(x)                   /*@in@*/ /*@notnull@*/ x
                                                               ^
-nqp_ops.c:8735:47: note: in expansion of macro ‘PARROT_INTERP’
+nqp_ops.c:8749:47: note: in expansion of macro ‘PARROT_INTERP’
  Parrot_nqpdebskip_ic_ic(opcode_t *cur_opcode, PARROT_INTERP) {
                                                ^
 nqp_ops.c: In function ‘Parrot_nqp_nfa_run_proto_p_p_s_i’:
-nqp_ops.c:8957:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
+nqp_ops.c:8971:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
      INTVAL  * fates = nqp_nfa_run(interp, OBJECT_BODY(PREG(2)), SREG(3), IREG(4), (&total_fates));
      ^
 nqp_ops.c:174:17: note: expected ‘struct NFABody *’ but argument is of type ‘void **’
  static INTVAL * nqp_nfa_run(PARROT_INTERP, NFABody *nfa, STRING *target, INTVAL offset, INTVAL *total_fates_out) {
                  ^
 nqp_ops.c: In function ‘Parrot_nqp_nfa_run_proto_p_p_sc_i’:
-nqp_ops.c:8974:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
+nqp_ops.c:8988:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
      INTVAL  * fates = nqp_nfa_run(interp, OBJECT_BODY(PREG(2)), SCONST(3), IREG(4), (&total_fates));
      ^
 nqp_ops.c:174:17: note: expected ‘struct NFABody *’ but argument is of type ‘void **’
  static INTVAL * nqp_nfa_run(PARROT_INTERP, NFABody *nfa, STRING *target, INTVAL offset, INTVAL *total_fates_out) {
                  ^
 nqp_ops.c: In function ‘Parrot_nqp_nfa_run_proto_p_p_s_ic’:
-nqp_ops.c:8991:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
+nqp_ops.c:9005:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
      INTVAL  * fates = nqp_nfa_run(interp, OBJECT_BODY(PREG(2)), SREG(3), ICONST(4), (&total_fates));
      ^
 nqp_ops.c:174:17: note: expected ‘struct NFABody *’ but argument is of type ‘void **’
  static INTVAL * nqp_nfa_run(PARROT_INTERP, NFABody *nfa, STRING *target, INTVAL offset, INTVAL *total_fates_out) {
                  ^
 nqp_ops.c: In function ‘Parrot_nqp_nfa_run_proto_p_p_sc_ic’:
-nqp_ops.c:9008:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
+nqp_ops.c:9022:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
      INTVAL  * fates = nqp_nfa_run(interp, OBJECT_BODY(PREG(2)), SCONST(3), ICONST(4), (&total_fates));
      ^
 nqp_ops.c:174:17: note: expected ‘struct NFABody *’ but argument is of type ‘void **’
  static INTVAL * nqp_nfa_run(PARROT_INTERP, NFABody *nfa, STRING *target, INTVAL offset, INTVAL *total_fates_out) {
                  ^
 nqp_ops.c: In function ‘Parrot_nqp_nfa_run_alt_p_s_i_p_p_p’:
-nqp_ops.c:9031:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
+nqp_ops.c:9045:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
      INTVAL  * fates = nqp_nfa_run(interp, OBJECT_BODY(nfa), target, offset, (&total_fates));
      ^
 nqp_ops.c:174:17: note: expected ‘struct NFABody *’ but argument is of type ‘void **’
  static INTVAL * nqp_nfa_run(PARROT_INTERP, NFABody *nfa, STRING *target, INTVAL offset, INTVAL *total_fates_out) {
                  ^
 nqp_ops.c: In function ‘Parrot_nqp_nfa_run_alt_p_sc_i_p_p_p’:
-nqp_ops.c:9055:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
+nqp_ops.c:9069:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
      INTVAL  * fates = nqp_nfa_run(interp, OBJECT_BODY(nfa), target, offset, (&total_fates));
      ^
 nqp_ops.c:174:17: note: expected ‘struct NFABody *’ but argument is of type ‘void **’
  static INTVAL * nqp_nfa_run(PARROT_INTERP, NFABody *nfa, STRING *target, INTVAL offset, INTVAL *total_fates_out) {
                  ^
 nqp_ops.c: In function ‘Parrot_nqp_nfa_run_alt_p_s_ic_p_p_p’:
-nqp_ops.c:9079:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
+nqp_ops.c:9093:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
      INTVAL  * fates = nqp_nfa_run(interp, OBJECT_BODY(nfa), target, offset, (&total_fates));
      ^
 nqp_ops.c:174:17: note: expected ‘struct NFABody *’ but argument is of type ‘void **’
  static INTVAL * nqp_nfa_run(PARROT_INTERP, NFABody *nfa, STRING *target, INTVAL offset, INTVAL *total_fates_out) {
                  ^
 nqp_ops.c: In function ‘Parrot_nqp_nfa_run_alt_p_sc_ic_p_p_p’:
-nqp_ops.c:9103:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
+nqp_ops.c:9117:5: warning: passing argument 2 of ‘nqp_nfa_run’ from incompatible pointer type [enabled by default]
      INTVAL  * fates = nqp_nfa_run(interp, OBJECT_BODY(nfa), target, offset, (&total_fates));
      ^
 nqp_ops.c:174:17: note: expected ‘struct NFABody *’ but argument is of type ‘void **’
  static INTVAL * nqp_nfa_run(PARROT_INTERP, NFABody *nfa, STRING *target, INTVAL offset, INTVAL *total_fates_out) {
                  ^
 nqp_ops.c: In function ‘Parrot_nqp_nfa_from_statelist_p_p_p’:
-nqp_ops.c:9129:5: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
+nqp_ops.c:9143:5: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
      nfa = (NFABody *)OBJECT_BODY(nfa_obj);
      ^
-nqp_ops.c:9134:30: warning: request for implicit conversion from ‘void *’ to ‘INTVAL *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:9148:30: warning: request for implicit conversion from ‘void *’ to ‘INTVAL *’ not permitted in C++ [-Wc++-compat]
          nfa->num_state_edges = mem_sys_allocate_zeroed((num_states * sizeof(INTVAL)));
                               ^
-nqp_ops.c:9135:21: warning: request for implicit conversion from ‘void *’ to ‘struct NFAStateInfo **’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:9149:21: warning: request for implicit conversion from ‘void *’ to ‘struct NFAStateInfo **’ not permitted in C++ [-Wc++-compat]
          nfa->states = mem_sys_allocate_zeroed((num_states * sizeof(NFAStateInfo *)));
                      ^
-nqp_ops.c:9146:28: warning: request for implicit conversion from ‘void *’ to ‘struct NFAStateInfo *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:9160:28: warning: request for implicit conversion from ‘void *’ to ‘struct NFAStateInfo *’ not permitted in C++ [-Wc++-compat]
              nfa->states[i] = mem_sys_allocate_zeroed((edges * sizeof(NFAStateInfo)));
                             ^
-nqp_ops.c:9155:13: warning: switch missing default case [-Wswitch-default]
+nqp_ops.c:9169:13: warning: switch missing default case [-Wswitch-default]
              switch (act) {
              ^
 nqp_ops.c: In function ‘Parrot_nqp_encode_p_s_s_p’:
-nqp_ops.c:12394:33: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
+nqp_ops.c:12412:33: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
          short  * sbuffer_data = (short *)buffer_data;
                                  ^
-nqp_ops.c:12406:31: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
+nqp_ops.c:12424:31: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
          int  * ibuffer_data = (int *)buffer_data;
                                ^
 nqp_ops.c: In function ‘Parrot_nqp_encode_p_sc_s_p’:
-nqp_ops.c:12459:33: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
+nqp_ops.c:12477:33: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
          short  * sbuffer_data = (short *)buffer_data;
                                  ^
-nqp_ops.c:12471:31: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
+nqp_ops.c:12489:31: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
          int  * ibuffer_data = (int *)buffer_data;
                                ^
 nqp_ops.c: In function ‘Parrot_nqp_encode_p_s_sc_p’:
-nqp_ops.c:12524:33: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
+nqp_ops.c:12542:33: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
          short  * sbuffer_data = (short *)buffer_data;
                                  ^
-nqp_ops.c:12536:31: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
+nqp_ops.c:12554:31: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
          int  * ibuffer_data = (int *)buffer_data;
                                ^
 nqp_ops.c: In function ‘Parrot_nqp_encode_p_sc_sc_p’:
-nqp_ops.c:12589:33: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
+nqp_ops.c:12607:33: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
          short  * sbuffer_data = (short *)buffer_data;
                                  ^
-nqp_ops.c:12601:31: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
+nqp_ops.c:12619:31: warning: cast discards ‘__attribute__((const))’ qualifier from pointer target type [-Wcast-qual]
          int  * ibuffer_data = (int *)buffer_data;
                                ^
 nqp_ops.c: In function ‘Parrot_nqp_decode_s_p_s’:
-nqp_ops.c:12645:21: warning: request for implicit conversion from ‘void *’ to ‘char *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:12663:21: warning: request for implicit conversion from ‘void *’ to ‘char *’ not permitted in C++ [-Wc++-compat]
              cbuffer = mem_sys_allocate(cbuflen);
                      ^
-nqp_ops.c:12658:21: warning: request for implicit conversion from ‘void *’ to ‘char *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:12676:21: warning: request for implicit conversion from ‘void *’ to ‘char *’ not permitted in C++ [-Wc++-compat]
              cbuffer = mem_sys_allocate(cbuflen);
                      ^
-nqp_ops.c:12672:21: warning: request for implicit conversion from ‘void *’ to ‘char *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:12690:21: warning: request for implicit conversion from ‘void *’ to ‘char *’ not permitted in C++ [-Wc++-compat]
              cbuffer = mem_sys_allocate(cbuflen);
                      ^
-nqp_ops.c:12688:17: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+nqp_ops.c:12706:17: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
          cbuffer = "";
                  ^
 nqp_ops.c: In function ‘Parrot_nqp_decode_s_p_sc’:
-nqp_ops.c:12725:21: warning: request for implicit conversion from ‘void *’ to ‘char *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:12743:21: warning: request for implicit conversion from ‘void *’ to ‘char *’ not permitted in C++ [-Wc++-compat]
              cbuffer = mem_sys_allocate(cbuflen);
                      ^
-nqp_ops.c:12738:21: warning: request for implicit conversion from ‘void *’ to ‘char *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:12756:21: warning: request for implicit conversion from ‘void *’ to ‘char *’ not permitted in C++ [-Wc++-compat]
              cbuffer = mem_sys_allocate(cbuflen);
                      ^
-nqp_ops.c:12752:21: warning: request for implicit conversion from ‘void *’ to ‘char *’ not permitted in C++ [-Wc++-compat]
+nqp_ops.c:12770:21: warning: request for implicit conversion from ‘void *’ to ‘char *’ not permitted in C++ [-Wc++-compat]
              cbuffer = mem_sys_allocate(cbuflen);
                      ^
-nqp_ops.c:12768:17: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+nqp_ops.c:12786:17: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
          cbuffer = "";
                  ^
 nqp_ops.c: In function ‘Parrot_nqp_string_equal_at_i_s_s_i’:
-nqp_ops.c:12798:68: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:12816:68: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
      if ((((SREG(2)->strlen - offset) < SREG(3)->strlen) || (offset > SREG(2)->strlen))) {
                                                                     ^
-nqp_ops.c:12817:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:12835:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
                  for (cmp_index = 0; ((cmp_index < SREG(3)->strlen) && (!done)); (cmp_index++)) {
                                                  ^
 nqp_ops.c: In function ‘Parrot_nqp_string_equal_at_i_sc_s_i’:
-nqp_ops.c:12851:70: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:12869:70: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
      if ((((SCONST(2)->strlen - offset) < SREG(3)->strlen) || (offset > SCONST(2)->strlen))) {
                                                                       ^
-nqp_ops.c:12870:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:12888:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
                  for (cmp_index = 0; ((cmp_index < SREG(3)->strlen) && (!done)); (cmp_index++)) {
                                                  ^
 nqp_ops.c: In function ‘Parrot_nqp_string_equal_at_i_s_sc_i’:
-nqp_ops.c:12904:70: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:12922:70: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
      if ((((SREG(2)->strlen - offset) < SCONST(3)->strlen) || (offset > SREG(2)->strlen))) {
                                                                       ^
-nqp_ops.c:12923:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:12941:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
                  for (cmp_index = 0; ((cmp_index < SCONST(3)->strlen) && (!done)); (cmp_index++)) {
                                                  ^
 nqp_ops.c: In function ‘Parrot_nqp_string_equal_at_i_sc_sc_i’:
-nqp_ops.c:12957:72: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:12975:72: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
      if ((((SCONST(2)->strlen - offset) < SCONST(3)->strlen) || (offset > SCONST(2)->strlen))) {
                                                                         ^
-nqp_ops.c:12976:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:12994:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
                  for (cmp_index = 0; ((cmp_index < SCONST(3)->strlen) && (!done)); (cmp_index++)) {
                                                  ^
 nqp_ops.c: In function ‘Parrot_nqp_string_equal_at_i_s_s_ic’:
-nqp_ops.c:13010:68: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:13028:68: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
      if ((((SREG(2)->strlen - offset) < SREG(3)->strlen) || (offset > SREG(2)->strlen))) {
                                                                     ^
-nqp_ops.c:13029:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:13047:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
                  for (cmp_index = 0; ((cmp_index < SREG(3)->strlen) && (!done)); (cmp_index++)) {
                                                  ^
 nqp_ops.c: In function ‘Parrot_nqp_string_equal_at_i_sc_s_ic’:
-nqp_ops.c:13063:70: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:13081:70: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
      if ((((SCONST(2)->strlen - offset) < SREG(3)->strlen) || (offset > SCONST(2)->strlen))) {
                                                                       ^
-nqp_ops.c:13082:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:13100:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
                  for (cmp_index = 0; ((cmp_index < SREG(3)->strlen) && (!done)); (cmp_index++)) {
                                                  ^
 nqp_ops.c: In function ‘Parrot_nqp_string_equal_at_i_s_sc_ic’:
-nqp_ops.c:13116:70: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:13134:70: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
      if ((((SREG(2)->strlen - offset) < SCONST(3)->strlen) || (offset > SREG(2)->strlen))) {
                                                                       ^
-nqp_ops.c:13135:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:13153:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
                  for (cmp_index = 0; ((cmp_index < SCONST(3)->strlen) && (!done)); (cmp_index++)) {
                                                  ^
 nqp_ops.c: In function ‘Parrot_nqp_string_equal_at_i_sc_sc_ic’:
-nqp_ops.c:13169:72: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:13187:72: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
      if ((((SCONST(2)->strlen - offset) < SCONST(3)->strlen) || (offset > SCONST(2)->strlen))) {
                                                                         ^
-nqp_ops.c:13188:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+nqp_ops.c:13206:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
                  for (cmp_index = 0; ((cmp_index < SCONST(3)->strlen) && (!done)); (cmp_index++)) {
                                                  ^
 nqp_ops.c: In function ‘quicksort’:
@@ -2625,43 +2625,43 @@ nqp_ops.c:170:1: warning: stack usage is 1512 bytes [-Wstack-usage=]
  }
  ^
 nqp_ops.c: In function ‘Parrot_repr_get_primitive_type_spec_i_p’:
-nqp_ops.c:8193:24: warning: function call has aggregate value [-Waggregate-return]
+nqp_ops.c:8207:24: warning: function call has aggregate value [-Waggregate-return]
          storage_spec   ss = REPR(var)->get_storage_spec(interp, STABLE(var));
                         ^
 nqp_ops.c: In function ‘Parrot_nqp_isint_i_p’:
-nqp_ops.c:11555:24: warning: function call has aggregate value [-Waggregate-return]
+nqp_ops.c:11573:24: warning: function call has aggregate value [-Waggregate-return]
          storage_spec   ss = REPR(var)->get_storage_spec(interp, STABLE(var));
                         ^
 nqp_ops.c: In function ‘Parrot_nqp_isnum_i_p’:
-nqp_ops.c:11571:24: warning: function call has aggregate value [-Waggregate-return]
+nqp_ops.c:11589:24: warning: function call has aggregate value [-Waggregate-return]
          storage_spec   ss = REPR(var)->get_storage_spec(interp, STABLE(var));
                         ^
 nqp_ops.c: In function ‘Parrot_nqp_isstr_i_p’:
-nqp_ops.c:11587:24: warning: function call has aggregate value [-Waggregate-return]
+nqp_ops.c:11605:24: warning: function call has aggregate value [-Waggregate-return]
          storage_spec   ss = REPR(var)->get_storage_spec(interp, STABLE(var));
                         ^
 nqp_ops.c: In function ‘Parrot_nqp_encode_p_s_s_p’:
-nqp_ops.c:12376:17: warning: function call has aggregate value [-Waggregate-return]
+nqp_ops.c:12394:17: warning: function call has aggregate value [-Waggregate-return]
      res_elem_ss = res_elem_st->REPR->get_storage_spec(interp, res_elem_st);
                  ^
 nqp_ops.c: In function ‘Parrot_nqp_encode_p_sc_s_p’:
-nqp_ops.c:12441:17: warning: function call has aggregate value [-Waggregate-return]
+nqp_ops.c:12459:17: warning: function call has aggregate value [-Waggregate-return]
      res_elem_ss = res_elem_st->REPR->get_storage_spec(interp, res_elem_st);
                  ^
 nqp_ops.c: In function ‘Parrot_nqp_encode_p_s_sc_p’:
-nqp_ops.c:12506:17: warning: function call has aggregate value [-Waggregate-return]
+nqp_ops.c:12524:17: warning: function call has aggregate value [-Waggregate-return]
      res_elem_ss = res_elem_st->REPR->get_storage_spec(interp, res_elem_st);
                  ^
 nqp_ops.c: In function ‘Parrot_nqp_encode_p_sc_sc_p’:
-nqp_ops.c:12571:17: warning: function call has aggregate value [-Waggregate-return]
+nqp_ops.c:12589:17: warning: function call has aggregate value [-Waggregate-return]
      res_elem_ss = res_elem_st->REPR->get_storage_spec(interp, res_elem_st);
                  ^
 nqp_ops.c: In function ‘Parrot_nqp_decode_s_p_s’:
-nqp_ops.c:12633:17: warning: function call has aggregate value [-Waggregate-return]
+nqp_ops.c:12651:17: warning: function call has aggregate value [-Waggregate-return]
      buf_elem_ss = buf_elem_st->REPR->get_storage_spec(interp, buf_elem_st);
                  ^
 nqp_ops.c: In function ‘Parrot_nqp_decode_s_p_sc’:
-nqp_ops.c:12713:17: warning: function call has aggregate value [-Waggregate-return]
+nqp_ops.c:12731:17: warning: function call has aggregate value [-Waggregate-return]
      buf_elem_ss = buf_elem_st->REPR->get_storage_spec(interp, buf_elem_st);
                  ^
 cd src/vm/parrot/6model && cc -c -o sixmodelobject.o -I../../../../src/vm/parrot/pmc -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g sixmodelobject.c
@@ -3960,19 +3960,19 @@ NFA.c:116:46: warning: unused parameter ‘st’ [-Wunused-parameter]
  static void serialize(PARROT_INTERP, STable *st, void *data, SerializationWriter *writer) {
                                               ^
 NFA.c: In function ‘deserialize’:
-NFA.c:171:31: warning: request for implicit conversion from ‘void *’ to ‘INTVAL *’ not permitted in C++ [-Wc++-compat]
+NFA.c:173:31: warning: request for implicit conversion from ‘void *’ to ‘INTVAL *’ not permitted in C++ [-Wc++-compat]
          body->num_state_edges = mem_sys_allocate(body->num_states * sizeof(INTVAL));
                                ^
-NFA.c:176:22: warning: request for implicit conversion from ‘void *’ to ‘struct NFAStateInfo **’ not permitted in C++ [-Wc++-compat]
+NFA.c:178:22: warning: request for implicit conversion from ‘void *’ to ‘struct NFAStateInfo **’ not permitted in C++ [-Wc++-compat]
          body->states = mem_sys_allocate(body->num_states * sizeof(NFAStateInfo *));
                       ^
-NFA.c:180:33: warning: request for implicit conversion from ‘void *’ to ‘struct NFAStateInfo *’ not permitted in C++ [-Wc++-compat]
+NFA.c:182:33: warning: request for implicit conversion from ‘void *’ to ‘struct NFAStateInfo *’ not permitted in C++ [-Wc++-compat]
                  body->states[i] = mem_sys_allocate(edges * sizeof(NFAStateInfo));
                                  ^
-NFA.c:184:17: warning: switch missing default case [-Wswitch-default]
+NFA.c:186:17: warning: switch missing default case [-Wswitch-default]
                  switch (body->states[i][j].act) {
                  ^
-NFA.c:159:48: warning: unused parameter ‘st’ [-Wunused-parameter]
+NFA.c:161:48: warning: unused parameter ‘st’ [-Wunused-parameter]
  static void deserialize(PARROT_INTERP, STable *st, void *data, SerializationReader *reader) {
                                                 ^
 In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/string.h:19:0,
@@ -3988,7 +3988,7 @@ NFA.c: In function ‘NFA_initialize’:
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/compiler.h:226:62: note: in definition of macro ‘ARGMOD’
  #  define ARGMOD(x)                   /*@in@*/ /*@notnull@*/ x
                                                               ^
-NFA.c:209:26: note: in expansion of macro ‘PARROT_INTERP’
+NFA.c:213:26: note: in expansion of macro ‘PARROT_INTERP’
  REPROps * NFA_initialize(PARROT_INTERP) {
                           ^
 NFA.c: In function ‘get_storage_spec’:
@@ -4646,8 +4646,8 @@ cd 3rdparty/libtommath && cc -c -o bn_s_mp_sqr.o -I. -D_REENTRANT -D_GNU_SOURCE 
 cd 3rdparty/libtommath && cc -c -o bn_s_mp_sub.o -I. -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g bn_s_mp_sub.c
 cd src/vm/parrot/ops && /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/ops2c C --dynamic nqp_bigint.ops
 # Parsing nqp_bigint.ops...
-# Parsed nqp_bigint.ops in 2.164 seconds; found 58 ops.
-# Ops parsed in 2.164 seconds.
+# Parsed nqp_bigint.ops in 2.350 seconds; found 58 ops.
+# Ops parsed in 2.351 seconds.
 cd src/vm/parrot/ops && cc -c -o nqp_bigint_ops.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/pmc -I../../../../3rdparty/libtommath -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g nqp_bigint_ops.c
 cd src/vm/parrot/6model/reprs && cc -c -o P6bigint.o -I../../../../../src/vm/parrot/pmc -I../../../../../3rdparty/libtommath -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g P6bigint.c
 In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/parrot/string.h:19:0,
@@ -4917,8 +4917,8 @@ make[2]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rak
 make[1]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall'
 cd src/vm/parrot/ops && /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/ops2c C --dynamic nqp_dyncall.ops
 # Parsing nqp_dyncall.ops...
-# Parsed nqp_dyncall.ops in 1.690 seconds; found 12 ops.
-# Ops parsed in 1.690 seconds.
+# Parsed nqp_dyncall.ops in 2.037 seconds; found 12 ops.
+# Ops parsed in 2.038 seconds.
 cd src/vm/parrot/ops && cc -c -o nqp_dyncall_ops.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.6.0-devel/pmc -I../../../../3rdparty/dyncall/dyncall -I../../../../3rdparty/dyncall/dyncallback -I../../../../3rdparty/dyncall/dynload -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT   -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g nqp_dyncall_ops.c
 nqp_dyncall_ops.c: In function ‘unmarshal_callback’:
 nqp_dyncall_ops.c:577:9: warning: passing argument 2 of ‘dcbNewCallback’ from incompatible pointer type [enabled by default]
@@ -5933,7 +5933,7 @@ Linked: nqp-p
 
 NQP has been built and installed.
 Verifying installation ...
-Using /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p (version 2014.07-6-g3b7496c).
+Using /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p (version 2014.07-8-gfc99946).
 
 Creating Makefile ...
 Cleaning up ...

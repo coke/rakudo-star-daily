@@ -22,8 +22,85 @@ t/01-sanity/18-simple-multisubs.t .. ok
 t/01-sanity/19-say.t ............... ok
 t/01-sanity/20-defined.t ........... ok
 t/01-sanity/21-try.t ............... ok
-t/01-sanity/99-test-basic.t ........ ok
-All tests successful.
-Files=22, Tests=271, 53 wallclock secs ( 0.08 usr  0.03 sys +  0.52 cusr  0.14 csys =  0.77 CPU)
-Result: PASS
+ok 1 - pass($desc)
+ok 2 - ok with description
+ok 3 - ok returns True
+ok 4 - 
+ok 5 - ok returns True
+not ok 6 - calling ok False# TODO testing failure
+ok 7 - failure returns False
+ok 8 - nok with description
+ok 9 - nok 0 returns True
+ok 10 - 
+ok 11 - nok 0 returns True
+not ok 12 - nok 1 with description# TODO tesing nok True
+ok 13 - nok 1 returns False
+ok 14 - is with description
+ok 15 - is returns True
+ok 16 - 
+not ok 17 - is 1, 0; with description# TODO failing is
+ok 18 - is 1, 0;  returns False
+ok 19 - isnt with description
+ok 20 - isnt 1, 0; returns True
+ok 21 - 
+not ok 22 - isnt 1,1, with description# TODO testing isnt 1,1
+ok 23 - isnt 1, 1; returns False
+ok 24 - is_approx with description
+ok 25 - is_approx 1,1, returns True
+ok 26 - 
+ok 27 - is_approx with small difference
+ok 28 - is_approx 1,1.000001, returns True
+not ok 29 - is_approx with small difference# TODO failing is_approx 1,2;
+ok 30 - is_approx 1, 2; fails and returns False
+not ok 31 - this should fail, to test todo()# TODO testing todo twice
+not ok 32 - this should also fail, to test todo()# TODO testing todo twice
+ok 33 - passing test (todo is done)
+not ok 34 - todo with no count covers one test# TODO todo with no count
+ok 35 - passing test (not todo)
+ok 36 - # SKIP skip with reason
+ok 37 - # SKIP
+ok 38 - # SKIP skip with count and reason
+ok 39 - # SKIP skip with count and reason
+not ok 40 - flunk# TODO testing flunk
+ok 41 - isa_ok with message
+ok 42 - isa_ok returns True
+ok 43 - The object is-a 'Int'
+not ok 44 - The object is-a 'Int'# TODO failing isa_ok returns False
+ok 45 - Failing isa_ok returns False
+ok 46 - skip() dies when given the arguments in the wrong order
+ok 47 - dies_ok returns True
+not ok 48 - dies_ok {1}# TODO failing dies_ok returns False
+ok 49 - dies_ok returns False if code did not die
+ok 50 - dies_ok
+ok 51 - 
+ok 52 - lives_ok
+ok 53 - lives_ok returns True
+ok 54 - 
+not ok 55 - lives_ok { die }# TODO failing lives_ok returns False
+ok 56 - failing lives_ok returns False
+ok 57 - eval_dies_ok
+ok 58 - eavl_dies_ok returns True
+ok 59 - 
+not ok 60 - eval_dies_ok 1 fails# TODO eval_dies_ok 1 returns False
+ok 61 - eval_dies_ok 1 returns False
+ok 62 - eval_lives_ok
+ok 63 - eval_lives_ok 1 returns True
+ok 64 - 
+not ok 65 - lives_ok { die }# TODO failing eval_lives_ok returns False
+ok 66 - failing eval_lives_ok returns False
+ok 67 - is_deeply
+ok 68 - is_deeply returns True
+ok 69 - 
+not ok 70 - is_deeply with exta key fails# TODO failing is_deeply returns False
+ok 71 - failing is_deeply returns False
+1..71
+t/01-sanity/99-test-basic.t ........ 
+No subtests run 
+
+Test Summary Report
+-------------------
+t/01-sanity/99-test-basic.t      (Wstat: 0 Tests: 0 Failed: 0)
+  Parse errors: No plan found in TAP output
+Files=22, Tests=200, 54 wallclock secs ( 0.08 usr  0.04 sys +  0.52 cusr  0.12 csys =  0.76 CPU)
+Result: FAIL
 make[1]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'

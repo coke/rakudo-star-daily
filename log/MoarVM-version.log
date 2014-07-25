@@ -1,5 +1,5 @@
 Rakudo
-Sofia-28-g1b25025
+Sofia-38-g6cc8078
 NQP
 2014.07-17-gbb70129
 modules
@@ -146,11 +146,25 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit 246ad58c593f633b936a8a9f109a95e0ea21ba8e
-Author: Solomon Foster <colomon@gmail.com>
-Date:   Thu Jul 3 08:49:11 2014 -0400
+commit 3f8d8b3f2864a0d836bbf21fb5d3c6c8dd97f4c0
+Merge: 246ad58 ff45e43
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Thu Jul 24 12:44:07 2014 +0200
 
-    Rename method destdir so it doesn't hide $.destdir.
+    Merge pull request #91 from carbin/master
+    
+    Module paths contain backslashes on Windows
+
+commit ff45e43212ab3862c489e60efb527322656247ed
+Author: Carlin <cb@viennan.net>
+Date:   Mon Jul 21 04:48:41 2014 +1200
+
+    Module paths contain backslashes on Windows
+    
+    This should allow panda to build/install on Windows.
+    Currently the required replacements are not done on Windows paths.
+    This causes panda to not work out the dependencies properly and thus not compile
+    the modules in the right order.
 --------
 perl6-Term-ANSIColor
 commit 0e92caf09397f458314d4a30974618628a3e5600

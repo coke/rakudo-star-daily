@@ -1,7 +1,7 @@
 == Configuring and building Rakudo
 cd rakudo && /usr/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install && make
 Found /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (backend moar)
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.07-17-gbb70129 / MoarVM 2014.07-15-gb6a4250).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.07-24-g53769e5 / MoarVM 2014.07-18-g6753df5).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -30,7 +30,6 @@ gcc  -shared -fPIC -O1 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/
 	    src/Perl6/Actions.nqp
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/Grammar.moarvm --encoding=utf8 \
 	    src/Perl6/Grammar.nqp
-Repeated character (') unexpectedly found in character class
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/Optimizer.moarvm --encoding=utf8 \
 	    src/Perl6/Optimizer.nqp
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/Compiler.moarvm --encoding=utf8 \
@@ -49,12 +48,12 @@ Repeated character (') unexpectedly found in character class
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm src/gen/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  69.960
+Stage parse      :  69.761
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   8.074
-Stage mast       :  26.278
-Stage mbc        :   1.800
+Stage optimize   :   8.943
+Stage mast       :  26.765
+Stage mbc        :   1.728
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --target=mbc --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /usr/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" .
 ./perl6-m --target=mbc --output=lib/Test.moarvm lib/Test.pm

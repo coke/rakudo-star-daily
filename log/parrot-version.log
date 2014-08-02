@@ -1,7 +1,7 @@
 Rakudo
-Sofia-74-g9d6c19c
+Sofia-89-ga1a2360
 NQP
-2014.07-41-g72e0753
+2014.07-49-g183e611
 modules
 --------
 Bailador
@@ -192,11 +192,23 @@ Date:   Sun Mar 30 13:47:36 2014 +0200
     s/constant/my \\/ because of a precomp bug
 --------
 perl6-http-easy
-commit 2fd947bc09a4d27363dd7cefb78ebc05b9f75ce8
-Author: Timothy Totten <2010@huri.net>
-Date:   Tue Feb 18 10:58:54 2014 -0800
+commit 147d33231b265109f5ed485896243f781bd9b656
+Merge: 2fd947b 395d9e8
+Author: Timothy Totten <2009@huri.net>
+Date:   Fri Aug 1 10:54:16 2014 -0700
 
-    Added S11 provides
+    Merge pull request #15 from masak/master
+    
+    fix a few Rakudo deprecations
+
+commit 395d9e8511d50cd6cdb0999da6006a52c47695a4
+Author: Carl Masak <cmasak@gmail.com>
+Date:   Tue Jul 29 20:29:13 2014 +0200
+
+    fix a few Rakudo deprecations
+    
+    - %h.exists('key') deprecated in favor of %h<key> :exists
+    - %h = {} deprecated in favor of %h = ()
 --------
 perl6-http-status
 commit 607b35dc6c8f9bfa4c170d8df90161013eaeeb51

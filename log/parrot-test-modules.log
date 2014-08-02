@@ -5,13 +5,13 @@ t/02-simple-args.t ..... ok
 t/03-simple-returns.t .. ok
 t/04-pointers.t ........ ok
 ===SORRY!===
-invoke() not implemented in class 'CallContext'
+invoke() not implemented in class 'Hash'
 t/05-arrays.t .......... 
 No subtests run 
 # Looks like you planned 30 tests, but ran 19
 t/06-struct.t .......... ok
 ===SORRY!===
-Can not get attribute '$!pos' declared in class 'NQPCursor' with this object
+invoke() not implemented in class 'CallContext'
 t/07-writebarrier.t .... 
 No subtests run 
 # Looks like you planned 9 tests, but ran 5
@@ -24,49 +24,49 @@ t/05-arrays.t        (Wstat: 0 Tests: 0 Failed: 0)
   Parse errors: No plan found in TAP output
 t/07-writebarrier.t  (Wstat: 0 Tests: 0 Failed: 0)
   Parse errors: No plan found in TAP output
-Files=9, Tests=80, 33 wallclock secs ( 0.06 usr  0.02 sys + 29.57 cusr  2.92 csys = 32.57 CPU)
+Files=9, Tests=80, 131 wallclock secs ( 0.06 usr  0.01 sys + 126.14 cusr  4.14 csys = 130.35 CPU)
 Result: FAIL
 
 Testing modules/xml-writer with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
 t/escaping.t ... ok
 t/structure.t .. ok
 All tests successful.
-Files=2, Tests=11,  5 wallclock secs ( 0.02 usr  0.01 sys +  4.31 cusr  0.55 csys =  4.89 CPU)
+Files=2, Tests=11,  7 wallclock secs ( 0.02 usr  0.00 sys +  6.16 cusr  0.58 csys =  6.76 CPU)
 Result: PASS
 
 Testing modules/svg with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
 t/basics.t .. ok
 All tests successful.
-Files=1, Tests=3,  2 wallclock secs ( 0.03 usr  0.00 sys +  1.94 cusr  0.26 csys =  2.23 CPU)
+Files=1, Tests=3,  3 wallclock secs ( 0.04 usr  0.00 sys +  3.22 cusr  0.36 csys =  3.62 CPU)
 Result: PASS
 
 Testing modules/svg-plot with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
 t/series.t .. ok
 t/ticks.t ... ok
 All tests successful.
-Files=2, Tests=10,  6 wallclock secs ( 0.02 usr  0.00 sys +  4.93 cusr  0.57 csys =  5.52 CPU)
+Files=2, Tests=10, 16 wallclock secs ( 0.02 usr  0.00 sys + 16.12 cusr  0.66 csys = 16.80 CPU)
 Result: PASS
 
 Testing modules/Math-RungeKutta with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
-# took 1 seconds
-# took 5 seconds
+# took 2 seconds
+# took 4 seconds
 # took 2 seconds
 t/01-rk-integrate.t .. ok
 All tests successful.
-Files=1, Tests=6, 11 wallclock secs ( 0.02 usr  0.00 sys + 10.51 cusr  0.30 csys = 10.83 CPU)
+Files=1, Tests=6, 12 wallclock secs ( 0.02 usr  0.01 sys + 11.48 cusr  0.37 csys = 11.88 CPU)
 Result: PASS
 
 Testing modules/Math-Model with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
-# result: ("b" => [0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3.0, 3.3, 3.6, 3.9, 4.2, 4.5, 4.8, 5.1, 5.4, 5.7, 6.0], "time" => [0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.1, 2.25, 2.4, 2.55, 2.7, 2.85, 3.0]).hash
+# result: ("time" => [0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.1, 2.25, 2.4, 2.55, 2.7, 2.85, 3.0], "b" => [0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3.0, 3.3, 3.6, 3.9, 4.2, 4.5, 4.8, 5.1, 5.4, 5.7, 6.0]).hash
 t/basic.t .. ok
 All tests successful.
-Files=1, Tests=6, 15 wallclock secs ( 0.01 usr  0.02 sys + 14.44 cusr  0.28 csys = 14.75 CPU)
+Files=1, Tests=6, 31 wallclock secs ( 0.01 usr  0.02 sys + 30.23 cusr  0.38 csys = 30.64 CPU)
 Result: PASS
 
 Testing modules/perl6-Term-ANSIColor with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
 t/00-load.t .. ok
 All tests successful.
-Files=1, Tests=1,  2 wallclock secs ( 0.02 usr  0.01 sys +  1.76 cusr  0.24 csys =  2.03 CPU)
+Files=1, Tests=1,  4 wallclock secs ( 0.02 usr  0.00 sys +  2.98 cusr  0.31 csys =  3.31 CPU)
 Result: PASS
 
 Testing modules/test-mock with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
@@ -74,12 +74,12 @@ t/returning.t .. ok
 t/synopsis.t ... ok
 t/with.t ....... ok
 All tests successful.
-Files=3, Tests=13,  8 wallclock secs ( 0.02 usr  0.00 sys +  6.68 cusr  0.85 csys =  7.55 CPU)
+Files=3, Tests=13,  8 wallclock secs ( 0.01 usr  0.02 sys +  7.06 cusr  0.81 csys =  7.90 CPU)
 Result: PASS
 
 Testing modules/Grammar-Profiler-Simple with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
 ===SORRY!===
-invoke() not implemented in class 'NQPLexPad'
+invoke() not implemented in class 'ResizableIntegerArray'
 t/csv.t .. 
 No subtests run 
 
@@ -87,12 +87,12 @@ Test Summary Report
 -------------------
 t/csv.t (Wstat: 0 Tests: 0 Failed: 0)
   Parse errors: No plan found in TAP output
-Files=1, Tests=0,  2 wallclock secs ( 0.02 usr  0.00 sys +  1.76 cusr  0.20 csys =  1.98 CPU)
+Files=1, Tests=0,  2 wallclock secs ( 0.02 usr  0.00 sys +  1.81 cusr  0.34 csys =  2.17 CPU)
 Result: FAIL
 
 Testing modules/grammar-debugger with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
 ===SORRY!===
-invoke() not implemented in class 'CallContext'
+No such method 'postcircumfix:<( )>' for invocant of type 'Int'
 t/tracer.t .. 
 No subtests run 
 
@@ -100,7 +100,7 @@ Test Summary Report
 -------------------
 t/tracer.t (Wstat: 0 Tests: 0 Failed: 0)
   Parse errors: No plan found in TAP output
-Files=1, Tests=0,  2 wallclock secs ( 0.02 usr  0.00 sys +  1.78 cusr  0.21 csys =  2.01 CPU)
+Files=1, Tests=0,  4 wallclock secs ( 0.02 usr  0.00 sys +  3.57 cusr  0.27 csys =  3.86 CPU)
 Result: FAIL
 
 Testing modules/Perl6-MIME-Base64 with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
@@ -108,18 +108,25 @@ t/basic.t ................. ok
 t/binary-and-long-line.t .. ok
 t/rfc4648-test-vector.t ... ok
 All tests successful.
-Files=3, Tests=45, 14 wallclock secs ( 0.03 usr  0.01 sys + 12.91 cusr  0.93 csys = 13.88 CPU)
+Files=3, Tests=45, 11 wallclock secs ( 0.02 usr  0.02 sys + 10.28 cusr  0.75 csys = 11.07 CPU)
 Result: PASS
 
 Testing modules/uri with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
 t/01.t ................... ok
-===SORRY!===
-No handler to delete.
+invoke() not implemented in class 'Key'
+  in sub infix:<eq> at gen/parrot/CORE.setting:1432
+  in sub unbase at gen/parrot/CORE.setting:6897
+  in block  at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/URI/Escape.pm:39
+  in method subst at gen/parrot/CORE.setting:6383
+  in method subst at gen/parrot/CORE.setting:3729
+  in sub uri_unescape at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/URI/Escape.pm:36
+  in block  at t/escape.t:21
+
 # Looks like you planned 9 tests, but ran 5
 t/escape.t ............... 
 Failed 4/9 subtests 
 ===SORRY!===
-Null PMC access in defined()
+Can not get attribute '$!pos' declared in class 'NQPCursor' with this object
 # Looks like you planned 13 tests, but ran 0
 t/november-urlencoded.t .. 
 Failed 13/13 subtests 
@@ -131,13 +138,13 @@ t/escape.t             (Wstat: 0 Tests: 5 Failed: 0)
   Parse errors: Bad plan.  You planned 9 tests but ran 5.
 t/november-urlencoded.t (Wstat: 0 Tests: 0 Failed: 0)
   Parse errors: Bad plan.  You planned 13 tests but ran 0.
-Files=4, Tests=74, 15 wallclock secs ( 0.04 usr  0.01 sys + 14.25 cusr  1.26 csys = 15.56 CPU)
+Files=4, Tests=74, 29 wallclock secs ( 0.04 usr  0.01 sys + 27.84 cusr  1.29 csys = 29.18 CPU)
 Result: FAIL
 
 Testing modules/perl6-lwp-simple with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
 t/000-load-module.t ............. ok
 t/basic-auth.t .................. ok
-invoke() not implemented in class 'Integer'
+invoke() not implemented in class 'Float'
   in sub infix:<eq> at gen/parrot/CORE.setting:1432
   in sub unbase at gen/parrot/CORE.setting:6897
   in method parse_chunks at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/LWP/Simple.pm:135
@@ -149,7 +156,7 @@ invoke() not implemented in class 'Integer'
 t/custom-headers-and-content.t .. 
 No subtests run 
 t/get-binary-camelia.t .......... ok
-invoke() not implemented in class 'Float'
+invoke() not implemented in class 'String'
   in sub infix:<eq> at gen/parrot/CORE.setting:1432
   in sub unbase at gen/parrot/CORE.setting:6897
   in method parse_chunks at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/LWP/Simple.pm:135
@@ -161,8 +168,7 @@ invoke() not implemented in class 'Float'
 t/get-chunked-6guts.t ........... 
 No subtests run 
 t/get-perl6-org.t ............... ok
-No such method 'postcircumfix:<( )>' for invocant of type 'Hash'
-  in any  at gen/parrot/BOOTSTRAP.nqp:1680
+invoke() not implemented in class 'String'
   in sub infix:<eq> at gen/parrot/CORE.setting:1432
   in sub unbase at gen/parrot/CORE.setting:6897
   in method parse_chunks at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/LWP/Simple.pm:135
@@ -188,13 +194,13 @@ t/get-chunked-6guts.t         (Wstat: 0 Tests: 0 Failed: 0)
   Parse errors: No plan found in TAP output
 t/get-unsized.t               (Wstat: 0 Tests: 0 Failed: 0)
   Parse errors: No plan found in TAP output
-Files=13, Tests=52, 60 wallclock secs ( 0.04 usr  0.05 sys + 51.36 cusr  4.56 csys = 56.01 CPU)
+Files=13, Tests=52, 175 wallclock secs ( 0.07 usr  0.02 sys + 165.97 cusr  4.91 csys = 170.97 CPU)
 Result: FAIL
 
 Testing modules/json with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
 t/01-parse.t ...... ok
 t/02-structure.t .. ok
-invoke() not implemented in class 'Key'
+invoke() not implemented in class 'Integer'
   in sub infix:<eq> at gen/parrot/CORE.setting:1432
   in sub unbase at gen/parrot/CORE.setting:6897
   in method str_escape at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/JSON/Tiny/Actions.pm:51
@@ -209,14 +215,30 @@ invoke() not implemented in class 'Key'
   in regex pairlist at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/JSON/Tiny/Grammar.pm:6
   in regex object at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/JSON/Tiny/Grammar.pm:5
   in regex TOP at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/JSON/Tiny/Grammar.pm:4
-  in method parse at gen/parrot/CORE.setting:13204
+  in method parse at gen/parrot/CORE.setting:13208
   in block  at t/03-unicode.t:16
 
 # Looks like you planned 2 tests, but ran 0
 t/03-unicode.t .... 
 Failed 2/2 subtests 
-===SORRY!===
-Error while compiling op bind: Method 'fresh_p' not found for invocant of class 'Str'
+invoke() not implemented in class 'String'
+  in sub infix:<eq> at gen/parrot/CORE.setting:1432
+  in sub unbase at gen/parrot/CORE.setting:6897
+  in method str_escape at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/JSON/Tiny/Actions.pm:51
+  in any !reduce at gen/parrot/stage2/QRegex.nqp:770
+  in any !cursor_pass at gen/parrot/stage2/QRegex.nqp:732
+  in regex str_escape at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/JSON/Tiny/Grammar.pm:33
+  in regex string at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/JSON/Tiny/Grammar.pm:25
+  in regex value:sym<string> at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/JSON/Tiny/Grammar.pm:23
+  in any !protoregex at gen/parrot/stage2/QRegex.nqp:806
+  in regex value at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/JSON/Tiny/Grammar.pm:11
+  in regex arraylist at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/JSON/Tiny/Grammar.pm:9
+  in regex array at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/JSON/Tiny/Grammar.pm:8
+  in regex TOP at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/JSON/Tiny/Grammar.pm:4
+  in method parse at gen/parrot/CORE.setting:13208
+  in sub from-json at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.6.0-devel/languages/perl6/lib/JSON/Tiny.pm:50
+  in block  at t/04-roundtrip.t:37
+
 # Looks like you planned 17 tests, but ran 6
 t/04-roundtrip.t .. 
 Failed 11/17 subtests 
@@ -227,39 +249,40 @@ t/03-unicode.t  (Wstat: 0 Tests: 0 Failed: 0)
   Parse errors: Bad plan.  You planned 2 tests but ran 0.
 t/04-roundtrip.t (Wstat: 0 Tests: 6 Failed: 0)
   Parse errors: Bad plan.  You planned 17 tests but ran 6.
-Files=4, Tests=106, 15 wallclock secs ( 0.07 usr  0.01 sys + 13.38 cusr  1.30 csys = 14.76 CPU)
+Files=4, Tests=106, 18 wallclock secs ( 0.05 usr  0.01 sys + 15.81 cusr  1.24 csys = 17.11 CPU)
 Result: FAIL
 
 Testing modules/perl6-digest-md5 with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
 t/0-load-module.t .. ok
 t/perl5-compat.t ... ok
 All tests successful.
-Files=2, Tests=7, 38 wallclock secs ( 0.03 usr  0.00 sys + 36.86 cusr  0.55 csys = 37.44 CPU)
+Files=2, Tests=7, 12 wallclock secs ( 0.03 usr  0.01 sys + 11.26 cusr  0.60 csys = 11.90 CPU)
 Result: PASS
 
 Testing modules/file-find with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
+===SORRY!===
+invoke() not implemented in class 'NQPLexPad'
 t/01-file-find.t .. 
 No subtests run 
 
 Test Summary Report
 -------------------
-t/01-file-find.t (Wstat: 139 Tests: 0 Failed: 0)
-  Non-zero wait status: 139
+t/01-file-find.t (Wstat: 0 Tests: 0 Failed: 0)
   Parse errors: No plan found in TAP output
-Files=1, Tests=0,  2 wallclock secs ( 0.01 usr  0.02 sys +  2.13 cusr  0.21 csys =  2.37 CPU)
+Files=1, Tests=0,  3 wallclock secs ( 0.01 usr  0.01 sys +  3.30 cusr  0.28 csys =  3.60 CPU)
 Result: FAIL
 
 Testing modules/shell-command with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
 t/02-shell-command.t .. ok
 All tests successful.
-Files=1, Tests=12,  5 wallclock secs ( 0.01 usr  0.00 sys +  4.54 cusr  0.34 csys =  4.89 CPU)
+Files=1, Tests=12,  7 wallclock secs ( 0.02 usr  0.00 sys +  6.84 cusr  0.28 csys =  7.14 CPU)
 Result: PASS
 
 Testing modules/panda with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
 t/builder.t .... 
 No subtests run 
 ===SORRY!===
-invoke() not implemented in class 'Integer'
+invoke() not implemented in class 'CallContext'
 t/common.t ..... 
 No subtests run 
 t/ecosystem.t .. ok
@@ -282,19 +305,19 @@ t/installer.t (Wstat: 139 Tests: 0 Failed: 0)
   Parse errors: No plan found in TAP output
 t/tester.t   (Wstat: 0 Tests: 0 Failed: 0)
   Parse errors: No plan found in TAP output
-Files=5, Tests=14, 12 wallclock secs ( 0.03 usr  0.01 sys + 10.31 cusr  1.32 csys = 11.67 CPU)
+Files=5, Tests=14, 27 wallclock secs ( 0.03 usr  0.01 sys + 25.46 cusr  1.72 csys = 27.22 CPU)
 Result: FAIL
 
 Testing modules/perl6-http-status with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
 t/01-basic.t .. ok
 All tests successful.
-Files=1, Tests=4,  3 wallclock secs ( 0.02 usr  0.00 sys +  1.95 cusr  0.29 csys =  2.26 CPU)
+Files=1, Tests=4,  2 wallclock secs ( 0.02 usr  0.01 sys +  1.72 cusr  0.26 csys =  2.01 CPU)
 Result: PASS
 
 Testing modules/PSGI with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
 t/encode-psgi-response.t .. ok
 All tests successful.
-Files=1, Tests=24,  3 wallclock secs ( 0.02 usr  0.00 sys +  2.82 cusr  0.26 csys =  3.10 CPU)
+Files=1, Tests=24,  4 wallclock secs ( 0.02 usr  0.01 sys +  3.47 cusr  0.25 csys =  3.75 CPU)
 Result: PASS
 
 Testing modules/perl6-http-easy with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
@@ -305,7 +328,7 @@ t/00-basic.t ..... ok
 t/01-template.t .. ok
 t/02-complex.t ... ok
 All tests successful.
-Files=3, Tests=21, 10 wallclock secs ( 0.03 usr  0.01 sys +  8.87 cusr  0.85 csys =  9.76 CPU)
+Files=3, Tests=21, 13 wallclock secs ( 0.03 usr  0.01 sys + 11.66 cusr  0.92 csys = 12.62 CPU)
 Result: PASS
 
 Testing modules/Bailador with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
@@ -319,7 +342,7 @@ t/03-response-content.t .. ok
 t/04-templates.t ......... ok
 t/05-post-content.t ...... ok
 All tests successful.
-Files=5, Tests=19, 19 wallclock secs ( 0.03 usr  0.01 sys + 17.79 cusr  1.46 csys = 19.29 CPU)
+Files=5, Tests=19, 86 wallclock secs ( 0.04 usr  0.01 sys + 84.50 cusr  1.73 csys = 86.28 CPU)
 Result: PASS
 
 Testing modules/DBIish with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
@@ -334,38 +357,35 @@ t/30-Pg.t ............. ok
 # Connect failed with error Cannot locate native library 'libpq.so'
 t/35-Pg-common.t ...... ok
 # Testing MiniDBD::SQLite
+===SORRY!===
+invoke() not implemented in class 'String'
+# Looks like you planned 40 tests, but ran 0
 t/40-sqlite-common.t .. 
 Failed 40/40 subtests 
 
 Test Summary Report
 -------------------
-t/40-sqlite-common.t (Wstat: 139 Tests: 0 Failed: 0)
-  Non-zero wait status: 139
+t/40-sqlite-common.t (Wstat: 0 Tests: 0 Failed: 0)
   Parse errors: Bad plan.  You planned 40 tests but ran 0.
-Files=6, Tests=178, 44 wallclock secs ( 0.06 usr  0.02 sys + 41.38 cusr  1.94 csys = 43.40 CPU)
+Files=6, Tests=178, 153 wallclock secs ( 0.04 usr  0.02 sys + 150.02 cusr  2.62 csys = 152.70 CPU)
 Result: FAIL
 
 Testing modules/jsonrpc with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
 ===SORRY!===
-invoke() not implemented in class 'QRPA'
+invoke() not implemented in class 'Hash'
 t/client.t .. 
 No subtests run 
-Unmarshallable foreign language value passed for parameter '$got'
-  in sub is at lib/Test.pm:89
-  in sub is at lib/Test.pm:94
-  in block  at t/server.t:239
-
-# Looks like you planned 29 tests, but ran 28
 t/server.t .. 
-Failed 1/29 subtests 
+Failed 14/29 subtests 
 
 Test Summary Report
 -------------------
 t/client.t (Wstat: 0 Tests: 0 Failed: 0)
   Parse errors: No plan found in TAP output
-t/server.t (Wstat: 0 Tests: 28 Failed: 0)
-  Parse errors: Bad plan.  You planned 29 tests but ran 28.
-Files=2, Tests=28, 23 wallclock secs ( 0.04 usr  0.01 sys + 22.91 cusr  0.70 csys = 23.66 CPU)
+t/server.t (Wstat: 139 Tests: 15 Failed: 0)
+  Non-zero wait status: 139
+  Parse errors: Bad plan.  You planned 29 tests but ran 15.
+Files=2, Tests=15, 38 wallclock secs ( 0.02 usr  0.01 sys + 37.27 cusr  0.71 csys = 38.01 CPU)
 Result: FAIL
 
 Testing modules/Pod-To-HTML with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
@@ -380,7 +400,7 @@ use of uninitialized value of type Any in string context  in sub pod2html at /ho
 
 t/04-lists.t .... ok
 All tests successful.
-Files=4, Tests=8, 12 wallclock secs ( 0.03 usr  0.00 sys + 11.88 cusr  0.95 csys = 12.86 CPU)
+Files=4, Tests=8, 50 wallclock secs ( 0.03 usr  0.01 sys + 48.82 cusr  1.44 csys = 50.30 CPU)
 Result: PASS
 
 Testing modules/doc with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...
@@ -397,7 +417,7 @@ Test Summary Report
 -------------------
 t/typegraph.t (Wstat: 0 Tests: 0 Failed: 0)
   Parse errors: No plan found in TAP output
-Files=1, Tests=0,  8 wallclock secs ( 0.02 usr  0.00 sys +  7.82 cusr  0.42 csys =  8.26 CPU)
+Files=1, Tests=0,  7 wallclock secs ( 0.02 usr  0.01 sys +  6.99 cusr  0.35 csys =  7.37 CPU)
 Result: FAIL
 
 Testing modules/rakudo-debugger with /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p...

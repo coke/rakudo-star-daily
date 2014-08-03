@@ -1,7 +1,7 @@
 Rakudo
-Sofia-89-ga1a2360
+Sofia-96-ga6e278d
 NQP
-2014.07-49-g183e611
+2014.07-50-gfadd779
 modules
 --------
 Bailador
@@ -84,11 +84,11 @@ Date:   Wed Feb 26 18:28:04 2014 +0100
     Add License
 --------
 doc
-commit 9cb4baa793d64de91aac384c5f16d23f6b6b7cf2
-Author: Moritz Lenz <mlenz@noris.net>
-Date:   Thu Jul 31 17:27:50 2014 +0200
+commit 8093e18a721d37ba3bd19b242d0a9d24841edd8c
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Sat Aug 2 20:13:42 2014 +0100
 
-    fix small formatting inconsistency
+    experimental -f support for methods if index.data exists
 --------
 file-find
 commit d79a83184da825f61d8c481050f931b511d74cae
@@ -146,25 +146,22 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit 3f8d8b3f2864a0d836bbf21fb5d3c6c8dd97f4c0
-Merge: 246ad58 ff45e43
-Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Thu Jul 24 12:44:07 2014 +0200
+commit 7a7a7703980d635cf55d3ac262b81da15d4f9e7d
+Merge: 3f8d8b3 f23974c
+Author: timo <timonator@perpetuum-immobile.de>
+Date:   Sat Aug 2 14:37:52 2014 +0200
 
-    Merge pull request #91 from carbin/master
+    Merge pull request #92 from nbrown/master
     
-    Module paths contain backslashes on Windows
-
-commit ff45e43212ab3862c489e60efb527322656247ed
-Author: Carlin <cb@viennan.net>
-Date:   Mon Jul 21 04:48:41 2014 +1200
-
-    Module paths contain backslashes on Windows
+    Fix panda to work with new compiled suffixes
     
-    This should allow panda to build/install on Windows.
-    Currently the required replacements are not done on Windows paths.
-    This causes panda to not work out the dependencies properly and thus not compile
-    the modules in the right order.
+    nbrown++
+
+commit f23974c565c9df3e3d50e9465a4a0f67bb6bb563
+Author: nbrown <nbrown04@gmail.com>
+Date:   Fri Aug 1 21:03:48 2014 -0400
+
+    Fix panda to work with new compiled suffixes
 --------
 perl6-Term-ANSIColor
 commit 0e92caf09397f458314d4a30974618628a3e5600

@@ -21,19 +21,21 @@ This representation can not unbox another
   in any  at gen/jvm/BOOTSTRAP.nqp:1668
   in block  at t/03-simple-returns.t:11
 
-# Looks like you planned 7 tests, but ran 0
 t/03-simple-returns.t .. 
+Dubious, test returned 255 (wstat 65280, 0xff00)
 Failed 7/7 subtests 
 This representation can not unbox another
   in method postcircumfix:<( )> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/NativeCall.pm6:127
   in any  at gen/jvm/BOOTSTRAP.nqp:1668
   in block  at t/04-pointers.t:13
 
-# Looks like you planned 10 tests, but ran 0
 t/04-pointers.t ........ 
+Dubious, test returned 255 (wstat 65280, 0xff00)
 Failed 10/10 subtests 
 # Looks like you planned 26 tests, but ran 20
-t/05-arrays.t .......... ok
+t/05-arrays.t .......... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+All 26 subtests passed 
 This representation can not unbox another
   in method postcircumfix:<( )> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/NativeCall.pm6:127
   in any  at gen/jvm/BOOTSTRAP.nqp:1668
@@ -41,30 +43,31 @@ This representation can not unbox another
 
 # Looks like you planned 30 tests, but ran 5
 t/06-struct.t .......... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
 Failed 25/30 subtests 
 This representation can not unbox another
   in method postcircumfix:<( )> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/NativeCall.pm6:127
   in any  at gen/jvm/BOOTSTRAP.nqp:1668
   in block  at t/07-writebarrier.t:31
 
-# Looks like you planned 7 tests, but ran 0
 t/07-writebarrier.t .... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
 Failed 7/7 subtests 
 This representation can not unbox another
   in method postcircumfix:<( )> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/NativeCall.pm6:127
   in any  at gen/jvm/BOOTSTRAP.nqp:1668
   in block  at t/08-callbacks.t:61
 
-# Looks like you planned 9 tests, but ran 0
 t/08-callbacks.t ....... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
 Failed 9/9 subtests 
 This representation can not unbox another
   in method postcircumfix:<( )> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/NativeCall.pm6:127
   in any  at gen/jvm/BOOTSTRAP.nqp:1668
   in block  at t/09-nativecast.t:11
 
-# Looks like you planned 10 tests, but ran 0
 t/09-nativecast.t ...... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
 Failed 10/10 subtests 
 
 Test Summary Report
@@ -75,61 +78,69 @@ t/01-argless.t       (Wstat: 256 Tests: 0 Failed: 0)
 t/02-simple-args.t   (Wstat: 256 Tests: 0 Failed: 0)
   Non-zero exit status: 1
   Parse errors: Bad plan.  You planned 11 tests but ran 0.
-t/03-simple-returns.t (Wstat: 0 Tests: 0 Failed: 0)
+t/03-simple-returns.t (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
   Parse errors: Bad plan.  You planned 7 tests but ran 0.
-t/04-pointers.t      (Wstat: 0 Tests: 0 Failed: 0)
+t/04-pointers.t      (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
   Parse errors: Bad plan.  You planned 10 tests but ran 0.
-t/06-struct.t        (Wstat: 0 Tests: 5 Failed: 0)
+t/05-arrays.t        (Wstat: 65280 Tests: 26 Failed: 0)
+  Non-zero exit status: 255
+t/06-struct.t        (Wstat: 65280 Tests: 5 Failed: 0)
+  Non-zero exit status: 255
   Parse errors: Bad plan.  You planned 30 tests but ran 5.
-t/07-writebarrier.t  (Wstat: 0 Tests: 0 Failed: 0)
+t/07-writebarrier.t  (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
   Parse errors: Bad plan.  You planned 7 tests but ran 0.
-t/08-callbacks.t     (Wstat: 0 Tests: 0 Failed: 0)
+t/08-callbacks.t     (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
   Parse errors: Bad plan.  You planned 9 tests but ran 0.
-t/09-nativecast.t    (Wstat: 0 Tests: 0 Failed: 0)
+t/09-nativecast.t    (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
   Parse errors: Bad plan.  You planned 10 tests but ran 0.
-Files=9, Tests=31, 298 wallclock secs ( 0.07 usr  0.02 sys + 510.98 cusr 11.02 csys = 522.09 CPU)
+Files=9, Tests=31, 302 wallclock secs ( 0.06 usr  0.02 sys + 524.40 cusr 11.34 csys = 535.82 CPU)
 Result: FAIL
 
 Testing modules/xml-writer with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/escaping.t ... ok
 t/structure.t .. ok
 All tests successful.
-Files=2, Tests=11, 43 wallclock secs ( 0.02 usr  0.01 sys + 67.79 cusr  2.27 csys = 70.09 CPU)
+Files=2, Tests=11, 44 wallclock secs ( 0.03 usr  0.00 sys + 69.79 cusr  2.41 csys = 72.23 CPU)
 Result: PASS
 
 Testing modules/svg with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/basics.t .. ok
 All tests successful.
-Files=1, Tests=3, 24 wallclock secs ( 0.02 usr  0.00 sys + 38.18 cusr  1.20 csys = 39.40 CPU)
+Files=1, Tests=3, 24 wallclock secs ( 0.01 usr  0.01 sys + 36.90 cusr  1.05 csys = 37.97 CPU)
 Result: PASS
 
 Testing modules/svg-plot with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/series.t .. ok
 t/ticks.t ... ok
 All tests successful.
-Files=2, Tests=10, 54 wallclock secs ( 0.02 usr  0.00 sys + 88.85 cusr  2.28 csys = 91.15 CPU)
+Files=2, Tests=10, 50 wallclock secs ( 0.02 usr  0.01 sys + 80.53 cusr  2.18 csys = 82.74 CPU)
 Result: PASS
 
 Testing modules/Math-RungeKutta with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
-# took 4 seconds
-# took 7 seconds
-# took 2 seconds
+# took 3 seconds
+# took 6 seconds
+# took 3 seconds
 t/01-rk-integrate.t .. ok
 All tests successful.
-Files=1, Tests=6, 33 wallclock secs ( 0.01 usr  0.01 sys + 51.45 cusr  1.38 csys = 52.85 CPU)
+Files=1, Tests=6, 33 wallclock secs ( 0.04 usr  0.01 sys + 53.92 cusr  1.15 csys = 55.12 CPU)
 Result: PASS
 
 Testing modules/Math-Model with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
-# result: ("time" => [0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.1, 2.25, 2.4, 2.55, 2.7, 2.85, 3.0], "b" => [0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3.0, 3.3, 3.6, 3.9, 4.2, 4.5, 4.8, 5.1, 5.4, 5.7, 6.0]).hash
+# result: ("b" => [0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3.0, 3.3, 3.6, 3.9, 4.2, 4.5, 4.8, 5.1, 5.4, 5.7, 6.0], "time" => [0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.1, 2.25, 2.4, 2.55, 2.7, 2.85, 3.0]).hash
 t/basic.t .. ok
 All tests successful.
-Files=1, Tests=6, 50 wallclock secs ( 0.02 usr  0.01 sys + 79.22 cusr  1.45 csys = 80.70 CPU)
+Files=1, Tests=6, 52 wallclock secs ( 0.04 usr  0.01 sys + 80.07 cusr  1.36 csys = 81.48 CPU)
 Result: PASS
 
 Testing modules/perl6-Term-ANSIColor with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/00-load.t .. ok
 All tests successful.
-Files=1, Tests=1, 21 wallclock secs ( 0.02 usr  0.00 sys + 28.97 cusr  0.99 csys = 29.98 CPU)
+Files=1, Tests=1, 20 wallclock secs ( 0.02 usr  0.00 sys + 30.04 cusr  1.01 csys = 31.07 CPU)
 Result: PASS
 
 Testing modules/test-mock with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -137,7 +148,7 @@ t/returning.t .. ok
 t/synopsis.t ... ok
 t/with.t ....... ok
 All tests successful.
-Files=3, Tests=13, 55 wallclock secs ( 0.04 usr  0.01 sys + 87.11 cusr  3.06 csys = 90.22 CPU)
+Files=3, Tests=13, 53 wallclock secs ( 0.03 usr  0.00 sys + 85.52 cusr  2.72 csys = 88.27 CPU)
 Result: PASS
 
 Testing modules/Grammar-Profiler-Simple with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -153,19 +164,21 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -3
 
 # Looks like you planned 15 tests, but ran 3
 t/csv.t .. 
+Dubious, test returned 255 (wstat 65280, 0xff00)
 Failed 12/15 subtests 
 
 Test Summary Report
 -------------------
-t/csv.t (Wstat: 0 Tests: 3 Failed: 0)
+t/csv.t (Wstat: 65280 Tests: 3 Failed: 0)
+  Non-zero exit status: 255
   Parse errors: Bad plan.  You planned 15 tests but ran 3.
-Files=1, Tests=3, 20 wallclock secs ( 0.02 usr  0.00 sys + 30.47 cusr  1.12 csys = 31.61 CPU)
+Files=1, Tests=3, 19 wallclock secs ( 0.03 usr  0.00 sys + 29.10 cusr  0.89 csys = 30.02 CPU)
 Result: FAIL
 
 Testing modules/grammar-debugger with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/tracer.t .. ok
 All tests successful.
-Files=1, Tests=1, 22 wallclock secs ( 0.03 usr  0.01 sys + 34.59 cusr  1.05 csys = 35.68 CPU)
+Files=1, Tests=1, 19 wallclock secs ( 0.01 usr  0.01 sys + 31.25 cusr  1.01 csys = 32.28 CPU)
 Result: PASS
 
 Testing modules/Perl6-MIME-Base64 with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -173,7 +186,7 @@ t/basic.t ................. ok
 t/binary-and-long-line.t .. ok
 t/rfc4648-test-vector.t ... ok
 All tests successful.
-Files=3, Tests=45, 64 wallclock secs ( 0.04 usr  0.00 sys + 101.34 cusr  3.21 csys = 104.59 CPU)
+Files=3, Tests=45, 60 wallclock secs ( 0.03 usr  0.01 sys + 95.45 cusr  2.58 csys = 98.07 CPU)
 Result: PASS
 
 Testing modules/uri with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -182,7 +195,7 @@ t/escape.t ............... ok
 t/november-urlencoded.t .. ok
 t/rfc-3986-examples.t .... ok
 All tests successful.
-Files=4, Tests=91, 123 wallclock secs ( 0.04 usr  0.01 sys + 206.10 cusr  4.72 csys = 210.87 CPU)
+Files=4, Tests=91, 117 wallclock secs ( 0.03 usr  0.02 sys + 195.19 cusr  4.62 csys = 199.86 CPU)
 Result: PASS
 
 Testing modules/perl6-lwp-simple with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -200,23 +213,16 @@ t/parse-url.t ................... ok
 t/socket-sanity.t ............... ok
 t/stringify-headers.t ........... ok
 All tests successful.
-Files=13, Tests=55, 477 wallclock secs ( 0.07 usr  0.01 sys + 759.56 cusr 16.54 csys = 776.18 CPU)
+Files=13, Tests=55, 480 wallclock secs ( 0.10 usr  0.01 sys + 758.60 cusr 16.24 csys = 774.95 CPU)
 Result: PASS
 
 Testing modules/json with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/01-parse.t ...... ok
 t/02-structure.t .. ok
 t/03-unicode.t .... ok
-use of uninitialized value of type Any in string context  in sub proclaim at lib/Test.pm:346
-
-
-# Failed test 'Array of Num'
-# at lib/Test.pm line 
-#      got: [1.3, 2.8, 32323423.4, 4]
-# expected: [1.3, 2.8, 32323423.4, 4.0]
 t/04-roundtrip.t .. ok
 All tests successful.
-Files=4, Tests=119, 88 wallclock secs ( 0.05 usr  0.00 sys + 145.29 cusr  4.39 csys = 149.73 CPU)
+Files=4, Tests=119, 83 wallclock secs ( 0.05 usr  0.00 sys + 137.22 cusr  3.82 csys = 141.09 CPU)
 Result: PASS
 
 Testing modules/perl6-digest-md5 with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -349,11 +355,9 @@ use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at
 
 use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
 
-use of uninitialized value of type Any in string context  in sub proclaim at lib/Test.pm:346
-
 
 # Failed test 'MD5 hex of 'Hello World' must be 'b10a8db164e0754105b7a99be72e3fe5' (static method)'
-# at lib/Test.pm line 
+# at t/perl5-compat.t line 18
 #      got: '9915155faf30250834866ff42c29307a'
 # expected: 'b10a8db164e0754105b7a99be72e3fe5'
 use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
@@ -483,12 +487,10 @@ use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at
 use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
 
 use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
-
-use of uninitialized value of type Any in string context  in sub proclaim at lib/Test.pm:346
 
 
 # Failed test 'MD5 hex of 'Hello World' must be 'b10a8db164e0754105b7a99be72e3fe5' (instance method)'
-# at lib/Test.pm line 
+# at t/perl5-compat.t line 23
 #      got: '9915155faf30250834866ff42c29307a'
 # expected: 'b10a8db164e0754105b7a99be72e3fe5'
 use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
@@ -618,13 +620,11 @@ use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at
 use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
 
 use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
-
-use of uninitialized value of type Any in string context  in sub proclaim at lib/Test.pm:346
 
 
 # Failed test 'MD5 hex of 'Hello World
 # ' must be 'e59ff97941044f85df5297e1c302d260' (static method)'
-# at lib/Test.pm line 
+# at t/perl5-compat.t line 18
 #      got: 'f9c3811547b749f4b05c7f41638a42d9'
 # expected: 'e59ff97941044f85df5297e1c302d260'
 use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
@@ -754,13 +754,11 @@ use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at
 use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
 
 use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
-
-use of uninitialized value of type Any in string context  in sub proclaim at lib/Test.pm:346
 
 
 # Failed test 'MD5 hex of 'Hello World
 # ' must be 'e59ff97941044f85df5297e1c302d260' (instance method)'
-# at lib/Test.pm line 
+# at t/perl5-compat.t line 23
 #      got: 'f9c3811547b749f4b05c7f41638a42d9'
 # expected: 'e59ff97941044f85df5297e1c302d260'
 use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
@@ -891,11 +889,9 @@ use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at
 
 use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
 
-use of uninitialized value of type Any in string context  in sub proclaim at lib/Test.pm:346
-
 
 # Failed test 'MD5 hex of 'a b' must be '187ef4436122d1cc2f40dc2b92f0eba0' (static method)'
-# at lib/Test.pm line 
+# at t/perl5-compat.t line 18
 #      got: '2ea7f09f3963b80696001f80c94a8f46'
 # expected: '187ef4436122d1cc2f40dc2b92f0eba0'
 use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
@@ -1026,11 +1022,9 @@ use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at
 
 use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
 
-use of uninitialized value of type Any in string context  in sub proclaim at lib/Test.pm:346
-
 
 # Failed test 'MD5 hex of 'a b' must be '187ef4436122d1cc2f40dc2b92f0eba0' (instance method)'
-# at lib/Test.pm line 
+# at t/perl5-compat.t line 23
 #      got: '2ea7f09f3963b80696001f80c94a8f46'
 # expected: '187ef4436122d1cc2f40dc2b92f0eba0'
 # Looks like you failed 6 tests of 6
@@ -1043,19 +1037,19 @@ Test Summary Report
 t/perl5-compat.t (Wstat: 1536 Tests: 6 Failed: 6)
   Failed tests:  1-6
   Non-zero exit status: 6
-Files=2, Tests=7, 60 wallclock secs ( 0.06 usr  0.02 sys + 93.66 cusr  2.20 csys = 95.94 CPU)
+Files=2, Tests=7, 55 wallclock secs ( 0.08 usr  0.00 sys + 84.22 cusr  1.76 csys = 86.06 CPU)
 Result: FAIL
 
 Testing modules/file-find with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/01-file-find.t .. ok
 All tests successful.
-Files=1, Tests=10, 27 wallclock secs ( 0.05 usr  0.00 sys + 43.13 cusr  1.21 csys = 44.39 CPU)
+Files=1, Tests=10, 27 wallclock secs ( 0.02 usr  0.00 sys + 44.64 cusr  1.24 csys = 45.90 CPU)
 Result: PASS
 
 Testing modules/shell-command with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/02-shell-command.t .. ok
 All tests successful.
-Files=1, Tests=12, 28 wallclock secs ( 0.02 usr  0.01 sys + 45.24 cusr  1.06 csys = 46.33 CPU)
+Files=1, Tests=12, 26 wallclock secs ( 0.01 usr  0.01 sys + 43.30 cusr  1.17 csys = 44.49 CPU)
 Result: PASS
 
 Testing modules/panda with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1071,11 +1065,11 @@ Copying blib/lib/foo.jar to /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo
 Copying bin/bar to /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/modules/panda/removeme/bin/bar
 t/installer.t .. ok
 
-# Failed test at t/fail.t line 3
+# Failed test at t/fail.t line 1
 # Looks like you failed 1 tests of 1
 t/tester.t ..... ok
 All tests successful.
-Files=5, Tests=33, 201 wallclock secs ( 0.06 usr  0.01 sys + 328.86 cusr  9.10 csys = 338.03 CPU)
+Files=5, Tests=33, 196 wallclock secs ( 0.06 usr  0.01 sys + 322.65 cusr  8.93 csys = 331.65 CPU)
 Result: PASS
 
 Testing modules/perl6-http-status with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1086,15 +1080,16 @@ This representation can not unbox to a native str
   in sub get_http_status_msg at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/HTTP/Status.pm6:82
   in block  at t/01-basic.t:11
 
-# Looks like you planned 4 tests, but ran 0
 t/01-basic.t .. 
+Dubious, test returned 255 (wstat 65280, 0xff00)
 Failed 4/4 subtests 
 
 Test Summary Report
 -------------------
-t/01-basic.t (Wstat: 0 Tests: 0 Failed: 0)
+t/01-basic.t (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
   Parse errors: Bad plan.  You planned 4 tests but ran 0.
-Files=1, Tests=0, 18 wallclock secs ( 0.02 usr  0.00 sys + 29.12 cusr  1.09 csys = 30.23 CPU)
+Files=1, Tests=0, 18 wallclock secs ( 0.03 usr  0.01 sys + 28.94 cusr  1.06 csys = 30.04 CPU)
 Result: FAIL
 
 Testing modules/PSGI with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1106,15 +1101,16 @@ This representation can not unbox to a native str
   in sub encode-psgi-response at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/PSGI.pm6:19
   in block  at t/encode-psgi-response.t:26
 
-# Looks like you planned 24 tests, but ran 0
 t/encode-psgi-response.t .. 
+Dubious, test returned 255 (wstat 65280, 0xff00)
 Failed 24/24 subtests 
 
 Test Summary Report
 -------------------
-t/encode-psgi-response.t (Wstat: 0 Tests: 0 Failed: 0)
+t/encode-psgi-response.t (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
   Parse errors: Bad plan.  You planned 24 tests but ran 0.
-Files=1, Tests=0, 20 wallclock secs ( 0.02 usr  0.01 sys + 31.93 cusr  0.91 csys = 32.87 CPU)
+Files=1, Tests=0, 24 wallclock secs ( 0.02 usr  0.01 sys + 39.40 cusr  1.06 csys = 40.49 CPU)
 Result: FAIL
 
 Testing modules/perl6-http-easy with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1125,48 +1121,39 @@ t/00-basic.t ..... ok
 t/01-template.t .. ok
 t/02-complex.t ... ok
 All tests successful.
-Files=3, Tests=21, 68 wallclock secs ( 0.03 usr  0.00 sys + 111.18 cusr  3.25 csys = 114.46 CPU)
+Files=3, Tests=21, 65 wallclock secs ( 0.02 usr  0.02 sys + 106.99 cusr  2.91 csys = 109.94 CPU)
 Result: PASS
 
 Testing modules/Bailador with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/01-route-existance.t ... ok
 t/02-response-status.t ... ok
-use of uninitialized value of type Any in string context  in sub proclaim at lib/Test.pm:348
-
-
-# Failed test at lib/Test.pm line 
-#      got: "baz\t5 foo\tbar"
-# expected: {"foo" => "bar", "baz" => 5}
 t/03-response-content.t .. ok
 t/04-templates.t ......... ok
 t/05-post-content.t ...... ok
 All tests successful.
-Files=5, Tests=19, 210 wallclock secs ( 0.03 usr  0.01 sys + 358.39 cusr  6.55 csys = 364.98 CPU)
+Files=5, Tests=19, 201 wallclock secs ( 0.03 usr  0.02 sys + 333.47 cusr  6.60 csys = 340.12 CPU)
 Result: PASS
 
 Testing modules/DBIish with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/05-mock.t ........... ok
 # Connect failed with error This representation can not unbox another
 t/10-mysql.t .......... ok
-# Testing MiniDBD::mysql
 # Connect failed with error This representation can not unbox another
 t/25-mysql-common.t ... ok
 t/30-Pg.t ............. ok
-# Testing MiniDBD::Pg
 # Connect failed with error This representation can not unbox another
 t/35-Pg-common.t ...... ok
-# Testing MiniDBD::SQLite
 # Connect failed with error This representation can not unbox another
 t/40-sqlite-common.t .. ok
 All tests successful.
-Files=6, Tests=218, 262 wallclock secs ( 0.06 usr  0.02 sys + 442.53 cusr  8.67 csys = 451.28 CPU)
+Files=6, Tests=218, 259 wallclock secs ( 0.10 usr  0.02 sys + 436.20 cusr  8.24 csys = 444.56 CPU)
 Result: PASS
 
 Testing modules/jsonrpc with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/client.t .. ok
 t/server.t .. ok
 All tests successful.
-Files=2, Tests=68, 106 wallclock secs ( 0.04 usr  0.00 sys + 166.15 cusr  2.75 csys = 168.94 CPU)
+Files=2, Tests=68, 113 wallclock secs ( 0.04 usr  0.01 sys + 183.98 cusr  3.46 csys = 187.49 CPU)
 Result: PASS
 
 Testing modules/Pod-To-HTML with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1181,13 +1168,13 @@ use of uninitialized value of type Any in string context  in sub pod2html at /ho
 
 t/04-lists.t .... ok
 All tests successful.
-Files=4, Tests=8, 150 wallclock secs ( 0.03 usr  0.01 sys + 258.38 cusr  5.05 csys = 263.47 CPU)
+Files=4, Tests=8, 161 wallclock secs ( 0.06 usr  0.00 sys + 274.01 cusr  5.51 csys = 279.58 CPU)
 Result: PASS
 
 Testing modules/doc with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/typegraph.t .. ok
 All tests successful.
-Files=1, Tests=8, 27 wallclock secs ( 0.02 usr  0.01 sys + 42.41 cusr  0.89 csys = 43.33 CPU)
+Files=1, Tests=8, 26 wallclock secs ( 0.02 usr  0.00 sys + 41.55 cusr  1.17 csys = 42.74 CPU)
 Result: PASS
 
 Testing modules/rakudo-debugger with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...

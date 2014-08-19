@@ -1,5 +1,5 @@
 Rakudo
-Sofia-211-ge55e04b
+Sofia-228-gf1a7c65
 NQP
 2014.07-91-g0723d3a
 modules
@@ -351,11 +351,11 @@ Date:   Wed Jan 15 19:41:26 2014 +0100
     gets rid of a "use of Nil in numeric context" warning
 --------
 zavolaj
-commit ec3f50927bd5a658604da837e8ea51361fba1e32
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jul 7 00:09:42 2014 +0200
+commit d9e11ac4667c6b4a342ae01c79ba50bce5510a62
+Author: jnthn <jnthn@jnthn.net>
+Date:   Mon Aug 18 16:14:06 2014 +0200
 
-    simplify sub nativecast
+    Use subtest syntax for C output.
     
-    We do not need to box the return value anymore since we provide the proper
-    box target now. A call looks now like: nativecast(int32, Int, $opaque-pointer)
+    Avoids confusing Test.pm, which likes to have an exact count.
+    lizmat++ for suggesting this solution.

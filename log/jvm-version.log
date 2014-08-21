@@ -1,5 +1,5 @@
 Rakudo
-Sofia-238-g688c289
+Sofia-242-g7e23526
 NQP
 2014.07-93-g53583b8
 modules
@@ -191,23 +191,25 @@ Date:   Sun Mar 30 13:47:36 2014 +0200
     s/constant/my \\/ because of a precomp bug
 --------
 perl6-http-easy
-commit 147d33231b265109f5ed485896243f781bd9b656
-Merge: 2fd947b 395d9e8
+commit b407eccf5220fe4da6fd5cf34a8f9539ea3f4f8a
+Merge: 147d332 7a6b553
 Author: Timothy Totten <2009@huri.net>
-Date:   Fri Aug 1 10:54:16 2014 -0700
+Date:   Wed Aug 20 12:28:04 2014 -0700
 
-    Merge pull request #15 from masak/master
+    Merge pull request #16 from supernovus/request-bugfix
     
-    fix a few Rakudo deprecations
+    Request bugfix
 
-commit 395d9e8511d50cd6cdb0999da6006a52c47695a4
-Author: Carl Masak <cmasak@gmail.com>
-Date:   Tue Jul 29 20:29:13 2014 +0200
+commit 7a6b55353c1f5d4176a5a0d8f7fea41d93f57d4a
+Author: sergot <filip@sergot.pl>
+Date:   Wed Aug 6 14:47:17 2014 +0200
 
-    fix a few Rakudo deprecations
+    Request bugfix
     
-    - %h.exists('key') deprecated in favor of %h<key> :exists
-    - %h = {} deprecated in favor of %h = ()
+    code copied from HTTP::UserAgent module, written by FROGGS and sergot
+    
+    it makes HTTP::Easy able to get the whole preamble, not only the first line of it (what .get does, now it uses .recv instead)
+    it fixes a bug which occurs when we want to pass something more than only the first line (e.g. GET / HTTP/1.1)
 --------
 perl6-http-status
 commit 607b35dc6c8f9bfa4c170d8df90161013eaeeb51

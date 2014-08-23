@@ -156,6 +156,9 @@ compiling src/strings/latin1.o
 compiling src/strings/utf16.o
 compiling src/strings/windows1252.o
 compiling src/math/bigintops.o
+compiling src/profiler/instrument.o
+compiling src/profiler/log.o
+compiling src/profiler/profile.o
 compiling src/moar.o
 compiling src/platform/posix/mmap.o
 compiling src/platform/posix/time.o
@@ -403,6 +406,7 @@ linking moar
 /usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/mast
 /usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/math
 /usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/platform
+/usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/profiler
 /usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/spesh
 /usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/strings
 /usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/jit
@@ -417,6 +421,7 @@ linking moar
 /usr/bin/perl -MExtUtils::Command -e cp src/mast/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/mast
 /usr/bin/perl -MExtUtils::Command -e cp src/math/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/math
 /usr/bin/perl -MExtUtils::Command -e cp src/platform/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/platform
+/usr/bin/perl -MExtUtils::Command -e cp src/profiler/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/profiler
 /usr/bin/perl -MExtUtils::Command -e cp src/spesh/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/spesh
 /usr/bin/perl -MExtUtils::Command -e cp src/strings/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/strings
 /usr/bin/perl -MExtUtils::Command -e cp src/jit/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/jit
@@ -457,7 +462,7 @@ linking moar
 /usr/bin/perl -MExtUtils::Command -e cp 3rdparty/dyncall/dyncallback/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/dyncall
 Building NQP ...
 /usr/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar --make-install
-Found /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar version 2014.08-8-gd6a1ce2, which is new enough.
+Found /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar version 2014.08-36-g7938703, which is new enough.
 Cleaning up ...
 /usr/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage1/gen
 /usr/bin/perl tools/build/gen-cat.pl moar src/how/Archetypes.nqp src/how/RoleToRoleApplier.nqp src/how/NQPConcreteRoleHOW.nqp src/how/RoleToClassApplier.nqp src/how/NQPCurriedRoleHOW.nqp src/how/NQPParametricRoleHOW.nqp src/how/NQPClassHOW.nqp src/how/NQPNativeHOW.nqp src/how/NQPAttribute.nqp src/how/NQPModuleHOW.nqp src/how/EXPORTHOW.nqp  > gen/moar/stage1/nqpmo.nqp
@@ -573,6 +578,7 @@ Cleaning up ...
 /usr/bin/perl -MExtUtils::Command -e chmod 755 nqp
 /usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin
 /usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib
+/usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/profiler
 /usr/bin/perl -MExtUtils::Command -e cp nqpmo.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib
 /usr/bin/perl -MExtUtils::Command -e cp ModuleLoader.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib
 /usr/bin/perl -MExtUtils::Command -e cp NQPCORE.setting.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib
@@ -585,10 +591,11 @@ Cleaning up ...
 /usr/bin/perl -MExtUtils::Command -e cp NQPP6QRegex.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib
 /usr/bin/perl -MExtUtils::Command -e cp nqp.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib
 /usr/bin/perl -MExtUtils::Command -e cp NQPP5QRegex.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib
+/usr/bin/perl -MExtUtils::Command -e cp src/vm/moar/profiler/template.html /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/profiler/template.html
 /usr/bin/perl tools/build/install-moar-runner.pl "" /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install
 
 NQP has been built and installed.
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.08 / MoarVM 2014.08-8-gd6a1ce2).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.08-23-gc830eaf / MoarVM 2014.08-36-g7938703).
 
 Creating Makefile ...
 Cleaning up ...

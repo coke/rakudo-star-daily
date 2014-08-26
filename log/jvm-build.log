@@ -42,12 +42,12 @@ jar cf0 rakudo-runtime.jar -C bin/ .
 The following step can take a long time, please be patient.
 java -Xss1m -Xms500m -Xmx1000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib/nqp.jar:rakudo-runtime.jar:perl6.jar -cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib perl6 --setting=NULL --ll-exception --optimize=3 --target=jar --stagestats --output=CORE.setting.jar gen/jvm/CORE.setting
 Stage start      :   0.001
-Stage parse      : 157.655
-Stage syntaxcheck:   0.000
+Stage parse      : 117.420
+Stage syntaxcheck:   0.001
 Stage ast        :   0.001
-Stage optimize   :  16.397
-Stage jast       :  49.319
-Stage classfile  :   8.667
+Stage optimize   :  11.826
+Stage jast       :  39.662
+Stage classfile  :   9.696
 Stage jar        :   0.000
 /usr/bin/perl tools/build/create-jvm-runner.pl dev . . /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib/nqp.jar
 Creating './perl6-j'
@@ -351,6 +351,7 @@ modules/doc/lib/Type/Pod/Block/Para.pod => /home/coke/sandbox/rakudo-star-daily/
 modules/doc/lib/Type/Pod/Block/Code.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/Pod/Block/Code.pod
 modules/doc/lib/Type/Pod/Block/Named.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/Pod/Block/Named.pod
 modules/doc/lib/Type/IO/Handle.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/IO/Handle.pod
+modules/doc/lib/Type/IO/Path.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/IO/Path.pod
 modules/doc/lib/Type/IO/FileTestable.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/IO/FileTestable.pod
 modules/doc/lib/Perl6/TypeGraph.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Perl6/TypeGraph.pm
 modules/doc/lib/Perl6/Documentable.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Perl6/Documentable.pm

@@ -1,24 +1,15 @@
 Rakudo
-Minsk-6-gc793d80
+Minsk-8-gce0c258
 NQP
 2014.08-23-gc830eaf
 modules
 --------
 Bailador
-commit 0976785c38dfe3376273ddbca7afe75664c314e2
-Merge: 52f26b1 8b51f6c
-Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Tue Jul 29 20:35:36 2014 +0200
+commit b76468d78ac5b138eb1311f45438b1dc6d9fbbec
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Mon Aug 25 13:16:44 2014 +0200
 
-    Merge pull request #12 from masak/master
-    
-    add PUT and DELETE verbs
-
-commit 8b51f6c770be7bf8a3a1823ca3b72a9bb459448c
-Author: Carl Masak <cmasak@gmail.com>
-Date:   Tue Jul 29 20:34:44 2014 +0200
-
-    add PUT and DELETE verbs
+    Decode body in B::Request
 --------
 DBIish
 commit 1ef45843c78de57c16763b90ed852f835067b739
@@ -35,11 +26,13 @@ Date:   Fri May 24 22:47:38 2013 -0500
     Export via proto
 --------
 MODULES.txt
-commit 7377a69e0c7ef673b165fdff41299f67eb0f639d
-Author: Moritz Lenz <mlenz@noris.net>
-Date:   Wed Jul 2 16:07:15 2014 +0200
+commit 66a6a394b5e60c8c2ddd3e1f3db8e14207ac115b
+Author: Will "Coke" Coleda <will@coleda.com>
+Date:   Mon Aug 25 09:34:45 2014 -0400
 
-    bump more versions
+    Warn users about github tarballs
+    
+    tadzik++
 --------
 Math-Model
 commit aacc103f76d6cdee856d457523a87c1eea9b0ac2
@@ -84,11 +77,13 @@ Date:   Wed Feb 26 18:28:04 2014 +0100
     Add License
 --------
 doc
-commit 9fc6dd0541583ca8394bd21dec6ba0be1b7f60b7
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Sun Aug 24 22:32:38 2014 +0100
+commit e83e69ec74aeb6963053721709337ca3e5d9bb58
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Aug 26 08:41:38 2014 +0200
 
-    fix minor spelling errors and typos
+    [IO::Path] remove TODO comment
+    
+    it was intefering with pod parsing; probably because I messed it up.
 --------
 file-find
 commit d79a83184da825f61d8c481050f931b511d74cae
@@ -146,22 +141,24 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit 4b11553a1e8f5b9835a2b2eb301d703a31913bab
-Merge: 7a7a770 ec1a18a
+commit eb66dcf5ca44d0a8664fb12f228b71fc538c14d6
+Merge: 5b7a352 74fd87f
 Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Sat Aug 9 05:23:25 2014 +0200
+Date:   Mon Aug 25 14:46:47 2014 +0200
 
-    Merge pull request #94 from hoelzro/master
+    Merge pull request #90 from retupmoca/master
     
-    Add basic schema support
+    Add our current destdir to @*INC
 
-commit ec1a18a7a903a01ff3b785af586b8fe5fa339dc0
-Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Fri Aug 8 21:13:13 2014 -0500
+commit 74fd87f42e6c2a0e6dee501ab01f54646b33312e
+Author: Andrew Egeler <andrew@egeler.us>
+Date:   Wed Jul 16 23:18:30 2014 -0400
 
-    Add basic schema support
+    Add our current destdir to @*INC
     
-    Works with git://, http+git://, https+git://, and file:// URIs
+    This fixes the issue with LibraryMake and OpenSSL/Auth::PAM::Simple/etc
+    (if LibraryMake was installed as a dependency of the above, the build
+    would fail the first time, but not the second)
 --------
 perl6-Term-ANSIColor
 commit 0e92caf09397f458314d4a30974618628a3e5600

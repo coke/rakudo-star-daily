@@ -1,7 +1,7 @@
 Rakudo
-Minsk-154-gd8c8342
+Minsk-163-g5f9cd51
 NQP
-2014.08-24-gb598bd7
+2014.08-26-gc7c4661
 modules
 --------
 Bailador
@@ -26,13 +26,11 @@ Date:   Fri May 24 22:47:38 2013 -0500
     Export via proto
 --------
 MODULES.txt
-commit 66a6a394b5e60c8c2ddd3e1f3db8e14207ac115b
-Author: Will "Coke" Coleda <will@coleda.com>
-Date:   Mon Aug 25 09:34:45 2014 -0400
+commit da6f5ec80102ae9992c480b338bec8da2a4b404b
+Author: Tobias Leich <email@froggs.de>
+Date:   Sat Aug 30 23:49:06 2014 +0200
 
-    Warn users about github tarballs
-    
-    tadzik++
+    adjust sentences about backend support
 --------
 Math-Model
 commit aacc103f76d6cdee856d457523a87c1eea9b0ac2
@@ -139,24 +137,20 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit eb66dcf5ca44d0a8664fb12f228b71fc538c14d6
-Merge: 5b7a352 74fd87f
-Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Mon Aug 25 14:46:47 2014 +0200
+commit 6fc58fd3afc79ea8339660deaba75c32d18ff01a
+Merge: eb66dcf 3ae47e9
+Author: colomon <colomon@gmail.com>
+Date:   Sat Aug 30 10:06:17 2014 -0400
 
-    Merge pull request #90 from retupmoca/master
+    Merge pull request #97 from FROGGS/test
     
-    Add our current destdir to @*INC
+    call Build.pm's test method if possible
 
-commit 74fd87f42e6c2a0e6dee501ab01f54646b33312e
-Author: Andrew Egeler <andrew@egeler.us>
-Date:   Wed Jul 16 23:18:30 2014 -0400
+commit 3ae47e9706b38407258caecacb2d6a7e86b6f804
+Author: Tobias Leich <email@froggs.de>
+Date:   Sat Aug 30 15:16:07 2014 +0200
 
-    Add our current destdir to @*INC
-    
-    This fixes the issue with LibraryMake and OpenSSL/Auth::PAM::Simple/etc
-    (if LibraryMake was installed as a dependency of the above, the build
-    would fail the first time, but not the second)
+    call Build.pm's test method if possible
 --------
 perl6-Term-ANSIColor
 commit 0e92caf09397f458314d4a30974618628a3e5600
@@ -221,22 +215,22 @@ Date:   Mon Jul 14 09:03:01 2014 -0400
     %h = { ... }; is now deprecated
 --------
 perl6-lwp-simple
-commit 2944981e4a9ff428c34f1a32e536e07eb6f8aa19
-Merge: d52b3bd 971a7ee
+commit 5ecdf4c27742b4d8cdad56614609d49b2a0da771
+Merge: 2944981 d1733ba
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Thu Jun 19 06:09:55 2014 -0700
+Date:   Sat Aug 30 10:48:34 2014 -0700
 
-    Merge pull request #34 from FROGGS/patch-7
+    Merge pull request #36 from FROGGS/patch-8
     
-    do not check for document size
+    the @-sigil followed by a block already is code
 
-commit 971a7eeec7fd9bb44a68c771b6e57f1d71daad23
+commit d1733baa294f5a76f362eea8feb1240e298508d0
 Author: Tobias Leich <email@froggs.de>
-Date:   Thu Jun 19 15:08:52 2014 +0200
+Date:   Sat Aug 30 19:16:27 2014 +0200
 
-    do not check for document size
+    the @-sigil followed by a block already is code
     
-    Otherwise we have to adjust this test every week or two.
+    This unbreaks LWP::Simple by following a rakudo patch as of yesterday.
 --------
 rakudo-debugger
 commit e9cc44ea76dcf8da9addddff9c4692d7b1cae997

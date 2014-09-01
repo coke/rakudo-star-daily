@@ -1,5 +1,5 @@
 Rakudo
-Minsk-163-g5f9cd51
+Minsk-177-gebccb2a
 NQP
 2014.08-26-gc7c4661
 modules
@@ -61,11 +61,27 @@ Date:   Fri May 30 01:24:06 2014 +1200
     $*VM<name> is deprecated
 --------
 Pod-To-HTML
-commit 7af92ea4f9d87c5fc6f90ccfbe685b7becda5412
-Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Wed Aug 27 09:40:02 2014 -0500
+commit d577c3e64569aa5d7ea6aa328d306180b90ade2b
+Merge: 7af92ea 7aac927
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sun Aug 31 12:12:23 2014 -0700
 
-    Always return a Str from node2text
+    Merge pull request #4 from teodozjan/master
+    
+    Added method and submethod
+
+commit 7aac927efa18acd8a6519174f6a5ad6d9b828498
+Author: Kamil <teodozjan@gmail.com>
+Date:   Sun Aug 31 08:14:47 2014 +0200
+
+    Substitiuted sub with routine and removed redundant code
+
+commit 5119e516b0fdd26374dcc7c6828080b781a8f9de
+Author: Kamil <teodozjan@gmail.com>
+Date:   Sun Aug 31 07:53:36 2014 +0200
+
+    Added method and submethod with behaviour same as subroutine. Everything else showing as
+    <h1> header to take attention or show as class
 --------
 Template-Mojo
 commit b1b6fa6c626575385b334bb423d66111598fb0bf
@@ -75,11 +91,13 @@ Date:   Wed Feb 26 18:28:04 2014 +0100
     Add License
 --------
 doc
-commit 0a5229df835e9510e956b761a0e5a72043ade5b0
-Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Fri Aug 29 17:56:39 2014 -0500
+commit ecb38485c26944fab7ede166b4225928da149e93
+Author: Kamil Kułaga <teodozjan@users.noreply.github.com>
+Date:   Sun Aug 31 23:04:19 2014 +0200
 
-    Don't use deprecated contents attribute
+    s/$*PROGRAM_NAME index/$*PROGRAM_NAME build/
+    
+    there is no such option index
 --------
 file-find
 commit d79a83184da825f61d8c481050f931b511d74cae

@@ -1,7 +1,7 @@
 Rakudo
-Minsk-211-ge3d66c2
+Minsk-215-g69d9f99
 NQP
-2014.08-33-gf6ceab6
+2014.08-36-gf84a159
 modules
 --------
 Bailador
@@ -91,13 +91,11 @@ Date:   Wed Feb 26 18:28:04 2014 +0100
     Add License
 --------
 doc
-commit ecb38485c26944fab7ede166b4225928da149e93
-Author: Kamil Kułaga <teodozjan@users.noreply.github.com>
-Date:   Sun Aug 31 23:04:19 2014 +0200
+commit 2b4bfef8911ba47cdfdfb8992c6200230ee23e7b
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Sep 4 19:18:21 2014 +0100
 
-    s/$*PROGRAM_NAME index/$*PROGRAM_NAME build/
-    
-    there is no such option index
+    <PerlJam> That p6doc patch isn't quite right.  #| and #= don't have to appear at the beginning
 --------
 file-find
 commit d79a83184da825f61d8c481050f931b511d74cae
@@ -367,11 +365,10 @@ Date:   Wed Jan 15 19:41:26 2014 +0100
     gets rid of a "use of Nil in numeric context" warning
 --------
 zavolaj
-commit d9e11ac4667c6b4a342ae01c79ba50bce5510a62
-Author: jnthn <jnthn@jnthn.net>
-Date:   Mon Aug 18 16:14:06 2014 +0200
+commit 62c5f9d8854e9a6308210ef8b4827b2c075d4fa2
+Author: Moritz Lenz <mlenz@noris.net>
+Date:   Thu Sep 4 15:01:25 2014 +0200
 
-    Use subtest syntax for C output.
+    Fix tests
     
-    Avoids confusing Test.pm, which likes to have an exact count.
-    lizmat++ for suggesting this solution.
+    turns out that we must not return a Parcel for a single-element slice/array access

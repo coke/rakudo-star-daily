@@ -1,58 +1,120 @@
 /usr/bin/perl tools/build/modules-test.pl /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m modules/MODULES.txt
 Testing modules/zavolaj with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
-t/01-argless.t ......... ok
-t/02-simple-args.t ..... ok
-t/03-simple-returns.t .. ok
-t/04-pointers.t ........ ok
-t/05-arrays.t .......... ok
-t/06-struct.t .......... ok
-t/07-writebarrier.t .... ok
+t/01-argless.t ......... 
+Failed 1/3 subtests 
+t/02-simple-args.t ..... 
+Failed 1/11 subtests 
+This type cannot unbox to a native integer
+  in block <unit> at t/03-simple-returns.t:11
+
+t/03-simple-returns.t .. 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 7/7 subtests 
+Type check failed for return value; expected 'OpaquePointer' but got 'Whatever'
+  in any return_error at src/vm/moar/Perl6/Ops.nqp:646
+  in block <unit> at t/04-pointers.t:13
+
+t/04-pointers.t ........ 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 10/10 subtests 
+Type check failed for return value; expected 'NumTypedCArray[num]' but got 'Whatever'
+  in any return_error at src/vm/moar/Perl6/Ops.nqp:646
+  in block <unit> at t/05-arrays.t:12
+
+t/05-arrays.t .......... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 20/20 subtests 
+Type check failed for return value; expected 'MyStruct2' but got 'Whatever'
+  in any return_error at src/vm/moar/Perl6/Ops.nqp:646
+  in block <unit> at t/06-struct.t:115
+
+# Looks like you planned 19 tests, but ran 5
+t/06-struct.t .......... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 14/19 subtests 
+Type check failed for return value; expected 'IntPtr' but got 'Whatever'
+  in any return_error at src/vm/moar/Perl6/Ops.nqp:646
+  in block <unit> at t/07-writebarrier.t:31
+
+t/07-writebarrier.t .... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 7/7 subtests 
 t/08-callbacks.t ....... ok
-t/09-nativecast.t ...... ok
-All tests successful.
-Files=9, Tests=92, 10 wallclock secs ( 0.08 usr  0.02 sys +  8.62 cusr  1.02 csys =  9.74 CPU)
-Result: PASS
+Type check failed for return value; expected 'OpaquePointer' but got 'Whatever'
+  in any return_error at src/vm/moar/Perl6/Ops.nqp:646
+  in block <unit> at t/09-nativecast.t:11
+
+t/09-nativecast.t ...... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 10/10 subtests 
+
+Test Summary Report
+-------------------
+t/01-argless.t       (Wstat: 0 Tests: 2 Failed: 0)
+  Parse errors: Bad plan.  You planned 3 tests but ran 2.
+t/02-simple-args.t   (Wstat: 0 Tests: 10 Failed: 0)
+  Parse errors: Bad plan.  You planned 11 tests but ran 10.
+t/03-simple-returns.t (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 7 tests but ran 0.
+t/04-pointers.t      (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 10 tests but ran 0.
+t/05-arrays.t        (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 20 tests but ran 0.
+t/06-struct.t        (Wstat: 65280 Tests: 5 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 19 tests but ran 5.
+t/07-writebarrier.t  (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 7 tests but ran 0.
+t/09-nativecast.t    (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 10 tests but ran 0.
+Files=9, Tests=22, 11 wallclock secs ( 0.08 usr  0.01 sys +  9.32 cusr  1.08 csys = 10.49 CPU)
+Result: FAIL
 
 Testing modules/xml-writer with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
 t/escaping.t ... ok
 t/structure.t .. ok
 All tests successful.
-Files=2, Tests=11,  1 wallclock secs ( 0.02 usr  0.01 sys +  0.91 cusr  0.11 csys =  1.05 CPU)
+Files=2, Tests=11,  1 wallclock secs ( 0.02 usr  0.01 sys +  1.22 cusr  0.14 csys =  1.39 CPU)
 Result: PASS
 
 Testing modules/svg with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
 t/basics.t .. ok
 All tests successful.
-Files=1, Tests=3,  0 wallclock secs ( 0.02 usr  0.00 sys +  0.60 cusr  0.08 csys =  0.70 CPU)
+Files=1, Tests=3,  1 wallclock secs ( 0.02 usr  0.01 sys +  0.64 cusr  0.06 csys =  0.73 CPU)
 Result: PASS
 
 Testing modules/svg-plot with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
 t/series.t .. ok
 t/ticks.t ... ok
 All tests successful.
-Files=2, Tests=10,  1 wallclock secs ( 0.05 usr  0.01 sys +  1.10 cusr  0.21 csys =  1.37 CPU)
+Files=2, Tests=10,  2 wallclock secs ( 0.05 usr  0.00 sys +  1.18 cusr  0.14 csys =  1.37 CPU)
 Result: PASS
 
 Testing modules/Math-RungeKutta with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
-# took 0 seconds
+# took 1 seconds
 # took 2 seconds
 # took 1 seconds
 t/01-rk-integrate.t .. ok
 All tests successful.
-Files=1, Tests=6,  4 wallclock secs ( 0.02 usr  0.00 sys +  3.79 cusr  0.08 csys =  3.89 CPU)
+Files=1, Tests=6,  4 wallclock secs ( 0.02 usr  0.01 sys +  3.78 cusr  0.08 csys =  3.89 CPU)
 Result: PASS
 
 Testing modules/Math-Model with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
 # result: ("b" => [0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3.0, 3.3, 3.6, 3.9, 4.2, 4.5, 4.8, 5.1, 5.4, 5.7, 6.0], "time" => [0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.1, 2.25, 2.4, 2.55, 2.7, 2.85, 3.0]).hash
 t/basic.t .. ok
 All tests successful.
-Files=1, Tests=6,  5 wallclock secs ( 0.02 usr  0.00 sys +  5.22 cusr  0.08 csys =  5.32 CPU)
+Files=1, Tests=6,  5 wallclock secs ( 0.02 usr  0.00 sys +  5.60 cusr  0.08 csys =  5.70 CPU)
 Result: PASS
 
 Testing modules/perl6-Term-ANSIColor with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
 t/00-load.t .. ok
 All tests successful.
-Files=1, Tests=1,  1 wallclock secs ( 0.02 usr  0.01 sys +  0.30 cusr  0.04 csys =  0.37 CPU)
+Files=1, Tests=1,  0 wallclock secs ( 0.04 usr  0.01 sys +  0.47 cusr  0.06 csys =  0.58 CPU)
 Result: PASS
 
 Testing modules/test-mock with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
@@ -60,19 +122,19 @@ t/returning.t .. ok
 t/synopsis.t ... ok
 t/with.t ....... ok
 All tests successful.
-Files=3, Tests=13,  1 wallclock secs ( 0.03 usr  0.01 sys +  1.27 cusr  0.21 csys =  1.52 CPU)
+Files=3, Tests=13,  2 wallclock secs ( 0.04 usr  0.01 sys +  1.75 cusr  0.20 csys =  2.00 CPU)
 Result: PASS
 
 Testing modules/Grammar-Profiler-Simple with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
 t/csv.t .. ok
 All tests successful.
-Files=1, Tests=15,  2 wallclock secs ( 0.03 usr  0.00 sys +  1.03 cusr  0.09 csys =  1.15 CPU)
+Files=1, Tests=15,  2 wallclock secs ( 0.01 usr  0.02 sys +  1.11 cusr  0.07 csys =  1.21 CPU)
 Result: PASS
 
 Testing modules/grammar-debugger with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
 t/tracer.t .. ok
 All tests successful.
-Files=1, Tests=1,  0 wallclock secs ( 0.02 usr  0.00 sys +  0.47 cusr  0.05 csys =  0.54 CPU)
+Files=1, Tests=1,  0 wallclock secs ( 0.01 usr  0.01 sys +  0.49 cusr  0.08 csys =  0.59 CPU)
 Result: PASS
 
 Testing modules/Perl6-MIME-Base64 with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
@@ -80,7 +142,7 @@ t/basic.t ................. ok
 t/binary-and-long-line.t .. ok
 t/rfc4648-test-vector.t ... ok
 All tests successful.
-Files=3, Tests=45,  4 wallclock secs ( 0.03 usr  0.01 sys +  3.42 cusr  0.33 csys =  3.79 CPU)
+Files=3, Tests=45,  4 wallclock secs ( 0.03 usr  0.01 sys +  3.44 cusr  0.28 csys =  3.76 CPU)
 Result: PASS
 
 Testing modules/uri with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
@@ -89,7 +151,7 @@ t/escape.t ............... ok
 t/november-urlencoded.t .. ok
 t/rfc-3986-examples.t .... ok
 All tests successful.
-Files=4, Tests=91,  4 wallclock secs ( 0.04 usr  0.00 sys +  3.91 cusr  0.35 csys =  4.30 CPU)
+Files=4, Tests=91,  6 wallclock secs ( 0.06 usr  0.01 sys +  4.87 cusr  0.47 csys =  5.41 CPU)
 Result: PASS
 
 Testing modules/perl6-lwp-simple with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
@@ -107,7 +169,7 @@ t/parse-url.t ................... ok
 t/socket-sanity.t ............... ok
 t/stringify-headers.t ........... ok
 All tests successful.
-Files=13, Tests=55, 23 wallclock secs ( 0.07 usr  0.02 sys + 16.09 cusr  1.24 csys = 17.42 CPU)
+Files=13, Tests=55, 22 wallclock secs ( 0.07 usr  0.02 sys + 16.55 cusr  1.31 csys = 17.95 CPU)
 Result: PASS
 
 Testing modules/json with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
@@ -116,7 +178,7 @@ t/02-structure.t .. ok
 t/03-unicode.t .... ok
 t/04-roundtrip.t .. ok
 All tests successful.
-Files=4, Tests=119,  3 wallclock secs ( 0.04 usr  0.01 sys +  3.28 cusr  0.31 csys =  3.64 CPU)
+Files=4, Tests=119,  4 wallclock secs ( 0.05 usr  0.01 sys +  3.86 cusr  0.36 csys =  4.28 CPU)
 Result: PASS
 
 Testing modules/perl6-digest-md5 with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
@@ -197,19 +259,19 @@ Test Summary Report
 -------------------
 t/perl5-compat.t (Wstat: 0 Tests: 0 Failed: 0)
   Parse errors: No plan found in TAP output
-Files=2, Tests=1,  2 wallclock secs ( 0.02 usr  0.01 sys +  1.50 cusr  0.16 csys =  1.69 CPU)
+Files=2, Tests=1,  2 wallclock secs ( 0.03 usr  0.00 sys +  1.36 cusr  0.19 csys =  1.58 CPU)
 Result: FAIL
 
 Testing modules/file-find with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
 t/01-file-find.t .. ok
 All tests successful.
-Files=1, Tests=10,  2 wallclock secs ( 0.03 usr  0.00 sys +  1.57 cusr  0.07 csys =  1.67 CPU)
+Files=1, Tests=10,  2 wallclock secs ( 0.03 usr  0.00 sys +  1.84 cusr  0.10 csys =  1.97 CPU)
 Result: PASS
 
 Testing modules/shell-command with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
 t/02-shell-command.t .. ok
 All tests successful.
-Files=1, Tests=12,  1 wallclock secs ( 0.02 usr  0.01 sys +  1.28 cusr  0.07 csys =  1.38 CPU)
+Files=1, Tests=12,  2 wallclock secs ( 0.03 usr  0.01 sys +  1.35 cusr  0.07 csys =  1.46 CPU)
 Result: PASS
 
 Testing modules/panda with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
@@ -229,19 +291,19 @@ t/installer.t .. ok
 # Looks like you failed 1 tests of 1
 t/tester.t ..... ok
 All tests successful.
-Files=5, Tests=33,  6 wallclock secs ( 0.04 usr  0.01 sys +  5.03 cusr  0.79 csys =  5.87 CPU)
+Files=5, Tests=33,  6 wallclock secs ( 0.04 usr  0.02 sys +  5.90 cusr  0.83 csys =  6.79 CPU)
 Result: PASS
 
 Testing modules/perl6-http-status with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
 t/01-basic.t .. ok
 All tests successful.
-Files=1, Tests=4,  1 wallclock secs ( 0.03 usr  0.00 sys +  0.32 cusr  0.04 csys =  0.39 CPU)
+Files=1, Tests=4,  1 wallclock secs ( 0.02 usr  0.00 sys +  0.48 cusr  0.06 csys =  0.56 CPU)
 Result: PASS
 
 Testing modules/PSGI with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
 t/encode-psgi-response.t .. ok
 All tests successful.
-Files=1, Tests=24,  0 wallclock secs ( 0.02 usr  0.00 sys +  0.65 cusr  0.06 csys =  0.73 CPU)
+Files=1, Tests=24,  1 wallclock secs ( 0.03 usr  0.02 sys +  1.07 cusr  0.12 csys =  1.24 CPU)
 Result: PASS
 
 Testing modules/perl6-http-easy with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
@@ -266,7 +328,7 @@ Test Summary Report
 t/00-basic.t   (Wstat: 512 Tests: 17 Failed: 2)
   Failed tests:  16-17
   Non-zero exit status: 2
-Files=3, Tests=21,  2 wallclock secs ( 0.03 usr  0.01 sys +  2.19 cusr  0.20 csys =  2.43 CPU)
+Files=3, Tests=21,  3 wallclock secs ( 0.05 usr  0.01 sys +  2.77 cusr  0.30 csys =  3.13 CPU)
 Result: FAIL
 
 Testing modules/Bailador with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
@@ -276,14 +338,14 @@ t/03-response-content.t .. ok
 t/04-templates.t ......... ok
 t/05-post-content.t ...... ok
 All tests successful.
-Files=5, Tests=19,  5 wallclock secs ( 0.03 usr  0.01 sys +  4.55 cusr  0.36 csys =  4.95 CPU)
+Files=5, Tests=19,  5 wallclock secs ( 0.05 usr  0.01 sys +  4.73 cusr  0.46 csys =  5.25 CPU)
 Result: PASS
 
 Testing modules/DBIish with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
 t/05-mock.t ........... ok
-# Connect failed with error Cannot locate native library 'libmysqlclient.so'
+# Connect failed with error Type check failed for return value; expected 'OpaquePointer' but got 'Whatever'
 t/10-mysql.t .......... ok
-# Connect failed with error Cannot locate native library 'libmysqlclient.so'
+# Connect failed with error Type check failed for return value; expected 'OpaquePointer' but got 'Whatever'
 t/25-mysql-common.t ... ok
 t/30-Pg.t ............. ok
 # Connect failed with error Cannot locate native library 'libpq.so'
@@ -410,14 +472,14 @@ Code object coerced to string (please use .gist or .perl to do that)  in block <
 
 t/40-sqlite-common.t .. ok
 All tests successful.
-Files=6, Tests=218, 11 wallclock secs ( 0.07 usr  0.02 sys + 10.59 cusr  0.61 csys = 11.29 CPU)
+Files=6, Tests=218, 11 wallclock secs ( 0.07 usr  0.02 sys + 10.41 cusr  0.52 csys = 11.02 CPU)
 Result: PASS
 
 Testing modules/jsonrpc with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
 t/client.t .. ok
 t/server.t .. ok
 All tests successful.
-Files=2, Tests=68, 12 wallclock secs ( 0.06 usr  0.01 sys + 12.27 cusr  0.25 csys = 12.59 CPU)
+Files=2, Tests=68, 14 wallclock secs ( 0.05 usr  0.02 sys + 12.36 cusr  0.32 csys = 12.75 CPU)
 Result: PASS
 
 Testing modules/Pod-To-HTML with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
@@ -426,13 +488,13 @@ t/02-code.t ..... ok
 t/03-comment.t .. ok
 t/04-lists.t .... ok
 All tests successful.
-Files=4, Tests=8,  4 wallclock secs ( 0.02 usr  0.01 sys +  3.12 cusr  0.28 csys =  3.43 CPU)
+Files=4, Tests=8,  3 wallclock secs ( 0.02 usr  0.02 sys +  3.14 cusr  0.28 csys =  3.46 CPU)
 Result: PASS
 
 Testing modules/doc with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...
 t/typegraph.t .. ok
 All tests successful.
-Files=1, Tests=8,  2 wallclock secs ( 0.02 usr  0.00 sys +  2.54 cusr  0.11 csys =  2.67 CPU)
+Files=1, Tests=8,  3 wallclock secs ( 0.02 usr  0.00 sys +  2.38 cusr  0.10 csys =  2.50 CPU)
 Result: PASS
 
 Testing modules/rakudo-debugger with /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m...

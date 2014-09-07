@@ -1,5 +1,5 @@
 Rakudo
-Minsk-226-g4a74294
+Minsk-252-g22a4c05
 NQP
 2014.08-36-gf84a159
 modules
@@ -114,20 +114,58 @@ Date:   Thu Feb 27 20:21:12 2014 +0100
     add provides setion needed for S11
 --------
 grammar-debugger
-commit 96c0c4626ab582d1a8825da5a58bdea89de7a13a
-Merge: 6076757 db4c9fa
+commit 01b3e7baab403ec12fbb5cac7793720c5f3cfd4e
+Merge: 96c0c46 b25b90c
 Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Sun Jun 23 05:46:39 2013 -0700
+Date:   Sun Sep 7 06:35:19 2014 +0300
 
-    Merge pull request #3 from timo/master
+    Merge pull request #6 from meisl/master
     
-    fix use of |$.
+    Make it work under Win32/Rakudo* 2014.03.01 (again) - and fix #4
 
-commit db4c9fabebdf001ad8bcfd66994fcd9fd761aa7b
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Fri Mar 29 20:37:58 2013 +0100
+commit b25b90cd77bbd60155176f69320a014c611c3168
+Author: Matthias Kling <m.kling@sprax.eu>
+Date:   Wed Sep 3 14:25:19 2014 +0200
 
-    fix obsolete use of |$.
+    + add comment explaining how to get colored output on Windows
+
+commit c6f7a5d4d517d32f5d7e64feaa413fabef12698e
+Author: Matthias Kling <m.kling@sprax.eu>
+Date:   Tue Sep 2 23:04:20 2014 +0200
+
+    * same for Tracer as for Debugger: only hook on Regexes rather than testing for magical names
+
+commit 326ab0313d12cbb6efc5b5f49a4af5f15647cb69
+Author: Matthias Kling <m.kling@sprax.eu>
+Date:   Tue Sep 2 22:45:45 2014 +0200
+
+    * fix debugger.t: Debugger waits for input after the 1st regex, so we have to give it some
+
+commit 7a005c9894acc69a4cbd7162472c5c546471efa0
+Author: Matthias Kling <m.kling@sprax.eu>
+Date:   Tue Sep 2 22:35:28 2014 +0200
+
+    - no point in explicitly inheriting from Mu, just as in Tracer
+
+commit 7c2954426ccaae35200f7f1f81b0cc1a2949da1b
+Author: Matthias Kling <m.kling@sprax.eu>
+Date:   Tue Sep 2 22:30:01 2014 +0200
+
+    + add the very same simply sanity test for Debugger as there is for Tracer - but this one fails with "No such method 'flush' for invocant of type '<anon>'" !?!
+
+commit 294f5f3076cf4da107380fde3636e98e2264d91f
+Author: Matthias Kling <m.kling@sprax.eu>
+Date:   Tue Sep 2 22:26:18 2014 +0200
+
+    * in &find_methods: hook on methods of type Regex rather than checking for magic names - that's straight what it's about anyways, right?
+    */+ some comments in Debugger
+
+commit 4a8e5ebcc93f75c29d391147356b85a61f30183b
+Author: Matthias Kling <m.kling@sprax.eu>
+Date:   Tue Sep 2 21:46:16 2014 +0200
+
+    * workaround *Cannot modify an immutable value* problem (at least on Windows, Rakudo* 2014.03.01)
+    + add gitignore
 --------
 json
 commit 88ecaf6c59e5ec31ac48a755fb4fbfa18c525439

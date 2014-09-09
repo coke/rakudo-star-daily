@@ -1,8 +1,29 @@
 cd rakudo && make test
 make[1]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'
-./perl6-j --target=jar --output=lib/Test.pm.jar lib/Test.pm
-===SORRY!===
-control operator crossed continuation barrier
-make[1]: *** [lib/Test.pm.jar] Error 1
+/usr/bin/perl t/harness --jvm t/01-sanity
+t/01-sanity/01-literals.t .......... ok
+t/01-sanity/02-op-math.t ........... ok
+t/01-sanity/03-op-logic.t .......... ok
+t/01-sanity/04-op-cmp.t ............ ok
+t/01-sanity/05-var.t ............... ok
+t/01-sanity/06-op-inplace.t ........ ok
+t/01-sanity/07-op-string.t ......... ok
+t/01-sanity/08-var-array.t ......... ok
+t/01-sanity/09-end-blocks.t ........ ok
+t/01-sanity/10-regex.t ............. ok
+t/01-sanity/11-tap.t ............... ok
+t/01-sanity/12-counter.t ........... ok
+t/01-sanity/13-equal.t ............. ok
+t/01-sanity/14-if.t ................ ok
+t/01-sanity/15-sub.t ............... ok
+t/01-sanity/16-eqv.t ............... ok
+t/01-sanity/17-isa.t ............... ok
+t/01-sanity/18-simple-multisubs.t .. ok
+t/01-sanity/19-say.t ............... ok
+t/01-sanity/20-defined.t ........... ok
+t/01-sanity/21-try.t ............... ok
+t/01-sanity/99-test-basic.t ........ ok
+All tests successful.
+Files=22, Tests=271, 53 wallclock secs ( 0.09 usr  0.04 sys +  0.54 cusr  0.12 csys =  0.79 CPU)
+Result: PASS
 make[1]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'
-make: *** [rakudo-test] Error 2

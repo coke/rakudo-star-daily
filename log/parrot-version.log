@@ -1,7 +1,7 @@
 Rakudo
-Minsk-282-g705e7b8
+Minsk-298-g0792a91
 NQP
-2014.08-44-gaa1c70f
+2014.08-50-g2e21ba6
 modules
 --------
 Bailador
@@ -193,20 +193,22 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit 6fc58fd3afc79ea8339660deaba75c32d18ff01a
-Merge: eb66dcf 3ae47e9
-Author: colomon <colomon@gmail.com>
-Date:   Sat Aug 30 10:06:17 2014 -0400
+commit afcc877ec835d994030aecb3a678ff6442d1f173
+Merge: 6fc58fd d0a9cb6
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Tue Sep 9 14:02:15 2014 +0200
 
-    Merge pull request #97 from FROGGS/test
+    Merge pull request #100 from hoelzro/master
     
-    call Build.pm's test method if possible
+    Force source-url into a Str
 
-commit 3ae47e9706b38407258caecacb2d6a7e86b6f804
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Aug 30 15:16:07 2014 +0200
+commit d0a9cb6a0f63337bd0859cb9d9591ee9f4f24810
+Author: Rob Hoelz <rob@hoelz.ro>
+Date:   Mon Sep 8 21:41:37 2014 -0500
 
-    call Build.pm's test method if possible
+    Force source-url into a Str
+    
+    Because sometimes it's an IO::Path
 --------
 perl6-Term-ANSIColor
 commit 0e92caf09397f458314d4a30974618628a3e5600
@@ -255,20 +257,22 @@ Date:   Wed Aug 6 14:47:17 2014 +0200
     it fixes a bug which occurs when we want to pass something more than only the first line (e.g. GET / HTTP/1.1)
 --------
 perl6-http-status
-commit 607b35dc6c8f9bfa4c170d8df90161013eaeeb51
-Merge: ef1dbaa b022c21
+commit 1667a47cbe6e5ecef30974a456d8373625db9a57
+Merge: 607b35d 8ddd995
 Author: Timothy Totten <2009@huri.net>
-Date:   Mon Jul 14 08:18:19 2014 -0700
+Date:   Tue Sep 9 09:29:21 2014 -0700
 
-    Merge pull request #4 from retupmoca/master
+    Merge pull request #5 from FROGGS/patch-2
     
-    %h = { ... }; is now deprecated
+    the hash key is a string, so make it one for the lookup
 
-commit b022c21dcc16520e10cd0c3992fe14b4b9946c39
-Author: Andrew Egeler <andrew@egeler.us>
-Date:   Mon Jul 14 09:03:01 2014 -0400
+commit 8ddd995cf76f595ab15e50b720c9db92cd8ca55b
+Author: Tobias Leich <email@froggs.de>
+Date:   Sat Aug 30 21:52:53 2014 +0200
 
-    %h = { ... }; is now deprecated
+    the hash key is a string, so make it one for the lookup
+    
+    This unbreaks HTTP::Status on parrot.
 --------
 perl6-lwp-simple
 commit 5ecdf4c27742b4d8cdad56614609d49b2a0da771

@@ -1,5 +1,5 @@
 == Configuring and building Rakudo
-cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar && make
+cd rakudo && /usr/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar && make
 Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.08-56-gdb41176 / MoarVM 2014.08-139-gb37f93e).
 Cleaning up ...
 
@@ -29,11 +29,12 @@ gcc  -shared -fPIC -O1 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/
 	    src/Perl6/Actions.nqp
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/Grammar.moarvm --encoding=utf8 \
 	    src/Perl6/Grammar.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m tools/build/gen-cat.nqp moar src/Perl6/Optimizer.nqp > src/gen/m-Perl6-Optimizer.nqp
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/Optimizer.moarvm --encoding=utf8 \
-	    src/Perl6/Optimizer.nqp
+	    src/gen/m-Perl6-Optimizer.nqp
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/Compiler.moarvm --encoding=utf8 \
 	    src/Perl6/Compiler.nqp
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl tools/build/gen-version.pl > src/gen/main-version.nqp
+/usr/bin/perl tools/build/gen-version.pl > src/gen/main-version.nqp
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m tools/build/gen-cat.nqp moar src/main.nqp src/gen/main-version.nqp > src/gen/m-main.nqp
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=perl6.moarvm \
 	    --vmlibs=dynext/libperl6_ops_moar.so=Rakudo_ops_init src/gen/m-main.nqp
@@ -47,58 +48,58 @@ gcc  -shared -fPIC -O1 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm src/gen/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  56.026
+Stage parse      :  54.697
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   4.833
-Stage mast       :  18.059
-Stage mbc        :   0.238
+Stage optimize   :   4.835
+Stage mast       :  17.798
+Stage mbc        :   0.248
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --target=mbc --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e rm_f perl6-m
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" .
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e chmod 755 perl6-m
+/usr/bin/perl -MExtUtils::Command -e rm_f perl6-m
+/usr/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" .
+/usr/bin/perl -MExtUtils::Command -e chmod 755 perl6-m
 ./perl6-m --target=mbc --output=lib/Test.pm.moarvm lib/Test.pm
 ./perl6-m --target=mbc --output=lib/lib.pm6.moarvm lib/lib.pm6
 ./perl6-m --target=mbc --output=lib/Pod/To/Text.pm.moarvm lib/Pod/To/Text.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m tools/build/gen-cat.nqp moar src/perl6-debug.nqp src/gen/main-version.nqp > src/gen/m-perl6-debug.nqp
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=perl6-debug.moarvm \
 	    --vmlibs=dynext/libperl6_ops_moar.so=Rakudo_ops_init src/gen/m-perl6-debug.nqp
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6-debug.moarvm perl6-debug-m . "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" .
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e rm_f perl6
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e cp perl6-m perl6
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e chmod 755 perl6
+/usr/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6-debug.moarvm perl6-debug-m . "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" .
+/usr/bin/perl -MExtUtils::Command -e rm_f perl6
+/usr/bin/perl -MExtUtils::Command -e cp perl6-m perl6
+/usr/bin/perl -MExtUtils::Command -e chmod 755 perl6
 make[1]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/rakudo'
 cd rakudo && make install
 make[1]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/rakudo'
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/Perl6
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e cp blib/Perl6/ModuleLoader.moarvm blib/Perl6/World.moarvm blib/Perl6/Grammar.moarvm blib/Perl6/Ops.moarvm blib/Perl6/Actions.moarvm blib/Perl6/Optimizer.moarvm blib/Perl6/Pod.moarvm blib/Perl6/Compiler.moarvm blib/Perl6/Metamodel.moarvm blib/Perl6/BOOTSTRAP.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/Perl6
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e cp CORE.setting.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e cp RESTRICTED.setting.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e cp perl6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e cp perl6-debug.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime/dynext
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e cp dynext/libperl6_ops_moar.so /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime/dynext
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e cp lib/Test.pm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e cp lib/Test.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e cp lib/lib.pm6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e cp lib/lib.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/To
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e cp lib/Pod/To/Text.pm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/To
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e cp lib/Pod/To/Text.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/To
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime"
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6-debug.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-debug-m "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime"
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e chmod 755 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime"
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e cp /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e chmod 755 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6
+/usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin
+/usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/Perl6
+/usr/bin/perl -MExtUtils::Command -e cp blib/Perl6/ModuleLoader.moarvm blib/Perl6/World.moarvm blib/Perl6/Grammar.moarvm blib/Perl6/Ops.moarvm blib/Perl6/Actions.moarvm blib/Perl6/Optimizer.moarvm blib/Perl6/Pod.moarvm blib/Perl6/Compiler.moarvm blib/Perl6/Metamodel.moarvm blib/Perl6/BOOTSTRAP.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib/Perl6
+/usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib
+/usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime
+/usr/bin/perl -MExtUtils::Command -e cp CORE.setting.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime
+/usr/bin/perl -MExtUtils::Command -e cp RESTRICTED.setting.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime
+/usr/bin/perl -MExtUtils::Command -e cp perl6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime
+/usr/bin/perl -MExtUtils::Command -e cp perl6-debug.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime
+/usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime/dynext
+/usr/bin/perl -MExtUtils::Command -e cp dynext/libperl6_ops_moar.so /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime/dynext
+/usr/bin/perl -MExtUtils::Command -e cp lib/Test.pm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib
+/usr/bin/perl -MExtUtils::Command -e cp lib/Test.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib
+/usr/bin/perl -MExtUtils::Command -e cp lib/lib.pm6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib
+/usr/bin/perl -MExtUtils::Command -e cp lib/lib.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib
+/usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/To
+/usr/bin/perl -MExtUtils::Command -e cp lib/Pod/To/Text.pm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/To
+/usr/bin/perl -MExtUtils::Command -e cp lib/Pod/To/Text.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/To
+/usr/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime"
+/usr/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6-debug.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-debug-m "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime"
+/usr/bin/perl -MExtUtils::Command -e chmod 755 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m
+/usr/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/runtime"
+/usr/bin/perl -MExtUtils::Command -e cp /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6
+/usr/bin/perl -MExtUtils::Command -e chmod 755 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6
 make[1]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/rakudo'
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e cp /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m perl6
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl -MExtUtils::Command -e chmod 755 perl6
+/usr/bin/perl -MExtUtils::Command -e cp /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m perl6
+/usr/bin/perl -MExtUtils::Command -e chmod 755 perl6
 == Installing modules for MoarVM
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl tools/build/module-install.pl /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib moarvm mbc modules/MODULES.txt
+/usr/bin/perl tools/build/module-install.pl /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib moarvm mbc modules/MODULES.txt
 == Installing modules/zavolaj
 modules/zavolaj/lib/NativeCall.pm6 => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/NativeCall.pm6
 == Installing modules/xml-writer
@@ -436,4 +437,4 @@ modules/rakudo-debugger/lib/Debugger/UI/CommandLine.pm => /home/coke/sandbox/rak
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Perl6/TypeGraph/Viz.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Perl6/TypeGraph/Viz.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Debugger/UI/CommandLine.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Debugger/UI/CommandLine.pm
 == Installing binaries for MoarVM
-/home/coke/perl5/perlbrew/perls/perl-5.20.0_WITH_THREADS/bin/perl tools/build/bin-install.pl /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin m modules/ufo/bin/ufo modules/panda/bin/panda modules/doc/bin/p6doc
+/usr/bin/perl tools/build/bin-install.pl /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin m modules/ufo/bin/ufo modules/panda/bin/panda modules/doc/bin/p6doc

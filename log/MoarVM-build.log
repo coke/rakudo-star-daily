@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /usr/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar && make
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.08-60-g31bc846 / MoarVM 2014.08-143-g8153f38).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.09-4-g1f0d522 / MoarVM 2014.09-1-g699360b).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -48,12 +48,12 @@ gcc  -shared -fPIC -O1 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm src/gen/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  54.349
+Stage parse      :  48.717
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   4.762
-Stage mast       :  17.693
-Stage mbc        :   0.252
+Stage optimize   :   4.342
+Stage mast       :  16.032
+Stage mbc        :   0.226
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --target=mbc --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /usr/bin/perl -MExtUtils::Command -e rm_f perl6-m
 /usr/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" .

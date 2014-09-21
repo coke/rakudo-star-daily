@@ -1,7 +1,7 @@
 Rakudo
-HongKong-18-gfbf229c
+HongKong-37-ge71a9c1
 NQP
-2014.09-4-g1f0d522
+2014.09-11-g53515d6
 modules
 --------
 Bailador
@@ -12,25 +12,27 @@ Date:   Mon Aug 25 13:16:44 2014 +0200
     Decode body in B::Request
 --------
 DBIish
-commit 1ef45843c78de57c16763b90ed852f835067b739
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Apr 20 12:35:56 2014 +0200
+commit e59df94bbc138725a3265b856783ff9950227853
+Author: Tobias Leich <email@froggs.de>
+Date:   Fri Sep 12 20:42:04 2014 +0200
 
-    Work around precompilation issue on rakudo-j
+    remove Makefile, long live panda
+    
+    The Makefile only supported Parrot anyway.
 --------
 Grammar-Profiler-Simple
-commit cdfcdbaee70645fbc8d4fa6c5651f899fa1c9a6c
+commit 14bbe297da40af109f4822ba17ba519b5deecdbd
 Author: Jonathan Scott Duff <duff@pobox.com>
-Date:   Fri May 24 22:47:38 2013 -0500
+Date:   Wed Sep 10 14:12:17 2014 -0500
 
-    Export via proto
+    skip BUILD and DESTROY methods
 --------
 MODULES.txt
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
+commit f21eb1c7c13444c264cd3cd8cae172aa85b564fd
 Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+Date:   Sun Sep 21 09:26:31 2014 +0200
 
-    bump Digest::MD5 revision
+    volunteer for this month's release
 --------
 Math-Model
 commit aacc103f76d6cdee856d457523a87c1eea9b0ac2
@@ -46,163 +48,380 @@ Date:   Thu Apr 28 13:44:28 2011 +0200
 
     fix META.info
 --------
-Perl6-MIME-Base64
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+PSGI
+commit 15f7220e1a3b50c113cead4fd1a67d6bd4ac9471
+Author: Timothy Totten <2010@huri.net>
+Date:   Tue Feb 18 11:36:04 2014 -0800
 
-    bump Digest::MD5 revision
+    Added S11 provides
+--------
+Perl6-MIME-Base64
+commit 888938e1139967f132756acdc98af8b2a2bd0ee0
+Author: RS <glassflag@users.noreply.github.com>
+Date:   Fri May 30 01:24:06 2014 +1200
+
+    $*VM<name> is deprecated
 --------
 Pod-To-HTML
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit d577c3e64569aa5d7ea6aa328d306180b90ade2b
+Merge: 7af92ea 7aac927
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sun Aug 31 12:12:23 2014 -0700
 
-    bump Digest::MD5 revision
+    Merge pull request #4 from teodozjan/master
+    
+    Added method and submethod
+
+commit 7aac927efa18acd8a6519174f6a5ad6d9b828498
+Author: Kamil <teodozjan@gmail.com>
+Date:   Sun Aug 31 08:14:47 2014 +0200
+
+    Substitiuted sub with routine and removed redundant code
+
+commit 5119e516b0fdd26374dcc7c6828080b781a8f9de
+Author: Kamil <teodozjan@gmail.com>
+Date:   Sun Aug 31 07:53:36 2014 +0200
+
+    Added method and submethod with behaviour same as subroutine. Everything else showing as
+    <h1> header to take attention or show as class
 --------
 Template-Mojo
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit 4483d7af9ed37e4cc99b40f61165912c0c59709c
+Merge: b1b6fa6 580e26c
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Wed Sep 10 20:52:35 2014 +0200
 
-    bump Digest::MD5 revision
+    Merge pull request #8 from retupmoca/master
+    
+    Chase rakudo error message changes
+
+commit 580e26c03c2859c0617860ab57ffeec3e7076a5d
+Author: Andrew Egeler <root+github@retupmoca.com>
+Date:   Wed Sep 10 12:28:57 2014 -0400
+
+    Chase rakudo error message changes
 --------
 doc
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit dc2e59b38c7eb78d395bc2b15b0956bf9f1f6a5e
+Author: Ben Tyler <benjamin.tyler@gmail.com>
+Date:   Wed Sep 10 09:44:09 2014 -0500
 
-    bump Digest::MD5 revision
+    tiny typo fix in private method example
 --------
 file-find
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit d79a83184da825f61d8c481050f931b511d74cae
+Merge: f158820 d6840b9
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Sun Mar 9 11:57:39 2014 +0100
 
-    bump Digest::MD5 revision
+    Merge pull request #2 from FROGGS/patch-1
+    
+    add provides section needed for S11
+
+commit d6840b91d88852ed2d3161e7ac877d578515b480
+Author: Tobias Leich <email@froggs.de>
+Date:   Thu Feb 27 20:21:12 2014 +0100
+
+    add provides setion needed for S11
 --------
 grammar-debugger
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit 01b3e7baab403ec12fbb5cac7793720c5f3cfd4e
+Merge: 96c0c46 b25b90c
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Sun Sep 7 06:35:19 2014 +0300
 
-    bump Digest::MD5 revision
+    Merge pull request #6 from meisl/master
+    
+    Make it work under Win32/Rakudo* 2014.03.01 (again) - and fix #4
+
+commit b25b90cd77bbd60155176f69320a014c611c3168
+Author: Matthias Kling <m.kling@sprax.eu>
+Date:   Wed Sep 3 14:25:19 2014 +0200
+
+    + add comment explaining how to get colored output on Windows
+
+commit c6f7a5d4d517d32f5d7e64feaa413fabef12698e
+Author: Matthias Kling <m.kling@sprax.eu>
+Date:   Tue Sep 2 23:04:20 2014 +0200
+
+    * same for Tracer as for Debugger: only hook on Regexes rather than testing for magical names
+
+commit 326ab0313d12cbb6efc5b5f49a4af5f15647cb69
+Author: Matthias Kling <m.kling@sprax.eu>
+Date:   Tue Sep 2 22:45:45 2014 +0200
+
+    * fix debugger.t: Debugger waits for input after the 1st regex, so we have to give it some
+
+commit 7a005c9894acc69a4cbd7162472c5c546471efa0
+Author: Matthias Kling <m.kling@sprax.eu>
+Date:   Tue Sep 2 22:35:28 2014 +0200
+
+    - no point in explicitly inheriting from Mu, just as in Tracer
+
+commit 7c2954426ccaae35200f7f1f81b0cc1a2949da1b
+Author: Matthias Kling <m.kling@sprax.eu>
+Date:   Tue Sep 2 22:30:01 2014 +0200
+
+    + add the very same simply sanity test for Debugger as there is for Tracer - but this one fails with "No such method 'flush' for invocant of type '<anon>'" !?!
+
+commit 294f5f3076cf4da107380fde3636e98e2264d91f
+Author: Matthias Kling <m.kling@sprax.eu>
+Date:   Tue Sep 2 22:26:18 2014 +0200
+
+    * in &find_methods: hook on methods of type Regex rather than checking for magic names - that's straight what it's about anyways, right?
+    */+ some comments in Debugger
+
+commit 4a8e5ebcc93f75c29d391147356b85a61f30183b
+Author: Matthias Kling <m.kling@sprax.eu>
+Date:   Tue Sep 2 21:46:16 2014 +0200
+
+    * workaround *Cannot modify an immutable value* problem (at least on Windows, Rakudo* 2014.03.01)
+    + add gitignore
 --------
 json
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit 88ecaf6c59e5ec31ac48a755fb4fbfa18c525439
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Aug 26 10:40:36 2014 +0200
 
-    bump Digest::MD5 revision
+    .gitignore blib/
 --------
 jsonrpc
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit 471a920dfc51f642fc9f2ff3b49c8cd352d51abd
+Merge: 9051bfd 1806855
+Author: Pawel Pabian <bbkr@post.pl>
+Date:   Fri Jul 11 09:38:19 2014 +0200
 
-    bump Digest::MD5 revision
+    Merge pull request #12 from FROGGS/patch-3
+    
+    workound MoarVM precomp bugs
+
+commit 1806855fc619ab115badb344d16cafaebc47969e
+Author: Tobias Leich <email@froggs.de>
+Date:   Tue Jul 8 01:03:31 2014 +0200
+
+    workound MoarVM precomp bugs
 --------
 panda
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit afcc877ec835d994030aecb3a678ff6442d1f173
+Merge: 6fc58fd d0a9cb6
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Tue Sep 9 14:02:15 2014 +0200
 
-    bump Digest::MD5 revision
+    Merge pull request #100 from hoelzro/master
+    
+    Force source-url into a Str
+
+commit d0a9cb6a0f63337bd0859cb9d9591ee9f4f24810
+Author: Rob Hoelz <rob@hoelz.ro>
+Date:   Mon Sep 8 21:41:37 2014 -0500
+
+    Force source-url into a Str
+    
+    Because sometimes it's an IO::Path
 --------
 perl6-Term-ANSIColor
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit 0e92caf09397f458314d4a30974618628a3e5600
+Merge: d0af2ab 06768cc
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Thu May 1 02:18:16 2014 +0200
 
-    bump Digest::MD5 revision
+    Merge pull request #1 from timo/patch-1
+    
+    Update documentation for colored
+
+commit 06768cc282099e283ceb571dc33b7623c586667c
+Author: timo <timonator@perpetuum-immobile.de>
+Date:   Thu May 1 02:15:26 2014 +0200
+
+    Update documentation for colored
+    
+    the arguments were swapped
 --------
 perl6-digest-md5
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
+commit 7816bebdae5a4858e1dbb14e4e7ff23717d04a5e
 Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+Date:   Sat Sep 20 06:47:52 2014 +0200
 
-    bump Digest::MD5 revision
+    parcels do not autoflatten anymore
 --------
 perl6-http-easy
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit b407eccf5220fe4da6fd5cf34a8f9539ea3f4f8a
+Merge: 147d332 7a6b553
+Author: Timothy Totten <2009@huri.net>
+Date:   Wed Aug 20 12:28:04 2014 -0700
 
-    bump Digest::MD5 revision
+    Merge pull request #16 from supernovus/request-bugfix
+    
+    Request bugfix
+
+commit 7a6b55353c1f5d4176a5a0d8f7fea41d93f57d4a
+Author: sergot <filip@sergot.pl>
+Date:   Wed Aug 6 14:47:17 2014 +0200
+
+    Request bugfix
+    
+    code copied from HTTP::UserAgent module, written by FROGGS and sergot
+    
+    it makes HTTP::Easy able to get the whole preamble, not only the first line of it (what .get does, now it uses .recv instead)
+    it fixes a bug which occurs when we want to pass something more than only the first line (e.g. GET / HTTP/1.1)
 --------
 perl6-http-status
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit 1667a47cbe6e5ecef30974a456d8373625db9a57
+Merge: 607b35d 8ddd995
+Author: Timothy Totten <2009@huri.net>
+Date:   Tue Sep 9 09:29:21 2014 -0700
 
-    bump Digest::MD5 revision
+    Merge pull request #5 from FROGGS/patch-2
+    
+    the hash key is a string, so make it one for the lookup
+
+commit 8ddd995cf76f595ab15e50b720c9db92cd8ca55b
+Author: Tobias Leich <email@froggs.de>
+Date:   Sat Aug 30 21:52:53 2014 +0200
+
+    the hash key is a string, so make it one for the lookup
+    
+    This unbreaks HTTP::Status on parrot.
 --------
 perl6-lwp-simple
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit 5ecdf4c27742b4d8cdad56614609d49b2a0da771
+Merge: 2944981 d1733ba
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sat Aug 30 10:48:34 2014 -0700
 
-    bump Digest::MD5 revision
+    Merge pull request #36 from FROGGS/patch-8
+    
+    the @-sigil followed by a block already is code
+
+commit d1733baa294f5a76f362eea8feb1240e298508d0
+Author: Tobias Leich <email@froggs.de>
+Date:   Sat Aug 30 19:16:27 2014 +0200
+
+    the @-sigil followed by a block already is code
+    
+    This unbreaks LWP::Simple by following a rakudo patch as of yesterday.
 --------
 rakudo-debugger
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit e9cc44ea76dcf8da9addddff9c4692d7b1cae997
+Merge: 4230f5b 6d6fb6b
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Thu May 1 00:41:43 2014 +0200
 
-    bump Digest::MD5 revision
+    Merge pull request #22 from raiph/patch-5
+    
+    Speedup display of regex match
+
+commit 6d6fb6b10ce069dd4f4492175c9e9780a52735d6
+Author: raiph <raiph.mellor@gmail.com>
+Date:   Wed Apr 30 18:36:36 2014 -0400
+
+    Speedup display of regex match
+    
+    Only subst in the couple hundred chars around the current match position.
+    
+    If the target is hundreds or thousands of lines long then this is always going to be a lot faster. Right now the impact is colossal for target strings of more than a dozen typical text file lines.
 --------
 shell-command
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit bc4f3a796b9d281e0bf46e5827ab6c4501f0500a
+Merge: 8f6f80f 6da59c3
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Sat Feb 1 07:25:25 2014 -0800
 
-    bump Digest::MD5 revision
+    Merge pull request #2 from FROGGS/patch-2
+    
+    make mkpath() handle windows paths
+
+commit 6da59c3a6d49c0e9b74437bee0d6c20448dcd580
+Author: Tobias Leich <email@froggs.de>
+Date:   Fri Nov 1 18:42:04 2013 +0100
+
+    make mkpath() handle windows paths
 --------
 svg
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit fb3dcff25535c922cea5b74c1d3bb03f15aa0eb8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Wed Apr 25 11:55:28 2012 +0200
 
-    bump Digest::MD5 revision
+    get rid of redundant plan(*)
 --------
 svg-plot
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit 195a244c07f2f6f9302c47b9cec9980b747ca9f6
+Author: Moritz Lenz <mlenz@noris.net>
+Date:   Tue Sep 24 14:39:56 2013 +0200
 
-    bump Digest::MD5 revision
+    remove deprecated * in .bless(*)
 --------
 test-mock
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit 3e9f613db5caec21817dad56a76d2977aae73f97
+Merge: 47dc390 fb89bb8
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Fri May 3 14:09:22 2013 -0700
 
-    bump Digest::MD5 revision
+    Merge pull request #4 from tadzik/patch-1
+    
+    Remove deprecated repo-url from META.info
+
+commit fb89bb8344ae329256800e9977b58cfa610e9018
+Author: Tadeusz Sośnierz <tadzikes@gmail.com>
+Date:   Fri May 3 17:31:13 2013 +0300
+
+    Remove deprecated repo-url from META.info
 --------
 ufo
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit 8e72aa30499cde3e67d812b7904b6e1afcadc13e
+Merge: 5ab0f4b 83674a0
+Author: Carl Mäsak <cmasak@gmail.com>
+Date:   Tue Aug 19 20:10:22 2014 +0200
 
-    bump Digest::MD5 revision
+    Merge pull request #17 from stmuk/master
+    
+    fix ufo to work with new compiled suffixes
+
+commit 83674a08a5a0e52108632a47172381852305e7aa
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Sat Aug 2 14:22:06 2014 +0100
+
+    fix ufo to work with new compiled suffixes
 --------
 uri
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit 15afe452abdf609e382f81377f0f96f4a3e05aba
+Merge: 81f5eec e2c3ef7
+Author: colomon <colomon@gmail.com>
+Date:   Sun Feb 23 20:12:51 2014 -0500
 
-    bump Digest::MD5 revision
+    Merge pull request #5 from raydiak/master
+    
+    Fix high char check
+
+commit e2c3ef78a8bb0344a646e1cf70744992a6a9c850
+Author: raydiak <raydiak@cyberuniverses.com>
+Date:   Mon Feb 24 00:27:53 2014 +0000
+
+    Fix high char check
 --------
 xml-writer
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+commit 7c51cf1412f78459dd51aa429da2819746d8bd0b
+Merge: 43fb8e7 2e29ebd
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Wed Jan 15 12:03:49 2014 -0800
 
-    bump Digest::MD5 revision
+    Merge pull request #3 from timo/fix_nil_warning
+    
+    make checking named arguments not rely on .pairs
+
+commit 2e29ebd97bcd2a1538d363b9fd40f21565860b33
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Wed Jan 15 19:41:26 2014 +0100
+
+    make checking named arguments not rely on .pairs
+    
+    gets rid of a "use of Nil in numeric context" warning
 --------
 zavolaj
-commit 77018e1bf1e0a865cd69fd4abaffef618e7954e6
+commit 4cc56c35c317e4703093b119b31284a5b6c3c4a5
 Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:50:45 2014 +0200
+Date:   Thu Sep 18 22:30:07 2014 +0200
 
-    bump Digest::MD5 revision
+    expose sub to fetch C globals
+    
+    This will partial resolv issue #11.

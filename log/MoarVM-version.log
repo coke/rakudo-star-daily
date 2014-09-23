@@ -1,5 +1,5 @@
 Rakudo
-HongKong-43-g416969d
+HongKong-46-ge5e9286
 NQP
 2014.09-11-g53515d6
 modules
@@ -202,22 +202,27 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit afcc877ec835d994030aecb3a678ff6442d1f173
-Merge: 6fc58fd d0a9cb6
-Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Tue Sep 9 14:02:15 2014 +0200
+commit 26cb64fafeab97405f54ee87b5b453e7b6e0dcfe
+Merge: afcc877 a65a03f
+Author: colomon <colomon@gmail.com>
+Date:   Tue Sep 23 07:11:50 2014 -0400
 
-    Merge pull request #100 from hoelzro/master
+    Merge pull request #102 from carbin/panda-test
     
-    Force source-url into a Str
-
-commit d0a9cb6a0f63337bd0859cb9d9591ee9f4f24810
-Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Mon Sep 8 21:41:37 2014 -0500
-
-    Force source-url into a Str
+    run tests normally if Build.pm is not a Tester
     
-    Because sometimes it's an IO::Path
+    Looks solid, and it's easier for me to test once merged.  ;)
+
+commit a65a03f8aa363a0c76e5f5688545c2088699fcd3
+Author: Carlin <cb@viennan.net>
+Date:   Wed Sep 24 10:48:27 2014 +1200
+
+    run tests normally if Build.pm is not a Tester
+    
+    If the Build.pm is not Panda::Tester the tests will be run as normal.
+    Currently if a Build.pm file exists but does not supply a test method
+    no tests are being run. This means many Nativecall reliant modules are
+    not being tested in the smoketests etc.
 --------
 perl6-Term-ANSIColor
 commit 0e92caf09397f458314d4a30974618628a3e5600

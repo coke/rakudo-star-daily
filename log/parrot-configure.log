@@ -62,7 +62,7 @@ auto::zlib -          Does your platform support zlib......................no.
 auto::gettext -       Does your configuration include gettext.............yes.
 auto::snprintf -      Test snprintf......................................done.
 auto::perldoc -       Is perldoc installed................................yes.
-auto::coverage -      Are coverage analysis tools installed...lacking cover gcov2perl.
+auto::coverage -      Are coverage analysis tools installed...lacking gcov2perl cover.
 auto::pod2man -       Is pod2man installed................................yes.
 auto::ctags -         Is (exuberant) ctags installed.......................no.
 auto::icu -           Is ICU installed....................................yes.
@@ -2446,8 +2446,8 @@ cd src/vm/parrot/pmc && cc -c -I/home/coke/sandbox/rakudo-star-daily/star-parrot
 cc -o src/vm/parrot/pmc/nqp_group.so nqp_group.o src/vm/parrot/pmc/*.o -fstack-protector -L/usr/local/lib  -shared -L/usr/local/lib -fstack-protector -fPIC  -ldl -lm -lpthread -lcrypt -lrt  -L/usr/lib/x86_64-linux-gnu  -licuuc -licudata 
 cd src/vm/parrot/ops && /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/ops2c C --dynamic nqp.ops
 # Parsing nqp.ops...
-# Parsed nqp.ops in 9.307 seconds; found 325 ops.
-# Ops parsed in 9.338 seconds.
+# Parsed nqp.ops in 9.628 seconds; found 325 ops.
+# Ops parsed in 9.682 seconds.
 cd src/vm/parrot/ops && cc -c -o nqp_ops.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g nqp_ops.c
 nqp_ops.c: In function ‘Parrot_multi_cache_add_p_p_p_p’:
 nqp_ops.c:7436:29: warning: request for implicit conversion from ‘void *’ to ‘struct NQP_md_cache *’ not permitted in C++ [-Wc++-compat]
@@ -4726,8 +4726,8 @@ cd 3rdparty/libtommath && cc -c -o bn_s_mp_sqr.o -I. -D_REENTRANT -D_GNU_SOURCE 
 cd 3rdparty/libtommath && cc -c -o bn_s_mp_sub.o -I. -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g bn_s_mp_sub.c
 cd src/vm/parrot/ops && /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/ops2c C --dynamic nqp_bigint.ops
 # Parsing nqp_bigint.ops...
-# Parsed nqp_bigint.ops in 2.259 seconds; found 58 ops.
-# Ops parsed in 2.260 seconds.
+# Parsed nqp_bigint.ops in 2.255 seconds; found 58 ops.
+# Ops parsed in 2.255 seconds.
 cd src/vm/parrot/ops && cc -c -o nqp_bigint_ops.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel/pmc -I../../../../3rdparty/libtommath -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g nqp_bigint_ops.c
 cd src/vm/parrot/6model/reprs && cc -c -o P6bigint.o -I../../../../../src/vm/parrot/pmc -I../../../../../3rdparty/libtommath -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g P6bigint.c
 In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel/parrot/string.h:19:0,
@@ -4997,8 +4997,8 @@ make[2]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rak
 make[1]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/nqp/3rdparty/dyncall'
 cd src/vm/parrot/ops && /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/ops2c C --dynamic nqp_dyncall.ops
 # Parsing nqp_dyncall.ops...
-# Parsed nqp_dyncall.ops in 1.840 seconds; found 12 ops.
-# Ops parsed in 1.840 seconds.
+# Parsed nqp_dyncall.ops in 1.767 seconds; found 13 ops.
+# Ops parsed in 1.768 seconds.
 cd src/vm/parrot/ops && cc -c -o nqp_dyncall_ops.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel/pmc -I../../../../3rdparty/dyncall/dyncall -I../../../../3rdparty/dyncall/dyncallback -I../../../../3rdparty/dyncall/dynload -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g nqp_dyncall_ops.c
 nqp_dyncall_ops.c: In function ‘unmarshal_callback’:
 nqp_dyncall_ops.c:577:9: warning: passing argument 2 of ‘dcbNewCallback’ from incompatible pointer type [enabled by default]
@@ -5010,39 +5010,43 @@ In file included from ../6model/reprs/NativeCall.h:6:0,
  DCCallback* dcbNewCallback(const char* signature, DCCallbackHandler* funcptr, void* userdata);
              ^
 nqp_dyncall_ops.c: In function ‘dyncall_wb_ca’:
-nqp_dyncall_ops.c:597:5: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
+nqp_dyncall_ops.c:673:5: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
      CArrayBody      *body      = (CArrayBody *) OBJECT_BODY(obj);
      ^
-nqp_dyncall_ops.c:618:21: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
+nqp_dyncall_ops.c:694:21: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
                      objptr = ((CArrayBody *) OBJECT_BODY(body->child_objs[i]))->storage;
                      ^
-nqp_dyncall_ops.c:621:21: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
+nqp_dyncall_ops.c:697:21: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
                      objptr = ((CPointerBody *) OBJECT_BODY(body->child_objs[i]))->ptr;
                      ^
-nqp_dyncall_ops.c:624:21: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
+nqp_dyncall_ops.c:700:21: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
                      objptr = (CStructBody *) OBJECT_BODY(body->child_objs[i]);
                      ^
 nqp_dyncall_ops.c: In function ‘dyncall_wb_cs’:
-nqp_dyncall_ops.c:651:5: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
+nqp_dyncall_ops.c:727:5: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
      CStructBody     *body      = (CStructBody *) OBJECT_BODY(obj);
      ^
-nqp_dyncall_ops.c:669:21: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
+nqp_dyncall_ops.c:745:21: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
                      objptr = ((CArrayBody *) OBJECT_BODY(body->child_objs[slot]))->storage;
                      ^
-nqp_dyncall_ops.c:672:21: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
+nqp_dyncall_ops.c:748:21: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
                      objptr = ((CPointerBody *) OBJECT_BODY(body->child_objs[slot]))->ptr;
                      ^
-nqp_dyncall_ops.c:675:21: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
+nqp_dyncall_ops.c:751:21: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
                      objptr = (CStructBody *) OBJECT_BODY(body->child_objs[slot]);
                      ^
 nqp_dyncall_ops.c: In function ‘callback_handler’:
-nqp_dyncall_ops.c:703:30: warning: unused parameter ‘cb’ [-Wunused-parameter]
+nqp_dyncall_ops.c:779:30: warning: unused parameter ‘cb’ [-Wunused-parameter]
  callback_handler(DCCallback *cb, DCArgs *args, DCValue *result, CallbackData *data) {
                               ^
-nqp_dyncall_ops.c: In function ‘Parrot_nqp_native_call_cast_p_p_p_p’:
-nqp_dyncall_ops.c:1545:28: warning: function call has aggregate value [-Waggregate-return]
-             storage_spec   ss = REPR(target_spec)->get_storage_spec(interp, STABLE(target_spec));
-                            ^
+nqp_dyncall_ops.c: In function ‘native_call_cast.isra.17’:
+nqp_dyncall_ops.c:599:22: warning: function call has aggregate value [-Waggregate-return]
+         storage_spec ss = REPR(target_spec)->get_storage_spec(interp, STABLE(target_spec));
+                      ^
+nqp_dyncall_ops.c: In function ‘Parrot_nqp_native_call_global_p_s_s_p_p’:
+nqp_dyncall_ops.c:1644:24: warning: function call has aggregate value [-Waggregate-return]
+         storage_spec   ss = REPR(target_spec)->get_storage_spec(interp, STABLE(target_spec));
+                        ^
 cd src/vm/parrot/6model/reprs && cc -c -o NativeCall.o -I../../../../../src/vm/parrot/pmc -I../../../../../3rdparty/dyncall/dyncall -I../../../../../3rdparty/dyncall/dyncallback  -I../../../../../3rdparty/dyncall/dynload -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g NativeCall.c
 In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel/parrot/string.h:19:0,
                  from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel/parrot/context.h:10,
@@ -6013,7 +6017,7 @@ Linked: nqp-p
 
 NQP has been built and installed.
 Verifying installation ...
-Using /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p (version 2014.09-11-g53515d6).
+Using /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p (version 2014.09-15-g0dccc88).
 
 Creating Makefile ...
 Cleaning up ...

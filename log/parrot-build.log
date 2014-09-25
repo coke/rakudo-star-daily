@@ -1,7 +1,7 @@
 == Configuring and building Rakudo
 cd rakudo && /usr/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install --backends=parrot && make
 Verifying installation ...
-Using /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p (version 2014.09-11-g53515d6 / Parrot 6.8.0).
+Using /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/nqp-p (version 2014.09-15-g0dccc88 / Parrot 6.8.0).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -10,8 +10,8 @@ After that, 'make test' will run some tests and
 make[1]: Entering directory `/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/rakudo'
 cd src/vm/parrot/ops && /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/ops2c C --dynamic perl6.ops
 # Parsing perl6.ops...
-# Parsed perl6.ops in 3.477 seconds; found 121 ops.
-# Ops parsed in 3.478 seconds.
+# Parsed perl6.ops in 3.482 seconds; found 121 ops.
+# Ops parsed in 3.482 seconds.
 cd src/vm/parrot/ops && cc -c -o perl6_ops.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel/pmc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fstack-protector  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -DHASATTRIBUTE_HOT  -DHASATTRIBUTE_COLD  -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 -g perl6_ops.c
 In file included from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel/parrot/string.h:19:0,
                  from /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/6.8.0-devel/parrot/context.h:10,
@@ -306,12 +306,12 @@ Linked: perl6-p
 The following step can take a long time, please be patient.
 ./perl6-p --setting=NULL --ll-exception --optimize=3 --target=pir --stagestats --output=src/gen/p-CORE.setting.pir gen/parrot/CORE.setting
 Stage start      :   0.000
-Stage parse      : 206.067
+Stage parse      : 205.838
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :  20.417
-Stage post       :  80.818
-Stage pir        :   5.815
+Stage optimize   :  20.586
+Stage post       :  80.592
+Stage pir        :   5.902
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot  -o CORE.setting.pbc src/gen/p-CORE.setting.pir
 ./perl6-p --target=pir  --output=src/gen/RESTRICTED.setting.pir src/RESTRICTED.setting
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot  -o RESTRICTED.setting.pbc src/gen/RESTRICTED.setting.pir
@@ -642,8 +642,6 @@ modules/doc/lib/Language/variables.pod => /home/coke/sandbox/rakudo-star-daily/s
 modules/rakudo-debugger/lib/Debugger/UI/CommandLine.pm => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/Debugger/UI/CommandLine.pm
 == Precompiling modules
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p --target=pir --output=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/NativeCall.pm6.pir /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/NativeCall.pm6
-===SORRY!===
-Error while compiling op nativecallglobal: No registered operation handler for 'nativecallglobal'
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p --target=pir --output=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/XML/Writer.pm.pir /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/XML/Writer.pm
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p --target=pir --output=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/SVG.pm.pir /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/SVG.pm
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p --target=pir --output=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/SVG/Box.pm.pir /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/SVG/Box.pm
@@ -699,18 +697,9 @@ Error while compiling op nativecallglobal: No registered operation handler for '
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p --target=pir --output=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/DBDish.pm6.pir /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/DBDish.pm6
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p --target=pir --output=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/DBIish.pm6.pir /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/DBIish.pm6
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p --target=pir --output=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/DBDish/SQLite.pm6.pir /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/DBDish/SQLite.pm6
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/NativeCall.pm6
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p --target=pir --output=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/DBDish/mysql.pm6.pir /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/DBDish/mysql.pm6
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/NativeCall.pm6
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p --target=pir --output=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/DBDish/TestMock.pm6.pir /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/DBDish/TestMock.pm6
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p --target=pir --output=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/DBDish/Pg.pm6.pir /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/DBDish/Pg.pm6
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/NativeCall.pm6
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p --target=pir --output=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/X/JSON/RPC.pm.pir /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/X/JSON/RPC.pm
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p --target=pir --output=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/JSON/RPC/Server.pm.pir /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/JSON/RPC/Server.pm
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/perl6-p --target=pir --output=/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/JSON/RPC/Client.pm.pir /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/6.8.0-devel/languages/perl6/lib/JSON/RPC/Client.pm

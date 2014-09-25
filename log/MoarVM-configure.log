@@ -166,6 +166,8 @@ compiling src/platform/posix/mmap.o
 compiling src/platform/posix/time.o
 compiling src/platform/posix/sys.o
 compiling src/jit/stub.o
+compiling 3rdparty/sha1/sha1.o
+linking 3rdparty/sha1/libsha1.a
 building dyncall...
 ar: creating libdyncall_s.a
 ar: creating libdyncallback_s.a
@@ -198,10 +200,6 @@ compiling 3rdparty/libuv/src/unix/timer.o
 compiling 3rdparty/libuv/src/unix/tty.o
 compiling 3rdparty/libuv/src/unix/udp.o
 linking 3rdparty/libuv/libuv.a
-compiling 3rdparty/sha1/sha1.o
-linking 3rdparty/sha1/libsha1.a
-compiling 3rdparty/linenoise/linenoise.o
-linking 3rdparty/linenoise/liblinenoise.a
 linking 3rdparty/libatomic_ops/src/libatomic_ops.a
 checking build system type... x86_64-unknown-linux-gnu
 checking host system type... x86_64-unknown-linux-gnu
@@ -265,6 +263,10 @@ ar cru libatomic_ops.a atomic_ops.o
 ranlib libatomic_ops.a
 make[2]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/MoarVM/3rdparty/libatomic_ops/src'
 make[1]: Leaving directory `/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/MoarVM/3rdparty/libatomic_ops/src'
+compiling 3rdparty/tinymt/tinymt64.o
+linking 3rdparty/tinymt/libtinymt.a
+compiling 3rdparty/linenoise/linenoise.o
+linking 3rdparty/linenoise/liblinenoise.a
 compiling 3rdparty/libtommath/bn_error.o
 compiling 3rdparty/libtommath/bn_fast_mp_invmod.o
 compiling 3rdparty/libtommath/bn_fast_mp_montgomery_reduce.o
@@ -387,8 +389,6 @@ compiling 3rdparty/libtommath/bn_s_mp_sqr.o
 compiling 3rdparty/libtommath/bn_s_mp_sub.o
 compiling 3rdparty/libtommath/bncore.o
 linking 3rdparty/libtommath/libtommath.a
-compiling 3rdparty/tinymt/tinymt64.o
-linking 3rdparty/tinymt/libtinymt.a
 linking libmoar.so
 linking moar
 /usr/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin
@@ -599,7 +599,7 @@ Cleaning up ...
 /usr/bin/perl tools/build/install-moar-runner.pl "" /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install
 
 NQP has been built and installed.
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.09-11-g53515d6 / MoarVM 2014.09-3-g182085e).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.09-15-g0dccc88 / MoarVM 2014.09-3-g182085e).
 
 Creating Makefile ...
 Cleaning up ...

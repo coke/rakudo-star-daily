@@ -1,5 +1,5 @@
 Rakudo
-HongKong-50-g5d8eebf
+HongKong-54-g85c4c02
 NQP
 2014.09-15-g0dccc88
 modules
@@ -28,11 +28,11 @@ Date:   Wed Sep 10 14:12:17 2014 -0500
     skip BUILD and DESTROY methods
 --------
 MODULES.txt
-commit f21eb1c7c13444c264cd3cd8cae172aa85b564fd
+commit d73e0793617e0316e46ed68ddaf0abf53f3c9c09
 Author: Tobias Leich <email@froggs.de>
-Date:   Sun Sep 21 09:26:31 2014 +0200
+Date:   Fri Sep 26 08:32:41 2014 +0200
 
-    volunteer for this month's release
+    update revision of Template-Mojo
 --------
 Math-Model
 commit aacc103f76d6cdee856d457523a87c1eea9b0ac2
@@ -86,20 +86,30 @@ Date:   Sun Aug 31 07:53:36 2014 +0200
     <h1> header to take attention or show as class
 --------
 Template-Mojo
-commit 4483d7af9ed37e4cc99b40f61165912c0c59709c
-Merge: b1b6fa6 580e26c
+commit 73f68ce1f89e6aebbbe85ca28a8b3545515289b8
+Merge: 4483d7a b7a970f
 Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Wed Sep 10 20:52:35 2014 +0200
+Date:   Thu Sep 25 23:26:48 2014 +0200
 
-    Merge pull request #8 from retupmoca/master
+    Merge pull request #10 from FROGGS/patch-2
     
-    Chase rakudo error message changes
+    weaken error message tests for parrot
 
-commit 580e26c03c2859c0617860ab57ffeec3e7076a5d
-Author: Andrew Egeler <root+github@retupmoca.com>
-Date:   Wed Sep 10 12:28:57 2014 -0400
+commit b7a970fbb8b7362d4775912f5aae5e1ca4bccc5c
+Author: Tobias Leich <email@froggs.de>
+Date:   Thu Sep 25 22:30:47 2014 +0200
 
-    Chase rakudo error message changes
+    weaken error message tests for parrot
+    
+    The tests are too strict, the wording between backends is different, see:
+    ```perl6
+    my &foo = EVAL 'sub foo(\$a) { }'; &foo()
+    ```
+    m: `Too few positionals passed; expected 1 argument but got 0`
+    p: `Not enough positional parameters passed; got 0 but expected 1`
+    j: `Not enough positional parameters passed; got 0 but expected 1`
+    
+    The test did only work on MoarVM.
 --------
 doc
 commit dc2e59b38c7eb78d395bc2b15b0956bf9f1f6a5e

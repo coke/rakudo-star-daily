@@ -1,5 +1,5 @@
 Rakudo
-HongKong-54-g85c4c02
+HongKong-55-g1613b0b
 NQP
 2014.09-15-g0dccc88
 modules
@@ -28,11 +28,11 @@ Date:   Wed Sep 10 14:12:17 2014 -0500
     skip BUILD and DESTROY methods
 --------
 MODULES.txt
-commit d73e0793617e0316e46ed68ddaf0abf53f3c9c09
+commit 5eadd16141bcb35844217ec7717122efbaed3203
 Author: Tobias Leich <email@froggs.de>
-Date:   Fri Sep 26 08:32:41 2014 +0200
+Date:   Fri Sep 26 22:14:08 2014 +0200
 
-    update revision of Template-Mojo
+    update release announcement
 --------
 Math-Model
 commit aacc103f76d6cdee856d457523a87c1eea9b0ac2
@@ -212,27 +212,13 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit 26cb64fafeab97405f54ee87b5b453e7b6e0dcfe
-Merge: afcc877 a65a03f
-Author: colomon <colomon@gmail.com>
-Date:   Tue Sep 23 07:11:50 2014 -0400
+commit 51fc7260084d9313bfdf613edea56820e79686f4
+Author: Tobias Leich <email@froggs.de>
+Date:   Fri Sep 26 16:48:53 2014 +0200
 
-    Merge pull request #102 from carbin/panda-test
+    create tempdir so we do not rely on git doing it
     
-    run tests normally if Build.pm is not a Tester
-    
-    Looks solid, and it's easier for me to test once merged.  ;)
-
-commit a65a03f8aa363a0c76e5f5688545c2088699fcd3
-Author: Carlin <cb@viennan.net>
-Date:   Wed Sep 24 10:48:27 2014 +1200
-
-    run tests normally if Build.pm is not a Tester
-    
-    If the Build.pm is not Panda::Tester the tests will be run as normal.
-    Currently if a Build.pm file exists but does not supply a test method
-    no tests are being run. This means many Nativecall reliant modules are
-    not being tested in the smoketests etc.
+    Seems like git on windows does not want to do it, so we do instead.
 --------
 perl6-Term-ANSIColor
 commit 0e92caf09397f458314d4a30974618628a3e5600

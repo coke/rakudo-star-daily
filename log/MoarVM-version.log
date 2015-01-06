@@ -1,22 +1,33 @@
 Rakudo
-HongKong-205-ga573abf
+Cologne-112-g0154f13
 NQP
-2014.09-39-gd1f3ee1
+2014.12-25-gb0a2372
 modules
 --------
 Bailador
-commit b76468d78ac5b138eb1311f45438b1dc6d9fbbec
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Mon Aug 25 13:16:44 2014 +0200
+commit 460de6387f2d56679274aa63b6ed38e185f48788
+Merge: 9badcfe b77d203
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sun Jan 4 21:26:02 2015 +0100
 
-    Decode body in B::Request
+    Merge pull request #16 from szabgab/readme
+    
+    add readme
+
+commit b77d2031d0852ad7f942ed605906bace15722329
+Author: Gabor Szabo <gabor@szabgab.com>
+Date:   Sun Jan 4 00:37:49 2015 +0200
+
+    add readme
 --------
 DBIish
-commit a7597d3e55513a8fbd9658fb1cadd1907f8a7269
-Author: Moritz Lenz <mlenz@noris.net>
-Date:   Tue Oct 7 10:16:36 2014 +0200
+commit ceed8fbc2a60c636828f2c30a7593a9cdd1b99f8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Mon Jan 5 17:05:28 2015 +0100
 
-    [Pg] fix BUILD, abraxxa++
+    Remove hard-coded list of modules
+    
+    instead use require and dynamic lookups. Rakudo has supported them for a while now :-)
 --------
 Grammar-Profiler-Simple
 commit 14bbe297da40af109f4822ba17ba519b5deecdbd
@@ -26,20 +37,11 @@ Date:   Wed Sep 10 14:12:17 2014 -0500
     skip BUILD and DESTROY methods
 --------
 MODULES.txt
-commit 9dca1ca8f6477e4536a5089709fd3f2128302a58
-Merge: 5eadd16 e2c9f4d
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Oct 12 13:10:32 2014 +0200
+commit cc27628007ceffcabce76e2675fcdb9e52c0f343
+Author: Jonathan Scott Duff <duff@pobox.com>
+Date:   Tue Jan 6 14:01:22 2015 -0600
 
-    Merge pull request #39 from stmuk/master
-    
-    add p6doc-index to build -f data file for p6doc
-
-commit e2c9f4db0764c1da1b2728654bbc2e0b56127893
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Sun Oct 12 12:06:57 2014 +0100
-
-    add p6doc-index to build -f data file for p6doc
+    unbreak hash initializer better
 --------
 Math-Model
 commit aacc103f76d6cdee856d457523a87c1eea9b0ac2
@@ -70,27 +72,22 @@ Date:   Fri May 30 01:24:06 2014 +1200
     $*VM<name> is deprecated
 --------
 Pod-To-HTML
-commit d577c3e64569aa5d7ea6aa328d306180b90ade2b
-Merge: 7af92ea 7aac927
+commit bf9998dcae540e007a2b6104b00dbd1d9d9655af
+Merge: d577c3e f5ce0fe
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Aug 31 12:12:23 2014 -0700
+Date:   Tue Dec 30 12:43:34 2014 +0100
 
-    Merge pull request #4 from teodozjan/master
+    Merge pull request #5 from pnu/master
     
-    Added method and submethod
+    use whitespace, this is not a shape declaration
 
-commit 7aac927efa18acd8a6519174f6a5ad6d9b828498
-Author: Kamil <teodozjan@gmail.com>
-Date:   Sun Aug 31 08:14:47 2014 +0200
+commit f5ce0fe576a14a60f6566ddab7691f68897065da
+Author: Panu Ervamaa <panu.ervamaa@frantic.com>
+Date:   Tue Dec 30 13:37:04 2014 +0200
 
-    Substitiuted sub with routine and removed redundant code
-
-commit 5119e516b0fdd26374dcc7c6828080b781a8f9de
-Author: Kamil <teodozjan@gmail.com>
-Date:   Sun Aug 31 07:53:36 2014 +0200
-
-    Added method and submethod with behaviour same as subroutine. Everything else showing as
-    <h1> header to take attention or show as class
+    use whitespace, this is not a shape declaration
+    
+    see rakudo/rakudo@dd5687cc9fb96ce175799090675fcb6bdc3dd067
 --------
 Template-Mojo
 commit 73f68ce1f89e6aebbbe85ca28a8b3545515289b8
@@ -118,28 +115,41 @@ Date:   Thu Sep 25 22:30:47 2014 +0200
     
     The test did only work on MoarVM.
 --------
-doc
-commit ac2538cd3d2175a0f2548d56df42a689a6b95f7f
-Author: Mouq <alexmoquin@gmail.com>
-Date:   Mon Oct 13 10:33:07 2014 -0400
+debugger-ui-commandline
+commit e9cc44ea76dcf8da9addddff9c4692d7b1cae997
+Merge: 4230f5b 6d6fb6b
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Thu May 1 00:41:43 2014 +0200
 
-    Point to the Blocks documentation
+    Merge pull request #22 from raiph/patch-5
+    
+    Speedup display of regex match
+
+commit 6d6fb6b10ce069dd4f4492175c9e9780a52735d6
+Author: raiph <raiph.mellor@gmail.com>
+Date:   Wed Apr 30 18:36:36 2014 -0400
+
+    Speedup display of regex match
+    
+    Only subst in the couple hundred chars around the current match position.
+    
+    If the target is hundreds or thousands of lines long then this is always going to be a lot faster. Right now the impact is colossal for target strings of more than a dozen typical text file lines.
+--------
+doc
+commit ec60a18967110f7585d2339a2ae7206b09113e81
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Jan 6 09:42:52 2015 +0100
+
+    Supply: explain on-demand vs. live supplies
+    
+    partially taken directly from S17
 --------
 file-find
-commit d79a83184da825f61d8c481050f931b511d74cae
-Merge: f158820 d6840b9
-Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Sun Mar 9 11:57:39 2014 +0100
+commit ca2b8ac4511ca9ab060917ba4101a1f698324a04
+Author: Elizabeth Mattijsen <liz@dijkmat.nl>
+Date:   Fri Nov 21 21:35:13 2014 +0100
 
-    Merge pull request #2 from FROGGS/patch-1
-    
-    add provides section needed for S11
-
-commit d6840b91d88852ed2d3161e7ac877d578515b480
-Author: Tobias Leich <email@froggs.de>
-Date:   Thu Feb 27 20:21:12 2014 +0100
-
-    add provides setion needed for S11
+    Fix deprecation message
 --------
 grammar-debugger
 commit 01b3e7baab403ec12fbb5cac7793720c5f3cfd4e
@@ -196,11 +206,11 @@ Date:   Tue Sep 2 21:46:16 2014 +0200
     + add gitignore
 --------
 json
-commit 88ecaf6c59e5ec31ac48a755fb4fbfa18c525439
+commit f21c417951f5b0ad8d5ae4dab5512e2a84d65375
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue Aug 26 10:40:36 2014 +0200
+Date:   Fri Dec 26 12:04:20 2014 +0100
 
-    .gitignore blib/
+    Change .map to .for for forward compatibility
 --------
 jsonrpc
 commit 471a920dfc51f642fc9f2ff3b49c8cd352d51abd
@@ -219,11 +229,22 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit c1fd65598dc86345fa7a390e42dd871c39f8f8f7
-Author: jnthn <jnthn@jnthn.net>
-Date:   Wed Oct 15 23:47:19 2014 +0200
+commit a4fc9acc973767dea3fa07e7c31d8edd70dc0288
+Merge: 0a879de e5a9ef2
+Author: Tobias Leich <email@froggs.de>
+Date:   Tue Dec 30 16:58:47 2014 +0100
 
-    Fix Win32 detection on latest Rakudo.
+    Merge pull request #127 from pnu/master
+    
+    capture build stage stderr output
+
+commit e5a9ef297422acb8d9754dbae91ab42b0c3d2702
+Author: Panu Ervamaa <panu.ervamaa@frantic.com>
+Date:   Tue Dec 30 17:47:19 2014 +0200
+
+    capture build stage stderr output
+    
+    Also, move 2>&1 workaround inside the pipe call. ref tadzik/panda#126
 --------
 perl6-Term-ANSIColor
 commit 0e92caf09397f458314d4a30974618628a3e5600
@@ -244,32 +265,27 @@ Date:   Thu May 1 02:15:26 2014 +0200
     the arguments were swapped
 --------
 perl6-digest-md5
-commit 7816bebdae5a4858e1dbb14e4e7ff23717d04a5e
+commit 0905db3bce76f0920cbaeb3d9311ca470d0254cd
 Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:47:52 2014 +0200
+Date:   Fri Nov 7 21:48:06 2014 +0100
 
-    parcels do not autoflatten anymore
+    need to flatten ourself when assigning to a constant
 --------
 perl6-http-easy
-commit b407eccf5220fe4da6fd5cf34a8f9539ea3f4f8a
-Merge: 147d332 7a6b553
+commit 76ae50f666b2eb21599b538545682aa0574150bd
+Merge: 1c13054 8871c53
 Author: Timothy Totten <2009@huri.net>
-Date:   Wed Aug 20 12:28:04 2014 -0700
+Date:   Sat Nov 29 12:18:29 2014 -0800
 
-    Merge pull request #16 from supernovus/request-bugfix
+    Merge pull request #20 from pnu/master
     
-    Request bugfix
+    bind to all interfaces by default
 
-commit 7a6b55353c1f5d4176a5a0d8f7fea41d93f57d4a
-Author: sergot <filip@sergot.pl>
-Date:   Wed Aug 6 14:47:17 2014 +0200
+commit 8871c535f415606d26137ae4884dbbda31a8f068
+Author: Panu Ervamaa <panu.ervamaa@frantic.com>
+Date:   Sat Nov 29 19:22:20 2014 +0200
 
-    Request bugfix
-    
-    code copied from HTTP::UserAgent module, written by FROGGS and sergot
-    
-    it makes HTTP::Easy able to get the whole preamble, not only the first line of it (what .get does, now it uses .recv instead)
-    it fixes a bug which occurs when we want to pass something more than only the first line (e.g. GET / HTTP/1.1)
+    bind to all interfaces by default
 --------
 perl6-http-status
 commit 1667a47cbe6e5ecef30974a456d8373625db9a57
@@ -290,58 +306,27 @@ Date:   Sat Aug 30 21:52:53 2014 +0200
     This unbreaks HTTP::Status on parrot.
 --------
 perl6-lwp-simple
-commit 5ecdf4c27742b4d8cdad56614609d49b2a0da771
-Merge: 2944981 d1733ba
+commit b1c04e01935e4d7dccf69071f1b20967908a8082
+Merge: d995bdf c380a54
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Aug 30 10:48:34 2014 -0700
+Date:   Tue Dec 30 09:18:05 2014 +0100
 
-    Merge pull request #36 from FROGGS/patch-8
+    Merge pull request #39 from pnu/master
     
-    the @-sigil followed by a block already is code
+    correct size of camelia-logo.png
 
-commit d1733baa294f5a76f362eea8feb1240e298508d0
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Aug 30 19:16:27 2014 +0200
+commit c380a544587b29d36e8e1996ff18189f2580652b
+Author: Panu Ervamaa <panu.ervamaa@frantic.com>
+Date:   Tue Dec 30 01:13:24 2014 +0200
 
-    the @-sigil followed by a block already is code
-    
-    This unbreaks LWP::Simple by following a rakudo patch as of yesterday.
---------
-rakudo-debugger
-commit e9cc44ea76dcf8da9addddff9c4692d7b1cae997
-Merge: 4230f5b 6d6fb6b
-Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Thu May 1 00:41:43 2014 +0200
-
-    Merge pull request #22 from raiph/patch-5
-    
-    Speedup display of regex match
-
-commit 6d6fb6b10ce069dd4f4492175c9e9780a52735d6
-Author: raiph <raiph.mellor@gmail.com>
-Date:   Wed Apr 30 18:36:36 2014 -0400
-
-    Speedup display of regex match
-    
-    Only subst in the couple hundred chars around the current match position.
-    
-    If the target is hundreds or thousands of lines long then this is always going to be a lot faster. Right now the impact is colossal for target strings of more than a dozen typical text file lines.
+    correct size of camelia-logo.png
 --------
 shell-command
-commit bc4f3a796b9d281e0bf46e5827ab6c4501f0500a
-Merge: 8f6f80f 6da59c3
-Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Sat Feb 1 07:25:25 2014 -0800
+commit 3a82d4bb1f37ef04fb20bd2473d500e51c723f61
+Author: Elizabeth Mattijsen <liz@dijkmat.nl>
+Date:   Fri Nov 21 21:37:49 2014 +0100
 
-    Merge pull request #2 from FROGGS/patch-2
-    
-    make mkpath() handle windows paths
-
-commit 6da59c3a6d49c0e9b74437bee0d6c20448dcd580
-Author: Tobias Leich <email@froggs.de>
-Date:   Fri Nov 1 18:42:04 2013 +0100
-
-    make mkpath() handle windows paths
+    Fix deprecation message
 --------
 svg
 commit fb3dcff25535c922cea5b74c1d3bb03f15aa0eb8
@@ -351,14 +336,14 @@ Date:   Wed Apr 25 11:55:28 2012 +0200
     get rid of redundant plan(*)
 --------
 svg-plot
-commit d8bdbdfbfde4fc0d49430a17c7c0ddff9a179d93
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Sat Oct 11 16:44:06 2014 +0200
+commit 82aca9bff4891c3142167ce131b17c436d91126e
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Dec 30 15:25:45 2014 +0100
 
-    Fix data not rendered on recent Rakudo
+    Switch from .map to .for
     
-    Seems like take used to flatten but doesn't anymore.
-    Explicitely flatten at all call sites of $.linkify
+    .map will change its behavior to not flatten, while .for will stay
+    as it is now. See http://pmthium.com/2014/10/apw2014/ for reference
 --------
 test-mock
 commit 3e9f613db5caec21817dad56a76d2977aae73f97
@@ -377,67 +362,57 @@ Date:   Fri May 3 17:31:13 2013 +0300
     Remove deprecated repo-url from META.info
 --------
 ufo
-commit ac250729fbea413dcf3cba493f5be1951d6d4e8c
-Merge: 8e72aa3 1b5efbe
+commit d9182c8043f844f1e6030f7bcb3b4891bd074567
+Merge: ac25072 674f272
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Thu Oct 2 08:53:47 2014 +0200
+Date:   Tue Dec 9 10:29:40 2014 +0100
 
-    Merge pull request #19 from raydiak/master
+    Merge pull request #22 from hoelzro/master
     
-    Leave .pm(6) in compiled module names, like panda
+    Fix deprecations - Remove calls to .path in favor of .IO
 
-commit 1b5efbe69fb0922d7c61f00a16467503bbb1f41c
-Author: raydiak <raydiak@cyberuniverses.com>
-Date:   Wed Oct 1 12:42:40 2014 -0700
+commit 674f2720b7671586dcd4a3f6140c07ad66a192be
+Author: Rob Hoelz <rob@hoelz.ro>
+Date:   Sun Dec 7 22:45:16 2014 -0600
 
-    Leave .pm(6) in compiled module names, like panda
+    Remove calls to .path in favor of .IO
+    
+    .path is deprecated
 --------
 uri
-commit 15afe452abdf609e382f81377f0f96f4a3e05aba
-Merge: 81f5eec e2c3ef7
-Author: colomon <colomon@gmail.com>
-Date:   Sun Feb 23 20:12:51 2014 -0500
+commit d669654a027e1def98f7302fc1070c501a5fcdfe
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Dec 30 15:26:18 2014 +0100
 
-    Merge pull request #5 from raydiak/master
+    Switch from .map to .for
     
-    Fix high char check
-
-commit e2c3ef78a8bb0344a646e1cf70744992a6a9c850
-Author: raydiak <raydiak@cyberuniverses.com>
-Date:   Mon Feb 24 00:27:53 2014 +0000
-
-    Fix high char check
+    .map will change its behavior to not flatten, while .for will stay
+    as it is now. See http://pmthium.com/2014/10/apw2014/ for reference
 --------
 xml-writer
-commit 7c51cf1412f78459dd51aa429da2819746d8bd0b
-Merge: 43fb8e7 2e29ebd
+commit 5df32ebebd7ae17bfb92db6c98b72300e17e59ae
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Wed Jan 15 12:03:49 2014 -0800
+Date:   Tue Dec 30 15:26:41 2014 +0100
 
-    Merge pull request #3 from timo/fix_nil_warning
+    Switch from .map to .for
     
-    make checking named arguments not rely on .pairs
-
-commit 2e29ebd97bcd2a1538d363b9fd40f21565860b33
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Wed Jan 15 19:41:26 2014 +0100
-
-    make checking named arguments not rely on .pairs
-    
-    gets rid of a "use of Nil in numeric context" warning
+    .map will change its behavior to not flatten, while .for will stay
+    as it is now. See http://pmthium.com/2014/10/apw2014/ for reference
 --------
 zavolaj
-commit 97863bb63ccbc0a70602f61a331801889d84b60e
-Merge: e75ca9e 147cdf0
+commit e102c8e597aca274a7a299436bf800f5f95e8b4d
+Merge: a0e685f f8f4e1b
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Oct 11 19:21:08 2014 +0200
+Date:   Tue Dec 30 12:15:11 2014 +0100
 
-    Merge pull request #48 from Nami-Doc/master
+    Merge pull request #54 from pnu/master
     
-    Fix library name parsing of libfoo-2.0
+    use whitespace to define subsignature for unpacking
 
-commit 147cdf0120a2669eeb3774f77cdb7ee17f94b6f7
-Author: Nami-Doc <vendethiel@hotmail.fr>
-Date:   Sat Oct 11 19:10:46 2014 +0200
+commit f8f4e1b18ad54217d548f61fe18fcee32dda2738
+Author: Panu Ervamaa <panu.ervamaa@frantic.com>
+Date:   Tue Dec 30 12:35:19 2014 +0200
 
-    Fix library name parsing of libfoo-2.0
+    use whitespace to define subsignature for unpacking
+    
+    see rakudo/rakudo@dd5687cc9fb96ce175799090675fcb6bdc3dd067

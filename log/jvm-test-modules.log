@@ -1,1 +1,1252 @@
-make: *** No rule to make target `modules-test'.  Stop.
+/usr/bin/perl tools/build/modules-test.pl /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j modules/MODULES.txt
+Testing modules/zavolaj with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:13:40] t/01-argless.t ......... ok     7080 ms
+[16:13:47] t/02-simple-args.t ..... ok     7204 ms
+[16:13:55] t/03-simple-returns.t .. ok     7532 ms
+[16:14:02] t/04-pointers.t ........ ok     7250 ms
+[16:14:11] t/05-arrays.t .......... ok     8931 ms
+[16:14:20] t/06-struct.t .......... ok     8313 ms
+[16:14:27] t/07-writebarrier.t .... ok     7578 ms
+[16:14:35] t/08-callbacks.t ....... ok     7655 ms
+[16:14:43] t/09-nativecast.t ...... ok     8022 ms
+[16:14:50] t/10-cglobals.t ........ ok     7415 ms
+[16:14:50]
+All tests successful.
+Files=10, Tests=98, 77 wallclock secs ( 0.07 usr  0.00 sys + 190.18 cusr  3.14 csys = 193.39 CPU)
+Result: PASS
+
+Testing modules/xml-writer with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:14:56] t/escaping.t ... ok     5951 ms
+[16:15:03] t/structure.t .. ok     6430 ms
+[16:15:03]
+All tests successful.
+Files=2, Tests=11, 13 wallclock secs ( 0.02 usr  0.00 sys + 28.38 cusr  0.51 csys = 28.91 CPU)
+Result: PASS
+
+Testing modules/svg with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:15:09] t/basics.t .. ok     6531 ms
+[16:15:09]
+All tests successful.
+Files=1, Tests=3,  6 wallclock secs ( 0.03 usr  0.00 sys + 15.60 cusr  0.24 csys = 15.87 CPU)
+Result: PASS
+
+Testing modules/svg-plot with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:15:15] t/series.t .. ok     5470 ms
+[16:15:21] t/ticks.t ... ok     5789 ms
+[16:15:21]
+All tests successful.
+Files=2, Tests=10, 12 wallclock secs ( 0.02 usr  0.01 sys + 25.62 cusr  0.50 csys = 26.15 CPU)
+Result: PASS
+
+Testing modules/Math-RungeKutta with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+# took 1 seconds
+# took 2 seconds
+# took 0 seconds
+[16:15:30] t/01-rk-integrate.t .. ok     9507 ms
+[16:15:30]
+All tests successful.
+Files=1, Tests=6,  9 wallclock secs ( 0.01 usr  0.01 sys + 21.08 cusr  0.30 csys = 21.40 CPU)
+Result: PASS
+
+Testing modules/Math-Model with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+# result: ("b" => [0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3.0, 3.3, 3.6, 3.9, 4.2, 4.5, 4.8, 5.1, 5.4, 5.7, 6.0], "time" => [0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.1, 2.25, 2.4, 2.55, 2.7, 2.85, 3.0]).hash
+[16:15:42] t/basic.t .. ok    11155 ms
+[16:15:42]
+All tests successful.
+Files=1, Tests=6, 12 wallclock secs ( 0.02 usr  0.00 sys + 24.82 cusr  0.34 csys = 25.18 CPU)
+Result: PASS
+
+Testing modules/perl6-Term-ANSIColor with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:15:47] t/00-load.t .. ok     4937 ms
+[16:15:47]
+All tests successful.
+Files=1, Tests=1,  5 wallclock secs ( 0.03 usr  0.00 sys + 11.49 cusr  0.16 csys = 11.68 CPU)
+Result: PASS
+
+Testing modules/test-mock with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:15:53] t/returning.t .. ok     5943 ms
+[16:15:58] t/synopsis.t ... ok     5311 ms
+[16:16:04] t/with.t ....... ok     5735 ms
+[16:16:04]
+All tests successful.
+Files=3, Tests=13, 17 wallclock secs ( 0.03 usr  0.00 sys + 39.28 cusr  0.64 csys = 39.95 CPU)
+Result: PASS
+
+Testing modules/Grammar-Profiler-Simple with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+java.lang.StringIndexOutOfBoundsException: String index out of range: -3
+  in regex value at t/csv.t:9
+  in block  at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Grammar/Profiler/Simple.pm:17
+  in regex line at t/csv.t:8
+  in block  at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Grammar/Profiler/Simple.pm:17
+  in regex TOP at t/csv.t:7
+  in block  at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Grammar/Profiler/Simple.pm:17
+  in method parse at gen/jvm/CORE.setting:14246
+  in block <unit> at t/csv.t:23
+
+# Looks like you planned 15 tests, but ran 3
+[16:16:12] t/csv.t .. 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 12/15 subtests 
+[16:16:12]
+
+Test Summary Report
+-------------------
+t/csv.t (Wstat: 65280 Tests: 3 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 15 tests but ran 3.
+Files=1, Tests=3,  8 wallclock secs ( 0.02 usr  0.01 sys + 17.80 cusr  0.34 csys = 18.17 CPU)
+Result: FAIL
+
+Testing modules/grammar-debugger with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:16:19] t/debugger.t .. ok     6635 ms
+[16:16:25] t/tracer.t .... ok     6287 ms
+[16:16:25]
+All tests successful.
+Files=2, Tests=2, 13 wallclock secs ( 0.02 usr  0.00 sys + 30.85 cusr  0.44 csys = 31.31 CPU)
+Result: PASS
+
+Testing modules/Perl6-MIME-Base64 with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:16:33] t/basic.t ................. ok     8201 ms
+[16:16:42] t/binary-and-long-line.t .. ok     9085 ms
+[16:16:50] t/rfc4648-test-vector.t ... ok     8237 ms
+[16:16:50]
+All tests successful.
+Files=3, Tests=45, 25 wallclock secs ( 0.04 usr  0.00 sys + 65.99 cusr  1.05 csys = 67.08 CPU)
+Result: PASS
+
+Testing modules/uri with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+java.lang.NullPointerException
+  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:30
+  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
+  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
+  in block <unit> at t/01.t:31
+
+# Looks like you planned 47 tests, but ran 14
+[16:16:58] t/01.t ................... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 33/47 subtests 
+[16:17:05] t/escape.t ............... ok     6774 ms
+[16:17:12] t/november-urlencoded.t .. ok     7174 ms
+[16:17:20] t/rfc-3986-examples.t .... ok     7408 ms
+[16:17:20]
+
+Test Summary Report
+-------------------
+t/01.t                 (Wstat: 65280 Tests: 14 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 47 tests but ran 14.
+Files=4, Tests=58, 29 wallclock secs ( 0.04 usr  0.00 sys + 72.46 cusr  1.19 csys = 73.69 CPU)
+Result: FAIL
+
+Testing modules/perl6-lwp-simple with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:17:26] t/000-load-module.t ............. ok     6384 ms
+java.lang.NullPointerException
+  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:30
+  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
+  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
+  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:307
+  in block <unit> at t/basic-auth.t:11
+
+[16:17:33] t/basic-auth.t .................. 
+No subtests run 
+java.lang.NullPointerException
+  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:30
+  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
+  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
+  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:307
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:42
+  in method post at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:32
+  in block <unit> at t/custom-headers-and-content.t:9
+
+[16:17:40] t/custom-headers-and-content.t .. 
+No subtests run 
+java.lang.NullPointerException
+  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:30
+  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
+  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
+  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:307
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:42
+  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:28
+  in block <unit> at t/get-binary-camelia.t:7
+
+[16:17:47] t/get-binary-camelia.t .......... 
+No subtests run 
+java.lang.NullPointerException
+  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:30
+  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
+  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
+  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:307
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:42
+  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:28
+  in block <unit> at t/get-chunked-6guts.t:8
+
+[16:17:54] t/get-chunked-6guts.t ........... 
+No subtests run 
+java.lang.NullPointerException
+  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:30
+  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
+  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
+  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:307
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:42
+  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:28
+  in block <unit> at t/get-perl6-org.t:7
+
+[16:18:01] t/get-perl6-org.t ............... 
+No subtests run 
+java.lang.NullPointerException
+  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:30
+  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
+  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
+  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:307
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:42
+  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:28
+  in block <unit> at t/get-unsized.t:8
+
+[16:18:08] t/get-unsized.t ................. 
+No subtests run 
+java.lang.NullPointerException
+  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:30
+  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
+  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
+  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:307
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:42
+  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:28
+  in block <unit> at t/get-w3-latin1-utf8.t:6
+
+[16:18:15] t/get-w3-latin1-utf8.t .......... 
+No subtests run 
+java.lang.NullPointerException
+  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:30
+  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
+  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
+  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:307
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:42
+  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:28
+  in block <unit> at t/get-w3-redirect.t:7
+
+[16:18:22] t/get-w3-redirect.t ............. 
+No subtests run 
+java.lang.NullPointerException
+  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:30
+  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
+  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
+  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:307
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:42
+  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:28
+  in method getstore at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:285
+  in block <unit> at t/getstore.t:11
+
+[16:18:31] t/getstore.t .................... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 4/4 subtests 
+java.lang.NullPointerException
+  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:30
+  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
+  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
+  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:307
+  in block <unit> at t/parse-url.t:38
+
+[16:18:38] t/parse-url.t ................... 
+No subtests run 
+[16:18:44] t/socket-sanity.t ............... ok     5818 ms
+[16:18:51] t/stringify-headers.t ........... ok     7080 ms
+[16:18:51]
+
+Test Summary Report
+-------------------
+t/basic-auth.t                (Wstat: 0 Tests: 0 Failed: 0)
+  Parse errors: No plan found in TAP output
+t/custom-headers-and-content.t (Wstat: 0 Tests: 0 Failed: 0)
+  Parse errors: No plan found in TAP output
+t/get-binary-camelia.t        (Wstat: 0 Tests: 0 Failed: 0)
+  Parse errors: No plan found in TAP output
+t/get-chunked-6guts.t         (Wstat: 0 Tests: 0 Failed: 0)
+  Parse errors: No plan found in TAP output
+t/get-perl6-org.t             (Wstat: 0 Tests: 0 Failed: 0)
+  Parse errors: No plan found in TAP output
+t/get-unsized.t               (Wstat: 0 Tests: 0 Failed: 0)
+  Parse errors: No plan found in TAP output
+t/get-w3-latin1-utf8.t        (Wstat: 0 Tests: 0 Failed: 0)
+  Parse errors: No plan found in TAP output
+t/get-w3-redirect.t           (Wstat: 0 Tests: 0 Failed: 0)
+  Parse errors: No plan found in TAP output
+t/getstore.t                  (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 4 tests but ran 0.
+t/parse-url.t                 (Wstat: 0 Tests: 0 Failed: 0)
+  Parse errors: No plan found in TAP output
+Files=13, Tests=9, 91 wallclock secs ( 0.05 usr  0.00 sys + 219.33 cusr  3.58 csys = 222.96 CPU)
+Result: FAIL
+
+Testing modules/json with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:19:00] t/01-parse.t ...... ok     8544 ms
+[16:19:07] t/02-structure.t .. ok     7732 ms
+[16:19:13] t/03-unicode.t .... ok     5803 ms
+[16:19:21] t/04-roundtrip.t .. ok     7875 ms
+[16:19:21]
+All tests successful.
+Files=4, Tests=119, 30 wallclock secs ( 0.05 usr  0.01 sys + 72.25 cusr  1.28 csys = 73.59 CPU)
+Result: PASS
+
+Testing modules/perl6-digest-md5 with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:19:26] t/0-load-module.t .. ok     5092 ms
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+
+# Failed test 'MD5 hex of 'Hello World' must be 'b10a8db164e0754105b7a99be72e3fe5' (static method)'
+# at t/perl5-compat.t line 18
+# expected: 'b10a8db164e0754105b7a99be72e3fe5'
+#      got: '9915155faf30250834866ff42c29307a'
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+
+# Failed test 'MD5 hex of 'Hello World' must be 'b10a8db164e0754105b7a99be72e3fe5' (instance method)'
+# at t/perl5-compat.t line 23
+# expected: 'b10a8db164e0754105b7a99be72e3fe5'
+#      got: '9915155faf30250834866ff42c29307a'
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+
+# Failed test 'MD5 hex of 'Hello World
+# ' must be 'e59ff97941044f85df5297e1c302d260' (static method)'
+# at t/perl5-compat.t line 18
+# expected: 'e59ff97941044f85df5297e1c302d260'
+#      got: 'f9c3811547b749f4b05c7f41638a42d9'
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+
+# Failed test 'MD5 hex of 'Hello World
+# ' must be 'e59ff97941044f85df5297e1c302d260' (instance method)'
+# at t/perl5-compat.t line 23
+# expected: 'e59ff97941044f85df5297e1c302d260'
+#      got: 'f9c3811547b749f4b05c7f41638a42d9'
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+
+# Failed test 'MD5 hex of 'a b' must be '187ef4436122d1cc2f40dc2b92f0eba0' (static method)'
+# at t/perl5-compat.t line 18
+# expected: '187ef4436122d1cc2f40dc2b92f0eba0'
+#      got: '2ea7f09f3963b80696001f80c94a8f46'
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+use of uninitialized value of type Nil in numeric context  in sub infix:<⊞> at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Digest/MD5.pm:7
+
+
+# Failed test 'MD5 hex of 'a b' must be '187ef4436122d1cc2f40dc2b92f0eba0' (instance method)'
+# at t/perl5-compat.t line 23
+# expected: '187ef4436122d1cc2f40dc2b92f0eba0'
+#      got: '2ea7f09f3963b80696001f80c94a8f46'
+# Looks like you failed 6 tests of 6
+[16:19:41] t/perl5-compat.t ... 
+Dubious, test returned 6 (wstat 1536, 0x600)
+Failed 6/6 subtests 
+[16:19:41]
+
+Test Summary Report
+-------------------
+t/perl5-compat.t (Wstat: 1536 Tests: 6 Failed: 6)
+  Failed tests:  1-6
+  Non-zero exit status: 6
+Files=2, Tests=7, 20 wallclock secs ( 0.05 usr  0.00 sys + 40.62 cusr  0.49 csys = 41.16 CPU)
+Result: FAIL
+
+Testing modules/file-find with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:19:49] t/01-file-find.t .. ok     8093 ms
+[16:19:49]
+All tests successful.
+Files=1, Tests=10,  8 wallclock secs ( 0.03 usr  0.00 sys + 19.54 cusr  0.31 csys = 19.88 CPU)
+Result: PASS
+
+Testing modules/shell-command with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:19:56] t/02-shell-command.t .. ok     7553 ms
+[16:19:56]
+All tests successful.
+Files=1, Tests=12,  7 wallclock secs ( 0.03 usr  0.01 sys + 17.79 cusr  0.25 csys = 18.08 CPU)
+Result: PASS
+
+Testing modules/panda with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:20:08] t/builder.t .... ok    11531 ms
+[16:20:15] t/common.t ..... ok     6708 ms
+[16:20:22] t/ecosystem.t .. ok     6822 ms
+Copying blib/lib/foo.moarvm to /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/modules/panda/removeme/lib/foo.moarvm
+Copying blib/lib/bar.pod to /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/modules/panda/removeme/lib/bar.pod
+Copying blib/lib/baz.js to /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/modules/panda/removeme/lib/baz.js
+Copying blib/lib/foo.pm to /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/modules/panda/removeme/lib/foo.pm
+Copying blib/lib/foo.pir to /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/modules/panda/removeme/lib/foo.pir
+Copying blib/lib/foo.jar to /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/modules/panda/removeme/lib/foo.jar
+Copying bin/bar to /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/modules/panda/removeme/bin/bar
+[16:20:31] t/installer.t .. ok     9187 ms
+[16:20:47] t/tester.t ..... ok    15940 ms
+[16:20:47]
+All tests successful.
+Files=5, Tests=33, 50 wallclock secs ( 0.03 usr  0.02 sys + 120.12 cusr  2.00 csys = 122.17 CPU)
+Result: PASS
+
+Testing modules/perl6-http-status with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:20:52] t/01-basic.t .. ok     4961 ms
+[16:20:52]
+All tests successful.
+Files=1, Tests=4,  5 wallclock secs ( 0.02 usr  0.00 sys + 11.70 cusr  0.18 csys = 11.90 CPU)
+Result: PASS
+
+Testing modules/PSGI with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:20:59] t/encode-psgi-response.t .. ok     7039 ms
+[16:20:59]
+All tests successful.
+Files=1, Tests=24,  7 wallclock secs ( 0.03 usr  0.00 sys + 17.10 cusr  0.29 csys = 17.42 CPU)
+Result: PASS
+
+Testing modules/perl6-http-easy with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+...no t/ directory found.
+
+Testing modules/Template-Mojo with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:21:08] t/00-basic.t ..... ok     9211 ms
+[16:21:16] t/01-template.t .. ok     8056 ms
+[16:21:23] t/02-complex.t ... ok     6224 ms
+[16:21:23]
+All tests successful.
+Files=3, Tests=21, 24 wallclock secs ( 0.04 usr  0.00 sys + 54.62 cusr  0.90 csys = 55.56 CPU)
+Result: PASS
+
+Testing modules/Bailador with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:21:30] t/01-route-existance.t ... ok     6937 ms
+java.lang.NullPointerException
+  in sub dispatch at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador.pm:101
+  in sub dispatch_request at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador.pm:83
+  in sub get-response at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador/Test.pm:9
+  in sub response-status-is at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador/Test.pm:23
+  in block <unit> at t/02-response-status.t:10
+
+[16:21:37] t/02-response-status.t ... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 4/4 subtests 
+java.lang.NullPointerException
+  in sub dispatch at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador.pm:101
+  in sub dispatch_request at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador.pm:83
+  in sub get-response at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador/Test.pm:9
+  in sub response-content-is at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador/Test.pm:33
+  in block <unit> at t/03-response-content.t:15
+
+[16:21:44] t/03-response-content.t .. 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 7/7 subtests 
+java.lang.NullPointerException
+  in sub import at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador.pm:17
+  in block <unit> at t/04-templates.t:3
+
+[16:21:51] t/04-templates.t ......... 
+No subtests run 
+[16:21:58] t/05-post-content.t ...... ok     6668 ms
+[16:21:58]
+
+Test Summary Report
+-------------------
+t/02-response-status.t (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 4 tests but ran 0.
+t/03-response-content.t (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 7 tests but ran 0.
+t/04-templates.t       (Wstat: 0 Tests: 0 Failed: 0)
+  Parse errors: No plan found in TAP output
+Files=5, Tests=7, 35 wallclock secs ( 0.04 usr  0.00 sys + 86.14 cusr  1.39 csys = 87.57 CPU)
+Result: FAIL
+
+Testing modules/DBIish with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:22:03] t/05-mock.t ........... ok     5713 ms
+# Connect failed with error java.lang.UnsatisfiedLinkError: Unable to load library 'libmysqlclient.so': Native library (linux-x86-64/libmysqlclient.so) not found in resource path ([file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/modules/DBIish/, file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/runtime/, file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/, file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib/])
+[16:22:15] t/10-mysql.t .......... ok    11837 ms
+# Connect failed with error java.lang.UnsatisfiedLinkError: Unable to load library 'libmysqlclient.so': Native library (linux-x86-64/libmysqlclient.so) not found in resource path ([file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/modules/DBIish/, file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/runtime/, file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/, file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib/])
+[16:22:24] t/25-mysql-common.t ... ok     8339 ms
+[16:22:30] t/30-Pg.t ............. ok     6555 ms
+# Connect failed with error java.lang.UnsatisfiedLinkError: Unable to load library 'libpq.so': Native library (linux-x86-64/libpq.so) not found in resource path ([file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/modules/DBIish/, file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/runtime/, file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/, file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib/])
+[16:22:38] t/35-Pg-common.t ...... ok     8223 ms
+# Connect failed with error java.lang.UnsatisfiedLinkError: Unable to load library 'libsqlite3.so': Native library (linux-x86-64/libsqlite3.so) not found in resource path ([file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/modules/DBIish/, file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/runtime/, file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/, file:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib/])
+[16:22:47] t/40-sqlite-common.t .. ok     8294 ms
+[16:22:47]
+All tests successful.
+Files=6, Tests=218, 49 wallclock secs ( 0.05 usr  0.02 sys + 114.06 cusr  1.88 csys = 116.01 CPU)
+Result: PASS
+
+Testing modules/jsonrpc with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:23:04] t/client.t .. ok    17366 ms
+[16:23:20] t/server.t .. ok    15368 ms
+[16:23:20]
+All tests successful.
+Files=2, Tests=68, 33 wallclock secs ( 0.02 usr  0.01 sys + 80.74 cusr  0.87 csys = 81.64 CPU)
+Result: PASS
+
+Testing modules/Pod-To-HTML with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:23:26] t/01-basic.t .... ok     6838 ms
+[16:23:33] t/02-code.t ..... ok     6542 ms
+[16:23:39] t/03-comment.t .. ok     6088 ms
+[16:23:48] t/04-lists.t .... ok     8528 ms
+[16:23:48]
+All tests successful.
+Files=4, Tests=8, 28 wallclock secs ( 0.03 usr  0.00 sys + 68.41 cusr  1.04 csys = 69.48 CPU)
+Result: PASS
+
+Testing modules/doc with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+[16:24:00] t/typegraph.t .. ok    12260 ms
+[16:24:00]
+All tests successful.
+Files=1, Tests=8, 12 wallclock secs ( 0.02 usr  0.00 sys + 30.21 cusr  0.46 csys = 30.69 CPU)
+Result: PASS
+
+Testing modules/debugger-ui-commandline with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
+...no t/ directory found.
+

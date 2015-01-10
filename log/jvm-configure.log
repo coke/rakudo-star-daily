@@ -6,7 +6,7 @@ Using java version "1.7.0_65"
 
 Cleaning up ...
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath bin
-javac -source 1.7 -cp 3rdparty/asm/asm-4.1.jar:3rdparty/asm/asm-tree-4.1.jar:3rdparty/jline/jline-1.0.jar:3rdparty/jna/jna.jar -g -d bin src/vm/jvm/runtime/org/perl6/nqp/io/*.java src/vm/jvm/runtime/org/perl6/nqp/jast2bc/*.java src/vm/jvm/runtime/org/perl6/nqp/runtime/*.java src/vm/jvm/runtime/org/perl6/nqp/sixmodel/*.java src/vm/jvm/runtime/org/perl6/nqp/sixmodel/reprs/*.java src/vm/jvm/runtime/org/perl6/nqp/tools/*.java 
+javac -source 1.7 -cp 3rdparty/asm/asm-4.1.jar:3rdparty/asm/asm-tree-4.1.jar:3rdparty/jline/jline-1.0.jar:3rdparty/jna/jna.jar -g -d bin -encoding UTF8 src/vm/jvm/runtime/org/perl6/nqp/io/*.java src/vm/jvm/runtime/org/perl6/nqp/jast2bc/*.java src/vm/jvm/runtime/org/perl6/nqp/runtime/*.java src/vm/jvm/runtime/org/perl6/nqp/sixmodel/*.java src/vm/jvm/runtime/org/perl6/nqp/sixmodel/reprs/*.java src/vm/jvm/runtime/org/perl6/nqp/tools/*.java 
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-jvm-properties.pl . 3rdparty/asm/asm-4.1.jar:3rdparty/asm/asm-tree-4.1.jar:3rdparty/jline/jline-1.0.jar:3rdparty/jna/jna.jar > jvmconfig.properties
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-jvm-properties.pl /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install 3rdparty/asm/asm-4.1.jar:3rdparty/asm/asm-tree-4.1.jar:3rdparty/jline/jline-1.0.jar:3rdparty/jna/jna.jar > bin/jvmconfig.properties
 jar cf0 nqp-runtime.jar -C bin/ .

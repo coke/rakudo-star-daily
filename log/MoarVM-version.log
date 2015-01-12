@@ -1,24 +1,48 @@
 Rakudo
-Cologne-154-g319c9c3
+Cologne-165-g107a5c2
 NQP
 2014.12-34-gc528f06
 modules
 --------
 Bailador
-commit 460de6387f2d56679274aa63b6ed38e185f48788
-Merge: 9badcfe b77d203
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Jan 4 21:26:02 2015 +0100
+commit 17f299a3ffaf778c1dfae055b45520858d669b67
+Merge: fd87f66 db7cc4b
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Mon Jan 12 11:02:45 2015 +0100
 
-    Merge pull request #16 from szabgab/readme
+    Merge pull request #20 from szabgab/get_requests
     
-    add readme
+    process GET request parameters
 
-commit b77d2031d0852ad7f942ed605906bace15722329
+commit db7cc4bafb88f21c5feda69ca5fa4a6359ee4872
 Author: Gabor Szabo <gabor@szabgab.com>
-Date:   Sun Jan 4 00:37:49 2015 +0200
+Date:   Sat Jan 10 13:08:23 2015 +0200
 
-    add readme
+    add example to echo text
+
+commit 6bb51b0ecf19a67da4c92f2e10fd5726db3026b2
+Author: Gabor Szabo <gabor@szabgab.com>
+Date:   Sat Jan 10 13:08:07 2015 +0200
+
+    process parameters received in the URL
+
+commit 482f0a2f12e68e9e9ca536cfd665b20086380f5a
+Author: Gabor Szabo <gabor@szabgab.com>
+Date:   Sat Jan 10 12:55:17 2015 +0200
+
+    prepare for better PSGI based testing
+
+commit 640b3659341dbdfd227fd91614046e29bc27101d
+Author: Gabor Szabo <gabor@szabgab.com>
+Date:   Fri Jan 9 23:20:45 2015 +0200
+
+    test get request with parameters
+
+commit 399f00dc844bcdb872aa19447d59f237a487edbc
+Author: Gabor Szabo <gabor@szabgab.com>
+Date:   Fri Jan 9 21:01:40 2015 +0200
+
+    use PATH_INFO when looking for routes to handle requests to path?field=value correctly #17
 --------
 DBIish
 commit 220f06379766074bcbc1404febbc7688a3e4f158
@@ -360,22 +384,11 @@ Date:   Fri May 3 17:31:13 2013 +0300
     Remove deprecated repo-url from META.info
 --------
 ufo
-commit d9182c8043f844f1e6030f7bcb3b4891bd074567
-Merge: ac25072 674f272
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue Dec 9 10:29:40 2014 +0100
+commit 624abf2d6725ea9f81182411d746b82278d1a583
+Author: Will "Coke" Coleda <will@coleda.com>
+Date:   Mon Dec 1 21:59:14 2014 -0500
 
-    Merge pull request #22 from hoelzro/master
-    
-    Fix deprecations - Remove calls to .path in favor of .IO
-
-commit 674f2720b7671586dcd4a3f6140c07ad66a192be
-Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Sun Dec 7 22:45:16 2014 -0600
-
-    Remove calls to .path in favor of .IO
-    
-    .path is deprecated
+    fix typo
 --------
 uri
 commit d669654a027e1def98f7302fc1070c501a5fcdfe

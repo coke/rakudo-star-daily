@@ -1,7 +1,7 @@
 Rakudo
-Cologne-238-ga3e5f25
+Cologne-245-ge37eb06
 NQP
-2014.12-37-g081cde2
+2014.12-39-g94ed47c
 modules
 --------
 Bailador
@@ -112,30 +112,24 @@ Date:   Tue Dec 30 13:37:04 2014 +0200
     see rakudo/rakudo@dd5687cc9fb96ce175799090675fcb6bdc3dd067
 --------
 Template-Mojo
-commit 73f68ce1f89e6aebbbe85ca28a8b3545515289b8
-Merge: 4483d7a b7a970f
-Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Thu Sep 25 23:26:48 2014 +0200
+commit 542830e772105b6702c23821f5546309d80db04c
+Merge: 73f68ce a4ffa55
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Sat Jan 17 13:15:24 2015 +0100
 
-    Merge pull request #10 from FROGGS/patch-2
+    Merge pull request #11 from moritz/slurp-deprecated
     
-    weaken error message tests for parrot
+    Get rid of deprecated $fh.slurp
 
-commit b7a970fbb8b7362d4775912f5aae5e1ca4bccc5c
-Author: Tobias Leich <email@froggs.de>
-Date:   Thu Sep 25 22:30:47 2014 +0200
+commit a4ffa551e38ae7c79f5153ff1fc8db73e23985e1
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sat Dec 27 05:22:40 2014 +0100
 
-    weaken error message tests for parrot
+    Get rid of deprecated $fh.slurp
     
-    The tests are too strict, the wording between backends is different, see:
-    ```perl6
-    my &foo = EVAL 'sub foo(\$a) { }'; &foo()
-    ```
-    m: `Too few positionals passed; expected 1 argument but got 0`
-    p: `Not enough positional parameters passed; got 0 but expected 1`
-    j: `Not enough positional parameters passed; got 0 but expected 1`
-    
-    The test did only work on MoarVM.
+    since the file handle is used only for slurping, there is no need to
+    create it explicitly, using just "slurp $filename" is shorter (and
+    not deprecated)
 --------
 debugger-ui-commandline
 commit e9cc44ea76dcf8da9addddff9c4692d7b1cae997
@@ -158,11 +152,11 @@ Date:   Wed Apr 30 18:36:36 2014 -0400
     If the target is hundreds or thousands of lines long then this is always going to be a lot faster. Right now the impact is colossal for target strings of more than a dozen typical text file lines.
 --------
 doc
-commit 0e44c0c8334193060dfd24e81fc44fd17747b94c
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Thu Jan 15 23:04:40 2015 +0100
+commit 7e97efe5648a503a080e93b976800efcdd90ec20
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Sat Jan 17 14:14:16 2015 +0000
 
-    IO::FileTestable: link anchors, mention method form
+    don't build p6doc index keyed on junk
 --------
 file-find
 commit ca2b8ac4511ca9ab060917ba4101a1f698324a04
@@ -326,20 +320,20 @@ Date:   Sat Aug 30 21:52:53 2014 +0200
     This unbreaks HTTP::Status on parrot.
 --------
 perl6-lwp-simple
-commit b1c04e01935e4d7dccf69071f1b20967908a8082
-Merge: d995bdf c380a54
+commit 0d2147e1febb7eb33949d8fc53b39747a45f838b
+Merge: b1c04e0 d03484a
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue Dec 30 09:18:05 2014 +0100
+Date:   Sat Jan 17 16:15:36 2015 +0100
 
-    Merge pull request #39 from pnu/master
+    Merge pull request #40 from stmuk/master
     
-    correct size of camelia-logo.png
+    fix catdir and sluro deprecations
 
-commit c380a544587b29d36e8e1996ff18189f2580652b
-Author: Panu Ervamaa <panu.ervamaa@frantic.com>
-Date:   Tue Dec 30 01:13:24 2014 +0200
+commit d03484a0527a369664dcc0390ecfcdbd7ace4eb5
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Sat Jan 17 12:03:22 2015 +0000
 
-    correct size of camelia-logo.png
+    fix catdir and sluro deprecations
 --------
 shell-command
 commit 3a82d4bb1f37ef04fb20bd2473d500e51c723f61
@@ -409,19 +403,8 @@ Date:   Tue Dec 30 15:26:41 2014 +0100
     as it is now. See http://pmthium.com/2014/10/apw2014/ for reference
 --------
 zavolaj
-commit e102c8e597aca274a7a299436bf800f5f95e8b4d
-Merge: a0e685f f8f4e1b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue Dec 30 12:15:11 2014 +0100
+commit 50d28906dd486b1a6d2fe1d7eb4c3f84a2f9e480
+Author: Tobias Leich <email@froggs.de>
+Date:   Sat Jan 17 15:03:48 2015 +0100
 
-    Merge pull request #54 from pnu/master
-    
-    use whitespace to define subsignature for unpacking
-
-commit f8f4e1b18ad54217d548f61fe18fcee32dda2738
-Author: Panu Ervamaa <panu.ervamaa@frantic.com>
-Date:   Tue Dec 30 12:35:19 2014 +0200
-
-    use whitespace to define subsignature for unpacking
-    
-    see rakudo/rakudo@dd5687cc9fb96ce175799090675fcb6bdc3dd067
+    fix callback example (whitespace before signature)

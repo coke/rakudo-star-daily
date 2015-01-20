@@ -50,9 +50,10 @@ for impl in MoarVM jvm; do
         echo "MoarVM" > $LOG_DIR/$impl-version.log
         cat MoarVM/VERSION >> $LOG_DIR/$impl-version.log
     elif [ "$impl" = "jvm" ] ; then
-        java --version > $LOG_DIR/$impl-version.log
+        java --version > $LOG_DIR/$impl-version.log ||
+       java -showversion 2>&1 | grep 'OpenJDK' > $LOG_DIR/$impl-version.log
     fi
-    echo "Rakudo" > $LOG_DIR/$impl-version.log
+    echo "Rakudo" >> $LOG_DIR/$impl-version.log
     cat rakudo/VERSION >> $LOG_DIR/$impl-version.log
     echo "NQP"   >> $LOG_DIR/$impl-version.log
     cat nqp/VERSION >> $LOG_DIR/$impl-version.log

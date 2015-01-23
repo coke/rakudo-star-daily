@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar && make
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2014.12-48-g81e37a1 / MoarVM 2015.01-2-gc43f6a9).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.01-2-g4589d81 / MoarVM 2015.01-5-ga29eaa9).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -10,15 +10,15 @@ make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/ra
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m tools/build/gen-cat.nqp moar src/vm/moar/ModuleLoaderVMConfig.nqp src/Perl6/ModuleLoader.nqp > src/gen/m-ModuleLoader.nqp
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/ModuleLoader.moarvm --encoding=utf8 \
     src/gen/m-ModuleLoader.nqp
-gcc -c -fPIC -O1 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC  -O1 -DNDEBUG  -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops \
+gcc -c -fPIC -O2 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC  -O2 -DNDEBUG  -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops \
     -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/dyncall -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/linenoise -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar \
     -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/sha1 -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/tinymt  -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libtommath \
     -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libuv -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include -o dynext/perl6_ops.o src/vm/moar/ops/perl6_ops.c
-gcc -c -fPIC -O1 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC  -O1 -DNDEBUG  -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops \
+gcc -c -fPIC -O2 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC  -O2 -DNDEBUG  -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops \
     -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/dyncall -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/linenoise -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar \
     -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/sha1 -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/tinymt  -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libtommath \
     -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libuv -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include -o dynext/container.o src/vm/moar/ops/container.c
-gcc  -shared -fPIC -O1 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/lib  -O1 -DNDEBUG -lm -lpthread -lrt -ldl -o dynext/libperl6_ops_moar.so dynext/perl6_ops.o dynext/container.o 
+gcc  -shared -fPIC -O2 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/lib  -O2 -DNDEBUG -lm -lpthread -lrt -ldl -o dynext/libperl6_ops_moar.so dynext/perl6_ops.o dynext/container.o 
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/Ops.moarvm --encoding=utf8 \
     src/vm/moar/Perl6/Ops.nqp
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/Pod.moarvm --encoding=utf8 \
@@ -49,12 +49,12 @@ gcc  -shared -fPIC -O1 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm src/gen/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  31.202
+Stage parse      :  30.276
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   2.673
-Stage mast       :  11.261
-Stage mbc        :   0.135
+Stage optimize   :   2.414
+Stage mast       :   9.763
+Stage mbc        :   0.128
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --target=mbc --ll-exception --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e rm_f perl6-m
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" .
@@ -357,6 +357,7 @@ modules/doc/lib/Type/X/IO/Mkdir.pod => /home/coke/sandbox/rakudo-star-daily/star
 modules/doc/lib/Type/X/IO/Rmdir.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/IO/Rmdir.pod
 modules/doc/lib/Type/X/IO/Dir.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/IO/Dir.pod
 modules/doc/lib/Type/Backtrace/Frame.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Backtrace/Frame.pod
+modules/doc/lib/Type/Proc/Status.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Proc/Status.pod
 modules/doc/lib/Type/Pod/Item.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Pod/Item.pod
 modules/doc/lib/Type/Pod/Block.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Pod/Block.pod
 modules/doc/lib/Type/Pod/Block/Code.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Pod/Block/Code.pod
@@ -364,6 +365,7 @@ modules/doc/lib/Type/Pod/Block/Para.pod => /home/coke/sandbox/rakudo-star-daily/
 modules/doc/lib/Type/Pod/Block/Named.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Pod/Block/Named.pod
 modules/doc/lib/Type/Metamodel/PrivateMethodContainer.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Metamodel/PrivateMethodContainer.pod
 modules/doc/lib/Type/Metamodel/Finalization.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Metamodel/Finalization.pod
+modules/doc/lib/Type/Metamodel/MROBasedMethodDispatch.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Metamodel/MROBasedMethodDispatch.pod
 modules/doc/lib/Type/Metamodel/MethodContainer.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Metamodel/MethodContainer.pod
 modules/doc/lib/Type/Metamodel/RoleContainer.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Metamodel/RoleContainer.pod
 modules/doc/lib/Type/Metamodel/Trusting.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/Metamodel/Trusting.pod

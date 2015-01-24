@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar && make
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.01-2-g4589d81 / MoarVM 2015.01-5-ga29eaa9).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.01-19-g4553a0e / MoarVM 2015.01-5-ga29eaa9).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -49,11 +49,11 @@ gcc  -shared -fPIC -O2 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm src/gen/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  30.276
+Stage parse      :  29.311
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   2.414
-Stage mast       :   9.763
+Stage optimize   :   2.451
+Stage mast       :   9.949
 Stage mbc        :   0.128
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --target=mbc --ll-exception --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e rm_f perl6-m
@@ -308,6 +308,7 @@ modules/doc/lib/Type/X/Method/NotFound.pod => /home/coke/sandbox/rakudo-star-dai
 modules/doc/lib/Type/X/Method/Private/Unqualified.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Method/Private/Unqualified.pod
 modules/doc/lib/Type/X/Method/Private/Permission.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Method/Private/Permission.pod
 modules/doc/lib/Type/X/Composition/NotComposable.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Composition/NotComposable.pod
+modules/doc/lib/Type/X/Assignment/RO.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Assignment/RO.pod
 modules/doc/lib/Type/X/Constructor/Positional.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Constructor/Positional.pod
 modules/doc/lib/Type/X/Syntax/Malformed.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Malformed.pod
 modules/doc/lib/Type/X/Syntax/UnlessElse.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/UnlessElse.pod

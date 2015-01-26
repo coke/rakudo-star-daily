@@ -22,14 +22,19 @@ t/01-sanity/18-simple-multisubs.t .... ok
 t/01-sanity/19-say.t ................. ok
 t/01-sanity/20-defined.t ............. ok
 t/01-sanity/21-try.t ................. ok
-t/01-sanity/52-parse-include-spec.t .. ok
+t/01-sanity/52-parse-include-spec.t .. 
+Failed 13/14 subtests 
 t/01-sanity/99-test-basic.t .......... ok
-All tests successful.
-Files=23, Tests=285, 26 wallclock secs ( 0.10 usr  0.02 sys +  0.65 cusr  0.05 csys =  0.82 CPU)
-Result: PASS
+
+Test Summary Report
+-------------------
+t/01-sanity/52-parse-include-spec.t (Wstat: 0 Tests: 1 Failed: 0)
+  Parse errors: Bad plan.  You planned 14 tests but ran 1.
+Files=23, Tests=272, 26 wallclock secs ( 0.11 usr  0.02 sys +  0.67 cusr  0.06 csys =  0.86 CPU)
+Result: FAIL
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl t/harness --jvm t/03-jvm
 t/03-jvm/01-interop.t .. ok
 All tests successful.
-Files=1, Tests=24,  8 wallclock secs ( 0.03 usr  0.00 sys +  0.03 cusr  0.01 csys =  0.07 CPU)
+Files=1, Tests=24,  9 wallclock secs ( 0.03 usr  0.00 sys +  0.04 cusr  0.00 csys =  0.07 CPU)
 Result: PASS
 make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'

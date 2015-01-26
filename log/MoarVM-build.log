@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar && make
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.01-22-g5a33762 / MoarVM 2015.01-5-ga29eaa9).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.01-24-g2080f6b / MoarVM 2015.01-5-ga29eaa9).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -49,12 +49,12 @@ gcc  -shared -fPIC -O2 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm src/gen/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  29.536
+Stage parse      :  29.729
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   2.472
-Stage mast       :  10.050
-Stage mbc        :   0.127
+Stage optimize   :   2.433
+Stage mast       :   9.760
+Stage mbc        :   0.129
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --target=mbc --ll-exception --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e rm_f perl6-m
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" .
@@ -281,6 +281,7 @@ modules/doc/lib/Type/X/Undeclared.pod => /home/coke/sandbox/rakudo-star-daily/st
 modules/doc/lib/Type/X/ControlFlow.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/ControlFlow.pod
 modules/doc/lib/Type/X/Syntax.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax.pod
 modules/doc/lib/Type/X/Pod.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Pod.pod
+modules/doc/lib/Type/X/Bind.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Bind.pod
 modules/doc/lib/Type/X/Temporal.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Temporal.pod
 modules/doc/lib/Type/X/OS.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/OS.pod
 modules/doc/lib/Type/X/AdHoc.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/AdHoc.pod
@@ -288,6 +289,7 @@ modules/doc/lib/Type/X/ControlFlow/Return.pod => /home/coke/sandbox/rakudo-star-
 modules/doc/lib/Type/X/Mixin/NotComposable.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Mixin/NotComposable.pod
 modules/doc/lib/Type/X/Augment/NoSuchType.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Augment/NoSuchType.pod
 modules/doc/lib/Type/X/Eval/NoSuchLang.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Eval/NoSuchLang.pod
+modules/doc/lib/Type/X/Bind/Slice.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Bind/Slice.pod
 modules/doc/lib/Type/X/Bind/NativeType.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Bind/NativeType.pod
 modules/doc/lib/Type/X/Phaser/PrePost.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Phaser/PrePost.pod
 modules/doc/lib/Type/X/Phaser/Multiple.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Phaser/Multiple.pod
@@ -336,6 +338,7 @@ modules/doc/lib/Type/X/Role/Initialization.pod => /home/coke/sandbox/rakudo-star
 modules/doc/lib/Type/X/Proc/Async/TapBeforeSpawn.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Proc/Async/TapBeforeSpawn.pod
 modules/doc/lib/Type/X/Proc/Async/OpenForWriting.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Proc/Async/OpenForWriting.pod
 modules/doc/lib/Type/X/Proc/Async/MustBeStarted.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Proc/Async/MustBeStarted.pod
+modules/doc/lib/Type/X/Proc/Async/CharsOrBytes.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Proc/Async/CharsOrBytes.pod
 modules/doc/lib/Type/X/Proc/Async/AlreadyStarted.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Proc/Async/AlreadyStarted.pod
 modules/doc/lib/Type/X/Sequence/Deduction.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Sequence/Deduction.pod
 modules/doc/lib/Type/X/Attribute/Undeclared.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Attribute/Undeclared.pod

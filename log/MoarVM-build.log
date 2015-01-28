@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar && make
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.01-24-g2080f6b / MoarVM 2015.01-6-g89ddb76).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.01-25-g3766c15 / MoarVM 2015.01-6-g89ddb76).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -49,12 +49,12 @@ gcc  -shared -fPIC -O2 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm src/gen/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  29.648
+Stage parse      :  29.864
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   2.439
-Stage mast       :   9.822
-Stage mbc        :   0.130
+Stage optimize   :   2.596
+Stage mast       :   9.953
+Stage mbc        :   0.131
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --target=mbc --ll-exception --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e rm_f perl6-m
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" .

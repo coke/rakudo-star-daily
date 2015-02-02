@@ -1,7 +1,7 @@
 MoarVM
-2015.01-14-g2cb9656
+2015.01-22-g5cda8dc
 Rakudo
-Gotanda-57-g6e182d3
+Gotanda-60-g12db81b
 NQP
 2015.01-25-g3766c15
 modules
@@ -99,11 +99,11 @@ Date:   Wed Apr 30 18:36:36 2014 -0400
     If the target is hundreds or thousands of lines long then this is always going to be a lot faster. Right now the impact is colossal for target strings of more than a dozen typical text file lines.
 --------
 doc
-commit 7eaf0aa0762b6c5502561e7034d49e0565dbd258
+commit 6258df8dadef46337ddd6fdba1b211cd5145a88d
 Author: Paul Cochrane <paul@liekut.de>
-Date:   Sat Jan 31 20:34:08 2015 +0100
+Date:   Mon Feb 2 19:42:32 2015 +0100
 
-    Handling optional type name arg in missing-methods
+    Minor corrections to text in functions.pod
 --------
 file-find
 commit 283045fc2f42a6302d8491b5ba1a580e896df02a
@@ -405,10 +405,17 @@ Date:   Tue Dec 30 15:26:41 2014 +0100
     as it is now. See http://pmthium.com/2014/10/apw2014/ for reference
 --------
 zavolaj
-commit 339501efe99c5bceb4f0dea416655c43eb8d02d6
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Wed Jan 28 07:21:55 2015 +0100
+commit e758edbb0ebf6657aac7a69923f2c38c6cef53e5
+Merge: 339501e 31f392b
+Author: Tobias Leich <email@froggs.de>
+Date:   Mon Feb 2 20:46:07 2015 +0100
 
-    Fix for latest rakudo
+    Merge pull request #55 from retupmoca/master
     
-    postcircumfix:<( )> now receives a normal argument list, not a single-item capture
+    Enable direct Buf/Blob passing to C functions
+
+commit 31f392b4a138f5f2c7e56f76299105a32177af68
+Author: Andrew Egeler <andrew@egeler.us>
+Date:   Sat Jan 31 11:40:54 2015 -0500
+
+    Enable direct Buf/Blob passing to C functions

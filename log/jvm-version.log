@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.5.3) (7u71-2.5.3-2)
 OpenJDK 64-Bit Server VM (build 24.65-b04, mixed mode)
 Rakudo
-Gotanda-60-g12db81b
+Gotanda-66-g5b49077
 NQP
-2015.01-25-g3766c15
+2015.01-28-g8d28eb2
 modules
 --------
 Bailador
@@ -14,13 +14,11 @@ Date:   Sun Jan 25 19:34:10 2015 +0200
     eliminate the need for all the response-content test functions
 --------
 DBIish
-commit fecfb9276bbb58a37a655122570f8677a0d7de9e
+commit 488b9245dfc067659f3ae2e64e40d067e59d4902
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jan 31 14:07:05 2015 +0100
+Date:   Tue Feb 3 16:49:49 2015 +0100
 
-    SQLite: .exec throws on error. Closes #6
-    
-    Patch courtesy by jantz, test by me
+    Do not fail tests in libsqlite3 cannot be found
 --------
 Grammar-Profiler-Simple
 commit 14bbe297da40af109f4822ba17ba519b5deecdbd
@@ -30,11 +28,11 @@ Date:   Wed Sep 10 14:12:17 2014 -0500
     skip BUILD and DESTROY methods
 --------
 MODULES.txt
-commit cc27628007ceffcabce76e2675fcdb9e52c0f343
-Author: Jonathan Scott Duff <duff@pobox.com>
-Date:   Tue Jan 6 14:01:22 2015 -0600
+commit 7ab973edf21a8510b1f3cb23f1f3504e9a9b17ac
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Feb 3 17:56:21 2015 +0100
 
-    unbreak hash initializer better
+    Remove module update item that was copied from last month
 --------
 Math-Model
 commit aacc103f76d6cdee856d457523a87c1eea9b0ac2
@@ -99,11 +97,11 @@ Date:   Wed Apr 30 18:36:36 2014 -0400
     If the target is hundreds or thousands of lines long then this is always going to be a lot faster. Right now the impact is colossal for target strings of more than a dozen typical text file lines.
 --------
 doc
-commit db0354a841a39cb244b0e5c5b83d31cad98b6f15
+commit 3726d0fff6e69d560b04b26f090139d49bd4c235
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Feb 2 21:05:44 2015 +0100
+Date:   Tue Feb 3 20:17:00 2015 +0100
 
-    start to document "is export" on routines
+    Remove debugging output
 --------
 file-find
 commit 283045fc2f42a6302d8491b5ba1a580e896df02a
@@ -315,107 +313,65 @@ Date:   Sat Jan 17 12:03:22 2015 +0000
 
     fix catdir and sluro deprecations
 --------
-shell-command
-commit 3a82d4bb1f37ef04fb20bd2473d500e51c723f61
-Author: Elizabeth Mattijsen <liz@dijkmat.nl>
-Date:   Fri Nov 21 21:37:49 2014 +0100
+rakudo-debugger
+commit 7ab973edf21a8510b1f3cb23f1f3504e9a9b17ac
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Feb 3 17:56:21 2015 +0100
 
-    Fix deprecation message
+    Remove module update item that was copied from last month
+--------
+shell-command
+commit 7ab973edf21a8510b1f3cb23f1f3504e9a9b17ac
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Feb 3 17:56:21 2015 +0100
+
+    Remove module update item that was copied from last month
 --------
 svg
-commit fb3dcff25535c922cea5b74c1d3bb03f15aa0eb8
+commit 7ab973edf21a8510b1f3cb23f1f3504e9a9b17ac
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Wed Apr 25 11:55:28 2012 +0200
+Date:   Tue Feb 3 17:56:21 2015 +0100
 
-    get rid of redundant plan(*)
+    Remove module update item that was copied from last month
 --------
 svg-plot
-commit 82aca9bff4891c3142167ce131b17c436d91126e
+commit 7ab973edf21a8510b1f3cb23f1f3504e9a9b17ac
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue Dec 30 15:25:45 2014 +0100
+Date:   Tue Feb 3 17:56:21 2015 +0100
 
-    Switch from .map to .for
-    
-    .map will change its behavior to not flatten, while .for will stay
-    as it is now. See http://pmthium.com/2014/10/apw2014/ for reference
+    Remove module update item that was copied from last month
 --------
 test-mock
-commit 3e9f613db5caec21817dad56a76d2977aae73f97
-Merge: 47dc390 fb89bb8
-Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Fri May 3 14:09:22 2013 -0700
+commit 7ab973edf21a8510b1f3cb23f1f3504e9a9b17ac
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Feb 3 17:56:21 2015 +0100
 
-    Merge pull request #4 from tadzik/patch-1
-    
-    Remove deprecated repo-url from META.info
-
-commit fb89bb8344ae329256800e9977b58cfa610e9018
-Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Fri May 3 17:31:13 2013 +0300
-
-    Remove deprecated repo-url from META.info
+    Remove module update item that was copied from last month
 --------
 ufo
-commit 624abf2d6725ea9f81182411d746b82278d1a583
-Author: Will "Coke" Coleda <will@coleda.com>
-Date:   Mon Dec 1 21:59:14 2014 -0500
+commit 7ab973edf21a8510b1f3cb23f1f3504e9a9b17ac
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Feb 3 17:56:21 2015 +0100
 
-    fix typo
+    Remove module update item that was copied from last month
 --------
 uri
-commit d59c1e6dc9a3ae84645727d293234ec62edf0c4d
-Merge: d669654 f209022
+commit 7ab973edf21a8510b1f3cb23f1f3504e9a9b17ac
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Wed Jan 28 09:06:52 2015 +0100
+Date:   Tue Feb 3 17:56:21 2015 +0100
 
-    Merge pull request #2 from ugexe/default-ports
-    
-    Dont call .Int on non-existant hash key; Add more default ports
-
-commit f209022690d7a46c1b477be9b284542f1aeae683
-Author: Nick Logan <ugexe@cpan.org>
-Date:   Tue Jan 27 17:31:14 2015 -0500
-
-    more concise return per colomon's suggestion
-
-commit 4bbb8e7e39be0ec98c236e951f736a801ab2305f
-Author: Nick Logan <ugexe@cpan.org>
-Date:   Tue Jan 27 17:03:56 2015 -0500
-
-    Add default ports for: smtp,shttp,sftp,nntp,git,imap
-
-commit cf8c2edd49aa32e4c7ac022d0a2b287ea7238c3c
-Author: Nick Logan <ugexe@cpan.org>
-Date:   Tue Jan 27 16:13:24 2015 -0500
-
-    Dont call .Int on a hash key that doesn't exist
-    
-    When calling .port on a scheme without a DefaultPort entry
-    you would get the following:
-    "No such method 'Int' for invocant of type 'Any'"
+    Remove module update item that was copied from last month
 --------
 xml-writer
-commit 5df32ebebd7ae17bfb92db6c98b72300e17e59ae
+commit 7ab973edf21a8510b1f3cb23f1f3504e9a9b17ac
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue Dec 30 15:26:41 2014 +0100
+Date:   Tue Feb 3 17:56:21 2015 +0100
 
-    Switch from .map to .for
-    
-    .map will change its behavior to not flatten, while .for will stay
-    as it is now. See http://pmthium.com/2014/10/apw2014/ for reference
+    Remove module update item that was copied from last month
 --------
 zavolaj
-commit e758edbb0ebf6657aac7a69923f2c38c6cef53e5
-Merge: 339501e 31f392b
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Feb 2 20:46:07 2015 +0100
+commit 7ab973edf21a8510b1f3cb23f1f3504e9a9b17ac
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Feb 3 17:56:21 2015 +0100
 
-    Merge pull request #55 from retupmoca/master
-    
-    Enable direct Buf/Blob passing to C functions
-
-commit 31f392b4a138f5f2c7e56f76299105a32177af68
-Author: Andrew Egeler <andrew@egeler.us>
-Date:   Sat Jan 31 11:40:54 2015 -0500
-
-    Enable direct Buf/Blob passing to C functions
+    Remove module update item that was copied from last month

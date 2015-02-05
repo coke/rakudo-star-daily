@@ -25,11 +25,18 @@ t/01-sanity/21-try.t ................. ok
 t/01-sanity/52-parse-include-spec.t .. ok
 t/01-sanity/99-test-basic.t .......... ok
 All tests successful.
-Files=23, Tests=285, 27 wallclock secs ( 0.09 usr  0.03 sys +  0.65 cusr  0.07 csys =  0.84 CPU)
+Files=23, Tests=285, 227 wallclock secs ( 0.09 usr  0.01 sys +  0.50 cusr  0.05 csys =  0.65 CPU)
 Result: PASS
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl t/harness --jvm t/03-jvm
-t/03-jvm/01-interop.t .. ok
-All tests successful.
-Files=1, Tests=24,  9 wallclock secs ( 0.03 usr  0.00 sys +  0.04 cusr  0.00 csys =  0.07 CPU)
-Result: PASS
+t/03-jvm/01-interop.t .. 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+
+Test Summary Report
+-------------------
+t/03-jvm/01-interop.t (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+Files=1, Tests=0,  0 wallclock secs ( 0.01 usr  0.01 sys +  0.02 cusr  0.00 csys =  0.04 CPU)
+Result: FAIL
 make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'

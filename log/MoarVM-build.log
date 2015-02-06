@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar && make
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.01-29-g369084b / MoarVM 2015.01-22-g5cda8dc).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.01-34-geb40eb0 / MoarVM 2015.01-30-g4e79d84).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -49,11 +49,11 @@ gcc  -L/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/instal
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm src/gen/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  34.040
+Stage parse      :  35.958
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   2.707
-Stage mast       :  10.985
+Stage optimize   :   2.898
+Stage mast       :  11.303
 Stage mbc        :   0.147
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/nqp/lib" perl6.moarvm --target=mbc --ll-exception --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e rm_f perl6-m
@@ -337,6 +337,7 @@ modules/doc/lib/Type/X/Syntax/Regex/SolitaryQuantifier.pod => /home/coke/sandbox
 modules/doc/lib/Type/X/Syntax/Self/WithoutObject.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Self/WithoutObject.pod
 modules/doc/lib/Type/X/Syntax/AddCategorial/MissingSeparator.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/AddCategorial/MissingSeparator.pod
 modules/doc/lib/Type/X/Syntax/Number/RadixOutOfRange.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Syntax/Number/RadixOutOfRange.pod
+modules/doc/lib/Type/X/Does/TypeObject.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Does/TypeObject.pod
 modules/doc/lib/Type/X/Role/Initialization.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Role/Initialization.pod
 modules/doc/lib/Type/X/Proc/Async/TapBeforeSpawn.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Proc/Async/TapBeforeSpawn.pod
 modules/doc/lib/Type/X/Proc/Async/OpenForWriting.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Type/X/Proc/Async/OpenForWriting.pod

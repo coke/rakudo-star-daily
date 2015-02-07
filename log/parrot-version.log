@@ -1,24 +1,24 @@
+parrot
+RELEASE_7_0_2-5-g308d85c
 Rakudo
-HongKong-54-g85c4c02
+Gotanda-83-g5450e7e
 NQP
-2014.09-15-g0dccc88
+2015.01-34-geb40eb0
 modules
 --------
 Bailador
-commit b76468d78ac5b138eb1311f45438b1dc6d9fbbec
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Mon Aug 25 13:16:44 2014 +0200
+commit d7462021c9e3f2394498a5a3c67824102eab5120
+Author: Gabor Szabo <gabor@szabgab.com>
+Date:   Sun Jan 25 19:34:10 2015 +0200
 
-    Decode body in B::Request
+    eliminate the need for all the response-content test functions
 --------
 DBIish
-commit e59df94bbc138725a3265b856783ff9950227853
-Author: Tobias Leich <email@froggs.de>
-Date:   Fri Sep 12 20:42:04 2014 +0200
+commit 488b9245dfc067659f3ae2e64e40d067e59d4902
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Feb 3 16:49:49 2015 +0100
 
-    remove Makefile, long live panda
-    
-    The Makefile only supported Parrot anyway.
+    Do not fail tests in libsqlite3 cannot be found
 --------
 Grammar-Profiler-Simple
 commit 14bbe297da40af109f4822ba17ba519b5deecdbd
@@ -28,25 +28,14 @@ Date:   Wed Sep 10 14:12:17 2014 -0500
     skip BUILD and DESTROY methods
 --------
 MODULES.txt
-commit d73e0793617e0316e46ed68ddaf0abf53f3c9c09
-Author: Tobias Leich <email@froggs.de>
-Date:   Fri Sep 26 08:32:41 2014 +0200
-
-    update revision of Template-Mojo
---------
-Math-Model
-commit aacc103f76d6cdee856d457523a87c1eea9b0ac2
-Author: Solomon Foster <colomon@gmail.com>
-Date:   Sun Nov 24 20:31:34 2013 -0500
-
-    Wrap [Coke]++'s change in parens to avoid weird error.
---------
-Math-RungeKutta
-commit 0803818548d90fbc9e1a1091d88b8ca220d5aedd
+commit 320f22d022fdf6bb48fa6dfa584c813d766d38c4
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Thu Apr 28 13:44:28 2011 +0200
+Date:   Sat Feb 7 19:27:14 2015 +0100
 
-    fix META.info
+    remove Makefile.old
+    
+    it seems not to be in use, and I see no benefit in keeping dead code around.
+    git has all the old revisions anyway.
 --------
 PSGI
 commit 15f7220e1a3b50c113cead4fd1a67d6bd4ac9471
@@ -63,76 +52,82 @@ Date:   Fri May 30 01:24:06 2014 +1200
     $*VM<name> is deprecated
 --------
 Pod-To-HTML
-commit d577c3e64569aa5d7ea6aa328d306180b90ade2b
-Merge: 7af92ea 7aac927
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Aug 31 12:12:23 2014 -0700
+commit 5816580438a5c114a9baa68f36bd652b57630b1a
+Author: Mouq <alexmoquin@gmail.com>
+Date:   Sun Jan 25 18:13:37 2015 -0500
 
-    Merge pull request #4 from teodozjan/master
-    
-    Added method and submethod
-
-commit 7aac927efa18acd8a6519174f6a5ad6d9b828498
-Author: Kamil <teodozjan@gmail.com>
-Date:   Sun Aug 31 08:14:47 2014 +0200
-
-    Substitiuted sub with routine and removed redundant code
-
-commit 5119e516b0fdd26374dcc7c6828080b781a8f9de
-Author: Kamil <teodozjan@gmail.com>
-Date:   Sun Aug 31 07:53:36 2014 +0200
-
-    Added method and submethod with behaviour same as subroutine. Everything else showing as
-    <h1> header to take attention or show as class
+    Unbreak in the case that %*POD2HTML-CALLBACKS isn't defined
 --------
 Template-Mojo
-commit 73f68ce1f89e6aebbbe85ca28a8b3545515289b8
-Merge: 4483d7a b7a970f
-Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Thu Sep 25 23:26:48 2014 +0200
+commit efe6b292fef444a5554b730ee802037a97932099
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Sun Feb 1 15:37:16 2015 +0100
 
-    Merge pull request #10 from FROGGS/patch-2
-    
-    weaken error message tests for parrot
+    Use typed exceptions for T::M errors, fixes #9
+--------
+debugger-ui-commandline
+commit e9cc44ea76dcf8da9addddff9c4692d7b1cae997
+Merge: 4230f5b 6d6fb6b
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Thu May 1 00:41:43 2014 +0200
 
-commit b7a970fbb8b7362d4775912f5aae5e1ca4bccc5c
-Author: Tobias Leich <email@froggs.de>
-Date:   Thu Sep 25 22:30:47 2014 +0200
+    Merge pull request #22 from raiph/patch-5
+    
+    Speedup display of regex match
 
-    weaken error message tests for parrot
+commit 6d6fb6b10ce069dd4f4492175c9e9780a52735d6
+Author: raiph <raiph.mellor@gmail.com>
+Date:   Wed Apr 30 18:36:36 2014 -0400
+
+    Speedup display of regex match
     
-    The tests are too strict, the wording between backends is different, see:
-    ```perl6
-    my &foo = EVAL 'sub foo(\$a) { }'; &foo()
-    ```
-    m: `Too few positionals passed; expected 1 argument but got 0`
-    p: `Not enough positional parameters passed; got 0 but expected 1`
-    j: `Not enough positional parameters passed; got 0 but expected 1`
+    Only subst in the couple hundred chars around the current match position.
     
-    The test did only work on MoarVM.
+    If the target is hundreds or thousands of lines long then this is always going to be a lot faster. Right now the impact is colossal for target strings of more than a dozen typical text file lines.
 --------
 doc
-commit dc2e59b38c7eb78d395bc2b15b0956bf9f1f6a5e
-Author: Ben Tyler <benjamin.tyler@gmail.com>
-Date:   Wed Sep 10 09:44:09 2014 -0500
+commit 1bd122ceb5f3ce00ee5a81a4e3fd9a8b7c83821c
+Author: Mouq <alexmoquin@gmail.com>
+Date:   Sat Feb 7 14:48:01 2015 -0500
 
-    tiny typo fix in private method example
+    Fix #49
+    
+    Only add one search term for each category page, and choose the most
+    general descriptor if necessary
 --------
 file-find
-commit d79a83184da825f61d8c481050f931b511d74cae
-Merge: f158820 d6840b9
-Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Sun Mar 9 11:57:39 2014 +0100
+commit 283045fc2f42a6302d8491b5ba1a580e896df02a
+Merge: ca2b8ac 7d4d3dd
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Sun Feb 1 11:22:22 2015 +0100
 
-    Merge pull request #2 from FROGGS/patch-1
+    Merge pull request #3 from isleofmax/master
     
-    add provides section needed for S11
+    New README.md for the project that replaces the old README
 
-commit d6840b91d88852ed2d3161e7ac877d578515b480
-Author: Tobias Leich <email@froggs.de>
-Date:   Thu Feb 27 20:21:12 2014 +0100
+commit 7d4d3ddaa3950e1e8a06dad804a63383be9dda2c
+Author: isleofmax <isleofmax@gmail.com>
+Date:   Wed Dec 31 01:18:24 2014 +0100
 
-    add provides setion needed for S11
+    remove the old README
+
+commit 9f7fc1b79c89e1e7541c4493498cd4669da3bd54
+Author: isleofmax <isleofmax@gmail.com>
+Date:   Wed Dec 31 01:16:56 2014 +0100
+
+    new README.md with documentation from pod
+
+commit a70a9496dd525029a6d579621960d6a1484172de
+Author: isleofmax <isleofmax@gmail.com>
+Date:   Tue Dec 30 22:23:17 2014 +0100
+
+    Modified the README file with pod documentation in Find.pm version 2
+
+commit ad74c2613d489d164dbd6256a6e3f66b1e831977
+Author: isleofmax <isleofmax@gmail.com>
+Date:   Tue Dec 30 22:10:06 2014 +0100
+
+    Modified the README file with pod documentation in Find.pm
 --------
 grammar-debugger
 commit 01b3e7baab403ec12fbb5cac7793720c5f3cfd4e
@@ -189,11 +184,11 @@ Date:   Tue Sep 2 21:46:16 2014 +0200
     + add gitignore
 --------
 json
-commit 88ecaf6c59e5ec31ac48a755fb4fbfa18c525439
+commit f21c417951f5b0ad8d5ae4dab5512e2a84d65375
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue Aug 26 10:40:36 2014 +0200
+Date:   Fri Dec 26 12:04:20 2014 +0100
 
-    .gitignore blib/
+    Change .map to .for for forward compatibility
 --------
 jsonrpc
 commit 471a920dfc51f642fc9f2ff3b49c8cd352d51abd
@@ -212,27 +207,20 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit 26cb64fafeab97405f54ee87b5b453e7b6e0dcfe
-Merge: afcc877 a65a03f
-Author: colomon <colomon@gmail.com>
-Date:   Tue Sep 23 07:11:50 2014 -0400
+commit 6c42d420e1166c62abc4dd44393288da362a3860
+Merge: 02becf1 d16040b
+Author: lizmat <liz@dijkmat.nl>
+Date:   Sat Feb 7 14:30:37 2015 +0100
 
-    Merge pull request #102 from carbin/panda-test
+    Merge pull request #133 from stmuk/master
     
-    run tests normally if Build.pm is not a Tester
-    
-    Looks solid, and it's easier for me to test once merged.  ;)
+    handle malformed JSON project file case error handling better
 
-commit a65a03f8aa363a0c76e5f5688545c2088699fcd3
-Author: Carlin <cb@viennan.net>
-Date:   Wed Sep 24 10:48:27 2014 +1200
+commit d16040b9671aba94734a256f327e9b5b5725c033
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Sat Feb 7 13:13:09 2015 +0000
 
-    run tests normally if Build.pm is not a Tester
-    
-    If the Build.pm is not Panda::Tester the tests will be run as normal.
-    Currently if a Build.pm file exists but does not supply a test method
-    no tests are being run. This means many Nativecall reliant modules are
-    not being tested in the smoketests etc.
+    handle malformed JSON project file case error handling better
 --------
 perl6-Term-ANSIColor
 commit 0e92caf09397f458314d4a30974618628a3e5600
@@ -253,32 +241,27 @@ Date:   Thu May 1 02:15:26 2014 +0200
     the arguments were swapped
 --------
 perl6-digest-md5
-commit 7816bebdae5a4858e1dbb14e4e7ff23717d04a5e
+commit 0905db3bce76f0920cbaeb3d9311ca470d0254cd
 Author: Tobias Leich <email@froggs.de>
-Date:   Sat Sep 20 06:47:52 2014 +0200
+Date:   Fri Nov 7 21:48:06 2014 +0100
 
-    parcels do not autoflatten anymore
+    need to flatten ourself when assigning to a constant
 --------
 perl6-http-easy
-commit b407eccf5220fe4da6fd5cf34a8f9539ea3f4f8a
-Merge: 147d332 7a6b553
-Author: Timothy Totten <2009@huri.net>
-Date:   Wed Aug 20 12:28:04 2014 -0700
+commit 312d2cbf15d38ad8a06e66947e6b64839e4234c0
+Merge: 76ae50f 00c6dae
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Sat Jan 10 23:14:32 2015 +0200
 
-    Merge pull request #16 from supernovus/request-bugfix
+    Merge pull request #21 from szabgab/debug
     
-    Request bugfix
+    just two more debugging printouts
 
-commit 7a6b55353c1f5d4176a5a0d8f7fea41d93f57d4a
-Author: sergot <filip@sergot.pl>
-Date:   Wed Aug 6 14:47:17 2014 +0200
+commit 00c6dae5274abe6cd4a86a360243e7ba2fa530dd
+Author: Gabor Szabo <gabor@szabgab.com>
+Date:   Sat Jan 10 21:16:50 2015 +0200
 
-    Request bugfix
-    
-    code copied from HTTP::UserAgent module, written by FROGGS and sergot
-    
-    it makes HTTP::Easy able to get the whole preamble, not only the first line of it (what .get does, now it uses .recv instead)
-    it fixes a bug which occurs when we want to pass something more than only the first line (e.g. GET / HTTP/1.1)
+    just two more debugging printouts
 --------
 perl6-http-status
 commit 1667a47cbe6e5ecef30974a456d8373625db9a57
@@ -299,58 +282,18 @@ Date:   Sat Aug 30 21:52:53 2014 +0200
     This unbreaks HTTP::Status on parrot.
 --------
 perl6-lwp-simple
-commit 5ecdf4c27742b4d8cdad56614609d49b2a0da771
-Merge: 2944981 d1733ba
+commit 93bdaa66e654eae4ca41f17c93f3ffea210fb8d6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Aug 30 10:48:34 2014 -0700
+Date:   Fri Feb 6 21:16:29 2015 +0100
 
-    Merge pull request #36 from FROGGS/patch-8
-    
-    the @-sigil followed by a block already is code
-
-commit d1733baa294f5a76f362eea8feb1240e298508d0
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Aug 30 19:16:27 2014 +0200
-
-    the @-sigil followed by a block already is code
-    
-    This unbreaks LWP::Simple by following a rakudo patch as of yesterday.
---------
-rakudo-debugger
-commit e9cc44ea76dcf8da9addddff9c4692d7b1cae997
-Merge: 4230f5b 6d6fb6b
-Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Thu May 1 00:41:43 2014 +0200
-
-    Merge pull request #22 from raiph/patch-5
-    
-    Speedup display of regex match
-
-commit 6d6fb6b10ce069dd4f4492175c9e9780a52735d6
-Author: raiph <raiph.mellor@gmail.com>
-Date:   Wed Apr 30 18:36:36 2014 -0400
-
-    Speedup display of regex match
-    
-    Only subst in the couple hundred chars around the current match position.
-    
-    If the target is hundreds or thousands of lines long then this is always going to be a lot faster. Right now the impact is colossal for target strings of more than a dozen typical text file lines.
+    Formulate error message without double negation
 --------
 shell-command
-commit bc4f3a796b9d281e0bf46e5827ab6c4501f0500a
-Merge: 8f6f80f 6da59c3
-Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Sat Feb 1 07:25:25 2014 -0800
+commit 3a82d4bb1f37ef04fb20bd2473d500e51c723f61
+Author: Elizabeth Mattijsen <liz@dijkmat.nl>
+Date:   Fri Nov 21 21:37:49 2014 +0100
 
-    Merge pull request #2 from FROGGS/patch-2
-    
-    make mkpath() handle windows paths
-
-commit 6da59c3a6d49c0e9b74437bee0d6c20448dcd580
-Author: Tobias Leich <email@froggs.de>
-Date:   Fri Nov 1 18:42:04 2013 +0100
-
-    make mkpath() handle windows paths
+    Fix deprecation message
 --------
 svg
 commit fb3dcff25535c922cea5b74c1d3bb03f15aa0eb8
@@ -360,11 +303,14 @@ Date:   Wed Apr 25 11:55:28 2012 +0200
     get rid of redundant plan(*)
 --------
 svg-plot
-commit 195a244c07f2f6f9302c47b9cec9980b747ca9f6
-Author: Moritz Lenz <mlenz@noris.net>
-Date:   Tue Sep 24 14:39:56 2013 +0200
+commit 82aca9bff4891c3142167ce131b17c436d91126e
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Dec 30 15:25:45 2014 +0100
 
-    remove deprecated * in .bless(*)
+    Switch from .map to .for
+    
+    .map will change its behavior to not flatten, while .for will stay
+    as it is now. See http://pmthium.com/2014/10/apw2014/ for reference
 --------
 test-mock
 commit 3e9f613db5caec21817dad56a76d2977aae73f97
@@ -383,58 +329,57 @@ Date:   Fri May 3 17:31:13 2013 +0300
     Remove deprecated repo-url from META.info
 --------
 ufo
-commit 8e72aa30499cde3e67d812b7904b6e1afcadc13e
-Merge: 5ab0f4b 83674a0
-Author: Carl Mäsak <cmasak@gmail.com>
-Date:   Tue Aug 19 20:10:22 2014 +0200
+commit 624abf2d6725ea9f81182411d746b82278d1a583
+Author: Will "Coke" Coleda <will@coleda.com>
+Date:   Mon Dec 1 21:59:14 2014 -0500
 
-    Merge pull request #17 from stmuk/master
-    
-    fix ufo to work with new compiled suffixes
-
-commit 83674a08a5a0e52108632a47172381852305e7aa
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Sat Aug 2 14:22:06 2014 +0100
-
-    fix ufo to work with new compiled suffixes
+    fix typo
 --------
 uri
-commit 15afe452abdf609e382f81377f0f96f4a3e05aba
-Merge: 81f5eec e2c3ef7
-Author: colomon <colomon@gmail.com>
-Date:   Sun Feb 23 20:12:51 2014 -0500
+commit d59c1e6dc9a3ae84645727d293234ec62edf0c4d
+Merge: d669654 f209022
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Wed Jan 28 09:06:52 2015 +0100
 
-    Merge pull request #5 from raydiak/master
+    Merge pull request #2 from ugexe/default-ports
     
-    Fix high char check
+    Dont call .Int on non-existant hash key; Add more default ports
 
-commit e2c3ef78a8bb0344a646e1cf70744992a6a9c850
-Author: raydiak <raydiak@cyberuniverses.com>
-Date:   Mon Feb 24 00:27:53 2014 +0000
+commit f209022690d7a46c1b477be9b284542f1aeae683
+Author: Nick Logan <ugexe@cpan.org>
+Date:   Tue Jan 27 17:31:14 2015 -0500
 
-    Fix high char check
+    more concise return per colomon's suggestion
+
+commit 4bbb8e7e39be0ec98c236e951f736a801ab2305f
+Author: Nick Logan <ugexe@cpan.org>
+Date:   Tue Jan 27 17:03:56 2015 -0500
+
+    Add default ports for: smtp,shttp,sftp,nntp,git,imap
+
+commit cf8c2edd49aa32e4c7ac022d0a2b287ea7238c3c
+Author: Nick Logan <ugexe@cpan.org>
+Date:   Tue Jan 27 16:13:24 2015 -0500
+
+    Dont call .Int on a hash key that doesn't exist
+    
+    When calling .port on a scheme without a DefaultPort entry
+    you would get the following:
+    "No such method 'Int' for invocant of type 'Any'"
 --------
 xml-writer
-commit 7c51cf1412f78459dd51aa429da2819746d8bd0b
-Merge: 43fb8e7 2e29ebd
+commit 5df32ebebd7ae17bfb92db6c98b72300e17e59ae
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Wed Jan 15 12:03:49 2014 -0800
+Date:   Tue Dec 30 15:26:41 2014 +0100
 
-    Merge pull request #3 from timo/fix_nil_warning
+    Switch from .map to .for
     
-    make checking named arguments not rely on .pairs
-
-commit 2e29ebd97bcd2a1538d363b9fd40f21565860b33
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Wed Jan 15 19:41:26 2014 +0100
-
-    make checking named arguments not rely on .pairs
-    
-    gets rid of a "use of Nil in numeric context" warning
+    .map will change its behavior to not flatten, while .for will stay
+    as it is now. See http://pmthium.com/2014/10/apw2014/ for reference
 --------
 zavolaj
-commit e75ca9ea95619cd17a40fa95b21e9da0b153030f
+commit b51ff757f24904df4a98f05b138017ee28a06a1e
 Author: Tobias Leich <email@froggs.de>
-Date:   Wed Sep 24 16:19:18 2014 +0200
+Date:   Wed Feb 4 23:12:30 2015 +0100
 
-    add tests for C global support
+    unfudge native-sub(Buf) test

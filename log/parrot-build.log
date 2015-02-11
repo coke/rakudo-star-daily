@@ -10,8 +10,8 @@ After that, 'make test' will run some tests and
 make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/rakudo'
 cd src/vm/parrot/ops && /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot-ops2c C --dynamic perl6.ops
 # Parsing perl6.ops...
-# Parsed perl6.ops in 1.880 seconds; found 121 ops.
-# Ops parsed in 1.882 seconds.
+# Parsed perl6.ops in 1.889 seconds; found 121 ops.
+# Ops parsed in 1.891 seconds.
 cd src/vm/parrot/ops && cc -c -o perl6_ops.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/7.0.2-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/7.0.2-devel/pmc -fwrapv  -pipe -fstack-protector -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT  -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wno-format -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 perl6_ops.c
 perl6_ops.c: In function ‘run_leave_phasers’:
 perl6_ops.c:168:21: warning: ‘free_runloop_jump_point’ is deprecated (declared at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/7.0.2-devel/parrot/call.h:127) [-Wdeprecated-declarations]
@@ -102,12 +102,12 @@ cd src/vm/parrot/ops && cc -o perl6_ops.so perl6_ops.o ../guts/bind.o ../guts/ex
 The following step can take a long time, please be patient.
 ./perl6-p --setting=NULL --ll-exception --optimize=3 --target=pir --stagestats --output=src/gen/p-CORE.setting.pir gen/parrot/CORE.setting
 Stage start      :   0.000
-Stage parse      : 102.992
+Stage parse      : 101.595
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :  18.170
-Stage post       :  37.626
-Stage pir        :   3.048
+Stage optimize   :  15.817
+Stage post       :  37.493
+Stage pir        :   3.020
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot  -o CORE.setting.pbc src/gen/p-CORE.setting.pir
 ./perl6-p --target=pir --ll-exception  --output=src/gen/RESTRICTED.setting.pir src/RESTRICTED.setting
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot  -o RESTRICTED.setting.pbc src/gen/RESTRICTED.setting.pir

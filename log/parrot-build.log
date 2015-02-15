@@ -10,8 +10,8 @@ After that, 'make test' will run some tests and
 make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/rakudo'
 cd src/vm/parrot/ops && /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot-ops2c C --dynamic perl6.ops
 # Parsing perl6.ops...
-# Parsed perl6.ops in 1.896 seconds; found 121 ops.
-# Ops parsed in 1.897 seconds.
+# Parsed perl6.ops in 1.882 seconds; found 121 ops.
+# Ops parsed in 1.884 seconds.
 cd src/vm/parrot/ops && cc -c -o perl6_ops.o -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/7.0.2-devel -I/home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/7.0.2-devel/pmc -fwrapv  -pipe -fstack-protector -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -DDISABLE_GC_DEBUG=1 -DNDEBUG -DHAS_GETTEXT  -fPIC  -falign-functions=16 -funit-at-a-time -fexcess-precision=standard -maccumulate-outgoing-args -Wall -Wextra -Waggregate-return -Wcast-qual -Wdisabled-optimization -Wdiv-by-zero -Wendif-labels -Wno-format -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wjump-misses-init -Wlogical-op -Werror=missing-braces -Werror=missing-declarations -Wno-missing-format-attribute -Wmissing-include-dirs -Wmultichar -Wpacked -Wpointer-arith -Wreturn-type -Wsequence-point -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Werror=undef -Wno-unused -Wvariadic-macros -Wwrite-strings -Wstack-usage=500 -Wc++-compat -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=strict-prototypes -fvisibility=hidden  -O2 perl6_ops.c
 perl6_ops.c: In function ‘run_leave_phasers’:
 perl6_ops.c:168:21: warning: ‘free_runloop_jump_point’ is deprecated (declared at /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/include/7.0.2-devel/parrot/call.h:127) [-Wdeprecated-declarations]
@@ -102,12 +102,12 @@ cd src/vm/parrot/ops && cc -o perl6_ops.so perl6_ops.o ../guts/bind.o ../guts/ex
 The following step can take a long time, please be patient.
 ./perl6-p --setting=NULL --ll-exception --optimize=3 --target=pir --stagestats --output=src/gen/p-CORE.setting.pir gen/parrot/CORE.setting
 Stage start      :   0.000
-Stage parse      :  99.560
+Stage parse      : 108.229
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :  16.618
-Stage post       :  37.128
-Stage pir        :   2.707
+Stage optimize   :  19.642
+Stage post       :  38.008
+Stage pir        :   2.799
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot  -o CORE.setting.pbc src/gen/p-CORE.setting.pir
 ./perl6-p --target=pir --ll-exception  --output=src/gen/RESTRICTED.setting.pir src/RESTRICTED.setting
 /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/bin/parrot  -o RESTRICTED.setting.pbc src/gen/RESTRICTED.setting.pir
@@ -325,6 +325,7 @@ modules/doc/lib/Type/Pair.pod => /home/coke/sandbox/rakudo-star-daily/star-parro
 modules/doc/lib/Type/Submethod.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Type/Submethod.pod
 modules/doc/lib/Type/Signature.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Type/Signature.pod
 modules/doc/lib/Type/Cursor.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Type/Cursor.pod
+modules/doc/lib/Type/nativeInt.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Type/nativeInt.pod
 modules/doc/lib/Type/Complex.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Type/Complex.pod
 modules/doc/lib/Type/Junction.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Type/Junction.pod
 modules/doc/lib/Type/Exception.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Type/Exception.pod
@@ -460,6 +461,7 @@ modules/doc/lib/Type/IO/FileTestable.pod => /home/coke/sandbox/rakudo-star-daily
 modules/doc/lib/Type/IO/Path.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Type/IO/Path.pod
 modules/doc/lib/Pod/Convenience.pm6 => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Pod/Convenience.pm6
 modules/doc/lib/Pod/To/SectionFilter.pm => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Pod/To/SectionFilter.pm
+modules/doc/lib/Language/about.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Language/about.pod
 modules/doc/lib/Language/regexes.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Language/regexes.pod
 modules/doc/lib/Language/traps.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Language/traps.pod
 modules/doc/lib/Language/objects.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Language/objects.pod
@@ -469,6 +471,7 @@ modules/doc/lib/Language/mop.pod => /home/coke/sandbox/rakudo-star-daily/star-pa
 modules/doc/lib/Language/modules.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Language/modules.pod
 modules/doc/lib/Language/glossary.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Language/glossary.pod
 modules/doc/lib/Language/functions.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Language/functions.pod
+modules/doc/lib/Language/testing.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Language/testing.pod
 modules/doc/lib/Language/grammars.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Language/grammars.pod
 modules/doc/lib/Language/quoting.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Language/quoting.pod
 modules/doc/lib/Language/setbagmix.pod => /home/coke/sandbox/rakudo-star-daily/star-parrot/rakudo-star-daily/install/lib/7.0.2-devel/languages/perl6/lib/Language/setbagmix.pod

@@ -25,11 +25,71 @@ t/01-sanity/21-try.t ................. ok
 t/01-sanity/52-parse-include-spec.t .. ok
 t/01-sanity/99-test-basic.t .......... ok
 All tests successful.
-Files=23, Tests=285, 26 wallclock secs ( 0.11 usr  0.02 sys +  0.73 cusr  0.04 csys =  0.90 CPU)
+Files=23, Tests=285, 25 wallclock secs ( 0.10 usr  0.02 sys +  0.67 cusr  0.06 csys =  0.85 CPU)
 Result: PASS
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl t/harness --jvm t/03-jvm
 t/03-jvm/01-interop.t .. ok
 All tests successful.
-Files=1, Tests=24,  9 wallclock secs ( 0.03 usr  0.00 sys +  0.04 cusr  0.00 csys =  0.07 CPU)
+Files=1, Tests=24,  8 wallclock secs ( 0.03 usr  0.00 sys +  0.04 cusr  0.00 csys =  0.07 CPU)
 Result: PASS
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl t/harness --jvm t/04-nativecall
+ok 1 - Called argless function
+ok 3 - called long_and_complicated_name
+t/04-nativecall/01-argless.t ......... 
+Failed 2/3 subtests 
+ok 1 - got passed int 42
+ok 2 - got passed short 10
+ok 3 - got passed short 20
+ok 4 - got passed int 101
+ok 5 - got passed short 102
+ok 6 - got passed char 103
+ok 7 - got passed double -6.9
+ok 8 - got passed float 4.2
+ok 9 - passed a string
+ok 10 - delayed string print
+ok 11 - wrapped sub
+t/04-nativecall/02-simple-args.t ..... 
+Failed 11/11 subtests 
+t/04-nativecall/03-simple-returns.t .. ok
+t/04-nativecall/04-pointers.t ........ ok
+t/04-nativecall/05-arrays.t .......... ok
+t/04-nativecall/06-struct.t .......... ok
+t/04-nativecall/07-writebarrier.t .... ok
+t/04-nativecall/08-callbacks.t ....... ok
+t/04-nativecall/09-nativecast.t ...... ok
+t/04-nativecall/10-cglobals.t ........ ok
+
+Test Summary Report
+-------------------
+t/04-nativecall/01-argless.t       (Wstat: 0 Tests: 1 Failed: 0)
+  Parse errors: Tests out of sequence.  Found (2) but expected (1)
+                Bad plan.  You planned 3 tests but ran 1.
+t/04-nativecall/02-simple-args.t   (Wstat: 0 Tests: 0 Failed: 0)
+  Parse errors: Bad plan.  You planned 11 tests but ran 0.
+Files=10, Tests=85, 27 wallclock secs ( 0.06 usr  0.00 sys +  0.28 cusr  0.03 csys =  0.37 CPU)
+Result: FAIL
+    ok - struct in position 0, C-side
+    ok - struct in position 1, C-side
+    ok - struct in position 2, C-side
+    ok - byte in position 0, C-side
+    ok - byte in position 1, C-side
+    ok - byte in position 2, C-side
+    ok - byte in position 0, C-side
+    ok - byte in position 1, C-side
+    ok - byte in position 2, C-side
+    ok - C-side int value
+    ok - C-side num value
+    ok - C-side int8 value
+    ok - C-side array value, element 1
+    ok - C-side array value, element 2
+    ok - int 1 in struct 1 in struct
+    ok - int 2 in struct 1 in struct
+    ok - int 1 in struct 2 in struct
+    ok - int 2 in struct 2 in struct
+    ok - C-value of first string in struct
+    ok - C-value of second string in struct
+    ok - num callback return value
+    ok - string callback return value
+    ok - struct (intval) callback return value
+    ok - struct (string) callback return value
 make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'

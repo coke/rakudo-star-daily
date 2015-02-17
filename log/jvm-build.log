@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install --backends=jvm && make
-Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2015.01-55-g78e9940 / OpenJDK 1.7.0_65).
+Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2015.01-58-g7ebbcb0 / OpenJDK 1.7.0_65).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -42,14 +42,14 @@ jar cf0 rakudo-runtime.jar -C bin/ .
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j tools/build/gen-cat.nqp jvm src/core/core_prologue.pm src/core/traits.pm src/core/Positional.pm src/core/Associative.pm src/core/Callable.pm src/core/natives.pm src/core/stubs.pm src/core/control.pm src/core/Mu.pm src/core/Stringy.pm src/core/Any.pm src/core/SLICE.pm src/core/Whatever.pm src/core/array_slice.pm src/core/hash_slice.pm src/core/Scalar.pm src/core/Code.pm src/core/WhateverCode.pm src/core/Block.pm src/core/Attribute.pm src/core/Variable.pm src/core/Routine.pm src/core/Sub.pm src/core/Macro.pm src/core/Method.pm src/core/Submethod.pm src/core/Junction.pm src/core/Cool.pm src/core/Enumeration.pm src/core/Bool.pm src/core/Numeric.pm src/core/Real.pm src/core/Int.pm src/core/Order.pm src/core/UInt64.pm src/core/Num.pm src/core/Buf.pm src/core/Str.pm src/core/Capture.pm src/core/Parcel.pm src/core/Iterable.pm src/core/Iterator.pm src/core/Nil.pm src/core/Range.pm src/core/ListIter.pm src/core/MapIter.pm src/core/GatherIter.pm src/core/List.pm src/core/LoL.pm src/core/Array.pm src/core/Enum.pm src/core/Pair.pm src/core/HashIter.pm src/core/EnumMap.pm src/core/Hash.pm src/core/Stash.pm src/core/Label.pm src/core/PseudoStash.pm src/core/Parameter.pm src/core/Signature.pm src/core/Rational.pm src/core/Rat.pm src/core/Complex.pm src/core/Backtrace.pm src/core/Exception.pm src/core/Failure.pm src/core/Match.pm src/core/Cursor.pm src/core/Grammar.pm src/core/Regex.pm src/core/PIO.pm src/core/IO.pm src/core/IO/Pathy.pm src/core/IO/Local.pm src/core/IO/Dir.pm src/core/IO/File.pm src/core/IOU.pm src/core/IO/Spec.pm src/core/IO/Spec/Unix.pm src/core/IO/Spec/Win32.pm src/core/IO/Spec/Cygwin.pm src/core/IO/Spec/QNX.pm src/core/IO/Handle.pm src/core/IO/Pipe.pm src/core/IO/Path.pm src/core/IO/Dup.pm src/core/IO/Special.pm src/core/io_operators.pm src/core/IO/ArgFiles.pm src/core/AST.pm src/core/CallFrame.pm src/core/Main.pm src/core/tai-utc.pm src/core/Instant.pm src/core/Duration.pm src/core/Temporal.pm src/core/EXPORTHOW.pm src/core/Pod.pm src/core/QuantHash.pm src/core/Setty.pm src/core/Set.pm src/core/SetHash.pm src/core/Baggy.pm src/core/Bag.pm src/core/BagHash.pm src/core/Mixy.pm src/core/Mix.pm src/core/MixHash.pm src/core/set_operators.pm src/core/ObjAt.pm src/core/Version.pm src/core/ForeignCode.pm src/core/operators.pm src/core/metaops.pm src/core/precedence.pm src/core/Deprecations.pm src/core/Thread.pm src/core/Lock.pm src/core/Semaphore.pm src/core/Cancellation.pm src/core/Scheduler.pm src/core/Env.pm src/core/ThreadPoolScheduler.pm src/core/CurrentThreadScheduler.pm src/core/Promise.pm src/core/Channel.pm src/core/Supply.pm src/core/SupplyOperations.pm src/vm/jvm/core/KeyReducer.pm src/vm/jvm/core/IOAsyncFile.pm src/core/asyncops.pm src/core/IO/Notification.pm src/core/IO/Socket.pm src/core/IO/Socket/Async.pm src/core/IO/Socket/INET.pm src/core/Systemic.pm src/core/VM.pm src/core/Distro.pm src/core/Kernel.pm src/core/Compiler.pm src/core/Perl.pm src/core/OS.pm src/core/JSON/Pretty.pm src/core/Distribution.pm src/core/CompUnit.pm src/core/CompUnitRepo.pm src/core/CompUnitRepo/Locally.pm src/core/CompUnitRepo/Local/File.pm src/core/CompUnitRepo/Local/Installation.pm src/core/Argfiles.pm src/core/Inc.pm src/core/Process.pm src/core/StrDistance.pm src/core/Slang.pm src/core/Metamodel/Primitives.pm src/core/core_epilogue.pm  > gen/jvm/CORE.setting
 The following step can take a long time, please be patient.
 java -Xss1m -Xms500m -Xmx2000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib/nqp.jar:rakudo-runtime.jar:perl6.jar -cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib perl6 --setting=NULL --ll-exception --optimize=3 --target=jar --stagestats --output=CORE.setting.jar gen/jvm/CORE.setting
-Stage start      :   0.000
-Stage parse      :  66.066
-Stage syntaxcheck:   0.000
+Stage start      :   0.001
+Stage parse      :  80.979
+Stage syntaxcheck:   0.001
 Stage ast        :   0.001
-Stage optimize   :   8.283
-Stage jast       :  22.035
-Stage classfile  :   7.355
-Stage jar        :   0.001
+Stage optimize   :  11.814
+Stage jast       :  22.719
+Stage classfile  :   7.620
+Stage jar        :   0.000
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-jvm-runner.pl dev . . /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/nqp/lib/nqp.jar
 Creating './perl6-j'
 Creating './perl6-jdb-server'
@@ -105,8 +105,6 @@ make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e chmod 755 perl6
 == Installing modules for JVM
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/module-install.pl /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib jar jar modules/MODULES.txt
-== Installing modules/zavolaj
-modules/zavolaj/lib/NativeCall.pm6 => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/NativeCall.pm6
 == Installing modules/xml-writer
 modules/xml-writer/lib/XML/Writer.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/XML/Writer.pm
 == Installing modules/svg
@@ -423,7 +421,6 @@ modules/doc/lib/Perl6/Documentable/Registry.pm => /home/coke/sandbox/rakudo-star
 == Installing modules/debugger-ui-commandline
 modules/debugger-ui-commandline/lib/Debugger/UI/CommandLine.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Debugger/UI/CommandLine.pm
 == Precompiling modules
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/NativeCall.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/NativeCall.pm6
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/XML/Writer.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/XML/Writer.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/SVG.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/SVG.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/SVG/Box.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/SVG/Box.pm

@@ -1,9 +1,9 @@
 MoarVM
 2015.02-15-g3195c2e
 Rakudo
-Berlin-53-g3607d7b
+Berlin-65-g11ae56e
 NQP
-2015.02-10-ge7710ac
+2015.02-13-gd038633
 modules
 --------
 Bailador
@@ -85,11 +85,11 @@ Date:   Wed Apr 30 18:36:36 2014 -0400
     If the target is hundreds or thousands of lines long then this is always going to be a lot faster. Right now the impact is colossal for target strings of more than a dozen typical text file lines.
 --------
 doc
-commit 89f2ac440d83286dd1b48aa41aae95458ca26b42
+commit 3606e95a4de9aee2cd3f251de2ee9b572cac0b2a
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Thu Feb 26 19:22:51 2015 +0100
+Date:   Fri Feb 27 17:38:49 2015 +0100
 
-    Document Scheduler, ThreadPoolScheduler and CurrentThreadScheduler
+    open: be specific about adverbs in the signature
 --------
 file-find
 commit 283045fc2f42a6302d8491b5ba1a580e896df02a
@@ -203,80 +203,11 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit 004b45059a945020f8a9de65b57bd96f10600de8
-Merge: 567fa11 b7bc2c7
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Fri Feb 20 15:41:31 2015 +0100
+commit 252aa4111a5cf9346966553f402f779f1ea4f13a
+Author: Tobias Leich <email@froggs.de>
+Date:   Fri Feb 27 19:14:34 2015 +0100
 
-    Merge pull request #137 from tadzik/subtree-squash
-    
-    RFC: use 'git subtree' instead of 'git submodules', now with --squash
-
-commit b7bc2c7ffee297b09c5810107764e7ae2b5a738c
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Fri Feb 20 13:14:19 2015 +0100
-
-    Tool for updating subtree repositories
-
-commit 97bb9fae366de13a0770181b6d382d5f0234551d
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Fri Feb 20 13:12:23 2015 +0100
-
-    Remove remnants of submodules
-
-commit c459415dfdc94b8f075f17be491307e0e5ba62c4
-Merge: 6440e86 6c108c2
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Fri Feb 20 14:51:53 2015 +0100
-
-    Merge commit '6c108c2decd984ccecb87f6cc5ff7050885e5595' as 'ext/Shell__Command'
-
-commit 6c108c2decd984ccecb87f6cc5ff7050885e5595
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Fri Feb 20 14:51:53 2015 +0100
-
-    Squashed 'ext/Shell__Command/' content from commit 3a82d4b
-    
-    git-subtree-dir: ext/Shell__Command
-    git-subtree-split: 3a82d4bb1f37ef04fb20bd2473d500e51c723f61
-
-commit 6440e86917f5ebcffec1ed79fecdea60e0d6ca6c
-Merge: b02bcdb cdd7885
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Fri Feb 20 14:51:35 2015 +0100
-
-    Merge commit 'cdd78853d10aed842d5d0d20b001177bc1b0a13a' as 'ext/JSON__Tiny'
-
-commit cdd78853d10aed842d5d0d20b001177bc1b0a13a
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Fri Feb 20 14:51:35 2015 +0100
-
-    Squashed 'ext/JSON__Tiny/' content from commit 4148627
-    
-    git-subtree-dir: ext/JSON__Tiny
-    git-subtree-split: 4148627054eb9c1f74724c69bc26320c89f6dd0a
-
-commit b02bcdb4bc5d1534248825e7c25fb11218400e07
-Merge: 705e368 d0227c7
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Fri Feb 20 14:51:01 2015 +0100
-
-    Merge commit 'd0227c704faa99375198e353c8934a6b514e583b' as 'ext/File__Find'
-
-commit d0227c704faa99375198e353c8934a6b514e583b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Fri Feb 20 14:51:01 2015 +0100
-
-    Squashed 'ext/File__Find/' content from commit 283045f
-    
-    git-subtree-dir: ext/File__Find
-    git-subtree-split: 283045fc2f42a6302d8491b5ba1a580e896df02a
-
-commit 705e368283ac8525f8b95c428f2e5a90996b9542
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Fri Feb 20 14:50:50 2015 +0100
-
-    Remove submodules, to be later replaced by subtree
+    switch to new test report host
 --------
 perl6-Term-ANSIColor
 commit 0e92caf09397f458314d4a30974618628a3e5600

@@ -3,26 +3,26 @@ Testing modules/xml-writer with /home/coke/sandbox/rakudo-star-daily/star-jvm/ra
 t/escaping.t ... ok
 t/structure.t .. ok
 All tests successful.
-Files=2, Tests=11, 25 wallclock secs ( 0.02 usr  0.01 sys + 28.38 cusr  0.54 csys = 28.95 CPU)
+Files=2, Tests=11, 15 wallclock secs ( 0.02 usr  0.01 sys + 32.36 cusr  0.60 csys = 32.99 CPU)
 Result: PASS
 
 Testing modules/svg with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/basics.t .. ok
 All tests successful.
-Files=1, Tests=3, 13 wallclock secs ( 0.01 usr  0.00 sys + 12.46 cusr  0.24 csys = 12.71 CPU)
+Files=1, Tests=3,  7 wallclock secs ( 0.02 usr  0.00 sys + 15.15 cusr  0.29 csys = 15.46 CPU)
 Result: PASS
 
 Testing modules/svg-plot with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/series.t .. ok
 t/ticks.t ... ok
 All tests successful.
-Files=2, Tests=10, 27 wallclock secs ( 0.02 usr  0.00 sys + 24.74 cusr  0.43 csys = 25.19 CPU)
+Files=2, Tests=10, 13 wallclock secs ( 0.02 usr  0.01 sys + 29.98 cusr  0.50 csys = 30.51 CPU)
 Result: PASS
 
 Testing modules/perl6-Term-ANSIColor with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/00-load.t .. ok
 All tests successful.
-Files=1, Tests=1, 11 wallclock secs ( 0.02 usr  0.00 sys + 10.93 cusr  0.19 csys = 11.14 CPU)
+Files=1, Tests=1,  5 wallclock secs ( 0.02 usr  0.01 sys + 12.33 cusr  0.24 csys = 12.60 CPU)
 Result: PASS
 
 Testing modules/test-mock with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -30,7 +30,7 @@ t/returning.t .. ok
 t/synopsis.t ... ok
 t/with.t ....... ok
 All tests successful.
-Files=3, Tests=13, 29 wallclock secs ( 0.03 usr  0.00 sys + 43.53 cusr  0.73 csys = 44.29 CPU)
+Files=3, Tests=13, 21 wallclock secs ( 0.03 usr  0.00 sys + 45.92 cusr  0.88 csys = 46.83 CPU)
 Result: PASS
 
 Testing modules/Grammar-Profiler-Simple with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -41,7 +41,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -3
   in block  at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Grammar/Profiler/Simple.pm:17
   in regex TOP at t/csv.t:7
   in block  at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Grammar/Profiler/Simple.pm:17
-  in method parse at gen/jvm/CORE.setting:15614
+  in method parse at gen/jvm/CORE.setting:15609
   in block <unit> at t/csv.t:23
 
 # Looks like you planned 15 tests, but ran 3
@@ -54,14 +54,14 @@ Test Summary Report
 t/csv.t (Wstat: 65280 Tests: 3 Failed: 0)
   Non-zero exit status: 255
   Parse errors: Bad plan.  You planned 15 tests but ran 3.
-Files=1, Tests=3, 12 wallclock secs ( 0.02 usr  0.00 sys + 15.76 cusr  0.35 csys = 16.13 CPU)
+Files=1, Tests=3,  7 wallclock secs ( 0.01 usr  0.00 sys + 18.49 cusr  0.32 csys = 18.82 CPU)
 Result: FAIL
 
 Testing modules/grammar-debugger with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/debugger.t .. ok
 t/tracer.t .... ok
 All tests successful.
-Files=2, Tests=2, 21 wallclock secs ( 0.01 usr  0.00 sys + 26.77 cusr  0.43 csys = 27.21 CPU)
+Files=2, Tests=2, 16 wallclock secs ( 0.03 usr  0.00 sys + 34.98 cusr  0.56 csys = 35.57 CPU)
 Result: PASS
 
 Testing modules/Perl6-MIME-Base64 with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -69,170 +69,35 @@ t/basic.t ................. ok
 t/binary-and-long-line.t .. ok
 t/rfc4648-test-vector.t ... ok
 All tests successful.
-Files=3, Tests=45, 33 wallclock secs ( 0.03 usr  0.00 sys + 65.94 cusr  1.05 csys = 67.02 CPU)
+Files=3, Tests=45, 31 wallclock secs ( 0.04 usr  0.00 sys + 80.12 cusr  1.24 csys = 81.40 CPU)
 Result: PASS
 
 Testing modules/uri with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
-Can not invoke object '&postcircumfix:<{ }>'
-  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:36
-  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
-  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
-  in block <unit> at t/01.t:31
-
-# Looks like you planned 48 tests, but ran 14
-t/01.t ................... 
-Dubious, test returned 255 (wstat 65280, 0xff00)
-Failed 34/48 subtests 
+t/01.t ................... ok
 t/escape.t ............... ok
 t/november-urlencoded.t .. ok
 t/rfc-3986-examples.t .... ok
-
-Test Summary Report
--------------------
-t/01.t                 (Wstat: 65280 Tests: 14 Failed: 0)
-  Non-zero exit status: 255
-  Parse errors: Bad plan.  You planned 48 tests but ran 14.
-Files=4, Tests=58, 37 wallclock secs ( 0.04 usr  0.00 sys + 75.93 cusr  1.26 csys = 77.23 CPU)
-Result: FAIL
+All tests successful.
+Files=4, Tests=92, 37 wallclock secs ( 0.04 usr  0.00 sys + 80.39 cusr  1.37 csys = 81.80 CPU)
+Result: PASS
 
 Testing modules/perl6-lwp-simple with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/000-load-module.t ............. ok
-Can not invoke object '&postcircumfix:<{ }>'
-  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:36
-  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
-  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
-  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:312
-  in block <unit> at t/basic-auth.t:11
-
-t/basic-auth.t .................. 
-No subtests run 
-Can not invoke object '&postcircumfix:<{ }>'
-  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:36
-  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
-  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
-  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:312
-  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:47
-  in method post at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:33
-  in block <unit> at t/custom-headers-and-content.t:9
-
-t/custom-headers-and-content.t .. 
-No subtests run 
-Can not invoke object '&postcircumfix:<{ }>'
-  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:36
-  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
-  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
-  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:312
-  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:47
-  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:29
-  in block <unit> at t/get-binary-camelia.t:7
-
-t/get-binary-camelia.t .......... 
-No subtests run 
-Can not invoke object '&postcircumfix:<{ }>'
-  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:36
-  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
-  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
-  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:312
-  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:47
-  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:29
-  in block <unit> at t/get-chunked-6guts.t:8
-
-t/get-chunked-6guts.t ........... 
-No subtests run 
-Can not invoke object '&postcircumfix:<{ }>'
-  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:36
-  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
-  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
-  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:312
-  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:47
-  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:29
-  in block <unit> at t/get-perl6-org.t:7
-
-t/get-perl6-org.t ............... 
-No subtests run 
-Can not invoke object '&postcircumfix:<{ }>'
-  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:36
-  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
-  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
-  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:312
-  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:47
-  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:29
-  in block <unit> at t/get-unsized.t:8
-
-t/get-unsized.t ................. 
-No subtests run 
-Can not invoke object '&postcircumfix:<{ }>'
-  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:36
-  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
-  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
-  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:312
-  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:47
-  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:29
-  in block <unit> at t/get-w3-latin1-utf8.t:6
-
-t/get-w3-latin1-utf8.t .......... 
-No subtests run 
-Can not invoke object '&postcircumfix:<{ }>'
-  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:36
-  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
-  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
-  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:312
-  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:47
-  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:29
-  in block <unit> at t/get-w3-redirect.t:7
-
-t/get-w3-redirect.t ............. 
-No subtests run 
-Can not invoke object '&postcircumfix:<{ }>'
-  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:36
-  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
-  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
-  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:312
-  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:47
-  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:29
-  in method getstore at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:290
-  in block <unit> at t/getstore.t:11
-
-t/getstore.t .................... 
-Dubious, test returned 255 (wstat 65280, 0xff00)
-Failed 4/4 subtests 
-Can not invoke object '&postcircumfix:<{ }>'
-  in sub scheme_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI/DefaultPort.pm:36
-  in method default_port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:149
-  in method port at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/URI.pm:160
-  in method parse_url at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/LWP/Simple.pm:312
-  in block <unit> at t/parse-url.t:38
-
-t/parse-url.t ................... 
-No subtests run 
+t/basic-auth.t .................. ok
+t/custom-headers-and-content.t .. ok
+t/get-binary-camelia.t .......... ok
+t/get-chunked-6guts.t ........... ok
+t/get-perl6-org.t ............... ok
+t/get-unsized.t ................. ok
+t/get-w3-latin1-utf8.t .......... ok
+t/get-w3-redirect.t ............. ok
+t/getstore.t .................... ok
+t/parse-url.t ................... ok
 t/socket-sanity.t ............... ok
 t/stringify-headers.t ........... ok
-
-Test Summary Report
--------------------
-t/basic-auth.t                (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/custom-headers-and-content.t (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/get-binary-camelia.t        (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/get-chunked-6guts.t         (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/get-perl6-org.t             (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/get-unsized.t               (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/get-w3-latin1-utf8.t        (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/get-w3-redirect.t           (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/getstore.t                  (Wstat: 65280 Tests: 0 Failed: 0)
-  Non-zero exit status: 255
-  Parse errors: Bad plan.  You planned 4 tests but ran 0.
-t/parse-url.t                 (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-Files=13, Tests=9, 94 wallclock secs ( 0.05 usr  0.00 sys + 227.72 cusr  3.98 csys = 231.75 CPU)
-Result: FAIL
+All tests successful.
+Files=13, Tests=55, 111 wallclock secs ( 0.05 usr  0.02 sys + 269.77 cusr  3.90 csys = 273.74 CPU)
+Result: PASS
 
 Testing modules/json with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/01-parse.t ...... ok
@@ -240,7 +105,7 @@ t/02-structure.t .. ok
 t/03-unicode.t .... ok
 t/04-roundtrip.t .. ok
 All tests successful.
-Files=4, Tests=120, 34 wallclock secs ( 0.05 usr  0.00 sys + 77.54 cusr  1.39 csys = 78.98 CPU)
+Files=4, Tests=120, 31 wallclock secs ( 0.06 usr  0.01 sys + 79.78 cusr  1.29 csys = 81.14 CPU)
 Result: PASS
 
 Testing modules/perl6-digest-md5 with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1067,19 +932,19 @@ Test Summary Report
 t/perl5-compat.t (Wstat: 1536 Tests: 6 Failed: 6)
   Failed tests:  1-6
   Non-zero exit status: 6
-Files=2, Tests=7, 19 wallclock secs ( 0.05 usr  0.01 sys + 37.50 cusr  0.56 csys = 38.12 CPU)
+Files=2, Tests=7, 20 wallclock secs ( 0.04 usr  0.00 sys + 40.80 cusr  0.61 csys = 41.45 CPU)
 Result: FAIL
 
 Testing modules/file-find with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/01-file-find.t .. ok
 All tests successful.
-Files=1, Tests=10, 10 wallclock secs ( 0.03 usr  0.00 sys + 23.25 cusr  0.42 csys = 23.70 CPU)
+Files=1, Tests=10,  9 wallclock secs ( 0.02 usr  0.00 sys + 22.96 cusr  0.36 csys = 23.34 CPU)
 Result: PASS
 
 Testing modules/shell-command with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/02-shell-command.t .. ok
 All tests successful.
-Files=1, Tests=12,  7 wallclock secs ( 0.02 usr  0.01 sys + 17.18 cusr  0.31 csys = 17.52 CPU)
+Files=1, Tests=12,  7 wallclock secs ( 0.02 usr  0.01 sys + 17.55 cusr  0.32 csys = 17.90 CPU)
 Result: PASS
 
 Testing modules/panda with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1096,19 +961,19 @@ Copying bin/bar to /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-dai
 t/installer.t .. ok
 t/tester.t ..... ok
 All tests successful.
-Files=5, Tests=33, 53 wallclock secs ( 0.04 usr  0.00 sys + 125.31 cusr  2.17 csys = 127.52 CPU)
+Files=5, Tests=33, 53 wallclock secs ( 0.04 usr  0.00 sys + 124.21 cusr  2.16 csys = 126.41 CPU)
 Result: PASS
 
 Testing modules/perl6-http-status with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/01-basic.t .. ok
 All tests successful.
-Files=1, Tests=4,  6 wallclock secs ( 0.02 usr  0.00 sys + 12.76 cusr  0.27 csys = 13.05 CPU)
+Files=1, Tests=4,  6 wallclock secs ( 0.02 usr  0.00 sys + 12.66 cusr  0.19 csys = 12.87 CPU)
 Result: PASS
 
 Testing modules/PSGI with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/encode-psgi-response.t .. ok
 All tests successful.
-Files=1, Tests=24,  7 wallclock secs ( 0.03 usr  0.00 sys + 18.12 cusr  0.28 csys = 18.43 CPU)
+Files=1, Tests=24,  7 wallclock secs ( 0.02 usr  0.00 sys + 17.10 cusr  0.46 csys = 17.58 CPU)
 Result: PASS
 
 Testing modules/perl6-http-easy with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1119,47 +984,39 @@ t/00-basic.t ..... ok
 t/01-template.t .. ok
 t/02-complex.t ... ok
 All tests successful.
-Files=3, Tests=21, 28 wallclock secs ( 0.02 usr  0.00 sys + 60.62 cusr  1.01 csys = 61.65 CPU)
+Files=3, Tests=21, 23 wallclock secs ( 0.03 usr  0.00 sys + 59.67 cusr  0.99 csys = 60.69 CPU)
 Result: PASS
 
 Testing modules/Bailador with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
-Can not invoke object '&infix:<,>'
-  in sub dispatch at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador.pm:90
-  in sub dispatch-psgi at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador.pm:104
-  in sub get-psgi-response at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador/Test.pm:41
-  in block <unit> at t/01-route-existance.t:13
 
+# Failed test 'echo with text'
+# at t/01-route-existance.t line 19
+# expected: [200, ["Content-Type" => "text/html"], "Echo: bar"]
+#      got: [200, ["Content-Type" => "text/html"], "Echo: "]
+
+# Failed test 'echo with text'
+# at t/01-route-existance.t line 21
+# expected: [200, ["Content-Type" => "text/html"], "Echo2: foo-bar--bar"]
+#      got: [200, ["Content-Type" => "text/html"], "Echo2: foo---"]
+
+# Failed test 'echo with text'
+# at t/01-route-existance.t line 23
+# expected: [200, ["Content-Type" => "text/html"], "Echo3: foo-zorg-zorg-bar"]
+#      got: [200, ["Content-Type" => "text/html"], "Echo3: foo---"]
+# Looks like you failed 3 tests of 9
 t/01-route-existance.t ... 
-Dubious, test returned 255 (wstat 65280, 0xff00)
-Failed 9/9 subtests 
-Can not invoke object '&infix:<,>'
-  in sub dispatch at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador.pm:90
-  in sub dispatch-psgi at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador.pm:104
-  in sub get-psgi-response at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador/Test.pm:41
-  in block <unit> at t/03-response-content.t:15
-
-t/03-response-content.t .. 
-Dubious, test returned 255 (wstat 65280, 0xff00)
-Failed 9/9 subtests 
-Can not invoke object '&callframe'
-  in sub import at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Bailador.pm:12
-  in block <unit> at t/04-templates.t:3
-
-t/04-templates.t ......... 
-No subtests run 
+Dubious, test returned 3 (wstat 768, 0x300)
+Failed 3/9 subtests 
+t/03-response-content.t .. ok
+t/04-templates.t ......... ok
 t/05-post-content.t ...... ok
 
 Test Summary Report
 -------------------
-t/01-route-existance.t (Wstat: 65280 Tests: 0 Failed: 0)
-  Non-zero exit status: 255
-  Parse errors: Bad plan.  You planned 9 tests but ran 0.
-t/03-response-content.t (Wstat: 65280 Tests: 0 Failed: 0)
-  Non-zero exit status: 255
-  Parse errors: Bad plan.  You planned 9 tests but ran 0.
-t/04-templates.t       (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-Files=4, Tests=3, 48 wallclock secs ( 0.03 usr  0.01 sys + 77.28 cusr  1.36 csys = 78.68 CPU)
+t/01-route-existance.t (Wstat: 768 Tests: 9 Failed: 3)
+  Failed tests:  6, 8-9
+  Non-zero exit status: 3
+Files=4, Tests=22, 39 wallclock secs ( 0.02 usr  0.00 sys + 86.44 cusr  1.50 csys = 87.96 CPU)
 Result: FAIL
 
 Testing modules/DBIish with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1177,14 +1034,14 @@ t/35-Pg-common.t .......... ok
 t/40-sqlite-common.t ...... ok
 t/41-sqlite-exec-error.t .. ok
 All tests successful.
-Files=7, Tests=227, 77 wallclock secs ( 0.04 usr  0.02 sys + 139.26 cusr  2.12 csys = 141.44 CPU)
+Files=7, Tests=227, 60 wallclock secs ( 0.08 usr  0.00 sys + 148.90 cusr  2.36 csys = 151.34 CPU)
 Result: PASS
 
 Testing modules/jsonrpc with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/client.t .. ok
 t/server.t .. ok
 All tests successful.
-Files=2, Tests=68, 46 wallclock secs ( 0.03 usr  0.00 sys + 81.44 cusr  0.86 csys = 82.33 CPU)
+Files=2, Tests=68, 34 wallclock secs ( 0.03 usr  0.00 sys + 81.74 cusr  0.84 csys = 82.61 CPU)
 Result: PASS
 
 Testing modules/Pod-To-HTML with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1193,7 +1050,7 @@ t/02-code.t ..... ok
 t/03-comment.t .. ok
 t/04-lists.t .... ok
 All tests successful.
-Files=4, Tests=9, 41 wallclock secs ( 0.03 usr  0.00 sys + 70.36 cusr  1.25 csys = 71.64 CPU)
+Files=4, Tests=9, 30 wallclock secs ( 0.03 usr  0.00 sys + 71.86 cusr  1.18 csys = 73.07 CPU)
 Result: PASS
 
 Testing modules/doc with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1201,7 +1058,7 @@ t/pod-convenience.t .. ok
 t/pod-htmlify.t ...... ok
 t/typegraph.t ........ ok
 All tests successful.
-Files=3, Tests=21, 44 wallclock secs ( 0.05 usr  0.00 sys + 75.66 cusr  1.04 csys = 76.75 CPU)
+Files=3, Tests=21, 34 wallclock secs ( 0.04 usr  0.00 sys + 83.37 cusr  1.29 csys = 84.70 CPU)
 Result: PASS
 
 Testing modules/debugger-ui-commandline with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...

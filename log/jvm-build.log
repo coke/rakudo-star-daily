@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install --backends=jvm && make
-Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2015.03-43-g6e87561 / OpenJDK 1.7.0_75).
+Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2015.03-48-g018a450 / OpenJDK 1.7.0_75).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -43,12 +43,12 @@ jar cf0 rakudo-runtime.jar -C bin/ .
 The following step can take a long time, please be patient.
 java -Xss1m -Xms500m -Xmx2000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar:rakudo-runtime.jar:perl6.jar -cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib perl6 --setting=NULL --ll-exception --optimize=3 --target=jar --stagestats --output=CORE.setting.jar gen/jvm/CORE.setting
 Stage start      :   0.000
-Stage parse      :  66.100
+Stage parse      :  65.975
 Stage syntaxcheck:   0.000
 Stage ast        :   0.001
-Stage optimize   :   8.944
-Stage jast       :  21.465
-Stage classfile  :   6.786
+Stage optimize   :   9.298
+Stage jast       :  21.689
+Stage classfile  :   7.341
 Stage jar        :   0.000
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-jvm-runner.pl dev . . /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar
 Creating './perl6-j'
@@ -198,6 +198,7 @@ modules/doc/lib/Type/Variable.pod => /home/coke/sandbox/rakudo-star-daily/star-j
 modules/doc/lib/Type/IO.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/IO.pod
 modules/doc/lib/Type/Stash.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/Stash.pod
 modules/doc/lib/Type/Positional.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/Positional.pod
+modules/doc/lib/Type/PairMap.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/PairMap.pod
 modules/doc/lib/Type/Lock.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/Lock.pod
 modules/doc/lib/Type/Rational.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/Rational.pod
 modules/doc/lib/Type/Capture.pod => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/languages/perl6/lib/Type/Capture.pod

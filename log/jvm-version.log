@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.5.4) (7u75-2.5.4-2)
 OpenJDK 64-Bit Server VM (build 24.75-b04, mixed mode)
 Rakudo
-Cluj-37-gf5efb7d
+Cluj-46-g9b5d4e2
 NQP
 2015.03-51-ge45d8de
 modules
@@ -233,20 +233,13 @@ Date:   Fri Nov 7 21:48:06 2014 +0100
     need to flatten ourself when assigning to a constant
 --------
 perl6-http-easy
-commit 312d2cbf15d38ad8a06e66947e6b64839e4234c0
-Merge: 76ae50f 00c6dae
+commit 73de3b0c7bb5e2186801c21b2611f9001f23ecb3
 Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Sat Jan 10 23:14:32 2015 +0200
+Date:   Mon Mar 23 05:32:38 2015 +0200
 
-    Merge pull request #21 from szabgab/debug
-    
-    just two more debugging printouts
-
-commit 00c6dae5274abe6cd4a86a360243e7ba2fa530dd
-Author: Gabor Szabo <gabor@szabgab.com>
-Date:   Sat Jan 10 21:16:50 2015 +0200
-
-    just two more debugging printouts
+    - Merge https://github.com/supernovus/perl6-psgi into HTTP::Easy::PSGI
+    - Remove dependency on obsolete module PSGI
+    - Fix type mismatch between content (Buf) and output (Str)
 --------
 perl6-http-status
 commit 1667a47cbe6e5ecef30974a456d8373625db9a57

@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.5.4) (7u75-2.5.4-2)
 OpenJDK 64-Bit Server VM (build 24.75-b04, mixed mode)
 Rakudo
-Cluj-52-g663a22b
+Cluj-59-gfb991be
 NQP
-2015.03-51-ge45d8de
+2015.03-53-g579b06f
 modules
 --------
 Bailador
@@ -104,22 +104,20 @@ Date:   Wed Apr 30 18:36:36 2014 -0400
     If the target is hundreds or thousands of lines long then this is always going to be a lot faster. Right now the impact is colossal for target strings of more than a dozen typical text file lines.
 --------
 doc
-commit 23135c06734bbd4012af6137e85af6c552e7b57f
-Merge: 9d93967 fd6d1f8
-Author: Paul Cochrane <paultcochrane@users.noreply.github.com>
-Date:   Thu Mar 26 06:52:02 2015 +0100
+commit 91cbe6d41c892326a4e6497e93cb5f30a2524f08
+Merge: 4a750ef 9213d4b
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Fri Mar 27 17:38:33 2015 +0100
 
-    Merge pull request #63 from edwinst/master
+    Merge pull request #66 from jonathanstowe/master
     
-    Emphasize unorderedness of "Sets, Bags, and Mixes".
+    Document $*GROUP
 
-commit fd6d1f83164b3ec82a3f12e1d580666784c633a7
-Author: Edwin Steiner <edwin.steiner@gmx.net>
-Date:   Wed Mar 25 21:28:35 2015 +0100
+commit 9213d4b7ce5d13bdee9049bdfae92e1de41ba94d
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Fri Mar 27 16:18:16 2015 +0000
 
-    Rephrase subtitle and introduction of "Sets, Bags, and Mixes" to
-    emphasize the unorderedness of these containers. Avoid calling them "lists".
-    Add some words about immutable/mutable variants.
+    Document $*GROUP
 --------
 file-find
 commit 283045fc2f42a6302d8491b5ba1a580e896df02a
@@ -233,11 +231,17 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit 4b0c7c70baeea113cb5bfa671ae84b247cb129a2
+commit d83b618c37849d9c129f64bea639452fc7deb6b8
 Author: Tobias Leich <email@froggs.de>
-Date:   Sun Mar 1 10:08:52 2015 +0100
+Date:   Thu Mar 26 21:27:45 2015 +0100
 
-    silence warnings about uninitialized values in Str
+    display indication that a test report was sent
+    
+    A successful test report transmition does look like:
+    ==> Submitted test report as: http://testers.perl6.org/reports/38222.html
+    
+    On a second attempt it shows that there is nothing to send:
+    ==> Test report is duplicate of: http://testers.perl6.org/reports/38222.html
 --------
 perl6-Term-ANSIColor
 commit 0e92caf09397f458314d4a30974618628a3e5600

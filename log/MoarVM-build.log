@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar && make
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.03-58-g3110921 / MoarVM 2015.03-23-g3819ea7).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.03-58-g3110921 / MoarVM 2015.03-24-g788d64f).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -49,12 +49,12 @@ gcc  -L/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/instal
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm src/gen/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  32.564
+Stage parse      :  31.695
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   3.818
-Stage mast       :  10.676
-Stage mbc        :   0.173
+Stage optimize   :   3.620
+Stage mast       :  10.180
+Stage mbc        :   0.137
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" perl6.moarvm --target=mbc --ll-exception --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e rm_f perl6-m
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" .
@@ -152,10 +152,12 @@ modules/shell-command/lib/Shell/Command.pm => /home/coke/sandbox/rakudo-star-dai
 == Installing modules/panda
 modules/panda/lib/Panda.pm => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda.pm
 modules/panda/lib/Panda/Tester.pm => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Tester.pm
+modules/panda/lib/Panda/Bundler.pm => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Bundler.pm
 modules/panda/lib/Panda/Common.pm => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Common.pm
 modules/panda/lib/Panda/Project.pm => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Project.pm
 modules/panda/lib/Panda/Ecosystem.pm => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Ecosystem.pm
 modules/panda/lib/Panda/Fetcher.pm => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Fetcher.pm
+modules/panda/lib/Panda/DepTracker.pm => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/DepTracker.pm
 modules/panda/lib/Panda/Builder.pm => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Builder.pm
 modules/panda/lib/Panda/Installer.pm => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Installer.pm
 modules/panda/lib/Panda/App.pm => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/App.pm
@@ -467,8 +469,10 @@ modules/debugger-ui-commandline/lib/Debugger/UI/CommandLine.pm => /home/coke/san
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Builder.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Builder.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Tester.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Tester.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Installer.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Installer.pm
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Bundler.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Bundler.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Reporter.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/Reporter.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda.pm
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/DepTracker.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/DepTracker.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/App.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Panda/App.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/HTTP/Status.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/HTTP/Status.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/PSGI.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/PSGI.pm6
@@ -495,6 +499,14 @@ modules/debugger-ui-commandline/lib/Debugger/UI/CommandLine.pm => /home/coke/san
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/To/HTML.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/To/HTML.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/Htmlify.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/Htmlify.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/Convenience.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/Convenience.pm6
+[31m===[0mSORRY![31m===[0m Error while compiling /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/Convenience.pm6
+Please use !! rather than :
+at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/Convenience.pm6:106
+------> [32md::Heading.new :level(.level - $by + $to[33m⏏[31m) :contents[.contents][0m
+    expecting any of:
+        statement end
+        statement modifier
+        statement modifier loop
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/To/SectionFilter.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Pod/To/SectionFilter.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Perl6/Type.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Perl6/Type.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Perl6/TypeGraph.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/languages/perl6/lib/Perl6/TypeGraph.pm

@@ -1,7 +1,7 @@
 MoarVM
-2015.03-23-g3819ea7
+2015.03-24-g788d64f
 Rakudo
-Cluj-84-g99a62f3
+Cluj-95-gee7a375
 NQP
 2015.03-58-g3110921
 modules
@@ -63,18 +63,18 @@ Date:   Tue Feb 18 11:36:04 2014 -0800
     Added S11 provides
 --------
 Perl6-MIME-Base64
-commit 888938e1139967f132756acdc98af8b2a2bd0ee0
-Author: RS <glassflag@users.noreply.github.com>
-Date:   Fri May 30 01:24:06 2014 +1200
+commit 475c10bed6c68fbd792bd5f4e8be6c46cf440a48
+Author: Andrew Egeler <andrew@egeler.us>
+Date:   Sat Mar 28 17:35:51 2015 -0400
 
-    $*VM<name> is deprecated
+    Fix provides to include internal class
 --------
 Pod-To-HTML
-commit 5816580438a5c114a9baa68f36bd652b57630b1a
-Author: Mouq <alexmoquin@gmail.com>
-Date:   Sun Jan 25 18:13:37 2015 -0500
+commit 2d214e6774434688affa31070ba9daf6a2967b22
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sun Mar 29 09:26:53 2015 +0200
 
-    Unbreak in the case that %*POD2HTML-CALLBACKS isn't defined
+    add "provides" section to META.info
 --------
 Template-Mojo
 commit 81eb29da3b6ce341643c413362a3046653c2904f
@@ -113,18 +113,20 @@ Date:   Wed Apr 30 18:36:36 2014 -0400
     If the target is hundreds or thousands of lines long then this is always going to be a lot faster. Right now the impact is colossal for target strings of more than a dozen typical text file lines.
 --------
 doc
-commit f0ce0717e286b168322b2f46b22f774db7bb9801
-Merge: 4a50873 c970f64
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Sat Mar 28 14:55:22 2015 +0100
+commit 8e3bc380dfc2c8cc49b004fcc36ea0c9c42ddd32
+Merge: e84e26a bd0f1a3
+Author: Paul Cochrane <paultcochrane@users.noreply.github.com>
+Date:   Sun Mar 29 16:10:39 2015 +0200
 
-    Merge branch 'master' of github.com:perl6/doc
+    Merge pull request #67 from nbrown/patch-1
+    
+    Fix sigil invariance in :delete example
 
-commit c970f649f73eda7d0cce1b3cdc93746854cc2a68
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Mar 28 13:50:16 2015 +0100
+commit bd0f1a34f3cdeeb1ff65b26360d8ebfc0345ca45
+Author: Nathan Brown <nbrown04@gmail.com>
+Date:   Sun Mar 29 09:15:01 2015 -0400
 
-    Mention that subs are my-scoped by default
+    Fix sigil invariance in :delete example
 --------
 file-find
 commit 283045fc2f42a6302d8491b5ba1a580e896df02a
@@ -161,65 +163,27 @@ Date:   Tue Dec 30 22:10:06 2014 +0100
     Modified the README file with pod documentation in Find.pm
 --------
 grammar-debugger
-commit 01b3e7baab403ec12fbb5cac7793720c5f3cfd4e
-Merge: 96c0c46 b25b90c
+commit 3f2f39ec0cf93d53fe7c5f9f396cd2eb44811d97
+Merge: 01b3e7b 2943be7
 Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Sun Sep 7 06:35:19 2014 +0300
+Date:   Sun Mar 29 16:37:57 2015 +0200
 
-    Merge pull request #6 from meisl/master
+    Merge pull request #14 from FROGGS/patch-1
     
-    Make it work under Win32/Rakudo* 2014.03.01 (again) - and fix #4
+    add provides section for latest panda (S11 support)
 
-commit b25b90cd77bbd60155176f69320a014c611c3168
-Author: Matthias Kling <m.kling@sprax.eu>
-Date:   Wed Sep 3 14:25:19 2014 +0200
+commit 2943be796e945063c5865ae315aad7b2107e7eb3
+Author: Tobias Leich <email@froggs.de>
+Date:   Sun Mar 29 15:46:27 2015 +0200
 
-    + add comment explaining how to get colored output on Windows
-
-commit c6f7a5d4d517d32f5d7e64feaa413fabef12698e
-Author: Matthias Kling <m.kling@sprax.eu>
-Date:   Tue Sep 2 23:04:20 2014 +0200
-
-    * same for Tracer as for Debugger: only hook on Regexes rather than testing for magical names
-
-commit 326ab0313d12cbb6efc5b5f49a4af5f15647cb69
-Author: Matthias Kling <m.kling@sprax.eu>
-Date:   Tue Sep 2 22:45:45 2014 +0200
-
-    * fix debugger.t: Debugger waits for input after the 1st regex, so we have to give it some
-
-commit 7a005c9894acc69a4cbd7162472c5c546471efa0
-Author: Matthias Kling <m.kling@sprax.eu>
-Date:   Tue Sep 2 22:35:28 2014 +0200
-
-    - no point in explicitly inheriting from Mu, just as in Tracer
-
-commit 7c2954426ccaae35200f7f1f81b0cc1a2949da1b
-Author: Matthias Kling <m.kling@sprax.eu>
-Date:   Tue Sep 2 22:30:01 2014 +0200
-
-    + add the very same simply sanity test for Debugger as there is for Tracer - but this one fails with "No such method 'flush' for invocant of type '<anon>'" !?!
-
-commit 294f5f3076cf4da107380fde3636e98e2264d91f
-Author: Matthias Kling <m.kling@sprax.eu>
-Date:   Tue Sep 2 22:26:18 2014 +0200
-
-    * in &find_methods: hook on methods of type Regex rather than checking for magic names - that's straight what it's about anyways, right?
-    */+ some comments in Debugger
-
-commit 4a8e5ebcc93f75c29d391147356b85a61f30183b
-Author: Matthias Kling <m.kling@sprax.eu>
-Date:   Tue Sep 2 21:46:16 2014 +0200
-
-    * workaround *Cannot modify an immutable value* problem (at least on Windows, Rakudo* 2014.03.01)
-    + add gitignore
+    add provides section for latest panda (S11 support)
 --------
 json
-commit 4148627054eb9c1f74724c69bc26320c89f6dd0a
+commit f889af3c6e67ab645eca0795afff8d9d247ca54a
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Feb 8 14:49:00 2015 +0100
+Date:   Sun Mar 29 09:55:55 2015 +0200
 
-    Better error reporting on invalid input
+    Add provides section
 --------
 jsonrpc
 commit 471a920dfc51f642fc9f2ff3b49c8cd352d51abd
@@ -238,36 +202,34 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit e5fee296cc1f8863c0ece79d3b43dfae05a81781
+commit 80b407b63d477c31f4bee8d2fd1b0ab6ae3e93dc
 Author: Tobias Leich <email@froggs.de>
-Date:   Sat Mar 28 18:04:04 2015 +0100
+Date:   Sun Mar 29 13:34:51 2015 +0200
 
-    remove outdated files installed by CUR::Installation
+    tweak dependency detection
 --------
 perl6-Term-ANSIColor
-commit 0e92caf09397f458314d4a30974618628a3e5600
-Merge: d0af2ab 06768cc
-Author: Tadeusz Sośnierz <tadzikes@gmail.com>
-Date:   Thu May 1 02:18:16 2014 +0200
+commit d723e5bde1a6d4b2506616810d3ec25abaf4a609
+Merge: 0e92caf 83e06f4
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Sun Mar 29 13:00:53 2015 +0200
 
-    Merge pull request #1 from timo/patch-1
+    Merge pull request #3 from FROGGS/patch-1
     
-    Update documentation for colored
+    add provides section for latest panda (S11 support)
 
-commit 06768cc282099e283ceb571dc33b7623c586667c
-Author: timo <timonator@perpetuum-immobile.de>
-Date:   Thu May 1 02:15:26 2014 +0200
+commit 83e06f4239fc7e81393242289933b8f13fe3143e
+Author: Tobias Leich <email@froggs.de>
+Date:   Sun Mar 29 12:59:24 2015 +0200
 
-    Update documentation for colored
-    
-    the arguments were swapped
+    add provides section for latest panda (S11 support)
 --------
 perl6-digest-md5
-commit 0905db3bce76f0920cbaeb3d9311ca470d0254cd
+commit 14d5d7bf1cfb47dc6140e8b9cec3d00620cb1633
 Author: Tobias Leich <email@froggs.de>
-Date:   Fri Nov 7 21:48:06 2014 +0100
+Date:   Sun Mar 29 15:42:19 2015 +0200
 
-    need to flatten ourself when assigning to a constant
+    add provides section for latest panda (S11 support)
 --------
 perl6-http-easy
 commit 73de3b0c7bb5e2186801c21b2611f9001f23ecb3
@@ -297,20 +259,11 @@ Date:   Sat Aug 30 21:52:53 2014 +0200
     This unbreaks HTTP::Status on parrot.
 --------
 perl6-lwp-simple
-commit 6531ede8976903c4973229d2bfff897c4817a6dc
-Merge: 93bdaa6 58446c4
+commit eb86c3d2ea4cc154acdef26da90f818ee54c8049
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Fri Feb 27 22:55:09 2015 +0100
+Date:   Sun Mar 29 09:58:49 2015 +0200
 
-    Merge pull request #45 from stmuk/master
-    
-    remove implicit test of https caused by wordpress redirect
-
-commit 58446c43a1711d3949a8be089cf083b35b16431b
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Fri Feb 27 20:56:37 2015 +0000
-
-    remove implicit test of https caused by wordpress redirect
+    add "provides" section to META.info
 --------
 shell-command
 commit 3a82d4bb1f37ef04fb20bd2473d500e51c723f61
@@ -320,21 +273,18 @@ Date:   Fri Nov 21 21:37:49 2014 +0100
     Fix deprecation message
 --------
 svg
-commit fb3dcff25535c922cea5b74c1d3bb03f15aa0eb8
+commit 11d4a402e1175aa68454740e3ab0d8597816b548
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Wed Apr 25 11:55:28 2012 +0200
+Date:   Sun Mar 29 09:32:09 2015 +0200
 
-    get rid of redundant plan(*)
+    add "provides" section to META.info
 --------
 svg-plot
-commit 82aca9bff4891c3142167ce131b17c436d91126e
+commit b3665793d70399f9893adae3095c2832e17418fc
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue Dec 30 15:25:45 2014 +0100
+Date:   Sun Mar 29 09:36:01 2015 +0200
 
-    Switch from .map to .for
-    
-    .map will change its behavior to not flatten, while .for will stay
-    as it is now. See http://pmthium.com/2014/10/apw2014/ for reference
+    add "provides" section to META.info
 --------
 test-mock
 commit 3e9f613db5caec21817dad56a76d2977aae73f97
@@ -360,18 +310,15 @@ Date:   Mon Dec 1 21:59:14 2014 -0500
     fix typo
 --------
 uri
-commit 51831798edba153f15a7e8478bc1015b4d58f1c8
+commit e7d1bf83327c73767afbe3999ac12aba1ff21a6e
 Author: Tobias Leich <email@froggs.de>
-Date:   Wed Mar 11 22:38:05 2015 +0100
+Date:   Sat Mar 28 22:30:23 2015 +0100
 
-    give URI a version
+    add provides section for latest panda (S11 support)
 --------
 xml-writer
-commit 5df32ebebd7ae17bfb92db6c98b72300e17e59ae
+commit 3fb7e558685a76b507611760daa4e8cf032fc276
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue Dec 30 15:26:41 2014 +0100
+Date:   Sun Mar 29 09:31:02 2015 +0200
 
-    Switch from .map to .for
-    
-    .map will change its behavior to not flatten, while .for will stay
-    as it is now. See http://pmthium.com/2014/10/apw2014/ for reference
+    add "provides" section to META.info

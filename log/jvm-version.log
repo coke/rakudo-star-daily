@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.5.4) (7u75-2.5.4-2)
 OpenJDK 64-Bit Server VM (build 24.75-b04, mixed mode)
 Rakudo
-Cluj-136-g6caf1d4
+Cluj-148-g80afb7d
 NQP
-2015.03-64-ge204d8a
+2015.03-65-g2641c50
 modules
 --------
 Bailador
@@ -122,11 +122,11 @@ Date:   Wed Apr 30 18:36:36 2014 -0400
     If the target is hundreds or thousands of lines long then this is always going to be a lot faster. Right now the impact is colossal for target strings of more than a dozen typical text file lines.
 --------
 doc
-commit 60aff10ccf5eff15c6de6ea9e20c19424b03687b
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Wed Apr 1 00:37:38 2015 +0200
+commit a1aeb936e29ec7a7df4a40a679d91b0f899cb856
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Apr 1 21:57:45 2015 +0100
 
-    footer-html now takes a path to the pod file.
+    typos
 --------
 file-find
 commit 283045fc2f42a6302d8491b5ba1a580e896df02a
@@ -202,20 +202,13 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit f222ceb760c0e8d700c50de804c647dd1ebac3ae
-Merge: 80b407b 93c43c8
+commit 01c913a8309d4785e93b0faa8e499b394b3a7e5a
 Author: Tobias Leich <email@froggs.de>
-Date:   Tue Mar 31 19:24:45 2015 +0200
+Date:   Thu Apr 2 13:41:05 2015 +0200
 
-    Merge pull request #145 from ugexe/inst-path
+    treat "test-depends" and "build-depends" like "depends"
     
-    update README for new paths, windows installation, old info
-
-commit 93c43c81aca5934dd88726795ea87641c6dfe945
-Author: Nick Logan <ugexe@cpan.org>
-Date:   Thu Mar 26 16:32:32 2015 -0400
-
-    update README for new paths, windows installation, old info
+    This also ignores Test and NativeCall, in case it appears as a dependency.
 --------
 perl6-Term-ANSIColor
 commit d723e5bde1a6d4b2506616810d3ec25abaf4a609
@@ -330,11 +323,20 @@ Date:   Fri May 3 17:31:13 2013 +0300
     Remove deprecated repo-url from META.info
 --------
 ufo
-commit 624abf2d6725ea9f81182411d746b82278d1a583
-Author: Will "Coke" Coleda <will@coleda.com>
-Date:   Mon Dec 1 21:59:14 2014 -0500
+commit 3a0464ff8addf56a9e51b58dae49f30595f45b18
+Merge: 624abf2 35497a3
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Apr 2 08:39:18 2015 +0200
 
-    fix typo
+    Merge pull request #23 from zoffixznet/add_meta_provides
+    
+    add provides section for latest panda (S11 support)
+
+commit 35497a3cdc821f09743ac93f889be4acc65fca3d
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Wed Apr 1 19:44:34 2015 -0400
+
+    add provides section for latest panda (S11 support)
 --------
 uri
 commit e7d1bf83327c73767afbe3999ac12aba1ff21a6e

@@ -1,9 +1,9 @@
 MoarVM
 2015.03-43-g684d8ae
 Rakudo
-Cluj-148-g80afb7d
+Cluj-153-g4162768
 NQP
-2015.03-65-g2641c50
+2015.03-66-g4edc1eb
 modules
 --------
 Bailador
@@ -14,11 +14,13 @@ Date:   Sun Jan 25 19:34:10 2015 +0200
     eliminate the need for all the response-content test functions
 --------
 DBIish
-commit 28eb16d9786f7f1319d216af78d02942ffec1dab
+commit 1f988353805ee37731c9c6ca9201b3410c1d356e
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Mar 21 07:24:31 2015 +0100
+Date:   Fri Apr 3 11:50:07 2015 +0200
 
-    Update .gitignore
+    mysql: correct some more nativecall signatures;
+    
+    also remove some unused declarations
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -72,18 +74,22 @@ Date:   Tue Feb 18 11:36:04 2014 -0800
     Added S11 provides
 --------
 Perl6-MIME-Base64
-commit 475c10bed6c68fbd792bd5f4e8be6c46cf440a48
-Author: Andrew Egeler <andrew@egeler.us>
-Date:   Sat Mar 28 17:35:51 2015 -0400
+commit 120d1d256fce97f5de860670fc824c5127c719a6
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Fri Apr 3 04:05:05 2015 -0400
 
-    Fix provides to include internal class
+    Fixes Windows failures
+    
+    Fixes #3
 --------
 Pod-To-HTML
-commit 2d214e6774434688affa31070ba9daf6a2967b22
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Mar 29 09:26:53 2015 +0200
+commit ccf9e9fca1a6be1f78d9ea73f3220d38a95f921f
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Fri Apr 3 03:18:44 2015 -0400
 
-    add "provides" section to META.info
+    Fixes failures on Windows
+    
+    Seems a quirk of new lines on Windows. Fixes #6
 --------
 Template-Mojo
 commit 81eb29da3b6ce341643c413362a3046653c2904f
@@ -122,11 +128,11 @@ Date:   Wed Apr 30 18:36:36 2014 -0400
     If the target is hundreds or thousands of lines long then this is always going to be a lot faster. Right now the impact is colossal for target strings of more than a dozen typical text file lines.
 --------
 doc
-commit a1aeb936e29ec7a7df4a40a679d91b0f899cb856
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Wed Apr 1 21:57:45 2015 +0100
+commit e5f11c2fac21098565412797ab868c2ee8497ebc
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Fri Apr 3 12:38:38 2015 -0400
 
-    typos
+    Built-ins with comma-less blocks now require a comma
 --------
 file-find
 commit 283045fc2f42a6302d8491b5ba1a580e896df02a
@@ -202,13 +208,11 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit 01c913a8309d4785e93b0faa8e499b394b3a7e5a
-Author: Tobias Leich <email@froggs.de>
-Date:   Thu Apr 2 13:41:05 2015 +0200
+commit 2199481a8964432c90800d6529b52f932308848c
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Fri Apr 3 18:17:15 2015 +0200
 
-    treat "test-depends" and "build-depends" like "depends"
-    
-    This also ignores Test and NativeCall, in case it appears as a dependency.
+    Have a newline at the end of META.info.proposed
 --------
 perl6-Term-ANSIColor
 commit d723e5bde1a6d4b2506616810d3ec25abaf4a609

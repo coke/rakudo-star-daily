@@ -1,17 +1,19 @@
 OpenJDK Runtime Environment (IcedTea 2.5.4) (7u75-2.5.4-2)
 OpenJDK 64-Bit Server VM (build 24.75-b04, mixed mode)
 Rakudo
-Cluj-239-g9cc5aa5
+Cluj-248-g49f168e
 NQP
-2015.03-102-g64fd183
+2015.03-106-g8128fa0
 modules
 --------
 Bailador
-commit d7462021c9e3f2394498a5a3c67824102eab5120
-Author: Gabor Szabo <gabor@szabgab.com>
-Date:   Sun Jan 25 19:34:10 2015 +0200
+commit 2424d55cca1eca7bde2befd135b10ab7acda1e63
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Mon Apr 13 16:00:58 2015 +0200
 
-    eliminate the need for all the response-content test functions
+    Make things more windows-proof, fix #22
+    
+    Something tells me there should be a better way to do this.
 --------
 DBIish
 commit eb14b627dd36e4928c5fde49869ccb85520e7949
@@ -165,38 +167,24 @@ Date:   Sat Apr 11 19:22:07 2015 +0200
     Str.ends-with
 --------
 file-find
-commit 283045fc2f42a6302d8491b5ba1a580e896df02a
-Merge: ca2b8ac 7d4d3dd
+commit 73dd9445e39e97a6c9a6ce4e333d78719ab71f50
+Merge: 283045f e706576
 Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Sun Feb 1 11:22:22 2015 +0100
+Date:   Mon Apr 13 12:59:48 2015 +0200
 
-    Merge pull request #3 from isleofmax/master
+    Merge pull request #4 from paultcochrane/pr/fix_code_in_readme
     
-    New README.md for the project that replaces the old README
+    Convert Pod code (C<>) into Markdown code
 
-commit 7d4d3ddaa3950e1e8a06dad804a63383be9dda2c
-Author: isleofmax <isleofmax@gmail.com>
-Date:   Wed Dec 31 01:18:24 2014 +0100
+commit e706576f23591422c3ae412ec0762528f2d7ac0e
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Mon Feb 23 16:24:49 2015 +0100
 
-    remove the old README
-
-commit 9f7fc1b79c89e1e7541c4493498cd4669da3bd54
-Author: isleofmax <isleofmax@gmail.com>
-Date:   Wed Dec 31 01:16:56 2014 +0100
-
-    new README.md with documentation from pod
-
-commit a70a9496dd525029a6d579621960d6a1484172de
-Author: isleofmax <isleofmax@gmail.com>
-Date:   Tue Dec 30 22:23:17 2014 +0100
-
-    Modified the README file with pod documentation in Find.pm version 2
-
-commit ad74c2613d489d164dbd6256a6e3f66b1e831977
-Author: isleofmax <isleofmax@gmail.com>
-Date:   Tue Dec 30 22:10:06 2014 +0100
-
-    Modified the README file with pod documentation in Find.pm
+    Convert Pod code (C<>) into Markdown code
+    
+    The Pod C<> formatting was causing the Markdown to not be correctly rendered
+    as HTML on GitHub.  This change converts all Pod code formatting into
+    Markdown code formatting.
 --------
 grammar-debugger
 commit 3f2f39ec0cf93d53fe7c5f9f396cd2eb44811d97
@@ -238,11 +226,11 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit 2199481a8964432c90800d6529b52f932308848c
+commit 7656d109235d38cb59d7c39c426d50148f34b9e6
 Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Fri Apr 3 18:17:15 2015 +0200
+Date:   Mon Apr 13 13:34:59 2015 +0200
 
-    Have a newline at the end of META.info.proposed
+    Fix for #131
 --------
 perl6-Term-ANSIColor
 commit d723e5bde1a6d4b2506616810d3ec25abaf4a609

@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.5.4) (7u75-2.5.4-2)
 OpenJDK 64-Bit Server VM (build 24.75-b04, mixed mode)
 Rakudo
-Cluj-312-ga244887
+Cluj-326-g4be9900
 NQP
-2015.03-118-gf51bf0e
+2015.03-123-g4aff120
 modules
 --------
 Bailador
@@ -160,14 +160,11 @@ Date:   Wed Apr 30 18:36:36 2014 -0400
     If the target is hundreds or thousands of lines long then this is always going to be a lot faster. Right now the impact is colossal for target strings of more than a dozen typical text file lines.
 --------
 doc
-commit 69e5dbb38193388ddd2c981297cda685672433a3
-Author: skids <bri@abrij.org>
-Date:   Fri Apr 17 15:00:28 2015 -0400
+commit d7412019917daa146e238ec13ebe49beb12293e1
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sat Apr 18 13:40:59 2015 +0200
 
-    Document if/until/else/elsif
-    Add some syntax notes and a lead-in to section on "do"
-    Could not paper over the Rakudo "Nil" fossil, so put in some caveats
-       (those will have to be pulled later.)
+    Cool.uniname; uni* coercions
 --------
 file-find
 commit 19250d2aaaf6b8c6710bfa5e228d58ad46468113
@@ -281,129 +278,281 @@ Date:   Sun Mar 29 15:42:19 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 perl6-http-easy
-commit 73de3b0c7bb5e2186801c21b2611f9001f23ecb3
-Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Mon Mar 23 05:32:38 2015 +0200
+commit 1e4ea3ad39ede3c72b4069d24e50cf3ce8072e52
+Merge: 4fb39e4 fb9b17e
+Author: Tobias Leich <email@froggs.de>
+Date:   Tue Mar 24 15:58:30 2015 +0100
 
-    - Merge https://github.com/supernovus/perl6-psgi into HTTP::Easy::PSGI
-    - Remove dependency on obsolete module PSGI
-    - Fix type mismatch between content (Buf) and output (Str)
+    Merge pull request #44 from paultcochrane/pr/readme_fixups
+    
+    Some README fixups
+
+commit fb9b17eb59ae4ca11bf11b2438073ab5cdf3e728
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:43:02 2015 +0100
+
+    Wrap paragraphs and vertically separate sections consistently
+
+commit 1018ddd32798ea8ddd9ecdf12510ce5fbe25170e
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:41 2015 +0100
+
+    Purge trailing whitespace
+
+commit 438a4c30ffa196586fb3e413dcaf00b77442f6a0
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:11 2015 +0100
+
+    Fix minor typos
 --------
 perl6-http-status
-commit 1667a47cbe6e5ecef30974a456d8373625db9a57
-Merge: 607b35d 8ddd995
-Author: Timothy Totten <2009@huri.net>
-Date:   Tue Sep 9 09:29:21 2014 -0700
-
-    Merge pull request #5 from FROGGS/patch-2
-    
-    the hash key is a string, so make it one for the lookup
-
-commit 8ddd995cf76f595ab15e50b720c9db92cd8ca55b
+commit 1e4ea3ad39ede3c72b4069d24e50cf3ce8072e52
+Merge: 4fb39e4 fb9b17e
 Author: Tobias Leich <email@froggs.de>
-Date:   Sat Aug 30 21:52:53 2014 +0200
+Date:   Tue Mar 24 15:58:30 2015 +0100
 
-    the hash key is a string, so make it one for the lookup
+    Merge pull request #44 from paultcochrane/pr/readme_fixups
     
-    This unbreaks HTTP::Status on parrot.
+    Some README fixups
+
+commit fb9b17eb59ae4ca11bf11b2438073ab5cdf3e728
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:43:02 2015 +0100
+
+    Wrap paragraphs and vertically separate sections consistently
+
+commit 1018ddd32798ea8ddd9ecdf12510ce5fbe25170e
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:41 2015 +0100
+
+    Purge trailing whitespace
+
+commit 438a4c30ffa196586fb3e413dcaf00b77442f6a0
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:11 2015 +0100
+
+    Fix minor typos
 --------
 perl6-lwp-simple
-commit 9068b8ed278fa7a28295c761b8351c3b193c9c56
-Merge: eb86c3d 45a8e85
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Mar 30 10:56:53 2015 +0200
+commit 1e4ea3ad39ede3c72b4069d24e50cf3ce8072e52
+Merge: 4fb39e4 fb9b17e
+Author: Tobias Leich <email@froggs.de>
+Date:   Tue Mar 24 15:58:30 2015 +0100
 
-    Merge pull request #47 from retupmoca/master
+    Merge pull request #44 from paultcochrane/pr/readme_fixups
     
-    Fix socket-sanity.t (change host)
+    Some README fixups
 
-commit 45a8e855502ac5977f71270c56a0e69f2046a86b
-Author: Andrew Egeler <andrew@egeler.us>
-Date:   Sun Mar 29 20:40:49 2015 -0400
+commit fb9b17eb59ae4ca11bf11b2438073ab5cdf3e728
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:43:02 2015 +0100
 
-    Fix socket-sanity.t (change host)
+    Wrap paragraphs and vertically separate sections consistently
+
+commit 1018ddd32798ea8ddd9ecdf12510ce5fbe25170e
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:41 2015 +0100
+
+    Purge trailing whitespace
+
+commit 438a4c30ffa196586fb3e413dcaf00b77442f6a0
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:11 2015 +0100
+
+    Fix minor typos
 --------
 shell-command
-commit f7059094e233a3468bf3d5c9a343f28b256ae020
-Merge: 3a82d4b 4f24d70
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Sun Apr 5 21:50:37 2015 +0200
-
-    Merge pull request #3 from FROGGS/patch-3
-    
-    add provides section for latest panda (S11 support)
-
-commit 4f24d70ec4311a2b6d1f2540ff9a8a2479d3a18f
+commit 1e4ea3ad39ede3c72b4069d24e50cf3ce8072e52
+Merge: 4fb39e4 fb9b17e
 Author: Tobias Leich <email@froggs.de>
-Date:   Sun Mar 29 15:56:00 2015 +0200
+Date:   Tue Mar 24 15:58:30 2015 +0100
 
-    add provides section for latest panda (S11 support)
+    Merge pull request #44 from paultcochrane/pr/readme_fixups
+    
+    Some README fixups
+
+commit fb9b17eb59ae4ca11bf11b2438073ab5cdf3e728
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:43:02 2015 +0100
+
+    Wrap paragraphs and vertically separate sections consistently
+
+commit 1018ddd32798ea8ddd9ecdf12510ce5fbe25170e
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:41 2015 +0100
+
+    Purge trailing whitespace
+
+commit 438a4c30ffa196586fb3e413dcaf00b77442f6a0
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:11 2015 +0100
+
+    Fix minor typos
 --------
 svg
-commit 81804e0744f3bff4c6cfc8d6437e34b0ec30e475
-Merge: 11d4a40 9078e18
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue Mar 31 06:47:24 2015 +0200
+commit 1e4ea3ad39ede3c72b4069d24e50cf3ce8072e52
+Merge: 4fb39e4 fb9b17e
+Author: Tobias Leich <email@froggs.de>
+Date:   Tue Mar 24 15:58:30 2015 +0100
 
-    Merge pull request #2 from raydiak/master
+    Merge pull request #44 from paultcochrane/pr/readme_fixups
     
-    Fix invalid JSON in META.info
+    Some README fixups
 
-commit 9078e186bb3da68f54597b08f8e97c7e4b7faff4
-Author: raydiak <raydiak@cyberuniverses.com>
-Date:   Mon Mar 30 18:58:53 2015 -0700
+commit fb9b17eb59ae4ca11bf11b2438073ab5cdf3e728
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:43:02 2015 +0100
 
-    Fix invalid JSON in META.info
+    Wrap paragraphs and vertically separate sections consistently
+
+commit 1018ddd32798ea8ddd9ecdf12510ce5fbe25170e
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:41 2015 +0100
+
+    Purge trailing whitespace
+
+commit 438a4c30ffa196586fb3e413dcaf00b77442f6a0
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:11 2015 +0100
+
+    Fix minor typos
 --------
 svg-plot
-commit b3665793d70399f9893adae3095c2832e17418fc
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Mar 29 09:36:01 2015 +0200
+commit 1e4ea3ad39ede3c72b4069d24e50cf3ce8072e52
+Merge: 4fb39e4 fb9b17e
+Author: Tobias Leich <email@froggs.de>
+Date:   Tue Mar 24 15:58:30 2015 +0100
 
-    add "provides" section to META.info
+    Merge pull request #44 from paultcochrane/pr/readme_fixups
+    
+    Some README fixups
+
+commit fb9b17eb59ae4ca11bf11b2438073ab5cdf3e728
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:43:02 2015 +0100
+
+    Wrap paragraphs and vertically separate sections consistently
+
+commit 1018ddd32798ea8ddd9ecdf12510ce5fbe25170e
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:41 2015 +0100
+
+    Purge trailing whitespace
+
+commit 438a4c30ffa196586fb3e413dcaf00b77442f6a0
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:11 2015 +0100
+
+    Fix minor typos
 --------
 test-mock
-commit 53e851259864464189500146a948ee6ce31c6892
-Merge: 3e9f613 d5a73ac
-Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Thu Apr 16 18:35:17 2015 +0300
+commit 1e4ea3ad39ede3c72b4069d24e50cf3ce8072e52
+Merge: 4fb39e4 fb9b17e
+Author: Tobias Leich <email@froggs.de>
+Date:   Tue Mar 24 15:58:30 2015 +0100
 
-    Merge pull request #5 from zoffixznet/add_meta_provides
+    Merge pull request #44 from paultcochrane/pr/readme_fixups
     
-    add provides section for latest panda (S11 support)
+    Some README fixups
 
-commit d5a73ac706b61bcdc57a8c2125632d11589b6125
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Wed Apr 1 21:14:09 2015 -0400
+commit fb9b17eb59ae4ca11bf11b2438073ab5cdf3e728
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:43:02 2015 +0100
 
-    add provides section for latest panda (S11 support)
+    Wrap paragraphs and vertically separate sections consistently
+
+commit 1018ddd32798ea8ddd9ecdf12510ce5fbe25170e
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:41 2015 +0100
+
+    Purge trailing whitespace
+
+commit 438a4c30ffa196586fb3e413dcaf00b77442f6a0
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:11 2015 +0100
+
+    Fix minor typos
 --------
 ufo
-commit 3a0464ff8addf56a9e51b58dae49f30595f45b18
-Merge: 624abf2 35497a3
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Thu Apr 2 08:39:18 2015 +0200
+commit 1e4ea3ad39ede3c72b4069d24e50cf3ce8072e52
+Merge: 4fb39e4 fb9b17e
+Author: Tobias Leich <email@froggs.de>
+Date:   Tue Mar 24 15:58:30 2015 +0100
 
-    Merge pull request #23 from zoffixznet/add_meta_provides
+    Merge pull request #44 from paultcochrane/pr/readme_fixups
     
-    add provides section for latest panda (S11 support)
+    Some README fixups
 
-commit 35497a3cdc821f09743ac93f889be4acc65fca3d
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Wed Apr 1 19:44:34 2015 -0400
+commit fb9b17eb59ae4ca11bf11b2438073ab5cdf3e728
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:43:02 2015 +0100
 
-    add provides section for latest panda (S11 support)
+    Wrap paragraphs and vertically separate sections consistently
+
+commit 1018ddd32798ea8ddd9ecdf12510ce5fbe25170e
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:41 2015 +0100
+
+    Purge trailing whitespace
+
+commit 438a4c30ffa196586fb3e413dcaf00b77442f6a0
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:11 2015 +0100
+
+    Fix minor typos
 --------
 uri
-commit e7d1bf83327c73767afbe3999ac12aba1ff21a6e
+commit 1e4ea3ad39ede3c72b4069d24e50cf3ce8072e52
+Merge: 4fb39e4 fb9b17e
 Author: Tobias Leich <email@froggs.de>
-Date:   Sat Mar 28 22:30:23 2015 +0100
+Date:   Tue Mar 24 15:58:30 2015 +0100
 
-    add provides section for latest panda (S11 support)
+    Merge pull request #44 from paultcochrane/pr/readme_fixups
+    
+    Some README fixups
+
+commit fb9b17eb59ae4ca11bf11b2438073ab5cdf3e728
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:43:02 2015 +0100
+
+    Wrap paragraphs and vertically separate sections consistently
+
+commit 1018ddd32798ea8ddd9ecdf12510ce5fbe25170e
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:41 2015 +0100
+
+    Purge trailing whitespace
+
+commit 438a4c30ffa196586fb3e413dcaf00b77442f6a0
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:11 2015 +0100
+
+    Fix minor typos
 --------
 xml-writer
-commit 3fb7e558685a76b507611760daa4e8cf032fc276
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Mar 29 09:31:02 2015 +0200
+commit 1e4ea3ad39ede3c72b4069d24e50cf3ce8072e52
+Merge: 4fb39e4 fb9b17e
+Author: Tobias Leich <email@froggs.de>
+Date:   Tue Mar 24 15:58:30 2015 +0100
 
-    add "provides" section to META.info
+    Merge pull request #44 from paultcochrane/pr/readme_fixups
+    
+    Some README fixups
+
+commit fb9b17eb59ae4ca11bf11b2438073ab5cdf3e728
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:43:02 2015 +0100
+
+    Wrap paragraphs and vertically separate sections consistently
+
+commit 1018ddd32798ea8ddd9ecdf12510ce5fbe25170e
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:41 2015 +0100
+
+    Purge trailing whitespace
+
+commit 438a4c30ffa196586fb3e413dcaf00b77442f6a0
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Mar 24 15:40:11 2015 +0100
+
+    Fix minor typos

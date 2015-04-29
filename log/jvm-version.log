@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.5.4) (7u75-2.5.4-2)
 OpenJDK 64-Bit Server VM (build 24.75-b04, mixed mode)
 Rakudo
-Vladivostok-101-g29ead06
+Vladivostok-112-gbcf3f1c
 NQP
-2015.04-19-g547d08a
+2015.04-20-gb951514
 modules
 --------
 Bailador
@@ -165,53 +165,20 @@ Date:   Mon Apr 6 12:31:17 2015 +0200
     [META.info] add missing source-url
 --------
 debugger-ui-commandline
-commit e9cc44ea76dcf8da9addddff9c4692d7b1cae997
-Merge: 4230f5b 6d6fb6b
+commit 7a91a9024dc8c072dac30bd619955cd38f1164e6
 Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Thu May 1 00:41:43 2014 +0200
+Date:   Tue Apr 28 22:28:33 2015 +0200
 
-    Merge pull request #22 from raiph/patch-5
+    Add 'use nqp;', since the module uses nqp::ops.
     
-    Speedup display of regex match
-
-commit 6d6fb6b10ce069dd4f4492175c9e9780a52735d6
-Author: raiph <raiph.mellor@gmail.com>
-Date:   Wed Apr 30 18:36:36 2014 -0400
-
-    Speedup display of regex match
-    
-    Only subst in the couple hundred chars around the current match position.
-    
-    If the target is hundreds or thousands of lines long then this is always going to be a lot faster. Right now the impact is colossal for target strings of more than a dozen typical text file lines.
+    japhb++ for reporting.
 --------
 doc
-commit 1732101fa1755a51d05ef3270c9a23b31fc36bbe
-Merge: 1d73e2a 82bdd79
-Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
-Date:   Tue Apr 28 20:36:27 2015 +0100
+commit 4ede88cd28a03e31e61b93f921350a5380ec53be
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Apr 29 18:38:57 2015 +0100
 
-    Merge branch 'master' of github.com:perl6/doc
-
-commit 82bdd797964050988cc37001cace882854db1d72
-Merge: 148b048 c24d79c
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue Apr 28 18:51:18 2015 +0200
-
-    Merge pull request #78 from heikojansen/patch-1
-    
-    Update Cool.pod to fix minor inconsistencies
-
-commit c24d79cb12a9e021c6343cb054dc0b39dacf15a3
-Author: Heiko Jansen <heiko_jansen@web.de>
-Date:   Tue Apr 28 18:32:21 2015 +0200
-
-    Update Cool.pod to fix minor inconsistencies
-
-commit 148b04838e75d3f2f48bf2140684b5ca5f710344
-Author: skids <bri@abrij.org>
-Date:   Tue Apr 28 10:42:37 2015 -0400
-
-    Adjust docs now that '{...} if True' is no longer 'True ?? {...} !! ()'
+    typos
 --------
 file-find
 commit 19250d2aaaf6b8c6710bfa5e228d58ad46468113

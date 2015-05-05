@@ -1,7 +1,7 @@
 MoarVM
-2015.04-63-g6c9ee55
+2015.04-64-g9bfcf87
 Rakudo
-Vladivostok-158-g5708c60
+Vladivostok-167-g65cd273
 NQP
 2015.04-33-ga5b7ade
 modules
@@ -174,11 +174,11 @@ Date:   Tue Apr 28 22:28:33 2015 +0200
     japhb++ for reporting.
 --------
 doc
-commit b371543f321f960aa43d4839645dfbfd82bf3d23
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon May 4 19:50:17 2015 +0200
+commit d1c43b7360a27276876877b43bfd7e34abfbaa31
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Tue May 5 20:35:15 2015 +0100
 
-    document Proxy
+    wrapp up Channel
 --------
 file-find
 commit 19250d2aaaf6b8c6710bfa5e228d58ad46468113
@@ -227,11 +227,14 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit 0d32a4071963298fe5b396a14e46ae9d304af001
+commit 06f871588eb9c840efbca0bbedd400fa9eaf8b9d
 Author: Elizabeth Mattijsen <liz@dijkmat.nl>
-Date:   Mon May 4 14:18:40 2015 +0200
+Date:   Tue May 5 10:35:52 2015 +0200
 
-    Prepare for new @*INC handling on rakudo
+    Unbreak panda, break Inline::Perl5 c.s. again
+    
+    This means that modules will be installed without using the CURLI, which is
+    not good.  But at least it lets panda work again.
 --------
 perl6-Term-ANSIColor
 commit d723e5bde1a6d4b2506616810d3ec25abaf4a609

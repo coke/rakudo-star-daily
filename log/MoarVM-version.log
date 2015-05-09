@@ -1,7 +1,7 @@
 MoarVM
 2015.04-99-g2015f07
 Rakudo
-Vladivostok-181-g9c543b5
+Vladivostok-189-g16ba247
 NQP
 2015.04-33-ga5b7ade
 modules
@@ -149,20 +149,14 @@ Date:   Fri Apr 3 03:18:44 2015 -0400
     Seems a quirk of new lines on Windows. Fixes #6
 --------
 Template-Mojo
-commit b0ca0e4108d275049cd5f98f0c2c5057aa71c847
-Merge: c219ca5 cdd74d7
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Mon Apr 6 13:00:43 2015 +0200
+commit 8b85fbfb48c8b867761628f19a0775fba4014949
+Author: Sterling Hanenkamp <sterling@hanenkamp.com>
+Date:   Sun May 3 22:25:12 2015 -0500
 
-    Merge pull request #18 from masak/patch-1
+    Add begin/end block capture feature similar to Mojo::Template
     
-    [META.info] add missing source-url
-
-commit cdd74d75cf06a6dff63035ea2c872b1f6f2cf96f
-Author: Carl Mäsak <cmasak@gmail.com>
-Date:   Mon Apr 6 12:31:17 2015 +0200
-
-    [META.info] add missing source-url
+    This works basically the same, but Perl 6 makes it a bit more powerful on it's
+    own so you can pass vars without shifting from @_ using the ^ twigil.
 --------
 debugger-ui-commandline
 commit 7a91a9024dc8c072dac30bd619955cd38f1164e6
@@ -174,14 +168,13 @@ Date:   Tue Apr 28 22:28:33 2015 +0200
     japhb++ for reporting.
 --------
 doc
-commit a8dbc9a5c3f78b8b087738f9decf9b922628cfaf
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Fri May 8 07:41:22 2015 +0200
+commit 0c94ad71dde8d0cc45aa3983750b438cb2c4a523
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sat May 9 09:31:11 2015 +0200
 
-    Add missing File::Temp dependency
+    Mention build-time attribute defaults in classtut.
     
-    Thanks to zengargoyle++ for reporting.
-    Fixes GH #80
+    Closes #79
 --------
 file-find
 commit 19250d2aaaf6b8c6710bfa5e228d58ad46468113

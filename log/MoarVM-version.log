@@ -1,9 +1,9 @@
 MoarVM
-2015.04-107-gd2e5c76
+2015.04-122-gead50fd
 Rakudo
-Vladivostok-238-g0f3f80c
+Vladivostok-259-ge8fdad7
 NQP
-2015.04-38-g59601a2
+2015.04-46-gd5b3a73
 modules
 --------
 Bailador
@@ -41,13 +41,11 @@ Date:   Tue Apr 14 09:19:13 2015 -0500
     Support custom renderers and mustache templates
 --------
 DBIish
-commit eb14b627dd36e4928c5fde49869ccb85520e7949
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Apr 4 14:27:52 2015 +0200
+commit d071875b3cb0ed582df46401862638f900d6844d
+Author: Rob Hoelz <rob@hoelz.ro>
+Date:   Wed May 13 19:19:27 2015 -0500
 
-    mysql: use proper unsigned types
-    
-    requires very latest rakudo (at least 2015.03-159-g4afc9e9) to work
+    Fix up destructuring signature for for loop + Z
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -223,14 +221,11 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit 06f871588eb9c840efbca0bbedd400fa9eaf8b9d
-Author: Elizabeth Mattijsen <liz@dijkmat.nl>
-Date:   Tue May 5 10:35:52 2015 +0200
+commit 3bddeebd7404b4eceeba365cd53b310b9d0f0231
+Author: jnthn <jnthn@jnthn.net>
+Date:   Thu May 14 20:35:22 2015 +0200
 
-    Unbreak panda, break Inline::Perl5 c.s. again
-    
-    This means that modules will be installed without using the CURLI, which is
-    not good.  But at least it lets panda work again.
+    Unbust File::Find tests on Windows.
 --------
 perl6-Term-ANSIColor
 commit d723e5bde1a6d4b2506616810d3ec25abaf4a609

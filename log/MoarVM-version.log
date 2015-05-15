@@ -1,9 +1,9 @@
 MoarVM
-2015.04-122-gead50fd
+2015.04-125-g6604cb7
 Rakudo
-Vladivostok-259-ge8fdad7
+Vladivostok-280-g14e6807
 NQP
-2015.04-46-gd5b3a73
+2015.04-50-gf2f8128
 modules
 --------
 Bailador
@@ -138,13 +138,11 @@ Date:   Thu Apr 9 18:31:52 2015 -0400
     as the remaining p6 backends can use the same Base64 backend
 --------
 Pod-To-HTML
-commit ccf9e9fca1a6be1f78d9ea73f3220d38a95f921f
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Fri Apr 3 03:18:44 2015 -0400
+commit f45bed3cf776ce87a3e44fecda20c526e5b484fa
+Author: Andrei Osipov <andreoss@sdf.org>
+Date:   Fri May 15 05:32:02 2015 -0400
 
-    Fixes failures on Windows
-    
-    Seems a quirk of new lines on Windows. Fixes #6
+    removed a redundant line
 --------
 Template-Mojo
 commit 8b85fbfb48c8b867761628f19a0775fba4014949
@@ -166,13 +164,11 @@ Date:   Tue Apr 28 22:28:33 2015 +0200
     japhb++ for reporting.
 --------
 doc
-commit 0c94ad71dde8d0cc45aa3983750b438cb2c4a523
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat May 9 09:31:11 2015 +0200
+commit 533563961f2d7450dff4d2b726b5a53cd8f1e44c
+Author: Justin DeVuyst <justin@devuyst.com>
+Date:   Fri May 15 10:30:44 2015 -0400
 
-    Mention build-time attribute defaults in classtut.
-    
-    Closes #79
+    Fix list flattening issue in html subdir creation loop.
 --------
 file-find
 commit 19250d2aaaf6b8c6710bfa5e228d58ad46468113
@@ -221,11 +217,15 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit 3bddeebd7404b4eceeba365cd53b310b9d0f0231
-Author: jnthn <jnthn@jnthn.net>
-Date:   Thu May 14 20:35:22 2015 +0200
+commit 1159c82189395a59a6bee5eee674c30537dd7a2b
+Author: timo <timonator@perpetuum-immobile.de>
+Date:   Fri May 15 16:51:45 2015 +0200
 
-    Unbust File::Find tests on Windows.
+    let revdeps return a flattening empty list
+    
+    this fixes the case where installing something gave
+    a stacktrace showing "got Any but expected Bone"
+    or something similar
 --------
 perl6-Term-ANSIColor
 commit d723e5bde1a6d4b2506616810d3ec25abaf4a609

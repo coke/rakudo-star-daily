@@ -1,7 +1,7 @@
 MoarVM
 2015.04-135-g2be52fd
 Rakudo
-Vladivostok-295-g0d93f2b
+Vladivostok-304-gd8ce4cd
 NQP
 2015.04-53-gab80bb3
 modules
@@ -217,15 +217,34 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit 1159c82189395a59a6bee5eee674c30537dd7a2b
+commit cf38013e2281447ae45ec64aa8173d29ec5bb3af
+Merge: 1159c82 534fbb1
 Author: timo <timonator@perpetuum-immobile.de>
-Date:   Fri May 15 16:51:45 2015 +0200
+Date:   Mon May 18 04:37:46 2015 +0200
 
-    let revdeps return a flattening empty list
+    Merge pull request #158 from raydiak/master
     
-    this fixes the case where installing something gave
-    a stacktrace showing "got Any but expected Bone"
-    or something similar
+    Fix unit and sigspace warnings
+
+commit 534fbb18bf04a82dee3d5edd702d5908a3ceb69a
+Author: raydiak <raydiak@cyberuniverses.com>
+Date:   Sun May 17 19:33:47 2015 -0700
+
+    Replace unit declarations with unitless { }
+    
+    Preserves compatibility with non-bleeding-edge Rakudos
+
+commit aeaec8a3d46c8b3aeded1cb225e58b1fee612eaf
+Author: raydiak <raydiak@cyberuniverses.com>
+Date:   Sun May 17 18:55:56 2015 -0700
+
+    Silence new sigspace warnings
+
+commit b9e0fa53b780b1367c3758660b4f1c0de8b66e71
+Author: raydiak <raydiak@cyberuniverses.com>
+Date:   Sun May 17 18:47:55 2015 -0700
+
+    Add recently-required unit declarators
 --------
 perl6-Term-ANSIColor
 commit d723e5bde1a6d4b2506616810d3ec25abaf4a609

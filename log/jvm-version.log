@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.5.5) (7u79-2.5.5-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-Vladivostok-304-gd8ce4cd
+Vladivostok-323-g97b4db0
 NQP
-2015.04-53-gab80bb3
+2015.04-58-ga56e469
 modules
 --------
 Bailador
@@ -64,32 +64,14 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 MODULES.txt
-commit 1e4ea3ad39ede3c72b4069d24e50cf3ce8072e52
-Merge: 4fb39e4 fb9b17e
-Author: Tobias Leich <email@froggs.de>
-Date:   Tue Mar 24 15:58:30 2015 +0100
+commit 6ed4ca07b223d5d56d1b7475d9dce2a43b6eb502
+Author: Will "Coke" Coleda <will@coleda.com>
+Date:   Tue May 19 12:00:22 2015 -0400
 
-    Merge pull request #44 from paultcochrane/pr/readme_fixups
+    Unify get request for proxy/non-proxy
     
-    Some README fixups
-
-commit fb9b17eb59ae4ca11bf11b2438073ab5cdf3e728
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Tue Mar 24 15:43:02 2015 +0100
-
-    Wrap paragraphs and vertically separate sections consistently
-
-commit 1018ddd32798ea8ddd9ecdf12510ce5fbe25170e
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Tue Mar 24 15:40:41 2015 +0100
-
-    Purge trailing whitespace
-
-commit 438a4c30ffa196586fb3e413dcaf00b77442f6a0
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Tue Mar 24 15:40:11 2015 +0100
-
-    Fix minor typos
+    ecosystem host confused by the http/1.0 attempt there
+    (used to work fine against feather)
 --------
 PSGI
 commit 15f7220e1a3b50c113cead4fd1a67d6bd4ac9471
@@ -194,11 +176,25 @@ Date:   Sun Mar 29 15:46:27 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 json
-commit 354b936c575b9e230e166c3c3e6e984f50dc81f1
+commit 42df6e029d778dc88cbb64236e17ff092d996169
+Merge: 354b936 532723d
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat May 2 07:01:55 2015 +0200
+Date:   Tue May 19 19:39:39 2015 +0200
 
-    Switch from Match.ast do Match.made
+    Merge pull request #15 from paultcochrane/pr/add-unit-declarator
+    
+    Add unit declarator to module, class and grammar declarations
+
+commit 532723d6134defeffe87cf04f2b24b24673fe60e
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Mon May 18 23:35:44 2015 +0200
+
+    Add unit declarator to module, class and grammar declarations
+    
+    As of Rakudo 2015.05, the `unit` declarator is required before using
+    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
+    still using the old blockless semicolon form will throw a warning. This
+    commit stops the warning from appearing in the new Rakudo.
 --------
 jsonrpc
 commit 471a920dfc51f642fc9f2ff3b49c8cd352d51abd

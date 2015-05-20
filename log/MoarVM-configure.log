@@ -175,33 +175,6 @@ compiling src/platform/posix/sys.o
 gcc -O3 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC -DMVM_TRACING=0 -DMVM_CGOTO=1 3rdparty/dynasm/minilua.c -o 3rdparty/dynasm/minilua -lm -lpthread -lrt -ldl
 ./3rdparty/dynasm/minilua ./3rdparty/dynasm/dynasm.lua -D POSIX=1 -o src/jit/emit_posix_x64.c src/jit/emit_x64.dasc
 compiling src/jit/emit_posix_x64.o
-compiling 3rdparty/libuv/src/unix/linux-core.o
-compiling 3rdparty/libuv/src/unix/linux-inotify.o
-compiling 3rdparty/libuv/src/unix/linux-syscalls.o
-compiling 3rdparty/libuv/src/unix/proctitle.o
-compiling 3rdparty/libuv/src/fs-poll.o
-compiling 3rdparty/libuv/src/inet.o
-compiling 3rdparty/libuv/src/uv-common.o
-compiling 3rdparty/libuv/src/version.o
-compiling 3rdparty/libuv/src/unix/async.o
-compiling 3rdparty/libuv/src/unix/core.o
-compiling 3rdparty/libuv/src/unix/dl.o
-compiling 3rdparty/libuv/src/unix/fs.o
-compiling 3rdparty/libuv/src/unix/getaddrinfo.o
-compiling 3rdparty/libuv/src/unix/loop-watcher.o
-compiling 3rdparty/libuv/src/unix/loop.o
-compiling 3rdparty/libuv/src/unix/pipe.o
-compiling 3rdparty/libuv/src/unix/poll.o
-compiling 3rdparty/libuv/src/unix/process.o
-compiling 3rdparty/libuv/src/unix/signal.o
-compiling 3rdparty/libuv/src/unix/stream.o
-compiling 3rdparty/libuv/src/unix/tcp.o
-compiling 3rdparty/libuv/src/unix/thread.o
-compiling 3rdparty/libuv/src/threadpool.o
-compiling 3rdparty/libuv/src/unix/timer.o
-compiling 3rdparty/libuv/src/unix/tty.o
-compiling 3rdparty/libuv/src/unix/udp.o
-linking 3rdparty/libuv/libuv.a
 building dyncall...
 ar: creating libdyncall_s.a
 ar: creating libdyncallback_s.a
@@ -331,6 +304,33 @@ compiling 3rdparty/libtommath/bncore.o
 linking 3rdparty/libtommath/libtommath.a
 compiling 3rdparty/sha1/sha1.o
 linking 3rdparty/sha1/libsha1.a
+compiling 3rdparty/libuv/src/unix/linux-core.o
+compiling 3rdparty/libuv/src/unix/linux-inotify.o
+compiling 3rdparty/libuv/src/unix/linux-syscalls.o
+compiling 3rdparty/libuv/src/unix/proctitle.o
+compiling 3rdparty/libuv/src/fs-poll.o
+compiling 3rdparty/libuv/src/inet.o
+compiling 3rdparty/libuv/src/uv-common.o
+compiling 3rdparty/libuv/src/version.o
+compiling 3rdparty/libuv/src/unix/async.o
+compiling 3rdparty/libuv/src/unix/core.o
+compiling 3rdparty/libuv/src/unix/dl.o
+compiling 3rdparty/libuv/src/unix/fs.o
+compiling 3rdparty/libuv/src/unix/getaddrinfo.o
+compiling 3rdparty/libuv/src/unix/loop-watcher.o
+compiling 3rdparty/libuv/src/unix/loop.o
+compiling 3rdparty/libuv/src/unix/pipe.o
+compiling 3rdparty/libuv/src/unix/poll.o
+compiling 3rdparty/libuv/src/unix/process.o
+compiling 3rdparty/libuv/src/unix/signal.o
+compiling 3rdparty/libuv/src/unix/stream.o
+compiling 3rdparty/libuv/src/unix/tcp.o
+compiling 3rdparty/libuv/src/unix/thread.o
+compiling 3rdparty/libuv/src/threadpool.o
+compiling 3rdparty/libuv/src/unix/timer.o
+compiling 3rdparty/libuv/src/unix/tty.o
+compiling 3rdparty/libuv/src/unix/udp.o
+linking 3rdparty/libuv/libuv.a
 linking 3rdparty/libatomic_ops/src/libatomic_ops.a
 checking build system type... x86_64-unknown-linux-gnu
 checking host system type... x86_64-unknown-linux-gnu
@@ -385,10 +385,6 @@ config.status: creating src/config.h
 config.status: executing depfiles commands
 config.status: executing default commands
 make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/MoarVM/3rdparty/libatomic_ops/src'
-sed -e s:XSIZE:char:g -e s:XCTYPE:unsigned/**/char:g atomic_ops/sysdeps/gcc/generic-small.template > atomic_ops/sysdeps/gcc/generic-small.h
-sed -e s:XSIZE:short:g -e s:XCTYPE:unsigned/**/short:g atomic_ops/sysdeps/gcc/generic-small.template >> atomic_ops/sysdeps/gcc/generic-small.h
-sed -e s:XSIZE:int:g -e s:XCTYPE:unsigned:g atomic_ops/sysdeps/gcc/generic-small.template >> atomic_ops/sysdeps/gcc/generic-small.h
-sed -e s:XSIZE_::g -e s:XCTYPE:AO_t:g atomic_ops/sysdeps/gcc/generic-small.template >> atomic_ops/sysdeps/gcc/generic-small.h
 make  all-am
 make[2]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/MoarVM/3rdparty/libatomic_ops/src'
 gcc -DHAVE_CONFIG_H   -I../src -I../src  -fPIC -Wall -Wextra -O3 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC -DMVM_TRACING=0 -DMVM_CGOTO=1 -MT atomic_ops.o -MD -MP -MF .deps/atomic_ops.Tpo -c -o atomic_ops.o atomic_ops.c
@@ -479,7 +475,7 @@ linking moar
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/dyncall/dyncallback/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/dyncall
 Building NQP ...
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar --make-install
-Found /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar version 2015.04-139-g29ea746, which is new enough.
+Found /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar version 2015.04-144-g4102a25, which is new enough.
 Cleaning up ...
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage1/gen
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/how/Archetypes.nqp src/how/RoleToRoleApplier.nqp src/how/NQPConcreteRoleHOW.nqp src/how/RoleToClassApplier.nqp src/how/NQPCurriedRoleHOW.nqp src/how/NQPParametricRoleHOW.nqp src/how/NQPClassHOW.nqp src/how/NQPNativeHOW.nqp src/how/NQPAttribute.nqp src/how/NQPModuleHOW.nqp src/how/EXPORTHOW.nqp  > gen/moar/stage1/nqpmo.nqp
@@ -612,7 +608,7 @@ Cleaning up ...
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/install-moar-runner.pl "" /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install
 
 NQP has been built and installed.
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.04-58-ga56e469 / MoarVM 2015.04-139-g29ea746).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.04-60-gb91fbc8 / MoarVM 2015.04-144-g4102a25).
 
 Creating Makefile ...
 Cleaning up ...

@@ -1,7 +1,7 @@
 MoarVM
-2015.05-2-gd3c3bd4
+2015.05-3-gd3713c9
 Rakudo
-Dresden-2-ge1cc780
+Dresden-14-g800f703
 NQP
 2015.05-1-gaa8dcf6
 modules
@@ -136,13 +136,13 @@ Date:   Sun May 3 22:25:12 2015 -0500
     own so you can pass vars without shifting from @_ using the ^ twigil.
 --------
 debugger-ui-commandline
-commit 7a91a9024dc8c072dac30bd619955cd38f1164e6
-Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Tue Apr 28 22:28:33 2015 +0200
+commit 8b62c76c8777006199a4c174cff9fb5082e0645c
+Author: jnthn <jnthn@jnthn.net>
+Date:   Sat May 23 12:26:56 2015 +0200
 
-    Add 'use nqp;', since the module uses nqp::ops.
+    Harden backtrace walk for non-Perl 6 code objects.
     
-    japhb++ for reporting.
+    Fixes a crash reported by Ven++.
 --------
 doc
 commit 89b2d19e85f6f2f7a16822e1aeac22c443263fb8

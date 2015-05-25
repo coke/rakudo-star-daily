@@ -1,7 +1,7 @@
 MoarVM
-2015.05-3-gd3713c9
+2015.05-4-g58226af
 Rakudo
-Dresden-21-gbfbf833
+Dresden-27-g8693063
 NQP
 2015.05-1-gaa8dcf6
 modules
@@ -279,54 +279,67 @@ Date:   Sun Mar 29 15:42:19 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 perl6-http-easy
-commit a6addd50213908e398366ac049a6bd6ae845dc7a
-Merge: 73de3b0 2eca0cc
+commit 602236f3c67dfd71d4737c4cdbc896bb3a81f2dc
+Merge: a6addd5 d66686e
 Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Fri May 22 06:52:06 2015 +0300
+Date:   Mon May 25 02:20:45 2015 +0300
 
-    Merge pull request #23 from stmuk/master
+    Merge pull request #24 from paultcochrane/pr/add-unit-declarator
     
-    class to unit class
+    Add unit declarator to role declarations
 
-commit 2eca0cc8a9aa24206e9818c09a0279fac27eb5e0
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Thu May 21 20:37:50 2015 +0100
+commit d66686eb7097134615445571d983c24e220641dd
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Sun May 24 23:45:51 2015 +0200
 
-    class to unit class
+    Add unit declarator to role declarations
+    
+    As of Rakudo 2015.05, the `unit` declarator is required before using
+    `module`, `class`, `role` or `grammar` declarations (unless it uses a
+    block).  Code still using the old blockless semicolon form will throw a
+    warning. This commit stops the warning from appearing in the new Rakudo.
 --------
 perl6-http-status
-commit 1667a47cbe6e5ecef30974a456d8373625db9a57
-Merge: 607b35d 8ddd995
+commit 373aec20b1bfdff1fa780fd8670ba4be8aa7c4a2
+Merge: fcab981 0a118e1
 Author: Timothy Totten <2009@huri.net>
-Date:   Tue Sep 9 09:29:21 2014 -0700
+Date:   Mon May 25 09:22:44 2015 -0700
 
-    Merge pull request #5 from FROGGS/patch-2
+    Merge pull request #7 from paultcochrane/pr/add-unit-declarator
     
-    the hash key is a string, so make it one for the lookup
+    Add unit declarator to module declarations
 
-commit 8ddd995cf76f595ab15e50b720c9db92cd8ca55b
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Aug 30 21:52:53 2014 +0200
+commit 0a118e1b89e3ec5758a720c6ed43f1a335b5804b
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Mon May 25 00:28:28 2015 +0200
 
-    the hash key is a string, so make it one for the lookup
+    Add unit declarator to module declarations
     
-    This unbreaks HTTP::Status on parrot.
+    As of Rakudo 2015.05, the `unit` declarator is required before using
+    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
+    still using the old blockless semicolon form will throw a warning. This
+    commit stops the warning from appearing in the new Rakudo.
 --------
 perl6-lwp-simple
-commit 9068b8ed278fa7a28295c761b8351c3b193c9c56
-Merge: eb86c3d 45a8e85
+commit 6f065e5f178714cc65df14cea1770b849ff7beee
+Merge: b7ee044 1fdc267
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Mar 30 10:56:53 2015 +0200
+Date:   Mon May 25 13:34:37 2015 +0200
 
-    Merge pull request #47 from retupmoca/master
+    Merge pull request #50 from paultcochrane/pr/add-unit-declarator
     
-    Fix socket-sanity.t (change host)
+    Add unit declarator to class declarations
 
-commit 45a8e855502ac5977f71270c56a0e69f2046a86b
-Author: Andrew Egeler <andrew@egeler.us>
-Date:   Sun Mar 29 20:40:49 2015 -0400
+commit 1fdc2676792377afd5c157f5d5872bc9e2d28327
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Sun May 24 23:51:49 2015 +0200
 
-    Fix socket-sanity.t (change host)
+    Add unit declarator to class declarations
+    
+    As of Rakudo 2015.05, the `unit` declarator is required before using
+    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
+    still using the old blockless semicolon form will throw a warning. This
+    commit stops the warning from appearing in the new Rakudo.
 --------
 shell-command
 commit c8697ae1863ffefc76b954142d14ffb06ef01fb0

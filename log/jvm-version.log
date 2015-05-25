@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.5.5) (7u79-2.5.5-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-Vladivostok-350-g36a6de1
+Dresden-27-g8693063
 NQP
-2015.04-60-gb91fbc8
+2015.05-1-gaa8dcf6
 modules
 --------
 Bailador
@@ -136,27 +136,41 @@ Date:   Sun May 3 22:25:12 2015 -0500
     own so you can pass vars without shifting from @_ using the ^ twigil.
 --------
 debugger-ui-commandline
-commit 7a91a9024dc8c072dac30bd619955cd38f1164e6
-Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Tue Apr 28 22:28:33 2015 +0200
+commit 8b62c76c8777006199a4c174cff9fb5082e0645c
+Author: jnthn <jnthn@jnthn.net>
+Date:   Sat May 23 12:26:56 2015 +0200
 
-    Add 'use nqp;', since the module uses nqp::ops.
+    Harden backtrace walk for non-Perl 6 code objects.
     
-    japhb++ for reporting.
+    Fixes a crash reported by Ven++.
 --------
 doc
-commit 24755515b3032ad8df16ce19f6491e80809c31ff
-Author: timo <timonator@perpetuum-immobile.de>
-Date:   Thu May 21 14:07:38 2015 +0200
+commit 39908b7b695f19f32c12dfda3a735481350a8649
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sun May 24 19:34:57 2015 +0200
 
-    regexes.pod - missing word
+    Avoid unidiomatic use of "has $no-twigil" in unrelated example
 --------
 file-find
-commit 19250d2aaaf6b8c6710bfa5e228d58ad46468113
+commit a2e1797eb086d63ea35d5208b55086b6ac6792f7
+Merge: 19250d2 e9e5356
 Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Thu Apr 16 15:46:33 2015 +0200
+Date:   Sun May 24 14:33:27 2015 +0900
 
-    Bump the version number
+    Merge pull request #7 from paultcochrane/pr/add-unit-declarator
+    
+    Add unit declarator to module declarations
+
+commit e9e535661f69babb152a35331c3c8281b7b996e1
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Fri May 22 16:05:55 2015 +0200
+
+    Add unit declarator to module declarations
+    
+    As of Rakudo 2015.05, the `unit` declarator is required before using
+    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
+    still using the old blockless semicolon form will throw a warning. This
+    commit stops the warning from appearing in the new Rakudo.
 --------
 grammar-debugger
 commit 3f2f39ec0cf93d53fe7c5f9f396cd2eb44811d97
@@ -265,63 +279,83 @@ Date:   Sun Mar 29 15:42:19 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 perl6-http-easy
-commit 73de3b0c7bb5e2186801c21b2611f9001f23ecb3
+commit 602236f3c67dfd71d4737c4cdbc896bb3a81f2dc
+Merge: a6addd5 d66686e
 Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Mon Mar 23 05:32:38 2015 +0200
+Date:   Mon May 25 02:20:45 2015 +0300
 
-    - Merge https://github.com/supernovus/perl6-psgi into HTTP::Easy::PSGI
-    - Remove dependency on obsolete module PSGI
-    - Fix type mismatch between content (Buf) and output (Str)
+    Merge pull request #24 from paultcochrane/pr/add-unit-declarator
+    
+    Add unit declarator to role declarations
+
+commit d66686eb7097134615445571d983c24e220641dd
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Sun May 24 23:45:51 2015 +0200
+
+    Add unit declarator to role declarations
+    
+    As of Rakudo 2015.05, the `unit` declarator is required before using
+    `module`, `class`, `role` or `grammar` declarations (unless it uses a
+    block).  Code still using the old blockless semicolon form will throw a
+    warning. This commit stops the warning from appearing in the new Rakudo.
 --------
 perl6-http-status
-commit 1667a47cbe6e5ecef30974a456d8373625db9a57
-Merge: 607b35d 8ddd995
+commit 373aec20b1bfdff1fa780fd8670ba4be8aa7c4a2
+Merge: fcab981 0a118e1
 Author: Timothy Totten <2009@huri.net>
-Date:   Tue Sep 9 09:29:21 2014 -0700
+Date:   Mon May 25 09:22:44 2015 -0700
 
-    Merge pull request #5 from FROGGS/patch-2
+    Merge pull request #7 from paultcochrane/pr/add-unit-declarator
     
-    the hash key is a string, so make it one for the lookup
+    Add unit declarator to module declarations
 
-commit 8ddd995cf76f595ab15e50b720c9db92cd8ca55b
-Author: Tobias Leich <email@froggs.de>
-Date:   Sat Aug 30 21:52:53 2014 +0200
+commit 0a118e1b89e3ec5758a720c6ed43f1a335b5804b
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Mon May 25 00:28:28 2015 +0200
 
-    the hash key is a string, so make it one for the lookup
+    Add unit declarator to module declarations
     
-    This unbreaks HTTP::Status on parrot.
+    As of Rakudo 2015.05, the `unit` declarator is required before using
+    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
+    still using the old blockless semicolon form will throw a warning. This
+    commit stops the warning from appearing in the new Rakudo.
 --------
 perl6-lwp-simple
-commit 9068b8ed278fa7a28295c761b8351c3b193c9c56
-Merge: eb86c3d 45a8e85
+commit 6f065e5f178714cc65df14cea1770b849ff7beee
+Merge: b7ee044 1fdc267
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Mar 30 10:56:53 2015 +0200
+Date:   Mon May 25 13:34:37 2015 +0200
 
-    Merge pull request #47 from retupmoca/master
+    Merge pull request #50 from paultcochrane/pr/add-unit-declarator
     
-    Fix socket-sanity.t (change host)
+    Add unit declarator to class declarations
 
-commit 45a8e855502ac5977f71270c56a0e69f2046a86b
-Author: Andrew Egeler <andrew@egeler.us>
-Date:   Sun Mar 29 20:40:49 2015 -0400
+commit 1fdc2676792377afd5c157f5d5872bc9e2d28327
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Sun May 24 23:51:49 2015 +0200
 
-    Fix socket-sanity.t (change host)
+    Add unit declarator to class declarations
+    
+    As of Rakudo 2015.05, the `unit` declarator is required before using
+    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
+    still using the old blockless semicolon form will throw a warning. This
+    commit stops the warning from appearing in the new Rakudo.
 --------
 shell-command
-commit f7059094e233a3468bf3d5c9a343f28b256ae020
-Merge: 3a82d4b 4f24d70
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Sun Apr 5 21:50:37 2015 +0200
+commit c8697ae1863ffefc76b954142d14ffb06ef01fb0
+Merge: f705909 665322f
+Author: lizmat <liz@dijkmat.nl>
+Date:   Thu May 21 23:29:34 2015 +0200
 
-    Merge pull request #3 from FROGGS/patch-3
+    Merge pull request #4 from stmuk/master
     
-    add provides section for latest panda (S11 support)
+    module to unit module
 
-commit 4f24d70ec4311a2b6d1f2540ff9a8a2479d3a18f
-Author: Tobias Leich <email@froggs.de>
-Date:   Sun Mar 29 15:56:00 2015 +0200
+commit 665322f20ff211afb293edf67dfc8fe2c72dbab3
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu May 21 20:26:08 2015 +0100
 
-    add provides section for latest panda (S11 support)
+    module to unit module
 --------
 svg
 commit 81804e0744f3bff4c6cfc8d6437e34b0ec30e475

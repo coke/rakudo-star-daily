@@ -1,7 +1,7 @@
 MoarVM
-2015.05-4-g58226af
+2015.05-5-g5ddab9a
 Rakudo
-Dresden-27-g8693063
+Dresden-31-gd5d5a48
 NQP
 2015.05-1-gaa8dcf6
 modules
@@ -152,25 +152,33 @@ Date:   Sun May 24 19:34:57 2015 +0200
     Avoid unidiomatic use of "has $no-twigil" in unrelated example
 --------
 file-find
-commit a2e1797eb086d63ea35d5208b55086b6ac6792f7
-Merge: 19250d2 e9e5356
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Sun May 24 14:33:27 2015 +0900
+commit 119e620270cb276f292f4f4a36fa821322a51fe8
+Merge: a2e1797 4fda2e0
+Author: lizmat <liz@dijkmat.nl>
+Date:   Tue May 26 21:52:26 2015 +0200
 
-    Merge pull request #7 from paultcochrane/pr/add-unit-declarator
+    Merge pull request #8 from stmuk/master
     
-    Add unit declarator to module declarations
+    kebab base test function
 
-commit e9e535661f69babb152a35331c3c8281b7b996e1
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Fri May 22 16:05:55 2015 +0200
+commit 4fda2e0c7e52662f59bd71d118a4ae0fabe4d48b
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Tue May 26 20:36:21 2015 +0100
 
-    Add unit declarator to module declarations
-    
-    As of Rakudo 2015.05, the `unit` declarator is required before using
-    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
-    still using the old blockless semicolon form will throw a warning. This
-    commit stops the warning from appearing in the new Rakudo.
+    kebab case skip-rest
+
+commit a287c190f4a201fbc293a2f6ba5c2f8a7310e6ea
+Merge: 23c3b96 a2e1797
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Tue May 26 20:32:09 2015 +0100
+
+    Merge github.com:tadzik/File-Find
+
+commit 23c3b9694636fdd4cde17f1d7627a3f32b629fb6
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu May 21 20:22:50 2015 +0100
+
+    module to unit module
 --------
 grammar-debugger
 commit 3f2f39ec0cf93d53fe7c5f9f396cd2eb44811d97
@@ -226,34 +234,11 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit cf38013e2281447ae45ec64aa8173d29ec5bb3af
-Merge: 1159c82 534fbb1
-Author: timo <timonator@perpetuum-immobile.de>
-Date:   Mon May 18 04:37:46 2015 +0200
+commit 308bc34efc6bad252ab3afdb0ccf3df49979880e
+Author: Elizabeth Mattijsen <liz@dijkmat.nl>
+Date:   Tue May 26 21:01:54 2015 +0200
 
-    Merge pull request #158 from raydiak/master
-    
-    Fix unit and sigspace warnings
-
-commit 534fbb18bf04a82dee3d5edd702d5908a3ceb69a
-Author: raydiak <raydiak@cyberuniverses.com>
-Date:   Sun May 17 19:33:47 2015 -0700
-
-    Replace unit declarations with unitless { }
-    
-    Preserves compatibility with non-bleeding-edge Rakudos
-
-commit aeaec8a3d46c8b3aeded1cb225e58b1fee612eaf
-Author: raydiak <raydiak@cyberuniverses.com>
-Date:   Sun May 17 18:55:56 2015 -0700
-
-    Silence new sigspace warnings
-
-commit b9e0fa53b780b1367c3758660b4f1c0de8b66e71
-Author: raydiak <raydiak@cyberuniverses.com>
-Date:   Sun May 17 18:47:55 2015 -0700
-
-    Add recently-required unit declarators
+    Fix kebabcasing test functions deprecations
 --------
 perl6-Term-ANSIColor
 commit d723e5bde1a6d4b2506616810d3ec25abaf4a609
@@ -374,11 +359,25 @@ Date:   Mon Mar 30 18:58:53 2015 -0700
     Fix invalid JSON in META.info
 --------
 svg-plot
-commit b3665793d70399f9893adae3095c2832e17418fc
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Mar 29 09:36:01 2015 +0200
+commit 5039f5242b4d1f0d0f8819b1cb1484212f83abae
+Merge: b366579 04412e0
+Author: niner <nine@detonation.org>
+Date:   Tue May 26 12:14:59 2015 +0200
 
-    add "provides" section to META.info
+    Merge pull request #4 from paultcochrane/pr/add-unit-declarator
+    
+    Add unit declarator to class declarations
+
+commit 04412e02baa29e54315894c73200f98f724f1607
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue May 26 11:30:33 2015 +0200
+
+    Add unit declarator to class declarations
+    
+    As of Rakudo 2015.05, the `unit` declarator is required before using
+    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
+    still using the old blockless semicolon form will throw a warning. This
+    commit stops the warning from appearing in the new Rakudo.
 --------
 test-mock
 commit 53e851259864464189500146a948ee6ce31c6892
@@ -413,26 +412,25 @@ Date:   Wed Apr 1 19:44:34 2015 -0400
     add provides section for latest panda (S11 support)
 --------
 uri
-commit a68fc041084e160a480adc121167884980d5048f
-Merge: c547bcc 78d6d1e
-Author: Tobias Leich <email@froggs.de>
-Date:   Sun May 10 13:27:22 2015 +0200
+commit 8f75b8fd8eafedbeb9d71a4ba5ae9ff33e457bd5
+Merge: a68fc04 994c521
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue May 26 08:40:08 2015 +0200
 
-    Merge pull request #5 from rba/master
+    Merge pull request #6 from paultcochrane/pr/add-unit-declarator
     
-     changed Nil to () for list context
+    Add unit declarator to class declarations
 
-commit 78d6d1e6997c3f4959c052a116a82a08fa5a54a5
-Author: Roman Baumer <roman@baumer-its.ch>
-Date:   Sun May 10 13:06:47 2015 +0200
+commit 994c52148f6da5abb00dab96c85fe1d80f4b433d
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Mon May 25 22:34:57 2015 +0200
 
-    changed to ()
-
-commit f9298454d8cdf8e5f6b02b273bb7a0ff3e2cca17
-Author: Roman Baumer <roman@baumer-its.ch>
-Date:   Fri May 8 15:05:25 2015 +0200
-
-    replaced Nil with Empty for list context
+    Add unit declarator to class declarations
+    
+    As of Rakudo 2015.05, the `unit` declarator is required before using
+    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
+    still using the old blockless semicolon form will throw a warning. This
+    commit stops the warning from appearing in the new Rakudo.
 --------
 xml-writer
 commit 3fb7e558685a76b507611760daa4e8cf032fc276

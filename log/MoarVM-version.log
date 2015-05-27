@@ -1,9 +1,9 @@
 MoarVM
-2015.05-5-g5ddab9a
+2015.05-8-g41b5dd2
 Rakudo
-Dresden-31-gd5d5a48
+Dresden-41-gf86437c
 NQP
-2015.05-1-gaa8dcf6
+2015.05-2-g00b1d1e
 modules
 --------
 Bailador
@@ -41,11 +41,11 @@ Date:   Tue Apr 14 09:19:13 2015 -0500
     Support custom renderers and mustache templates
 --------
 DBIish
-commit d071875b3cb0ed582df46401862638f900d6844d
-Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Wed May 13 19:19:27 2015 -0500
+commit 36e66e88e1e15854a403d851ba893fd2f7fccecb
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Wed May 27 15:36:56 2015 +0200
 
-    Fix up destructuring signature for for loop + Z
+    kebabcase subs from Test
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -80,50 +80,32 @@ Date:   Tue Feb 18 11:36:04 2014 -0800
     Added S11 provides
 --------
 Perl6-MIME-Base64
-commit 70da02d785222e68015f73b6db43959587324d1f
-Merge: 120d1d2 41ca5fe
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Fri Apr 10 09:10:24 2015 +0200
+commit 186e20e810382aef82af5a4e0331dbe2fbefb39b
+Merge: 70da02d 87a1cf9
+Author: Tobias Leich <email@froggs.de>
+Date:   Wed May 27 09:22:12 2015 +0200
 
-    Merge pull request #4 from ugexe/drop-parrot-fix-jvm
+    Merge pull request #5 from paultcochrane/pr/add-unit-declarator
     
-    Drop parrot; fix jvm
+    Add unit declarator to class declarations
 
-commit 41ca5fe6b6d6bc9c39afb3526f4c47901614f9a0
-Author: Nick Logan <ugexe@cpan.org>
-Date:   Thu Apr 9 18:57:37 2015 -0400
+commit 87a1cf9aef7f1e3439e6933bd497aec083746b2a
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Wed May 27 08:44:49 2015 +0200
 
-    Remove conflicting auth
+    Add unit declarator to class declarations
     
-    META.info lists 'author' as github:retupmoca, so
-    declaring the class as auth<cpan:SNARKY> seems likely
-    to cause problems in the future. Maybe it should be the
-    other way around, but not both i'd imagine.
-
-commit 100a895f2648339f651f036c4e4056fe62f9e1e7
-Author: Nick Logan <ugexe@cpan.org>
-Date:   Thu Apr 9 18:34:34 2015 -0400
-
-    Explicitly declare characters to compile on jvm
-    
-    The removed range operator used to create the character array
-    currently causes a precomp failure on the jvm p6 backend
-
-commit f22fdfd01d794c14aad17dbb3ec3af532aff63b7
-Author: Nick Logan <ugexe@cpan.org>
-Date:   Thu Apr 9 18:31:52 2015 -0400
-
-    Remove parrot related items
-    
-    If we are not supporting parrot, we no longer need the Build.pm
-    as the remaining p6 backends can use the same Base64 backend
+    As of Rakudo 2015.05, the `unit` declarator is required before using
+    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
+    still using the old blockless semicolon form will throw a warning. This
+    commit stops the warning from appearing in the new Rakudo.
 --------
 Pod-To-HTML
-commit f45bed3cf776ce87a3e44fecda20c526e5b484fa
-Author: Andrei Osipov <andreoss@sdf.org>
-Date:   Fri May 15 05:32:02 2015 -0400
+commit 00967bdcb2fc6bbbea6db16349b32f97cd7255a4
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Wed May 27 11:31:30 2015 +0200
 
-    removed a redundant line
+    Add unit declarator to class declaration
 --------
 Template-Mojo
 commit 8b85fbfb48c8b867761628f19a0775fba4014949
@@ -145,11 +127,20 @@ Date:   Sat May 23 12:26:56 2015 +0200
     Fixes a crash reported by Ven++.
 --------
 doc
-commit 39908b7b695f19f32c12dfda3a735481350a8649
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun May 24 19:34:57 2015 +0200
+commit 320b2fb8f277bf4a80e0843e5382b95e6916a46f
+Merge: 39908b7 6f69701
+Author: Jonathan Stowe <jns@gellyfish.co.uk>
+Date:   Wed May 27 12:02:10 2015 +0100
 
-    Avoid unidiomatic use of "has $no-twigil" in unrelated example
+    Merge pull request #86 from azawawi/master
+    
+    Fix deprecated API: eval_dies_ok and isa_ok
+
+commit 6f69701d446c023784d82c6d106958e8220e3be8
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Wed May 27 14:00:12 2015 +0300
+
+    Fix deprecated API: eval_dies_ok and isa_ok
 --------
 file-find
 commit 119e620270cb276f292f4f4a36fa821322a51fe8
@@ -197,25 +188,11 @@ Date:   Sun Mar 29 15:46:27 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 json
-commit 42df6e029d778dc88cbb64236e17ff092d996169
-Merge: 354b936 532723d
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue May 19 19:39:39 2015 +0200
+commit 635a8ae61c83af16ab66fa4f0af1e758f8e2e728
+Author: Moritz Lenz <mlenz@noris.net>
+Date:   Wed May 27 08:39:53 2015 +0200
 
-    Merge pull request #15 from paultcochrane/pr/add-unit-declarator
-    
-    Add unit declarator to module, class and grammar declarations
-
-commit 532723d6134defeffe87cf04f2b24b24673fe60e
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Mon May 18 23:35:44 2015 +0200
-
-    Add unit declarator to module, class and grammar declarations
-    
-    As of Rakudo 2015.05, the `unit` declarator is required before using
-    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
-    still using the old blockless semicolon form will throw a warning. This
-    commit stops the warning from appearing in the new Rakudo.
+    Replace deprecated test functions with appreciated ones
 --------
 jsonrpc
 commit 471a920dfc51f642fc9f2ff3b49c8cd352d51abd
@@ -234,11 +211,35 @@ Date:   Tue Jul 8 01:03:31 2014 +0200
     workound MoarVM precomp bugs
 --------
 panda
-commit 308bc34efc6bad252ab3afdb0ccf3df49979880e
-Author: Elizabeth Mattijsen <liz@dijkmat.nl>
-Date:   Tue May 26 21:01:54 2015 +0200
+commit 163ed783c2d49cc8a27fe24ab96008b4bb9f49e9
+Merge: 308bc34 55d292c
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed May 27 17:52:41 2015 +0200
 
-    Fix kebabcasing test functions deprecations
+    Merge pull request #160 from timo/latest_json_tiny
+    
+    Latest json tiny
+
+commit 55d292c147a7983be9a777157ac5956868256de5
+Merge: 308bc34 fe2cb31
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Wed May 27 15:27:27 2015 +0200
+
+    Merge commit 'fe2cb3101f7a12cfa9b5650adad82ae7a45bf053'
+    
+    Gets rid of deprecation messages in JSON::Tiny
+
+commit fe2cb3101f7a12cfa9b5650adad82ae7a45bf053
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Wed May 27 15:27:27 2015 +0200
+
+    Squashed 'ext/JSON__Tiny/' changes from 42df6e0..635a8ae
+    
+    635a8ae Replace deprecated test functions with appreciated ones
+    1e44a0f Replace deprecated method .for by .flatmap, timotimo++
+    
+    git-subtree-dir: ext/JSON__Tiny
+    git-subtree-split: 635a8ae61c83af16ab66fa4f0af1e758f8e2e728
 --------
 perl6-Term-ANSIColor
 commit d723e5bde1a6d4b2506616810d3ec25abaf4a609
@@ -412,25 +413,26 @@ Date:   Wed Apr 1 19:44:34 2015 -0400
     add provides section for latest panda (S11 support)
 --------
 uri
-commit 8f75b8fd8eafedbeb9d71a4ba5ae9ff33e457bd5
-Merge: a68fc04 994c521
+commit 32feaa828c6d3432485536abdf47f09577224c3d
+Merge: 8f75b8f 85c8fb2
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue May 26 08:40:08 2015 +0200
+Date:   Wed May 27 13:01:28 2015 +0200
 
-    Merge pull request #6 from paultcochrane/pr/add-unit-declarator
+    Merge pull request #7 from azawawi/master
     
-    Add unit declarator to class declarations
+    Fix deprecated API (.for -> .flatmap)
 
-commit 994c52148f6da5abb00dab96c85fe1d80f4b433d
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Mon May 25 22:34:57 2015 +0200
+commit 85c8fb2996646e66639e2e8745d5cb5b0240a1c0
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Wed May 27 13:49:55 2015 +0300
 
-    Add unit declarator to class declarations
-    
-    As of Rakudo 2015.05, the `unit` declarator is required before using
-    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
-    still using the old blockless semicolon form will throw a warning. This
-    commit stops the warning from appearing in the new Rakudo.
+    Convert to UNIX newlines
+
+commit 23e0ea249e75aadf8f1856c6dccc01e2992f9a5c
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Wed May 27 13:42:15 2015 +0300
+
+    Fix deprecated API (.for -> .flatmap)
 --------
 xml-writer
 commit 3fb7e558685a76b507611760daa4e8cf032fc276

@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.5.5) (7u79-2.5.5-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-Dresden-78-g73480ff
+Dresden-80-g2cc3afe
 NQP
 2015.05-2-g00b1d1e
 modules
@@ -214,35 +214,35 @@ Date:   Mon Jun 1 17:23:04 2015 +0100
     unit class added
 --------
 panda
-commit 163ed783c2d49cc8a27fe24ab96008b4bb9f49e9
-Merge: 308bc34 55d292c
-Author: lizmat <liz@dijkmat.nl>
-Date:   Wed May 27 17:52:41 2015 +0200
+commit 77193c986b9f8ef93f91be550337b11a6571b1eb
+Merge: 163ed78 7ec4c8e
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Tue Jun 2 06:23:31 2015 +0900
 
-    Merge pull request #160 from timo/latest_json_tiny
+    Merge pull request #163 from stmuk/master
     
-    Latest json tiny
+    update-subtree.pl run to get new version of File::Find with kebabed skip_rest
 
-commit 55d292c147a7983be9a777157ac5956868256de5
-Merge: 308bc34 fe2cb31
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Wed May 27 15:27:27 2015 +0200
+commit 7ec4c8e7ff43ac3122033da060a6aa71c1fb91d0
+Merge: 163ed78 7ae6013
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Mon Jun 1 16:48:03 2015 +0100
 
-    Merge commit 'fe2cb3101f7a12cfa9b5650adad82ae7a45bf053'
+    Merge commit '7ae60134a794cdca74d1da4d325735bf930a0286'
+
+commit 7ae60134a794cdca74d1da4d325735bf930a0286
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Mon Jun 1 16:48:03 2015 +0100
+
+    Squashed 'ext/File__Find/' changes from a2e1797..119e620
     
-    Gets rid of deprecation messages in JSON::Tiny
-
-commit fe2cb3101f7a12cfa9b5650adad82ae7a45bf053
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Wed May 27 15:27:27 2015 +0200
-
-    Squashed 'ext/JSON__Tiny/' changes from 42df6e0..635a8ae
+    119e620 Merge pull request #8 from stmuk/master
+    4fda2e0 kebab case skip-rest
+    a287c19 Merge github.com:tadzik/File-Find
+    23c3b96 module to unit module
     
-    635a8ae Replace deprecated test functions with appreciated ones
-    1e44a0f Replace deprecated method .for by .flatmap, timotimo++
-    
-    git-subtree-dir: ext/JSON__Tiny
-    git-subtree-split: 635a8ae61c83af16ab66fa4f0af1e758f8e2e728
+    git-subtree-dir: ext/File__Find
+    git-subtree-split: 119e620270cb276f292f4f4a36fa821322a51fe8
 --------
 perl6-Term-ANSIColor
 commit c381f5b13c7271fc1067769088c948ec0b83f6a5
@@ -438,8 +438,23 @@ Date:   Wed May 27 13:42:15 2015 +0300
     Fix deprecated API (.for -> .flatmap)
 --------
 xml-writer
-commit 3fb7e558685a76b507611760daa4e8cf032fc276
+commit 7452ca1a730b0be39c96c2525a719ad4674cbb72
+Merge: 3fb7e55 fe4b476
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Mar 29 09:31:02 2015 +0200
+Date:   Tue Jun 2 08:36:11 2015 +0200
 
-    add "provides" section to META.info
+    Merge pull request #4 from stmuk/master
+    
+    for to flapmap and kebab test functions
+
+commit fe4b4764949bbd9977ed69488b2e8df3e145b231
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Mon Jun 1 18:04:09 2015 +0100
+
+    change for to flatmap
+
+commit e1d56b252cbd2a82f831c79ba38a0eaab8980927
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Mon Jun 1 18:01:30 2015 +0100
+
+    change to kebabed test functions

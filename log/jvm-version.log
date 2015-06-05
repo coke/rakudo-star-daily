@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.5.5) (7u79-2.5.5-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-Dresden-111-g6c1a478
+Dresden-117-g97b27a5
 NQP
-2015.05-7-g97c86af
+2015.05-10-g6da0dea
 modules
 --------
 Bailador
@@ -73,11 +73,25 @@ Date:   Thu May 21 15:53:34 2015 +0200
     this fixes a whole bunch of META.info files, for example
 --------
 PSGI
-commit 15f7220e1a3b50c113cead4fd1a67d6bd4ac9471
-Author: Timothy Totten <2010@huri.net>
-Date:   Tue Feb 18 11:36:04 2014 -0800
+commit e09fd63e28842a00537d2471eb2b4f2e927cde48
+Merge: 3871dbb cb2d51a
+Author: Timothy Totten <2009@huri.net>
+Date:   Thu Jun 4 20:24:41 2015 -0700
 
-    Added S11 provides
+    Merge pull request #3 from paultcochrane/pr/add-unit-declarator
+    
+    Add unit declarator to module declarations
+
+commit cb2d51a36cf51fa973187848fde7cdb6c8f79cd4
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Tue Jun 2 21:45:05 2015 +0200
+
+    Add unit declarator to module declarations
+    
+    As of Rakudo 2015.05, the `unit` declarator is required before using
+    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
+    still using the old blockless semicolon form will throw a warning. This
+    commit stops the warning from appearing in the new Rakudo.
 --------
 Perl6-MIME-Base64
 commit 186e20e810382aef82af5a4e0331dbe2fbefb39b
@@ -127,11 +141,11 @@ Date:   Sat May 23 12:26:56 2015 +0200
     Fixes a crash reported by Ven++.
 --------
 doc
-commit 8cd58a371e1ed6929f2f719bb9872238ed095fa9
-Author: skids <bri@abrij.org>
-Date:   Thu Jun 4 13:41:10 2015 -0400
+commit 73e57a9b577565de60b7926588aa21a07b4fa1d6
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Fri Jun 5 17:29:37 2015 +0200
 
-    Fix broken link by documenting X::Promise::CauseOnlyValidOnBroken
+    Describe postcircumfix:<[ ]> in much greater detail
 --------
 file-find
 commit 119e620270cb276f292f4f4a36fa821322a51fe8
@@ -214,35 +228,42 @@ Date:   Mon Jun 1 17:23:04 2015 +0100
     unit class added
 --------
 panda
-commit 77193c986b9f8ef93f91be550337b11a6571b1eb
-Merge: 163ed78 7ec4c8e
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Tue Jun 2 06:23:31 2015 +0900
+commit 5993b1c4e9b00b80bdc04a505c57473dd23801ed
+Merge: 77193c9 d43894b
+Author: Tobias Leich <email@froggs.de>
+Date:   Fri Jun 5 07:57:43 2015 +0200
 
-    Merge pull request #163 from stmuk/master
+    Merge pull request #166 from hoelzro/master
     
-    update-subtree.pl run to get new version of File::Find with kebabed skip_rest
+    Unlink destination before performing copy on non-Windows
 
-commit 7ec4c8e7ff43ac3122033da060a6aa71c1fb91d0
-Merge: 163ed78 7ae6013
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Mon Jun 1 16:48:03 2015 +0100
+commit d43894b449ee6e55ceb1ed1bdb8873b0edfcff76
+Author: Rob Hoelz <rob@hoelz.ro>
+Date:   Thu Jun 4 23:16:25 2015 -0500
 
-    Merge commit '7ae60134a794cdca74d1da4d325735bf930a0286'
-
-commit 7ae60134a794cdca74d1da4d325735bf930a0286
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Mon Jun 1 16:48:03 2015 +0100
-
-    Squashed 'ext/File__Find/' changes from a2e1797..119e620
+    Unlink destination before performing copy on non-Windows
     
-    119e620 Merge pull request #8 from stmuk/master
-    4fda2e0 kebab case skip-rest
-    a287c19 Merge github.com:tadzik/File-Find
-    23c3b96 module to unit module
+    MoarVM uses mmap() to map bytecode files into memory.  Unfortunately,
+    this means that if a process overwrites the contents of that bytecode
+    file during the operation of a Perl 6 program using it (for example,
+    Panda updating its own dependencies), the memory map will seemingly
+    change out from under MoarVM, usually resulting in a crash.  Unlinking
+    the destination first doesn't harm processes that have loaded that
+    bytecode; it just guarantees that the new version gets its own inode
+    and doesn't mess with currently running Perl 6 processes.
     
-    git-subtree-dir: ext/File__Find
-    git-subtree-split: 119e620270cb276f292f4f4a36fa821322a51fe8
+    Note that this is non-atomic, so a Perl 6 process started at just
+    the wrong time will try to open the bytecode file between the unlinking
+    and the creation of the copy, or worse yet, open and use the file
+    while it's being written.  The risk of this is low enough where this
+    shouldn't be a problem, and could easily be mitigated in the future
+    using rename().
+    
+    This change doesn't happen for Windows, mainly because I don't know
+    how Windows responds to files being removed while other processes have
+    them open.  jnthn tells me this will result in an access violation,
+    so a Windows-specific fix is still necessary.  However, perhaps no
+    fix is necessary on Windows at all.
 --------
 perl6-Term-ANSIColor
 commit c381f5b13c7271fc1067769088c948ec0b83f6a5

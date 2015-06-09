@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.5.5) (7u79-2.5.5-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-Dresden-139-g2281689
+Dresden-143-g80f8efc
 NQP
-2015.05-10-g6da0dea
+2015.05-11-ge8bb160
 modules
 --------
 Bailador
@@ -141,11 +141,11 @@ Date:   Sat May 23 12:26:56 2015 +0200
     Fixes a crash reported by Ven++.
 --------
 doc
-commit e79298699bddfdf1657f5526f5fb4c9c7498ae22
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Mon Jun 8 10:29:36 2015 +0200
+commit 16c4d0c036846cf161e38871bf498e49076b1882
+Author: pmichaud <pmichaud@pobox.com>
+Date:   Tue Jun 9 11:28:59 2015 -0500
 
-    State more clearly that substr-eq matches substring exactly
+    Add note about topicalizing rhs for infix:<andthen>.
 --------
 file-find
 commit 119e620270cb276f292f4f4a36fa821322a51fe8
@@ -228,42 +228,23 @@ Date:   Mon Jun 1 17:23:04 2015 +0100
     unit class added
 --------
 panda
-commit 5993b1c4e9b00b80bdc04a505c57473dd23801ed
-Merge: 77193c9 d43894b
-Author: Tobias Leich <email@froggs.de>
-Date:   Fri Jun 5 07:57:43 2015 +0200
+commit 74a48bf30a6c675cb9f8121daf1a8fd0633575a8
+Merge: 5993b1c b5a04f0
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Tue Jun 9 15:36:31 2015 +0900
 
-    Merge pull request #166 from hoelzro/master
+    Merge pull request #168 from hoelzro/notests-reverse-dependencies
     
-    Unlink destination before performing copy on non-Windows
+    Respect --notests when installing reverse dependencies
 
-commit d43894b449ee6e55ceb1ed1bdb8873b0edfcff76
+commit b5a04f016ee72a97a73eb0c691d1ab35f5d3237b
 Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Thu Jun 4 23:16:25 2015 -0500
+Date:   Mon Jun 8 21:55:02 2015 -0500
 
-    Unlink destination before performing copy on non-Windows
+    Respect --notests when installing reverse dependencies
     
-    MoarVM uses mmap() to map bytecode files into memory.  Unfortunately,
-    this means that if a process overwrites the contents of that bytecode
-    file during the operation of a Perl 6 program using it (for example,
-    Panda updating its own dependencies), the memory map will seemingly
-    change out from under MoarVM, usually resulting in a crash.  Unlinking
-    the destination first doesn't harm processes that have loaded that
-    bytecode; it just guarantees that the new version gets its own inode
-    and doesn't mess with currently running Perl 6 processes.
-    
-    Note that this is non-atomic, so a Perl 6 process started at just
-    the wrong time will try to open the bytecode file between the unlinking
-    and the creation of the copy, or worse yet, open and use the file
-    while it's being written.  The risk of this is low enough where this
-    shouldn't be a problem, and could easily be mitigated in the future
-    using rename().
-    
-    This change doesn't happen for Windows, mainly because I don't know
-    how Windows responds to files being removed while other processes have
-    them open.  jnthn tells me this will result in an access violation,
-    so a Windows-specific fix is still necessary.  However, perhaps no
-    fix is necessary on Windows at all.
+    Currently, tests for reverse dependencies are always run,
+    regardless of whether --notests was specified
 --------
 perl6-Term-ANSIColor
 commit c381f5b13c7271fc1067769088c948ec0b83f6a5

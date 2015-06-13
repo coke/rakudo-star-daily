@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.5.5) (7u79-2.5.5-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-Dresden-187-gaf886d1
+Dresden-194-g9c8cb67
 NQP
-2015.05-14-g5d6d942
+2015.05-17-g4e607b7
 modules
 --------
 Bailador
@@ -141,11 +141,11 @@ Date:   Sat May 23 12:26:56 2015 +0200
     Fixes a crash reported by Ven++.
 --------
 doc
-commit 982223ad1cd02e71d720c013457e7c208c9e79a3
-Author: Kevin Metcalf <kevin@Kevins-MacBook-Pro.local>
-Date:   Thu Jun 11 11:45:26 2015 -0600
+commit f9032c07031c4373a3b67a899902855df3350511
+Author: ab5tract <john.haltiwanger@gmail.com>
+Date:   Sat Jun 13 18:58:06 2015 +0200
 
-    Updated to use lowercase example.
+    Add line-by-line example to Language::io
 --------
 file-find
 commit 119e620270cb276f292f4f4a36fa821322a51fe8
@@ -228,20 +228,22 @@ Date:   Mon Jun 1 17:23:04 2015 +0100
     unit class added
 --------
 panda
-commit 383a293e57a6ab04ffe22c5aa76c8e7634101a64
-Merge: 74a48bf 98891c3
-Author: lizmat <liz@dijkmat.nl>
-Date:   Fri Jun 12 08:21:12 2015 -0600
+commit e3628e052360f356b94be959f73f3b96e7420356
+Merge: 383a293 73555de
+Author: Tobias Leich <email@froggs.de>
+Date:   Sat Jun 13 08:12:30 2015 +0200
 
-    Merge pull request #164 from stmuk/stmuk
+    Merge pull request #172 from flussence/patch-1
     
-    use network line terminator
+    Fix breakage caused by 98891c3
 
-commit 98891c382ec822a3930811e3af6b0a5d57095c0b
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Wed Jun 3 15:49:59 2015 +0100
+commit 73555de87a59594162d79775c714403c4229798e
+Author: flussence <flussence@gmail.com>
+Date:   Fri Jun 12 22:57:50 2015 +0100
 
-    use network line terminator
+    Use correct line endings
+    
+    `\r\n` ends a HTTP header line, and two of those end a HTTP header block. Fixes #171.
 --------
 perl6-Term-ANSIColor
 commit c381f5b13c7271fc1067769088c948ec0b83f6a5

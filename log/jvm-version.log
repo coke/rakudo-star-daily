@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.5.5) (7u79-2.5.5-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-SaltLake-31-g8276cee
+SaltLake-37-geb39888
 NQP
 2015.06-4-g1d5165f
 modules
@@ -141,11 +141,13 @@ Date:   Sat May 23 12:26:56 2015 +0200
     Fixes a crash reported by Ven++.
 --------
 doc
-commit ec673618159fc85249c105d76f4157bf76880759
-Author: Moritz Lenz <mlenz@noris.net>
-Date:   Thu Jun 18 11:25:05 2015 +0200
+commit 67fd46d4d1d1a03c63623230fd801bef2690a6bd
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Mon Jun 22 14:53:28 2015 +0200
 
-    Str.encode returns Blob, not Buf. mt1957++
+    Fix link to Set/Bag Operators from Set page
+    
+    Thanks to masak++ for pointing out the broken link.
 --------
 file-find
 commit 119e620270cb276f292f4f4a36fa821322a51fe8
@@ -228,20 +230,20 @@ Date:   Mon Jun 1 17:23:04 2015 +0100
     unit class added
 --------
 panda
-commit 51f6b5b14dc5f3eebc089a8c9e7dffe4cf398dba
-Merge: d929328 7d88f35
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Sun Jun 21 11:14:55 2015 +0200
+commit b904e3eeb8250891809eeba56682687a047e949d
+Merge: 51f6b5b e1d5f50
+Author: Tobias Leich <email@froggs.de>
+Date:   Mon Jun 22 08:18:32 2015 +0200
 
-    Merge pull request #173 from jonathanstowe/no-clobber-projects.json
+    Merge pull request #175 from ugexe/patch-1
     
-    Don't bother writing projects file if not 200 response
+    Case matters on windows
 
-commit 7d88f35bdd891961714685419738d73fd18b0ea8
-Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
-Date:   Sun Jun 14 21:41:41 2015 +0100
+commit e1d5f504dfc53c25d5a76fd74b6663a4fd77e875
+Author: Nick Logan <nlogan@gmail.com>
+Date:   Sun Jun 21 18:42:17 2015 -0400
 
-    Don't bother writing projects file if not 200 response
+    Case matters on windows
 --------
 perl6-Term-ANSIColor
 commit c381f5b13c7271fc1067769088c948ec0b83f6a5

@@ -1,9 +1,9 @@
 MoarVM
-2015.06-19-g8620dbf
+2015.06-22-gef9d045
 Rakudo
-SaltLake-37-geb39888
+SaltLake-50-g2ec5634
 NQP
-2015.06-4-g1d5165f
+2015.06-6-g0cb8562
 modules
 --------
 Bailador
@@ -230,20 +230,20 @@ Date:   Mon Jun 1 17:23:04 2015 +0100
     unit class added
 --------
 panda
-commit b904e3eeb8250891809eeba56682687a047e949d
-Merge: 51f6b5b e1d5f50
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 22 08:18:32 2015 +0200
+commit d3fa80487879f755a8c6d6b5eed1e100131d20c9
+Merge: b904e3e 123caf9
+Author: lizmat <liz@dijkmat.nl>
+Date:   Tue Jun 23 13:12:40 2015 +0200
 
-    Merge pull request #175 from ugexe/patch-1
+    Merge pull request #176 from jonathanstowe/fix-http-match
     
-    Case matters on windows
+    Allow the HTTP response to match HTTP/1.[01]
 
-commit e1d5f504dfc53c25d5a76fd74b6663a4fd77e875
-Author: Nick Logan <nlogan@gmail.com>
-Date:   Sun Jun 21 18:42:17 2015 -0400
+commit 123caf9d3e8eb369a66bfbcdec2125852d8a15a7
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Tue Jun 23 11:26:29 2015 +0100
 
-    Case matters on windows
+    Allow the HTTP response to match HTTP/1.[01]
 --------
 perl6-Term-ANSIColor
 commit c381f5b13c7271fc1067769088c948ec0b83f6a5
@@ -364,25 +364,11 @@ Date:   Mon Mar 30 18:58:53 2015 -0700
     Fix invalid JSON in META.info
 --------
 svg-plot
-commit 5039f5242b4d1f0d0f8819b1cb1484212f83abae
-Merge: b366579 04412e0
-Author: niner <nine@detonation.org>
-Date:   Tue May 26 12:14:59 2015 +0200
+commit 05e6f2ac1dcbdfd03810d4c48d8f200be2b05b67
+Author: Stefan Seifert <nine@detonation.org>
+Date:   Tue Jun 23 21:25:23 2015 +0200
 
-    Merge pull request #4 from paultcochrane/pr/add-unit-declarator
-    
-    Add unit declarator to class declarations
-
-commit 04412e02baa29e54315894c73200f98f724f1607
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Tue May 26 11:30:33 2015 +0200
-
-    Add unit declarator to class declarations
-    
-    As of Rakudo 2015.05, the `unit` declarator is required before using
-    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
-    still using the old blockless semicolon form will throw a warning. This
-    commit stops the warning from appearing in the new Rakudo.
+    Adjust to infix Z now returning a list of Parcels instead of a flat list
 --------
 test-mock
 commit 53e851259864464189500146a948ee6ce31c6892

@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.5.5) (7u79-2.5.5-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-SaltLake-50-g2ec5634
+SaltLake-52-g98e36a3
 NQP
 2015.06-6-g0cb8562
 modules
@@ -141,13 +141,11 @@ Date:   Sat May 23 12:26:56 2015 +0200
     Fixes a crash reported by Ven++.
 --------
 doc
-commit 67fd46d4d1d1a03c63623230fd801bef2690a6bd
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Mon Jun 22 14:53:28 2015 +0200
+commit b1f566d66498bf7def52b10f7293e68c13c81488
+Author: pmichaud <pmichaud@pobox.com>
+Date:   Wed Jun 24 11:43:44 2015 -0500
 
-    Fix link to Set/Bag Operators from Set page
-    
-    Thanks to masak++ for pointing out the broken link.
+    Add lines()/$*ARGFILES to WANTED.  (#96)
 --------
 file-find
 commit 119e620270cb276f292f4f4a36fa821322a51fe8
@@ -230,20 +228,25 @@ Date:   Mon Jun 1 17:23:04 2015 +0100
     unit class added
 --------
 panda
-commit d3fa80487879f755a8c6d6b5eed1e100131d20c9
-Merge: b904e3e 123caf9
+commit d065e5ad661b4eef2579464e7ad66a72be3d17ad
+Merge: d3fa804 cf7d117
 Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Jun 23 13:12:40 2015 +0200
+Date:   Wed Jun 24 13:36:25 2015 +0200
 
-    Merge pull request #176 from jonathanstowe/fix-http-match
+    Merge pull request #177 from paultcochrane/pr/for-to-flatmap
     
-    Allow the HTTP response to match HTTP/1.[01]
+    Replace .for method with .flatmap
 
-commit 123caf9d3e8eb369a66bfbcdec2125852d8a15a7
-Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
-Date:   Tue Jun 23 11:26:29 2015 +0100
+commit cf7d11769912fa656d87979d29fb784622d69554
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Wed Jun 24 11:25:37 2015 +0200
 
-    Allow the HTTP response to match HTTP/1.[01]
+    Replace .for method with .flatmap
+    
+    The `.for` method has been deprecated in favour of the `.flatmap` method.
+    The deprecated method will be removed in Rakudo 2015.09.  This change
+    removes the deprecation warning that appears when running the 'list'
+    command.
 --------
 perl6-Term-ANSIColor
 commit c381f5b13c7271fc1067769088c948ec0b83f6a5

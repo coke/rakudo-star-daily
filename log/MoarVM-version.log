@@ -1,44 +1,32 @@
 MoarVM
-2015.06-34-gc036f00
+2015.06-44-g2c96984
 Rakudo
-SaltLake-76-g6c62e2e
+SaltLake-91-g4cfec0c
 NQP
-2015.06-6-g0cb8562
+2015.06-13-ga5d6dda
 modules
 --------
 Bailador
-commit b6900a776a31fc70dca0da3fa3f22473430343bd
-Merge: 2424d55 60f7e5f
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Sun Apr 19 22:37:02 2015 +0200
+commit e26284f643f9fbfd5f4a278bba6300edcffc3351
+Merge: ea5884a 36cad98
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sat Jun 27 19:33:04 2015 +0200
 
-    Merge pull request #25 from zostay/master
+    Merge pull request #29 from vendethiel/master
     
-    Support custom renderers and mustache templates
+    Fix tests deprecation warnings
 
-commit 60f7e5f6c7b8715ef0c232b45077435d8bf2d6c3
-Author: Sterling Hanenkamp <sterling@hanenkamp.com>
-Date:   Sun Apr 19 15:34:09 2015 -0500
+commit 36cad98b63edc1e29f7a96f44c18f8bfb1ad7e1c
+Author: vendethiel <vendethiel@hotmail.fr>
+Date:   Sat Jun 13 14:43:13 2015 +0200
 
-    Adding the missing mustache dependency
-
-commit 86bd12fb072725bab70587f4ebe8d0f910d91793
-Author: Sterling Hanenkamp <sterling@hanenkamp.com>
-Date:   Tue Apr 14 22:06:17 2015 -0500
-
-    Fix missing mustache dependency for CI
-
-commit 345dcd6e0167a90402e704acf83260f2ba60befe
-Author: Sterling Hanenkamp <sterling@hanenkamp.com>
-Date:   Tue Apr 14 22:01:45 2015 -0500
-
-    fix missing comma. oops
-
-commit 0d5f0522e36746d1ca8579d5f8fe32b9b0da6373
-Author: Sterling Hanenkamp <sterling@hanenkamp.com>
-Date:   Tue Apr 14 09:19:13 2015 -0500
-
-    Support custom renderers and mustache templates
+    Fix tests deprecation warnings
+    
+    fixes #26
+    
+    The "test fix" is most probably a temporary solution. During the GLR
+    changes, we probably should be using Empty, but that'll be removed
+    later.
 --------
 DBIish
 commit 36e66e88e1e15854a403d851ba893fd2f7fccecb
@@ -141,14 +129,11 @@ Date:   Sat May 23 12:26:56 2015 +0200
     Fixes a crash reported by Ven++.
 --------
 doc
-commit 1eed4d38a953d92a7b6757009f81234b3c519d64
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Fri Jun 26 20:03:24 2015 +0200
+commit bf45d648afeebd22d7661d43f89c092a87d40a5a
+Author: Tobias Leich <email@froggs.de>
+Date:   Sat Jun 27 19:42:37 2015 +0200
 
-    Remove X<> link to CWD variable
-    
-    This was being rendered as plain text before the dynamic variables table and
-    was confusing the meaning of what the text was trying to say.
+    fix documentation of shell()
 --------
 file-find
 commit 119e620270cb276f292f4f4a36fa821322a51fe8
@@ -231,25 +216,32 @@ Date:   Mon Jun 1 17:23:04 2015 +0100
     unit class added
 --------
 panda
-commit d065e5ad661b4eef2579464e7ad66a72be3d17ad
-Merge: d3fa804 cf7d117
+commit 3fb9e3cf390cffe8e4835fd1a9a519e98bb137a0
+Merge: d065e5a afd281a
 Author: lizmat <liz@dijkmat.nl>
-Date:   Wed Jun 24 13:36:25 2015 +0200
+Date:   Sat Jun 27 12:30:47 2015 +0200
 
-    Merge pull request #177 from paultcochrane/pr/for-to-flatmap
+    Merge pull request #179 from hoelzro/dont-cross-the-streams-proc-async
     
-    Replace .for method with .flatmap
+    Dont cross the streams - Proc::Async
 
-commit cf7d11769912fa656d87979d29fb784622d69554
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Wed Jun 24 11:25:37 2015 +0200
+commit afd281a5c0ba4ba35fbf9b9f419170c9e6638194
+Author: Rob Hoelz <rob@hoelz.ro>
+Date:   Fri Jun 26 18:11:17 2015 -0500
 
-    Replace .for method with .flatmap
+    Split up build stdout and stderr into different attributes
     
-    The `.for` method has been deprecated in favour of the `.flatmap` method.
-    The deprecated method will be removed in Rakudo 2015.09.  This change
-    removes the deprecation warning that appears when running the 'list'
-    command.
+    This preserves the existing behavior of printing both to
+    standard output and stuffing the combined output into
+    Project.build-output, but it will allow projects that
+    use panda (ex. emmentaler) to distinguish between a build's
+    normal and abnormal output
+
+commit aedd93cfff6a85791cb854bc73bf342722acae44
+Author: Rob Hoelz <rob@hoelz.ro>
+Date:   Mon Jun 8 22:29:34 2015 -0500
+
+    Add separate attributes for tracking build stdout/stderr
 --------
 perl6-Term-ANSIColor
 commit c381f5b13c7271fc1067769088c948ec0b83f6a5

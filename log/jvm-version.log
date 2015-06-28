@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.5.5) (7u79-2.5.5-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-SaltLake-91-g4cfec0c
+SaltLake-95-g367b581
 NQP
 2015.06-13-ga5d6dda
 modules
@@ -216,32 +216,20 @@ Date:   Mon Jun 1 17:23:04 2015 +0100
     unit class added
 --------
 panda
-commit 3fb9e3cf390cffe8e4835fd1a9a519e98bb137a0
-Merge: d065e5a afd281a
+commit adaf6ddaa6c5cbb0fa6eea1ea0588d72cc0d6d6e
+Merge: 3fb9e3c 1150b34
 Author: lizmat <liz@dijkmat.nl>
-Date:   Sat Jun 27 12:30:47 2015 +0200
+Date:   Sun Jun 28 12:24:09 2015 +0200
 
-    Merge pull request #179 from hoelzro/dont-cross-the-streams-proc-async
+    Merge pull request #180 from hoelzro/master
     
-    Dont cross the streams - Proc::Async
+    Remove ANSI terminal color codes
 
-commit afd281a5c0ba4ba35fbf9b9f419170c9e6638194
+commit 1150b341ac68459165cf33c4f4d8b7ac7c4949c2
 Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Fri Jun 26 18:11:17 2015 -0500
+Date:   Sat Jun 27 17:16:31 2015 -0500
 
-    Split up build stdout and stderr into different attributes
-    
-    This preserves the existing behavior of printing both to
-    standard output and stuffing the combined output into
-    Project.build-output, but it will allow projects that
-    use panda (ex. emmentaler) to distinguish between a build's
-    normal and abnormal output
-
-commit aedd93cfff6a85791cb854bc73bf342722acae44
-Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Mon Jun 8 22:29:34 2015 -0500
-
-    Add separate attributes for tracking build stdout/stderr
+    Remove ANSI terminal color codes
 --------
 perl6-Term-ANSIColor
 commit c381f5b13c7271fc1067769088c948ec0b83f6a5

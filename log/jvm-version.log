@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.5.5) (7u79-2.5.5-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-SaltLake-126-g4bcbc74
+SaltLake-130-gb2d6d02
 NQP
 2015.06-14-g64945f1
 modules
@@ -29,11 +29,34 @@ Date:   Sat Jun 13 14:43:13 2015 +0200
     later.
 --------
 DBIish
-commit 36e66e88e1e15854a403d851ba893fd2f7fccecb
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Wed May 27 15:36:56 2015 +0200
+commit 2cfecb9d832f4d70d1b1928e2b9cb62fb78255bb
+Merge: 36e66e8 03738e3
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Jun 30 06:33:35 2015 +0200
 
-    kebabcase subs from Test
+    Merge pull request #12 from hoelzro/master
+    
+    Fix bug where Pg driver would still have truthy results from fetchrow-hash
+
+commit 03738e38054b6590b6ca58d44f1ae1bdc0276407
+Author: Rob Hoelz <rob@hoelz.ro>
+Date:   Mon Jun 29 20:01:41 2015 -0500
+
+    Make sure exhausted statements have falsy results
+
+commit fbe582600377f0bbd4c9eb0c6d4bf6efce35bb5d
+Author: Rob Hoelz <rob@hoelz.ro>
+Date:   Mon Jun 29 17:42:06 2015 -0500
+
+    Return an empty Parcel if we have no results in Pg
+    
+    Otherwise, fetchrow-hash ends up being a non-falsy value
+
+commit b8260dee0878e2c6c1fb6744d57c0231149b7e24
+Author: Rob Hoelz <rob@hoelz.ro>
+Date:   Mon Jun 29 17:55:52 2015 -0500
+
+    Verify that a query with no results has a falsy value
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -52,11 +75,15 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 MODULES.txt
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 PSGI
 commit e09fd63e28842a00537d2471eb2b4f2e927cde48
@@ -223,113 +250,177 @@ Date:   Mon Jun 1 17:23:04 2015 +0100
     unit class added
 --------
 p6-File-Temp
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 p6-Template-Mustache
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 p6-file-directory-tree
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 panda
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 perl6-Term-ANSIColor
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 perl6-digest-md5
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 perl6-http-easy
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 perl6-http-status
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 perl6-lwp-simple
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 shell-command
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 svg
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 svg-plot
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 test-mock
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 ufo
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 uri
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)
 --------
 xml-writer
-commit 36ecc6c10763d8eb2d0b231ea8b5a86682dd838e
-Author: Tobias Leich <email@froggs.de>
-Date:   Mon Jun 29 21:25:11 2015 +0200
+commit bf2232a14ff1e6d9061d0dbbbb125934946179cd
+Author: Will Coleda <will@coleda.com>
+Date:   Tue Jun 30 14:38:18 2015 -0400
 
-    add File::Directory::Tree as a dependency
+    Update 2015.06.md
+    
+    Remove reference to readline, we're using linenoise
+    
+    (and unicode support seems OK)

@@ -1,7 +1,7 @@
 MoarVM
-2015.06-83-gd0f568b
+2015.06-85-g8f1ed93
 Rakudo
-SaltLake-173-g37b5793
+SaltLake-176-g5919a84
 NQP
 2015.06-18-g5263e63
 modules
@@ -150,18 +150,26 @@ Date:   Sat May 23 12:26:56 2015 +0200
     Fixes a crash reported by Ven++.
 --------
 doc
-commit 319ddfb4aa0f404571ed734bfb5470e24f97ef2b
-Merge: 44eb544 0caf9d5
-Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
-Date:   Thu Jul 2 15:56:43 2015 +0100
+commit f988b2c3d4d209f69cd6b31236cf7e98b92c4255
+Merge: 319ddfb c754919
+Author: Nick Logan <nlogan@gmail.com>
+Date:   Sun Jul 5 14:43:51 2015 -0400
 
-    Merge branch 'io-socket-async'
+    Merge pull request #100 from ugexe/ugexe
+    
+    IO::Path .extension, Proc[::Async] :$cwd param
 
-commit 0caf9d5b8212a5bf10afd70c1affdb8ea09bec06
-Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
-Date:   Thu Jul 2 15:54:59 2015 +0100
+commit c75491900a3a0a122b171e39a1971e4557f4551c
+Author: ugexe <nlogan@gmail.com>
+Date:   Sun Jul 5 14:32:59 2015 -0400
 
-    Add documentation for IO::Socket::Async
+    :$cwd param for process spawning
+
+commit 5dc086511e701cd92d9c05768bcadb0f706fc951
+Author: ugexe <nlogan@gmail.com>
+Date:   Sun Jul 5 14:27:04 2015 -0400
+
+    IO::Path.extension
 --------
 file-find
 commit 119e620270cb276f292f4f4a36fa821322a51fe8

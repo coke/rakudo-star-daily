@@ -43,12 +43,12 @@ jar cf0 rakudo-runtime.jar -C bin/ .
 The following step can take a long time, please be patient.
 java -Xss1m -Xms500m -Xmx2000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar:rakudo-runtime.jar:perl6.jar -cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib perl6 --setting=NULL --ll-exception --optimize=3 --target=jar --stagestats --output=CORE.setting.jar gen/jvm/CORE.setting
 Stage start      :   0.000
-Stage parse      :  70.859
+Stage parse      :  72.375
 Stage syntaxcheck:   0.000
-Stage ast        :   0.002
-Stage optimize   :  10.539
-Stage jast       :  24.013
-Stage classfile  :   7.782
+Stage ast        :   0.001
+Stage optimize   :   9.898
+Stage jast       :  24.160
+Stage classfile  :   6.893
 Stage jar        :   0.000
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-jvm-runner.pl dev . . /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar
 Creating './perl6-j'
@@ -446,8 +446,8 @@ Could not find Term::ANSIColor in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib
-  file#/home/coke/.perl6/SaltLake-173-g37b5793/lib
-  inst#/home/coke/.perl6/SaltLake-173-g37b5793
+  file#/home/coke/.perl6/SaltLake-176-g5919a84/lib
+  inst#/home/coke/.perl6/SaltLake-176-g5919a84
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/lib
@@ -461,8 +461,8 @@ Could not find Term::ANSIColor in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib
-  file#/home/coke/.perl6/SaltLake-173-g37b5793/lib
-  inst#/home/coke/.perl6/SaltLake-173-g37b5793
+  file#/home/coke/.perl6/SaltLake-176-g5919a84/lib
+  inst#/home/coke/.perl6/SaltLake-176-g5919a84
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/lib
@@ -482,8 +482,8 @@ Could not find HTTP::Status in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib
-  file#/home/coke/.perl6/SaltLake-173-g37b5793/lib
-  inst#/home/coke/.perl6/SaltLake-173-g37b5793
+  file#/home/coke/.perl6/SaltLake-176-g5919a84/lib
+  inst#/home/coke/.perl6/SaltLake-176-g5919a84
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/lib
@@ -498,8 +498,8 @@ Could not find URI::Escape in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib
-  file#/home/coke/.perl6/SaltLake-173-g37b5793/lib
-  inst#/home/coke/.perl6/SaltLake-173-g37b5793
+  file#/home/coke/.perl6/SaltLake-176-g5919a84/lib
+  inst#/home/coke/.perl6/SaltLake-176-g5919a84
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/lib
@@ -532,8 +532,8 @@ Could not find Template::Mustache in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib
-  file#/home/coke/.perl6/SaltLake-173-g37b5793/lib
-  inst#/home/coke/.perl6/SaltLake-173-g37b5793
+  file#/home/coke/.perl6/SaltLake-176-g5919a84/lib
+  inst#/home/coke/.perl6/SaltLake-176-g5919a84
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/lib
@@ -554,8 +554,8 @@ Could not find HTTP::Easy::PSGI in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib
-  file#/home/coke/.perl6/SaltLake-173-g37b5793/lib
-  inst#/home/coke/.perl6/SaltLake-173-g37b5793
+  file#/home/coke/.perl6/SaltLake-176-g5919a84/lib
+  inst#/home/coke/.perl6/SaltLake-176-g5919a84
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/lib
@@ -569,8 +569,8 @@ Could not find URI in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib
-  file#/home/coke/.perl6/SaltLake-173-g37b5793/lib
-  inst#/home/coke/.perl6/SaltLake-173-g37b5793
+  file#/home/coke/.perl6/SaltLake-176-g5919a84/lib
+  inst#/home/coke/.perl6/SaltLake-176-g5919a84
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/lib
@@ -584,8 +584,8 @@ Could not find URI::Escape in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib
-  file#/home/coke/.perl6/SaltLake-173-g37b5793/lib
-  inst#/home/coke/.perl6/SaltLake-173-g37b5793
+  file#/home/coke/.perl6/SaltLake-176-g5919a84/lib
+  inst#/home/coke/.perl6/SaltLake-176-g5919a84
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/lib
@@ -599,8 +599,8 @@ Could not find URI::Escape in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib
-  file#/home/coke/.perl6/SaltLake-173-g37b5793/lib
-  inst#/home/coke/.perl6/SaltLake-173-g37b5793
+  file#/home/coke/.perl6/SaltLake-176-g5919a84/lib
+  inst#/home/coke/.perl6/SaltLake-176-g5919a84
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/lib
@@ -618,8 +618,8 @@ Could not find URI::Escape in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib
-  file#/home/coke/.perl6/SaltLake-173-g37b5793/lib
-  inst#/home/coke/.perl6/SaltLake-173-g37b5793
+  file#/home/coke/.perl6/SaltLake-176-g5919a84/lib
+  inst#/home/coke/.perl6/SaltLake-176-g5919a84
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/lib
@@ -638,8 +638,8 @@ Could not find Term::ANSIColor in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib
-  file#/home/coke/.perl6/SaltLake-173-g37b5793/lib
-  inst#/home/coke/.perl6/SaltLake-173-g37b5793
+  file#/home/coke/.perl6/SaltLake-176-g5919a84/lib
+  inst#/home/coke/.perl6/SaltLake-176-g5919a84
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/lib

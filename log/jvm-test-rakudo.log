@@ -1,56 +1,27 @@
 cd rakudo && make test
 make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl t/harness --jvm t/01-sanity
-t/01-sanity/01-literals.t ............ ok
-t/01-sanity/02-op-math.t ............. ok
-t/01-sanity/03-op-logic.t ............ ok
-t/01-sanity/04-op-cmp.t .............. ok
-t/01-sanity/05-var.t ................. ok
-t/01-sanity/06-op-inplace.t .......... ok
-t/01-sanity/07-op-string.t ........... ok
-t/01-sanity/08-var-array.t ........... ok
-t/01-sanity/09-end-blocks.t .......... ok
-t/01-sanity/10-regex.t ............... ok
-t/01-sanity/11-tap.t ................. ok
-t/01-sanity/12-counter.t ............. ok
-t/01-sanity/13-equal.t ............... ok
-t/01-sanity/14-if.t .................. ok
-t/01-sanity/15-sub.t ................. ok
-t/01-sanity/16-eqv.t ................. ok
-t/01-sanity/17-isa.t ................. ok
-t/01-sanity/18-simple-multisubs.t .... ok
-t/01-sanity/19-say.t ................. ok
-t/01-sanity/20-defined.t ............. ok
-t/01-sanity/21-try.t ................. ok
-t/01-sanity/52-parse-include-spec.t .. ok
-t/01-sanity/53-transpose.t ........... ok
-t/01-sanity/54-use-lib.t ............. ok
-t/01-sanity/55-use-trace.t ........... ok
-t/01-sanity/99-test-basic.t .......... ok
-All tests successful.
-Files=26, Tests=333, 37 wallclock secs ( 0.11 usr  0.01 sys +  0.70 cusr  0.06 csys =  0.88 CPU)
-Result: PASS
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl t/harness --jvm t/03-jvm
-t/03-jvm/01-interop.t .. ok
-All tests successful.
-Files=1, Tests=25,  8 wallclock secs ( 0.03 usr  0.00 sys +  0.04 cusr  0.00 csys =  0.07 CPU)
-Result: PASS
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl t/harness --jvm t/04-nativecall
-t/04-nativecall/01-argless.t ......... ok
-t/04-nativecall/02-simple-args.t ..... ok
-t/04-nativecall/03-simple-returns.t .. ok
-t/04-nativecall/04-pointers.t ........ ok
-t/04-nativecall/05-arrays.t .......... ok
-t/04-nativecall/06-struct.t .......... ok
-t/04-nativecall/07-writebarrier.t .... ok
-t/04-nativecall/08-callbacks.t ....... ok
-t/04-nativecall/09-nativecast.t ...... ok
-t/04-nativecall/10-cglobals.t ........ ok
-t/04-nativecall/12-sizeof.t .......... ok
-t/04-nativecall/13-union.t ........... ok
-t/04-nativecall/14-rw-attrs.t ........ ok
-t/04-nativecall/15-rw-args.t ......... ok
-All tests successful.
-Files=14, Tests=181, 42 wallclock secs ( 0.07 usr  0.02 sys +  0.50 cusr  0.03 csys =  0.62 CPU)
-Result: PASS
+./perl6-j --target=jar --output=lib/Test.pm.jar -Ilib lib/Test.pm
+java.lang.NullPointerException
+  in  (gen/jvm/CORE.setting)
+  in  (gen/jvm/ModuleLoader.nqp:381)
+  in load_setting (gen/jvm/ModuleLoader.nqp:371)
+  in load_setting (src/Perl6/World.nqp:504)
+  in loading_and_symbol_setup (src/Perl6/World.nqp:283)
+  in comp_unit (src/Perl6/Grammar.nqp:1083)
+  in TOP (src/Perl6/Grammar.nqp:384)
+  in parse (gen/jvm/stage2/QRegex.nqp:1982)
+  in parse (gen/jvm/stage2/NQPHLL.nqp:1455)
+  in compile (gen/jvm/stage2/NQPHLL.nqp:1411)
+  in eval (gen/jvm/stage2/NQPHLL.nqp:1153)
+  in evalfiles (gen/jvm/stage2/NQPHLL.nqp:1368)
+  in command_eval (gen/jvm/stage2/NQPHLL.nqp:1267)
+  in command_eval (src/Perl6/Compiler.nqp:59)
+  in command_line (gen/jvm/stage2/NQPHLL.nqp:1241)
+  in MAIN (gen/jvm/main.nqp:39)
+  in <mainline> (gen/jvm/main.nqp:35)
+  in  (gen/jvm/main.nqp)
+Makefile:425: recipe for target 'lib/Test.pm.jar' failed
+make[1]: *** [lib/Test.pm.jar] Error 1
 make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'
+Makefile:48: recipe for target 'rakudo-test' failed
+make: *** [rakudo-test] Error 2

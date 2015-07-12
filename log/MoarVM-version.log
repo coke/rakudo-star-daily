@@ -1,7 +1,7 @@
 MoarVM
 2015.06-92-geb0c964
 Rakudo
-SaltLake-241-g81d1738
+SaltLake-243-g2e612ac
 NQP
 2015.06-46-g032f577
 modules
@@ -29,34 +29,11 @@ Date:   Sat Jun 13 14:43:13 2015 +0200
     later.
 --------
 DBIish
-commit 2cfecb9d832f4d70d1b1928e2b9cb62fb78255bb
-Merge: 36e66e8 03738e3
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue Jun 30 06:33:35 2015 +0200
+commit 8b3eb928cea7bebe3ba85438adde198a7c32f67e
+Author: lembark <lembark@wrkhors.com>
+Date:   Fri Jul 3 18:14:17 2015 +0000
 
-    Merge pull request #12 from hoelzro/master
-    
-    Fix bug where Pg driver would still have truthy results from fetchrow-hash
-
-commit 03738e38054b6590b6ca58d44f1ae1bdc0276407
-Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Mon Jun 29 20:01:41 2015 -0500
-
-    Make sure exhausted statements have falsy results
-
-commit fbe582600377f0bbd4c9eb0c6d4bf6efce35bb5d
-Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Mon Jun 29 17:42:06 2015 -0500
-
-    Return an empty Parcel if we have no results in Pg
-    
-    Otherwise, fetchrow-hash ends up being a non-falsy value
-
-commit b8260dee0878e2c6c1fb6744d57c0231149b7e24
-Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Mon Jun 29 17:55:52 2015 -0500
-
-    Verify that a query with no results has a falsy value
+    use PG environment variables to configure connection; update POD to avoid user having to pre-create hardwired database and user
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1

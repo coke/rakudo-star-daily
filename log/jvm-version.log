@@ -1,7 +1,7 @@
-OpenJDK Runtime Environment (IcedTea 2.5.5) (7u79-2.5.5-1~deb8u1)
+OpenJDK Runtime Environment (IcedTea 2.5.6) (7u79-2.5.6-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-2015.07.1-3-g6bbb56f
+2015.07.1-8-ged945eb
 NQP
 2015.07.2-1-g16bee5d
 modules
@@ -39,11 +39,11 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 MODULES.txt
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 PSGI
 commit e09fd63e28842a00537d2471eb2b4f2e927cde48
@@ -105,20 +105,38 @@ Date:   Sun May 3 22:25:12 2015 -0500
     own so you can pass vars without shifting from @_ using the ^ twigil.
 --------
 debugger-ui-commandline
-commit 8b62c76c8777006199a4c174cff9fb5082e0645c
-Author: jnthn <jnthn@jnthn.net>
-Date:   Sat May 23 12:26:56 2015 +0200
+commit b02f74b6c348eeb594b8f65c71e93efa5ce64105
+Merge: 8b62c76 03ab265
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sun Jul 26 08:08:34 2015 +0200
 
-    Harden backtrace walk for non-Perl 6 code objects.
+    Merge pull request #30 from atweiden/fix-build-failure
     
-    Fixes a crash reported by Ven++.
+    fixed build failure with rakudo-2015.07
+
+commit 03ab26517c57ebe474eca74c23bbfb8871f5de32
+Author: Andy Weidenbaum <archbaum@gmail.com>
+Date:   Sat Jul 25 22:44:18 2015 -0700
+
+    fixed build failure with rakudo-2015.07
+    
+    closes #29
 --------
 doc
-commit a404865bcee5cf10fb79603370485054a0d80fa1
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Sat Jul 25 13:20:34 2015 +0200
+commit e82adb8583dd804e94ddb2069276506ce97a000b
+Merge: f976bcc b2af0fa
+Author: mdinger <mdinger.bugzilla@gmail.com>
+Date:   Sun Jul 26 15:51:07 2015 -0400
 
-    Add docs for IO::ArgFiles
+    Merge pull request #107 from mdinger/lookaround_assert
+    
+    Remove more ? from ?! lookaround assertions
+
+commit b2af0fa3f46d07e927bc77dc55cf857605c40262
+Author: mdinger <mdinger.bugzilla@gmail.com>
+Date:   Sun Jul 26 15:18:58 2015 -0400
+
+    Remove more ? from ?! lookaround assertions
 --------
 file-find
 commit 119e620270cb276f292f4f4a36fa821322a51fe8
@@ -201,113 +219,113 @@ Date:   Mon Jun 1 17:23:04 2015 +0100
     unit class added
 --------
 p6-File-Temp
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 p6-Template-Mustache
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 p6-file-directory-tree
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 panda
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 perl6-Term-ANSIColor
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 perl6-digest-md5
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 perl6-http-easy
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 perl6-http-status
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 perl6-lwp-simple
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 shell-command
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 svg
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 svg-plot
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 test-mock
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 ufo
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 uri
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft
 --------
 xml-writer
-commit a383d29320c53720cfa319a2169ec42f42d50333
+commit 15fa3b1276162b76ca16aa6742c67923581c78f6
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Jul 25 19:18:44 2015 +0000
+Date:   Sun Jul 26 08:07:40 2015 +0200
 
-    Remove deleted subodules more thoroughly
+    Add 2015.07 announcement draft

@@ -1,9 +1,9 @@
 MoarVM
 2015.07-19-gcb95c6b
 Rakudo
-2015.07.1-73-g1a3f1a2
+2015.07.1-81-gb527b31
 NQP
-2015.07.2-17-g808ce0f
+2015.07.2-18-g4de65a5
 modules
 --------
 Bailador
@@ -149,11 +149,14 @@ Date:   Sat Jul 25 22:44:18 2015 -0700
     closes #29
 --------
 doc
-commit ff84848521289f307afee2324c445e1293677b0f
-Author: skids <bri@abrij.org>
-Date:   Thu Aug 6 19:42:48 2015 -0400
+commit aa0d2eaaf4e3e5e912ee9ddccc72a166ae3def33
+Author: ShimmerFairy <rnddim@gmail.com>
+Date:   Fri Aug 7 17:40:18 2015 -0700
 
-    Quickly clarify that items use dereferencing under sigil invarience
+    Forgot to mention * as the right arg of flipflop.
+    
+    $a ff * (or any of the other flipflop ops) means that there is no stop
+    condition. Once $a matches, the flipflop is always successful.
 --------
 file-find
 commit 119e620270cb276f292f4f4a36fa821322a51fe8

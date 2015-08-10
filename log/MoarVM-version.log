@@ -1,7 +1,7 @@
 MoarVM
-2015.07-23-g8217892
+2015.07-27-gf99d24c
 Rakudo
-2015.07.1-81-gb527b31
+2015.07.1-90-g3b38783
 NQP
 2015.07.2-18-g4de65a5
 modules
@@ -149,14 +149,23 @@ Date:   Sat Jul 25 22:44:18 2015 -0700
     closes #29
 --------
 doc
-commit aa0d2eaaf4e3e5e912ee9ddccc72a166ae3def33
-Author: ShimmerFairy <rnddim@gmail.com>
-Date:   Fri Aug 7 17:40:18 2015 -0700
+commit e47c510d3eba2a1c99d071d594bbf1a40aab9004
+Author: smls <smls75@gmail.com>
+Date:   Mon Aug 10 18:26:40 2015 +0200
 
-    Forgot to mention * as the right arg of flipflop.
+    Improve subtitles for type pages
     
-    $a ff * (or any of the other flipflop ops) means that there is no stop
-    condition. Once $a matches, the flipflop is always successful.
+    Besides misc tweaking and homogenizing of the subtitles, the subtitles for
+    roles are now worded similarly to those of classes (i.e. so it would fit "An
+    object which has this role composed into it represents a(n) [SUBTITLE HERE]"),
+    rather than starting their subtitles with "Common role for".
+    
+    Remember that the main purpose for the subtitles is to provide helpful context
+    and hints to reader who are skimming the type index pages
+    (http://doc.perl6.org/type.html, http://doc.perl6.org/type-basic.html, etc.),
+    which is why it's important for the subtitles to be phrased consistently
+    (especially between related classes/roles) and to be free of fluff and
+    distractions.
 --------
 file-find
 commit 119e620270cb276f292f4f4a36fa821322a51fe8

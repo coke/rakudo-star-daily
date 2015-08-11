@@ -1,7 +1,7 @@
 MoarVM
 2015.07-27-gf99d24c
 Rakudo
-2015.07.1-90-g3b38783
+2015.07.1-94-g7814349
 NQP
 2015.07.2-18-g4de65a5
 modules
@@ -121,14 +121,20 @@ Date:   Wed May 27 11:31:30 2015 +0200
     Add unit declarator to class declaration
 --------
 Template-Mojo
-commit 8b85fbfb48c8b867761628f19a0775fba4014949
-Author: Sterling Hanenkamp <sterling@hanenkamp.com>
-Date:   Sun May 3 22:25:12 2015 -0500
+commit 050857642dc96c4b20c6a9a9bf493feedb41a531
+Merge: 8b85fbf bd7e405
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Tue Aug 11 16:37:11 2015 +0200
 
-    Add begin/end block capture feature similar to Mojo::Template
+    Merge pull request #21 from szabgab/travis
     
-    This works basically the same, but Perl 6 makes it a bit more powerful on it's
-    own so you can pass vars without shifting from @_ using the ^ twigil.
+    please enable Travis-CI
+
+commit bd7e405f748aef1faafb447bc9d56a04a30e1521
+Author: Gabor Szabo <gabor@szabgab.com>
+Date:   Fri Jul 31 08:06:03 2015 +0300
+
+    enable Travis-CI
 --------
 debugger-ui-commandline
 commit b02f74b6c348eeb594b8f65c71e93efa5ce64105
@@ -149,23 +155,11 @@ Date:   Sat Jul 25 22:44:18 2015 -0700
     closes #29
 --------
 doc
-commit e47c510d3eba2a1c99d071d594bbf1a40aab9004
-Author: smls <smls75@gmail.com>
-Date:   Mon Aug 10 18:26:40 2015 +0200
+commit 73ba4fdac31743a07e195353949c7ae2104426e2
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Tue Aug 11 19:54:25 2015 +0100
 
-    Improve subtitles for type pages
-    
-    Besides misc tweaking and homogenizing of the subtitles, the subtitles for
-    roles are now worded similarly to those of classes (i.e. so it would fit "An
-    object which has this role composed into it represents a(n) [SUBTITLE HERE]"),
-    rather than starting their subtitles with "Common role for".
-    
-    Remember that the main purpose for the subtitles is to provide helpful context
-    and hints to reader who are skimming the type index pages
-    (http://doc.perl6.org/type.html, http://doc.perl6.org/type-basic.html, etc.),
-    which is why it's important for the subtitles to be phrased consistently
-    (especially between related classes/roles) and to be free of fluff and
-    distractions.
+    change various Socket .send to .print
 --------
 file-find
 commit 119e620270cb276f292f4f4a36fa821322a51fe8

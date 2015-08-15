@@ -25,7 +25,9 @@ t/01-sanity/21-try.t ................. ok
 t/01-sanity/52-parse-include-spec.t .. ok
 t/01-sanity/53-transpose.t ........... ok
 t/01-sanity/54-use-lib.t ............. ok
-t/01-sanity/55-use-trace.t ........... ok
+t/01-sanity/55-use-trace.t ........... 
+Dubious, test returned 1 (wstat 256, 0x100)
+Failed 1/3 subtests 
 t/01-sanity/99-test-basic.t .......... ok
 t/04-nativecall/01-argless.t ......... ok
 t/04-nativecall/02-simple-args.t ..... ok
@@ -48,9 +50,12 @@ t/04-nativecall/16-rt125729.t ........ ok
 
 Test Summary Report
 -------------------
+t/01-sanity/55-use-trace.t         (Wstat: 256 Tests: 3 Failed: 1)
+  Failed test:  3
+  Non-zero exit status: 1
 t/04-nativecall/16-rt125408.t      (Wstat: 256 Tests: 1 Failed: 1)
   Failed test:  1
   Non-zero exit status: 1
-Files=42, Tests=516, 29 wallclock secs ( 0.13 usr  0.04 sys + 24.87 cusr  1.43 csys = 26.47 CPU)
+Files=42, Tests=516, 27 wallclock secs ( 0.14 usr  0.04 sys + 24.61 cusr  1.47 csys = 26.26 CPU)
 Result: FAIL
 make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/rakudo'

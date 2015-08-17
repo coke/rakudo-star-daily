@@ -49,12 +49,12 @@ gcc  -L/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/instal
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm src/gen/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  35.951
+Stage parse      :  35.918
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   4.567
-Stage mast       :  11.385
-Stage mbc        :   0.146
+Stage optimize   :   4.520
+Stage mast       :  11.345
+Stage mbc        :   0.147
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" perl6.moarvm --target=mbc --ll-exception --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e rm_f perl6-m
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" .
@@ -423,6 +423,7 @@ modules/doc/lib/Language/io.pod => /home/coke/sandbox/rakudo-star-daily/star-Moa
 modules/doc/lib/Language/mop.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/mop.pod
 modules/doc/lib/Language/modules.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/modules.pod
 modules/doc/lib/Language/glossary.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/glossary.pod
+modules/doc/lib/Language/5to6-perlsyn.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/5to6-perlsyn.pod
 modules/doc/lib/Language/functions.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/functions.pod
 modules/doc/lib/Language/syntax.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/syntax.pod
 modules/doc/lib/Language/testing.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/testing.pod
@@ -430,12 +431,15 @@ modules/doc/lib/Language/concurrency.pod => /home/coke/sandbox/rakudo-star-daily
 modules/doc/lib/Language/grammars.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/grammars.pod
 modules/doc/lib/Language/quoting.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/quoting.pod
 modules/doc/lib/Language/control.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/control.pod
+modules/doc/lib/Language/5to6-perlop.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/5to6-perlop.pod
 modules/doc/lib/Language/setbagmix.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/setbagmix.pod
 modules/doc/lib/Language/exceptions.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/exceptions.pod
 modules/doc/lib/Language/variables.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/variables.pod
 modules/doc/lib/Language/classtut.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/classtut.pod
 modules/doc/lib/Language/containers.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/containers.pod
+modules/doc/lib/Language/5to6-perlfunc.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/5to6-perlfunc.pod
 modules/doc/lib/Language/terms.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/terms.pod
+modules/doc/lib/Language/5to6-perlvar.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/5to6-perlvar.pod
 modules/doc/lib/Language/subscripts.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/subscripts.pod
 modules/doc/lib/Language/operators.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/operators.pod
 modules/doc/lib/Language/unicode_entry.pod => /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Language/unicode_entry.pod
@@ -452,8 +456,8 @@ modules/debugger-ui-commandline/lib/Debugger/UI/CommandLine.pm => /home/coke/san
 ===SORRY!===
 Could not find Term::ANSIColor in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
-  file#/home/coke/.perl6/2015.07.1-125-gf185e08/lib
-  inst#/home/coke/.perl6/2015.07.1-125-gf185e08
+  file#/home/coke/.perl6/2015.07.1-134-g3754356/lib
+  inst#/home/coke/.perl6/2015.07.1-134-g3754356
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib
@@ -464,8 +468,8 @@ Could not find Term::ANSIColor in any of:
 ===SORRY!===
 Could not find Term::ANSIColor in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
-  file#/home/coke/.perl6/2015.07.1-125-gf185e08/lib
-  inst#/home/coke/.perl6/2015.07.1-125-gf185e08
+  file#/home/coke/.perl6/2015.07.1-134-g3754356/lib
+  inst#/home/coke/.perl6/2015.07.1-134-g3754356
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib
@@ -482,8 +486,8 @@ Could not find Term::ANSIColor in any of:
 ===SORRY!===
 Could not find HTTP::Status in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
-  file#/home/coke/.perl6/2015.07.1-125-gf185e08/lib
-  inst#/home/coke/.perl6/2015.07.1-125-gf185e08
+  file#/home/coke/.perl6/2015.07.1-134-g3754356/lib
+  inst#/home/coke/.perl6/2015.07.1-134-g3754356
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib
@@ -495,8 +499,8 @@ Could not find HTTP::Status in any of:
 ===SORRY!===
 Could not find URI::Escape in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
-  file#/home/coke/.perl6/2015.07.1-125-gf185e08/lib
-  inst#/home/coke/.perl6/2015.07.1-125-gf185e08
+  file#/home/coke/.perl6/2015.07.1-134-g3754356/lib
+  inst#/home/coke/.perl6/2015.07.1-134-g3754356
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib
@@ -526,8 +530,8 @@ Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-
 ===SORRY!===
 Could not find Template::Mustache in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
-  file#/home/coke/.perl6/2015.07.1-125-gf185e08/lib
-  inst#/home/coke/.perl6/2015.07.1-125-gf185e08
+  file#/home/coke/.perl6/2015.07.1-134-g3754356/lib
+  inst#/home/coke/.perl6/2015.07.1-134-g3754356
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib
@@ -545,8 +549,8 @@ Could not find Template::Mustache in any of:
 ===SORRY!===
 Could not find HTTP::Easy::PSGI in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
-  file#/home/coke/.perl6/2015.07.1-125-gf185e08/lib
-  inst#/home/coke/.perl6/2015.07.1-125-gf185e08
+  file#/home/coke/.perl6/2015.07.1-134-g3754356/lib
+  inst#/home/coke/.perl6/2015.07.1-134-g3754356
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib
@@ -557,8 +561,8 @@ Could not find HTTP::Easy::PSGI in any of:
 ===SORRY!===
 Could not find URI in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
-  file#/home/coke/.perl6/2015.07.1-125-gf185e08/lib
-  inst#/home/coke/.perl6/2015.07.1-125-gf185e08
+  file#/home/coke/.perl6/2015.07.1-134-g3754356/lib
+  inst#/home/coke/.perl6/2015.07.1-134-g3754356
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib
@@ -569,8 +573,8 @@ Could not find URI in any of:
 ===SORRY!===
 Could not find URI::Escape in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
-  file#/home/coke/.perl6/2015.07.1-125-gf185e08/lib
-  inst#/home/coke/.perl6/2015.07.1-125-gf185e08
+  file#/home/coke/.perl6/2015.07.1-134-g3754356/lib
+  inst#/home/coke/.perl6/2015.07.1-134-g3754356
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib
@@ -582,8 +586,8 @@ Could not find URI::Escape in any of:
 ===SORRY!===
 Could not find URI::Escape in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
-  file#/home/coke/.perl6/2015.07.1-125-gf185e08/lib
-  inst#/home/coke/.perl6/2015.07.1-125-gf185e08
+  file#/home/coke/.perl6/2015.07.1-134-g3754356/lib
+  inst#/home/coke/.perl6/2015.07.1-134-g3754356
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib
@@ -598,8 +602,8 @@ Could not find URI::Escape in any of:
 ===SORRY!===
 Could not find URI::Escape in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
-  file#/home/coke/.perl6/2015.07.1-125-gf185e08/lib
-  inst#/home/coke/.perl6/2015.07.1-125-gf185e08
+  file#/home/coke/.perl6/2015.07.1-134-g3754356/lib
+  inst#/home/coke/.perl6/2015.07.1-134-g3754356
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib
@@ -615,8 +619,8 @@ Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-
 ===SORRY!===
 Could not find Term::ANSIColor in any of:
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
-  file#/home/coke/.perl6/2015.07.1-125-gf185e08/lib
-  inst#/home/coke/.perl6/2015.07.1-125-gf185e08
+  file#/home/coke/.perl6/2015.07.1-134-g3754356/lib
+  inst#/home/coke/.perl6/2015.07.1-134-g3754356
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/vendor/lib
   file#/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib

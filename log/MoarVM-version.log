@@ -1,7 +1,7 @@
 MoarVM
-2015.07-54-g5716fae
+2015.07-55-g8f82955
 Rakudo
-2015.07.1-134-g3754356
+2015.07.1-138-g93418e9
 NQP
 2015.07.2-22-g733bf22
 modules
@@ -114,15 +114,14 @@ Date:   Wed May 27 08:44:49 2015 +0200
     commit stops the warning from appearing in the new Rakudo.
 --------
 Pod-To-HTML
-commit 81ef4bc76615fcbaedded3ddb3a3dab98a9387d3
+commit f268102bb07591f329d6f8fd87c56b746fefef28
 Author: ShimmerFairy <rnddim@gmail.com>
-Date:   Thu Aug 13 22:52:54 2015 -0700
+Date:   Mon Aug 17 20:32:22 2015 -0700
 
-    Small optimization in list assembly
+    Fix very incorrect list tests
     
-    This simply avoids playing the binding game if we're still at the same
-    level of list items, which may not improve things much, but it seems
-    nice to avoid it all the same.
+    These tests actually expected that multi-level lists would flatten into
+    a single level, and that was the issue.
 --------
 Template-Mojo
 commit 050857642dc96c4b20c6a9a9bf493feedb41a531

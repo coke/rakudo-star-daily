@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.5.6) (7u79-2.5.6-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-2015.07.1-73-g1a3f1a2
+2015.07.1-153-g815fff3
 NQP
-2015.07.2-17-g808ce0f
+2015.07.2-28-g8717925
 modules
 --------
 Bailador
@@ -114,21 +114,30 @@ Date:   Wed May 27 08:44:49 2015 +0200
     commit stops the warning from appearing in the new Rakudo.
 --------
 Pod-To-HTML
-commit 00967bdcb2fc6bbbea6db16349b32f97cd7255a4
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Wed May 27 11:31:30 2015 +0200
+commit f268102bb07591f329d6f8fd87c56b746fefef28
+Author: ShimmerFairy <rnddim@gmail.com>
+Date:   Mon Aug 17 20:32:22 2015 -0700
 
-    Add unit declarator to class declaration
+    Fix very incorrect list tests
+    
+    These tests actually expected that multi-level lists would flatten into
+    a single level, and that was the issue.
 --------
 Template-Mojo
-commit 8b85fbfb48c8b867761628f19a0775fba4014949
-Author: Sterling Hanenkamp <sterling@hanenkamp.com>
-Date:   Sun May 3 22:25:12 2015 -0500
+commit 050857642dc96c4b20c6a9a9bf493feedb41a531
+Merge: 8b85fbf bd7e405
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Tue Aug 11 16:37:11 2015 +0200
 
-    Add begin/end block capture feature similar to Mojo::Template
+    Merge pull request #21 from szabgab/travis
     
-    This works basically the same, but Perl 6 makes it a bit more powerful on it's
-    own so you can pass vars without shifting from @_ using the ^ twigil.
+    please enable Travis-CI
+
+commit bd7e405f748aef1faafb447bc9d56a04a30e1521
+Author: Gabor Szabo <gabor@szabgab.com>
+Date:   Fri Jul 31 08:06:03 2015 +0300
+
+    enable Travis-CI
 --------
 debugger-ui-commandline
 commit b02f74b6c348eeb594b8f65c71e93efa5ce64105
@@ -149,11 +158,11 @@ Date:   Sat Jul 25 22:44:18 2015 -0700
     closes #29
 --------
 doc
-commit ff84848521289f307afee2324c445e1293677b0f
+commit 59e885d83f88c8090254de083750510aa7c96ed8
 Author: skids <bri@abrij.org>
-Date:   Thu Aug 6 19:42:48 2015 -0400
+Date:   Thu Aug 20 00:03:32 2015 -0400
 
-    Quickly clarify that items use dereferencing under sigil invarience
+    Add an admonition against uncontainerized binding to array elements
 --------
 file-find
 commit 119e620270cb276f292f4f4a36fa821322a51fe8
@@ -201,11 +210,11 @@ Date:   Thu Jun 25 09:30:03 2015 -0700
     working again, at least partially.  ignores NQPRoutine $meth now
 --------
 json
-commit 635a8ae61c83af16ab66fa4f0af1e758f8e2e728
-Author: Moritz Lenz <mlenz@noris.net>
-Date:   Wed May 27 08:39:53 2015 +0200
+commit 4b020ae2b87e76c6dad7faf76fbb87b7c408f000
+Author: Luca Bennati <labensigma@gmail.com>
+Date:   Wed Aug 19 19:50:02 2015 +0200
 
-    Replace deprecated test functions with appreciated ones
+    Fix up methods and test object construction for GLR
 --------
 jsonrpc
 commit e8d65d73c07d62a5cd8bcc4b7d1ddac4b9f21768

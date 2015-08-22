@@ -127,6 +127,10 @@ java -cp gen/jvm/stage1 -Xbootclasspath/a:gen/jvm/stage1:nqp-runtime.jar:3rdpart
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp tools/jvm/eval-client.pl /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e chmod 0755 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/eval-client.pl
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/install-jvm-runner.pl "" /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp nqp-j nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e chmod 755 nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e chmod 755 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp
 
 NQP has been built and installed.
 Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j.

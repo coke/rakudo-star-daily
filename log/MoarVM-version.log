@@ -1,9 +1,9 @@
 MoarVM
-2015.07-68-g3240047
+2015.07-71-gfed17a3
 Rakudo
-2015.07.1-164-ga7c845c
+2015.07.1-168-g47ddca1
 NQP
-2015.07.2-34-g77ddfb5
+2015.07.2-37-g34501ae
 modules
 --------
 Bailador
@@ -158,40 +158,20 @@ Date:   Sat Jul 25 22:44:18 2015 -0700
     closes #29
 --------
 doc
-commit d7719ae863832042349730245bd07947437a74a4
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Sat Aug 22 13:12:17 2015 -0400
+commit 33dc2ec0d4ff5ffed51ff18f1cf7ab6ea0b302ed
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Thu Aug 27 21:51:20 2015 +0200
 
-    Show a "Not Found" message when nothing is found (Closes #84)
+    Correct headings to allow die and warn to show up in search
 --------
 file-find
-commit 119e620270cb276f292f4f4a36fa821322a51fe8
-Merge: a2e1797 4fda2e0
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue May 26 21:52:26 2015 +0200
+commit 522363b2ac2b50eba4435e3be3f79d5841faf365
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Thu Aug 27 11:17:17 2015 +0200
 
-    Merge pull request #8 from stmuk/master
+    Specify what exactly exclude should be and how it's handled
     
-    kebab base test function
-
-commit 4fda2e0c7e52662f59bd71d118a4ae0fabe4d48b
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue May 26 20:36:21 2015 +0100
-
-    kebab case skip-rest
-
-commit a287c190f4a201fbc293a2f6ba5c2f8a7310e6ea
-Merge: 23c3b96 a2e1797
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue May 26 20:32:09 2015 +0100
-
-    Merge github.com:tadzik/File-Find
-
-commit 23c3b9694636fdd4cde17f1d7627a3f32b629fb6
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Thu May 21 20:22:50 2015 +0100
-
-    module to unit module
+    It's up to the user to pass it as IO rather than Str if they want it to work cross-platform
 --------
 grammar-debugger
 commit b093bbe31b9c3a08f49c66caebeebb2344e8ce8f

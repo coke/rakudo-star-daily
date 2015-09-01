@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.5.6) (7u79-2.5.6-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-2015.07.1-182-g5ba44fc
+2015.07.1-185-gd8ef5ea
 NQP
 2015.07.2-39-ga6139b0
 modules
@@ -72,25 +72,11 @@ Date:   Mon Jul 27 21:41:50 2015 +0200
     mention 2015.07 release in release-guide.pod
 --------
 PSGI
-commit e09fd63e28842a00537d2471eb2b4f2e927cde48
-Merge: 3871dbb cb2d51a
-Author: Timothy Totten <2009@huri.net>
-Date:   Thu Jun 4 20:24:41 2015 -0700
+commit cb8e26e57bb104a64d89b75ada6d02cdd0949aa4
+Author: Timothy Totten <2010@huri.net>
+Date:   Tue Sep 1 11:20:09 2015 -0700
 
-    Merge pull request #3 from paultcochrane/pr/add-unit-declarator
-    
-    Add unit declarator to module declarations
-
-commit cb2d51a36cf51fa973187848fde7cdb6c8f79cd4
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Tue Jun 2 21:45:05 2015 +0200
-
-    Add unit declarator to module declarations
-    
-    As of Rakudo 2015.05, the `unit` declarator is required before using
-    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
-    still using the old blockless semicolon form will throw a warning. This
-    commit stops the warning from appearing in the new Rakudo.
+    Moved changes from HTTP::Easy back into here.
 --------
 Perl6-MIME-Base64
 commit 186e20e810382aef82af5a4e0331dbe2fbefb39b
@@ -149,11 +135,11 @@ Date:   Sat Jul 25 22:44:18 2015 -0700
     closes #29
 --------
 doc
-commit c45f6621e8c58c3cd445bbe4c523b5e0fb87abcb
-Author: Philippe Bruhat (BooK) <book@cpan.org>
-Date:   Mon Aug 31 14:50:14 2015 +0200
+commit 37f6c07f48717154fc7632503f2afe3d602463d1
+Author: David H. Adler <dha@pobox.com>
+Date:   Tue Sep 1 15:29:58 2015 -0400
 
-    fix more syntax errors
+    Added TODO plan to WANTED
 --------
 file-find
 commit 8c39dec86874d5f9e2551e1e6f7822bc89afe388

@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install --backends=jvm && make
-Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2015.07.2-40-gac4a334 / OpenJDK 1.7.0_79).
+Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2015.07.2-41-gda1c95d / OpenJDK 1.7.0_79).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -43,17 +43,21 @@ jar cf0 rakudo-runtime.jar -C bin/ .
 The following step can take a long time, please be patient.
 java -Xss1m -Xms500m -Xmx2000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar:rakudo-runtime.jar:perl6.jar -cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib perl6 --setting=NULL --ll-exception --optimize=3 --target=jar --stagestats --output=CORE.setting.jar gen/jvm/CORE.setting
 Stage start      :   0.000
-Stage parse      : java.lang.NullPointerException
-  in new (gen/jvm/CORE.setting:12816)
-  in new (gen/jvm/CORE.setting:12806)
-  in new (src/Perl6/World.nqp:1832)
-  in add_constant (src/Perl6/World.nqp:2218)
-  in mop_up_and_check (src/Perl6/World.nqp:404)
-  in comp_unit (src/Perl6/Grammar.nqp:1116)
-  in TOP (src/Perl6/Grammar.nqp:402)
-  in parse (gen/jvm/stage2/QRegex.nqp:1997)
-  in parse (gen/jvm/stage2/NQPHLL.nqp:1460)
-  in compile (gen/jvm/stage2/NQPHLL.nqp:1416)
+Stage parse      :  76.760
+Stage syntaxcheck:   0.001
+Stage ast        :   0.001
+Stage optimize   :   8.517
+Stage jast       : Method 'jast' not found for invocant of class 'NQPMu'
+  in compile_all_the_stmts (gen/jvm/stage2/QAST.nqp:4104)
+  in  (gen/jvm/stage2/QAST.nqp:3683)
+  in  (gen/jvm/stage2/QAST.nqp:3680)
+  in as_jast (gen/jvm/stage2/QAST.nqp:3626)
+  in as_jast (gen/jvm/stage2/QAST.nqp:3269)
+  in as_jast (gen/jvm/stage2/QAST.nqp:3323)
+  in as_jast (gen/jvm/stage2/QAST.nqp:3269)
+  in jast (gen/jvm/stage2/QAST.nqp:3135)
+  in jast (gen/jvm/stage2/NQPHLL.nqp:68)
+  in compile (gen/jvm/stage2/NQPHLL.nqp:1419)
   in eval (gen/jvm/stage2/NQPHLL.nqp:1153)
   in evalfiles (gen/jvm/stage2/NQPHLL.nqp:1373)
   in command_eval (gen/jvm/stage2/NQPHLL.nqp:1267)

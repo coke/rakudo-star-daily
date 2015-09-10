@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.5.6) (7u79-2.5.6-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-2015.07.1-808-gc20c249
+2015.07.1-824-g8911bc9
 NQP
-2015.07.2-45-g2b61433
+2015.07.2-46-g85db8f9
 modules
 --------
 Bailador
@@ -165,20 +165,23 @@ Date:   Sat Sep 5 17:42:47 2015 +0100
     Kebab-case dies_ok to fix deprecation
 --------
 grammar-debugger
-commit b093bbe31b9c3a08f49c66caebeebb2344e8ce8f
-Merge: 9f344a4 4e79fc0
+commit 2791ceeda690c295d97936b703808a2e4398de62
+Merge: b093bbe 2ee8f69
 Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Fri Jun 26 00:37:05 2015 +0200
+Date:   Thu Sep 10 18:34:12 2015 +0200
 
-    Merge pull request #18 from tony-o/master
+    Merge pull request #19 from flussence/master
     
-    working again, at least partially.  ignores NQPRoutine $meth now
+    Update Term::ANSIColor dep to Terminal::ANSIColor
 
-commit 4e79fc0f6e43d7a4f528ca1df2aa11aee60e74b0
-Author: tony-o <tony.odell@xpertminds.net>
-Date:   Thu Jun 25 09:30:03 2015 -0700
+commit 2ee8f69e0e07e9d795edbcacdef5d83663bc9fa9
+Author: Anthony Parsons <flussence@gmail.com>
+Date:   Thu Sep 10 17:23:10 2015 +0100
 
-    working again, at least partially.  ignores NQPRoutine $meth now
+    Update Term::ANSIColor dep to Terminal::ANSIColor
+    
+    The module was renamed to the latter, the former spits out a deprecation message
+    on use now.
 --------
 json
 commit 4b020ae2b87e76c6dad7faf76fbb87b7c408f000

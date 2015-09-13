@@ -1,9 +1,9 @@
 MoarVM
 2015.08-33-g698a467
 Rakudo
-2015.07.1-861-ge0fc14d
+2015.07.1-883-g4472353
 NQP
-2015.07.2-50-g75281c2
+2015.07.2-55-g7a04389
 modules
 --------
 Bailador
@@ -23,39 +23,11 @@ Date:   Sat Sep 5 14:48:51 2015 +0200
     After glr merge fix issue #32
 --------
 DBIish
-commit 5f7c3273b68d063da401a24ca10489c284e80388
-Merge: 5aa551f 62063c5
-Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Sat Aug 1 10:37:12 2015 -0500
+commit bbaa0fd0d2b728c2a970c6211a3e717e8dcf5d54
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sun Sep 13 13:43:33 2015 +0200
 
-    Merge pull request #15 from perl6/sqlite3-64-bit-fix
-    
-    Sqlite3 64 bit fix
-
-commit 62063c54b699ddbb91015119e9d90785446a3a69
-Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Sat Aug 1 10:14:16 2015 -0500
-
-    Use 64-bit integers for SQLite binding
-
-commit 0d1eb2b5befae733a7b82881f9781fe2adce3694
-Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Sat Aug 1 10:09:20 2015 -0500
-
-    Test that integers >= 2**31 work with in prepared statements
-    
-    The SQLite driver cannot currently handle integers in prepared
-    statements greater than or equal to 2^31, so here's a test for
-    that
-
-commit 0b4578730d8048afd586e521e250547a815937cf
-Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Sat Aug 1 10:08:49 2015 -0500
-
-    Change common test table to use a bigint
-    
-    This is for an upcoming test that tests how DBIish handles
-    large integers
+    s/done/done-testing/
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -142,11 +114,11 @@ Date:   Sat Apr 25 08:30:57 2015 +0200
     Add "use nqp" to avoid deprecation warnings
 --------
 doc
-commit d56204fbf38d881b3d9bb9f2e974e9ee71b71fa6
+commit 01cb0356e1d1447a9df23f9c3be553e58aa6744d
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Sep 12 21:59:08 2015 +0200
+Date:   Sun Sep 13 13:52:17 2015 +0000
 
-    Move pop,push,{un,}shift from List to Array
+    A well-placed &flat brings us error-free through htmlify.p6 --sparse=20
 --------
 file-find
 commit 7a683abb9879738d671eb5a09923096a429eeda7

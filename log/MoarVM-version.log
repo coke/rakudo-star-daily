@@ -1,9 +1,9 @@
 MoarVM
-2015.08-33-g698a467
+2015.08-37-gce87c97
 Rakudo
-2015.07.1-883-g4472353
+2015.07.1-929-g99ee82c
 NQP
-2015.07.2-55-g7a04389
+2015.07.2-57-g1f46367
 modules
 --------
 Bailador
@@ -98,27 +98,27 @@ Date:   Fri Aug 28 13:48:49 2015 +0200
     Fill in META.info
 --------
 debugger-ui-commandline
-commit 8555209e944c41b72db369a9cc50eb38707d17ef
-Merge: c9bc9d3 09d717f
+commit b73170b96957400cc37a5fbc4127d4c6898dba6d
+Merge: 8555209 30cc22c
 Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Tue Sep 8 17:45:19 2015 +0200
+Date:   Mon Sep 14 18:17:53 2015 +0200
 
-    Merge pull request #27 from moritz/use-nqp
+    Merge pull request #31 from Leont/ansicolor
     
-    Add "use nqp" to avoid deprecation warnings
+    Switch to renamed Terminal::ANSIColor
 
-commit 09d717f3d9c4223574cdfb718402029d2fc59600
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Apr 25 08:30:57 2015 +0200
+commit 30cc22cd05dce2a4b5ee8929a178506594c1c6e9
+Author: Leon Timmermans <fawaka@gmail.com>
+Date:   Mon Sep 14 16:56:20 2015 +0200
 
-    Add "use nqp" to avoid deprecation warnings
+    Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 01cb0356e1d1447a9df23f9c3be553e58aa6744d
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Sep 13 13:52:17 2015 +0000
+commit d72d26c94b15ecb9071444f633b4abf4aa1f582f
+Author: David H. Adler <dha@pobox.com>
+Date:   Mon Sep 14 15:51:52 2015 -0400
 
-    A well-placed &flat brings us error-free through htmlify.p6 --sparse=20
+    Tweaks to C<state> docs
 --------
 file-find
 commit 7a683abb9879738d671eb5a09923096a429eeda7
@@ -163,32 +163,20 @@ Date:   Wed Aug 19 19:50:02 2015 +0200
     Fix up methods and test object construction for GLR
 --------
 jsonrpc
-commit e8d65d73c07d62a5cd8bcc4b7d1ddac4b9f21768
-Merge: 471a920 c464a9f
+commit c1ff17aa829075e2fb708e367da097a6a577a149
+Merge: e8d65d7 14710ca
 Author: Pawel Pabian <bbkr@post.pl>
-Date:   Mon Jun 1 21:42:19 2015 +0200
+Date:   Mon Sep 14 17:17:48 2015 +0200
 
-    Merge pull request #14 from stmuk/master
+    Merge pull request #16 from laben/master
     
-    unit class and kebab test fixes
+    Adjust to post-glr semantics due to single-arg rule flattening
 
-commit c464a9f29e8ce6bc31ae6fc6ecf1d40a324f94c3
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Mon Jun 1 17:35:06 2015 +0100
+commit 14710ca1f348f6a52f082a75b8945309e63978d9
+Author: laben <labensigma@gmail.com>
+Date:   Sun Sep 13 23:11:38 2015 +0200
 
-    more kebabed test functions
-
-commit cfdfb1723ddf52cd69f7bac39eb30a31a062fba4
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Mon Jun 1 17:25:21 2015 +0100
-
-    isa-ok fix
-
-commit 979f17352b3aa7a5b7b86a0e1b7d900f258bfcae
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Mon Jun 1 17:23:04 2015 +0100
-
-    unit class added
+    Adjust to post-glr semantics due to single-arg rule flattening
 --------
 p6-File-Temp
 commit f5f2ca3a1d741680923041b4093c25ce6d704e3b

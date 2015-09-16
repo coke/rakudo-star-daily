@@ -1,26 +1,26 @@
 MoarVM
-2015.08-41-g7eb097a
+2015.08-43-ge8c92d5
 Rakudo
-2015.07.1-943-g7662c46
+2015.07.1-955-g197fbbf
 NQP
-2015.07.2-590-gf895360
+2015.07.2-595-g4740820
 modules
 --------
 Bailador
-commit 53a5d36e7afaa4080d012b57bc78ba5197e09f13
-Merge: a8892e0 7ecf1a7
+commit 298312e81478b56e8d9a1825a21c778da4bd1afd
+Merge: dd3c398 6ca4af4
 Author: Gabor Szabo <szabgab@gmail.com>
-Date:   Sat Sep 5 15:31:50 2015 +0200
+Date:   Wed Sep 16 15:25:47 2015 +0300
 
-    Merge pull request #33 from mj41/mj-glr-fix
+    Merge pull request #36 from carbin/biscuit-tin
     
-    After glr merge fix
+    Add a method to get cookies sent with a request
 
-commit 7ecf1a7fc1c4c980418b3f4d56d12b11b1df420f
-Author: Michal Jurosz <mj@mj41.cz>
-Date:   Sat Sep 5 14:48:51 2015 +0200
+commit 6ca4af4c3a0f3ff8d4691ab6d66ad661c7a4d4c9
+Author: Carlin Bingham <cb@viennan.net>
+Date:   Thu Sep 17 12:12:18 2015 +1200
 
-    After glr merge fix issue #32
+    Add a method to get cookies sent with a request
 --------
 DBIish
 commit bbaa0fd0d2b728c2a970c6211a3e717e8dcf5d54
@@ -46,11 +46,20 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 MODULES.txt
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 PSGI
 commit cb8e26e57bb104a64d89b75ada6d02cdd0949aa4
@@ -114,11 +123,75 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 23f2a08d3344b89ed5ca38e30ad3f7a2ed60a2a4
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Tue Sep 15 18:44:59 2015 +0000
+commit acd7ca8cebed6d278615fcd03e0a41465cebdaf2
+Merge: 9be03d2 013d936
+Author: David H. Adler <dha@pobox.com>
+Date:   Wed Sep 16 15:14:07 2015 -0400
 
-    Htmlify: cache get-kinds
+    Merge pull request #127 from dha/master
+    
+    Merging changes from fork to primary repository.
+
+commit 013d936724057006b3405ac134a2d895d0c3c120
+Merge: f20b838 9be03d2
+Author: David H. Adler <dha@pobox.com>
+Date:   Wed Sep 16 15:10:26 2015 -0400
+
+    Merge branch 'master' of https://github.com/perl6/doc
+
+commit f20b838a52556d8e47c52c7851b008dde099d1a7
+Merge: d96ef22 a5267c9
+Author: David H. Adler <dha@pobox.com>
+Date:   Sun Aug 16 15:48:24 2015 -0400
+
+    Merge branch 'master' of https://github.com/perl6/doc
+    Syncing up with main perl6 docs in preparation for adding 5to6
+    documents
+
+commit d96ef2246d73805320892faef0032e8557385f29
+Author: David H. Adler <dha@pobox.com>
+Date:   Sun Aug 16 15:43:41 2015 -0400
+
+    Revert "Added language to specify the default values for C<:c>"
+    Already committed to main perl6 doc tree
+    
+    This reverts commit c2fd7e7514cb23a12cb318928f99d8c551c20af6.
+
+commit 51421f46d58dae8a469dc809eaf7873c21264959
+Author: David H. Adler <dha@pobox.com>
+Date:   Sun Aug 16 15:42:58 2015 -0400
+
+    Revert "Added C<srand> and C<state> to WANTED"
+    Already committed to main perl6 doc tree
+    
+    This reverts commit a5cc58cb613bf0cffbe027ea8ff6dda9c2f0f897.
+
+commit 54dc587df483d9c96156f18953c55819281af8fb
+Author: David H. Adler <dha@pobox.com>
+Date:   Sun Aug 16 15:42:08 2015 -0400
+
+    Revert "Added C<use> to WANTED"
+    Already committed to main perl6 doc tree
+    
+    This reverts commit d65803512e04bf2c557fc68246167cb4973b2616.
+
+commit d65803512e04bf2c557fc68246167cb4973b2616
+Author: David H. Adler <dha@pobox.com>
+Date:   Wed Jul 1 18:15:45 2015 -0400
+
+    Added C<use> to WANTED
+
+commit a5cc58cb613bf0cffbe027ea8ff6dda9c2f0f897
+Author: David H. Adler <dha@pobox.com>
+Date:   Wed Jul 1 16:44:26 2015 -0400
+
+    Added C<srand> and C<state> to WANTED
+
+commit c2fd7e7514cb23a12cb318928f99d8c551c20af6
+Author: David H. Adler <dha@pobox.com>
+Date:   Mon Jun 29 17:10:11 2015 -0400
+
+    Added language to specify the default values for C<:c>
 --------
 file-find
 commit 7a683abb9879738d671eb5a09923096a429eeda7
@@ -179,113 +252,257 @@ Date:   Sun Sep 13 23:11:38 2015 +0200
     Adjust to post-glr semantics due to single-arg rule flattening
 --------
 p6-File-Temp
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 p6-Template-Mustache
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 p6-file-directory-tree
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 panda
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 perl6-Term-ANSIColor
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 perl6-digest-md5
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 perl6-http-easy
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 perl6-http-status
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 perl6-lwp-simple
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 shell-command
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 svg
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 svg-plot
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 test-mock
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 ufo
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 uri
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma
 --------
 xml-writer
-commit f5f2ca3a1d741680923041b4093c25ce6d704e3b
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jul 27 21:41:50 2015 +0200
+commit 030460039417bce304876cbe7d33c3982b830733
+Merge: f5f2ca3 3051d54
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Sep 16 21:09:06 2015 +0200
 
-    mention 2015.07 release in release-guide.pod
+    Merge pull request #49 from stmuk/master
+    
+    parcel is now list and keep comma
+
+commit 3051d54372fd4eaceabe26cf904df236a0211da4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Sep 16 17:24:48 2015 +0100
+
+    parcel is now list and keep comma

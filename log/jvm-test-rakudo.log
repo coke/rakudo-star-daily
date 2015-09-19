@@ -1,1 +1,70 @@
-make: *** No rule to make target 'rakudo-test'.  Stop.
+cd rakudo && make test
+make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl t/harness --jvm t/01-sanity
+t/01-sanity/01-literals.t ............ ok
+t/01-sanity/02-op-math.t ............. ok
+t/01-sanity/03-op-logic.t ............ ok
+t/01-sanity/04-op-cmp.t .............. ok
+t/01-sanity/05-var.t ................. ok
+t/01-sanity/06-op-inplace.t .......... ok
+t/01-sanity/07-op-string.t ........... ok
+t/01-sanity/08-var-array.t ........... ok
+t/01-sanity/09-end-blocks.t .......... ok
+t/01-sanity/10-regex.t ............... ok
+t/01-sanity/11-tap.t ................. ok
+t/01-sanity/12-counter.t ............. ok
+t/01-sanity/13-equal.t ............... ok
+t/01-sanity/14-if.t .................. ok
+t/01-sanity/15-sub.t ................. ok
+t/01-sanity/16-eqv.t ................. ok
+t/01-sanity/17-isa.t ................. ok
+t/01-sanity/18-simple-multisubs.t .... ok
+t/01-sanity/19-say.t ................. ok
+t/01-sanity/20-defined.t ............. ok
+t/01-sanity/21-try.t ................. ok
+t/01-sanity/52-parse-include-spec.t .. ok
+t/01-sanity/53-transpose.t ........... ok
+t/01-sanity/54-use-lib.t ............. ok
+t/01-sanity/55-use-trace.t ........... ok
+t/01-sanity/99-test-basic.t .......... ok
+All tests successful.
+Files=26, Tests=332, 34 wallclock secs ( 0.14 usr  0.01 sys +  0.80 cusr  0.05 csys =  1.00 CPU)
+Result: PASS
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl t/harness --jvm t/03-jvm
+t/03-jvm/01-interop.t .. 
+No subtests run 
+
+Test Summary Report
+-------------------
+t/03-jvm/01-interop.t (Wstat: 0 Tests: 0 Failed: 0)
+  Parse errors: No plan found in TAP output
+Files=1, Tests=0,  4 wallclock secs ( 0.02 usr  0.00 sys +  0.04 cusr  0.00 csys =  0.06 CPU)
+Result: FAIL
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl t/harness --jvm t/04-nativecall
+t/04-nativecall/01-argless.t ......... ok
+t/04-nativecall/02-simple-args.t ..... ok
+t/04-nativecall/03-simple-returns.t .. ok
+t/04-nativecall/04-pointers.t ........ ok
+t/04-nativecall/05-arrays.t .......... ok
+t/04-nativecall/06-struct.t .......... ok
+t/04-nativecall/07-writebarrier.t .... ok
+t/04-nativecall/08-callbacks.t ....... ok
+t/04-nativecall/09-nativecast.t ...... ok
+t/04-nativecall/10-cglobals.t ........ ok
+t/04-nativecall/11-cpp.t ............. ok
+t/04-nativecall/12-sizeof.t .......... ok
+t/04-nativecall/13-cpp-mangling.t .... ok
+t/04-nativecall/13-union.t ........... ok
+t/04-nativecall/14-rw-attrs.t ........ ok
+t/04-nativecall/15-rw-args.t ......... ok
+t/04-nativecall/16-rt125408.t ........ 
+Failed 1/1 subtests 
+t/04-nativecall/16-rt125729.t ........ ok
+
+Test Summary Report
+-------------------
+t/04-nativecall/16-rt125408.t      (Wstat: 0 Tests: 1 Failed: 1)
+  Failed test:  1
+Files=18, Tests=234, 73 wallclock secs ( 0.10 usr  0.03 sys +  0.62 cusr  0.05 csys =  0.80 CPU)
+Result: FAIL
+make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'

@@ -1,10 +1,628 @@
+ATTENTION: no --prefix supplied, building and installing to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install
 
-===SORRY!===
-I see a .git directory here -- you appear to be trying
-to run Configure.pl from a clone of the Rakudo Star git
-repository.
-The git repository contains the tools needed to build a Rakudo Star
-release, but does not contain a complete Rakudo Star release.
-To download and build the latest release of Rakudo Star, please
-download a .tar.gz file from http://rakudo.org/downloads/star/ .
+Configuring and building MoarVM ...
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --optimize --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --make-install
+Welcome to MoarVM!
 
+Configuring native build environment ................... OK
+    probing whether your compiler thinks that it is gcc  YES
+    probing how your compiler does static inline ....... static __inline__
+    your CPU can read unaligned values for all of int32 int64 num64
+    probing the size of pointers ....................... 8
+    probing computed goto support ...................... YES
+    probing pthread_yield support ...................... YES
+
+        make: make
+     compile: gcc -Wdeclaration-after-statement -Werror=declaration-after-statement -O3 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC
+        link: gcc  -O3 -DNDEBUG -Wl,-rpath,@libdir@ -Wl,-rpath,@prefix@/share/perl6/site/lib
+        libs: -lm -lpthread -lrt -ldl
+
+  byte order: little endian
+
+Configuring 3rdparty libs .............................. OK
+
+  3rdparty: 3rdparty/dyncall/dyncall/libdyncall_s.a
+            3rdparty/dyncall/dyncallback/libdyncallback_s.a
+            3rdparty/dyncall/dynload/libdynload_s.a
+            3rdparty/libatomic_ops/src/libatomic_ops.a
+            3rdparty/libtommath/libtommath.a
+            3rdparty/libuv/libuv.a
+            3rdparty/sha1/libsha1.a
+            3rdparty/tinymt/libtinymt.a
+
+Generating src/gen/config.c ............................ OK
+Generating src/gen/config.h ............................ OK
+Generating Makefile .................................... OK
+Generating tools/check.mk .............................. OK
+Generating build/mk-moar-pc.pl ......................... OK
+
+Configuration SUCCESS.
+
+Type 'make' to build and 'make help' to see a list of
+available make targets.
+compiling src/main.o
+compiling src/core/callsite.o
+compiling src/core/args.o
+compiling src/core/exceptions.o
+compiling src/core/interp.o
+compiling src/core/threadcontext.o
+compiling src/core/compunit.o
+compiling src/core/bytecode.o
+compiling src/core/frame.o
+compiling src/core/validation.o
+compiling src/core/bytecodedump.o
+compiling src/core/threads.o
+compiling src/core/ops.o
+compiling src/core/hll.o
+compiling src/core/loadbytecode.o
+compiling src/math/num.o
+compiling src/core/coerce.o
+compiling src/core/dll.o
+compiling src/core/ext.o
+compiling src/core/nativecall.o
+compiling src/core/nativecall_dyncall.o
+compiling src/core/continuation.o
+compiling src/core/intcache.o
+compiling src/core/fixedsizealloc.o
+compiling src/gen/config.o
+compiling src/gc/orchestrate.o
+compiling src/gc/allocation.o
+compiling src/gc/worklist.o
+compiling src/gc/roots.o
+compiling src/gc/collect.o
+compiling src/gc/gen2.o
+compiling src/gc/wb.o
+compiling src/gc/objectid.o
+compiling src/gc/finalize.o
+compiling src/io/io.o
+compiling src/io/eventloop.o
+compiling src/io/syncfile.o
+compiling src/io/syncstream.o
+compiling src/io/syncpipe.o
+compiling src/io/syncsocket.o
+compiling src/io/fileops.o
+compiling src/io/dirops.o
+compiling src/io/procops.o
+compiling src/io/timers.o
+compiling src/io/filewatchers.o
+compiling src/io/signals.o
+compiling src/io/asyncsocket.o
+compiling src/6model/reprs.o
+compiling src/6model/reprconv.o
+compiling src/6model/containers.o
+compiling src/6model/parametric.o
+compiling src/6model/reprs/MVMString.o
+compiling src/6model/reprs/MVMArray.o
+compiling src/6model/reprs/MVMHash.o
+compiling src/6model/reprs/MVMCFunction.o
+compiling src/6model/reprs/KnowHOWREPR.o
+compiling src/6model/reprs/KnowHOWAttributeREPR.o
+compiling src/6model/reprs/P6str.o
+compiling src/6model/reprs/P6opaque.o
+compiling src/6model/reprs/MVMCode.o
+compiling src/6model/reprs/MVMOSHandle.o
+compiling src/6model/reprs/MVMCompUnit.o
+compiling src/6model/reprs/MVMStaticFrame.o
+compiling src/6model/reprs/P6int.o
+compiling src/6model/reprs/P6num.o
+compiling src/6model/reprs/Uninstantiable.o
+compiling src/6model/reprs/HashAttrStore.o
+compiling src/6model/reprs/MVMThread.o
+compiling src/6model/reprs/MVMIter.o
+compiling src/6model/reprs/MVMContext.o
+compiling src/6model/reprs/SCRef.o
+compiling src/6model/reprs/Lexotic.o
+compiling src/6model/reprs/MVMCallCapture.o
+compiling src/6model/reprs/P6bigint.o
+compiling src/6model/reprs/NFA.o
+compiling src/6model/reprs/MVMException.o
+compiling src/6model/reprs/MVMDLLSym.o
+compiling src/6model/reprs/MVMMultiCache.o
+compiling src/6model/reprs/MVMContinuation.o
+compiling src/6model/reprs/NativeCall.o
+compiling src/6model/reprs/CPointer.o
+compiling src/6model/reprs/CStr.o
+compiling src/6model/reprs/CArray.o
+compiling src/6model/reprs/CStruct.o
+compiling src/6model/reprs/CUnion.o
+compiling src/6model/reprs/ReentrantMutex.o
+compiling src/6model/reprs/ConditionVariable.o
+compiling src/6model/reprs/Semaphore.o
+compiling src/6model/reprs/ConcBlockingQueue.o
+compiling src/6model/reprs/MVMAsyncTask.o
+compiling src/6model/reprs/MVMNull.o
+compiling src/6model/reprs/CPPStruct.o
+compiling src/6model/reprs/NativeRef.o
+compiling src/6model/reprs/MultiDimArray.o
+compiling src/6model/6model.o
+compiling src/6model/bootstrap.o
+compiling src/6model/sc.o
+compiling src/6model/serialization.o
+compiling src/mast/compiler.o
+compiling src/mast/driver.o
+compiling src/spesh/dump.o
+compiling src/spesh/graph.o
+compiling src/spesh/codegen.o
+compiling src/spesh/candidate.o
+compiling src/spesh/manipulate.o
+compiling src/spesh/args.o
+compiling src/spesh/facts.o
+compiling src/spesh/optimize.o
+compiling src/spesh/deopt.o
+compiling src/spesh/log.o
+compiling src/spesh/threshold.o
+compiling src/spesh/inline.o
+compiling src/spesh/osr.o
+compiling src/jit/graph.o
+compiling src/jit/compile.o
+compiling src/jit/log.o
+compiling src/strings/decode_stream.o
+compiling src/strings/ascii.o
+compiling src/strings/utf8.o
+compiling src/strings/nfg.o
+compiling src/strings/ops.o
+generating src/strings/unicode.c
+compiling src/strings/unicode.o
+compiling src/strings/normalize.o
+compiling src/strings/latin1.o
+compiling src/strings/utf16.o
+compiling src/strings/windows1252.o
+compiling src/math/bigintops.o
+compiling src/profiler/instrument.o
+compiling src/profiler/log.o
+compiling src/profiler/profile.o
+compiling src/instrument/crossthreadwrite.o
+compiling src/moar.o
+compiling src/platform/posix/mmap.o
+compiling src/platform/posix/time.o
+compiling src/platform/posix/sys.o
+gcc -Wdeclaration-after-statement -Werror=declaration-after-statement -O3 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC -DMVM_TRACING=0 -DMVM_CGOTO=1 -O3 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/lib -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib 3rdparty/dynasm/minilua.c -o 3rdparty/dynasm/minilua -lm -lpthread -lrt -ldl
+./3rdparty/dynasm/minilua ./3rdparty/dynasm/dynasm.lua -D POSIX=1 -o src/jit/emit_posix_x64.c src/jit/emit_x64.dasc
+compiling src/jit/emit_posix_x64.o
+building dyncall...
+ar: creating libdyncall_s.a
+ar: creating libdyncallback_s.a
+ar: creating libdynload_s.a
+done.
+linking 3rdparty/libatomic_ops/src/libatomic_ops.a
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking dependency style of gcc... gcc3
+checking for ranlib... ranlib
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... yes
+checking for getpagesize... yes
+checking for working mmap... yes
+checking for PIC compiler flag... -fPIC
+checking whether gcc -fPIC causes __PIC__ definition... yes
+checking for gcc -Wextra... yes
+checking for pthread_self in -lpthread... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating src/Makefile
+config.status: creating src/config.h
+config.status: executing depfiles commands
+config.status: executing default commands
+make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/MoarVM/3rdparty/libatomic_ops/src'
+make  all-am
+make[2]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/MoarVM/3rdparty/libatomic_ops/src'
+gcc -DHAVE_CONFIG_H   -I../src -I../src  -fPIC -Wall -Wextra -Wdeclaration-after-statement -Werror=declaration-after-statement -O3 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC -DMVM_TRACING=0 -DMVM_CGOTO=1 -MT atomic_ops.o -MD -MP -MF .deps/atomic_ops.Tpo -c -o atomic_ops.o atomic_ops.c
+mv -f .deps/atomic_ops.Tpo .deps/atomic_ops.Po
+rm -f libatomic_ops.a
+ar cru libatomic_ops.a atomic_ops.o 
+ranlib libatomic_ops.a
+make[2]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/MoarVM/3rdparty/libatomic_ops/src'
+make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/MoarVM/3rdparty/libatomic_ops/src'
+compiling 3rdparty/tinymt/tinymt64.o
+linking 3rdparty/tinymt/libtinymt.a
+compiling 3rdparty/sha1/sha1.o
+linking 3rdparty/sha1/libsha1.a
+compiling 3rdparty/libtommath/bn_error.o
+compiling 3rdparty/libtommath/bn_fast_mp_invmod.o
+compiling 3rdparty/libtommath/bn_fast_mp_montgomery_reduce.o
+compiling 3rdparty/libtommath/bn_fast_s_mp_mul_digs.o
+compiling 3rdparty/libtommath/bn_fast_s_mp_mul_high_digs.o
+compiling 3rdparty/libtommath/bn_fast_s_mp_sqr.o
+compiling 3rdparty/libtommath/bn_mp_2expt.o
+compiling 3rdparty/libtommath/bn_mp_abs.o
+compiling 3rdparty/libtommath/bn_mp_add.o
+compiling 3rdparty/libtommath/bn_mp_add_d.o
+compiling 3rdparty/libtommath/bn_mp_addmod.o
+compiling 3rdparty/libtommath/bn_mp_and.o
+compiling 3rdparty/libtommath/bn_mp_clamp.o
+compiling 3rdparty/libtommath/bn_mp_clear.o
+compiling 3rdparty/libtommath/bn_mp_clear_multi.o
+compiling 3rdparty/libtommath/bn_mp_cmp.o
+compiling 3rdparty/libtommath/bn_mp_cmp_d.o
+compiling 3rdparty/libtommath/bn_mp_cmp_mag.o
+compiling 3rdparty/libtommath/bn_mp_cnt_lsb.o
+compiling 3rdparty/libtommath/bn_mp_copy.o
+compiling 3rdparty/libtommath/bn_mp_count_bits.o
+compiling 3rdparty/libtommath/bn_mp_div.o
+compiling 3rdparty/libtommath/bn_mp_div_2.o
+compiling 3rdparty/libtommath/bn_mp_div_2d.o
+compiling 3rdparty/libtommath/bn_mp_div_3.o
+compiling 3rdparty/libtommath/bn_mp_div_d.o
+compiling 3rdparty/libtommath/bn_mp_dr_is_modulus.o
+compiling 3rdparty/libtommath/bn_mp_dr_reduce.o
+compiling 3rdparty/libtommath/bn_mp_dr_setup.o
+compiling 3rdparty/libtommath/bn_mp_exch.o
+compiling 3rdparty/libtommath/bn_mp_expt_d.o
+compiling 3rdparty/libtommath/bn_mp_exptmod.o
+compiling 3rdparty/libtommath/bn_mp_exptmod_fast.o
+compiling 3rdparty/libtommath/bn_mp_exteuclid.o
+compiling 3rdparty/libtommath/bn_mp_fread.o
+compiling 3rdparty/libtommath/bn_mp_fwrite.o
+compiling 3rdparty/libtommath/bn_mp_gcd.o
+compiling 3rdparty/libtommath/bn_mp_get_int.o
+compiling 3rdparty/libtommath/bn_mp_get_long.o
+compiling 3rdparty/libtommath/bn_mp_grow.o
+compiling 3rdparty/libtommath/bn_mp_init.o
+compiling 3rdparty/libtommath/bn_mp_init_copy.o
+compiling 3rdparty/libtommath/bn_mp_init_multi.o
+compiling 3rdparty/libtommath/bn_mp_init_set.o
+compiling 3rdparty/libtommath/bn_mp_init_set_int.o
+compiling 3rdparty/libtommath/bn_mp_init_size.o
+compiling 3rdparty/libtommath/bn_mp_invmod.o
+compiling 3rdparty/libtommath/bn_mp_invmod_slow.o
+compiling 3rdparty/libtommath/bn_mp_is_square.o
+compiling 3rdparty/libtommath/bn_mp_jacobi.o
+compiling 3rdparty/libtommath/bn_mp_karatsuba_mul.o
+compiling 3rdparty/libtommath/bn_mp_karatsuba_sqr.o
+compiling 3rdparty/libtommath/bn_mp_lcm.o
+compiling 3rdparty/libtommath/bn_mp_lshd.o
+compiling 3rdparty/libtommath/bn_mp_mod.o
+compiling 3rdparty/libtommath/bn_mp_mod_2d.o
+compiling 3rdparty/libtommath/bn_mp_mod_d.o
+compiling 3rdparty/libtommath/bn_mp_montgomery_calc_normalization.o
+compiling 3rdparty/libtommath/bn_mp_montgomery_reduce.o
+compiling 3rdparty/libtommath/bn_mp_montgomery_setup.o
+compiling 3rdparty/libtommath/bn_mp_mul.o
+compiling 3rdparty/libtommath/bn_mp_mul_2.o
+compiling 3rdparty/libtommath/bn_mp_mul_2d.o
+compiling 3rdparty/libtommath/bn_mp_mul_d.o
+compiling 3rdparty/libtommath/bn_mp_mulmod.o
+compiling 3rdparty/libtommath/bn_mp_n_root.o
+compiling 3rdparty/libtommath/bn_mp_neg.o
+compiling 3rdparty/libtommath/bn_mp_or.o
+compiling 3rdparty/libtommath/bn_mp_prime_fermat.o
+compiling 3rdparty/libtommath/bn_mp_prime_is_divisible.o
+compiling 3rdparty/libtommath/bn_mp_prime_is_prime.o
+compiling 3rdparty/libtommath/bn_mp_prime_miller_rabin.o
+compiling 3rdparty/libtommath/bn_mp_prime_next_prime.o
+compiling 3rdparty/libtommath/bn_mp_prime_rabin_miller_trials.o
+compiling 3rdparty/libtommath/bn_mp_prime_random_ex.o
+compiling 3rdparty/libtommath/bn_mp_radix_size.o
+compiling 3rdparty/libtommath/bn_mp_radix_smap.o
+compiling 3rdparty/libtommath/bn_mp_rand.o
+compiling 3rdparty/libtommath/bn_mp_read_radix.o
+compiling 3rdparty/libtommath/bn_mp_read_signed_bin.o
+compiling 3rdparty/libtommath/bn_mp_read_unsigned_bin.o
+compiling 3rdparty/libtommath/bn_mp_reduce.o
+compiling 3rdparty/libtommath/bn_mp_reduce_2k.o
+compiling 3rdparty/libtommath/bn_mp_reduce_2k_l.o
+compiling 3rdparty/libtommath/bn_mp_reduce_2k_setup.o
+compiling 3rdparty/libtommath/bn_mp_reduce_2k_setup_l.o
+compiling 3rdparty/libtommath/bn_mp_reduce_is_2k.o
+compiling 3rdparty/libtommath/bn_mp_reduce_is_2k_l.o
+compiling 3rdparty/libtommath/bn_mp_reduce_setup.o
+compiling 3rdparty/libtommath/bn_mp_rshd.o
+compiling 3rdparty/libtommath/bn_mp_set.o
+compiling 3rdparty/libtommath/bn_mp_set_int.o
+compiling 3rdparty/libtommath/bn_mp_set_long.o
+compiling 3rdparty/libtommath/bn_mp_shrink.o
+compiling 3rdparty/libtommath/bn_mp_signed_bin_size.o
+compiling 3rdparty/libtommath/bn_mp_sqr.o
+compiling 3rdparty/libtommath/bn_mp_sqrmod.o
+compiling 3rdparty/libtommath/bn_mp_sqrt.o
+compiling 3rdparty/libtommath/bn_mp_sub.o
+compiling 3rdparty/libtommath/bn_mp_sub_d.o
+compiling 3rdparty/libtommath/bn_mp_submod.o
+compiling 3rdparty/libtommath/bn_mp_to_signed_bin.o
+compiling 3rdparty/libtommath/bn_mp_to_signed_bin_n.o
+compiling 3rdparty/libtommath/bn_mp_to_unsigned_bin.o
+compiling 3rdparty/libtommath/bn_mp_to_unsigned_bin_n.o
+compiling 3rdparty/libtommath/bn_mp_toom_mul.o
+compiling 3rdparty/libtommath/bn_mp_toom_sqr.o
+compiling 3rdparty/libtommath/bn_mp_toradix.o
+compiling 3rdparty/libtommath/bn_mp_toradix_n.o
+compiling 3rdparty/libtommath/bn_mp_unsigned_bin_size.o
+compiling 3rdparty/libtommath/bn_mp_xor.o
+compiling 3rdparty/libtommath/bn_mp_zero.o
+compiling 3rdparty/libtommath/bn_prime_tab.o
+compiling 3rdparty/libtommath/bn_reverse.o
+compiling 3rdparty/libtommath/bn_s_mp_add.o
+compiling 3rdparty/libtommath/bn_s_mp_exptmod.o
+compiling 3rdparty/libtommath/bn_s_mp_mul_digs.o
+compiling 3rdparty/libtommath/bn_s_mp_mul_high_digs.o
+compiling 3rdparty/libtommath/bn_s_mp_sqr.o
+compiling 3rdparty/libtommath/bn_s_mp_sub.o
+compiling 3rdparty/libtommath/bncore.o
+linking 3rdparty/libtommath/libtommath.a
+compiling 3rdparty/libuv/src/unix/linux-core.o
+compiling 3rdparty/libuv/src/unix/linux-inotify.o
+compiling 3rdparty/libuv/src/unix/linux-syscalls.o
+compiling 3rdparty/libuv/src/unix/proctitle.o
+compiling 3rdparty/libuv/src/fs-poll.o
+compiling 3rdparty/libuv/src/inet.o
+compiling 3rdparty/libuv/src/uv-common.o
+compiling 3rdparty/libuv/src/version.o
+compiling 3rdparty/libuv/src/unix/async.o
+compiling 3rdparty/libuv/src/unix/core.o
+compiling 3rdparty/libuv/src/unix/dl.o
+compiling 3rdparty/libuv/src/unix/fs.o
+compiling 3rdparty/libuv/src/unix/getaddrinfo.o
+compiling 3rdparty/libuv/src/unix/loop-watcher.o
+compiling 3rdparty/libuv/src/unix/loop.o
+compiling 3rdparty/libuv/src/unix/pipe.o
+compiling 3rdparty/libuv/src/unix/poll.o
+compiling 3rdparty/libuv/src/unix/process.o
+compiling 3rdparty/libuv/src/unix/signal.o
+compiling 3rdparty/libuv/src/unix/stream.o
+compiling 3rdparty/libuv/src/unix/tcp.o
+compiling 3rdparty/libuv/src/unix/thread.o
+compiling 3rdparty/libuv/src/threadpool.o
+compiling 3rdparty/libuv/src/unix/timer.o
+compiling 3rdparty/libuv/src/unix/tty.o
+compiling 3rdparty/libuv/src/unix/udp.o
+linking 3rdparty/libuv/libuv.a
+linking libmoar.so
+linking moar
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl build/mk-moar-pc.pl pkgconfig/moar.pc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp moar /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e chmod 755 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp libmoar.so  /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib/MAST
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/MAST/Nodes.nqp /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib/MAST
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/MAST/Ops.nqp /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib/MAST
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/pkgconfig
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp pkgconfig/moar.pc /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/pkgconfig
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/gen/config.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/6model/reprs
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/core
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/gc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/io
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/mast
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/math
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/platform
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/profiler
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/spesh
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/strings
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/jit
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/instrument
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/6model/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/6model
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/6model/reprs/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/6model/reprs
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/core/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/core
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/gc/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/gc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/gen/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/io/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/io
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/mast/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/mast
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/math/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/math
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/platform/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/platform
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/profiler/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/profiler
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/spesh/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/spesh
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/strings/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/strings
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/jit/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/jit
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/instrument/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar/instrument
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libuv
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libtommath
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/msinttypes
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/sha1
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/tinymt
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/libuv/include/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libuv
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/msinttypes/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/msinttypes
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/sha1/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/sha1
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/tinymt/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/tinymt
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libuv
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/libuv/include/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libuv
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/armcc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/gcc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/hpc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/ibmc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/icc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/loadstore
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/msftc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/sunc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/libatomic_ops/src/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/libatomic_ops/src/atomic_ops/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/libatomic_ops/src/atomic_ops/sysdeps/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/libatomic_ops/src/atomic_ops/sysdeps/armcc/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/armcc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/libatomic_ops/src/atomic_ops/sysdeps/gcc/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/gcc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/libatomic_ops/src/atomic_ops/sysdeps/hpc/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/hpc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/libatomic_ops/src/atomic_ops/sysdeps/ibmc/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/ibmc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/libatomic_ops/src/atomic_ops/sysdeps/icc/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/icc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/libatomic_ops/src/atomic_ops/sysdeps/loadstore/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/loadstore
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/libatomic_ops/src/atomic_ops/sysdeps/msftc/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/msftc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/libatomic_ops/src/atomic_ops/sysdeps/sunc/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libatomic_ops/atomic_ops/sysdeps/sunc
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/libtommath/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libtommath
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/dyncall
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/dyncall/dynload/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/dyncall
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/dyncall/dyncall/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/dyncall
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/dyncall/dyncallback/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/dyncall
+Building NQP ...
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar --make-install
+Found /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar version 2015.09-4-g002edea, which is new enough.
+Cleaning up ...
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage1/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/how/Archetypes.nqp src/how/RoleToRoleApplier.nqp src/how/NQPConcreteRoleHOW.nqp src/how/RoleToClassApplier.nqp src/how/NQPCurriedRoleHOW.nqp src/how/NQPParametricRoleHOW.nqp src/how/NQPClassHOW.nqp src/how/NQPNativeHOW.nqp src/how/NQPAttribute.nqp src/how/NQPModuleHOW.nqp src/how/EXPORTHOW.nqp  > gen/moar/stage1/nqpmo.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=src/vm/moar/stage0 src/vm/moar/stage0/nqp.moarvm --bootstrap --setting=NULL --no-regex-lib --target=mbc \
+    --output=gen/moar/stage1/nqpmo.moarvm gen/moar/stage1/nqpmo.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=src/vm/moar/stage0 src/vm/moar/stage0/nqp.moarvm --bootstrap --setting=NULL --no-regex-lib --target=mbc \
+    --output=gen/moar/stage1/ModuleLoader.moarvm src/vm/moar/ModuleLoader.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage1/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/core/NativeTypes.nqp src/core/NQPRoutine.nqp src/core/NQPMu.nqp src/core/NQPCapture.nqp src/core/IO.nqp src/core/Regex.nqp src/core/Hash.nqp src/core/NQPLock.nqp src/core/testing.nqp src/core/YOUAREHERE.nqp  > gen/moar/stage1/NQPCORE.setting
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=src/vm/moar/stage0 src/vm/moar/stage0/nqp.moarvm --bootstrap --module-path=gen/moar/stage1 --setting=NULL --no-regex-lib --target=mbc \
+    --output=gen/moar/stage1/NQPCORE.setting.moarvm gen/moar/stage1/NQPCORE.setting
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage1/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/QAST/CompileTimeValue.nqp src/QAST/SpecialArg.nqp src/QAST/Children.nqp src/QAST/Node.nqp src/QAST/NodeList.nqp src/QAST/Regex.nqp src/QAST/IVal.nqp src/QAST/NVal.nqp src/QAST/SVal.nqp src/QAST/BVal.nqp src/QAST/WVal.nqp src/QAST/Want.nqp src/QAST/Var.nqp src/QAST/VarWithFallback.nqp src/QAST/ParamTypeCheck.nqp src/QAST/Op.nqp src/QAST/VM.nqp src/QAST/Stmts.nqp src/QAST/Stmt.nqp src/QAST/Block.nqp src/QAST/Unquote.nqp src/QAST/CompUnit.nqp src/QAST/InlinePlaceholder.nqp  > gen/moar/stage1/QASTNode.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=src/vm/moar/stage0 src/vm/moar/stage0/nqp.moarvm --bootstrap --module-path=gen/moar/stage1 --setting-path=gen/moar/stage1 \
+    --setting=NQPCORE --no-regex-lib --target=mbc \
+    --output=gen/moar/stage1/QASTNode.moarvm gen/moar/stage1/QASTNode.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage1/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/QRegex/NFA.nqp src/QRegex/Cursor.nqp  > gen/moar/stage1/QRegex.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=src/vm/moar/stage0 src/vm/moar/stage0/nqp.moarvm --bootstrap --module-path=gen/moar/stage1 --setting-path=gen/moar/stage1 \
+    --setting=NQPCORE --no-regex-lib --target=mbc \
+    --output=gen/moar/stage1/QRegex.moarvm gen/moar/stage1/QRegex.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage1/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/vm/moar/HLL/Backend.nqp src/HLL/Grammar.nqp src/HLL/Actions.nqp src/HLL/Compiler.nqp src/HLL/CommandLine.nqp src/HLL/World.nqp src/HLL/sprintf.nqp  > gen/moar/stage1/NQPHLL.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=src/vm/moar/stage0 src/vm/moar/stage0/nqp.moarvm --bootstrap --module-path=gen/moar/stage1 --setting-path=gen/moar/stage1 \
+    --setting=NQPCORE --no-regex-lib --target=mbc \
+    --output=gen/moar/stage1/NQPHLL.moarvm gen/moar/stage1/NQPHLL.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=src/vm/moar/stage0 src/vm/moar/stage0/nqp.moarvm --bootstrap --module-path=gen/moar/stage1 --setting-path=gen/moar/stage1 \
+    --setting=NQPCORE --no-regex-lib --target=mbc \
+    --output=gen/moar/stage1/MASTOps.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib/MAST/Ops.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=src/vm/moar/stage0 src/vm/moar/stage0/nqp.moarvm --bootstrap --module-path=gen/moar/stage1 --setting-path=gen/moar/stage1 \
+    --setting=NQPCORE --no-regex-lib --target=mbc \
+    --output=gen/moar/stage1/MASTNodes.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib/MAST/Nodes.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage1/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/vm/moar/QAST/QASTRegexCompilerMAST.nqp src/vm/moar/QAST/QASTOperationsMAST.nqp src/vm/moar/QAST/QASTCompilerMAST.nqp  > gen/moar/stage1/QAST.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=src/vm/moar/stage0 src/vm/moar/stage0/nqp.moarvm --bootstrap --module-path=gen/moar/stage1 --setting-path=gen/moar/stage1 \
+    --setting=NQPCORE --no-regex-lib --target=mbc \
+    --output=gen/moar/stage1/QAST.moarvm gen/moar/stage1/QAST.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage1/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/QRegex/P6Regex/Grammar.nqp src/QRegex/P6Regex/Actions.nqp src/QRegex/P6Regex/Compiler.nqp src/QRegex/P6Regex/Optimizer.nqp  > gen/moar/stage1/NQPP6QRegex.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=src/vm/moar/stage0 src/vm/moar/stage0/nqp.moarvm --bootstrap --module-path=gen/moar/stage1 --setting-path=gen/moar/stage1 \
+    --setting=NQPCORE --no-regex-lib --target=mbc \
+    --output=gen/moar/stage1/NQPP6QRegex.moarvm gen/moar/stage1/NQPP6QRegex.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage1/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-version.pl > gen/moar/stage1/nqp-config.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/vm/moar/NQP/Ops.nqp src/NQP/World.nqp src/NQP/Grammar.nqp src/NQP/Optimizer.nqp src/NQP/Actions.nqp src/NQP/Compiler.nqp  gen/moar/stage1/nqp-config.nqp > gen/moar/stage1/NQP.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=src/vm/moar/stage0 src/vm/moar/stage0/nqp.moarvm --bootstrap --module-path=gen/moar/stage1 --setting-path=gen/moar/stage1 \
+    --setting=NQPCORE --target=mbc --no-regex-lib \
+    --output=gen/moar/stage1/nqp.moarvm gen/moar/stage1/NQP.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage2/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/how/Archetypes.nqp src/how/RoleToRoleApplier.nqp src/how/NQPConcreteRoleHOW.nqp src/how/RoleToClassApplier.nqp src/how/NQPCurriedRoleHOW.nqp src/how/NQPParametricRoleHOW.nqp src/how/NQPClassHOW.nqp src/how/NQPNativeHOW.nqp src/how/NQPAttribute.nqp src/how/NQPModuleHOW.nqp src/how/EXPORTHOW.nqp  > gen/moar/stage2/nqpmo.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=gen/moar/stage1 gen/moar/stage1/nqp.moarvm --bootstrap --setting=NULL --no-regex-lib --target=mbc \
+    --output=gen/moar/stage2/nqpmo.moarvm gen/moar/stage2/nqpmo.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=gen/moar/stage1 gen/moar/stage1/nqp.moarvm --bootstrap --setting=NULL --no-regex-lib --target=mbc \
+    --output=gen/moar/stage2/ModuleLoader.moarvm src/vm/moar/ModuleLoader.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage2/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/core/NativeTypes.nqp src/core/NQPRoutine.nqp src/core/NQPMu.nqp src/core/NQPCapture.nqp src/core/IO.nqp src/core/Regex.nqp src/core/Hash.nqp src/core/NQPLock.nqp src/core/testing.nqp src/core/YOUAREHERE.nqp  > gen/moar/stage2/NQPCORE.setting
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=gen/moar/stage1 gen/moar/stage1/nqp.moarvm --bootstrap --module-path=gen/moar/stage2 --setting=NULL --no-regex-lib --target=mbc \
+    --output=gen/moar/stage2/NQPCORE.setting.moarvm gen/moar/stage2/NQPCORE.setting
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage2/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/QAST/CompileTimeValue.nqp src/QAST/SpecialArg.nqp src/QAST/Children.nqp src/QAST/Node.nqp src/QAST/NodeList.nqp src/QAST/Regex.nqp src/QAST/IVal.nqp src/QAST/NVal.nqp src/QAST/SVal.nqp src/QAST/BVal.nqp src/QAST/WVal.nqp src/QAST/Want.nqp src/QAST/Var.nqp src/QAST/VarWithFallback.nqp src/QAST/ParamTypeCheck.nqp src/QAST/Op.nqp src/QAST/VM.nqp src/QAST/Stmts.nqp src/QAST/Stmt.nqp src/QAST/Block.nqp src/QAST/Unquote.nqp src/QAST/CompUnit.nqp src/QAST/InlinePlaceholder.nqp  > gen/moar/stage2/QASTNode.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=gen/moar/stage1 gen/moar/stage1/nqp.moarvm --bootstrap --module-path=gen/moar/stage2 --setting-path=gen/moar/stage2 \
+    --setting=NQPCORE --no-regex-lib --target=mbc \
+    --output=gen/moar/stage2/QASTNode.moarvm gen/moar/stage2/QASTNode.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage2/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/QRegex/NFA.nqp src/QRegex/Cursor.nqp  > gen/moar/stage2/QRegex.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=gen/moar/stage1 gen/moar/stage1/nqp.moarvm --bootstrap --module-path=gen/moar/stage2 --setting-path=gen/moar/stage2 \
+    --setting=NQPCORE --no-regex-lib --target=mbc \
+    --output=gen/moar/stage2/QRegex.moarvm gen/moar/stage2/QRegex.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage2/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/vm/moar/HLL/Backend.nqp src/HLL/Grammar.nqp src/HLL/Actions.nqp src/HLL/Compiler.nqp src/HLL/CommandLine.nqp src/HLL/World.nqp src/HLL/sprintf.nqp  > gen/moar/stage2/NQPHLL.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=gen/moar/stage1 gen/moar/stage1/nqp.moarvm --bootstrap --module-path=gen/moar/stage2 --setting-path=gen/moar/stage2 \
+    --setting=NQPCORE --no-regex-lib --target=mbc \
+    --output=gen/moar/stage2/NQPHLL.moarvm gen/moar/stage2/NQPHLL.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=gen/moar/stage1 gen/moar/stage1/nqp.moarvm --bootstrap --module-path=gen/moar/stage2 --setting-path=gen/moar/stage2 \
+    --setting=NQPCORE --no-regex-lib --target=mbc \
+    --output=gen/moar/stage2/MASTOps.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib/MAST/Ops.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=gen/moar/stage1 gen/moar/stage1/nqp.moarvm --bootstrap --module-path=gen/moar/stage2 --setting-path=gen/moar/stage2 \
+    --setting=NQPCORE --no-regex-lib --target=mbc \
+    --output=gen/moar/stage2/MASTNodes.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib/MAST/Nodes.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage2/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/vm/moar/QAST/QASTRegexCompilerMAST.nqp src/vm/moar/QAST/QASTOperationsMAST.nqp src/vm/moar/QAST/QASTCompilerMAST.nqp  > gen/moar/stage2/QAST.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=gen/moar/stage1 gen/moar/stage1/nqp.moarvm --bootstrap --module-path=gen/moar/stage2 --setting-path=gen/moar/stage2 \
+    --setting=NQPCORE --no-regex-lib --target=mbc \
+    --output=gen/moar/stage2/QAST.moarvm gen/moar/stage2/QAST.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage2/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/QRegex/P6Regex/Grammar.nqp src/QRegex/P6Regex/Actions.nqp src/QRegex/P6Regex/Compiler.nqp src/QRegex/P6Regex/Optimizer.nqp  > gen/moar/stage2/NQPP6QRegex.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=gen/moar/stage1 gen/moar/stage1/nqp.moarvm --bootstrap --module-path=gen/moar/stage2 --setting-path=gen/moar/stage2 \
+    --setting=NQPCORE --no-regex-lib --target=mbc \
+    --output=gen/moar/stage2/NQPP6QRegex.moarvm gen/moar/stage2/NQPP6QRegex.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage2/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-version.pl > gen/moar/stage2/nqp-config.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/vm/moar/NQP/Ops.nqp src/NQP/World.nqp src/NQP/Grammar.nqp src/NQP/Optimizer.nqp src/NQP/Actions.nqp src/NQP/Compiler.nqp  gen/moar/stage2/nqp-config.nqp > gen/moar/stage2/NQP.nqp
+/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath=gen/moar/stage1 gen/moar/stage1/nqp.moarvm --bootstrap --module-path=gen/moar/stage2 --setting-path=gen/moar/stage2 \
+    --setting=NQPCORE --target=mbc --no-regex-lib \
+    --output=gen/moar/stage2/nqp.moarvm gen/moar/stage2/NQP.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp gen/moar/stage2/nqpmo.moarvm .
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp gen/moar/stage2/ModuleLoader.moarvm .
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp gen/moar/stage2/NQPCORE.setting.moarvm .
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp gen/moar/stage2/QASTNode.moarvm .
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp gen/moar/stage2/QRegex.moarvm .
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp gen/moar/stage2/NQPHLL.moarvm .
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp gen/moar/stage2/MASTOps.moarvm .
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp gen/moar/stage2/MASTNodes.moarvm .
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp gen/moar/stage2/QAST.moarvm .
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp gen/moar/stage2/NQPP6QRegex.moarvm .
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp gen/moar/stage2/nqp.moarvm .
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar"
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage2/gen
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/QRegex/P5Regex/Grammar.nqp src/QRegex/P5Regex/Actions.nqp src/QRegex/P5Regex/Compiler.nqp  > gen/moar/stage2/NQPP5QRegex.nqp
+./nqp-m --target=mbc --output=NQPP5QRegex.moarvm \
+    gen/moar/stage2/NQPP5QRegex.nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp nqp-m nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e chmod 755 nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib/profiler
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp nqpmo.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp ModuleLoader.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp NQPCORE.setting.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp QASTNode.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp QRegex.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp NQPHLL.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp MASTOps.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp MASTNodes.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp QAST.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp NQPP6QRegex.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp nqp.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp NQPP5QRegex.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp src/vm/moar/profiler/template.html /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib/profiler/template.html
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/install-moar-runner.pl "" /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp nqp-m nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e chmod 755 nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e chmod 755 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp
+
+NQP has been built and installed.
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.09.1-5-g17b6555 / MoarVM 2015.09-4-g002edea).
+
+Creating Makefile ...
+Cleaning up ...
+
+You can now use 'make' to build Rakudo.
+After that, 'make test' will run some tests and
+'make install' will install Rakudo.

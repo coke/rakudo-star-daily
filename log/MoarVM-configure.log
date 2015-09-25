@@ -45,6 +45,15 @@ compiling src/core/callsite.o
 compiling src/core/args.o
 compiling src/core/exceptions.o
 compiling src/core/interp.o
+In file included from src/moar.h:87:0,
+                 from src/core/interp.c:1:
+src/core/interp.c: In function ‘MVM_interp_run’:
+src/6model/6model.h:608:26: warning: initialization discards ‘const’ qualifier from pointer target type
+ #define STABLE(o)        (((MVMObject *)(o))->st)
+                          ^
+src/core/interp.c:4703:44: note: in expansion of macro ‘STABLE’
+                     MVMContainerSpec *cs = STABLE(obj)->container_spec;
+                                            ^
 compiling src/core/threadcontext.o
 compiling src/core/compunit.o
 compiling src/core/bytecode.o
@@ -481,7 +490,7 @@ linking moar
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp 3rdparty/dyncall/dyncallback/*.h /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/dyncall
 Building NQP ...
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar --make-install
-Found /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar version 2015.09-36-g51dcbe4, which is new enough.
+Found /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar version 2015.09-38-gd28e310, which is new enough.
 Cleaning up ...
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath gen/moar/stage1/gen
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/gen-cat.pl moar src/how/Archetypes.nqp src/how/RoleToRoleApplier.nqp src/how/NQPConcreteRoleHOW.nqp src/how/RoleToClassApplier.nqp src/how/NQPCurriedRoleHOW.nqp src/how/NQPParametricRoleHOW.nqp src/how/NQPClassHOW.nqp src/how/NQPNativeHOW.nqp src/how/NQPAttribute.nqp src/how/NQPModuleHOW.nqp src/how/EXPORTHOW.nqp  > gen/moar/stage1/nqpmo.nqp
@@ -618,7 +627,7 @@ Cleaning up ...
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e chmod 755 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp
 
 NQP has been built and installed.
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.09.1-21-gada83f2 / MoarVM 2015.09-36-g51dcbe4).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.09.1-27-ga2deb14 / MoarVM 2015.09-38-gd28e310).
 
 Creating Makefile ...
 Cleaning up ...

@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.5.6) (7u79-2.5.6-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-Zürich-328-g013322a
+Zürich-346-gb05dda3
 NQP
 2015.09.1-119-g687a357
 modules
@@ -14,15 +14,11 @@ Date:   Sat Oct 10 19:59:42 2015 +0300
     enable 2015.09 again
 --------
 DBIish
-commit 4be9ebee3fe2da541cd2997788678c8c45445bcb
+commit bb3fea5af411ba054b98abb0dc453a4eb74f70e1
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Oct 5 20:33:24 2015 +0200
+Date:   Sun Oct 11 19:17:36 2015 +0200
 
-    Fix mysql tests; closes #20
-    
-    * fix grep { /.../ } (use grep /.../, ... instead)
-    * GLR fixes
-    * use .roll instead of hand-made map
+    Remove an outdated TODO comment
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -41,26 +37,11 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 MODULES.txt
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit 12d32ac0f8fe657730af27ca908d2137211e5ed5
+Author: Tobias Leich <email@froggs.de>
+Date:   Sun Oct 11 20:05:12 2015 +0200
 
-    Merge pull request #51 from stmuk/master
-    
-    import of Sept 2015 release announce
-
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
-
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    fix git urls for submodules
 --------
 PSGI
 commit cb8e26e57bb104a64d89b75ada6d02cdd0949aa4
@@ -91,14 +72,11 @@ Date:   Wed May 27 08:44:49 2015 +0200
     commit stops the warning from appearing in the new Rakudo.
 --------
 Pod-To-HTML
-commit f268102bb07591f329d6f8fd87c56b746fefef28
-Author: ShimmerFairy <rnddim@gmail.com>
-Date:   Mon Aug 17 20:32:22 2015 -0700
+commit b33aac41eedd811aa42c4047c36ffae07d0c1801
+Author: Gabor Szabo <gabor@szabgab.com>
+Date:   Sun Oct 11 15:02:37 2015 +0300
 
-    Fix very incorrect list tests
-    
-    These tests actually expected that multi-level lists would flatten into
-    a single level, and that was the issue.
+    add travis-CI configuration file
 --------
 Template-Mojo
 commit e30289331c316cbd38a828ce03ce40946e0d91cc
@@ -108,507 +86,340 @@ Date:   Fri Aug 28 13:48:49 2015 +0200
     Fill in META.info
 --------
 Terminal-ANSIColor
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit 0b34abaf43eebf5e5ee166847883052d6fbd9098
+Author: Tadeusz “tadzik” Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Sat Aug 29 14:56:46 2015 +0200
 
-    Merge pull request #51 from stmuk/master
-    
-    import of Sept 2015 release announce
-
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
-
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Rename to Terminal::ANSIColor
 --------
 debugger-ui-commandline
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit b73170b96957400cc37a5fbc4127d4c6898dba6d
+Merge: 8555209 30cc22c
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Mon Sep 14 18:17:53 2015 +0200
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #31 from Leont/ansicolor
     
-    import of Sept 2015 release announce
+    Switch to renamed Terminal::ANSIColor
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit 30cc22cd05dce2a4b5ee8929a178506594c1c6e9
+Author: Leon Timmermans <fawaka@gmail.com>
+Date:   Mon Sep 14 16:56:20 2015 +0200
 
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit 40beaa4461315f96b145409ecb3733b87094782a
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sun Oct 11 17:41:33 2015 +0200
 
-    Merge pull request #51 from stmuk/master
+    Document Array.{append,prepend}
     
-    import of Sept 2015 release announce
-
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
-
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    also try to clarify the behavior of .push a bit more
 --------
 file-find
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit b73e6557e8e1ac88e9bdec33bf3a3e36e121ad44
+Merge: 7a683ab b71e40e
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Sun Oct 4 14:20:53 2015 +0200
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #12 from moritz/fix-push-append
     
-    import of Sept 2015 release announce
+    Unbreak File::Find by s/push/append/
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit b71e40ed8363f467953d0027635ddf86ecf2d515
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sun Oct 4 11:03:59 2015 +0000
 
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Unbreak File::Find by s/push/append/
 --------
 grammar-debugger
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit 2791ceeda690c295d97936b703808a2e4398de62
+Merge: b093bbe 2ee8f69
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Thu Sep 10 18:34:12 2015 +0200
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #19 from flussence/master
     
-    import of Sept 2015 release announce
+    Update Term::ANSIColor dep to Terminal::ANSIColor
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit 2ee8f69e0e07e9d795edbcacdef5d83663bc9fa9
+Author: Anthony Parsons <flussence@gmail.com>
+Date:   Thu Sep 10 17:23:10 2015 +0100
 
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Update Term::ANSIColor dep to Terminal::ANSIColor
+    
+    The module was renamed to the latter, the former spits out a deprecation message
+    on use now.
 --------
 json
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit 2484983b141e7f4bb5ccc2b1ae4465466c8dad18
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sat Oct 10 19:36:47 2015 +0000
 
-    Merge pull request #51 from stmuk/master
-    
-    import of Sept 2015 release announce
-
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
-
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Add .travis.yml
 --------
 json_fast
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit e9e648e62303fdbc83b00020947e2015ba275adf
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Sat Sep 26 18:40:29 2015 +0200
 
-    Merge pull request #51 from stmuk/master
-    
-    import of Sept 2015 release announce
-
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
-
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    rename META.info to META6.json
 --------
 jsonrpc
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit c1ff17aa829075e2fb708e367da097a6a577a149
+Merge: e8d65d7 14710ca
+Author: Pawel Pabian <bbkr@post.pl>
+Date:   Mon Sep 14 17:17:48 2015 +0200
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #16 from laben/master
     
-    import of Sept 2015 release announce
+    Adjust to post-glr semantics due to single-arg rule flattening
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit 14710ca1f348f6a52f082a75b8945309e63978d9
+Author: laben <labensigma@gmail.com>
+Date:   Sun Sep 13 23:11:38 2015 +0200
 
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Adjust to post-glr semantics due to single-arg rule flattening
 --------
 p6-File-Temp
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit 16efbab0516dee7c2198546b073a0fa8dad88380
+Merge: 0562844 b60cbf5
+Author: Jonathan Scott Duff <perlpilot@pobox.com>
+Date:   Fri Aug 28 08:48:09 2015 -0500
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #6 from tadzik/master
     
-    import of Sept 2015 release announce
+    Fix for GLR
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit b60cbf561c7722240591ab30a6d63e8a78a836b9
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Fri Aug 28 12:29:30 2015 +0200
 
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Fix for GLR
+    
+    This works on pre-glr too
 --------
 p6-Template-Mustache
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit 8c12b35edb500b120fa11ddc2c30c105a4445886
+Author: Tim Smith <tim.dolores@gmail.com>
+Date:   Sat Sep 12 13:08:31 2015 -0600
 
-    Merge pull request #51 from stmuk/master
-    
-    import of Sept 2015 release announce
-
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
-
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Move load-specs() to TestUtil helper module
 --------
 p6-file-directory-tree
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit 20e8b6d801c6ed0f9fa6e06705e28c44f72cd880
+Merge: 3fd85c4 dd1eb09
+Author: Brent Laabs <bslaabs@gmail.com>
+Date:   Sat Sep 19 13:21:12 2015 -0700
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #5 from FROGGS/patch-1
     
-    import of Sept 2015 release announce
+    done() is now called done-testing()
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit dd1eb09848149ccb9de7756509cd1f46244aae81
+Author: Tobias Leich <email@froggs.de>
+Date:   Fri Sep 18 21:42:41 2015 +0200
 
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    done() is now called done-testing()
 --------
 panda
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
+commit 6a649ce350725c8cd4139f044efb8e8671f36984
+Merge: 930520c e65d4ed
 Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+Date:   Fri Oct 9 09:07:35 2015 +0200
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #230 from ShimmerFairy/master
     
-    import of Sept 2015 release announce
+    Improve bin/panda USAGE and invalid arguments
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit e65d4ed1725e3f5db6390f1d40c74488e234d9f2
+Author: ShimmerFairy <rnddim@gmail.com>
+Date:   Thu Oct 8 20:31:02 2015 -0700
 
-    mention new tutorial
+    Remove action-less shortcut for 'install'
+    
+    Having panda operate on a bunch of actions that aren't prefixed with
+    special characters (e.g. --smoke or --install) nor otherwise
+    distinguished from valid package names makes the use of 'panda Foo::Bar'
+    as a shortcut for 'panda install Foo::Bar' is really not a good idea.
+    For example, 'panda help' used to be interpreted as trying to install a
+    'help' package. So it's gone, requiring an explicit 'install' to be
+    given to panda now.
 
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
+commit 10234f29c90bd38fd4ff67d038f52262fb0b5a74
+Author: ShimmerFairy <rnddim@gmail.com>
+Date:   Thu Oct 8 20:27:23 2015 -0700
 
-    import of Sept 2015 release announce
+    Add 'help' command for printing USAGE
+    
+    Also added mention of which actions don't take a list of modules.
+
+commit d9c33b75a170b9852ce58521ec2acd7ccd2b0e9f
+Author: ShimmerFairy <rnddim@gmail.com>
+Date:   Thu Oct 8 20:20:36 2015 -0700
+
+    Add a custom USAGE statement
+    
+    This avoids the issue of having a big path for 'panda' being shown in
+    certain situations, e.g. using rakudobrew. This USAGE is more
+    descriptive as a result. Various organizational improvements welcome, of
+    course.
 --------
 perl6-digest-md5
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit d9737d6c25c468f4cab418013d36b9e43f339f1e
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sun Sep 27 08:02:46 2015 +0200
 
-    Merge pull request #51 from stmuk/master
-    
-    import of Sept 2015 release announce
-
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
-
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Fix for current rakudo
 --------
 perl6-http-easy
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit c3a92b80537b01b085829df7bc5034e474132eaf
+Merge: 8b0925b eb8ce84
+Author: Timothy Totten <2009@huri.net>
+Date:   Wed Sep 23 14:55:01 2015 -0700
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #27 from mattn/print
     
-    import of Sept 2015 release announce
+    IO::Socket.send not exists
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit eb8ce849bda9ce150455b81bf4f60c76496cc120
+Author: Yasuhiro Matsumoto <mattn.jp@gmail.com>
+Date:   Thu Sep 17 18:16:46 2015 +0900
 
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    IO::Socket.send not exists
 --------
 perl6-http-status
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit 7f1fe69b09f8293501f6fe15bb4bfd39670f9443
+Merge: 373aec2 6b91b11
+Author: Timothy Totten <2009@huri.net>
+Date:   Wed Sep 9 09:01:27 2015 -0700
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #8 from zostay/add-is-tests
     
-    import of Sept 2015 release announce
+    Add the is-* tests from ether's HTTP::Status
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit 6b91b11f3a783a9f873db96594c31b646f56ec65
+Author: Sterling Hanenkamp <sterling@hanenkamp.com>
+Date:   Tue Sep 8 23:40:24 2015 -0500
 
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Add the is-* tests from ether's HTTP::Status
 --------
 perl6-lwp-simple
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit 378a558ee9c7149fe118c15e4883cb942a632b7a
+Merge: a67ad44 c2c5fb2
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Oct 1 13:10:35 2015 +0200
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #59 from ronaldxs/master
     
-    import of Sept 2015 release announce
+    fix userinfo/basic auth to be compatible with new URI module and fix …
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit c2c5fb2548ffc6943cddc61418a690f149a899ea
+Author: Ronald Schmidt <ronaldxs@software-path.com>
+Date:   Sun Sep 27 22:33:50 2015 -0400
 
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    fix userinfo/basic auth to be compatible with new URI module and fix it better and cleaner anyway
 --------
 shell-command
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit dd8da5e96c9d8f3b50b88c58f786b9412316c162
+Author: Tadeusz “tadzik” Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Fri Aug 28 13:56:59 2015 +0200
 
-    Merge pull request #51 from stmuk/master
-    
-    import of Sept 2015 release announce
-
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
-
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Fill in META.info
 --------
 svg
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit 26edc3bd93e3532163b9f2424ca9058c7bb946a5
+Merge: 81804e0 65d4730
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Mon Aug 31 12:19:14 2015 +0200
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #3 from laben/master
     
-    import of Sept 2015 release announce
+    Adjust code for glr
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit 65d4730baf5e7fc3fa1c43c3ac8f28aa3f4538f7
+Author: laben <labensigma@gmail.com>
+Date:   Sun Aug 30 21:15:59 2015 +0200
 
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Adjust code for glr
 --------
 svg-plot
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit 2b46f3df1768e0ea84f9f076c90bb9ddcf38c990
+Merge: 05e6f2a 9735bba
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Mon Aug 31 12:18:35 2015 +0200
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #7 from laben/master
     
-    import of Sept 2015 release announce
+    Adjust test for newer conventions
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit 9735bba1c95044e018a40f6b936f7a3927268af4
+Author: laben <labensigma@gmail.com>
+Date:   Sun Aug 30 21:20:01 2015 +0200
 
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Adjust test for newer conventions
 --------
 test-mock
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit 99c7a9a5c86847a6555364e0904449bff76b0197
+Merge: 53e8512 3717c00
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Tue Sep 8 17:43:43 2015 +0200
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #7 from laben/master
     
-    import of Sept 2015 release announce
+    Adjust code for glr
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit 3717c00e78650eb67921fff7ee96d1e3398fe3b8
+Author: laben <labensigma@gmail.com>
+Date:   Sun Aug 30 20:09:25 2015 +0200
 
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Adjust code for glr
 --------
 ufo
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit 69ebfc620878109218e89e7f448310cbe8792e2c
+Merge: 3f2843c caba7fb
+Author: Carl Mäsak <cmasak@gmail.com>
+Date:   Thu Aug 20 10:50:20 2015 +0200
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #27 from laben/glr
     
-    import of Sept 2015 release announce
+    Fix get_modules() for GLR
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit caba7fbcc16d68d4d4343e5e430030b2e6dc288b
+Author: laben <labensigma@gmail.com>
+Date:   Thu Aug 20 00:36:23 2015 +0200
 
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Fix get_modules() for GLR
 --------
 uri
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit b8aa0b2020538b6d2c5c2ca5714831304a93c11d
+Merge: 27323c6 f682303
+Author: Tobias Leich <email@froggs.de>
+Date:   Sat Oct 10 17:06:37 2015 +0200
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #19 from szabgab/travis_button
     
-    import of Sept 2015 release announce
+    Travis Status button
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit f682303d72768b6e15f981fb064c55fef5c59a13
+Author: Gabor Szabo <gabor@szabgab.com>
+Date:   Sat Oct 10 17:45:41 2015 +0300
 
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Travis Status button
 --------
 xml-writer
-commit 0b227e3d89fefee1598d3b87ec78e2b5e476c119
-Merge: 1ae5aa4 447c714
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Sep 22 16:37:33 2015 +0200
+commit c230464a2cd5ed1c19fcba9acd496d72d227fd1f
+Merge: 7452ca1 90a5fc0
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sat Aug 29 14:42:28 2015 +0200
 
-    Merge pull request #51 from stmuk/master
+    Merge pull request #5 from laben/master
     
-    import of Sept 2015 release announce
+    Adjust tests to newer conventions
 
-commit 447c7145971826566730900d72df5d416a456ad2
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:48:31 2015 +0100
+commit 90a5fc02c4c4769d82545d29de1f4de17554d893
+Author: laben <labensigma@gmail.com>
+Date:   Sat Aug 29 12:25:45 2015 +0200
 
-    mention new tutorial
-
-commit 0c7abc93dd8505059b6cccd6d07691e3133d0057
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Sep 22 14:46:43 2015 +0100
-
-    import of Sept 2015 release announce
+    Adjust tests to newer conventions

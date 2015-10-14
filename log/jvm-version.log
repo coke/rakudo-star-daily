@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.5.6) (7u79-2.5.6-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-Zürich-363-g70eea19
+Zürich-379-gdd15d70
 NQP
-2015.09.1-122-g6ac0c44
+2015.09.1-135-ga187d4c
 modules
 --------
 Bailador
@@ -51,25 +51,21 @@ Date:   Tue Sep 1 11:20:09 2015 -0700
     Moved changes from HTTP::Easy back into here.
 --------
 Perl6-MIME-Base64
-commit 186e20e810382aef82af5a4e0331dbe2fbefb39b
-Merge: 70da02d 87a1cf9
-Author: Tobias Leich <email@froggs.de>
-Date:   Wed May 27 09:22:12 2015 +0200
+commit 0aecf036f36cc0e579830bf2cdd20e6f911d822c
+Merge: 186e20e 3b412e7
+Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
+Date:   Tue Oct 13 22:25:41 2015 -0400
 
-    Merge pull request #5 from paultcochrane/pr/add-unit-declarator
+    Merge pull request #6 from tokuhirom/oneline
     
-    Add unit declarator to class declarations
+    EncodedData.maxlen is ro field. We should pass it in the constructor.
 
-commit 87a1cf9aef7f1e3439e6933bd497aec083746b2a
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Wed May 27 08:44:49 2015 +0200
+commit 3b412e74e7fdf090e4dcea88c263f3669c3dea28
+Author: Tokuhiro Matsuno <tokuhirom@gmail.com>
+Date:   Wed Oct 14 10:16:21 2015 +0900
 
-    Add unit declarator to class declarations
-    
-    As of Rakudo 2015.05, the `unit` declarator is required before using
-    `module`, `class` or `grammar` declarations (unless it uses a block).  Code
-    still using the old blockless semicolon form will throw a warning. This
-    commit stops the warning from appearing in the new Rakudo.
+    EncodedData.maxlen is ro field.
+    We should pass it in the constructor.
 --------
 Pod-To-HTML
 commit b33aac41eedd811aa42c4047c36ffae07d0c1801
@@ -109,11 +105,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 18a0d511af2bc551ee919ffcfe5a984b4c7b39ec
-Author: David H. Adler <dha@pobox.com>
-Date:   Tue Oct 13 13:20:15 2015 -0400
+commit 3aa60c688be20f8914cd9fed5ed33625f5a8bae9
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Wed Oct 14 13:59:35 2015 -0400
 
-    Added examples for .ord and .ords in Str.pod
+    Use clearer wording for flattening behaviour
 --------
 file-find
 commit cfc68655bf7cb1c20e0723a11bfbde5f614b1578
@@ -165,38 +161,18 @@ Date:   Sat Sep 26 18:40:29 2015 +0200
     rename META.info to META6.json
 --------
 jsonrpc
-commit c1ff17aa829075e2fb708e367da097a6a577a149
-Merge: e8d65d7 14710ca
-Author: Pawel Pabian <bbkr@post.pl>
-Date:   Mon Sep 14 17:17:48 2015 +0200
+commit a66af3a5c8d5f8e42adf9b96f702c1b28c349b1a
+Author: Pawel bbkr Pabian <bbkr@post.pl>
+Date:   Tue Oct 13 23:56:58 2015 +0200
 
-    Merge pull request #16 from laben/master
-    
-    Adjust to post-glr semantics due to single-arg rule flattening
-
-commit 14710ca1f348f6a52f082a75b8945309e63978d9
-Author: laben <labensigma@gmail.com>
-Date:   Sun Sep 13 23:11:38 2015 +0200
-
-    Adjust to post-glr semantics due to single-arg rule flattening
+    Fix rakudo versions in Travis CI
 --------
 p6-File-Temp
-commit 16efbab0516dee7c2198546b073a0fa8dad88380
-Merge: 0562844 b60cbf5
-Author: Jonathan Scott Duff <perlpilot@pobox.com>
-Date:   Fri Aug 28 08:48:09 2015 -0500
+commit a573a873148e9830ee8bb5e8b37487127aeed380
+Author: Jonathan Scott Duff <duff@pobox.com>
+Date:   Wed Oct 14 14:49:16 2015 -0500
 
-    Merge pull request #6 from tadzik/master
-    
-    Fix for GLR
-
-commit b60cbf561c7722240591ab30a6d63e8a78a836b9
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Fri Aug 28 12:29:30 2015 +0200
-
-    Fix for GLR
-    
-    This works on pre-glr too
+    start using travis-ci
 --------
 p6-Template-Mustache
 commit 8c12b35edb500b120fa11ddc2c30c105a4445886
@@ -265,20 +241,20 @@ Date:   Thu Oct 8 20:20:36 2015 -0700
     course.
 --------
 perl6-digest-md5
-commit f3b89016fd2d3ff94c50ff1335f05f51ec4d7b3a
-Merge: d9737d6 fbe3b62
+commit 612b08e7e8b01c2140f38e79d638ff4694b72933
+Merge: f3b8901 2efa796
 Author: Tobias Leich <email@froggs.de>
-Date:   Tue Oct 13 08:31:16 2015 +0200
+Date:   Wed Oct 14 19:23:04 2015 +0200
 
-    Merge pull request #12 from szabgab/travis
+    Merge pull request #14 from zoffixznet/docs
     
-    add travis configuration file
+    Write documentation
 
-commit fbe3b622a7bae8499fac547eacd1782a96538af9
-Author: Gabor Szabo <gabor@szabgab.com>
-Date:   Sun Oct 11 15:45:55 2015 +0300
+commit 2efa7960b0c23ca24eeca2f1b15f9490d99310cc
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Wed Oct 14 08:50:10 2015 -0400
 
-    add travis configuration file
+    Write documentation
 --------
 perl6-http-easy
 commit c3a92b80537b01b085829df7bc5034e474132eaf

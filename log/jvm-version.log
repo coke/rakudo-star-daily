@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.5.6) (7u79-2.5.6-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-Zürich-379-gdd15d70
+Zürich-383-gf0d4820
 NQP
 2015.09.1-135-ga187d4c
 modules
@@ -105,11 +105,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 3aa60c688be20f8914cd9fed5ed33625f5a8bae9
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Wed Oct 14 13:59:35 2015 -0400
+commit a42fc613026909ee1854dad50deedd3c23627782
+Author: Moritz Lenz <mlenz@noris.net>
+Date:   Thu Oct 15 13:58:58 2015 +0200
 
-    Use clearer wording for flattening behaviour
+    Fix typo, llfourn++
 --------
 file-find
 commit cfc68655bf7cb1c20e0723a11bfbde5f614b1578
@@ -168,11 +168,14 @@ Date:   Tue Oct 13 23:56:58 2015 +0200
     Fix rakudo versions in Travis CI
 --------
 p6-File-Temp
-commit a573a873148e9830ee8bb5e8b37487127aeed380
+commit cef567c4d087bdc426938090a669bdec5c8bb13b
 Author: Jonathan Scott Duff <duff@pobox.com>
-Date:   Wed Oct 14 14:49:16 2015 -0500
+Date:   Wed Oct 14 16:17:33 2015 -0500
 
-    start using travis-ci
+    factor out common code and use it
+    
+    tempfile and tempdir are largely the same, so put the same bits into a
+    common sub that they both use
 --------
 p6-Template-Mustache
 commit 8c12b35edb500b120fa11ddc2c30c105a4445886

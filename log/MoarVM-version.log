@@ -1,9 +1,9 @@
 MoarVM
-2015.09-86-g071e0a6
+2015.10
 Rakudo
-Zürich-438-g2717139
+Zürich-462-gf45ed86
 NQP
-2015.09.1-147-g9a64ab1
+2015.09.1-150-g255ddbf
 modules
 --------
 Bailador
@@ -104,11 +104,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 2e8d3893260c44c5072c88eff4dd3282e3605197
-Author: Will "Coke" Coleda <will@coleda.com>
-Date:   Wed Oct 21 14:59:08 2015 -0400
+commit b0392f9f197b76e7ff95c2ee8b4b8d60d84d313b
+Author: Nick Logan <nlogan@gmail.com>
+Date:   Thu Oct 22 15:07:25 2015 -0400
 
-    Use more generic link to S99
+    Fix zip-latest signature and throttle header
 --------
 file-find
 commit cfc68655bf7cb1c20e0723a11bfbde5f614b1578
@@ -294,20 +294,14 @@ Date:   Tue Sep 8 23:40:24 2015 -0500
     Add the is-* tests from ether's HTTP::Status
 --------
 perl6-lwp-simple
-commit eee3b0142dabf968bd240df1619b64b3b2a7d309
-Merge: 7006ef7 b74201e
-Author: Cosimo Streppone <cosimo@cpan.org>
-Date:   Wed Oct 21 18:40:40 2015 +0200
+commit 318ee18b9db9e4f2f6514fd4f2f4a1a7e16708ca
+Author: Cosimo Streppone <cosimo@opera.com>
+Date:   Thu Oct 22 21:50:58 2015 +0200
 
-    Merge pull request #53 from stmuk/stmuk
+    [GH#63] Github gists replies with HTTP 201
     
-    add basic http_proxy support
-
-commit b74201e85b150482d5dbb3c8c0f101efaa308c94
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Thu Jun 11 16:07:20 2015 +0100
-
-    add basic http_proxy support
+    Handle non-200 replies exactly like HTTP 200.
+    They're still valid, and can have content of course.
 --------
 shell-command
 commit dd8da5e96c9d8f3b50b88c58f786b9412316c162

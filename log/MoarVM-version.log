@@ -1,9 +1,9 @@
 MoarVM
-2015.10
+2015.10-2-gf80c129
 Rakudo
-Zürich-462-gf45ed86
+v6.b-9-gf25bbe7
 NQP
-2015.09.1-150-g255ddbf
+2015.10-9-gb46902b
 modules
 --------
 Bailador
@@ -81,11 +81,11 @@ Date:   Fri Aug 28 13:48:49 2015 +0200
     Fill in META.info
 --------
 Terminal-ANSIColor
-commit 0b34abaf43eebf5e5ee166847883052d6fbd9098
-Author: Tadeusz “tadzik” Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Sat Aug 29 14:56:46 2015 +0200
+commit 29e7c1e131742a6ebc4a3e5bd33f23624c7fc285
+Author: Yasuhiro Matsumoto <mattn.jp@gmail.com>
+Date:   Wed Sep 30 09:19:48 2015 +0900
 
-    Rename to Terminal::ANSIColor
+    s/Term/Terminal/
 --------
 debugger-ui-commandline
 commit b73170b96957400cc37a5fbc4127d4c6898dba6d
@@ -203,47 +203,28 @@ Date:   Fri Sep 18 21:42:41 2015 +0200
     done() is now called done-testing()
 --------
 panda
-commit 6a649ce350725c8cd4139f044efb8e8671f36984
-Merge: 930520c e65d4ed
-Author: lizmat <liz@dijkmat.nl>
-Date:   Fri Oct 9 09:07:35 2015 +0200
+commit 287f7ebb689c24cdb6b75398571f65389e43740c
+Merge: 6a649ce 69cb6ce
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Fri Oct 23 17:12:31 2015 +0200
 
-    Merge pull request #230 from ShimmerFairy/master
+    Merge pull request #225 from moznion/fix/enable_no-rc_option_for_panda_tester
     
-    Improve bin/panda USAGE and invalid arguments
+    Add `--norc` option into `prove` command that is used on Panda::Tester
 
-commit e65d4ed1725e3f5db6390f1d40c74488e234d9f2
-Author: ShimmerFairy <rnddim@gmail.com>
-Date:   Thu Oct 8 20:31:02 2015 -0700
+commit 69cb6ced8aa78dd8df17d1c8c1a4ccf5b9438afc
+Author: moznion <moznion@gmail.com>
+Date:   Sat Sep 26 18:34:52 2015 +0900
 
-    Remove action-less shortcut for 'install'
+    Add `--norc` option into `prove` command
     
-    Having panda operate on a bunch of actions that aren't prefixed with
-    special characters (e.g. --smoke or --install) nor otherwise
-    distinguished from valid package names makes the use of 'panda Foo::Bar'
-    as a shortcut for 'panda install Foo::Bar' is really not a good idea.
-    For example, 'panda help' used to be interpreted as trying to install a
-    'help' package. So it's gone, requiring an explicit 'install' to be
-    given to panda now.
-
-commit 10234f29c90bd38fd4ff67d038f52262fb0b5a74
-Author: ShimmerFairy <rnddim@gmail.com>
-Date:   Thu Oct 8 20:27:23 2015 -0700
-
-    Add 'help' command for printing USAGE
+    `t/tester.t` will be failed if `--verbose` or `--failures` option
+    is written in `.proverc`, because Panda::Tester uses `prove` through
+    command execution.
+    That command execution uses `.proverc` implicitly, so it is necessary
+    to be disable that in order to make tests successful.
     
-    Also added mention of which actions don't take a list of modules.
-
-commit d9c33b75a170b9852ce58521ec2acd7ccd2b0e9f
-Author: ShimmerFairy <rnddim@gmail.com>
-Date:   Thu Oct 8 20:20:36 2015 -0700
-
-    Add a custom USAGE statement
-    
-    This avoids the issue of having a big path for 'panda' being shown in
-    certain situations, e.g. using rakudobrew. This USAGE is more
-    descriptive as a result. Various organizational improvements welcome, of
-    course.
+    So added `--norc` option into prove command.
 --------
 perl6-digest-md5
 commit 612b08e7e8b01c2140f38e79d638ff4694b72933
@@ -294,21 +275,33 @@ Date:   Tue Sep 8 23:40:24 2015 -0500
     Add the is-* tests from ether's HTTP::Status
 --------
 perl6-lwp-simple
-commit 318ee18b9db9e4f2f6514fd4f2f4a1a7e16708ca
+commit 301b8c145057dc051fbc5aebfb74b2c05daecf16
 Author: Cosimo Streppone <cosimo@opera.com>
-Date:   Thu Oct 22 21:50:58 2015 +0200
+Date:   Thu Oct 22 22:11:20 2015 +0200
 
-    [GH#63] Github gists replies with HTTP 201
-    
-    Handle non-200 replies exactly like HTTP 200.
-    They're still valid, and can have content of course.
+    Disable: since some systems can't resolve IPv6 addresses?
 --------
 shell-command
-commit dd8da5e96c9d8f3b50b88c58f786b9412316c162
-Author: Tadeusz “tadzik” Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Fri Aug 28 13:56:59 2015 +0200
+commit 8a6381cd4fc2c2a98bbc0642efaf4aa6473a6339
+Merge: dd8da5e ecf0862
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Fri Oct 23 17:05:08 2015 +0200
 
-    Fill in META.info
+    Merge pull request #7 from softmoth/master
+    
+    Add simple which() routine, and Travis-CI
+
+commit ecf0862c5b9ff6a5b4417d0c2baecd8e100d5229
+Author: Tim Smith <tim.dolores@gmail.com>
+Date:   Wed Oct 14 17:27:50 2015 -0600
+
+    Add Travis-CI integration
+
+commit e757695b428d73d4c0fd3e048a1f78924fc23802
+Author: Tim Smith <tim.dolores@gmail.com>
+Date:   Wed Oct 14 17:20:35 2015 -0600
+
+    Add which() routine
 --------
 svg
 commit 26edc3bd93e3532163b9f2424ca9058c7bb946a5

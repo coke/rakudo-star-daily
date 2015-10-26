@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.5.6) (7u79-2.5.6-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-v6.b-22-gcfb7d87
+v6.b-30-gab91aea
 NQP
-2015.10-14-g875ce69
+2015.10-22-g354b474
 modules
 --------
 Bailador
@@ -81,11 +81,20 @@ Date:   Fri Aug 28 13:48:49 2015 +0200
     Fill in META.info
 --------
 Terminal-ANSIColor
-commit 29e7c1e131742a6ebc4a3e5bd33f23624c7fc285
-Author: Yasuhiro Matsumoto <mattn.jp@gmail.com>
-Date:   Wed Sep 30 09:19:48 2015 +0900
+commit d79350878aaefb303406c9a9ab5695c7f83d056f
+Merge: 29e7c1e b685d13
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Mon Oct 26 18:26:40 2015 +0100
 
-    s/Term/Terminal/
+    Merge pull request #2 from szabgab/travis
+    
+    Add travis configuration file
+
+commit b685d13e15443702ae05ba007683cc003ea12f97
+Author: Gabor Szabo <gabor@szabgab.com>
+Date:   Sat Oct 24 07:21:07 2015 +0300
+
+    Add travis configuration file
 --------
 debugger-ui-commandline
 commit b73170b96957400cc37a5fbc4127d4c6898dba6d
@@ -104,11 +113,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 37b1f835e4dd4efd8a4bf1cff5a5ba704a43b0e1
-Author: Carl Hayter <hayter@usc.edu>
-Date:   Sat Oct 24 18:14:07 2015 -0700
+commit b22d12abe6601aca0b7bfc8cabc98c497acb2b91
+Author: Lloyd Fournier <LLFourn@users.noreply.github.com>
+Date:   Tue Oct 27 03:34:01 2015 +1100
 
-    missing > on a C<> breaks formatting
+    doc .assuming
 --------
 file-find
 commit cfc68655bf7cb1c20e0723a11bfbde5f614b1578
@@ -127,23 +136,25 @@ Date:   Sun Oct 11 13:36:29 2015 +0300
     add travis configuration file
 --------
 grammar-debugger
-commit 2791ceeda690c295d97936b703808a2e4398de62
-Merge: b093bbe 2ee8f69
+commit c1495065a9714845e95e9aa5607ebfda7b6beb87
+Merge: 2791cee 0f6f133
 Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Thu Sep 10 18:34:12 2015 +0200
+Date:   Mon Oct 26 18:30:04 2015 +0100
 
-    Merge pull request #19 from flussence/master
+    Merge pull request #21 from FROGGS/master
     
-    Update Term::ANSIColor dep to Terminal::ANSIColor
+    unbreak the debugger
 
-commit 2ee8f69e0e07e9d795edbcacdef5d83663bc9fa9
-Author: Anthony Parsons <flussence@gmail.com>
-Date:   Thu Sep 10 17:23:10 2015 +0100
+commit 0f6f133ad786746f09ae0db334d4e1dc344b4a41
+Author: Tobias Leich <email@froggs.de>
+Date:   Thu Oct 22 15:41:35 2015 +0200
 
-    Update Term::ANSIColor dep to Terminal::ANSIColor
+    unbreak the debugger
     
-    The module was renamed to the latter, the former spits out a deprecation message
-    on use now.
+    A rakudo patch that is meant to make autothreading of junctions
+    work on the LHS of a smartmatch forces us to care about Mu/Any.
+    
+    See: https://github.com/rakudo/rakudo/commit/5d83db
 --------
 json
 commit 2484983b141e7f4bb5ccc2b1ae4465466c8dad18

@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install --backends=jvm && make
-Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2015.10-14-g875ce69 / OpenJDK 1.7.0_79).
+Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2015.10-22-g354b474 / OpenJDK 1.7.0_79).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -43,11 +43,11 @@ jar cf0 rakudo-runtime.jar -C bin/ .
 The following step can take a long time, please be patient.
 java -Xss1m -Xms500m -Xmx2000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar:rakudo-runtime.jar:perl6.jar -cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib perl6 --setting=NULL --ll-exception --optimize=3 --target=jar --stagestats --output=CORE.setting.jar gen/jvm/CORE.setting
 Stage start      :   0.000
-Stage parse      :  90.063
-Stage syntaxcheck:   0.001
+Stage parse      :  88.830
+Stage syntaxcheck:   0.000
 Stage ast        :   0.001
-Stage optimize   :  12.990
-Stage jast       :  36.596
+Stage optimize   :  11.845
+Stage jast       :  35.895
 Stage classfile  : java.lang.RuntimeException: java.lang.RuntimeException: Class file too large!
   in classfile (gen/jvm/stage2/NQPHLL.nqp:93)
   in compile (gen/jvm/stage2/NQPHLL.nqp:1423)

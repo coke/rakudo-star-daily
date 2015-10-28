@@ -3,26 +3,26 @@ Testing modules/xml-writer with /home/coke/sandbox/rakudo-star-daily/star-jvm/ra
 t/escaping.t ... ok
 t/structure.t .. ok
 All tests successful.
-Files=2, Tests=11, 14 wallclock secs ( 0.02 usr  0.00 sys + 34.55 cusr  0.64 csys = 35.21 CPU)
+Files=2, Tests=11, 18 wallclock secs ( 0.02 usr  0.00 sys + 31.50 cusr  0.54 csys = 32.06 CPU)
 Result: PASS
 
 Testing modules/svg with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/basics.t .. ok
 All tests successful.
-Files=1, Tests=3,  7 wallclock secs ( 0.02 usr  0.00 sys + 17.48 cusr  0.34 csys = 17.84 CPU)
+Files=1, Tests=3, 11 wallclock secs ( 0.02 usr  0.00 sys + 15.07 cusr  0.33 csys = 15.42 CPU)
 Result: PASS
 
 Testing modules/svg-plot with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/series.t .. ok
 t/ticks.t ... ok
 All tests successful.
-Files=2, Tests=10, 14 wallclock secs ( 0.02 usr  0.00 sys + 31.78 cusr  0.63 csys = 32.43 CPU)
+Files=2, Tests=10, 17 wallclock secs ( 0.02 usr  0.00 sys + 28.49 cusr  0.52 csys = 29.03 CPU)
 Result: PASS
 
 Testing modules/Terminal-ANSIColor with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/00-load.t .. ok
 All tests successful.
-Files=1, Tests=1,  6 wallclock secs ( 0.02 usr  0.00 sys + 14.42 cusr  0.26 csys = 14.70 CPU)
+Files=1, Tests=1,  8 wallclock secs ( 0.01 usr  0.00 sys + 12.85 cusr  0.16 csys = 13.02 CPU)
 Result: PASS
 
 Testing modules/test-mock with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -30,7 +30,7 @@ t/returning.t .. ok
 t/synopsis.t ... ok
 t/with.t ....... ok
 All tests successful.
-Files=3, Tests=13, 20 wallclock secs ( 0.02 usr  0.01 sys + 49.78 cusr  1.09 csys = 50.90 CPU)
+Files=3, Tests=13, 26 wallclock secs ( 0.02 usr  0.01 sys + 46.72 cusr  0.88 csys = 47.63 CPU)
 Result: PASS
 
 Testing modules/Grammar-Profiler-Simple with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -59,14 +59,14 @@ Test Summary Report
 t/csv.t (Wstat: 768 Tests: 15 Failed: 3)
   Failed tests:  7, 10, 13
   Non-zero exit status: 3
-Files=1, Tests=15,  8 wallclock secs ( 0.02 usr  0.00 sys + 21.61 cusr  0.48 csys = 22.11 CPU)
+Files=1, Tests=15, 14 wallclock secs ( 0.02 usr  0.00 sys + 21.28 cusr  0.33 csys = 21.63 CPU)
 Result: FAIL
 
 Testing modules/grammar-debugger with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/debugger.t .. ok
 t/tracer.t .... ok
 All tests successful.
-Files=2, Tests=2, 13 wallclock secs ( 0.02 usr  0.01 sys + 31.80 cusr  0.68 csys = 32.51 CPU)
+Files=2, Tests=2, 17 wallclock secs ( 0.02 usr  0.00 sys + 30.12 cusr  0.71 csys = 30.85 CPU)
 Result: PASS
 
 Testing modules/Perl6-MIME-Base64 with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -75,7 +75,7 @@ t/binary-and-long-line.t .. ok
 t/oneline.t ............... ok
 t/rfc4648-test-vector.t ... ok
 All tests successful.
-Files=4, Tests=47, 35 wallclock secs ( 0.05 usr  0.00 sys + 90.28 cusr  1.54 csys = 91.87 CPU)
+Files=4, Tests=47, 49 wallclock secs ( 0.03 usr  0.00 sys + 88.42 cusr  1.45 csys = 89.90 CPU)
 Result: PASS
 
 Testing modules/uri with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -84,26 +84,129 @@ t/escape.t ............... ok
 t/november-urlencoded.t .. ok
 t/rfc-3986-examples.t .... ok
 All tests successful.
-Files=4, Tests=92, 38 wallclock secs ( 0.04 usr  0.00 sys + 94.58 cusr  1.76 csys = 96.38 CPU)
+Files=4, Tests=92, 47 wallclock secs ( 0.04 usr  0.00 sys + 86.69 cusr  1.29 csys = 88.02 CPU)
 Result: PASS
 
 Testing modules/perl6-lwp-simple with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/000-load-module.t ............. ok
-t/basic-auth.t .................. ok
-t/custom-headers-and-content.t .. ok
-t/get-binary-camelia.t .......... ok
-t/get-chunked-6guts.t ........... ok
-t/get-perl6-org.t ............... ok
-t/get-unsized.t ................. ok
-t/get-w3-latin1-utf8.t .......... ok
-t/get-w3-redirect.t ............. ok
-t/getstore.t .................... ok
+java.lang.RuntimeException: This type does not support positional operations
+  in method make_request at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:240
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:79
+  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:30
+  in block <unit> at t/basic-auth.t:32
+
+# Looks like you planned 9 tests, but ran 8
+t/basic-auth.t .................. 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 1/9 subtests 
+java.lang.RuntimeException: This type does not support positional operations
+  in method make_request at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:240
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:79
+  in method post at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:38
+  in block <unit> at t/custom-headers-and-content.t:11
+
+t/custom-headers-and-content.t .. 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 1/1 subtests 
+java.lang.RuntimeException: This type does not support positional operations
+  in method make_request at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:240
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:79
+  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:30
+  in block <unit> at t/get-binary-camelia.t:9
+
+t/get-binary-camelia.t .......... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 1/1 subtests 
+java.lang.RuntimeException: This type does not support positional operations
+  in method make_request at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:240
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:79
+  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:30
+  in block <unit> at t/get-chunked-6guts.t:10
+
+t/get-chunked-6guts.t ........... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 1/1 subtests 
+java.lang.RuntimeException: This type does not support positional operations
+  in method make_request at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:240
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:79
+  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:30
+  in block <unit> at t/get-perl6-org.t:9
+
+t/get-perl6-org.t ............... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 2/2 subtests 
+java.lang.RuntimeException: This type does not support positional operations
+  in method make_request at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:240
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:79
+  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:30
+  in block <unit> at t/get-unsized.t:10
+
+t/get-unsized.t ................. 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 1/1 subtests 
+java.lang.RuntimeException: This type does not support positional operations
+  in method make_request at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:240
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:79
+  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:30
+  in block <unit> at t/get-w3-latin1-utf8.t:8
+
+t/get-w3-latin1-utf8.t .......... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 2/2 subtests 
+java.lang.RuntimeException: This type does not support positional operations
+  in method make_request at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:240
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:79
+  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:30
+  in block <unit> at t/get-w3-redirect.t:9
+
+t/get-w3-redirect.t ............. 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 1/1 subtests 
+java.lang.RuntimeException: This type does not support positional operations
+  in method make_request at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:240
+  in method request_shell at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:79
+  in method get at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:30
+  in method getstore at /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm:317
+  in block <unit> at t/getstore.t:11
+
+t/getstore.t .................... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 4/4 subtests 
 t/parse-url.t ................... ok
 t/socket-sanity.t ............... ok
 t/stringify-headers.t ........... ok
-All tests successful.
-Files=13, Tests=56, 141 wallclock secs ( 0.06 usr  0.01 sys + 337.28 cusr  5.17 csys = 342.52 CPU)
-Result: PASS
+
+Test Summary Report
+-------------------
+t/basic-auth.t                (Wstat: 65280 Tests: 8 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 9 tests but ran 8.
+t/custom-headers-and-content.t (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 1 tests but ran 0.
+t/get-binary-camelia.t        (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 1 tests but ran 0.
+t/get-chunked-6guts.t         (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 1 tests but ran 0.
+t/get-perl6-org.t             (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 2 tests but ran 0.
+t/get-unsized.t               (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 1 tests but ran 0.
+t/get-w3-latin1-utf8.t        (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 2 tests but ran 0.
+t/get-w3-redirect.t           (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 1 tests but ran 0.
+t/getstore.t                  (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 4 tests but ran 0.
+Files=13, Tests=42, 156 wallclock secs ( 0.05 usr  0.00 sys + 270.43 cusr  4.05 csys = 274.53 CPU)
+Result: FAIL
 
 Testing modules/json with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/01-parse.t ...... ok
@@ -112,7 +215,7 @@ t/03-unicode.t .... ok
 t/04-roundtrip.t .. ok
 t/05-utf16.t ...... ok
 All tests successful.
-Files=5, Tests=122, 44 wallclock secs ( 0.06 usr  0.01 sys + 111.76 cusr  2.14 csys = 113.97 CPU)
+Files=5, Tests=122, 60 wallclock secs ( 0.04 usr  0.01 sys + 105.32 cusr  1.63 csys = 107.00 CPU)
 Result: PASS
 
 Testing modules/perl6-digest-md5 with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -959,19 +1062,19 @@ Test Summary Report
 t/perl5-compat.t (Wstat: 3072 Tests: 18 Failed: 12)
   Failed tests:  1-2, 4, 6-8, 10, 12-14, 16, 18
   Non-zero exit status: 12
-Files=2, Tests=19, 27 wallclock secs ( 0.07 usr  0.03 sys + 57.67 cusr  0.88 csys = 58.65 CPU)
+Files=2, Tests=19, 35 wallclock secs ( 0.08 usr  0.01 sys + 54.88 cusr  0.79 csys = 55.76 CPU)
 Result: FAIL
 
 Testing modules/file-find with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/01-file-find.t .. ok
 All tests successful.
-Files=1, Tests=11, 10 wallclock secs ( 0.03 usr  0.00 sys + 26.20 cusr  0.54 csys = 26.77 CPU)
+Files=1, Tests=11, 13 wallclock secs ( 0.02 usr  0.00 sys + 25.87 cusr  0.34 csys = 26.23 CPU)
 Result: PASS
 
 Testing modules/shell-command with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/02-shell-command.t .. ok
 All tests successful.
-Files=1, Tests=16,  9 wallclock secs ( 0.02 usr  0.00 sys + 21.04 cusr  0.37 csys = 21.43 CPU)
+Files=1, Tests=16, 11 wallclock secs ( 0.02 usr  0.00 sys + 19.61 cusr  0.38 csys = 20.01 CPU)
 Result: PASS
 
 Testing modules/json_fast with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1010,7 +1113,7 @@ t/03-unicode.t  (Wstat: 256 Tests: 0 Failed: 0)
 t/04-roundtrip.t (Wstat: 256 Tests: 0 Failed: 0)
   Non-zero exit status: 1
   Parse errors: No plan found in TAP output
-Files=4, Tests=0, 41 wallclock secs ( 0.03 usr  0.00 sys + 106.49 cusr  1.62 csys = 108.14 CPU)
+Files=4, Tests=0, 58 wallclock secs ( 0.01 usr  0.01 sys + 106.31 cusr  1.36 csys = 107.69 CPU)
 Result: FAIL
 
 Testing modules/panda with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1036,14 +1139,14 @@ Test Summary Report
 t/ecosystem.t (Wstat: 256 Tests: 0 Failed: 0)
   Non-zero exit status: 1
   Parse errors: No plan found in TAP output
-Files=5, Tests=17, 56 wallclock secs ( 0.03 usr  0.00 sys + 133.55 cusr  2.68 csys = 136.26 CPU)
+Files=5, Tests=17, 70 wallclock secs ( 0.03 usr  0.00 sys + 119.55 cusr  1.85 csys = 121.43 CPU)
 Result: FAIL
 
 Testing modules/perl6-http-status with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/01-basic.t ..... ok
 t/02-is-tests.t .. ok
 All tests successful.
-Files=2, Tests=46, 15 wallclock secs ( 0.03 usr  0.00 sys + 33.13 cusr  0.72 csys = 33.88 CPU)
+Files=2, Tests=46, 19 wallclock secs ( 0.03 usr  0.00 sys + 28.62 cusr  0.54 csys = 29.19 CPU)
 Result: PASS
 
 Testing modules/p6-Template-Mustache with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1072,20 +1175,20 @@ t/91-specs.t     (Wstat: 256 Tests: 0 Failed: 0)
 t/92-specs-file.t (Wstat: 256 Tests: 0 Failed: 0)
   Non-zero exit status: 1
   Parse errors: No plan found in TAP output
-Files=8, Tests=25, 70 wallclock secs ( 0.04 usr  0.01 sys + 176.97 cusr  3.36 csys = 180.38 CPU)
+Files=8, Tests=25, 95 wallclock secs ( 0.03 usr  0.01 sys + 165.48 cusr  2.56 csys = 168.08 CPU)
 Result: FAIL
 
 Testing modules/PSGI with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/encode-psgi-response.t .. ok
 t/populate-psgi-env.t ..... ok
 All tests successful.
-Files=2, Tests=28, 14 wallclock secs ( 0.02 usr  0.00 sys + 35.83 cusr  0.67 csys = 36.52 CPU)
+Files=2, Tests=28, 17 wallclock secs ( 0.02 usr  0.00 sys + 31.18 cusr  0.55 csys = 31.75 CPU)
 Result: PASS
 
 Testing modules/perl6-http-easy with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/01-load.t .. ok
 All tests successful.
-Files=1, Tests=2,  7 wallclock secs ( 0.02 usr  0.00 sys + 15.91 cusr  0.33 csys = 16.26 CPU)
+Files=1, Tests=2, 10 wallclock secs ( 0.02 usr  0.00 sys + 14.33 cusr  0.29 csys = 14.64 CPU)
 Result: PASS
 
 Testing modules/Template-Mojo with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1094,7 +1197,7 @@ t/01-template.t .. ok
 t/02-complex.t ... ok
 t/03-capture.t ... ok
 All tests successful.
-Files=4, Tests=22, 36 wallclock secs ( 0.02 usr  0.01 sys + 91.36 cusr  1.81 csys = 93.20 CPU)
+Files=4, Tests=22, 47 wallclock secs ( 0.02 usr  0.01 sys + 86.90 cusr  1.40 csys = 88.33 CPU)
 Result: PASS
 
 Testing modules/Bailador with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1350,7 +1453,7 @@ t/03-response-content.t  (Wstat: 1280 Tests: 498 Failed: 5)
 t/06-cookies.t           (Wstat: 3584 Tests: 14 Failed: 14)
   Failed tests:  1-14
   Non-zero exit status: 14
-Files=7, Tests=551, 101 wallclock secs ( 0.14 usr  0.00 sys + 243.22 cusr  3.45 csys = 246.81 CPU)
+Files=7, Tests=551, 149 wallclock secs ( 0.13 usr  0.02 sys + 230.63 cusr  2.93 csys = 233.71 CPU)
 Result: FAIL
 
 Testing modules/DBIish with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1381,14 +1484,14 @@ Test Summary Report
 t/05-mock.t             (Wstat: 65280 Tests: 8 Failed: 0)
   Non-zero exit status: 255
   Parse errors: Bad plan.  You planned 9 tests but ran 8.
-Files=8, Tests=259, 81 wallclock secs ( 0.07 usr  0.00 sys + 209.51 cusr  3.88 csys = 213.46 CPU)
+Files=8, Tests=259, 135 wallclock secs ( 0.05 usr  0.00 sys + 196.21 cusr  2.96 csys = 199.22 CPU)
 Result: FAIL
 
 Testing modules/jsonrpc with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/client.t .. ok
 t/server.t .. ok
 All tests successful.
-Files=2, Tests=68, 74 wallclock secs ( 0.03 usr  0.01 sys + 155.02 cusr  1.43 csys = 156.49 CPU)
+Files=2, Tests=68, 86 wallclock secs ( 0.02 usr  0.00 sys + 142.45 cusr  1.18 csys = 143.65 CPU)
 Result: PASS
 
 Testing modules/Pod-To-HTML with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1397,7 +1500,7 @@ t/02-code.t ..... ok
 t/03-comment.t .. ok
 t/04-lists.t .... ok
 All tests successful.
-Files=4, Tests=9, 35 wallclock secs ( 0.03 usr  0.00 sys + 86.83 cusr  1.75 csys = 88.61 CPU)
+Files=4, Tests=9, 43 wallclock secs ( 0.02 usr  0.00 sys + 78.22 cusr  1.28 csys = 79.52 CPU)
 Result: PASS
 
 Testing modules/p6-file-directory-tree with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1417,13 +1520,13 @@ Test Summary Report
 t/basic.t (Wstat: 512 Tests: 7 Failed: 2)
   Failed tests:  2, 4
   Non-zero exit status: 2
-Files=1, Tests=7, 10 wallclock secs ( 0.01 usr  0.00 sys + 23.26 cusr  0.45 csys = 23.72 CPU)
+Files=1, Tests=7, 16 wallclock secs ( 0.02 usr  0.00 sys + 22.97 cusr  0.33 csys = 23.32 CPU)
 Result: FAIL
 
 Testing modules/p6-File-Temp with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
 t/tempfile.t .. ok
 All tests successful.
-Files=1, Tests=14, 10 wallclock secs ( 0.02 usr  0.00 sys + 23.11 cusr  0.38 csys = 23.51 CPU)
+Files=1, Tests=14, 12 wallclock secs ( 0.02 usr  0.00 sys + 22.30 cusr  0.39 csys = 22.71 CPU)
 Result: PASS
 
 Testing modules/doc with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...
@@ -1431,7 +1534,7 @@ t/pod-convenience.t .. ok
 t/pod-htmlify.t ...... ok
 t/typegraph.t ........ ok
 All tests successful.
-Files=3, Tests=22, 42 wallclock secs ( 0.04 usr  0.01 sys + 106.09 cusr  1.77 csys = 107.91 CPU)
+Files=3, Tests=22, 58 wallclock secs ( 0.04 usr  0.00 sys + 109.74 cusr  1.29 csys = 111.07 CPU)
 Result: PASS
 
 Testing modules/debugger-ui-commandline with /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j...

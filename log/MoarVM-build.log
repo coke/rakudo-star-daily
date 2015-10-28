@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar && make
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.10-36-g0cec471 / MoarVM 2015.10-4-g3ab4710).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.10-42-gca02098 / MoarVM 2015.10-10-gdeedb4b).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -18,7 +18,7 @@ gcc -c -fPIC -Wdeclaration-after-statement -Werror=declaration-after-statement -
     -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/dyncall -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/moar \
     -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/sha1 -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/tinymt  -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libtommath \
     -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include/libuv -I/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/include -o dynext/container.o src/vm/moar/ops/container.c
-gcc  -L/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/lib -lmoar -shared -fPIC -O3 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/lib -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib  -O3 -DNDEBUG -lm -lpthread -lrt -ldl -o dynext/libperl6_ops_moar.so dynext/perl6_ops.o dynext/container.o 
+gcc  -L/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/lib -shared -fPIC -O3 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/lib -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib  -O3 -DNDEBUG -lm -lpthread -lrt -ldl -o dynext/libperl6_ops_moar.so dynext/perl6_ops.o dynext/container.o -lmoar 
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/Ops.moarvm --encoding=utf8 \
     src/vm/moar/Perl6/Ops.nqp
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m --target=mbc --output=blib/Perl6/Pod.moarvm --encoding=utf8 \
@@ -49,12 +49,12 @@ gcc  -L/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/instal
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm gen/moar/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  46.612
+Stage parse      :  57.814
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   7.860
-Stage mast       :  15.242
-Stage mbc        :   0.166
+Stage optimize   :   8.913
+Stage mast       :  19.215
+Stage mbc        :   0.189
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" perl6.moarvm --target=mbc --ll-exception --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e rm_f perl6-m
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" .

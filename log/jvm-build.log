@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install --backends=jvm && make
-Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2015.10-42-gca02098 / OpenJDK 1.7.0_79).
+Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2015.10-46-ge00d482 / OpenJDK 1.7.0_79).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -42,283 +42,135 @@ jar cf0 rakudo-runtime.jar -C bin/ .
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j tools/build/gen-cat.nqp jvm src/core/core_prologue.pm src/core/traits.pm src/core/Positional.pm src/core/Associative.pm src/core/Callable.pm src/core/natives.pm src/core/stubs.pm src/core/control.pm src/core/Mu.pm src/core/Stringy.pm src/core/Any.pm src/core/Attribute.pm src/core/Iterator.pm src/core/Rakudo/Internals.pm src/core/SlippyIterator.pm src/core/HyperIterator.pm src/core/Iterable.pm src/core/HyperIterable.pm src/core/Any-iterable-methods.pm src/core/SLICE.pm src/core/Whatever.pm src/core/hash_slice.pm src/core/Scalar.pm src/core/Code.pm src/core/WhateverCode.pm src/core/Block.pm src/core/Variable.pm src/core/Routine.pm src/core/Sub.pm src/core/Macro.pm src/core/Method.pm src/core/Submethod.pm src/core/Junction.pm src/core/Cool.pm src/core/Enumeration.pm src/core/Bool.pm src/core/Numeric.pm src/core/Real.pm src/core/Int.pm src/core/Order.pm src/core/UInt64.pm src/core/Num.pm src/core/Buf.pm src/core/Str.pm src/core/Capture.pm src/core/IterationBuffer.pm src/core/HyperConfiguration.pm src/core/HyperWorkBuffer.pm src/core/Seq.pm src/core/HyperSeq.pm src/core/Nil.pm src/core/Range.pm src/core/List.pm src/core/array_slice.pm src/core/Slip.pm src/core/Array.pm src/core/native_array.pm src/core/Pair.pm src/core/Map.pm src/core/Hash.pm src/core/Stash.pm src/core/Label.pm src/core/PseudoStash.pm src/core/Parameter.pm src/core/Signature.pm src/core/Rational.pm src/core/Rat.pm src/core/Complex.pm src/core/Backtrace.pm src/core/Exception.pm src/core/Failure.pm src/core/Match.pm src/core/Cursor.pm src/core/Grammar.pm src/core/Regex.pm src/core/PIO.pm src/core/IO.pm src/core/IO/Pathy.pm src/core/IO/Local.pm src/core/IO/Dir.pm src/core/IO/File.pm src/core/IO/Huh.pm src/core/IO/Spec.pm src/core/IO/Spec/Unix.pm src/core/IO/Spec/Win32.pm src/core/IO/Spec/Cygwin.pm src/core/IO/Spec/QNX.pm src/core/IO/Notification.pm src/core/IO/Handle.pm src/core/IO/Pipe.pm src/core/IO/Path.pm src/core/IO/Dup.pm src/core/IO/Special.pm src/core/io_operators.pm src/core/IO/ArgFiles.pm src/core/AST.pm src/core/CallFrame.pm src/core/allomorphs.pm src/core/Main.pm src/core/tai-utc.pm src/core/Instant.pm src/core/Duration.pm src/core/Temporal.pm src/core/EXPORTHOW.pm src/core/Pod.pm src/core/QuantHash.pm src/core/Setty.pm src/core/Set.pm src/core/SetHash.pm src/core/Baggy.pm src/core/Bag.pm src/core/BagHash.pm src/core/Mixy.pm src/core/Mix.pm src/core/MixHash.pm src/core/set_operators.pm src/core/ObjAt.pm src/core/Version.pm src/core/ForeignCode.pm src/core/operators.pm src/core/metaops.pm src/core/precedence.pm src/core/Deprecations.pm src/core/Thread.pm src/core/Lock.pm src/core/Semaphore.pm src/core/Cancellation.pm src/core/Scheduler.pm src/core/Env.pm src/core/ThreadPoolScheduler.pm src/core/CurrentThreadScheduler.pm src/core/Promise.pm src/core/Channel.pm src/core/Supply.pm src/core/SupplyOperations.pm src/vm/jvm/core/KeyReducer.pm src/vm/jvm/core/IOAsyncFile.pm src/core/asyncops.pm src/core/IO/Socket.pm src/core/IO/Socket/INET.pm src/core/IO/Socket/Async.pm src/core/Proc.pm src/core/Systemic.pm src/core/VM.pm src/core/Distro.pm src/core/Kernel.pm src/core/Compiler.pm src/core/Perl.pm src/core/OS.pm src/core/JSON/Pretty.pm src/core/Distribution.pm src/core/CompUnit.pm src/core/CompUnitRepo.pm src/core/CompUnitRepo/Locally.pm src/core/CompUnitRepo/Local/File.pm src/core/CompUnitRepo/Local/Installation.pm src/core/Argfiles.pm src/core/Inc.pm src/core/Process.pm src/core/StrDistance.pm src/core/Slang.pm src/core/Metamodel/Primitives.pm src/core/core_epilogue.pm  > gen/jvm/CORE.setting
 The following step can take a long time, please be patient.
 java -Xss1m -Xms500m -Xmx2000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar:rakudo-runtime.jar:perl6.jar -cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib perl6 --setting=NULL --ll-exception --optimize=3 --target=jar --stagestats --output=CORE.setting.jar gen/jvm/CORE.setting
-Stage start      :   0.000
-Stage parse      : 115.332
-Stage syntaxcheck:   0.000
-Stage ast        :   0.001
-Stage optimize   :  15.135
-Stage jast       :  44.107
-Stage classfile  :   9.328
-Stage jar        :   0.000
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-jvm-runner.pl dev . . /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar
-Creating './perl6-j'
-Creating './perl6-jdb-server'
-Creating './perl6-eval-server'
-./perl6-j --target=jar --output=lib/Test.pm.jar -Ilib lib/Test.pm
-./perl6-j --target=jar --output=lib/lib.pm6.jar lib/lib.pm6
-./perl6-j --target=jar --output=lib/Pod/To/Text.pm.jar lib/Pod/To/Text.pm
-./perl6-j --target=jar --output=lib/NativeCall/Types.pm.jar lib/NativeCall/Types.pm
-./perl6-j --target=jar -Ilib --output=lib/NativeCall/Compiler/GNU.pm.jar lib/NativeCall/Compiler/GNU.pm
-./perl6-j --target=jar -Ilib --output=lib/NativeCall/Compiler/MSVC.pm.jar lib/NativeCall/Compiler/MSVC.pm
-./perl6-j --target=jar -Ilib --output=lib/NativeCall.pm.jar lib/NativeCall.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j tools/build/gen-cat.nqp jvm src/perl6-debug.nqp gen/jvm/main-version.nqp > gen/jvm/j-perl6-debug.nqp
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j --target=jar --javaclass=perl6-debug --output=perl6-debug.jar \
-    gen/jvm/j-perl6-debug.nqp
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-jvm-runner.pl dev-debug . . /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar
-Creating './perl6-debug-j'
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp perl6-j perl6
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e chmod 755 perl6
+Stage start      :   0.001
+Stage parse      : Error while constructing error object:Could not locate compile-time value for symbol X::Syntax::ConditionalOperator::PrecedenceTooLoose
+Error while compiling, type X::Syntax::ConditionalOperator::PrecedenceTooLoose
+  operator: =
+ at line 9861, near "?? $!todo "
+  in panic (gen/jvm/stage2/NQPHLL.nqp:399)
+  in typed_exception (src/Perl6/World.nqp:3812)
+  in throw (src/Perl6/World.nqp:3623)
+  in typed_panic (src/Perl6/Grammar.nqp:240)
+  in infix:sym<?? !!> (src/Perl6/Grammar.nqp:4194)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1350)
+  in infix (gen/jvm/stage2/NQPHLL.nqp)
+  in infixish (src/Perl6/Grammar.nqp:3780)
+  in EXPR (gen/jvm/stage2/NQPHLL.nqp:625)
+  in EXPR (src/Perl6/Grammar.nqp:3748)
+  in statement (src/Perl6/Grammar.nqp:1237)
+  in statementlist (src/Perl6/Grammar.nqp:1172)
+  in blockoid (src/Perl6/Grammar.nqp:1353)
+  in pblock (src/Perl6/Grammar.nqp:1301)
+  in xblock (src/Perl6/Grammar.nqp:1270)
+  in statement_control:sym<while> (src/Perl6/Grammar.nqp:1431)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1350)
+  in statement_control (src/Perl6/Grammar.nqp)
+  in statement (src/Perl6/Grammar.nqp:1237)
+  in statementlist (src/Perl6/Grammar.nqp:1172)
+  in blockoid (src/Perl6/Grammar.nqp:1353)
+  in pblock (src/Perl6/Grammar.nqp:1301)
+  in statement_control:sym<if> (src/Perl6/Grammar.nqp:1420)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1350)
+  in statement_control (src/Perl6/Grammar.nqp)
+  in statement (src/Perl6/Grammar.nqp:1237)
+  in statementlist (src/Perl6/Grammar.nqp:1172)
+  in blockoid (src/Perl6/Grammar.nqp:1353)
+  in method_def (src/Perl6/Grammar.nqp:2634)
+  in routine_declarator:sym<method> (src/Perl6/Grammar.nqp)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1350)
+  in routine_declarator (src/Perl6/Grammar.nqp)
+  in term:sym<routine_declarator> (src/Perl6/Grammar.nqp)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1350)
+  in term (src/Perl6/Grammar.nqp)
+  in termish (src/Perl6/Grammar.nqp:3713)
+  in EXPR (gen/jvm/stage2/NQPHLL.nqp:561)
+  in EXPR (src/Perl6/Grammar.nqp:3748)
+  in statement (src/Perl6/Grammar.nqp:1237)
+  in statementlist (src/Perl6/Grammar.nqp:1172)
+  in blockoid (src/Perl6/Grammar.nqp:1353)
+  in package_def (src/Perl6/Grammar.nqp:2309)
+  in package_declarator:sym<class> (src/Perl6/Grammar.nqp)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1350)
+  in package_declarator (src/Perl6/Grammar.nqp)
+  in term:sym<package_declarator> (src/Perl6/Grammar.nqp)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1350)
+  in term (src/Perl6/Grammar.nqp)
+  in termish (src/Perl6/Grammar.nqp:3713)
+  in EXPR (gen/jvm/stage2/NQPHLL.nqp:561)
+  in EXPR (src/Perl6/Grammar.nqp:3748)
+  in arglist (src/Perl6/Grammar.nqp)
+  in semiarglist (src/Perl6/Grammar.nqp)
+  in args (src/Perl6/Grammar.nqp:3272)
+  in methodop (src/Perl6/Grammar.nqp:3954)
+  in dottyop (src/Perl6/Grammar.nqp)
+  in dotty:sym<.> (src/Perl6/Grammar.nqp)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1350)
+  in dotty (src/Perl6/Grammar.nqp)
+  in postfixish (src/Perl6/Grammar.nqp:3813)
+  in termish (src/Perl6/Grammar.nqp:3728)
+  in EXPR (gen/jvm/stage2/NQPHLL.nqp:561)
+  in EXPR (src/Perl6/Grammar.nqp:3748)
+  in statement (src/Perl6/Grammar.nqp:1237)
+  in statementlist (src/Perl6/Grammar.nqp:1172)
+  in blockoid (src/Perl6/Grammar.nqp:1353)
+  in pblock (src/Perl6/Grammar.nqp:1301)
+  in xblock (src/Perl6/Grammar.nqp:1270)
+  in statement_control:sym<if> (src/Perl6/Grammar.nqp:1415)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1350)
+  in statement_control (src/Perl6/Grammar.nqp)
+  in statement (src/Perl6/Grammar.nqp:1237)
+  in statementlist (src/Perl6/Grammar.nqp:1172)
+  in blockoid (src/Perl6/Grammar.nqp:1353)
+  in method_def (src/Perl6/Grammar.nqp:2634)
+  in routine_declarator:sym<method> (src/Perl6/Grammar.nqp)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1350)
+  in routine_declarator (src/Perl6/Grammar.nqp)
+  in declarator (src/Perl6/Grammar.nqp:2355)
+  in multi_declarator:sym<multi> (src/Perl6/Grammar.nqp:2375)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1350)
+  in multi_declarator (src/Perl6/Grammar.nqp)
+  in term:sym<multi_declarator> (src/Perl6/Grammar.nqp)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1350)
+  in term (src/Perl6/Grammar.nqp)
+  in termish (src/Perl6/Grammar.nqp:3713)
+  in EXPR (gen/jvm/stage2/NQPHLL.nqp:561)
+  in EXPR (src/Perl6/Grammar.nqp:3748)
+  in statement (src/Perl6/Grammar.nqp:1237)
+  in statementlist (src/Perl6/Grammar.nqp:1172)
+  in blockoid (src/Perl6/Grammar.nqp:1353)
+  in package_def (src/Perl6/Grammar.nqp:2309)
+  in package_declarator:sym<class> (src/Perl6/Grammar.nqp)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1350)
+  in package_declarator (src/Perl6/Grammar.nqp)
+  in scoped (src/Perl6/Grammar.nqp:2425)
+  in scope_declarator:sym<my> (src/Perl6/Grammar.nqp)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1350)
+  in scope_declarator (src/Perl6/Grammar.nqp)
+  in term:sym<scope_declarator> (src/Perl6/Grammar.nqp)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1350)
+  in term (src/Perl6/Grammar.nqp)
+  in termish (src/Perl6/Grammar.nqp:3713)
+  in EXPR (gen/jvm/stage2/NQPHLL.nqp:561)
+  in EXPR (src/Perl6/Grammar.nqp:3748)
+  in statement (src/Perl6/Grammar.nqp:1237)
+  in statementlist (src/Perl6/Grammar.nqp:1172)
+  in LANG (gen/jvm/stage2/NQPHLL.nqp:785)
+  in FOREIGN_LANG (src/Perl6/Grammar.nqp:1579)
+  in comp_unit (src/Perl6/Grammar.nqp:1149)
+  in TOP (src/Perl6/Grammar.nqp:443)
+  in parse (gen/jvm/stage2/QRegex.nqp:2034)
+  in parse (gen/jvm/stage2/NQPHLL.nqp:1471)
+  in compile (gen/jvm/stage2/NQPHLL.nqp:1427)
+  in eval (gen/jvm/stage2/NQPHLL.nqp:1164)
+  in evalfiles (gen/jvm/stage2/NQPHLL.nqp:1384)
+  in command_eval (gen/jvm/stage2/NQPHLL.nqp:1278)
+  in command_eval (src/Perl6/Compiler.nqp:65)
+  in command_line (gen/jvm/stage2/NQPHLL.nqp:1252)
+  in MAIN (gen/jvm/main.nqp:37)
+  in <mainline> (gen/jvm/main.nqp:33)
+  in  (gen/jvm/main.nqp)
+Makefile:410: recipe for target 'CORE.setting.jar' failed
+make[1]: *** [CORE.setting.jar] Error 1
 make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'
-cd rakudo && make install
-make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp blib/Perl6/ModuleLoader.jar blib/Perl6/World.jar blib/Perl6/Grammar.jar blib/Perl6/Ops.jar blib/Perl6/Actions.jar blib/Perl6/Optimizer.jar blib/Perl6/Pod.jar blib/Perl6/Compiler.jar blib/Perl6/Metamodel.jar blib/Perl6/BOOTSTRAP.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp CORE.setting.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp perl6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp perl6-debug.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp rakudo-runtime.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/runtime
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/NativeCall.pm /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/NativeCall.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/NativeCall
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/NativeCall/Types.pm /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/NativeCall
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/NativeCall/Types.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/NativeCall
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/NativeCall/Compiler
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/NativeCall/Compiler/GNU.pm /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/NativeCall/Compiler
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/NativeCall/Compiler/GNU.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/NativeCall/Compiler
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/NativeCall/Compiler/MSVC.pm /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/NativeCall/Compiler
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/NativeCall/Compiler/MSVC.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/NativeCall/Compiler
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/Test.pm /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/Test.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/lib.pm6 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/lib.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/To
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/Pod/To/Text.pm /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/To
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/Pod/To/Text.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/To
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-jvm-runner.pl install "" /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar
-Creating '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j'
-Creating '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-jdb-server'
-Creating '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-eval-server'
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-jvm-runner.pl install-debug "" /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar
-Creating '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-debug-j'
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-jvm-runner.pl install "" /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar
-Creating '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j'
-Creating '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-jdb-server'
-Creating '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-eval-server'
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e chmod 755 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6
-make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j perl6
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e chmod 755 perl6
-== Installing modules for JVM
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/module-install.pl /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib jar jar modules/MODULES.txt
-== Installing modules/xml-writer
-modules/xml-writer/lib/XML/Writer.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/XML/Writer.pm
-== Installing modules/svg
-modules/svg/lib/SVG.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG.pm
-== Installing modules/svg-plot
-modules/svg-plot/lib/SVG/Box.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Box.pm
-modules/svg-plot/lib/SVG/Plot.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Plot.pm
-modules/svg-plot/lib/SVG/Plot/Pie.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Pie.pm
-modules/svg-plot/lib/SVG/Plot/Positioned.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Positioned.pm
-modules/svg-plot/lib/SVG/Plot/Data/Series.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Data/Series.pm
-modules/svg-plot/lib/SVG/Plot/Data/Marker.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Data/Marker.pm
-== Installing modules/Terminal-ANSIColor
-modules/Terminal-ANSIColor/lib/Terminal/ANSIColor.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Terminal/ANSIColor.pm
-== Installing modules/test-mock
-modules/test-mock/lib/Test/Mock.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Test/Mock.pm
-== Installing modules/Grammar-Profiler-Simple
-modules/Grammar-Profiler-Simple/lib/Grammar/Profiler/Simple.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Grammar/Profiler/Simple.pm
-== Installing modules/grammar-debugger
-modules/grammar-debugger/lib/Grammar/Debugger.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Grammar/Debugger.pm
-modules/grammar-debugger/lib/Grammar/Tracer.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Grammar/Tracer.pm
-== Installing modules/Perl6-MIME-Base64
-modules/Perl6-MIME-Base64/lib/MIME/Base64.pm6 => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/MIME/Base64.pm6
-modules/Perl6-MIME-Base64/lib/MIME/Base64/Perl.pm6 => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/MIME/Base64/Perl.pm6
-== Installing modules/uri
-modules/uri/lib/URI.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/URI.pm
-modules/uri/lib/URI/Escape.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
-modules/uri/lib/URI/DefaultPort.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/URI/DefaultPort.pm
-modules/uri/lib/IETF/RFC_Grammar.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar.pm
-modules/uri/lib/IETF/RFC_Grammar/URI.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-modules/uri/lib/IETF/RFC_Grammar/IPv6.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-== Installing modules/perl6-lwp-simple
-modules/perl6-lwp-simple/lib/LWP/Simple.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm
-== Installing modules/json
-modules/json/lib/JSON/Tiny.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny.pm
-modules/json/lib/JSON/Tiny/Grammar.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Grammar.pm
-modules/json/lib/JSON/Tiny/Actions.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Actions.pm
-== Installing modules/perl6-digest-md5
-modules/perl6-digest-md5/lib/Digest/MD5.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Digest/MD5.pm
-== Installing modules/file-find
-modules/file-find/lib/File/Find.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-== Installing modules/shell-command
-modules/shell-command/lib/Shell/Command.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-== Installing modules/json_fast
-modules/json_fast/lib/JSON/Fast.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
-== Installing modules/panda
-modules/panda/lib/Panda.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda.pm
-modules/panda/lib/Panda/Tester.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Tester.pm
-modules/panda/lib/Panda/Bundler.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Bundler.pm
-modules/panda/lib/Panda/Common.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
-modules/panda/lib/Panda/Project.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
-modules/panda/lib/Panda/Ecosystem.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Ecosystem.pm
-modules/panda/lib/Panda/Fetcher.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Fetcher.pm
-modules/panda/lib/Panda/DepTracker.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/DepTracker.pm
-modules/panda/lib/Panda/Builder.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Builder.pm
-modules/panda/lib/Panda/Installer.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Installer.pm
-modules/panda/lib/Panda/App.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/App.pm
-modules/panda/lib/Panda/Reporter.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Reporter.pm
-== Installing modules/perl6-http-status
-modules/perl6-http-status/lib/HTTP/Status.pm6 => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
-== Installing modules/p6-Template-Mustache
-modules/p6-Template-Mustache/lib/Template/Mustache.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Template/Mustache.pm
-== Installing modules/PSGI
-modules/PSGI/lib/PSGI.pm6 => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/PSGI.pm6
-== Installing modules/perl6-http-easy
-modules/perl6-http-easy/lib/HTTP/Easy.pm6 => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy.pm6
-modules/perl6-http-easy/lib/HTTP/Easy/PSGI.pm6 => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy/PSGI.pm6
-== Installing modules/Template-Mojo
-modules/Template-Mojo/lib/Template/Mojo.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm
-== Installing modules/Bailador
-modules/Bailador/lib/Bailador.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador.pm
-modules/Bailador/lib/Bailador/Request.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
-modules/Bailador/lib/Bailador/Template.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Template.pm
-modules/Bailador/lib/Bailador/Context.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Context.pm
-modules/Bailador/lib/Bailador/Test.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Test.pm
-modules/Bailador/lib/Bailador/App.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/App.pm
-modules/Bailador/lib/Bailador/Response.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Response.pm
-modules/Bailador/lib/Bailador/Template/Mustache.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Template/Mustache.pm
-modules/Bailador/lib/Bailador/Template/Mojo.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Template/Mojo.pm
-== Installing modules/DBIish
-modules/DBIish/lib/DBDish.pm6 => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBDish.pm6
-modules/DBIish/lib/DBIish.pm6 => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBIish.pm6
-modules/DBIish/lib/DBDish/mysql.pm6 => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql.pm6
-modules/DBIish/lib/DBDish/TestMock.pm6 => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBDish/TestMock.pm6
-modules/DBIish/lib/DBDish/SQLite.pm6 => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite.pm6
-modules/DBIish/lib/DBDish/Pg.pm6 => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg.pm6
-== Installing modules/jsonrpc
-modules/jsonrpc/lib/X/JSON/RPC.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/X/JSON/RPC.pm
-modules/jsonrpc/lib/JSON/RPC/Server.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/RPC/Server.pm
-modules/jsonrpc/lib/JSON/RPC/Client.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/RPC/Client.pm
-== Installing modules/Pod-To-HTML
-modules/Pod-To-HTML/lib/Pod/To/HTML.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/To/HTML.pm
-== Installing modules/p6-file-directory-tree
-modules/p6-file-directory-tree/lib/File/Directory/Tree.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/File/Directory/Tree.pm
-== Installing modules/p6-File-Temp
-modules/p6-File-Temp/lib/File/Temp.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/File/Temp.pm
-== Installing modules/doc
-modules/doc/lib/Pod/Htmlify.pm6 => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/Htmlify.pm6
-modules/doc/lib/Pod/Convenience.pm6 => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/Convenience.pm6
-modules/doc/lib/Pod/To/SectionFilter.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/To/SectionFilter.pm
-modules/doc/lib/Perl6/TypeGraph.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6/TypeGraph.pm
-modules/doc/lib/Perl6/Type.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6/Type.pm
-modules/doc/lib/Perl6/Documentable.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6/Documentable.pm
-modules/doc/lib/Perl6/TypeGraph/Viz.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6/TypeGraph/Viz.pm
-modules/doc/lib/Perl6/Documentable/Registry.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6/Documentable/Registry.pm
-== Installing modules/debugger-ui-commandline
-modules/debugger-ui-commandline/lib/Debugger/UI/CommandLine.pm => /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Debugger/UI/CommandLine.pm
-== Precompiling modules
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/XML/Writer.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/XML/Writer.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Box.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Box.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Plot.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Plot.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Pie.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Pie.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Positioned.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Positioned.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Data/Series.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Data/Series.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Data/Marker.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Data/Marker.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Terminal/ANSIColor.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Terminal/ANSIColor.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Test/Mock.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Test/Mock.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Grammar/Profiler/Simple.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Grammar/Profiler/Simple.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Grammar/Debugger.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Grammar/Debugger.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Grammar/Tracer.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Grammar/Tracer.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/MIME/Base64/Perl.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/MIME/Base64/Perl.pm6
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/MIME/Base64.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/MIME/Base64.pm6
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/URI/DefaultPort.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/URI/DefaultPort.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/URI.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/URI.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Actions.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Actions.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Grammar.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Grammar.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Digest/MD5.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Digest/MD5.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/File/Find.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
-===SORRY!===
-Cannot unbox a type object
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Ecosystem.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Ecosystem.pm
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Fetcher.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Fetcher.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Builder.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Builder.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Tester.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Tester.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Installer.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Installer.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Bundler.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Bundler.pm
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Reporter.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Reporter.pm
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda.pm
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Ecosystem.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/DepTracker.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/DepTracker.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/App.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/App.pm
-===SORRY!===
-When pre-compiling a module, its dependencies must be pre-compiled first.
-Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Panda/Ecosystem.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Template/Mustache.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Template/Mustache.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/PSGI.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/PSGI.pm6
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy.pm6
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy/PSGI.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy/PSGI.pm6
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Response.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Response.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Context.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Context.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Template.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Template.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Template/Mojo.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Template/Mojo.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/App.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/App.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Test.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Test.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Template/Mustache.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Bailador/Template/Mustache.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBDish.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBDish.pm6
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBIish.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBIish.pm6
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql.pm6
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBDish/TestMock.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBDish/TestMock.pm6
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite.pm6
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg.pm6
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/X/JSON/RPC.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/X/JSON/RPC.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/RPC/Server.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/RPC/Server.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/RPC/Client.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/RPC/Client.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/To/HTML.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/To/HTML.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/File/Directory/Tree.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/File/Directory/Tree.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/File/Temp.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/File/Temp.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/Htmlify.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/Htmlify.pm6
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/Convenience.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/Convenience.pm6
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/To/SectionFilter.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/To/SectionFilter.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6/Type.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6/Type.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6/TypeGraph.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6/TypeGraph.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6/Documentable.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6/Documentable.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6/TypeGraph/Viz.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6/TypeGraph/Viz.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6/Documentable/Registry.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Perl6/Documentable/Registry.pm
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Debugger/UI/CommandLine.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Debugger/UI/CommandLine.pm
-== Installing binaries for JVM
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/bin-install.pl /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin j modules/ufo/bin/ufo modules/panda/bin/panda modules/doc/bin/p6doc
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/bin-install.pl /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin j modules/ufo/bin/ufo modules/panda/bin/panda modules/doc/bin/p6doc-index
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/panda/
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp install/share/perl6/site/panda/projects.json /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/panda/
-'install/share/perl6/site/panda/projects.json' and '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/panda/projects.json' are identical (not copied) at /home/coke/perl5/perlbrew/perls/perl-5.20.1/lib/5.20.1/ExtUtils/Command.pm line 237.
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp install/share/perl6/site/panda/state /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/panda/
-'install/share/perl6/site/panda/state' and '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/site/panda/state' are identical (not copied) at /home/coke/perl5/perlbrew/perls/perl-5.20.1/lib/5.20.1/ExtUtils/Command.pm line 237.
+Makefile:44: recipe for target 'rakudo/perl6-j' failed
+make: *** [rakudo/perl6-j] Error 2

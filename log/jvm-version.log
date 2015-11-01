@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.5.6) (7u79-2.5.6-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.79-b02, mixed mode)
 Rakudo
-v6.b-104-g6abf2bf
+v6.b-120-gac0d1d4
 NQP
-2015.10-48-g0b74f1a
+2015.10-49-g44c92e4
 modules
 --------
 Bailador
@@ -122,22 +122,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 6b64034d902d0e9ff4b27d4b52a04fb22016c601
-Merge: b852f37 c22caba
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Oct 31 19:46:34 2015 +0100
-
-    Merge pull request #182 from LLFourn/master
-    
-    remove PairMap for now
-
-commit c22caba4ebfdda68e70bbb8ffafd8337d14baec4
+commit cd2afab1ec3ac8e1bebca370bb3d9141b3818449
 Author: Lloyd Fournier <LLFourn@users.noreply.github.com>
-Date:   Sun Nov 1 01:27:01 2015 +1100
+Date:   Mon Nov 2 04:47:34 2015 +1100
 
-    remove PairMap for now
-    
-    It's been removed from Rakudo for a while
+    require,use and now searchable
 --------
 file-find
 commit cfc68655bf7cb1c20e0723a11bfbde5f614b1578
@@ -392,20 +381,26 @@ Date:   Thu Aug 20 00:36:23 2015 +0200
     Fix get_modules() for GLR
 --------
 uri
-commit 19044f63c93c498655ead6da5019f2492bf482d1
-Merge: 8f5e1e7 596d18e
+commit ffa39b3dc53b8439253b2697a4fd3466f691e0f4
+Merge: 19044f6 b71724d
 Author: Ronald Schmidt <ronaldxs@software-path.com>
-Date:   Tue Oct 27 12:27:54 2015 -0400
+Date:   Sun Nov 1 13:05:49 2015 -0500
 
-    Merge pull request #23 from ronaldxs/master
+    Merge pull request #24 from ronaldxs/master
     
-    more permanent fix to RT 126390 and fix to minor typo
+    Remove obsolete is_validating option
 
-commit 596d18e63709aa9632ced7947fd13d2623f73b09
+commit b71724d2316a9215a134d5cc13ca7ea208ab9fc2
 Author: Ronald Schmidt <ronaldxs@software-path.com>
-Date:   Tue Oct 27 11:50:06 2015 -0400
+Date:   Sun Nov 1 11:28:58 2015 -0500
 
-    more permanent fix to RT 126390 and fix to minor typo
+    simplify use of match-prefix parameter
+
+commit bc1ea185c7ee7ea4abc3380a2c121bcc7e16fbb9
+Author: Ronald Schmidt <ronaldxs@software-path.com>
+Date:   Sat Oct 31 14:36:00 2015 -0400
+
+    first cut at removing obsolete is_validating
 --------
 xml-writer
 commit c230464a2cd5ed1c19fcba9acd496d72d227fd1f

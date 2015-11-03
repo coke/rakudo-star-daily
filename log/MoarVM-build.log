@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install --backends=moar && make
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.10-55-g12bab30 / MoarVM 2015.10-42-g73c0269).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.10-78-g568f06a / MoarVM 2015.10-48-g80d7e58).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -49,12 +49,12 @@ gcc  -L/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/instal
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm gen/moar/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  49.403
+Stage parse      :  48.312
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   8.524
-Stage mast       :  15.809
-Stage mbc        :   0.187
+Stage optimize   :   8.206
+Stage mast       :  15.622
+Stage mbc        :   0.172
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" perl6.moarvm --target=mbc --ll-exception --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e rm_f perl6-m
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" .
@@ -62,6 +62,7 @@ Stage mbc        :   0.187
 ./perl6-m --target=mbc --output=lib/Test.pm.moarvm -Ilib lib/Test.pm
 ./perl6-m --target=mbc --output=lib/lib.pm6.moarvm lib/lib.pm6
 ./perl6-m --target=mbc --output=lib/Pod/To/Text.pm.moarvm lib/Pod/To/Text.pm
+./perl6-m --target=mbc --output=lib/newline.pm6.moarvm lib/newline.pm6
 ./perl6-m --target=mbc --output=lib/NativeCall/Types.pm.moarvm lib/NativeCall/Types.pm
 ./perl6-m --target=mbc -Ilib --output=lib/NativeCall/Compiler/GNU.pm.moarvm lib/NativeCall/Compiler/GNU.pm
 ./perl6-m --target=mbc -Ilib --output=lib/NativeCall/Compiler/MSVC.pm.moarvm lib/NativeCall/Compiler/MSVC.pm
@@ -91,8 +92,8 @@ make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/ra
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp perl6.moarvm perl6-debug.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/runtime
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/runtime/dynext
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp dynext/libperl6_ops_moar.so /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/runtime/dynext
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/NativeCall.pm lib/Test.pm lib/lib.pm6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/NativeCall.pm.moarvm lib/Test.pm.moarvm lib/lib.pm6.moarvm  /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/NativeCall.pm lib/Test.pm lib/lib.pm6 lib/newline.pm6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
+/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/NativeCall.pm.moarvm lib/Test.pm.moarvm lib/lib.pm6.moarvm lib/newline.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/NativeCall
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/NativeCall/Types.pm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/NativeCall
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp lib/NativeCall/Types.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/NativeCall

@@ -1,9 +1,9 @@
 MoarVM
-2015.10-42-g73c0269
+2015.10-48-g80d7e58
 Rakudo
-v6.b-136-g6154e5f
+v6.b-155-gf59b910
 NQP
-2015.10-55-g12bab30
+2015.10-78-g568f06a
 modules
 --------
 Bailador
@@ -122,11 +122,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 92e37e4958473ae278375b6c303e7b083c8a8006
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Mon Nov 2 14:18:35 2015 -0500
+commit 7a6dc7dfa34846de29e9b2ec041273cc8f3301cf
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Tue Nov 3 19:10:58 2015 +0000
 
-    Grammar/phrasing
+    minor typos and tweaking
 --------
 file-find
 commit cfc68655bf7cb1c20e0723a11bfbde5f614b1578
@@ -223,28 +223,33 @@ Date:   Fri Sep 18 21:42:41 2015 +0200
     done() is now called done-testing()
 --------
 panda
-commit 287f7ebb689c24cdb6b75398571f65389e43740c
-Merge: 6a649ce 69cb6ce
+commit f36c83d1f4e57736d49bf83562353640058606cd
+Merge: 287f7eb c42194c
 Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Fri Oct 23 17:12:31 2015 +0200
+Date:   Tue Nov 3 12:17:16 2015 +0100
 
-    Merge pull request #225 from moznion/fix/enable_no-rc_option_for_panda_tester
+    Merge pull request #240 from azawawi/master
     
-    Add `--norc` option into `prove` command that is used on Panda::Tester
+    Fix #112: .bat launchers for Win32 environment
 
-commit 69cb6ced8aa78dd8df17d1c8c1a4ccf5b9438afc
-Author: moznion <moznion@gmail.com>
-Date:   Sat Sep 26 18:34:52 2015 +0900
+commit c42194c65fd97fffd48ab42c82a4b2a9241433d5
+Merge: 2759537 b9de215
+Author: unknown <ahmad.zawawi@gmail.com>
+Date:   Sun Nov 1 15:54:32 2015 +0200
 
-    Add `--norc` option into `prove` command
-    
-    `t/tester.t` will be failed if `--verbose` or `--failures` option
-    is written in `.proverc`, because Panda::Tester uses `prove` through
-    command execution.
-    That command execution uses `.proverc` implicitly, so it is necessary
-    to be disable that in order to make tests successful.
-    
-    So added `--norc` option into prove command.
+    Merge branch 'master' of https://github.com/azawawi/panda
+
+commit 27595377041cca1b6b27b4820766dcd87b630672
+Author: unknown <ahmad.zawawi@gmail.com>
+Date:   Sun Nov 1 15:51:26 2015 +0200
+
+    Fix #112: .bat launchers for Win32 environment
+
+commit b9de21562b203889027a45c92201b40466edbf9e
+Author: unknown <ahmad.zawawi@gmail.com>
+Date:   Sun Nov 1 15:51:26 2015 +0200
+
+    Fix 112: .bat launchers for Win32 environment
 --------
 perl6-digest-md5
 commit 612b08e7e8b01c2140f38e79d638ff4694b72933

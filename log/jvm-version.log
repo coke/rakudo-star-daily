@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.1) (7u85-2.6.1-6+deb8u1)
 OpenJDK 64-Bit Server VM (build 24.85-b03, mixed mode)
 Rakudo
-v6.b-155-gf59b910
+v6.b-171-gdf6bb2c
 NQP
-2015.10-78-g568f06a
+2015.10-84-g9464094
 modules
 --------
 Bailador
@@ -122,11 +122,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 7a6dc7dfa34846de29e9b2ec041273cc8f3301cf
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Nov 3 19:10:58 2015 +0000
+commit 8475656143cd39f0b1a2b9817cd33d8021fd9eeb
+Author: Elizabeth Mattijsen <liz@dijkmat.nl>
+Date:   Wed Nov 4 21:43:07 2015 +0100
 
-    minor typos and tweaking
+    Better description of .ord/.ords
 --------
 file-find
 commit cfc68655bf7cb1c20e0723a11bfbde5f614b1578
@@ -187,14 +187,11 @@ Date:   Tue Oct 27 15:10:26 2015 +0100
     Update .travis.yml
 --------
 p6-File-Temp
-commit cef567c4d087bdc426938090a669bdec5c8bb13b
+commit fd9bdde5a89b5a894578c5cb5488a3efb1ad13e5
 Author: Jonathan Scott Duff <duff@pobox.com>
-Date:   Wed Oct 14 16:17:33 2015 -0500
+Date:   Wed Nov 4 17:07:27 2015 -0600
 
-    factor out common code and use it
-    
-    tempfile and tempdir are largely the same, so put the same bits into a
-    common sub that they both use
+    Add some docs
 --------
 p6-Template-Mustache
 commit 223a8fb24732a7869279de3a42b465407644fe8e
@@ -223,33 +220,20 @@ Date:   Fri Sep 18 21:42:41 2015 +0200
     done() is now called done-testing()
 --------
 panda
-commit f36c83d1f4e57736d49bf83562353640058606cd
-Merge: 287f7eb c42194c
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Tue Nov 3 12:17:16 2015 +0100
+commit d5b023fa8a4834f858b86191d5aaa3b6c86b8e45
+Merge: f36c83d dcdea20
+Author: timo <timonator@perpetuum-immobile.de>
+Date:   Wed Nov 4 10:43:01 2015 +0100
 
-    Merge pull request #240 from azawawi/master
+    Merge pull request #242 from jonathanstowe/master
     
-    Fix #112: .bat launchers for Win32 environment
+    Expedient fix to work "\r\n" grapheme change
 
-commit c42194c65fd97fffd48ab42c82a4b2a9241433d5
-Merge: 2759537 b9de215
-Author: unknown <ahmad.zawawi@gmail.com>
-Date:   Sun Nov 1 15:54:32 2015 +0200
+commit dcdea208d41c778cd072c0210f10f515343f7973
+Author: Jonathan Stowe <jns@gellyfish.co.uk>
+Date:   Wed Nov 4 09:35:33 2015 +0000
 
-    Merge branch 'master' of https://github.com/azawawi/panda
-
-commit 27595377041cca1b6b27b4820766dcd87b630672
-Author: unknown <ahmad.zawawi@gmail.com>
-Date:   Sun Nov 1 15:51:26 2015 +0200
-
-    Fix #112: .bat launchers for Win32 environment
-
-commit b9de21562b203889027a45c92201b40466edbf9e
-Author: unknown <ahmad.zawawi@gmail.com>
-Date:   Sun Nov 1 15:51:26 2015 +0200
-
-    Fix 112: .bat launchers for Win32 environment
+    Expedient fix to work "\r\n" grapheme change
 --------
 perl6-digest-md5
 commit 612b08e7e8b01c2140f38e79d638ff4694b72933

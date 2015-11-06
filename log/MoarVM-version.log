@@ -1,9 +1,9 @@
 MoarVM
-2015.10-56-g9fd3005
+2015.10-61-g624d504
 Rakudo
-v6.b-190-g9fad7b4
+v6.b-209-gba34287
 NQP
-2015.10-88-gaf5c625
+2015.10-91-g40cba3f
 modules
 --------
 Bailador
@@ -284,11 +284,23 @@ Date:   Tue Sep 8 23:40:24 2015 -0500
     Add the is-* tests from ether's HTTP::Status
 --------
 perl6-lwp-simple
-commit 301b8c145057dc051fbc5aebfb74b2c05daecf16
-Author: Cosimo Streppone <cosimo@opera.com>
-Date:   Thu Oct 22 22:11:20 2015 +0200
+commit 41c5370e7d770d5ec5f77c659ac05dc8432cd6d7
+Merge: 301b8c1 4c6631d
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Fri Nov 6 20:24:54 2015 +0100
 
-    Disable: since some systems can't resolve IPv6 addresses?
+    Merge pull request #65 from jonathanstowe/master
+    
+    Fix the t/get-unsized.t test
+
+commit 4c6631d82b3bee18b365983e38b00b97342494a9
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Wed Nov 4 23:27:11 2015 +0000
+
+    After changes to the way that \r\n is handled
+    there may be come changes needed.  This appears to work.
+    
+    Fixes #64
 --------
 shell-command
 commit 8a6381cd4fc2c2a98bbc0642efaf4aa6473a6339

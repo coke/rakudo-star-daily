@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install --backends=jvm && make
-Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2015.10-94-gac51c16 / OpenJDK 1.7.0_85).
+Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2015.10-104-gdf42786 / OpenJDK 1.7.0_85).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -43,13 +43,13 @@ jar cf0 rakudo-runtime.jar -C bin/ .
 The following step can take a long time, please be patient.
 java -Xss1m -Xms500m -Xmx2000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar:rakudo-runtime.jar:perl6.jar -cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib perl6 --setting=NULL --ll-exception --optimize=3 --target=jar --stagestats --output=CORE.setting.jar gen/jvm/CORE.setting
 Stage start      :   0.000
-Stage parse      :  88.654
+Stage parse      :  96.235
 Stage syntaxcheck:   0.000
 Stage ast        :   0.001
-Stage optimize   :  11.340
-Stage jast       :  33.072
-Stage classfile  :   6.796
-Stage jar        :   0.001
+Stage optimize   :  12.988
+Stage jast       :  39.314
+Stage classfile  :   7.713
+Stage jar        :   0.000
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-jvm-runner.pl dev . . /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar
 Creating './perl6-j'
 Creating './perl6-jdb-server'
@@ -304,6 +304,8 @@ Please pre-compile /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-dai
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/RPC/Server.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/RPC/Server.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/RPC/Client.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/JSON/RPC/Client.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/To/HTML.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/To/HTML.pm
+===SORRY!===
+Expected a native int argument for '$a'
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/File/Directory/Tree.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/File/Directory/Tree.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/File/Temp.pm.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/File/Temp.pm
 /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/perl6-j --target=jar --output=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/Htmlify.pm6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/lib/Pod/Htmlify.pm6

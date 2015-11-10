@@ -1,189 +1,33 @@
-cd rakudo && make test
-make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl t/harness --jvm t/01-sanity t/03-jvm t/04-nativecall
-t/01-sanity/01-literals.t ............ 
-No subtests run 
-t/01-sanity/02-op-math.t ............. 
-No subtests run 
-t/01-sanity/03-op-logic.t ............ 
-No subtests run 
-t/01-sanity/04-op-cmp.t .............. 
-No subtests run 
-t/01-sanity/05-var.t ................. 
-No subtests run 
-t/01-sanity/06-op-inplace.t .......... 
-No subtests run 
-t/01-sanity/07-op-string.t ........... 
-No subtests run 
-t/01-sanity/08-var-array.t ........... 
-No subtests run 
-t/01-sanity/09-end-blocks.t .......... 
-No subtests run 
-t/01-sanity/10-regex.t ............... 
-No subtests run 
-t/01-sanity/11-tap.t ................. 
-No subtests run 
-t/01-sanity/12-counter.t ............. 
-No subtests run 
-t/01-sanity/13-equal.t ............... 
-No subtests run 
-t/01-sanity/14-if.t .................. 
-No subtests run 
-t/01-sanity/15-sub.t ................. 
-No subtests run 
-t/01-sanity/16-eqv.t ................. 
-No subtests run 
-t/01-sanity/17-isa.t ................. 
-No subtests run 
-t/01-sanity/18-simple-multisubs.t .... 
-No subtests run 
-t/01-sanity/19-say.t ................. 
-No subtests run 
-t/01-sanity/20-defined.t ............. 
-No subtests run 
-t/01-sanity/21-try.t ................. 
-No subtests run 
-t/01-sanity/52-parse-include-spec.t .. 
-No subtests run 
-t/01-sanity/53-transpose.t ........... 
-No subtests run 
-t/01-sanity/54-use-lib.t ............. 
-No subtests run 
-t/01-sanity/55-use-trace.t ........... 
-No subtests run 
-t/01-sanity/99-test-basic.t .......... 
-No subtests run 
-t/03-jvm/01-interop.t ................ 
-No subtests run 
-t/04-nativecall/01-argless.t ......... 
-No subtests run 
-t/04-nativecall/02-simple-args.t ..... 
-No subtests run 
-t/04-nativecall/03-simple-returns.t .. 
-No subtests run 
-t/04-nativecall/04-pointers.t ........ 
-No subtests run 
-t/04-nativecall/05-arrays.t .......... 
-No subtests run 
-t/04-nativecall/06-struct.t .......... 
-No subtests run 
-t/04-nativecall/07-writebarrier.t .... 
-No subtests run 
-t/04-nativecall/08-callbacks.t ....... 
-No subtests run 
-t/04-nativecall/09-nativecast.t ...... 
-No subtests run 
-t/04-nativecall/10-cglobals.t ........ 
-No subtests run 
-t/04-nativecall/11-cpp.t ............. 
-No subtests run 
-t/04-nativecall/12-sizeof.t .......... 
-No subtests run 
-t/04-nativecall/13-cpp-mangling.t .... 
-No subtests run 
-t/04-nativecall/13-union.t ........... 
-No subtests run 
-t/04-nativecall/14-rw-attrs.t ........ 
-No subtests run 
-t/04-nativecall/15-rw-args.t ......... 
-No subtests run 
-t/04-nativecall/16-rt125408.t ........ 
-No subtests run 
-t/04-nativecall/16-rt125729.t ........ 
-No subtests run 
+== Configuring and building Rakudo
+cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --sysroot= --sdkroot= --prefix=/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install --backends=jvm && make
+Option sysroot requires an argument
+Option sdkroot requires an argument
+Configure.pl - Rakudo Configure
 
-Test Summary Report
--------------------
-t/01-sanity/01-literals.t          (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/02-op-math.t           (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/03-op-logic.t          (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/04-op-cmp.t            (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/05-var.t               (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/06-op-inplace.t        (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/07-op-string.t         (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/08-var-array.t         (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/09-end-blocks.t        (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/10-regex.t             (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/11-tap.t               (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/12-counter.t           (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/13-equal.t             (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/14-if.t                (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/15-sub.t               (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/16-eqv.t               (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/17-isa.t               (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/18-simple-multisubs.t  (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/19-say.t               (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/20-defined.t           (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/21-try.t               (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/52-parse-include-spec.t (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/53-transpose.t         (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/54-use-lib.t           (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/55-use-trace.t         (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/01-sanity/99-test-basic.t        (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/03-jvm/01-interop.t              (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/01-argless.t       (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/02-simple-args.t   (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/03-simple-returns.t (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/04-pointers.t      (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/05-arrays.t        (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/06-struct.t        (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/07-writebarrier.t  (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/08-callbacks.t     (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/09-nativecast.t    (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/10-cglobals.t      (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/11-cpp.t           (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/12-sizeof.t        (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/13-cpp-mangling.t  (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/13-union.t         (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/14-rw-attrs.t      (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/15-rw-args.t       (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/16-rt125408.t      (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-t/04-nativecall/16-rt125729.t      (Wstat: 0 Tests: 0 Failed: 0)
-  Parse errors: No plan found in TAP output
-Files=45, Tests=0, 20 wallclock secs ( 0.11 usr  0.06 sys +  1.52 cusr  0.16 csys =  1.85 CPU)
-Result: FAIL
-make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'
+General Options:
+    --help             Show this text
+    --prefix=dir       Install files in dir; also look for executables there
+    --sdkroot=dir      When given, use for searching build tools here, e.g.
+                       nqp, java etc.
+    --sysroot=dir      When given, use for searching runtime components here
+    --backends=jvm,moar
+                       Which backend(s) to use (or ALL for all of them)
+    --gen-nqp[=branch]
+                       Download and build a copy of NQP
+    --gen-moar[=branch]
+                       Download and build a copy of MoarVM to use
+    --moar-option='--option=value'
+                       Options to pass to MoarVM's Configure.pl
+    --git-protocol={ssh,https,git}
+                       Protocol used for cloning git repos
+    --git-depth=<number>
+                       Use the --git-depth option for git clone with parameter number
+    --git-reference=<path>
+                       Use --git-reference option to identify local path where git repositories are stored
+                       For example: --git-reference=/home/user/repo/for_perl6
+                       Folders 'nqp' and 'MoarVM' with corresponding git repos should be in for_perl6 folder
+    --makefile-timing  Enable timing of individual makefile commands
+
+Configure.pl also reads options from 'config.default' in the current directory.
+Makefile:46: recipe for target 'rakudo/perl6-j' failed
+make: *** [rakudo/perl6-j] Error 1

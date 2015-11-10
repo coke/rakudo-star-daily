@@ -1,9 +1,9 @@
 MoarVM
 2015.10-77-gee75b65
 Rakudo
-v6.b-244-gaaf9fcd
+v6.b-259-g409cdbb
 NQP
-2015.10-105-g03b69e4
+2015.10-111-g517c8f8
 modules
 --------
 Bailador
@@ -46,11 +46,27 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 MODULES.txt
-commit 12d32ac0f8fe657730af27ca908d2137211e5ed5
-Author: Tobias Leich <email@froggs.de>
-Date:   Sun Oct 11 20:05:12 2015 +0200
+commit dc1ba76ac09d011b96f9cd698deacfe8328042a5
+Merge: 12d32ac f0def6d
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Nov 10 18:46:37 2015 +0100
 
-    fix git urls for submodules
+    Merge pull request #53 from rehsack/master
+    
+    add staging dir support for building
+
+commit f0def6dc7b4f576668e689cfd44745e506a305ad
+Author: Jens Rehsack <sno@netbsd.org>
+Date:   Thu Oct 22 21:21:42 2015 +0200
+
+    introduce support for sdkroot and sysroot to support cross-builds
+    
+    To allow building for another location rather the final install prefix,
+    regardless whether chroot based builds, cross-compile or canadian cross sdk
+    is the goal, realize the difference between prefix, the sdk-root and the
+    system root for final target.
+    
+    Signed-off-by: Jens Rehsack <sno@netbsd.org>
 --------
 PSGI
 commit cb8e26e57bb104a64d89b75ada6d02cdd0949aa4
@@ -122,20 +138,26 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit b7b41e194af3437429193eec2c0cb8d6c9861d76
-Merge: 8058cb7 3c6b9d2
-Author: Jonathan Stowe <jns@gellyfish.co.uk>
-Date:   Mon Nov 9 13:35:40 2015 +0000
+commit e3d793c891067b8961034bd56bc91c337a681b8d
+Merge: b7b41e1 7951121
+Author: Brock Wilcox <awwaiid@thelackthereof.org>
+Date:   Mon Nov 9 23:01:35 2015 -0500
 
-    Merge pull request #190 from awwaiid/syntax-links
+    Merge pull request #191 from awwaiid/syntax-operator-basics
     
-    Remove links from headers
+    More syntax.pod additions, especially about operators
 
-commit 3c6b9d2b2e8429487e9d90f5bf81eeae60d41da1
+commit 795112150227e31fd27979ede643f94fa5c18883
 Author: Brock Wilcox <bwilcox@optoro.com>
-Date:   Mon Nov 9 08:15:00 2015 -0500
+Date:   Mon Nov 9 22:55:57 2015 -0500
 
-    Remove links from headers
+    Oops, fix where :D goes
+
+commit 0a3175fd68d80419fcfa903a6902b3f4de16d6dd
+Author: Brock Wilcox <bwilcox@optoro.com>
+Date:   Mon Nov 9 22:49:56 2015 -0500
+
+    More syntax.pod additions, especially about operators
 --------
 file-find
 commit cfc68655bf7cb1c20e0723a11bfbde5f614b1578

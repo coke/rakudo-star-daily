@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.1) (7u85-2.6.1-6+deb8u1)
 OpenJDK 64-Bit Server VM (build 24.85-b03, mixed mode)
 Rakudo
-v6.b-259-g409cdbb
+v6.b-270-g79b68bb
 NQP
-2015.10-111-g517c8f8
+2015.10-117-gd181c8b
 modules
 --------
 Bailador
@@ -23,11 +23,32 @@ Date:   Sat Oct 31 20:03:17 2015 +0100
     Add MIT License
 --------
 DBIish
-commit bb3fea5af411ba054b98abb0dc453a4eb74f70e1
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Oct 11 19:17:36 2015 +0200
+commit 3d8467d47d3d73ad3809f439a12553b4d831df45
+Merge: a44060c 80a65b1
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Wed Nov 11 22:00:36 2015 +0200
 
-    Remove an outdated TODO comment
+    Merge pull request #27 from azawawi/master
+    
+    libpq.dll on windows depends on libeay32.dll
+
+commit 80a65b1814317159582f3989c1488edc9a76fae9
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Wed Nov 11 21:56:33 2015 +0200
+
+    Add back missing code
+
+commit 599e1dd51bf25d6676636ac119f2053049f230ea
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Wed Nov 11 21:54:51 2015 +0200
+
+    Set our own process environment since %*ENV<Path> is only working on child processes
+
+commit 497e7279223b354f3c9426dfad0dc542830bdb10
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Wed Nov 11 21:21:41 2015 +0200
+
+    Update example with code to modify the Path... not working though for some weird reason
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -138,42 +159,42 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit e3d793c891067b8961034bd56bc91c337a681b8d
-Merge: b7b41e1 7951121
-Author: Brock Wilcox <awwaiid@thelackthereof.org>
-Date:   Mon Nov 9 23:01:35 2015 -0500
+commit 5a6575e8fa652af2b34667518f20bd47902e4e61
+Merge: e3d793c 71f2532
+Author: Jonathan Stowe <jns@gellyfish.co.uk>
+Date:   Tue Nov 10 22:28:44 2015 +0000
 
-    Merge pull request #191 from awwaiid/syntax-operator-basics
+    Merge pull request #192 from vadz/patch-1
     
-    More syntax.pod additions, especially about operators
+    Fix examples showing underscores in numbers
 
-commit 795112150227e31fd27979ede643f94fa5c18883
-Author: Brock Wilcox <bwilcox@optoro.com>
-Date:   Mon Nov 9 22:55:57 2015 -0500
+commit 71f25320246a1a0f257747280aa168fdc1e24451
+Author: VZ <vz-github@zeitlins.org>
+Date:   Tue Nov 10 23:23:12 2015 +0100
 
-    Oops, fix where :D goes
-
-commit 0a3175fd68d80419fcfa903a6902b3f4de16d6dd
-Author: Brock Wilcox <bwilcox@optoro.com>
-Date:   Mon Nov 9 22:49:56 2015 -0500
-
-    More syntax.pod additions, especially about operators
+    Fix examples showing underscores in numbers
+    
+    It was somewhat confusing to claim that `1_000_000` and `10_00_00` evaluate to the same number, make sure that all numbers have the same number of zeroes, even if they have different numbers of underscores.
 --------
 file-find
-commit cfc68655bf7cb1c20e0723a11bfbde5f614b1578
-Merge: b73e655 323e1ea
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Mon Oct 12 16:19:10 2015 +0200
+commit b1a7dca3bd5ff3103811a1141953b6e490c8f9d1
+Merge: cfc6865 6ee5ca0
+Author: lizmat <liz@dijkmat.nl>
+Date:   Tue Nov 10 21:36:57 2015 +0100
 
-    Merge pull request #13 from szabgab/travis
+    Merge pull request #15 from niner/master
     
-    add travis configuration file
+    Update to post-GLR semantics
 
-commit 323e1ea6591429f637199adb3a6ec0a5fba54a62
-Author: Gabor Szabo <gabor@szabgab.com>
-Date:   Sun Oct 11 13:36:29 2015 +0300
+commit 6ee5ca0460c9fbf8daefae177f0aa2cdcfe675bb
+Author: Stefan Seifert <nine@detonation.org>
+Date:   Tue Nov 10 19:32:22 2015 +0100
 
-    add travis configuration file
+    Update to post-GLR semantics
+    
+    Fixes assignment to an array (assigned a single Seq item before).
+    Fixes documentation.
+    Fixes GH #14
 --------
 grammar-debugger
 commit c1495065a9714845e95e9aa5607ebfda7b6beb87

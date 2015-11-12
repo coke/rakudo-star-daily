@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.1) (7u85-2.6.1-6+deb8u1)
 OpenJDK 64-Bit Server VM (build 24.85-b03, mixed mode)
 Rakudo
-v6.b-270-g79b68bb
+v6.b-286-g2cac8c1
 NQP
-2015.10-117-gd181c8b
+2015.10-119-g6bd8e5b
 modules
 --------
 Bailador
@@ -23,32 +23,11 @@ Date:   Sat Oct 31 20:03:17 2015 +0100
     Add MIT License
 --------
 DBIish
-commit 3d8467d47d3d73ad3809f439a12553b4d831df45
-Merge: a44060c 80a65b1
+commit 38427db7c0094147bd89492cfe25f4e247286b65
 Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Wed Nov 11 22:00:36 2015 +0200
+Date:   Wed Nov 11 22:51:04 2015 +0200
 
-    Merge pull request #27 from azawawi/master
-    
-    libpq.dll on windows depends on libeay32.dll
-
-commit 80a65b1814317159582f3989c1488edc9a76fae9
-Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Wed Nov 11 21:56:33 2015 +0200
-
-    Add back missing code
-
-commit 599e1dd51bf25d6676636ac119f2053049f230ea
-Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Wed Nov 11 21:54:51 2015 +0200
-
-    Set our own process environment since %*ENV<Path> is only working on child processes
-
-commit 497e7279223b354f3c9426dfad0dc542830bdb10
-Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Wed Nov 11 21:21:41 2015 +0200
-
-    Update example with code to modify the Path... not working though for some weird reason
+    Explicitly ask Travis CI to start mysql and postgresql. sqlite3 is not a service
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -159,22 +138,20 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 5a6575e8fa652af2b34667518f20bd47902e4e61
-Merge: e3d793c 71f2532
-Author: Jonathan Stowe <jns@gellyfish.co.uk>
-Date:   Tue Nov 10 22:28:44 2015 +0000
+commit 51a087cfd826c83e05767d7e2676f37190da95e0
+Merge: aa50021 b9ed04d
+Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
+Date:   Thu Nov 12 11:44:13 2015 -0500
 
-    Merge pull request #192 from vadz/patch-1
+    Merge pull request #196 from nxadm/master
     
-    Fix examples showing underscores in numbers
+    Replace lolcat by neutral title
 
-commit 71f25320246a1a0f257747280aa168fdc1e24451
-Author: VZ <vz-github@zeitlins.org>
-Date:   Tue Nov 10 23:23:12 2015 +0100
+commit b9ed04dc06d790fd98a519520327ce365f6180d1
+Author: u0097636@kuleuven.be <claudio.ramirez@kuleuven.be>
+Date:   Thu Nov 12 17:19:38 2015 +0100
 
-    Fix examples showing underscores in numbers
-    
-    It was somewhat confusing to claim that `1_000_000` and `10_00_00` evaluate to the same number, make sure that all numbers have the same number of zeroes, even if they have different numbers of underscores.
+    Replace lolcat by neutral title
 --------
 file-find
 commit b1a7dca3bd5ff3103811a1141953b6e490c8f9d1
@@ -418,20 +395,21 @@ Date:   Sun Aug 30 20:09:25 2015 +0200
     Adjust code for glr
 --------
 ufo
-commit 69ebfc620878109218e89e7f448310cbe8792e2c
-Merge: 3f2843c caba7fb
+commit 425ba45fed64644788fdf6b0997ef1c4a807e3b6
+Merge: 915a2ae 5966dbe
 Author: Carl Mäsak <cmasak@gmail.com>
-Date:   Thu Aug 20 10:50:20 2015 +0200
+Date:   Thu Nov 12 13:51:27 2015 +0100
 
-    Merge pull request #27 from laben/glr
+    Merge pull request #29 from andreoss/master
     
-    Fix get_modules() for GLR
+    Fix .buildrule for GLR.
 
-commit caba7fbcc16d68d4d4343e5e430030b2e6dc288b
-Author: laben <labensigma@gmail.com>
-Date:   Thu Aug 20 00:36:23 2015 +0200
+commit 5966dbea10301a240c6a6d40427ec00582666663
+Author: andreoss <andreoss@sdf.org>
+Date:   Fri Nov 6 03:02:13 2015 -0500
 
-    Fix get_modules() for GLR
+    Fix .buildrule for GLR.
+    .map returs a Seq, use hyper op instead.
 --------
 uri
 commit ffa39b3dc53b8439253b2697a4fd3466f691e0f4

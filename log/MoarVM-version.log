@@ -1,9 +1,9 @@
 MoarVM
-2015.11-3-g05ad276
+2015.11-5-g308b9b7
 Rakudo
-Bend-36-gc016df5
+Bend-49-gbedf2a7
 NQP
-2015.11-6-gd44de00
+2015.11-8-g82e4fef
 modules
 --------
 Bailador
@@ -46,11 +46,20 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 MODULES.txt
-commit 222cce6ca8059c9ce0f93a308520827b3f353012
+commit 349fb9812eb01ef3e6716cfc6ebd149302d6cc05
+Merge: 222cce6 59c0536
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Nov 22 18:59:55 2015 +0100
+Date:   Sun Nov 22 21:14:44 2015 +0100
 
-    Bump version to 2015.11
+    Merge pull request #57 from stmuk/master
+    
+    correct two minor typos
+
+commit 59c05362055e3d884f18ebe4af602b7c2ec51712
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Sun Nov 22 18:54:07 2015 +0000
+
+    correct two minor typos
 --------
 PSGI
 commit cb8e26e57bb104a64d89b75ada6d02cdd0949aa4
@@ -122,11 +131,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit a188308420f552444fcfd8e854dddc5b1342759d
+commit 9be62345a8fc0c213a8de750db2c040c1c6bb9fa
 Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Sat Nov 21 22:28:11 2015 -0500
+Date:   Sun Nov 22 22:19:49 2015 -0500
 
-    Reword/grammar
+    Clarify await
 --------
 file-find
 commit b1a7dca3bd5ff3103811a1141953b6e490c8f9d1
@@ -177,11 +186,11 @@ Date:   Sat Oct 10 19:36:47 2015 +0000
     Add .travis.yml
 --------
 json_fast
-commit 3eea641e81fd5680f7a4782d7c6b55c57bd8b522
+commit 62ff510c763809c25bad126833142c284ceb6c7a
 Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Fri Nov 13 18:04:59 2015 +0100
+Date:   Mon Nov 23 16:24:55 2015 +0100
 
-    put tony-o in authors, mention to-json in readme
+    make syntax a bit less complicated
 --------
 jsonrpc
 commit 8fe75acf08d49c3da64ca892b1c6ea30d99d7daa
@@ -233,20 +242,31 @@ Date:   Fri Sep 18 21:42:41 2015 +0200
     done() is now called done-testing()
 --------
 panda
-commit e9055fe97c759a7e2eeb3503cb0b69a734b82256
-Merge: d5b023f 670a271
-Author: niner <nine@detonation.org>
-Date:   Thu Nov 5 19:27:11 2015 +0100
+commit 9e3d4b62f851247a6a1ed515f25872b75bb0ddb1
+Merge: e9055fe 1d84a5e
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Mon Nov 23 16:37:49 2015 +0100
 
-    Merge pull request #244 from jonathanstowe/master
+    JSON::Fast: Merge commit '1d84a5e98ae64c8e6a98ece5274ca7b04df7f3bc'
     
-    Fix back fetch projects.json after \r\n changes settled
+    Tracks the change that Bool ~~ Int now in to-json, thus fixing tests
 
-commit 670a2713246573c55fbad4a2c1118069fc38141f
-Author: Jonathan Stowe <jns@gellyfish.co.uk>
-Date:   Thu Nov 5 18:06:01 2015 +0000
+commit 1d84a5e98ae64c8e6a98ece5274ca7b04df7f3bc
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Mon Nov 23 16:37:49 2015 +0100
 
-    Fix back fetch projects.json after \r\n changes settled
+    Squashed 'ext/JSON__Fast/' changes from 3423b68..62ff510
+    
+    62ff510 make syntax a bit less complicated
+    91c531e Bool is now also Int, so need to check Bool before Int.
+    175b3a0 give more context when unexpected start character.
+    3eea641 put tony-o in authors, mention to-json in readme
+    777e027 since we have to-json now, put that in the description. bump version.
+    e9e648e rename META.info to META6.json
+    498135a first stab at making to-json compatible with Seq
+    
+    git-subtree-dir: ext/JSON__Fast
+    git-subtree-split: 62ff510c763809c25bad126833142c284ceb6c7a
 --------
 perl6-digest-md5
 commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b

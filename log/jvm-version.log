@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.1) (7u85-2.6.1-6+deb8u1)
 OpenJDK 64-Bit Server VM (build 24.85-b03, mixed mode)
 Rakudo
-Bend-49-gbedf2a7
+Bend-57-g9345857
 NQP
-2015.11-8-g82e4fef
+2015.11-9-gc77898e
 modules
 --------
 Bailador
@@ -23,11 +23,20 @@ Date:   Sat Oct 31 20:03:17 2015 +0100
     Add MIT License
 --------
 DBIish
-commit 38427db7c0094147bd89492cfe25f4e247286b65
-Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Wed Nov 11 22:51:04 2015 +0200
+commit 3d328c64e479cb1c8115cb0b381450d1e89784d3
+Merge: 38427db 6f1fb8f
+Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
+Date:   Tue Nov 24 14:20:26 2015 -0500
 
-    Explicitly ask Travis CI to start mysql and postgresql. sqlite3 is not a service
+    Merge pull request #30 from Skarsnik/master
+    
+    Move fetchrow_typedhash in the base role
+
+commit 6f1fb8f6560190d875e0c345cc2e2f5f8d0a2f50
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Tue Nov 24 20:05:30 2015 +0100
+
+    Move fetchrow_typedhash in the base role
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -131,31 +140,27 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 9be62345a8fc0c213a8de750db2c040c1c6bb9fa
+commit 9e567b04b67877cbcee6b8b3505c9d4fb1912b3a
 Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Sun Nov 22 22:19:49 2015 -0500
+Date:   Tue Nov 24 11:10:27 2015 -0500
 
-    Clarify await
+    Use HTML5 instead of JS to autofocus on search box
 --------
 file-find
-commit b1a7dca3bd5ff3103811a1141953b6e490c8f9d1
-Merge: cfc6865 6ee5ca0
-Author: lizmat <liz@dijkmat.nl>
-Date:   Tue Nov 10 21:36:57 2015 +0100
+commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
+Merge: b1a7dca d85150d
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Tue Nov 24 00:38:40 2015 +0100
 
-    Merge pull request #15 from niner/master
+    Merge pull request #16 from vendethiel/patch-1
     
-    Update to post-GLR semantics
+    Document `exclude`
 
-commit 6ee5ca0460c9fbf8daefae177f0aa2cdcfe675bb
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Tue Nov 10 19:32:22 2015 +0100
+commit d85150da65a06f8b2b117bdc12aba89e3f9868ca
+Author: ven <vendethiel@hotmail.fr>
+Date:   Fri Nov 20 16:08:34 2015 +0100
 
-    Update to post-GLR semantics
-    
-    Fixes assignment to an array (assigned a single Seq item before).
-    Fixes documentation.
-    Fixes GH #14
+    Document `exclude`
 --------
 grammar-debugger
 commit c1495065a9714845e95e9aa5607ebfda7b6beb87
@@ -242,31 +247,20 @@ Date:   Fri Sep 18 21:42:41 2015 +0200
     done() is now called done-testing()
 --------
 panda
-commit 9e3d4b62f851247a6a1ed515f25872b75bb0ddb1
-Merge: e9055fe 1d84a5e
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Mon Nov 23 16:37:49 2015 +0100
+commit 490c859bff74211ac4a45d4f39e43e82455a9a7f
+Merge: 9e3d4b6 85980a6
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Tue Nov 24 00:39:05 2015 +0100
 
-    JSON::Fast: Merge commit '1d84a5e98ae64c8e6a98ece5274ca7b04df7f3bc'
+    Merge pull request #246 from stmuk/master
     
-    Tracks the change that Bool ~~ Int now in to-json, thus fixing tests
+    options have to precede actions now
 
-commit 1d84a5e98ae64c8e6a98ece5274ca7b04df7f3bc
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Mon Nov 23 16:37:49 2015 +0100
+commit 85980a6a1f49bf085d43f0e435b93c9ce7ec5576
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Sun Nov 22 17:25:19 2015 +0000
 
-    Squashed 'ext/JSON__Fast/' changes from 3423b68..62ff510
-    
-    62ff510 make syntax a bit less complicated
-    91c531e Bool is now also Int, so need to check Bool before Int.
-    175b3a0 give more context when unexpected start character.
-    3eea641 put tony-o in authors, mention to-json in readme
-    777e027 since we have to-json now, put that in the description. bump version.
-    e9e648e rename META.info to META6.json
-    498135a first stab at making to-json compatible with Seq
-    
-    git-subtree-dir: ext/JSON__Fast
-    git-subtree-split: 62ff510c763809c25bad126833142c284ceb6c7a
+    options have to precede actions now
 --------
 perl6-digest-md5
 commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b

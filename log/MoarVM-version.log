@@ -1,9 +1,9 @@
 MoarVM
 2015.11-19-g623eadf
 Rakudo
-Bend-128-gd091ca8
+Bend-145-gd831a48
 NQP
-2015.11-18-gd9545f4
+2015.11-20-g19073a7
 modules
 --------
 Bailador
@@ -23,20 +23,26 @@ Date:   Sat Oct 31 20:03:17 2015 +0100
     Add MIT License
 --------
 DBIish
-commit 3d328c64e479cb1c8115cb0b381450d1e89784d3
-Merge: 38427db 6f1fb8f
+commit c79069e14804e9403c6766d71c59d07fe7cf29ae
+Merge: 3d328c6 929d30e
 Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
-Date:   Tue Nov 24 14:20:26 2015 -0500
+Date:   Sat Nov 28 12:34:39 2015 -0500
 
-    Merge pull request #30 from Skarsnik/master
+    Merge pull request #33 from Skarsnik/master
     
-    Move fetchrow_typedhash in the base role
+    Fix all the nativecall stuff in SQLite
 
-commit 6f1fb8f6560190d875e0c345cc2e2f5f8d0a2f50
+commit 929d30e06de9f8c5697a535bcf16b142cbb010e2
 Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Tue Nov 24 20:05:30 2015 +0100
+Date:   Sat Nov 28 18:13:57 2015 +0100
 
-    Move fetchrow_typedhash in the base role
+    forget one!
+
+commit 00e34cc2827cde8bfc61cf2c4e7aad7f609c37c4
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Sat Nov 28 18:12:06 2015 +0100
+
+    Fix all nativestuff
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -54,28 +60,31 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
 
     add provides section for latest panda (S11 support)
 --------
+Linenoise
+commit b01750a93848d787827461793afe65a4e944b540
+Author: Rob Hoelz <rob@hoelz.ro>
+Date:   Sat Nov 21 12:51:04 2015 -0600
+
+    See CLIB constant for free()
+--------
 MODULES.txt
-commit 640b132418396c57faefc7a1801192b10bd522fe
-Merge: 8202b71 349fb98
+commit ed5d4d83d3d4a8fa849ceb9a86cf667e9edd5eb7
+Merge: 1cafd78 27c0039
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Wed Nov 25 10:08:46 2015 +0000
+Date:   Sat Nov 28 20:30:28 2015 +0100
 
-    Merge branch 'master' of github.com:rakudo/star
-
-commit 349fb9812eb01ef3e6716cfc6ebd149302d6cc05
-Merge: 222cce6 59c0536
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Nov 22 21:14:44 2015 +0100
-
-    Merge pull request #57 from stmuk/master
+    Merge pull request #54 from hoelzro/add-linenoise
     
-    correct two minor typos
+    Add Linenoise to modules
 
-commit 59c05362055e3d884f18ebe4af602b7c2ec51712
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Sun Nov 22 18:54:07 2015 +0000
+commit 27c0039267edf6f14541c854deb4714d4506e9af
+Author: Rob Hoelz <rob@hoelz.ro>
+Date:   Sat Nov 21 13:23:48 2015 -0600
 
-    correct two minor typos
+    Add Linenoise to modules
+    
+    Linenoise provides tab completion and history support for the builtin
+    REPL
 --------
 PSGI
 commit cb8e26e57bb104a64d89b75ada6d02cdd0949aa4
@@ -147,11 +156,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit a87a9b0fbcb4662c42cfa61140bf0de396c08d3d
-Author: Elizabeth Mattijsen <liz@dijkmat.nl>
-Date:   Fri Nov 27 00:13:15 2015 +0100
+commit 4937611bbd07fb770940c12e15b264fb76400d04
+Author: Mouq <alexmoquin@gmail.com>
+Date:   Sat Nov 28 14:21:52 2015 -0500
 
-    Add doc stubs for Supply.head/tail
+    Fix/improve util/missing-types.p6
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -219,6 +228,22 @@ Author: Steve Mynott <steve.mynott@gmail.com>
 Date:   Tue Nov 17 22:48:26 2015 +0000
 
     rename sum to addition now it's a keyword
+--------
+library-make
+commit 8260c5ced10758dc8fb16730aa084974680cd841
+Merge: ba9a7bf a26e13e
+Author: Andrew Egeler <andrew@egeler.us>
+Date:   Wed Nov 18 09:54:03 2015 -0500
+
+    Merge pull request #14 from sylvarant/master
+    
+    fix failing coverage test
+
+commit a26e13ed386667fa3c1a7fdf6c1974cb549ad1d0
+Author: sylvarant <adriaan.larmuseau@gmail.com>
+Date:   Wed Nov 18 11:10:12 2015 +0000
+
+    fix failing coverage test
 --------
 p6-File-Temp
 commit f988468d7634af410e40d4fbd56c6b4ccbaffaab

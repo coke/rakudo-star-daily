@@ -1,7 +1,7 @@
 MoarVM
 2015.11-21-g469ba64
 Rakudo
-Bend-280-g82f1062
+Bend-304-gce69f30
 NQP
 2015.11-21-g9559a26
 modules
@@ -156,11 +156,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 7b9859e3909cd5fef69aea2de73d9461e12da14f
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Sat Nov 28 22:05:16 2015 +0000
+commit a60d7ecfdfde876d753d1afd87e928374f778ab5
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Mon Nov 30 16:52:07 2015 +0000
 
-    correct two typos
+    Forget the pod on =end
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -200,18 +200,31 @@ Date:   Thu Oct 22 15:41:35 2015 +0200
     See: https://github.com/rakudo/rakudo/commit/5d83db
 --------
 json
-commit 2484983b141e7f4bb5ccc2b1ae4465466c8dad18
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Oct 10 19:36:47 2015 +0000
+commit c75a04c1b31665b6a569dc954916a96ad7763edc
+Merge: 2484983 ef41b31
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Sun Nov 29 22:43:27 2015 +0100
 
-    Add .travis.yml
+    Merge pull request #20 from Mouq/master
+    
+    Fix tests on latest Rakudo
+
+commit ef41b3160abcc41f42755f3c86b57dd0619b25fe
+Author: Mouq <alexmoquin@gmail.com>
+Date:   Sun Nov 29 16:22:09 2015 -0500
+
+    @*INC is dead, long live CURLI
 --------
 json_fast
-commit 62ff510c763809c25bad126833142c284ceb6c7a
+commit 4393d4a73997b1eaba8d481ebc81651ee8601500
 Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Mon Nov 23 16:24:55 2015 +0100
+Date:   Mon Nov 30 15:55:19 2015 +0100
 
-    make syntax a bit less complicated
+    optimize a bit more
+    
+    on AllCards.json (after json_reformat) this now takes 20%
+    less time. all of this mostly avoids allocations, especially
+    p6bool from "eq" calls and BOOTCode in nom-ws.
 --------
 jsonrpc
 commit 8fe75acf08d49c3da64ca892b1c6ea30d99d7daa
@@ -230,20 +243,20 @@ Date:   Tue Nov 17 22:48:26 2015 +0000
     rename sum to addition now it's a keyword
 --------
 library-make
-commit 8260c5ced10758dc8fb16730aa084974680cd841
-Merge: ba9a7bf a26e13e
+commit cdfaf6b8fa2a602da77ea0c713f8f835a66a48d7
+Merge: 8260c5c ee27160
 Author: Andrew Egeler <andrew@egeler.us>
-Date:   Wed Nov 18 09:54:03 2015 -0500
+Date:   Mon Nov 30 14:09:07 2015 -0500
 
-    Merge pull request #14 from sylvarant/master
+    Merge pull request #15 from niner/master
     
-    fix failing coverage test
+    Adopt new CompUnit architecture
 
-commit a26e13ed386667fa3c1a7fdf6c1974cb549ad1d0
-Author: sylvarant <adriaan.larmuseau@gmail.com>
-Date:   Wed Nov 18 11:10:12 2015 +0000
+commit ee271602540bfab4feff9daab5a349529f108a3e
+Author: Stefan Seifert <nine@detonation.org>
+Date:   Mon Nov 30 19:59:41 2015 +0100
 
-    fix failing coverage test
+    Adopt new CompUnit architecture
 --------
 p6-File-Temp
 commit f988468d7634af410e40d4fbd56c6b4ccbaffaab
@@ -391,13 +404,11 @@ Date:   Sun Aug 30 21:15:59 2015 +0200
     Adjust code for glr
 --------
 svg-plot
-commit 99652be9524c6ac19060771928f5c52a42b11e70
+commit f88d0b73e955f7ff00bf8d5d0fefa03894922902
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Oct 11 22:16:46 2015 +0200
+Date:   Sun Nov 29 22:49:14 2015 +0100
 
-    Change "for" back to "map"
-    
-    for "for" is no more.
+    No more @*INC
 --------
 test-mock
 commit 99c7a9a5c86847a6555364e0904449bff76b0197

@@ -1,7 +1,7 @@
 MoarVM
 2015.11-21-g469ba64
 Rakudo
-Bend-304-gce69f30
+Bend-314-g88a8a00
 NQP
 2015.11-21-g9559a26
 modules
@@ -23,26 +23,11 @@ Date:   Sat Oct 31 20:03:17 2015 +0100
     Add MIT License
 --------
 DBIish
-commit c79069e14804e9403c6766d71c59d07fe7cf29ae
-Merge: 3d328c6 929d30e
-Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
-Date:   Sat Nov 28 12:34:39 2015 -0500
-
-    Merge pull request #33 from Skarsnik/master
-    
-    Fix all the nativecall stuff in SQLite
-
-commit 929d30e06de9f8c5697a535bcf16b142cbb010e2
+commit a3c20f77fc52bbc30d76846eb2b83151d96c44c3
 Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Sat Nov 28 18:13:57 2015 +0100
+Date:   Tue Dec 1 18:46:31 2015 +0100
 
-    forget one!
-
-commit 00e34cc2827cde8bfc61cf2c4e7aad7f609c37c4
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Sat Nov 28 18:12:06 2015 +0100
-
-    Fix all nativestuff
+    Fix the last native binding Int-> int32e in SQLite
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -156,11 +141,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit a60d7ecfdfde876d753d1afd87e928374f778ab5
-Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
-Date:   Mon Nov 30 16:52:07 2015 +0000
+commit 06e2b54a8157027bfdc7616ea8bb548112b0ac28
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Tue Dec 1 14:54:44 2015 +0000
 
-    Forget the pod on =end
+    mention dependencies on Perl 5 etc.
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -216,15 +201,13 @@ Date:   Sun Nov 29 16:22:09 2015 -0500
     @*INC is dead, long live CURLI
 --------
 json_fast
-commit 4393d4a73997b1eaba8d481ebc81651ee8601500
+commit fb03888c6641bd3a92f8fb4d83fda16615faedc4
 Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Mon Nov 30 15:55:19 2015 +0100
+Date:   Tue Dec 1 12:29:03 2015 +0100
 
-    optimize a bit more
+    replace deprecated SEQ with STATEMENT_LIST
     
-    on AllCards.json (after json_reformat) this now takes 20%
-    less time. all of this mostly avoids allocations, especially
-    p6bool from "eq" calls and BOOTCode in nom-ws.
+    Thanks (Johnny 5)++
 --------
 jsonrpc
 commit 8fe75acf08d49c3da64ca892b1c6ea30d99d7daa
@@ -292,11 +275,11 @@ Date:   Fri Sep 18 21:42:41 2015 +0200
     done() is now called done-testing()
 --------
 panda
-commit e4cfed7de8dfa58aab87855bdfa3c2c038bc59c3
+commit 9c9522f4102677abd63cb2872676a258621435f2
 Author: Stefan Seifert <nine@detonation.org>
-Date:   Thu Nov 26 19:12:03 2015 +0100
+Date:   Tue Dec 1 09:09:20 2015 +0100
 
-    Remove obsolete @*INC modification
+    Gracefully deal with %*CUSTOM_LIB<home> not being available
 --------
 perl6-digest-md5
 commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b
@@ -315,20 +298,11 @@ Date:   Tue Nov 17 23:46:59 2015 +0000
     use latin-1 encoding - addresses #17
 --------
 perl6-http-easy
-commit 290c5b6c49fed79f917a6ae21311090460853439
-Merge: c3a92b8 ba81452
-Author: Timothy Totten <2009@huri.net>
-Date:   Thu Oct 29 10:32:31 2015 -0700
+commit f495f96e8e70dea42da1730e1b92c40604806e20
+Author: Filip Sergot <filip@sergot.pl>
+Date:   Tue Dec 1 10:50:58 2015 +0100
 
-    Merge pull request #28 from hiroraba/fix-travis-setting
-    
-    Fix travis setting
-
-commit ba81452219ac60bba79096df0b7d87986035cb11
-Author: hiroraba <xornelius0313@gmail.com>
-Date:   Wed Oct 28 23:14:24 2015 +0900
-
-    Fix travis setting
+    attept to fix failing travis
 --------
 perl6-http-status
 commit 7f1fe69b09f8293501f6fe15bb4bfd39670f9443

@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-Bend-314-g88a8a00
+Bend-321-g704c585
 NQP
-2015.11-21-g9559a26
+2015.11-24-g9e397e6
 modules
 --------
 Bailador
@@ -23,11 +23,20 @@ Date:   Sat Oct 31 20:03:17 2015 +0100
     Add MIT License
 --------
 DBIish
-commit a3c20f77fc52bbc30d76846eb2b83151d96c44c3
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Tue Dec 1 18:46:31 2015 +0100
+commit 5d5d01226d4d9f12c63c8566ef47c7f90aa00c94
+Merge: 4a5b064 df1ce31
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Wed Dec 2 08:47:39 2015 +0100
 
-    Fix the last native binding Int-> int32e in SQLite
+    Merge pull request #36 from hiroraba/master
+    
+    Fixed failed test 05-mock.t
+
+commit df1ce31bf9829407660582797448e620d838dec2
+Author: hiroraba <xornelius0313@gmail.com>
+Date:   Wed Dec 2 12:59:55 2015 +0900
+
+    Fixed failed test 05-mock.t
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -72,11 +81,11 @@ Date:   Sat Nov 21 13:23:48 2015 -0600
     REPL
 --------
 PSGI
-commit cb8e26e57bb104a64d89b75ada6d02cdd0949aa4
+commit 624b70f4abac85d743870fc2bbab5da8fcf41f8b
 Author: Timothy Totten <2010@huri.net>
-Date:   Tue Sep 1 11:20:09 2015 -0700
+Date:   Wed Dec 2 10:51:33 2015 -0800
 
-    Moved changes from HTTP::Easy back into here.
+    META.info -> META6.json, added .travis.yml from hiroraba.
 --------
 Perl6-MIME-Base64
 commit 17d654e0a929772e89908a1b3ec3781bec8055e1
@@ -141,11 +150,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 06e2b54a8157027bfdc7616ea8bb548112b0ac28
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Dec 1 14:54:44 2015 +0000
+commit 127f4e3845439bd0770c32f8cf0b2982720e2810
+Author: raiph <raiph.mellor@gmail.com>
+Date:   Tue Dec 1 21:19:39 2015 -0500
 
-    mention dependencies on Perl 5 etc.
+    Typo'd code
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -275,11 +284,16 @@ Date:   Fri Sep 18 21:42:41 2015 +0200
     done() is now called done-testing()
 --------
 panda
-commit 9c9522f4102677abd63cb2872676a258621435f2
+commit 40ae1ab334b8fc0746d9346bb1cc7ac108f91a74
 Author: Stefan Seifert <nine@detonation.org>
-Date:   Tue Dec 1 09:09:20 2015 +0100
+Date:   Wed Dec 2 18:42:57 2015 +0100
 
-    Gracefully deal with %*CUSTOM_LIB<home> not being available
+    Fix bootstrap.pl loading the outdated installed Panda
+    
+    Fixed by making sure the to-be-installed modules stay ahead in the search path.
+    
+    This has been there since 2012 but became more of a problem with recent urgent
+    fixes for issues preventing installation of a new panda.
 --------
 perl6-digest-md5
 commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b
@@ -298,11 +312,11 @@ Date:   Tue Nov 17 23:46:59 2015 +0000
     use latin-1 encoding - addresses #17
 --------
 perl6-http-easy
-commit f495f96e8e70dea42da1730e1b92c40604806e20
-Author: Filip Sergot <filip@sergot.pl>
-Date:   Tue Dec 1 10:50:58 2015 +0100
+commit 15659be138eac87be3c1865a1ee2989a0fb11a3d
+Author: Timothy Totten <2010@huri.net>
+Date:   Wed Dec 2 11:16:08 2015 -0800
 
-    attept to fix failing travis
+    Re-enabled container infrastructure in Travis CI
 --------
 perl6-http-status
 commit 7f1fe69b09f8293501f6fe15bb4bfd39670f9443

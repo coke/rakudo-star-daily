@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-Bend-321-g704c585
+Bend-336-g887c937
 NQP
-2015.11-24-g9e397e6
+2015.11-28-g01aba47
 modules
 --------
 Bailador
@@ -150,11 +150,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 127f4e3845439bd0770c32f8cf0b2982720e2810
-Author: raiph <raiph.mellor@gmail.com>
-Date:   Tue Dec 1 21:19:39 2015 -0500
+commit f1013a69b9724a843e2fdcabbc18bae56a964dac
+Author: Anthony Parsons <flussence@gmail.com>
+Date:   Wed Dec 2 21:13:44 2015 +0000
 
-    Typo'd code
+    Fix inconsistent references to :$nl-in
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -235,20 +235,11 @@ Date:   Tue Nov 17 22:48:26 2015 +0000
     rename sum to addition now it's a keyword
 --------
 library-make
-commit cdfaf6b8fa2a602da77ea0c713f8f835a66a48d7
-Merge: 8260c5c ee27160
+commit 050422dc3ee6a23be224483607a718ba40bf822f
 Author: Andrew Egeler <andrew@egeler.us>
-Date:   Mon Nov 30 14:09:07 2015 -0500
+Date:   Thu Dec 3 11:10:47 2015 -0500
 
-    Merge pull request #15 from niner/master
-    
-    Adopt new CompUnit architecture
-
-commit ee271602540bfab4feff9daab5a349529f108a3e
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Mon Nov 30 19:59:41 2015 +0100
-
-    Adopt new CompUnit architecture
+    remove Pod::Coverage dep
 --------
 p6-File-Temp
 commit f988468d7634af410e40d4fbd56c6b4ccbaffaab
@@ -284,16 +275,20 @@ Date:   Fri Sep 18 21:42:41 2015 +0200
     done() is now called done-testing()
 --------
 panda
-commit 40ae1ab334b8fc0746d9346bb1cc7ac108f91a74
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Wed Dec 2 18:42:57 2015 +0100
+commit 491cc83c8ec7ee8a38b183eb7934c773e28aafa8
+Merge: 40ae1ab f4cb14f
+Author: timo <timonator@perpetuum-immobile.de>
+Date:   Wed Dec 2 21:48:53 2015 +0100
 
-    Fix bootstrap.pl loading the outdated installed Panda
+    Merge pull request #254 from zoffixznet/fix-usage
     
-    Fixed by making sure the to-be-installed modules stay ahead in the search path.
-    
-    This has been there since 2012 but became more of a problem with recent urgent
-    fixes for issues preventing installation of a new panda.
+    Document --force option
+
+commit f4cb14fc9338b9d77220b05585b61d455730100a
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Wed Dec 2 13:51:14 2015 -0500
+
+    Document --force option
 --------
 perl6-digest-md5
 commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b

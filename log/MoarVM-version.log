@@ -1,9 +1,9 @@
 MoarVM
-2015.11-34-gc3eea17
+2015.11-36-g170ca53
 Rakudo
-Bend-357-g587f700
+Bend-374-g539b5f4
 NQP
-2015.11-34-gfef6b98
+2015.11-35-ge4912e9
 modules
 --------
 Bailador
@@ -23,20 +23,23 @@ Date:   Sat Oct 31 20:03:17 2015 +0100
     Add MIT License
 --------
 DBIish
-commit 5d5d01226d4d9f12c63c8566ef47c7f90aa00c94
-Merge: 4a5b064 df1ce31
+commit f1be21ed6de3e838f073b15b1e02f2b2e45b64ee
+Merge: 5d5d012 4a26f60
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Wed Dec 2 08:47:39 2015 +0100
+Date:   Sat Dec 5 09:34:08 2015 +0100
 
-    Merge pull request #36 from hiroraba/master
+    Merge pull request #38 from AlexDaniel/patch-1
     
-    Fixed failed test 05-mock.t
+    Typo in META.info
 
-commit df1ce31bf9829407660582797448e620d838dec2
-Author: hiroraba <xornelius0313@gmail.com>
-Date:   Wed Dec 2 12:59:55 2015 +0900
+commit 4a26f607c5cbe0c89d578b0c6dc52d753be18a4b
+Author: Aleks-Daniel Jakimenko <alex.jakimenko+github@gmail.com>
+Date:   Sat Dec 5 06:40:55 2015 +0200
 
-    Fixed failed test 05-mock.t
+    Typo in META.info
+    
+    It seems like the typo was made during copy-pasting.
+    (“DBDish/SQLite” was renamed to “mysql/SQLite” instead of “DBDish/mysql”)
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -55,11 +58,14 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 Linenoise
-commit b01750a93848d787827461793afe65a4e944b540
+commit 9f79f92bccd8a1f95373696a81b84d05a12940b1
 Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Sat Nov 21 12:51:04 2015 -0600
+Date:   Fri Dec 4 18:38:10 2015 -0600
 
-    See CLIB constant for free()
+    Install liblinenoise.so into installation lib directory by hand
+    
+    Until %?RESOURCES is implemented, this is a quick and dirty way to get
+    Linenoise working again
 --------
 MODULES.txt
 commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
@@ -147,11 +153,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit edeb6edc73cfda31c73bc59da7ec1aa3a643d4fb
-Author: Anthony Parsons <flussence@gmail.com>
-Date:   Fri Dec 4 16:13:38 2015 +0000
+commit 6848ad069dc8ed36c88295160d175e568832aaf1
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Fri Dec 4 21:22:38 2015 +0100
 
-    Add smartmatch docs to the WANTED list
+    Use HTTPS links where available
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -272,20 +278,26 @@ Date:   Fri Sep 18 21:42:41 2015 +0200
     done() is now called done-testing()
 --------
 panda
-commit 5873521fbf947a75adf433ba73729f1e7160a90d
-Merge: 491cc83 6dbfae1
-Author: niner <nine@detonation.org>
-Date:   Fri Dec 4 19:16:43 2015 +0100
+commit 22c36bbed85835177f2c29af1ae2483a3eb31ce8
+Merge: 5873521 630ead6
+Author: lizmat <liz@dijkmat.nl>
+Date:   Sat Dec 5 19:12:10 2015 +0100
 
-    Merge pull request #258 from stmuk/master
+    Merge pull request #261 from stmuk/master
     
-    2 examples to make the options order more obvious
+    explicit fatal error if provides is absent from META information
 
-commit 6dbfae1269fd5bd767385fa292c702fa7908c500
+commit 630ead60cb569be0a3d9a579fe426a0a9473bce5
 Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Fri Dec 4 18:03:48 2015 +0000
+Date:   Sat Dec 5 15:22:58 2015 +0000
 
-    2 examples to make the options order more obvious
+    allow empty provides value
+
+commit 83e7a868d273f0cf01e00ef482cfe0f67670550c
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Sat Dec 5 14:46:11 2015 +0000
+
+    explicit fatal error if provides is absent from META information
 --------
 perl6-digest-md5
 commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b

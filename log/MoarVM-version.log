@@ -1,9 +1,9 @@
 MoarVM
 2015.11-36-g170ca53
 Rakudo
-Bend-374-g539b5f4
+Bend-392-g0ec5ad5
 NQP
-2015.11-35-ge4912e9
+2015.11-39-g7ab9ad5
 modules
 --------
 Bailador
@@ -153,11 +153,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 6848ad069dc8ed36c88295160d175e568832aaf1
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Fri Dec 4 21:22:38 2015 +0100
+commit faae5ff9afb5117435147f582d02fc284c63f418
+Author: Elizabeth Mattijsen <liz@dijkmat.nl>
+Date:   Sun Dec 6 10:31:55 2015 +0100
 
-    Use HTTPS links where available
+    Add documentation for Promise.at
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -213,29 +213,27 @@ Date:   Sun Nov 29 16:22:09 2015 -0500
     @*INC is dead, long live CURLI
 --------
 json_fast
-commit fb03888c6641bd3a92f8fb4d83fda16615faedc4
+commit be150ddb4277748201f5100759b48a0d3328840a
 Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Tue Dec 1 12:29:03 2015 +0100
+Date:   Sat Dec 5 23:58:34 2015 +0100
 
-    replace deprecated SEQ with STATEMENT_LIST
-    
-    Thanks (Johnny 5)++
+    put some bounds checks into the code
 --------
 jsonrpc
-commit 8fe75acf08d49c3da64ca892b1c6ea30d99d7daa
-Merge: 8842b8e 6ada9aa
+commit 2aaf5bf096ca5b40c59d49972ccaf5b8b988665e
+Merge: 8fe75ac 9b29320
 Author: Pawel Pabian <bbkr@post.pl>
-Date:   Wed Nov 18 11:43:19 2015 +0100
+Date:   Sat Dec 5 22:14:28 2015 +0100
 
-    Merge pull request #23 from stmuk/master
+    Merge pull request #24 from zoffixznet/fix-inc
     
-    Fix test by the rename sum to addition now it's a keyword
+    Fix removed @*INC
 
-commit 6ada9aac93edafc7db8c41952d0f0d5273e8140f
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Nov 17 22:48:26 2015 +0000
+commit 9b29320a9fa8749c95469cf8f6ccff56d3e32924
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Fri Dec 4 18:49:06 2015 -0500
 
-    rename sum to addition now it's a keyword
+    Fix removed @*INC
 --------
 library-make
 commit 050422dc3ee6a23be224483607a718ba40bf822f
@@ -278,26 +276,27 @@ Date:   Fri Sep 18 21:42:41 2015 +0200
     done() is now called done-testing()
 --------
 panda
-commit 22c36bbed85835177f2c29af1ae2483a3eb31ce8
-Merge: 5873521 630ead6
-Author: lizmat <liz@dijkmat.nl>
-Date:   Sat Dec 5 19:12:10 2015 +0100
+commit 7151bbd438dedffb0a7b036da7f91a3b5e27c992
+Merge: 136561e 5b8ec92
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Sat Dec 5 23:58:58 2015 +0100
 
-    Merge pull request #261 from stmuk/master
+    Merge commit '5b8ec92bad530a2d5ee5649732bff223b977bb74'
     
-    explicit fatal error if provides is absent from META information
+    Grab some performance improvements and now necessary explicit bounds checks
 
-commit 630ead60cb569be0a3d9a579fe426a0a9473bce5
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Sat Dec 5 15:22:58 2015 +0000
+commit 5b8ec92bad530a2d5ee5649732bff223b977bb74
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Sat Dec 5 23:58:58 2015 +0100
 
-    allow empty provides value
-
-commit 83e7a868d273f0cf01e00ef482cfe0f67670550c
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Sat Dec 5 14:46:11 2015 +0000
-
-    explicit fatal error if provides is absent from META information
+    Squashed 'ext/JSON__Fast/' changes from 62ff510..be150dd
+    
+    be150dd put some bounds checks into the code
+    fb03888 replace deprecated SEQ with STATEMENT_LIST
+    4393d4a optimize a bit more
+    
+    git-subtree-dir: ext/JSON__Fast
+    git-subtree-split: be150ddb4277748201f5100759b48a0d3328840a
 --------
 perl6-digest-md5
 commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b
@@ -323,20 +322,20 @@ Date:   Wed Dec 2 11:16:08 2015 -0800
     Re-enabled container infrastructure in Travis CI
 --------
 perl6-http-status
-commit 7f1fe69b09f8293501f6fe15bb4bfd39670f9443
-Merge: 373aec2 6b91b11
+commit a026ba89bcbad16344d988bf1212cc66bb5de6b7
+Merge: 7f1fe69 a695899
 Author: Timothy Totten <2009@huri.net>
-Date:   Wed Sep 9 09:01:27 2015 -0700
+Date:   Sat Dec 5 21:09:31 2015 -0800
 
-    Merge pull request #8 from zostay/add-is-tests
+    Merge pull request #9 from zoffixznet/fix-inc
     
-    Add the is-* tests from ether's HTTP::Status
+    Fix removed @*INC
 
-commit 6b91b11f3a783a9f873db96594c31b646f56ec65
-Author: Sterling Hanenkamp <sterling@hanenkamp.com>
-Date:   Tue Sep 8 23:40:24 2015 -0500
+commit a695899481ec4b9901a52b1eff0df373766dc654
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Fri Dec 4 19:36:20 2015 -0500
 
-    Add the is-* tests from ether's HTTP::Status
+    Fix removed @*INC
 --------
 perl6-lwp-simple
 commit 41c5370e7d770d5ec5f77c659ac05dc8432cd6d7

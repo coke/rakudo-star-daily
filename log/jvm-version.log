@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-Bend-433-gdf7c255
+Bend-445-g67749a7
 NQP
-2015.11-39-g7ab9ad5
+2015.11-40-gd6370eb
 modules
 --------
 Bailador
@@ -58,14 +58,11 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 Linenoise
-commit 9f79f92bccd8a1f95373696a81b84d05a12940b1
+commit d0475a1540466991e5a10db34204489ab3ab2580
 Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Fri Dec 4 18:38:10 2015 -0600
+Date:   Tue Dec 8 22:22:56 2015 -0600
 
-    Install liblinenoise.so into installation lib directory by hand
-    
-    Until %?RESOURCES is implemented, this is a quick and dirty way to get
-    Linenoise working again
+    Make sure we actually use the filename from %?RESOURCES for the helper library
 --------
 MODULES.txt
 commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
@@ -153,11 +150,20 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit b9750d29b36624f4f68ee4700e4f183fb7ddea32
-Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
-Date:   Tue Dec 8 16:11:34 2015 +0000
+commit 6f59d835801fa86c4a854e07bb2d72b6857679da
+Merge: b9f6fb0 606d556
+Author: Wenzel P. P. Peppmeyer <wenzel.peppmeyer@gmx.de>
+Date:   Wed Dec 9 16:49:22 2015 +0100
 
-    Add %?RESOURCES
+    Merge pull request #233 from gfldex/master
+    
+    add trap of adverb precedence
+
+commit 606d556060824d60d4df869cd02edda1205f2519
+Author: Wenzel P. P. Peppmeyer <wenzel.peppmeyer@gmx.de>
+Date:   Wed Dec 9 16:47:40 2015 +0100
+
+    add trap of adverb precedence
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -213,11 +219,20 @@ Date:   Sun Nov 29 16:22:09 2015 -0500
     @*INC is dead, long live CURLI
 --------
 json_fast
-commit be150ddb4277748201f5100759b48a0d3328840a
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Sat Dec 5 23:58:34 2015 +0100
+commit 8ad8c77954090495856a11ae9da1e38d74128706
+Merge: be150dd c3bc033
+Author: timo <timonator@perpetuum-immobile.de>
+Date:   Wed Dec 9 13:06:41 2015 +0100
 
-    put some bounds checks into the code
+    Merge pull request #8 from zoffixznet/fix-freeze
+    
+    Fix freezing issue during tests (zoffix++ lucasb++)
+
+commit c3bc0331743f112aa08fd73ba32e89a6ece7d194
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Tue Dec 8 19:28:51 2015 -0500
+
+    Fix freezing issue during tests
 --------
 jsonrpc
 commit 2aaf5bf096ca5b40c59d49972ccaf5b8b988665e

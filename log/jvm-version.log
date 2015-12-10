@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-Bend-445-g67749a7
+Bend-472-g8287aad
 NQP
 2015.11-40-gd6370eb
 modules
@@ -150,20 +150,20 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 6f59d835801fa86c4a854e07bb2d72b6857679da
-Merge: b9f6fb0 606d556
+commit b894ae78ddd61d30c83710a6c3e66851cfd5ea3a
+Merge: 70cc088 1244ecc
 Author: Wenzel P. P. Peppmeyer <wenzel.peppmeyer@gmx.de>
-Date:   Wed Dec 9 16:49:22 2015 +0100
+Date:   Thu Dec 10 18:30:27 2015 +0100
 
-    Merge pull request #233 from gfldex/master
+    Merge pull request #236 from gfldex/master
     
-    add trap of adverb precedence
+    add lazy example for sub dir
 
-commit 606d556060824d60d4df869cd02edda1205f2519
+commit 1244ecc37712ee2c44ce034c77a0e53a5636cdbc
 Author: Wenzel P. P. Peppmeyer <wenzel.peppmeyer@gmx.de>
-Date:   Wed Dec 9 16:47:40 2015 +0100
+Date:   Thu Dec 10 18:27:07 2015 +0100
 
-    add trap of adverb precedence
+    add lazy example for sub dir
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -291,27 +291,26 @@ Date:   Fri Sep 18 21:42:41 2015 +0200
     done() is now called done-testing()
 --------
 panda
-commit 7151bbd438dedffb0a7b036da7f91a3b5e27c992
-Merge: 136561e 5b8ec92
+commit ee64893ecae0f766e7c1d098cbabe6e51e1376bf
+Merge: 7151bbd 1fb6f9f
 Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Sat Dec 5 23:58:58 2015 +0100
+Date:   Thu Dec 10 00:47:05 2015 +0100
 
-    Merge commit '5b8ec92bad530a2d5ee5649732bff223b977bb74'
+    Merge commit '1fb6f9fa3692fa6279d4c5ca883d98aa1eb2c41b'
     
-    Grab some performance improvements and now necessary explicit bounds checks
+    Fixes a hang for some people
 
-commit 5b8ec92bad530a2d5ee5649732bff223b977bb74
+commit 1fb6f9fa3692fa6279d4c5ca883d98aa1eb2c41b
 Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Sat Dec 5 23:58:58 2015 +0100
+Date:   Thu Dec 10 00:47:05 2015 +0100
 
-    Squashed 'ext/JSON__Fast/' changes from 62ff510..be150dd
+    Squashed 'ext/JSON__Fast/' changes from be150dd..8ad8c77
     
-    be150dd put some bounds checks into the code
-    fb03888 replace deprecated SEQ with STATEMENT_LIST
-    4393d4a optimize a bit more
+    8ad8c77 Merge pull request #8 from zoffixznet/fix-freeze
+    c3bc033 Fix freezing issue during tests
     
     git-subtree-dir: ext/JSON__Fast
-    git-subtree-split: be150ddb4277748201f5100759b48a0d3328840a
+    git-subtree-split: 8ad8c77954090495856a11ae9da1e38d74128706
 --------
 perl6-digest-md5
 commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b

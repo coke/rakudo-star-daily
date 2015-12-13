@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-Bend-500-g15a9ed9
+Bend-521-g782f4b6
 NQP
 2015.11-45-g044d4dd
 modules
@@ -150,14 +150,20 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 7187fee0004bcc5ac2e8b21a40d849a70dafd016
-Author: skids <bri@abrij.org>
-Date:   Sat Dec 12 10:55:54 2015 -0500
+commit 592e4a5453450dbbe6e154748caeed455406d772
+Merge: 68a913a b45a10e
+Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
+Date:   Sun Dec 13 12:15:16 2015 -0500
 
-    Decided example of when statement modifier disrupted the flow
+    Merge pull request #240 from pdl/pr-type-error
     
-      Explain it when explaining proceed/succeed instead
-      Also, document nested when/default statements
+    Fix type check failing (gh #227)
+
+commit b45a10ec3796553d0c45250e52b5181600c4145d
+Author: Daniel Perrett <perrettdl@googlemail.com>
+Date:   Sun Dec 13 16:12:53 2015 +0000
+
+    Fix type check failing (gh #227)
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

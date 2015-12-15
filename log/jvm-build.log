@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix="/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install" --backends=jvm && make
-Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2015.11-49-ga2fe8eb / OpenJDK 1.7.0_91).
+Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2015.11-58-gb13205b / OpenJDK 1.7.0_91).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -42,65 +42,46 @@ java -Xss1m -Xms500m -Xmx2000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-sta
 The following step can take a long time, please be patient.
 java -Xss1m -Xms500m -Xmx2000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar:rakudo-runtime.jar:perl6.jar -cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib perl6 --setting=NULL --ll-exception --optimize=3 --target=jar --stagestats --output=CORE.setting.jar gen/jvm/CORE.setting
 Stage start      :   0.000
-Stage parse      :  93.730
-Stage syntaxcheck:   0.001
-Stage ast        :   0.001
-Stage optimize   :  10.844
-Stage jast       :  33.937
-Stage classfile  :   7.814
-Stage jar        :   0.000
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-jvm-runner.pl dev . . /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar
-Creating './perl6-j'
-Creating './perl6-jdb-server'
-Creating './perl6-eval-server'
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/eval-client.pl .
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j tools/build/gen-cat.nqp jvm src/perl6-debug.nqp gen/jvm/main-version.nqp > gen/jvm/j-perl6-debug.nqp
-/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j --target=jar --javaclass=perl6-debug --output=perl6-debug.jar \
-    gen/jvm/j-perl6-debug.nqp
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-jvm-runner.pl dev-debug . . /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar
-Creating './perl6-debug-j'
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp perl6-j perl6
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e chmod 755 perl6
+Stage parse      : java.lang.NullPointerException
+  in create_BUILDPLAN (gen/jvm/Metamodel.nqp:1458)
+  in compose (gen/jvm/Metamodel.nqp:2912)
+  in pkg_compose (src/Perl6/World.nqp:2673)
+  in package_def (gen/jvm/Perl6-Actions.nqp:2495)
+  in !reduce (gen/jvm/stage2/QRegex.nqp:1342)
+  in !cursor_pass (gen/jvm/stage2/QRegex.nqp:1303)
+  in package_def (src/Perl6/Grammar.nqp:2329)
+  in package_declarator:sym<class> (src/Perl6/Grammar.nqp)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1379)
+  in package_declarator (src/Perl6/Grammar.nqp)
+  in scoped (src/Perl6/Grammar.nqp:2406)
+  in scope_declarator:sym<my> (src/Perl6/Grammar.nqp)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1379)
+  in scope_declarator (src/Perl6/Grammar.nqp)
+  in term:sym<scope_declarator> (src/Perl6/Grammar.nqp)
+  in !protoregex (gen/jvm/stage2/QRegex.nqp:1379)
+  in term (src/Perl6/Grammar.nqp)
+  in termish (src/Perl6/Grammar.nqp:3710)
+  in EXPR (gen/jvm/stage2/NQPHLL.nqp:561)
+  in EXPR (src/Perl6/Grammar.nqp:3745)
+  in statement (src/Perl6/Grammar.nqp:1216)
+  in statementlist (src/Perl6/Grammar.nqp:1145)
+  in LANG (gen/jvm/stage2/NQPHLL.nqp:785)
+  in FOREIGN_LANG (src/Perl6/Grammar.nqp:1535)
+  in comp_unit (src/Perl6/Grammar.nqp:1129)
+  in TOP (src/Perl6/Grammar.nqp:432)
+  in parse (gen/jvm/stage2/QRegex.nqp:2093)
+  in parse (gen/jvm/stage2/NQPHLL.nqp:1471)
+  in compile (gen/jvm/stage2/NQPHLL.nqp:1427)
+  in eval (gen/jvm/stage2/NQPHLL.nqp:1164)
+  in evalfiles (gen/jvm/stage2/NQPHLL.nqp:1384)
+  in command_eval (gen/jvm/stage2/NQPHLL.nqp:1278)
+  in command_eval (src/Perl6/Compiler.nqp:69)
+  in command_line (gen/jvm/stage2/NQPHLL.nqp:1252)
+  in MAIN (gen/jvm/main.nqp:37)
+  in <mainline> (gen/jvm/main.nqp:33)
+  in  (gen/jvm/main.nqp)
+Makefile:417: recipe for target 'CORE.setting.jar' failed
+make[1]: *** [CORE.setting.jar] Error 1
 make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'
-cd rakudo && make install
-make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/Perl6
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp blib/Perl6/ModuleLoader.jar blib/Perl6/World.jar blib/Perl6/Grammar.jar blib/Perl6/Ops.jar blib/Perl6/Actions.jar blib/Perl6/Optimizer.jar blib/Perl6/Pod.jar blib/Perl6/Compiler.jar blib/Perl6/Metamodel.jar blib/Perl6/BOOTSTRAP.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/Perl6
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp CORE.setting.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp perl6.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp perl6-debug.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e cp rakudo-runtime.jar /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/dist
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/sources
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/resources
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/bin
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/short
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/vendor/dist
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/vendor/sources
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/vendor/resources
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/vendor/bin
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/vendor/short
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/site/dist
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/site/sources
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/site/resources
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/site/bin
-/home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e mkpath /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/site/short
-./perl6-j tools/build/install-core-dist.pl
-===SORRY!===
-Missing serialize function for REPR ContextRef
-===SORRY!===
-Missing serialize function for REPR ContextRef
-2BC376F95E833B9DBEFFC6F7B874CF1CE2B4126D /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/sources/5CFEB40C0B07674AE3F194CAD3F2B9AD60C2AF87 Return status 256
-
-  in block <unit> at tools/build/install-core-dist.pl:15
-
-Actually thrown at:
-  in block <unit> at tools/build/install-core-dist.pl:15
-
-Makefile:483: recipe for target 'j-install' failed
-make[1]: *** [j-install] Error 1
-make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/rakudo'
-Makefile:56: recipe for target 'rakudo-install' failed
-make: *** [rakudo-install] Error 2
+Makefile:46: recipe for target 'rakudo/perl6-j' failed
+make: *** [rakudo/perl6-j] Error 2

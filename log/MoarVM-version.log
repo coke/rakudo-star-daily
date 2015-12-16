@@ -1,9 +1,9 @@
 MoarVM
-2015.11-50-ga677430
+2015.11-55-g49f10b9
 Rakudo
-Bend-570-g9be3cae
+Bend-590-ga54024a
 NQP
-2015.11-58-gb13205b
+2015.11-61-gf73fb45
 modules
 --------
 Bailador
@@ -23,23 +23,140 @@ Date:   Sat Oct 31 20:03:17 2015 +0100
     Add MIT License
 --------
 DBIish
-commit f1be21ed6de3e838f073b15b1e02f2b2e45b64ee
-Merge: 5d5d012 4a26f60
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Dec 5 09:34:08 2015 +0100
+commit b2f086c20574361c0b8d31576c7a9c1698ba8ad0
+Merge: f1be21e 552c877
+Author: Skarsnik <scolinet@gmail.com>
+Date:   Wed Dec 16 00:01:40 2015 +0100
 
-    Merge pull request #38 from AlexDaniel/patch-1
+    Merge pull request #35 from Skarsnik/master
     
-    Typo in META.info
+    Add row and allrows method that return typed value when possible and offer adverbs to change the way values are returned
 
-commit 4a26f607c5cbe0c89d578b0c6dc52d753be18a4b
-Author: Aleks-Daniel Jakimenko <alex.jakimenko+github@gmail.com>
-Date:   Sat Dec 5 06:40:55 2015 +0200
+commit 552c877f4db83f08eb4df75f129ab1a08cff4743
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Tue Dec 15 18:11:35 2015 +0100
 
-    Typo in META.info
-    
-    It seems like the typo was made during copy-pasting.
-    (“DBDish/SQLite” was renamed to “mysql/SQLite” instead of “DBDish/mysql”)
+    Fix a potential bug§
+
+commit 3ab2aba297e573e0eaf5944b53c89ebe06bcd0a6
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Tue Dec 15 14:21:13 2015 +0100
+
+    Add a test for Meta. Improve/fix the documentation
+
+commit 48308c71512b5b8ce05f1fbd7c356ffb68bcb1d9
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Mon Dec 14 21:03:59 2015 +0100
+
+    Mark a test as TODO
+
+commit f5644787235bc856d5dec91d3d51876c2d24f847
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Mon Dec 14 20:48:07 2015 +0100
+
+    Yay mysql work too
+
+commit e951e70cb0885686e34d4070162a3b39045d6a65
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Mon Dec 14 20:46:51 2015 +0100
+
+    small fix in TestMock
+
+commit 3022a8b5770156a19bfc0fbc91ebd7cb24655a9b
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Fri Dec 11 15:34:06 2015 +0100
+
+    mysql server, y u no work on my env
+
+commit 0d5a8c25ffd52f5c68018a8b5d1a55162cdacb93
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Fri Dec 11 15:12:20 2015 +0100
+
+    This commit should not stay, it's to make test pass for mysql on travis
+
+commit bb054514141b98dd214970f5063053375c8c9d1f
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Thu Dec 10 18:14:59 2015 +0100
+
+    Updated Meta.info to match master
+
+commit 430fc460641033b178d24dea3b36d90828f68dc4
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Thu Dec 10 17:47:06 2015 +0100
+
+    This should make mysql work? I hope not
+
+commit d38bbc70ecd3099df9234b3f6a6f9bb34d2a0fb8
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Thu Dec 10 15:01:31 2015 +0100
+
+    Does that fix error with rakudo (again)?
+
+commit d4cdffb401fd2e4f0d7aadda19650f6bc1538498
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Thu Dec 10 14:51:19 2015 +0100
+
+    Does that fix error with rakudo?
+
+commit 8ef06071475def035ede889cc88c9e0d6496dd4f
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Thu Dec 10 14:13:30 2015 +0100
+
+    Fix test for Num to Real. Need probably more though on this
+
+commit 2b19f2973c3cf497236dcb1aeec597c9902b16b2
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Thu Dec 10 13:10:26 2015 +0100
+
+    add _row to testmoch
+
+commit 673f0fed253e8ff4add06a2adc38657075a0762f
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Thu Dec 10 12:34:11 2015 +0100
+
+    Add typed data in mysql (need testing?)
+
+commit 4de03a2a91918c676a66b84ca581f45ecad9d263
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Thu Dec 10 12:32:24 2015 +0100
+
+    Add some test to validate the NativeCall stuff. Fix mysql nativetype
+
+commit af35c4ce12682dbbce043388ccaea96a8e1f2632
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Tue Dec 1 23:48:13 2015 +0100
+
+    Fix example
+
+commit 86afabd7a8972c7d72feeddfa205551ae1f04520
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Tue Dec 1 22:15:19 2015 +0100
+
+    Add a bit of documentation
+
+commit 6bf60198fb11cdacc4a4ef136f9ca52114d63a84
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Tue Dec 1 22:00:57 2015 +0100
+
+    removing leftover
+
+commit d131267f8855cf8ea4588202469dcba357f548c2
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Tue Dec 1 21:59:29 2015 +0100
+
+    Remove deprecated for nearly all fetch
+
+commit 5b9c71adc8603dfe4ea3046c5b2e7dd73adc0a6c
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Tue Dec 1 17:27:16 2015 +0100
+
+    Time to break some DBIis based code, added allrows()
+
+commit 072a782a44034302724043dbbef6293cc5f7abe7
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Sun Nov 29 15:47:29 2015 +0100
+
+    Start of the mess that break everything
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -150,11 +267,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 142b4cff35257373eab7e7ee0752d8a60f46ad35
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Tue Dec 15 19:05:08 2015 +0100
+commit 376e0d141b7b4e9acedacf845e41f27e43151179
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Wed Dec 16 12:49:31 2015 -0500
 
-    Added bool and size_t to NC doc. Also add a bit of words on typed pointer
+    Actually link to Blue Tiger script instead of just mentioning it
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-Bend-590-ga54024a
+Bend-621-g887ca40
 NQP
-2015.11-61-gf73fb45
+2015.11-77-ge3b16b2
 modules
 --------
 Bailador
@@ -267,11 +267,14 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 376e0d141b7b4e9acedacf845e41f27e43151179
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Wed Dec 16 12:49:31 2015 -0500
+commit b6c0999bb80dc1b91f3c1fe8fdd70ed93688bba4
+Author: smls <smls75@gmail.com>
+Date:   Thu Dec 17 16:23:43 2015 +0100
 
-    Actually link to Blue Tiger script instead of just mentioning it
+    Make Perl6::Documentable::Registry.lookup more robust
+    
+    With this, `./htmlify.p6 --sparse=1000` works again for me.
+    Full run is still busted.
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -399,30 +402,16 @@ Date:   Fri Sep 18 21:42:41 2015 +0200
     done() is now called done-testing()
 --------
 panda
-commit 372e9c323aaea76f953b0ff7b2e65d07a2ca9614
-Merge: ee64893 a63e344
+commit 88c7eaebdd5042d2a367ee6e33058a962ec582b4
 Author: Stefan Seifert <nine@detonation.org>
-Date:   Sat Dec 12 13:48:47 2015 +0100
+Date:   Thu Dec 17 19:50:59 2015 +0100
 
-    Merge branch 'repository_registry'
-
-commit a63e344d25ef5786582c479fad23239f6b88a335
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Wed Dec 9 19:06:19 2015 +0100
-
-    %*CUSTOM_LIB is now CompUnit::RepositoryRegistry.repository-for-name
-
-commit d84fca7c8f257240d6c1c5697491d991ec0238cf
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Wed Dec 9 01:29:34 2015 +0100
-
-    CompUnit::RepositoryRegistry.new -> repository-for-spec
-
-commit a7040f84506d7c4a6988f83ba2d76edccbb42f96
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Wed Dec 9 00:57:46 2015 +0100
-
-    CompUnitRepo is now CompUnit::RepositoryRegistry
+    Revert "Remove scary $*REPO trickery"
+    
+    This reverts commit 09453570b330476a60d3cf13c7a590cef8acc5ac.
+    
+    While the Build.pm themselves don't need the repository, panda needs it to load
+    Build.pm in the first place
 --------
 perl6-digest-md5
 commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b

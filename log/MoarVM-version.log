@@ -1,9 +1,9 @@
 MoarVM
-2015.11-72-g76ccc58
+2015.11-110-g3638da6
 Rakudo
-Bend-621-g887ca40
+Bend-661-g193bc61
 NQP
-2015.11-77-ge3b16b2
+2015.11-81-ga31a3d0
 modules
 --------
 Bailador
@@ -175,11 +175,13 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 Linenoise
-commit d0475a1540466991e5a10db34204489ab3ab2580
+commit 682d47925efe1265f365c8faf8021ed54801c9f8
 Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Tue Dec 8 22:22:56 2015 -0600
+Date:   Fri Dec 18 12:05:36 2015 -0600
 
-    Make sure we actually use the filename from %?RESOURCES for the helper library
+    Load Linenoise from lib, not blib for Travis
+    
+    Panda no longer builds things in blib, so that angers Travis
 --------
 MODULES.txt
 commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
@@ -267,14 +269,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit b6c0999bb80dc1b91f3c1fe8fdd70ed93688bba4
-Author: smls <smls75@gmail.com>
-Date:   Thu Dec 17 16:23:43 2015 +0100
+commit dc670e3ed467861df65ba407edbff74198766952
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Fri Dec 18 09:48:30 2015 -0500
 
-    Make Perl6::Documentable::Registry.lookup more robust
-    
-    With this, `./htmlify.p6 --sparse=1000` works again for me.
-    Full run is still busted.
+    Fixes #249 incorrect variable name
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

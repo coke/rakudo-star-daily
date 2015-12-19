@@ -1,9 +1,9 @@
 MoarVM
-2015.11-110-g3638da6
+2015.11-112-g3a80bd3
 Rakudo
-Bend-661-g193bc61
+Bend-686-g09aaf93
 NQP
-2015.11-81-ga31a3d0
+2015.11-83-g3a2f9cd
 modules
 --------
 Bailador
@@ -269,11 +269,26 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit dc670e3ed467861df65ba407edbff74198766952
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Fri Dec 18 09:48:30 2015 -0500
+commit 4b23acad7b5006c690f32862c17360a54a151788
+Merge: dc670e3 dbbce3e
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sat Dec 19 15:48:37 2015 +0100
 
-    Fixes #249 incorrect variable name
+    Merge pull request #250 from sylvarant/master
+    
+    Travis runs make html
+
+commit dbbce3e577dde426fdeb861703334ee6c026d2ff
+Author: Adriaan <adriaan.larmuseau@gmail.com>
+Date:   Sat Dec 19 13:56:43 2015 +0100
+
+    travis runs make html
+
+commit 52c4358a58997c62ba641730d8691b620e969c9b
+Author: Adriaan <adriaan.larmuseau@gmail.com>
+Date:   Sat Dec 19 12:31:42 2015 +0100
+
+    add graphviz
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -385,32 +400,21 @@ Date:   Sat Oct 17 22:30:59 2015 -0600
     [ci skip]
 --------
 p6-file-directory-tree
-commit 20e8b6d801c6ed0f9fa6e06705e28c44f72cd880
-Merge: 3fd85c4 dd1eb09
-Author: Brent Laabs <bslaabs@gmail.com>
-Date:   Sat Sep 19 13:21:12 2015 -0700
+commit 9970d80c0404f640eeda3c623c39a13496c9a0b2
+Author: Brent Laabs <blaabs@perceptyx.com>
+Date:   Sat Dec 19 01:49:33 2015 -0800
 
-    Merge pull request #5 from FROGGS/patch-1
-    
-    done() is now called done-testing()
-
-commit dd1eb09848149ccb9de7756509cd1f46244aae81
-Author: Tobias Leich <email@froggs.de>
-Date:   Fri Sep 18 21:42:41 2015 +0200
-
-    done() is now called done-testing()
+    Add Travis CI
 --------
 panda
-commit 88c7eaebdd5042d2a367ee6e33058a962ec582b4
+commit b07101386e04d474367917602ea97cbaa2f485c4
 Author: Stefan Seifert <nine@detonation.org>
-Date:   Thu Dec 17 19:50:59 2015 +0100
+Date:   Fri Dec 18 21:37:19 2015 +0100
 
-    Revert "Remove scary $*REPO trickery"
+    Remove scarly $*REPO trickery, second try.
     
-    This reverts commit 09453570b330476a60d3cf13c7a590cef8acc5ac.
-    
-    While the Build.pm themselves don't need the repository, panda needs it to load
-    Build.pm in the first place
+    Now that rakudo can always load a module given an absolute path, we can use
+    that to load the Build.pm.
 --------
 perl6-digest-md5
 commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b

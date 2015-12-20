@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-Bend-686-g09aaf93
+Bend-692-gf1bbd4c
 NQP
-2015.11-83-g3a2f9cd
+2015.11-130-g2739200
 modules
 --------
 Bailador
@@ -175,13 +175,16 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 Linenoise
-commit 682d47925efe1265f365c8faf8021ed54801c9f8
+commit 31afaf0995ff9beaaedf082b09e8edd0a5406ea1
 Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Fri Dec 18 12:05:36 2015 -0600
+Date:   Sun Dec 20 12:04:08 2015 -0600
 
-    Load Linenoise from lib, not blib for Travis
+    Disable precompilation for now
     
-    Panda no longer builds things in blib, so that angers Travis
+    I don't know if it's specific to Linenoise or not, but in my experience,
+    usage of %?RESOURCES is currently causing problems with precompilation.
+    I'm not a fan of this (temporary) solution, but being able to install a
+    slow Linenoise is better than no Linenoise at all
 --------
 MODULES.txt
 commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
@@ -269,26 +272,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 4b23acad7b5006c690f32862c17360a54a151788
-Merge: dc670e3 dbbce3e
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Dec 19 15:48:37 2015 +0100
+commit b21bc8f65837a32f1af29d3dca7092dc21ab8384
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Sun Dec 20 20:06:45 2015 +0000
 
-    Merge pull request #250 from sylvarant/master
-    
-    Travis runs make html
-
-commit dbbce3e577dde426fdeb861703334ee6c026d2ff
-Author: Adriaan <adriaan.larmuseau@gmail.com>
-Date:   Sat Dec 19 13:56:43 2015 +0100
-
-    travis runs make html
-
-commit 52c4358a58997c62ba641730d8691b620e969c9b
-Author: Adriaan <adriaan.larmuseau@gmail.com>
-Date:   Sat Dec 19 12:31:42 2015 +0100
-
-    add graphviz
+    MONKEY-SEE-NO-EVAL Skarsnik++
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -407,14 +395,20 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit b07101386e04d474367917602ea97cbaa2f485c4
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Fri Dec 18 21:37:19 2015 +0100
+commit 778c6d44693db7cbbcafa2fe00f68ffca0b9451e
+Merge: b071013 95b3b34
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Sun Dec 20 13:07:36 2015 +0100
 
-    Remove scarly $*REPO trickery, second try.
+    Merge pull request #266 from labster/master
     
-    Now that rakudo can always load a module given an absolute path, we can use
-    that to load the Build.pm.
+    Add MONKEY-SEE-NO-EVAL pragma to access EVAL after change today
+
+commit 95b3b3415e5a5c4f31b3891e0b9146b86e90ba48
+Author: Brent Laabs <blaabs@perceptyx.com>
+Date:   Sun Dec 20 01:41:29 2015 -0800
+
+    Add MONKEY-SEE-NO-EVAL pragma to access EVAL after change today
 --------
 perl6-digest-md5
 commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b

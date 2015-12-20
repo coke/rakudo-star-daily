@@ -1,9 +1,9 @@
 MoarVM
-2015.11-112-g3a80bd3
+2015.11-113-gbd56e2e
 Rakudo
-Bend-686-g09aaf93
+Bend-692-gf1bbd4c
 NQP
-2015.11-83-g3a2f9cd
+2015.11-130-g2739200
 modules
 --------
 Bailador
@@ -175,13 +175,16 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 Linenoise
-commit 682d47925efe1265f365c8faf8021ed54801c9f8
+commit 31afaf0995ff9beaaedf082b09e8edd0a5406ea1
 Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Fri Dec 18 12:05:36 2015 -0600
+Date:   Sun Dec 20 12:04:08 2015 -0600
 
-    Load Linenoise from lib, not blib for Travis
+    Disable precompilation for now
     
-    Panda no longer builds things in blib, so that angers Travis
+    I don't know if it's specific to Linenoise or not, but in my experience,
+    usage of %?RESOURCES is currently causing problems with precompilation.
+    I'm not a fan of this (temporary) solution, but being able to install a
+    slow Linenoise is better than no Linenoise at all
 --------
 MODULES.txt
 commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
@@ -269,6 +272,48 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
+commit 7882ee7500e4e1538baa878b95764d3a36980ee1
+Merge: c10c2a1 3469f52
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Sun Dec 20 18:34:22 2015 +0100
+
+    Merge branch 'master' of https://github.com/perl6/doc
+
+commit 3469f52663c65d7363627e9e77e9927ca700df3c
+Author: Brock Wilcox <bwilcox@optoro.com>
+Date:   Sun Dec 20 01:02:26 2015 -0500
+
+    Maybe less space?
+
+commit 90a9437064f442311c412341e8b0ffdb85d0796e
+Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
+Date:   Sat Dec 19 20:33:24 2015 -0500
+
+    Replace unspace
+    
+    Seems there's an issue with some of unspace-less constructs still. Should fix breakage mentioned here: https://github.com/perl6/doc/pull/251#issuecomment-166050291
+
+commit 12d82422ca5c871c4174c816248db2f7a0eb8a95
+Author: Brock Wilcox <bwilcox@optoro.com>
+Date:   Sat Dec 19 18:58:33 2015 -0500
+
+    Document signature literals
+
+commit d5a77e612fcce35de71792a55482448a5f511223
+Merge: 4b23aca 85fd191
+Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
+Date:   Sat Dec 19 18:23:00 2015 -0500
+
+    Merge pull request #251 from perl6/un-unspace
+    
+    Remove some unneeded unspace
+
+commit 85fd19155796da88968ae18773f1f68a6b614d0b
+Author: Brock Wilcox <bwilcox@optoro.com>
+Date:   Sat Dec 19 18:20:48 2015 -0500
+
+    Remove some unneeded unspace
+
 commit 4b23acad7b5006c690f32862c17360a54a151788
 Merge: dc670e3 dbbce3e
 Author: Moritz Lenz <moritz@faui2k3.org>
@@ -289,6 +334,110 @@ Author: Adriaan <adriaan.larmuseau@gmail.com>
 Date:   Sat Dec 19 12:31:42 2015 +0100
 
     add graphviz
+
+commit dc670e3ed467861df65ba407edbff74198766952
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Fri Dec 18 09:48:30 2015 -0500
+
+    Fixes #249 incorrect variable name
+
+commit 3d02153cd32af19eb2c3c2eb740f7fcf06754e00
+Author: smls <smls75@gmail.com>
+Date:   Fri Dec 18 01:03:02 2015 +0100
+
+    Consistent formatting and wording across the 'Testing' language doc
+
+commit ed8adef0bebe30ec8b01a7772b86ecf756c957c9
+Author: smls <smls75@gmail.com>
+Date:   Thu Dec 17 22:48:19 2015 +0100
+
+    Re-structure the 'Testing' language doc
+    
+    Moved around sections and renamed subheadings, to make the page more
+    logically structured and accessible for readers.
+    
+    Comparison of before/after structure: http://pastebin.com/raw/UZUMYTH1
+
+commit 647ce18dbca51c86ba817e98b7df1dae26c89c02
+Author: smls <smls75@gmail.com>
+Date:   Thu Dec 17 22:46:01 2015 +0100
+
+    move method below all attribute declarations and fix typo
+
+commit 57cd2dec30f19cedf19df3d74ec5ed4a84b621bb
+Author: usev6 <use_v6@aglaz.de>
+Date:   Thu Dec 17 22:54:39 2015 +0100
+
+    Remove misspelled exception
+    
+    it is named 'X::Syntax::AddCategorical::TooFewParts' now
+    smls++ for bringing this up
+
+commit bd1480c1e69d9cc2d0f4db430fe5d92267e47398
+Author: smls <smls75@gmail.com>
+Date:   Thu Dec 17 21:39:01 2015 +0100
+
+    Another attempt to fix initialization of @!categories (gh #227)
+    
+    The problem is that when pre-building the attribute hash and then
+    creating the Perl6::Documentable object with .new(|%args), array
+    values are itemized by he hash, and thus the wrong thing happens
+    when the default constructor assigns them to the respective
+    array attributes of the class via single-argument rule.
+    
+    This commit overrides the default constructor to remove the
+    itemization, which fixes the problem.
+    
+    A better long-term solution might be to refactor htmlify.p6 to not
+    pre-build the attribute initialization lists as hashes.
+
+commit 6eeef84e74729e2c1cce3fbabbe5610d637a6a23
+Author: smls <smls75@gmail.com>
+Date:   Thu Dec 17 19:43:57 2015 +0100
+
+    Revert "Fix type check failing (gh #227)"
+    
+    It didn't actually fix the problem, just hid it and replaced it with
+    a new problem by causing us to run into Rakudo bug RT 126951. Not to
+    mention it made the hash definitions kinda ugly.
+    
+    This reverts commit b45a10ec3796553d0c45250e52b5181600c4145d.
+
+commit b6c0999bb80dc1b91f3c1fe8fdd70ed93688bba4
+Author: smls <smls75@gmail.com>
+Date:   Thu Dec 17 16:23:43 2015 +0100
+
+    Make Perl6::Documentable::Registry.lookup more robust
+    
+    With this, `./htmlify.p6 --sparse=1000` works again for me.
+    Full run is still busted.
+
+commit 376e0d141b7b4e9acedacf845e41f27e43151179
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Wed Dec 16 12:49:31 2015 -0500
+
+    Actually link to Blue Tiger script instead of just mentioning it
+
+commit 4883a73ab1f878bec5b09a35832d80d4812a11bf
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Wed Dec 16 16:31:10 2015 +0000
+
+    Add native-descriptor description
+
+commit 77518c1aa270d98d6d93689a36dde652bce6d9db
+Merge: 142b4cf 46b1ecb
+Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
+Date:   Tue Dec 15 17:13:51 2015 -0500
+
+    Merge pull request #248 from perl6/zero-arg-funcs
+    
+    Describe the new restrictions on some zero-argument funcs
+
+commit 46b1ecb25aaeca13a98a3988a18c256696c90774
+Author: Brock Wilcox <bwilcox@optoro.com>
+Date:   Tue Dec 15 16:18:50 2015 -0500
+
+    Describe the new restrictions on some zero-argument funcs
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -407,14 +556,20 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit b07101386e04d474367917602ea97cbaa2f485c4
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Fri Dec 18 21:37:19 2015 +0100
+commit 778c6d44693db7cbbcafa2fe00f68ffca0b9451e
+Merge: b071013 95b3b34
+Author: Jonathan Worthington <jnthn@jnthn.net>
+Date:   Sun Dec 20 13:07:36 2015 +0100
 
-    Remove scarly $*REPO trickery, second try.
+    Merge pull request #266 from labster/master
     
-    Now that rakudo can always load a module given an absolute path, we can use
-    that to load the Build.pm.
+    Add MONKEY-SEE-NO-EVAL pragma to access EVAL after change today
+
+commit 95b3b3415e5a5c4f31b3891e0b9146b86e90ba48
+Author: Brent Laabs <blaabs@perceptyx.com>
+Date:   Sun Dec 20 01:41:29 2015 -0800
+
+    Add MONKEY-SEE-NO-EVAL pragma to access EVAL after change today
 --------
 perl6-digest-md5
 commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b

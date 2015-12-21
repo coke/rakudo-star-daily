@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-Bend-692-gf1bbd4c
+Bend-716-gcfb1f37
 NQP
-2015.11-130-g2739200
+2015.11-136-g5cd8a30
 modules
 --------
 Bailador
@@ -175,16 +175,11 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 Linenoise
-commit 31afaf0995ff9beaaedf082b09e8edd0a5406ea1
+commit 20690178684614d37caeade505316ac4aaf411b6
 Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Sun Dec 20 12:04:08 2015 -0600
+Date:   Sun Dec 20 17:58:03 2015 -0600
 
-    Disable precompilation for now
-    
-    I don't know if it's specific to Linenoise or not, but in my experience,
-    usage of %?RESOURCES is currently causing problems with precompilation.
-    I'm not a fan of this (temporary) solution, but being able to install a
-    slow Linenoise is better than no Linenoise at all
+    Add version and auth information to Linenoise
 --------
 MODULES.txt
 commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
@@ -272,11 +267,20 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit b21bc8f65837a32f1af29d3dca7092dc21ab8384
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Sun Dec 20 20:06:45 2015 +0000
+commit c717bda02bc1143bf97bd13915bc3a89ff4e5caf
+Merge: 006910f ce1302c
+Author: nxadm <nxadm@users.noreply.github.com>
+Date:   Mon Dec 21 20:05:02 2015 +0100
 
-    MONKEY-SEE-NO-EVAL Skarsnik++
+    Merge pull request #257 from nxadm/master
+    
+    META.info: author -> authors
+
+commit ce1302cb1724213d4459465e01549a2f217e2269
+Author: Claudio Ramirez <pub.claudio@gmail.com>
+Date:   Mon Dec 21 20:02:28 2015 +0100
+
+    META.info: author -> authord
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -395,20 +399,20 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit 778c6d44693db7cbbcafa2fe00f68ffca0b9451e
-Merge: b071013 95b3b34
-Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Sun Dec 20 13:07:36 2015 +0100
+commit 33c496e5172f24889fe8efd341c2ebe3839072f4
+Merge: 778c6d4 6073de4
+Author: lizmat <liz@dijkmat.nl>
+Date:   Mon Dec 21 12:40:58 2015 +0100
 
-    Merge pull request #266 from labster/master
+    Merge pull request #267 from skids/aloha_as
     
-    Add MONKEY-SEE-NO-EVAL pragma to access EVAL after change today
+    Remove all uses of "as" and replace with coercive types
 
-commit 95b3b3415e5a5c4f31b3891e0b9146b86e90ba48
-Author: Brent Laabs <blaabs@perceptyx.com>
-Date:   Sun Dec 20 01:41:29 2015 -0800
+commit 6073de4c0bc349d467347e7d2647a6cdb33b74c7
+Author: skids <bri@abrij.org>
+Date:   Sun Dec 20 22:07:14 2015 -0500
 
-    Add MONKEY-SEE-NO-EVAL pragma to access EVAL after change today
+    Remove all uses of "as" and replace with coercive types
 --------
 perl6-digest-md5
 commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b

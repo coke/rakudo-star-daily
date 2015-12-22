@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-Bend-716-gcfb1f37
+Bend-724-g6925c2b
 NQP
-2015.11-136-g5cd8a30
+2015.11-142-g8c64347
 modules
 --------
 Bailador
@@ -221,18 +221,41 @@ Date:   Sat Oct 17 21:41:18 2015 +0800
     add .travis.yml
 --------
 Pod-To-HTML
-commit b33aac41eedd811aa42c4047c36ffae07d0c1801
-Author: Gabor Szabo <gabor@szabgab.com>
-Date:   Sun Oct 11 15:02:37 2015 +0300
+commit 37886fddfa440abe689f85bc088fc94f0f325f34
+Merge: d73c1de 7109d9a
+Author: LLFourn <LLFourn@users.noreply.github.com>
+Date:   Tue Dec 22 21:31:15 2015 +1100
 
-    add travis-CI configuration file
+    Merge pull request #10 from LLFourn/master
+    
+    removing "twines"
+
+commit 7109d9ab64051fea2afb3e394305a51194d50bf5
+Author: LLFourn <lloyd.fourn@gmail.com>
+Date:   Tue Dec 22 21:14:44 2015 +1100
+
+    removing "twines"
+    
+    they will not be a thing soon
 --------
 Template-Mojo
-commit e30289331c316cbd38a828ce03ce40946e0d91cc
-Author: Tadeusz “tadzik” Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Fri Aug 28 13:48:49 2015 +0200
+commit 351fee475a36ce922745dc203980c857db0d1304
+Merge: e302893 ef14fec
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Tue Dec 22 16:10:47 2015 +0100
 
-    Fill in META.info
+    Merge pull request #23 from hankache/patch-1
+    
+    use MONKEY-SEE-NO-EVAL;
+
+commit ef14fecd7e7cc62c08cdd88c7ff0206b2d2f94cf
+Author: Naoum Hankache <naoum88@gmail.com>
+Date:   Tue Dec 22 10:03:07 2015 +0200
+
+    use MONKEY-SEE-NO-EVAL;
+    
+    EVAL doesn't work anymore unless this pragma is used:
+    use MONKEY-SEE-NO-EVAL;
 --------
 Terminal-ANSIColor
 commit d79350878aaefb303406c9a9ab5695c7f83d056f
@@ -267,20 +290,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit c717bda02bc1143bf97bd13915bc3a89ff4e5caf
-Merge: 006910f ce1302c
-Author: nxadm <nxadm@users.noreply.github.com>
-Date:   Mon Dec 21 20:05:02 2015 +0100
+commit cc397c0c93ddd0cb932bdddf0bfef92942f3323f
+Author: ab5tract <john.haltiwanger@gmail.com>
+Date:   Mon Dec 21 19:28:15 2015 -0500
 
-    Merge pull request #257 from nxadm/master
-    
-    META.info: author -> authors
-
-commit ce1302cb1724213d4459465e01549a2f217e2269
-Author: Claudio Ramirez <pub.claudio@gmail.com>
-Date:   Mon Dec 21 20:02:28 2015 +0100
-
-    META.info: author -> authord
+    Document in-place editing of hash values
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

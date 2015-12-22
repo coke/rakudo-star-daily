@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install" --backends=moar && make
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.11-136-g5cd8a30 / MoarVM 2015.11-120-gb258173).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2015.11-142-g8c64347 / MoarVM 2015.11-120-gb258173).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -49,12 +49,12 @@ gcc  -L/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/instal
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm gen/moar/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  59.491
+Stage parse      :  57.432
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   9.770
-Stage mast       :  15.674
-Stage mbc        :   0.173
+Stage optimize   :   9.960
+Stage mast       :  16.697
+Stage mbc        :   0.193
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" perl6.moarvm --target=mbc --ll-exception --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e rm_f perl6-m
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" .
@@ -236,13 +236,13 @@ modules/debugger-ui-commandline/lib/Debugger/UI/CommandLine.pm => /home/coke/san
 == Precompiling modules
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/XML/Writer.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/XML/Writer.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG.pm
-5184073C40CFAAF0312B0CB0FAE160598C7A5A91 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/XML/Writer.pm
+BB39116A11CA34992300C35988BC8158896938C7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/XML/Writer.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Box.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Box.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Plot.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Plot.pm
-47E537D815F8FAFFA5CE0E3F39C3AFCF08F3BAB7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Box.pm
+1B9614C1D09E1DE4157B9F95BEB3C491A33BC68A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Box.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Pie.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Pie.pm
-47E537D815F8FAFFA5CE0E3F39C3AFCF08F3BAB7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Box.pm
-59814E981733BFF8A9DECE833174DEE3E421278E /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Plot.pm
+1B9614C1D09E1DE4157B9F95BEB3C491A33BC68A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Box.pm
+F419F96D2D6F2180E7B4F5E3983926FD6C6B9356 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Plot.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Positioned.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Positioned.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Data/Series.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Data/Series.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Data/Marker.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/SVG/Plot/Data/Marker.pm
@@ -251,240 +251,302 @@ modules/debugger-ui-commandline/lib/Debugger/UI/CommandLine.pm => /home/coke/san
 9522368A991B9C7CA93E735EF6005586BC227870 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/532BC924A593097C2605035055944BF91C3A63C7
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Grammar/Profiler/Simple.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Grammar/Profiler/Simple.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Grammar/Debugger.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Grammar/Debugger.pm
-06A823164F1B77E9F95C2C4AB149E2EF1EC98207 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Terminal/ANSIColor.pm
+1EF23C8D93F4286949D539BF594B035C744DEC9B /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Terminal/ANSIColor.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Grammar/Tracer.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Grammar/Tracer.pm
-06A823164F1B77E9F95C2C4AB149E2EF1EC98207 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Terminal/ANSIColor.pm
+1EF23C8D93F4286949D539BF594B035C744DEC9B /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Terminal/ANSIColor.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/MIME/Base64/Perl.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/MIME/Base64/Perl.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/MIME/Base64.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/MIME/Base64.pm6
-8C9E1A784B2B52F0A91A78F8E41F3B3F6D6BB338 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/MIME/Base64/Perl.pm6
+9A2C81CA49F815E824EF3EC7E3B08F9CD84477F7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/MIME/Base64/Perl.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/DefaultPort.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/DefaultPort.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-BE5F29F0F6D03900F10783EC008FC1E075C41B1F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-CAB8B71372577A1AB67C8BB530078FCB4D32AFDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
-3CBE6CDAD11A85FB41D2E3FEDDF4B51C8E2A28D6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/DefaultPort.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+61DD4C1F4BF0E41DC811D735A67A0095ECB48513 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+A6C91C419144000EA285393B1D37164B9CE420B1 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/DefaultPort.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm
-8C9E1A784B2B52F0A91A78F8E41F3B3F6D6BB338 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/MIME/Base64/Perl.pm6
-C5C3920E6AADC8F4130711702EE61367873D5F10 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/MIME/Base64.pm6
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-BE5F29F0F6D03900F10783EC008FC1E075C41B1F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-CAB8B71372577A1AB67C8BB530078FCB4D32AFDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
-3CBE6CDAD11A85FB41D2E3FEDDF4B51C8E2A28D6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/DefaultPort.pm
-8B1C2EA23197C3B91CC6BE9AB367D43A660AF612 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-CAB8B71372577A1AB67C8BB530078FCB4D32AFDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+9A2C81CA49F815E824EF3EC7E3B08F9CD84477F7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/MIME/Base64/Perl.pm6
+0E59A99D831D88D9F4B4E335DE674277758DE51B /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/MIME/Base64.pm6
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+61DD4C1F4BF0E41DC811D735A67A0095ECB48513 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+A6C91C419144000EA285393B1D37164B9CE420B1 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/DefaultPort.pm
+68CC59791AE45A211ED44A5816D58885E678754B /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Actions.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Actions.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Grammar.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Grammar.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny.pm
-9DECC71C0D4E9FE5DFCDCD1C1F579FBB24DE313D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Actions.pm
-7726A263DDF3DC09D7B2D334E33E95AC6A04CEE6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Grammar.pm
+A599C8DD55D5632F97B151072F59C1F1558BAC78 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Actions.pm
+93BA6CB13F3A59D70CFD31CA041DF4DED8042073 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Grammar.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Digest/MD5.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Digest/MD5.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Ecosystem.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Ecosystem.pm
-A1F8B8232A718B5255A2C9377356F3159012BFAE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-DCA0F0EB1F116721A6E034CAF6A2515A09D121AA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
-92E777C4E7164C0AF2330FEBAD360A9856054593 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+B661AC0B825B68D6C65D80E2495DEF6EA04A5949 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BFACFA835EF8DE410A33766E3DFD65260CB43BAC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
+E32CBB16C94EFBB464582022D5B62BCF11CBBC40 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Fetcher.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Fetcher.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Builder.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Builder.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-DCA0F0EB1F116721A6E034CAF6A2515A09D121AA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BFACFA835EF8DE410A33766E3DFD65260CB43BAC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Tester.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Tester.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-DCA0F0EB1F116721A6E034CAF6A2515A09D121AA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BFACFA835EF8DE410A33766E3DFD65260CB43BAC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Installer.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Installer.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-DCA0F0EB1F116721A6E034CAF6A2515A09D121AA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
-A1F8B8232A718B5255A2C9377356F3159012BFAE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BFACFA835EF8DE410A33766E3DFD65260CB43BAC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
+B661AC0B825B68D6C65D80E2495DEF6EA04A5949 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Bundler.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Bundler.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-DCA0F0EB1F116721A6E034CAF6A2515A09D121AA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
-A1F8B8232A718B5255A2C9377356F3159012BFAE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-92E777C4E7164C0AF2330FEBAD360A9856054593 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BFACFA835EF8DE410A33766E3DFD65260CB43BAC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
+B661AC0B825B68D6C65D80E2495DEF6EA04A5949 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+E32CBB16C94EFBB464582022D5B62BCF11CBBC40 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Reporter.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Reporter.pm
-92E777C4E7164C0AF2330FEBAD360A9856054593 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
+E32CBB16C94EFBB464582022D5B62BCF11CBBC40 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-DCA0F0EB1F116721A6E034CAF6A2515A09D121AA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
-A1F8B8232A718B5255A2C9377356F3159012BFAE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-DCA0F0EB1F116721A6E034CAF6A2515A09D121AA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
-92E777C4E7164C0AF2330FEBAD360A9856054593 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-10A1AA258876E8C42515BCDB29D852D9D52310BC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Ecosystem.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-BC13796F11A0AC97C3F20FCE5BF095F77AF1DBDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Fetcher.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-DCA0F0EB1F116721A6E034CAF6A2515A09D121AA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-4E807C669CB72A837B4753C41FAD6A828ADACCE6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Builder.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-DCA0F0EB1F116721A6E034CAF6A2515A09D121AA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
-CD6C05AE8E2A120846B28E4A3D568526916CB2FF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Tester.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-DCA0F0EB1F116721A6E034CAF6A2515A09D121AA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
-A1F8B8232A718B5255A2C9377356F3159012BFAE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-2C50260891570EBD3666382FFDCDD0A26CAD1AA6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Installer.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-DCA0F0EB1F116721A6E034CAF6A2515A09D121AA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
-A1F8B8232A718B5255A2C9377356F3159012BFAE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-92E777C4E7164C0AF2330FEBAD360A9856054593 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
-38FF0B710CD53AF8B1FF619C7B645F113942355E /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Bundler.pm
-92E777C4E7164C0AF2330FEBAD360A9856054593 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
-D80F614ECF561151168310E1FEC1BB57BEF45058 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Reporter.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-92E777C4E7164C0AF2330FEBAD360A9856054593 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BFACFA835EF8DE410A33766E3DFD65260CB43BAC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
+B661AC0B825B68D6C65D80E2495DEF6EA04A5949 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BFACFA835EF8DE410A33766E3DFD65260CB43BAC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
+E32CBB16C94EFBB464582022D5B62BCF11CBBC40 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+EBC40EAD17070B34992B2862431AC24858E9508A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Ecosystem.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+10D902F76696A6A7ACD5C03EA2C93C6F80C67093 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Fetcher.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BFACFA835EF8DE410A33766E3DFD65260CB43BAC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+A56F746C079D5CE643F7B871D44032B10DA2E197 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Builder.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BFACFA835EF8DE410A33766E3DFD65260CB43BAC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
+9F02926CE56B7BC02BE7F413E4468CAC92067CA7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Tester.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BFACFA835EF8DE410A33766E3DFD65260CB43BAC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
+B661AC0B825B68D6C65D80E2495DEF6EA04A5949 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BC8E62EAFCDA7C64556C474B74F1F48E413834A0 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Installer.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BFACFA835EF8DE410A33766E3DFD65260CB43BAC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
+B661AC0B825B68D6C65D80E2495DEF6EA04A5949 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+E32CBB16C94EFBB464582022D5B62BCF11CBBC40 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
+49A0F4EB75F4E109B8AE6B50465ABB40ADF587DE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Bundler.pm
+E32CBB16C94EFBB464582022D5B62BCF11CBBC40 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
+C1D0A435520530781A5B8E4FD2939AAC1858E218 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Reporter.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+E32CBB16C94EFBB464582022D5B62BCF11CBBC40 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/App.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/App.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-A1F8B8232A718B5255A2C9377356F3159012BFAE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-DCA0F0EB1F116721A6E034CAF6A2515A09D121AA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
-92E777C4E7164C0AF2330FEBAD360A9856054593 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
-E5AE30FEFC7E94B3F1447C3EB913C864A9415B3D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
-B103CEF680B1EE17A811D602C870C37BA2463BEA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
-10A1AA258876E8C42515BCDB29D852D9D52310BC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Ecosystem.pm
-A1F8B8232A718B5255A2C9377356F3159012BFAE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+B661AC0B825B68D6C65D80E2495DEF6EA04A5949 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+BFACFA835EF8DE410A33766E3DFD65260CB43BAC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Common.pm
+E32CBB16C94EFBB464582022D5B62BCF11CBBC40 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Fast.pm
+BF65880A5D08F5F08B22317462E072B127918D7A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Find.pm
+C8276DAA29659813C3EDD6904D2D94D6A714D8AC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Shell/Command.pm
+EBC40EAD17070B34992B2862431AC24858E9508A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Ecosystem.pm
+B661AC0B825B68D6C65D80E2495DEF6EA04A5949 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Panda/Project.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mustache.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mustache.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/PSGI.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/PSGI.pm6
-9324DBEB50CC91A4546E91E33E2462CA7F6406F6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
+918F1A48D85D5C55F4FA92794880EA289B4E5BAA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy.pm6
-9324DBEB50CC91A4546E91E33E2462CA7F6406F6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
+918F1A48D85D5C55F4FA92794880EA289B4E5BAA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy/PSGI.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy/PSGI.pm6
-9324DBEB50CC91A4546E91E33E2462CA7F6406F6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
-C50AB1DF015870596D933233BB27FB3BF4BB6D5C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy.pm6
-9324DBEB50CC91A4546E91E33E2462CA7F6406F6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
-9324DBEB50CC91A4546E91E33E2462CA7F6406F6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
-791CEF1BAD355D393AC05C1F340A1BC6576BE47A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/PSGI.pm6
+918F1A48D85D5C55F4FA92794880EA289B4E5BAA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
+993193F1CDE66257C002581C1CED02DC9331674A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy.pm6
+918F1A48D85D5C55F4FA92794880EA289B4E5BAA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
+918F1A48D85D5C55F4FA92794880EA289B4E5BAA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
+ED9A270CC8CB47CA7EA8428DD84CAA6EEFE8F6B4 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/PSGI.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm
-[31m===[0mSORRY![31m===[0m Error while compiling /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm
-EVAL is a very dangerous function!!! (use MONKEY-SEE-NO-EVAL to override,
-but only if you're VERY sure your data contains no injection attacks)
-at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm:123
-------> [32m        self.bless: :code(EVAL $m.ast[33m⏏[31m)[0m
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-CAB8B71372577A1AB67C8BB530078FCB4D32AFDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Response.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Response.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Context.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Context.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-CAB8B71372577A1AB67C8BB530078FCB4D32AFDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
-C119FAE6D8FE13F36362EB242F93B691FA3DC550 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
-9522E509AD1952496D635FBAA72816D6436E6A89 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Response.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+153AFF8101A2A9CD8C10868BFA93B3FADDCFC0E3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
+2C11B17D71D8BD7A1ACB62EED709ACF6671B38CB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Response.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template/Mojo.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template/Mojo.pm
-8388307CA976DE0079916A67CBD59D4461878463 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template.pm
-[31m===[0mSORRY![31m===[0m Error while compiling /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm
-EVAL is a very dangerous function!!! (use MONKEY-SEE-NO-EVAL to override,
-but only if you're VERY sure your data contains no injection attacks)
-at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm:123
-------> [32m        self.bless: :code(EVAL $m.ast[33m⏏[31m)[0m
+F0D8816B00AF1EC69A8611AE9546B96158B71BE0 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template.pm
+6488703BF5C5437686F0DDB32772E3B5EA77161E /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/App.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/App.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-CAB8B71372577A1AB67C8BB530078FCB4D32AFDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
-C119FAE6D8FE13F36362EB242F93B691FA3DC550 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-CAB8B71372577A1AB67C8BB530078FCB4D32AFDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
-C119FAE6D8FE13F36362EB242F93B691FA3DC550 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
-9522E509AD1952496D635FBAA72816D6436E6A89 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Response.pm
-E02918DB1A7ECB8AD3E9C39D8393AB6162517CF1 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Context.pm
-[31m===[0mSORRY![31m===[0m Error while compiling /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm
-EVAL is a very dangerous function!!! (use MONKEY-SEE-NO-EVAL to override,
-but only if you're VERY sure your data contains no injection attacks)
-at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm:123
-------> [32m        self.bless: :code(EVAL $m.ast[33m⏏[31m)[0m
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+153AFF8101A2A9CD8C10868BFA93B3FADDCFC0E3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+153AFF8101A2A9CD8C10868BFA93B3FADDCFC0E3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
+2C11B17D71D8BD7A1ACB62EED709ACF6671B38CB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Response.pm
+68CB6D8112AA146523EBD8697D3DE7E53FC36B60 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Context.pm
+F0D8816B00AF1EC69A8611AE9546B96158B71BE0 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template.pm
+6488703BF5C5437686F0DDB32772E3B5EA77161E /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm
+4911E486A7C9A9EAC62550906C2D945DBCF5379E /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template/Mojo.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador.pm
-[31m===[0mSORRY![31m===[0m Error while compiling /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm
-EVAL is a very dangerous function!!! (use MONKEY-SEE-NO-EVAL to override,
-but only if you're VERY sure your data contains no injection attacks)
-at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm:123
-------> [32m        self.bless: :code(EVAL $m.ast[33m⏏[31m)[0m
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+153AFF8101A2A9CD8C10868BFA93B3FADDCFC0E3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+153AFF8101A2A9CD8C10868BFA93B3FADDCFC0E3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
+2C11B17D71D8BD7A1ACB62EED709ACF6671B38CB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Response.pm
+68CB6D8112AA146523EBD8697D3DE7E53FC36B60 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Context.pm
+F0D8816B00AF1EC69A8611AE9546B96158B71BE0 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template.pm
+6488703BF5C5437686F0DDB32772E3B5EA77161E /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm
+4911E486A7C9A9EAC62550906C2D945DBCF5379E /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template/Mojo.pm
+8ACF7418E12DCBED09D3EDDFE5BAD02AE0F5D4C6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/App.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+153AFF8101A2A9CD8C10868BFA93B3FADDCFC0E3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
+2C11B17D71D8BD7A1ACB62EED709ACF6671B38CB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Response.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+153AFF8101A2A9CD8C10868BFA93B3FADDCFC0E3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
+2C11B17D71D8BD7A1ACB62EED709ACF6671B38CB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Response.pm
+68CB6D8112AA146523EBD8697D3DE7E53FC36B60 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Context.pm
+918F1A48D85D5C55F4FA92794880EA289B4E5BAA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
+993193F1CDE66257C002581C1CED02DC9331674A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy.pm6
+918F1A48D85D5C55F4FA92794880EA289B4E5BAA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
+918F1A48D85D5C55F4FA92794880EA289B4E5BAA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
+ED9A270CC8CB47CA7EA8428DD84CAA6EEFE8F6B4 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/PSGI.pm6
+8E353EEEF0BA71DEBD7C4728590B79925BFA321F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy/PSGI.pm6
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Test.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Test.pm
 9522368A991B9C7CA93E735EF6005586BC227870 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/532BC924A593097C2605035055944BF91C3A63C7
-[31m===[0mSORRY![31m===[0m Error while compiling /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm
-EVAL is a very dangerous function!!! (use MONKEY-SEE-NO-EVAL to override,
-but only if you're VERY sure your data contains no injection attacks)
-at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm:123
-------> [32m        self.bless: :code(EVAL $m.ast[33m⏏[31m)[0m
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+153AFF8101A2A9CD8C10868BFA93B3FADDCFC0E3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+153AFF8101A2A9CD8C10868BFA93B3FADDCFC0E3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
+2C11B17D71D8BD7A1ACB62EED709ACF6671B38CB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Response.pm
+68CB6D8112AA146523EBD8697D3DE7E53FC36B60 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Context.pm
+F0D8816B00AF1EC69A8611AE9546B96158B71BE0 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template.pm
+6488703BF5C5437686F0DDB32772E3B5EA77161E /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mojo.pm
+4911E486A7C9A9EAC62550906C2D945DBCF5379E /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template/Mojo.pm
+8ACF7418E12DCBED09D3EDDFE5BAD02AE0F5D4C6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/App.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+153AFF8101A2A9CD8C10868BFA93B3FADDCFC0E3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
+2C11B17D71D8BD7A1ACB62EED709ACF6671B38CB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Response.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+153AFF8101A2A9CD8C10868BFA93B3FADDCFC0E3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
+2C11B17D71D8BD7A1ACB62EED709ACF6671B38CB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Response.pm
+68CB6D8112AA146523EBD8697D3DE7E53FC36B60 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Context.pm
+918F1A48D85D5C55F4FA92794880EA289B4E5BAA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
+993193F1CDE66257C002581C1CED02DC9331674A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy.pm6
+918F1A48D85D5C55F4FA92794880EA289B4E5BAA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
+918F1A48D85D5C55F4FA92794880EA289B4E5BAA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
+ED9A270CC8CB47CA7EA8428DD84CAA6EEFE8F6B4 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/PSGI.pm6
+8E353EEEF0BA71DEBD7C4728590B79925BFA321F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy/PSGI.pm6
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+C07D94967797C0796E3A31690FFF75F43229B775 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+153AFF8101A2A9CD8C10868BFA93B3FADDCFC0E3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Request.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+61DD4C1F4BF0E41DC811D735A67A0095ECB48513 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+A6C91C419144000EA285393B1D37164B9CE420B1 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/DefaultPort.pm
+68CC59791AE45A211ED44A5816D58885E678754B /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template/Mustache.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template/Mustache.pm
-8388307CA976DE0079916A67CBD59D4461878463 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template.pm
-E261CEAA67344549ECF8DA54495DAA04D22FE5D9 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mustache.pm
+F0D8816B00AF1EC69A8611AE9546B96158B71BE0 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Bailador/Template.pm
+E166BA5D56BD2C717F001D9C6E6C2BB8D36200FD /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Template/Mustache.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish.pm6
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-F86402233B2C546CE5B0CFA6F0CD0C6CD4F93FD7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+D3CE0C1BEC75DC08ED1C1D53407568693736BDDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBIish.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBIish.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
@@ -500,15 +562,15 @@ C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/st
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-2AE4CE727088B7E109BD25190A577B145E63BA72 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6
+9D1B994B2B0C0FB4E98001BAC30D7B69B0C730B3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Connection.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Connection.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
@@ -516,31 +578,31 @@ C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/st
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-F86402233B2C546CE5B0CFA6F0CD0C6CD4F93FD7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+D3CE0C1BEC75DC08ED1C1D53407568693736BDDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-2AE4CE727088B7E109BD25190A577B145E63BA72 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6
-AFF60A980A6C91D72D84E9A54F58DA9124ADE7A1 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/StatementHandle.pm6
+9D1B994B2B0C0FB4E98001BAC30D7B69B0C730B3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6
+5F5E39E2AAEA4583A6C456E16546F52D2DCAA7E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-2AE4CE727088B7E109BD25190A577B145E63BA72 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6
+9D1B994B2B0C0FB4E98001BAC30D7B69B0C730B3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
@@ -548,87 +610,87 @@ C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/st
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-F86402233B2C546CE5B0CFA6F0CD0C6CD4F93FD7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
-314827068960F78EF884439F8622EF272DD2C97C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+D3CE0C1BEC75DC08ED1C1D53407568693736BDDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+704AD560888A7DF600F7CC1646A00059C96AD629 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-2AE4CE727088B7E109BD25190A577B145E63BA72 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6
+9D1B994B2B0C0FB4E98001BAC30D7B69B0C730B3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-F86402233B2C546CE5B0CFA6F0CD0C6CD4F93FD7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+D3CE0C1BEC75DC08ED1C1D53407568693736BDDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-2AE4CE727088B7E109BD25190A577B145E63BA72 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6
-AFF60A980A6C91D72D84E9A54F58DA9124ADE7A1 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/StatementHandle.pm6
+9D1B994B2B0C0FB4E98001BAC30D7B69B0C730B3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6
+5F5E39E2AAEA4583A6C456E16546F52D2DCAA7E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-2AE4CE727088B7E109BD25190A577B145E63BA72 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6
-30E5A55082A5F65A786DCBA8D1F16E4D0F570199 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Connection.pm6
+9D1B994B2B0C0FB4E98001BAC30D7B69B0C730B3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6
+09B85468FAC5ABA0F6163E92F26BED8DADEA8930 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Connection.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-2AE4CE727088B7E109BD25190A577B145E63BA72 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6
-AFF60A980A6C91D72D84E9A54F58DA9124ADE7A1 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/StatementHandle.pm6
+9D1B994B2B0C0FB4E98001BAC30D7B69B0C730B3 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/Native.pm6
+5F5E39E2AAEA4583A6C456E16546F52D2DCAA7E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/mysql/StatementHandle.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/TestMock/StatementHandle.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/TestMock/StatementHandle.pm6
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/TestMock/Connection.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/TestMock/Connection.pm6
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-F86402233B2C546CE5B0CFA6F0CD0C6CD4F93FD7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
-73FA2A8C67E847D12B8D5F7C2DC1A364885CF575 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/TestMock/StatementHandle.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+D3CE0C1BEC75DC08ED1C1D53407568693736BDDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+965173531166374E62AA48B63A48C74FD1C73515 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/TestMock/StatementHandle.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/TestMock.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/TestMock.pm6
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-F86402233B2C546CE5B0CFA6F0CD0C6CD4F93FD7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
-314827068960F78EF884439F8622EF272DD2C97C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish.pm6
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-F86402233B2C546CE5B0CFA6F0CD0C6CD4F93FD7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
-73FA2A8C67E847D12B8D5F7C2DC1A364885CF575 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/TestMock/StatementHandle.pm6
-E68C0EE8B6EF093ADDD2C4167F286263CE45D52D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/TestMock/Connection.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+D3CE0C1BEC75DC08ED1C1D53407568693736BDDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+704AD560888A7DF600F7CC1646A00059C96AD629 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+D3CE0C1BEC75DC08ED1C1D53407568693736BDDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+965173531166374E62AA48B63A48C74FD1C73515 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/TestMock/StatementHandle.pm6
+88AFBD79190508921835FA3C72D324D808B600C9 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/TestMock/Connection.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
@@ -643,15 +705,15 @@ C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/st
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-917D103B6B417077C45791D984DC03E908E7E4AE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6
+1CF4B9D096D7F37E53E347E05DB17212771F2BDA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Connection.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Connection.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
@@ -659,92 +721,92 @@ C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/st
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-F86402233B2C546CE5B0CFA6F0CD0C6CD4F93FD7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+D3CE0C1BEC75DC08ED1C1D53407568693736BDDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-917D103B6B417077C45791D984DC03E908E7E4AE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6
-E99116A55B547A277676BD9B3AF4F734B5D8999D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/StatementHandle.pm6
+1CF4B9D096D7F37E53E347E05DB17212771F2BDA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6
+EB2BCF5EDBBE5E2EED6D65DB71EACBF7522C7F00 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-917D103B6B417077C45791D984DC03E908E7E4AE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6
+1CF4B9D096D7F37E53E347E05DB17212771F2BDA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite.pm6
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-F86402233B2C546CE5B0CFA6F0CD0C6CD4F93FD7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
-314827068960F78EF884439F8622EF272DD2C97C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+D3CE0C1BEC75DC08ED1C1D53407568693736BDDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+704AD560888A7DF600F7CC1646A00059C96AD629 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-F86402233B2C546CE5B0CFA6F0CD0C6CD4F93FD7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+D3CE0C1BEC75DC08ED1C1D53407568693736BDDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-917D103B6B417077C45791D984DC03E908E7E4AE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6
-E99116A55B547A277676BD9B3AF4F734B5D8999D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/StatementHandle.pm6
+1CF4B9D096D7F37E53E347E05DB17212771F2BDA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6
+EB2BCF5EDBBE5E2EED6D65DB71EACBF7522C7F00 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-917D103B6B417077C45791D984DC03E908E7E4AE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6
-3A6EDC95230EB7788FC23540334325440BF37D97 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Connection.pm6
+1CF4B9D096D7F37E53E347E05DB17212771F2BDA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6
+5057E8934E2D358884E600A1D0287264AC90805E /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Connection.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-917D103B6B417077C45791D984DC03E908E7E4AE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6
-E99116A55B547A277676BD9B3AF4F734B5D8999D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/StatementHandle.pm6
+1CF4B9D096D7F37E53E347E05DB17212771F2BDA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6
+EB2BCF5EDBBE5E2EED6D65DB71EACBF7522C7F00 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-917D103B6B417077C45791D984DC03E908E7E4AE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6
+1CF4B9D096D7F37E53E347E05DB17212771F2BDA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/SQLite/Native.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
@@ -765,15 +827,15 @@ C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/st
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-B8A28C1673ACFAF852D9197D63BDB5DAF20CE363 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Native.pm6
+3A82B80903415298431B1E4FFB9D01C81F53CD7C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Native.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Connection.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Connection.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
@@ -781,31 +843,31 @@ B8A28C1673ACFAF852D9197D63BDB5DAF20CE363 /home/coke/sandbox/rakudo-star-daily/st
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-F86402233B2C546CE5B0CFA6F0CD0C6CD4F93FD7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+D3CE0C1BEC75DC08ED1C1D53407568693736BDDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-B8A28C1673ACFAF852D9197D63BDB5DAF20CE363 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Native.pm6
-13C057422AFEE71472693AC3D250827C855A6F5D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/StatementHandle.pm6
+3A82B80903415298431B1E4FFB9D01C81F53CD7C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Native.pm6
+87BF6C5BA17A1E6084576EEBED4AA17B710E66E0 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-B8A28C1673ACFAF852D9197D63BDB5DAF20CE363 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Native.pm6
+3A82B80903415298431B1E4FFB9D01C81F53CD7C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Native.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
@@ -813,140 +875,140 @@ B8A28C1673ACFAF852D9197D63BDB5DAF20CE363 /home/coke/sandbox/rakudo-star-daily/st
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-F86402233B2C546CE5B0CFA6F0CD0C6CD4F93FD7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
-314827068960F78EF884439F8622EF272DD2C97C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+D3CE0C1BEC75DC08ED1C1D53407568693736BDDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+704AD560888A7DF600F7CC1646A00059C96AD629 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-B8A28C1673ACFAF852D9197D63BDB5DAF20CE363 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Native.pm6
+3A82B80903415298431B1E4FFB9D01C81F53CD7C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Native.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-F86402233B2C546CE5B0CFA6F0CD0C6CD4F93FD7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+D3CE0C1BEC75DC08ED1C1D53407568693736BDDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/Connection.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-B8A28C1673ACFAF852D9197D63BDB5DAF20CE363 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Native.pm6
-13C057422AFEE71472693AC3D250827C855A6F5D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/StatementHandle.pm6
+3A82B80903415298431B1E4FFB9D01C81F53CD7C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Native.pm6
+87BF6C5BA17A1E6084576EEBED4AA17B710E66E0 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-B8A28C1673ACFAF852D9197D63BDB5DAF20CE363 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Native.pm6
-9AF8AAB8B597F6DE4C6FB9B22456B4FFA4D1C13E /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Connection.pm6
+3A82B80903415298431B1E4FFB9D01C81F53CD7C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Native.pm6
+1FC2765A8CE1CAA516D0BD896A7C5A8CA3100EF8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Connection.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-E0EA1A8498EB221D612C34FC186CF9DE749407BB /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
-961E2297197885D9641D777B9A7F4D518F5601E5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
+77E0D50C2DF670822C6C157DB927AD858258764F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/ErrorHandling.pm6
+0BA7DEFC388A2FBA5B33CAB5B3E0079FA8DF7973 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Role/StatementHandle.pm6
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 9CD9DCE0FC1700968E26F2E76915FF47CA1FD743 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/BA7B330145B8F953E7F8103583FAB68EE90A8B59
 2DC2EF40BA33B865B0D6DA1CBBDEE4AAE652C5F8 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/14F284493224B63B426EFCB50ED15C6B306BBA6B
 C274F63E87C302A6BE9B8283B4DEC357B2D64E05 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/CC7FAF8A311EBEA3000D993AB2B4D5FE78AF3DD5
 06B8F094E36CF925F6CC1EE3C6C871B30E8A653C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/E484A192E0893E543BCAA545FB0EC0C28DFE5970
-B8A28C1673ACFAF852D9197D63BDB5DAF20CE363 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Native.pm6
-13C057422AFEE71472693AC3D250827C855A6F5D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/StatementHandle.pm6
+3A82B80903415298431B1E4FFB9D01C81F53CD7C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/Native.pm6
+87BF6C5BA17A1E6084576EEBED4AA17B710E66E0 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/DBDish/Pg/StatementHandle.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/X/JSON/RPC.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/X/JSON/RPC.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/RPC/Server.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/RPC/Server.pm
-9DECC71C0D4E9FE5DFCDCD1C1F579FBB24DE313D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Actions.pm
-7726A263DDF3DC09D7B2D334E33E95AC6A04CEE6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Grammar.pm
-09AEBBD02A5FE562C820BE43F5D84EE13A3FE25C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny.pm
-294C686BF89E1C6CD738BF1BA5E346E560B17D6A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/X/JSON/RPC.pm
-9324DBEB50CC91A4546E91E33E2462CA7F6406F6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
-C50AB1DF015870596D933233BB27FB3BF4BB6D5C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy.pm6
-9324DBEB50CC91A4546E91E33E2462CA7F6406F6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
-9324DBEB50CC91A4546E91E33E2462CA7F6406F6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
-791CEF1BAD355D393AC05C1F340A1BC6576BE47A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/PSGI.pm6
-A1589E77F1A23E09E13F30DC2ECD540381AF90E7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy/PSGI.pm6
+A599C8DD55D5632F97B151072F59C1F1558BAC78 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Actions.pm
+93BA6CB13F3A59D70CFD31CA041DF4DED8042073 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Grammar.pm
+AA6AE9971D93EE6F6C3F5C6AF081E4F354E11A8B /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny.pm
+5631A8D64A0CCD33A4A482B13F019254AEBAD4BC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/X/JSON/RPC.pm
+918F1A48D85D5C55F4FA92794880EA289B4E5BAA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
+993193F1CDE66257C002581C1CED02DC9331674A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy.pm6
+918F1A48D85D5C55F4FA92794880EA289B4E5BAA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
+918F1A48D85D5C55F4FA92794880EA289B4E5BAA /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Status.pm6
+ED9A270CC8CB47CA7EA8428DD84CAA6EEFE8F6B4 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/PSGI.pm6
+8E353EEEF0BA71DEBD7C4728590B79925BFA321F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/HTTP/Easy/PSGI.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/RPC/Client.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/RPC/Client.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-BE5F29F0F6D03900F10783EC008FC1E075C41B1F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-CAB8B71372577A1AB67C8BB530078FCB4D32AFDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
-3CBE6CDAD11A85FB41D2E3FEDDF4B51C8E2A28D6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/DefaultPort.pm
-8B1C2EA23197C3B91CC6BE9AB367D43A660AF612 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI.pm
-8C9E1A784B2B52F0A91A78F8E41F3B3F6D6BB338 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/MIME/Base64/Perl.pm6
-C5C3920E6AADC8F4130711702EE61367873D5F10 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/MIME/Base64.pm6
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-BE5F29F0F6D03900F10783EC008FC1E075C41B1F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-CAB8B71372577A1AB67C8BB530078FCB4D32AFDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
-3CBE6CDAD11A85FB41D2E3FEDDF4B51C8E2A28D6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/DefaultPort.pm
-8B1C2EA23197C3B91CC6BE9AB367D43A660AF612 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-CAB8B71372577A1AB67C8BB530078FCB4D32AFDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
-DED6EF873E09C2740E8392D840CA4B455BED276D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm
-9DECC71C0D4E9FE5DFCDCD1C1F579FBB24DE313D /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Actions.pm
-7726A263DDF3DC09D7B2D334E33E95AC6A04CEE6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Grammar.pm
-09AEBBD02A5FE562C820BE43F5D84EE13A3FE25C /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny.pm
-294C686BF89E1C6CD738BF1BA5E346E560B17D6A /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/X/JSON/RPC.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+61DD4C1F4BF0E41DC811D735A67A0095ECB48513 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+A6C91C419144000EA285393B1D37164B9CE420B1 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/DefaultPort.pm
+68CC59791AE45A211ED44A5816D58885E678754B /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI.pm
+9A2C81CA49F815E824EF3EC7E3B08F9CD84477F7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/MIME/Base64/Perl.pm6
+0E59A99D831D88D9F4B4E335DE674277758DE51B /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/MIME/Base64.pm6
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+61DD4C1F4BF0E41DC811D735A67A0095ECB48513 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+A6C91C419144000EA285393B1D37164B9CE420B1 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/DefaultPort.pm
+68CC59791AE45A211ED44A5816D58885E678754B /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+8920843EF0503170FDFD7B0B6E9BCF8CC0B18544 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/LWP/Simple.pm
+A599C8DD55D5632F97B151072F59C1F1558BAC78 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Actions.pm
+93BA6CB13F3A59D70CFD31CA041DF4DED8042073 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny/Grammar.pm
+AA6AE9971D93EE6F6C3F5C6AF081E4F354E11A8B /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/JSON/Tiny.pm
+5631A8D64A0CCD33A4A482B13F019254AEBAD4BC /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/X/JSON/RPC.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Pod/To/HTML.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Pod/To/HTML.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-CAB8B71372577A1AB67C8BB530078FCB4D32AFDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Directory/Tree.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Directory/Tree.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Temp.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Temp.pm
-80F087ADECD0512C779AA69F1ADB6CE2451B5EA6 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Directory/Tree.pm
+8EC8808FFFE1A11781FB2D6965BD61586BF6EB72 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/File/Directory/Tree.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Pod/Htmlify.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Pod/Htmlify.pm6
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-CAB8B71372577A1AB67C8BB530078FCB4D32AFDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Pod/Convenience.pm6.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Pod/Convenience.pm6
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Pod/To/SectionFilter.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Pod/To/SectionFilter.pm
 39AD0A42E9135E91EF7EDE085E0B8DB353C445EF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/sources/79200439F9BF3ABAB8736E2D0DFE8381EAF4A6B5
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/Type.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/Type.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/TypeGraph.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/TypeGraph.pm
-9A3A1B2FC8DA7258F5B792BB9CB14B8B190CDE6B /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/Type.pm
+EFBBB3908195D7612B4E0E78FA17B498F2634B4F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/Type.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/Documentable.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/Documentable.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-CAB8B71372577A1AB67C8BB530078FCB4D32AFDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/TypeGraph/Viz.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/TypeGraph/Viz.pm
-9A3A1B2FC8DA7258F5B792BB9CB14B8B190CDE6B /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/Type.pm
-2AC9ACFA8256408B801B2694CAE56982E0B98C67 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/TypeGraph.pm
+EFBBB3908195D7612B4E0E78FA17B498F2634B4F /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/Type.pm
+625E2F2A29C4B3919C9A293681421657505DE628 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/TypeGraph.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/Documentable/Registry.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/Documentable/Registry.pm
-C4E9EE5FED118576CFF8E9B4156AF658EC87DC58 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
-DA824937AD84550F31A5A70D5E9B299A344B8AF7 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
-CAB8B71372577A1AB67C8BB530078FCB4D32AFDE /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
-FD2B02207F48D54766669232DE06A9778FAE946B /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/Documentable.pm
+46BB7AD7E6F441099217FBB24B8723402BFFACA5 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/IPv6.pm
+51BA3356FF780E87C009F85E1874065F85973BDF /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/IETF/RFC_Grammar/URI.pm
+F2EEE6E81D36DC842ED4B3EF778B9E2783539257 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/URI/Escape.pm
+3495F6BBBC92369A54DE0398FA16D2EE7E684801 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Perl6/Documentable.pm
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/perl6-m --target=mbc --output=/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Debugger/UI/CommandLine.pm.moarvm /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Debugger/UI/CommandLine.pm
-06A823164F1B77E9F95C2C4AB149E2EF1EC98207 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Terminal/ANSIColor.pm
+1EF23C8D93F4286949D539BF594B035C744DEC9B /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/lib/Terminal/ANSIColor.pm
 [DISLOCATED MESSAGE] Useless use of enter_result__1 symbol in sink context
 [DISLOCATED MESSAGE] Useless use of enter_result__2 symbol in sink context
 [DISLOCATED MESSAGE] Useless use of enter_result__3 symbol in sink context

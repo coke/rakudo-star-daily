@@ -1,9 +1,9 @@
 MoarVM
-2015.11-120-gb258173
+2015.11-123-g64d5884
 Rakudo
-Bend-724-g6925c2b
+Bend-756-g82e6ca2
 NQP
-2015.11-142-g8c64347
+2015.11-146-g9d05ece
 modules
 --------
 Bailador
@@ -221,22 +221,11 @@ Date:   Sat Oct 17 21:41:18 2015 +0800
     add .travis.yml
 --------
 Pod-To-HTML
-commit 37886fddfa440abe689f85bc088fc94f0f325f34
-Merge: d73c1de 7109d9a
-Author: LLFourn <LLFourn@users.noreply.github.com>
-Date:   Tue Dec 22 21:31:15 2015 +1100
+commit 9b4c4963cb90851e53ed315ea9e0965730d4ad9b
+Author: Brock Wilcox <bwilcox@optoro.com>
+Date:   Wed Dec 23 01:08:49 2015 -0500
 
-    Merge pull request #10 from LLFourn/master
-    
-    removing "twines"
-
-commit 7109d9ab64051fea2afb3e394305a51194d50bf5
-Author: LLFourn <lloyd.fourn@gmail.com>
-Date:   Tue Dec 22 21:14:44 2015 +1100
-
-    removing "twines"
-    
-    they will not be a thing soon
+    Put back test now that it passes
 --------
 Template-Mojo
 commit 351fee475a36ce922745dc203980c857db0d1304
@@ -290,11 +279,166 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
+commit f23805a19c45e1c15cf455a478e310cda0453648
+Merge: 78410e8 ec2d529
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Wed Dec 23 19:18:56 2015 +0100
+
+    Merge branch 'master' of https://github.com/perl6/doc
+
+commit ec2d529d4ef145924cb971d6466344c77dc016be
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Dec 23 16:03:31 2015 +0000
+
+    use EVALFILE not EVAL
+
+commit d8f36f30cceb72b074b98f29de9f68fb11d2fb5e
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Dec 23 16:03:14 2015 +0000
+
+    fix p6doc CLI index generation
+
+commit 2cc8c2f9e6e7e6e61da236467cdfac9f4e833b48
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Wed Dec 23 08:36:51 2015 +0100
+
+    SSLify some links
+
+commit 07a3825c3d70fc051d5b085b9919186306447941
+Author: Brock Wilcox <bwilcox@optoro.com>
+Date:   Wed Dec 23 01:26:14 2015 -0500
+
+    No space in reference to an actual module name
+
+commit 8a134ae43db726744f1e982ed7acd7297820c2b4
+Author: Brock Wilcox <bwilcox@optoro.com>
+Date:   Wed Dec 23 01:23:44 2015 -0500
+
+    Mass change Perl6 -> Perl 6
+
+commit 876ac46b5515fc097c564dcc8e09fb1ee6162dde
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Tue Dec 22 22:13:44 2015 +0000
+
+    Some quick fixes to get basic p6doc usage working post-curli.
+    
+    Needs more attention since -f index etc. doesn't work.
+
 commit cc397c0c93ddd0cb932bdddf0bfef92942f3323f
 Author: ab5tract <john.haltiwanger@gmail.com>
 Date:   Mon Dec 21 19:28:15 2015 -0500
 
     Document in-place editing of hash values
+
+commit 809fde65d9837ac7ff785d4faa260a935be8230c
+Author: ab5tract <john.haltiwanger@gmail.com>
+Date:   Mon Dec 21 19:01:53 2015 -0500
+
+    Make the example work for more than two instants
+
+commit c717bda02bc1143bf97bd13915bc3a89ff4e5caf
+Merge: 006910f ce1302c
+Author: nxadm <nxadm@users.noreply.github.com>
+Date:   Mon Dec 21 20:05:02 2015 +0100
+
+    Merge pull request #257 from nxadm/master
+    
+    META.info: author -> authors
+
+commit ce1302cb1724213d4459465e01549a2f217e2269
+Author: Claudio Ramirez <pub.claudio@gmail.com>
+Date:   Mon Dec 21 20:02:28 2015 +0100
+
+    META.info: author -> authord
+
+commit 006910f81afb8734c8e0051637239aa544b5424e
+Author: Karl Rune Nilsen <krunen@gmail.com>
+Date:   Mon Dec 21 19:41:21 2015 +0100
+
+    Attribute.has-accessor -> has_accessor
+
+commit c154746fd356135e55aa7cf264707b197087f339
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Mon Dec 21 17:22:01 2015 +0000
+
+    Somewhat describe the resources thing in modules doc
+
+commit 0816047f2265d04d552e0607edd8ef1ee301e1b7
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Mon Dec 21 16:52:16 2015 +0000
+
+    Move splice() from List to Array
+    
+    fixes #254
+
+commit 1dd77e8a2f2fb30742453d8ccd093d19331d6672
+Merge: 85fbee8 3d03f5c
+Author: Jonathan Stowe <jns@gellyfish.co.uk>
+Date:   Mon Dec 21 16:45:26 2015 +0000
+
+    Merge pull request #255 from ChoHag/master
+    
+    Clear as mud - be explicit about the definition of 'module'.
+
+commit 3d03f5cb00acda8c3d9278543806015f3a900caf
+Author: Matthew King <matthew.king@monnsta.net>
+Date:   Mon Dec 21 18:12:53 2015 +0200
+
+    Clear as mud - be explicit about the definition of 'module'.
+
+commit 85fbee871447c05dd1c246d10014f52f06ac9678
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Mon Dec 21 14:09:38 2015 +0000
+
+    Add the new UDP related methods
+
+commit 40d7d6c8d269e75a7df23f5a5959e5e8693eeebd
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Mon Dec 21 11:48:04 2015 +0000
+
+    chars-supply and bytes-supply gone
+
+commit 32cd4374055b57bb009c8f6683181223c9b91f9e
+Author: Brock Wilcox <bwilcox@optoro.com>
+Date:   Sun Dec 20 20:11:01 2015 -0500
+
+    Document :{ ... } hash literal syntax
+
+commit 06e2aec9c3875c2af2e18091ee85608fc049c7f4
+Author: Brock Wilcox <bwilcox@optoro.com>
+Date:   Sun Dec 20 19:59:56 2015 -0500
+
+    Index nativecall
+
+commit 58af38ebb43e4ba35bad1ff94a6bdab2a06447df
+Author: Brock Wilcox <bwilcox@optoro.com>
+Date:   Sun Dec 20 19:53:20 2015 -0500
+
+    Remove last reference to first-index
+
+commit ddc42d336b7ee04cb087275fb774a7b3e9c1d63a
+Author: Brock Wilcox <bwilcox@optoro.com>
+Date:   Sun Dec 20 19:07:52 2015 -0500
+
+    Add a bunch of testing subs to the search index
+
+commit 6b644bd76b164ef56e0974d9f536d53a6cdc9062
+Author: Brock Wilcox <bwilcox@optoro.com>
+Date:   Sun Dec 20 19:01:58 2015 -0500
+
+    Document EVAL a bit
+
+commit b21bc8f65837a32f1af29d3dca7092dc21ab8384
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Sun Dec 20 20:06:45 2015 +0000
+
+    MONKEY-SEE-NO-EVAL Skarsnik++
+
+commit 54b29f1b6b9593a133ce116d33a801fec4fec85d
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Sun Dec 20 20:02:37 2015 +0000
+
+    use MONKEY-SEE-NO-EVAL until we have a better serialisation
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

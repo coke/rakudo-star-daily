@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-Bend-756-g82e6ca2
+Bend-783-g11040a7
 NQP
 2015.11-146-g9d05ece
 modules
@@ -23,140 +23,26 @@ Date:   Sat Oct 31 20:03:17 2015 +0100
     Add MIT License
 --------
 DBIish
-commit b2f086c20574361c0b8d31576c7a9c1698ba8ad0
-Merge: f1be21e 552c877
+commit b6a92ad01941a6bcede814d5ecad327a0d44cdfc
+Merge: 6109493 19c6a1e
 Author: Skarsnik <scolinet@gmail.com>
-Date:   Wed Dec 16 00:01:40 2015 +0100
+Date:   Thu Dec 24 13:16:18 2015 +0100
 
-    Merge pull request #35 from Skarsnik/master
+    Merge pull request #43 from Skarsnik/master
     
-    Add row and allrows method that return typed value when possible and offer adverbs to change the way values are returned
+    Remove fetch_typedhash/fetch_alltypedhash, there were DEPRECATED
 
-commit 552c877f4db83f08eb4df75f129ab1a08cff4743
+commit 19c6a1efa5cb62ace167585f7d26f4866f8abb3f
 Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Tue Dec 15 18:11:35 2015 +0100
+Date:   Thu Dec 24 13:08:19 2015 +0100
 
-    Fix a potential bug§
+    forget to remove something
 
-commit 3ab2aba297e573e0eaf5944b53c89ebe06bcd0a6
+commit 1e86465d7f79f8214cbae41e36fd9e1a1381d085
 Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Tue Dec 15 14:21:13 2015 +0100
+Date:   Thu Dec 24 13:05:07 2015 +0100
 
-    Add a test for Meta. Improve/fix the documentation
-
-commit 48308c71512b5b8ce05f1fbd7c356ffb68bcb1d9
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Mon Dec 14 21:03:59 2015 +0100
-
-    Mark a test as TODO
-
-commit f5644787235bc856d5dec91d3d51876c2d24f847
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Mon Dec 14 20:48:07 2015 +0100
-
-    Yay mysql work too
-
-commit e951e70cb0885686e34d4070162a3b39045d6a65
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Mon Dec 14 20:46:51 2015 +0100
-
-    small fix in TestMock
-
-commit 3022a8b5770156a19bfc0fbc91ebd7cb24655a9b
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Fri Dec 11 15:34:06 2015 +0100
-
-    mysql server, y u no work on my env
-
-commit 0d5a8c25ffd52f5c68018a8b5d1a55162cdacb93
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Fri Dec 11 15:12:20 2015 +0100
-
-    This commit should not stay, it's to make test pass for mysql on travis
-
-commit bb054514141b98dd214970f5063053375c8c9d1f
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Thu Dec 10 18:14:59 2015 +0100
-
-    Updated Meta.info to match master
-
-commit 430fc460641033b178d24dea3b36d90828f68dc4
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Thu Dec 10 17:47:06 2015 +0100
-
-    This should make mysql work? I hope not
-
-commit d38bbc70ecd3099df9234b3f6a6f9bb34d2a0fb8
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Thu Dec 10 15:01:31 2015 +0100
-
-    Does that fix error with rakudo (again)?
-
-commit d4cdffb401fd2e4f0d7aadda19650f6bc1538498
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Thu Dec 10 14:51:19 2015 +0100
-
-    Does that fix error with rakudo?
-
-commit 8ef06071475def035ede889cc88c9e0d6496dd4f
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Thu Dec 10 14:13:30 2015 +0100
-
-    Fix test for Num to Real. Need probably more though on this
-
-commit 2b19f2973c3cf497236dcb1aeec597c9902b16b2
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Thu Dec 10 13:10:26 2015 +0100
-
-    add _row to testmoch
-
-commit 673f0fed253e8ff4add06a2adc38657075a0762f
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Thu Dec 10 12:34:11 2015 +0100
-
-    Add typed data in mysql (need testing?)
-
-commit 4de03a2a91918c676a66b84ca581f45ecad9d263
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Thu Dec 10 12:32:24 2015 +0100
-
-    Add some test to validate the NativeCall stuff. Fix mysql nativetype
-
-commit af35c4ce12682dbbce043388ccaea96a8e1f2632
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Tue Dec 1 23:48:13 2015 +0100
-
-    Fix example
-
-commit 86afabd7a8972c7d72feeddfa205551ae1f04520
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Tue Dec 1 22:15:19 2015 +0100
-
-    Add a bit of documentation
-
-commit 6bf60198fb11cdacc4a4ef136f9ca52114d63a84
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Tue Dec 1 22:00:57 2015 +0100
-
-    removing leftover
-
-commit d131267f8855cf8ea4588202469dcba357f548c2
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Tue Dec 1 21:59:29 2015 +0100
-
-    Remove deprecated for nearly all fetch
-
-commit 5b9c71adc8603dfe4ea3046c5b2e7dd73adc0a6c
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Tue Dec 1 17:27:16 2015 +0100
-
-    Time to break some DBIis based code, added allrows()
-
-commit 072a782a44034302724043dbbef6293cc5f7abe7
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Sun Nov 29 15:47:29 2015 +0100
-
-    Start of the mess that break everything
+    Remove fetch_typedhash/fetch_alltypedhash, there were already marked as DEPRECATED
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -205,20 +91,11 @@ Date:   Wed Dec 2 10:51:33 2015 -0800
     META.info -> META6.json, added .travis.yml from hiroraba.
 --------
 Perl6-MIME-Base64
-commit 17d654e0a929772e89908a1b3ec3781bec8055e1
-Merge: 0aecf03 fdacc0f
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Oct 17 15:55:41 2015 +0200
+commit bd197ed16935de3a264726a8669055c945515390
+Author: Justin DeVuyst <justin@devuyst.com>
+Date:   Thu Dec 24 02:55:01 2015 +0100
 
-    Merge pull request #7 from fayland/travis
-    
-    add .travis.yml
-
-commit fdacc0f5ca60b61bd31667abffda8be491443383
-Author: Fayland Lam <fayland@gmail.com>
-Date:   Sat Oct 17 21:41:18 2015 +0800
-
-    add .travis.yml
+    Adjust to pack being made experimental.
 --------
 Pod-To-HTML
 commit 9b4c4963cb90851e53ed315ea9e0965730d4ad9b
@@ -279,166 +156,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit f23805a19c45e1c15cf455a478e310cda0453648
-Merge: 78410e8 ec2d529
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Wed Dec 23 19:18:56 2015 +0100
-
-    Merge branch 'master' of https://github.com/perl6/doc
-
-commit ec2d529d4ef145924cb971d6466344c77dc016be
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Wed Dec 23 16:03:31 2015 +0000
-
-    use EVALFILE not EVAL
-
-commit d8f36f30cceb72b074b98f29de9f68fb11d2fb5e
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Wed Dec 23 16:03:14 2015 +0000
-
-    fix p6doc CLI index generation
-
-commit 2cc8c2f9e6e7e6e61da236467cdfac9f4e833b48
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Wed Dec 23 08:36:51 2015 +0100
-
-    SSLify some links
-
-commit 07a3825c3d70fc051d5b085b9919186306447941
+commit b015b245d9208bbd640aa510791350e947c4e738
 Author: Brock Wilcox <bwilcox@optoro.com>
-Date:   Wed Dec 23 01:26:14 2015 -0500
+Date:   Thu Dec 24 13:48:28 2015 -0500
 
-    No space in reference to an actual module name
-
-commit 8a134ae43db726744f1e982ed7acd7297820c2b4
-Author: Brock Wilcox <bwilcox@optoro.com>
-Date:   Wed Dec 23 01:23:44 2015 -0500
-
-    Mass change Perl6 -> Perl 6
-
-commit 876ac46b5515fc097c564dcc8e09fb1ee6162dde
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Tue Dec 22 22:13:44 2015 +0000
-
-    Some quick fixes to get basic p6doc usage working post-curli.
-    
-    Needs more attention since -f index etc. doesn't work.
-
-commit cc397c0c93ddd0cb932bdddf0bfef92942f3323f
-Author: ab5tract <john.haltiwanger@gmail.com>
-Date:   Mon Dec 21 19:28:15 2015 -0500
-
-    Document in-place editing of hash values
-
-commit 809fde65d9837ac7ff785d4faa260a935be8230c
-Author: ab5tract <john.haltiwanger@gmail.com>
-Date:   Mon Dec 21 19:01:53 2015 -0500
-
-    Make the example work for more than two instants
-
-commit c717bda02bc1143bf97bd13915bc3a89ff4e5caf
-Merge: 006910f ce1302c
-Author: nxadm <nxadm@users.noreply.github.com>
-Date:   Mon Dec 21 20:05:02 2015 +0100
-
-    Merge pull request #257 from nxadm/master
-    
-    META.info: author -> authors
-
-commit ce1302cb1724213d4459465e01549a2f217e2269
-Author: Claudio Ramirez <pub.claudio@gmail.com>
-Date:   Mon Dec 21 20:02:28 2015 +0100
-
-    META.info: author -> authord
-
-commit 006910f81afb8734c8e0051637239aa544b5424e
-Author: Karl Rune Nilsen <krunen@gmail.com>
-Date:   Mon Dec 21 19:41:21 2015 +0100
-
-    Attribute.has-accessor -> has_accessor
-
-commit c154746fd356135e55aa7cf264707b197087f339
-Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
-Date:   Mon Dec 21 17:22:01 2015 +0000
-
-    Somewhat describe the resources thing in modules doc
-
-commit 0816047f2265d04d552e0607edd8ef1ee301e1b7
-Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
-Date:   Mon Dec 21 16:52:16 2015 +0000
-
-    Move splice() from List to Array
-    
-    fixes #254
-
-commit 1dd77e8a2f2fb30742453d8ccd093d19331d6672
-Merge: 85fbee8 3d03f5c
-Author: Jonathan Stowe <jns@gellyfish.co.uk>
-Date:   Mon Dec 21 16:45:26 2015 +0000
-
-    Merge pull request #255 from ChoHag/master
-    
-    Clear as mud - be explicit about the definition of 'module'.
-
-commit 3d03f5cb00acda8c3d9278543806015f3a900caf
-Author: Matthew King <matthew.king@monnsta.net>
-Date:   Mon Dec 21 18:12:53 2015 +0200
-
-    Clear as mud - be explicit about the definition of 'module'.
-
-commit 85fbee871447c05dd1c246d10014f52f06ac9678
-Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
-Date:   Mon Dec 21 14:09:38 2015 +0000
-
-    Add the new UDP related methods
-
-commit 40d7d6c8d269e75a7df23f5a5959e5e8693eeebd
-Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
-Date:   Mon Dec 21 11:48:04 2015 +0000
-
-    chars-supply and bytes-supply gone
-
-commit 32cd4374055b57bb009c8f6683181223c9b91f9e
-Author: Brock Wilcox <bwilcox@optoro.com>
-Date:   Sun Dec 20 20:11:01 2015 -0500
-
-    Document :{ ... } hash literal syntax
-
-commit 06e2aec9c3875c2af2e18091ee85608fc049c7f4
-Author: Brock Wilcox <bwilcox@optoro.com>
-Date:   Sun Dec 20 19:59:56 2015 -0500
-
-    Index nativecall
-
-commit 58af38ebb43e4ba35bad1ff94a6bdab2a06447df
-Author: Brock Wilcox <bwilcox@optoro.com>
-Date:   Sun Dec 20 19:53:20 2015 -0500
-
-    Remove last reference to first-index
-
-commit ddc42d336b7ee04cb087275fb774a7b3e9c1d63a
-Author: Brock Wilcox <bwilcox@optoro.com>
-Date:   Sun Dec 20 19:07:52 2015 -0500
-
-    Add a bunch of testing subs to the search index
-
-commit 6b644bd76b164ef56e0974d9f536d53a6cdc9062
-Author: Brock Wilcox <bwilcox@optoro.com>
-Date:   Sun Dec 20 19:01:58 2015 -0500
-
-    Document EVAL a bit
-
-commit b21bc8f65837a32f1af29d3dca7092dc21ab8384
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Sun Dec 20 20:06:45 2015 +0000
-
-    MONKEY-SEE-NO-EVAL Skarsnik++
-
-commit 54b29f1b6b9593a133ce116d33a801fec4fec85d
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Sun Dec 20 20:02:37 2015 +0000
-
-    use MONKEY-SEE-NO-EVAL until we have a better serialisation
+    Direct people to open PR on ecosystem
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -557,20 +279,15 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit 33c496e5172f24889fe8efd341c2ebe3839072f4
-Merge: 778c6d4 6073de4
-Author: lizmat <liz@dijkmat.nl>
-Date:   Mon Dec 21 12:40:58 2015 +0100
+commit 005eb6665f0021cde52ec5c32e3ca9c95568607d
+Author: Stefan Seifert <nine@detonation.org>
+Date:   Wed Dec 23 21:15:03 2015 +0100
 
-    Merge pull request #267 from skids/aloha_as
+    Support platform library names in resources/libraries
     
-    Remove all uses of "as" and replace with coercive types
-
-commit 6073de4c0bc349d467347e7d2647a6cdb33b74c7
-Author: skids <bri@abrij.org>
-Date:   Sun Dec 20 22:07:14 2015 -0500
-
-    Remove all uses of "as" and replace with coercive types
+    Files in resources/libraries are supposed to be named according to platform
+    conventions for shared libraries, i.e. resources/libraries/p5helper will be
+    expanded to resources/libraries/libp5helper.so on Linux
 --------
 perl6-digest-md5
 commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b
@@ -631,26 +348,20 @@ Date:   Wed Nov 4 23:27:11 2015 +0000
     Fixes #64
 --------
 shell-command
-commit 8a6381cd4fc2c2a98bbc0642efaf4aa6473a6339
-Merge: dd8da5e ecf0862
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Fri Oct 23 17:05:08 2015 +0200
+commit 1a7eafc57991f5d4574d1731f93394a7fabb967d
+Merge: 8a6381c 54e98c2
+Author: lizmat <liz@dijkmat.nl>
+Date:   Thu Dec 24 08:50:53 2015 +0100
 
-    Merge pull request #7 from softmoth/master
+    Merge pull request #8 from LLFourn/master
     
-    Add simple which() routine, and Travis-CI
+    'as' is no longer a thing :\
 
-commit ecf0862c5b9ff6a5b4417d0c2baecd8e100d5229
-Author: Tim Smith <tim.dolores@gmail.com>
-Date:   Wed Oct 14 17:27:50 2015 -0600
+commit 54e98c2b7636e792a0a5527e0102ddd7485a5acb
+Author: LLFourn <lloyd.fourn@gmail.com>
+Date:   Thu Dec 24 13:07:53 2015 +1100
 
-    Add Travis-CI integration
-
-commit e757695b428d73d4c0fd3e048a1f78924fc23802
-Author: Tim Smith <tim.dolores@gmail.com>
-Date:   Wed Oct 14 17:20:35 2015 -0600
-
-    Add which() routine
+    'as' is no longer a thing :\
 --------
 svg
 commit 26edc3bd93e3532163b9f2424ca9058c7bb946a5
@@ -709,26 +420,15 @@ Date:   Fri Nov 6 03:02:13 2015 -0500
     .map returs a Seq, use hyper op instead.
 --------
 uri
-commit 6bf653bf6f8162689586b06912d3e60e0095bbff
-Merge: ffa39b3 bff49f1
-Author: Ronald Schmidt <ronaldxs@software-path.com>
-Date:   Thu Nov 19 21:18:24 2015 -0500
+commit 089c2340abe45c2ce8c3633d36157bfb4971432a
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Thu Dec 24 09:35:00 2015 +0100
 
-    Merge pull request #26 from ronaldxs/master
+    .fmt has always been better than .unpack here.
     
-    Fix broken version<> to ver<> and few other small things.
-
-commit bff49f1e492492cf27caf58fc1308d50411ca297
-Author: Ronald Schmidt <ronaldxs@software-path.com>
-Date:   Thu Nov 19 21:08:35 2015 -0500
-
-    change incorrect version<> to ver<>
-
-commit 40f322f3d9c8d636c282c18ac2fff1c46fbf8752
-Author: Ronald Schmidt <ronaldxs@software-path.com>
-Date:   Tue Nov 3 18:09:03 2015 -0500
-
-    minor fixes, mostly style
+    also gets rid of use experimental in a common module.
+    
+    so yay!
 --------
 xml-writer
 commit c230464a2cd5ed1c19fcba9acd496d72d227fd1f

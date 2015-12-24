@@ -42,12 +42,12 @@ java -Xss1m -Xms500m -Xmx2000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-sta
 The following step can take a long time, please be patient.
 java -Xss1m -Xms500m -Xmx2000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar:rakudo-runtime.jar:perl6.jar -cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib perl6 --setting=NULL --ll-exception --optimize=3 --target=jar --stagestats --output=CORE.setting.jar gen/jvm/CORE.setting
 Stage start      :   0.000
-Stage parse      : 107.599
+Stage parse      : 110.395
 Stage syntaxcheck:   0.000
 Stage ast        :   0.001
-Stage optimize   :  12.010
-Stage jast       :  34.172
-Stage classfile  :   7.604
+Stage optimize   :  12.307
+Stage jast       :  35.123
+Stage classfile  :   7.562
 Stage jar        :   0.000
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-jvm-runner.pl dev . . /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar
 Creating './perl6-j'
@@ -92,14 +92,12 @@ make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-jvm/rakud
 Missing serialize function for REPR ContextRef
 ===SORRY!===
 Missing serialize function for REPR ContextRef
-===SORRY!===
-Missing serialize function for REPR ContextRef
 CB3842ED9CBDEFDED51742E936F34C248222859B /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/perl6/sources/CB3842ED9CBDEFDED51742E936F34C248222859B Return status 256
 
-  in block <unit> at tools/build/install-core-dist.pl:12
+  in block <unit> at tools/build/install-core-dist.pl line 12
 
 Actually thrown at:
-  in block <unit> at tools/build/install-core-dist.pl:12
+  in block <unit> at tools/build/install-core-dist.pl line 12
 
 Makefile:486: recipe for target 'j-install' failed
 make[1]: *** [j-install] Error 1

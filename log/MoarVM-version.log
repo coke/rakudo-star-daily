@@ -1,9 +1,9 @@
 MoarVM
-2015.11-124-gc8ed03d
+2015.12
 Rakudo
-Bend-783-g11040a7
+Bend-801-g88c778a
 NQP
-2015.11-146-g9d05ece
+2015.12
 modules
 --------
 Bailador
@@ -156,11 +156,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit b015b245d9208bbd640aa510791350e947c4e738
-Author: Brock Wilcox <bwilcox@optoro.com>
-Date:   Thu Dec 24 13:48:28 2015 -0500
+commit 9a5d617ea32cd0c0a8d557ba0192209d633f3785
+Author: skids <bri@abrij.org>
+Date:   Fri Dec 25 14:35:42 2015 -0500
 
-    Direct people to open PR on ecosystem
+    avoid a redeclaration warning if example code is run
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -279,15 +279,15 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit 005eb6665f0021cde52ec5c32e3ca9c95568607d
+commit 4862f32c405d4cd6186d2cf0608bb6f3ab3f498e
 Author: Stefan Seifert <nine@detonation.org>
-Date:   Wed Dec 23 21:15:03 2015 +0100
+Date:   Fri Dec 25 18:52:26 2015 +0100
 
-    Support platform library names in resources/libraries
+    Fix "Cannot unbox a type object" that goes away on second try to install
     
-    Files in resources/libraries are supposed to be named according to platform
-    conventions for shared libraries, i.e. resources/libraries/p5helper will be
-    expanded to resources/libraries/libp5helper.so on Linux
+    Caused by "if not $force" in CompUnit::Repository::Installation::install.
+    Doesn't make all that much sense that it fails there, but it's a trivial
+    patch that will improve lot of people's experience.
 --------
 perl6-digest-md5
 commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b

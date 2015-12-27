@@ -1,7 +1,7 @@
 MoarVM
 2015.12
 Rakudo
-Bend-801-g88c778a
+v6.c-3-g446a3ca
 NQP
 2015.12
 modules
@@ -23,26 +23,13 @@ Date:   Sat Oct 31 20:03:17 2015 +0100
     Add MIT License
 --------
 DBIish
-commit b6a92ad01941a6bcede814d5ecad327a0d44cdfc
-Merge: 6109493 19c6a1e
-Author: Skarsnik <scolinet@gmail.com>
-Date:   Thu Dec 24 13:16:18 2015 +0100
+commit 2181b115fbea17926c7efa5aa76ff058be65d960
+Author: Aleks-Daniel Jakimenko-Aleksejev <alex.jakimenko+github@gmail.com>
+Date:   Sat Dec 26 05:39:37 2015 +0200
 
-    Merge pull request #43 from Skarsnik/master
+    “RaiseErrors” → “RaiseError”
     
-    Remove fetch_typedhash/fetch_alltypedhash, there were DEPRECATED
-
-commit 19c6a1efa5cb62ace167585f7d26f4866f8abb3f
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Thu Dec 24 13:08:19 2015 +0100
-
-    forget to remove something
-
-commit 1e86465d7f79f8214cbae41e36fd9e1a1381d085
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Thu Dec 24 13:05:07 2015 +0100
-
-    Remove fetch_typedhash/fetch_alltypedhash, there were already marked as DEPRECATED
+    Another “just a typo”
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -156,11 +143,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 9a5d617ea32cd0c0a8d557ba0192209d633f3785
-Author: skids <bri@abrij.org>
-Date:   Fri Dec 25 14:35:42 2015 -0500
+commit 29fe5f3055a35c11298fb6820bb1438eddc3a063
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Sat Dec 26 22:10:32 2015 +0000
 
-    avoid a redeclaration warning if example code is run
+    Make a server example that works with telnet
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -216,232 +203,289 @@ Date:   Sun Nov 29 16:22:09 2015 -0500
     @*INC is dead, long live CURLI
 --------
 json_fast
-commit 8ad8c77954090495856a11ae9da1e38d74128706
-Merge: be150dd c3bc033
-Author: timo <timonator@perpetuum-immobile.de>
-Date:   Wed Dec 9 13:06:41 2015 +0100
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    Merge pull request #8 from zoffixznet/fix-freeze
+    Merge pull request #58 from stmuk/master
     
-    Fix freezing issue during tests (zoffix++ lucasb++)
+    reimport cheatsheet from mu repo golden source
 
-commit c3bc0331743f112aa08fd73ba32e89a6ece7d194
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Tue Dec 8 19:28:51 2015 -0500
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
 
-    Fix freezing issue during tests
+    reimport from mu repo golden source
 --------
 jsonrpc
-commit 2aaf5bf096ca5b40c59d49972ccaf5b8b988665e
-Merge: 8fe75ac 9b29320
-Author: Pawel Pabian <bbkr@post.pl>
-Date:   Sat Dec 5 22:14:28 2015 +0100
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    Merge pull request #24 from zoffixznet/fix-inc
+    Merge pull request #58 from stmuk/master
     
-    Fix removed @*INC
+    reimport cheatsheet from mu repo golden source
 
-commit 9b29320a9fa8749c95469cf8f6ccff56d3e32924
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Fri Dec 4 18:49:06 2015 -0500
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
 
-    Fix removed @*INC
+    reimport from mu repo golden source
 --------
 library-make
-commit 8ab4b23a981ebfd63a74c11d1398750a472195aa
-Author: Andrew Egeler <andrew@egeler.us>
-Date:   Fri Dec 11 20:09:16 2015 -0500
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    Update docs for %?RESOURCES
+    Merge pull request #58 from stmuk/master
+    
+    reimport cheatsheet from mu repo golden source
+
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
+
+    reimport from mu repo golden source
 --------
 p6-File-Temp
-commit f988468d7634af410e40d4fbd56c6b4ccbaffaab
-Author: Jonathan Scott Duff <duff@pobox.com>
-Date:   Thu Nov 5 12:20:34 2015 -0600
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    switch to semver; bump version
+    Merge pull request #58 from stmuk/master
+    
+    reimport cheatsheet from mu repo golden source
+
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
+
+    reimport from mu repo golden source
 --------
 p6-Template-Mustache
-commit 223a8fb24732a7869279de3a42b465407644fe8e
-Author: Tim Smith <tim.dolores@gmail.com>
-Date:   Sat Oct 17 22:30:59 2015 -0600
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    Switch from LGPL to Artistic 2.0
+    Merge pull request #58 from stmuk/master
     
-    No big reason here, but Artistic is conventional for Perl modules.
-    [ci skip]
+    reimport cheatsheet from mu repo golden source
+
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
+
+    reimport from mu repo golden source
 --------
 p6-file-directory-tree
-commit 9970d80c0404f640eeda3c623c39a13496c9a0b2
-Author: Brent Laabs <blaabs@perceptyx.com>
-Date:   Sat Dec 19 01:49:33 2015 -0800
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    Add Travis CI
+    Merge pull request #58 from stmuk/master
+    
+    reimport cheatsheet from mu repo golden source
+
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
+
+    reimport from mu repo golden source
 --------
 panda
-commit 4862f32c405d4cd6186d2cf0608bb6f3ab3f498e
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Fri Dec 25 18:52:26 2015 +0100
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    Fix "Cannot unbox a type object" that goes away on second try to install
+    Merge pull request #58 from stmuk/master
     
-    Caused by "if not $force" in CompUnit::Repository::Installation::install.
-    Doesn't make all that much sense that it fails there, but it's a trivial
-    patch that will improve lot of people's experience.
+    reimport cheatsheet from mu repo golden source
+
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
+
+    reimport from mu repo golden source
 --------
 perl6-digest-md5
-commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b
-Merge: fff52cb 032eb4a
-Author: Cosimo Streppone <cosimo@cpan.org>
-Date:   Fri Nov 20 23:35:57 2015 +0100
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    Merge pull request #19 from p6-pdf/latin1
+    Merge pull request #58 from stmuk/master
     
-    use 8-bit latin-1 encoding
+    reimport cheatsheet from mu repo golden source
 
-commit 032eb4a7e428f06c74b609c6c5368294d9cdaae0
-Author: David Warring <david.warring@gmail.com>
-Date:   Tue Nov 17 23:46:59 2015 +0000
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
 
-    use latin-1 encoding - addresses #17
+    reimport from mu repo golden source
 --------
 perl6-http-easy
-commit 15659be138eac87be3c1865a1ee2989a0fb11a3d
-Author: Timothy Totten <2010@huri.net>
-Date:   Wed Dec 2 11:16:08 2015 -0800
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    Re-enabled container infrastructure in Travis CI
+    Merge pull request #58 from stmuk/master
+    
+    reimport cheatsheet from mu repo golden source
+
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
+
+    reimport from mu repo golden source
 --------
 perl6-http-status
-commit a026ba89bcbad16344d988bf1212cc66bb5de6b7
-Merge: 7f1fe69 a695899
-Author: Timothy Totten <2009@huri.net>
-Date:   Sat Dec 5 21:09:31 2015 -0800
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    Merge pull request #9 from zoffixznet/fix-inc
+    Merge pull request #58 from stmuk/master
     
-    Fix removed @*INC
+    reimport cheatsheet from mu repo golden source
 
-commit a695899481ec4b9901a52b1eff0df373766dc654
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Fri Dec 4 19:36:20 2015 -0500
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
 
-    Fix removed @*INC
+    reimport from mu repo golden source
 --------
 perl6-lwp-simple
-commit 41c5370e7d770d5ec5f77c659ac05dc8432cd6d7
-Merge: 301b8c1 4c6631d
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Fri Nov 6 20:24:54 2015 +0100
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    Merge pull request #65 from jonathanstowe/master
+    Merge pull request #58 from stmuk/master
     
-    Fix the t/get-unsized.t test
+    reimport cheatsheet from mu repo golden source
 
-commit 4c6631d82b3bee18b365983e38b00b97342494a9
-Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
-Date:   Wed Nov 4 23:27:11 2015 +0000
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
 
-    After changes to the way that \r\n is handled
-    there may be come changes needed.  This appears to work.
-    
-    Fixes #64
+    reimport from mu repo golden source
 --------
 shell-command
-commit 1a7eafc57991f5d4574d1731f93394a7fabb967d
-Merge: 8a6381c 54e98c2
-Author: lizmat <liz@dijkmat.nl>
-Date:   Thu Dec 24 08:50:53 2015 +0100
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    Merge pull request #8 from LLFourn/master
+    Merge pull request #58 from stmuk/master
     
-    'as' is no longer a thing :\
+    reimport cheatsheet from mu repo golden source
 
-commit 54e98c2b7636e792a0a5527e0102ddd7485a5acb
-Author: LLFourn <lloyd.fourn@gmail.com>
-Date:   Thu Dec 24 13:07:53 2015 +1100
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
 
-    'as' is no longer a thing :\
+    reimport from mu repo golden source
 --------
 svg
-commit 26edc3bd93e3532163b9f2424ca9058c7bb946a5
-Merge: 81804e0 65d4730
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Aug 31 12:19:14 2015 +0200
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    Merge pull request #3 from laben/master
+    Merge pull request #58 from stmuk/master
     
-    Adjust code for glr
+    reimport cheatsheet from mu repo golden source
 
-commit 65d4730baf5e7fc3fa1c43c3ac8f28aa3f4538f7
-Author: laben <labensigma@gmail.com>
-Date:   Sun Aug 30 21:15:59 2015 +0200
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
 
-    Adjust code for glr
+    reimport from mu repo golden source
 --------
 svg-plot
-commit f88d0b73e955f7ff00bf8d5d0fefa03894922902
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sun Nov 29 22:49:14 2015 +0100
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    No more @*INC
+    Merge pull request #58 from stmuk/master
+    
+    reimport cheatsheet from mu repo golden source
+
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
+
+    reimport from mu repo golden source
 --------
 test-mock
-commit 99c7a9a5c86847a6555364e0904449bff76b0197
-Merge: 53e8512 3717c00
-Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Tue Sep 8 17:43:43 2015 +0200
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    Merge pull request #7 from laben/master
+    Merge pull request #58 from stmuk/master
     
-    Adjust code for glr
+    reimport cheatsheet from mu repo golden source
 
-commit 3717c00e78650eb67921fff7ee96d1e3398fe3b8
-Author: laben <labensigma@gmail.com>
-Date:   Sun Aug 30 20:09:25 2015 +0200
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
 
-    Adjust code for glr
+    reimport from mu repo golden source
 --------
 ufo
-commit 425ba45fed64644788fdf6b0997ef1c4a807e3b6
-Merge: 915a2ae 5966dbe
-Author: Carl Mäsak <cmasak@gmail.com>
-Date:   Thu Nov 12 13:51:27 2015 +0100
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    Merge pull request #29 from andreoss/master
+    Merge pull request #58 from stmuk/master
     
-    Fix .buildrule for GLR.
+    reimport cheatsheet from mu repo golden source
 
-commit 5966dbea10301a240c6a6d40427ec00582666663
-Author: andreoss <andreoss@sdf.org>
-Date:   Fri Nov 6 03:02:13 2015 -0500
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
 
-    Fix .buildrule for GLR.
-    .map returs a Seq, use hyper op instead.
+    reimport from mu repo golden source
 --------
 uri
-commit 089c2340abe45c2ce8c3633d36157bfb4971432a
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Thu Dec 24 09:35:00 2015 +0100
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    .fmt has always been better than .unpack here.
+    Merge pull request #58 from stmuk/master
     
-    also gets rid of use experimental in a common module.
-    
-    so yay!
+    reimport cheatsheet from mu repo golden source
+
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
+
+    reimport from mu repo golden source
 --------
 xml-writer
-commit c230464a2cd5ed1c19fcba9acd496d72d227fd1f
-Merge: 7452ca1 90a5fc0
+commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
+Merge: ed5d4d8 b1970f8
 Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Sat Aug 29 14:42:28 2015 +0200
+Date:   Thu Dec 3 22:38:57 2015 +0100
 
-    Merge pull request #5 from laben/master
+    Merge pull request #58 from stmuk/master
     
-    Adjust tests to newer conventions
+    reimport cheatsheet from mu repo golden source
 
-commit 90a5fc02c4c4769d82545d29de1f4de17554d893
-Author: laben <labensigma@gmail.com>
-Date:   Sat Aug 29 12:25:45 2015 +0200
+commit b1970f865e356326c0b1e8689fba1171d2717264
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Dec 3 21:35:16 2015 +0000
 
-    Adjust tests to newer conventions
+    reimport from mu repo golden source

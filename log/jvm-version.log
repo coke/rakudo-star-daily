@@ -1,26 +1,17 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-v6.c-18-g9441bb2
+v6.c-35-ga2c1d86
 NQP
-2015.12-7-g215eafd
+2015.12-10-g6a74da8
 modules
 --------
 Bailador
-commit ce40ad48304469f86592b8883a6a3bbd6c2b1fb1
-Merge: b0499a7 24f0ca5
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Sat Oct 31 20:08:35 2015 +0100
+commit 840278082d9fb5dfee2193a65bf6dfdcb9c03e59
+Author: Tadeusz “tadzik” Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Mon Dec 28 19:43:44 2015 +0100
 
-    Merge pull request #41 from sergot/master
-    
-    Add MIT License
-
-commit 24f0ca521b84ea95596bae30b6fc9310ffc79fcc
-Author: Filip Sergot <filip@sergot.pl>
-Date:   Sat Oct 31 20:03:17 2015 +0100
-
-    Add MIT License
+    Rollback one change that doesn't actually work
 --------
 DBIish
 commit 2181b115fbea17926c7efa5aa76ff058be65d960
@@ -143,20 +134,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit a852eb457d294a4bc7e7c6ecb9dcf574f35376a8
-Merge: 29fe5f3 ce12262
-Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
-Date:   Sun Dec 27 15:07:28 2015 -0500
+commit 36742e6f96378aaf09a85c6f7df9f41db558dc6d
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Mon Dec 28 18:06:14 2015 +0100
 
-    Merge pull request #275 from NeilShadrach/master
-    
-    Fix minor typos
-
-commit ce1226219a93b2a26b1a580ba96f6988dd3b80cc
-Author: Neil Shadrach <neil.shadrach@corryn.com>
-Date:   Sun Dec 27 20:02:14 2015 +0000
-
-    Fix minor typos
+    Clarify int64 type and add something about using int and num type
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -275,31 +257,38 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit 4862f32c405d4cd6186d2cf0608bb6f3ab3f498e
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Fri Dec 25 18:52:26 2015 +0100
+commit 4709e93807d78ce8d4ddc0a8113a6fb3f52f39c0
+Merge: 4862f32 6ea292d
+Author: lizmat <liz@dijkmat.nl>
+Date:   Sun Dec 27 22:42:00 2015 +0100
 
-    Fix "Cannot unbox a type object" that goes away on second try to install
+    Merge pull request #272 from uvtc/patch-1
     
-    Caused by "if not $force" in CompUnit::Repository::Installation::install.
-    Doesn't make all that much sense that it fails there, but it's a trivial
-    patch that will improve lot of people's experience.
+    tip to folks new to panda, re typical installation
+
+commit 6ea292ddbaa8af18c662f20c2866211a64aa15fc
+Author: John Gabriele <jgabriele@fastmail.fm>
+Date:   Sun Dec 27 16:11:06 2015 -0500
+
+    tip to folks new to panda, re typical installation
 --------
 perl6-digest-md5
-commit 556a1bba2a4d4cd05c3aad71ff1f95a96f70e41b
-Merge: fff52cb 032eb4a
+commit 41dc67c08d417cf395939a2a546829ff1fe30a81
+Merge: 556a1bb d112517
 Author: Cosimo Streppone <cosimo@cpan.org>
-Date:   Fri Nov 20 23:35:57 2015 +0100
+Date:   Mon Dec 28 13:51:50 2015 +0100
 
-    Merge pull request #19 from p6-pdf/latin1
+    Merge pull request #20 from johnspurr/patch-1
     
-    use 8-bit latin-1 encoding
+    Updated to conform to new newline handling
 
-commit 032eb4a7e428f06c74b609c6c5368294d9cdaae0
-Author: David Warring <david.warring@gmail.com>
-Date:   Tue Nov 17 23:46:59 2015 +0000
+commit d1125174324afeb701a60b55a0fea8a398919675
+Author: John Spurr <johnspurr@users.noreply.github.com>
+Date:   Wed Nov 25 22:51:16 2015 -0500
 
-    use latin-1 encoding - addresses #17
+    Updated to conform to new newline handling
+    
+    This stops the test from breaking on windows due to automatic conversion of "\n" to "\r\n"
 --------
 perl6-http-easy
 commit 15659be138eac87be3c1865a1ee2989a0fb11a3d
@@ -325,23 +314,20 @@ Date:   Fri Dec 4 19:36:20 2015 -0500
     Fix removed @*INC
 --------
 perl6-lwp-simple
-commit 41c5370e7d770d5ec5f77c659ac05dc8432cd6d7
-Merge: 301b8c1 4c6631d
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Fri Nov 6 20:24:54 2015 +0100
+commit d86c1d0153c0d571dc3a45f89bfbf2aaf015cac5
+Merge: 7e6e252 826800b
+Author: Cosimo Streppone <cosimo@cpan.org>
+Date:   Mon Dec 28 11:10:19 2015 +0100
 
-    Merge pull request #65 from jonathanstowe/master
+    Merge pull request #67 from niner/master
     
-    Fix the t/get-unsized.t test
+    Replace "as Int" with proper coercion type to fix build
 
-commit 4c6631d82b3bee18b365983e38b00b97342494a9
-Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
-Date:   Wed Nov 4 23:27:11 2015 +0000
+commit 826800bdfd8f0e624aa86edcf8d82143e0d06efe
+Author: Stefan Seifert <nine@detonation.org>
+Date:   Thu Dec 24 09:44:36 2015 +0100
 
-    After changes to the way that \r\n is handled
-    there may be come changes needed.  This appears to work.
-    
-    Fixes #64
+    Replace "as Int" with proper coercion type to fix build
 --------
 shell-command
 commit 1a7eafc57991f5d4574d1731f93394a7fabb967d

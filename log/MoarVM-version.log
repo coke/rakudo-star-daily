@@ -1,7 +1,7 @@
 MoarVM
-2015.12-5-g851bdf0
+2015.12-6-g07906c9
 Rakudo
-v6.c-43-g75e33f3
+v6.c-51-g3dc7d55
 NQP
 2015.12-10-g6a74da8
 modules
@@ -14,13 +14,62 @@ Date:   Mon Dec 28 19:43:44 2015 +0100
     Rollback one change that doesn't actually work
 --------
 DBIish
-commit 2181b115fbea17926c7efa5aa76ff058be65d960
-Author: Aleks-Daniel Jakimenko-Aleksejev <alex.jakimenko+github@gmail.com>
-Date:   Sat Dec 26 05:39:37 2015 +0200
+commit 429fb48f5d888aa84b0cfa57f58bde40f05aa991
+Merge: 2181b11 aeea1f5
+Author: Skarsnik <scolinet@gmail.com>
+Date:   Wed Dec 30 17:58:15 2015 +0100
 
-    “RaiseErrors” → “RaiseError”
+    Merge pull request #45 from Skarsnik/master
     
-    Another “just a typo”
+    Add support for Pg array from azawavi work
+
+commit aeea1f5b18249689aa3a16098ac43e107b37f855
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Wed Dec 30 17:42:48 2015 +0100
+
+    Forget a commit
+
+commit 3df522da32eb33fdde60576a32efac6f54e4c712
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Tue Nov 24 16:36:19 2015 +0200
+
+    Delete parse_pg_array.p6
+
+commit b2354bbe7fca66c27865d8bec0b6227135f56f64
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Tue Nov 24 15:11:38 2015 +0200
+
+    merge pgarray from azwawi step3
+
+commit 9c7eeaacfcb297f95b02cbeea8c64990974794d8
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Mon Nov 16 13:28:28 2015 +0200
+
+    merge pgarray from azwawi step2
+
+commit 1bd8494710207368e62abf490e861eabf11da9c9
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Mon Nov 16 12:09:06 2015 +0200
+
+    Parse PG array list
+
+commit a07a23b22a259f6174af63afec2c663a53a074d8
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Thu Nov 12 16:34:42 2015 +0200
+
+    Add simple work in progress parser for PG arrays
+
+commit e803bf891d0d1f482adc34e7642c412d54b13f3a
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Thu Nov 12 15:49:06 2015 +0200
+
+    merge pgarray step1
+
+commit 2b8ac569a6426463c72b055d21ed4108b3a5016b
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Thu Nov 12 14:43:53 2015 +0200
+
+    Add initial example for PG array
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -39,11 +88,28 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 Linenoise
-commit 20690178684614d37caeade505316ac4aaf411b6
+commit dce3a878dc547c8475cf99a03d244fd48ec1c468
+Merge: 01efe54 fac7110
 Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Sun Dec 20 17:58:03 2015 -0600
+Date:   Wed Dec 30 08:13:20 2015 -0600
 
-    Add version and auth information to Linenoise
+    Merge pull request #11 from VSChawathe/patch-1
+    
+    Update Makefile.in
+
+commit fac71102b603bd9bd043bb34b3da332d88ce1499
+Author: Vipul S. Chawathe <VSChawathe@users.noreply.github.com>
+Date:   Wed Dec 30 16:34:34 2015 +0530
+
+    Update Makefile.in
+    
+    The extra space before out filename causes
+            link /dll /nologo /LTCG  shell32.lib ws2_32.lib mswsock.lib rpcrt4.lib advapi32.lib psapi.lib iphlpapi.lib /out: resources/lib/liblinenoise.dll linenoise.obj
+    LINK : fatal error LNK1146: no argument specified with option '/out:'
+    NMAKE : fatal error U1077: '"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\BIN\amd64\link.EXE"' : return code '0x47a'
+    Stop.
+    The spawned process exited unsuccessfully (exit code: 2)
+      in method build at C:\Users\Vipul\rakudobrew\moar-nom\install\share\perl6\site\sources\66F7A7F1CCB8B2826996735F727B93F9FEC3FCF0 line 7
 --------
 MODULES.txt
 commit 5b7b2679d3c449550aba6eb016e03c6ef5c23d93
@@ -134,11 +200,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 9454b1d9bd86e8ce92760c4349f5f96e43f26769
-Author: skids <bri@abrij.org>
-Date:   Tue Dec 29 13:13:51 2015 -0500
+commit 95647e9d86413bc2bb72c13d15c3feb279522767
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Wed Dec 30 14:14:46 2015 -0500
 
-    More massaging to unbreak links.
+    Provide indication the search feature is still loading (Closes #295)
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -257,20 +323,20 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit 4709e93807d78ce8d4ddc0a8113a6fb3f52f39c0
-Merge: 4862f32 6ea292d
-Author: lizmat <liz@dijkmat.nl>
-Date:   Sun Dec 27 22:42:00 2015 +0100
+commit c1c0ae01f1a3d6bba5c3ce9fe32ae637758fd233
+Merge: 3e79949 cc150f8
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Wed Dec 30 14:39:39 2015 +0100
 
-    Merge pull request #272 from uvtc/patch-1
+    Merge pull request #275 from cygx/mk-pandadir
     
-    tip to folks new to panda, re typical installation
+    try to unconditionally make $pandadir via .mkdir instead of &mkpath
 
-commit 6ea292ddbaa8af18c662f20c2866211a64aa15fc
-Author: John Gabriele <jgabriele@fastmail.fm>
-Date:   Sun Dec 27 16:11:06 2015 -0500
+commit cc150f861552a35b8b1837242ba249852c9a7b05
+Author: cygx <cygx@cpan.org>
+Date:   Wed Dec 30 02:05:05 2015 +0100
 
-    tip to folks new to panda, re typical installation
+    try to unconditionally make $pandadir via .mkdir instead of &mkpath
 --------
 perl6-digest-md5
 commit 41dc67c08d417cf395939a2a546829ff1fe30a81

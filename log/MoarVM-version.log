@@ -1,7 +1,7 @@
 MoarVM
-2015.12-6-g07906c9
+2015.12-9-gbedb8f3
 Rakudo
-v6.c-51-g3dc7d55
+v6.c-64-g6612747
 NQP
 2015.12-10-g6a74da8
 modules
@@ -14,62 +14,11 @@ Date:   Mon Dec 28 19:43:44 2015 +0100
     Rollback one change that doesn't actually work
 --------
 DBIish
-commit 429fb48f5d888aa84b0cfa57f58bde40f05aa991
-Merge: 2181b11 aeea1f5
-Author: Skarsnik <scolinet@gmail.com>
-Date:   Wed Dec 30 17:58:15 2015 +0100
-
-    Merge pull request #45 from Skarsnik/master
-    
-    Add support for Pg array from azawavi work
-
-commit aeea1f5b18249689aa3a16098ac43e107b37f855
+commit 44925b4a4f4d530d827cb2c7dac2135ba6893f00
 Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Wed Dec 30 17:42:48 2015 +0100
+Date:   Thu Dec 31 16:41:08 2015 +0100
 
-    Forget a commit
-
-commit 3df522da32eb33fdde60576a32efac6f54e4c712
-Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Tue Nov 24 16:36:19 2015 +0200
-
-    Delete parse_pg_array.p6
-
-commit b2354bbe7fca66c27865d8bec0b6227135f56f64
-Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Tue Nov 24 15:11:38 2015 +0200
-
-    merge pgarray from azwawi step3
-
-commit 9c7eeaacfcb297f95b02cbeea8c64990974794d8
-Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Mon Nov 16 13:28:28 2015 +0200
-
-    merge pgarray from azwawi step2
-
-commit 1bd8494710207368e62abf490e861eabf11da9c9
-Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Mon Nov 16 12:09:06 2015 +0200
-
-    Parse PG array list
-
-commit a07a23b22a259f6174af63afec2c663a53a074d8
-Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Thu Nov 12 16:34:42 2015 +0200
-
-    Add simple work in progress parser for PG arrays
-
-commit e803bf891d0d1f482adc34e7642c412d54b13f3a
-Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Thu Nov 12 15:49:06 2015 +0200
-
-    merge pgarray step1
-
-commit 2b8ac569a6426463c72b055d21ed4108b3a5016b
-Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
-Date:   Thu Nov 12 14:43:53 2015 +0200
-
-    Add initial example for PG array
+    Typo
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -200,11 +149,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 95647e9d86413bc2bb72c13d15c3feb279522767
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Wed Dec 30 14:14:46 2015 -0500
+commit 09b4ed9db328576ba65069906270b5ea85fd5e1d
+Author: Elizabeth Mattijsen <liz@dijkmat.nl>
+Date:   Thu Dec 31 15:41:29 2015 +0100
 
-    Provide indication the search feature is still loading (Closes #295)
+    Elaborate on the bare dd
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -299,11 +248,30 @@ Date:   Fri Dec 11 20:09:16 2015 -0500
     Update docs for %?RESOURCES
 --------
 p6-File-Temp
-commit f988468d7634af410e40d4fbd56c6b4ccbaffaab
-Author: Jonathan Scott Duff <duff@pobox.com>
-Date:   Thu Nov 5 12:20:34 2015 -0600
+commit 2c12fb58df24b082719ba57efb7f978242c65307
+Merge: 8e9b3e7 4561dc1
+Author: Jonathan Scott Duff <perlpilot@pobox.com>
+Date:   Wed Dec 30 15:01:24 2015 -0600
 
-    switch to semver; bump version
+    Merge pull request #14 from skids/master
+    
+    Address issue #11 (for files, but not directories)
+
+commit 4561dc1c65696536d42715cfb6ad37c96808f5e3
+Author: skids <bri@abrij.org>
+Date:   Sun Nov 29 04:02:53 2015 -0500
+
+    Address issue #11 (for files, but not directories)
+    
+    Allows files to be deleted when file handles are garbage collected,
+    in addition to during END.  Note that this means we no can longer
+    ensure .close is called before deletion since we cannot hold onto
+    the handle or it will never get collected.  If that is important
+    it can be made an option at the cost of potential leakiness.
+    
+    Since directories do not produce a handle to discard, they will
+    still accrue.  Adding a form of tempdir() that returns an open
+    dirhandle would allow the same treatment.
 --------
 p6-Template-Mustache
 commit 223a8fb24732a7869279de3a42b465407644fe8e

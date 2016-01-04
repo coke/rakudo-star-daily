@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-v6.c-79-g4bb47d5
+v6.c-93-g812a48b
 NQP
-2015.12-12-ged8ed36
+2015.12-23-g0a6abdd
 modules
 --------
 Bailador
@@ -166,13 +166,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit dec7182e539a669b76b7c35ae71ec88e78ac6b54
-Author: Elizabeth Mattijsen <liz@dijkmat.nl>
-Date:   Sun Jan 3 15:05:23 2016 +0100
+commit 7124341115e65c7be9f7f9cbc53fa2ad8ac353e5
+Author: Stéphane Payrard <cognominal@gmail.com>
+Date:   Mon Jan 4 17:53:44 2016 +0100
 
-    Some work on the glossary
-    
-    As part of moving stuff from S99 in here
+    small clarification
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -310,11 +308,21 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit 404cc9710259b1079a955e8936c12af826b710b5
-Author: Elizabeth Mattijsen <liz@dijkmat.nl>
-Date:   Sun Jan 3 20:19:07 2016 +0100
+commit d03b5abb5edd2f0e5c0f8579ab1126e67d3f28ee
+Author: Stefan Seifert <nine@detonation.org>
+Date:   Sun Jan 3 22:39:20 2016 +0100
 
-    Alternate way to do PR #283, daleevans++
+    Supply relative paths to CompUnit::Repository::Installation::install
+    
+    Precompiled modules are checked against their source files on loading to detect
+    outdated precomp files. This is done by recording the source file's id. Thus
+    this id must be stable and survive reinstallation of a module. Otherwise the
+    precompilation file's modification time will be compared to an outdated source
+    file.
+    
+    This also means that the source file's path must be stable. Therefore we have
+    to supply relative paths to the install method, as the absolute paths contain
+    panda's work directory which contains a time stamp.
 --------
 perl6-digest-md5
 commit 41dc67c08d417cf395939a2a546829ff1fe30a81

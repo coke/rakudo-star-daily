@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-v6.c-93-g812a48b
+v6.c-101-g75c6b9e
 NQP
-2015.12-23-g0a6abdd
+2015.12-28-g460c042
 modules
 --------
 Bailador
@@ -166,11 +166,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 7124341115e65c7be9f7f9cbc53fa2ad8ac353e5
-Author: Stéphane Payrard <cognominal@gmail.com>
-Date:   Mon Jan 4 17:53:44 2016 +0100
+commit d4c1e5f303c052f3a7b3312f19bc98edc9bc57d7
+Author: Zoffix Znet <cpan@zoffix.com>
+Date:   Tue Jan 5 12:10:31 2016 -0500
 
-    small clarification
+    Fix typo (ilmari++)
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -308,21 +308,20 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit d03b5abb5edd2f0e5c0f8579ab1126e67d3f28ee
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Sun Jan 3 22:39:20 2016 +0100
+commit 0986799c47b9c7cd77a19a1be9f12bac85c9ed8e
+Merge: d03b5ab efd8b27
+Author: niner <nine@detonation.org>
+Date:   Tue Jan 5 14:02:23 2016 +0100
 
-    Supply relative paths to CompUnit::Repository::Installation::install
+    Merge pull request #285 from pnu/master
     
-    Precompiled modules are checked against their source files on loading to detect
-    outdated precomp files. This is done by recording the source file's id. Thus
-    this id must be stable and survive reinstallation of a module. Otherwise the
-    precompilation file's modification time will be compared to an outdated source
-    file.
-    
-    This also means that the source file's path must be stable. Therefore we have
-    to supply relative paths to the install method, as the absolute paths contain
-    panda's work directory which contains a time stamp.
+    Use prefix when installing deps
+
+commit efd8b2744a918149e80dfc2df7cc4538b13612a3
+Author: Panu Ervamaa <panu.ervamaa@frantic.com>
+Date:   Tue Jan 5 10:15:00 2016 +0200
+
+    Use prefix when installing deps
 --------
 perl6-digest-md5
 commit 41dc67c08d417cf395939a2a546829ff1fe30a81

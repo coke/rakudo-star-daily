@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-v6.c-101-g75c6b9e
+v6.c-113-gc19142c
 NQP
 2015.12-28-g460c042
 modules
@@ -37,28 +37,11 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 Linenoise
-commit dce3a878dc547c8475cf99a03d244fd48ec1c468
-Merge: 01efe54 fac7110
+commit 9b378e467830599356234ffa4aceec9a0185d399
 Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Wed Dec 30 08:13:20 2015 -0600
+Date:   Tue Jan 5 22:50:58 2016 -0600
 
-    Merge pull request #11 from VSChawathe/patch-1
-    
-    Update Makefile.in
-
-commit fac71102b603bd9bd043bb34b3da332d88ce1499
-Author: Vipul S. Chawathe <VSChawathe@users.noreply.github.com>
-Date:   Wed Dec 30 16:34:34 2015 +0530
-
-    Update Makefile.in
-    
-    The extra space before out filename causes
-            link /dll /nologo /LTCG  shell32.lib ws2_32.lib mswsock.lib rpcrt4.lib advapi32.lib psapi.lib iphlpapi.lib /out: resources/lib/liblinenoise.dll linenoise.obj
-    LINK : fatal error LNK1146: no argument specified with option '/out:'
-    NMAKE : fatal error U1077: '"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\BIN\amd64\link.EXE"' : return code '0x47a'
-    Stop.
-    The spawned process exited unsuccessfully (exit code: 2)
-      in method build at C:\Users\Vipul\rakudobrew\moar-nom\install\share\perl6\site\sources\66F7A7F1CCB8B2826996735F727B93F9FEC3FCF0 line 7
+    Update source-url to use HTTPS
 --------
 MODULES.txt
 commit effb7abd8d7915788e1c86aca4cf2d9a52efc789
@@ -166,11 +149,20 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit d4c1e5f303c052f3a7b3312f19bc98edc9bc57d7
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Tue Jan 5 12:10:31 2016 -0500
+commit eb3ba2399a0847d59a97deff7925a8941b05b27b
+Merge: d4cf940 c3bd982
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Wed Jan 6 21:00:31 2016 +0100
 
-    Fix typo (ilmari++)
+    Merge pull request #321 from CIAvash/unicode_entry_emacs_rfc1345_input_method
+    
+    Add another way of entering unicode characters in Emacs
+
+commit c3bd98209ea3d75304d94e48c74a0d4f0659e5fd
+Author: Siavash Askari Nasr <siavash.askari.nasr@gmail.com>
+Date:   Wed Jan 6 23:17:24 2016 +0330
+
+    Add another way of entering unicode chars in Emacs
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -308,20 +300,20 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit 0986799c47b9c7cd77a19a1be9f12bac85c9ed8e
-Merge: d03b5ab efd8b27
+commit 3456bf5c47496ffac9cbacdab2422959d18099b9
+Merge: 0986799 f68c937
 Author: niner <nine@detonation.org>
-Date:   Tue Jan 5 14:02:23 2016 +0100
+Date:   Wed Jan 6 10:00:59 2016 +0100
 
-    Merge pull request #285 from pnu/master
+    Merge pull request #286 from uvtc/patch-1
     
-    Use prefix when installing deps
+    de-hyphenize install note in README
 
-commit efd8b2744a918149e80dfc2df7cc4538b13612a3
-Author: Panu Ervamaa <panu.ervamaa@frantic.com>
-Date:   Tue Jan 5 10:15:00 2016 +0200
+commit f68c9374b481c764da479fb7433f3a5fc16d8e24
+Author: John Gabriele <jgabriele@fastmail.fm>
+Date:   Wed Jan 6 00:38:54 2016 -0500
 
-    Use prefix when installing deps
+    de-hyphenize install note in README
 --------
 perl6-digest-md5
 commit 41dc67c08d417cf395939a2a546829ff1fe30a81

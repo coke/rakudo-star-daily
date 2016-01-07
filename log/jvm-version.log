@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-v6.c-113-gc19142c
+v6.c-138-ged6ec7a
 NQP
 2015.12-28-g460c042
 modules
@@ -149,20 +149,15 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit eb3ba2399a0847d59a97deff7925a8941b05b27b
-Merge: d4cf940 c3bd982
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Wed Jan 6 21:00:31 2016 +0100
+commit 7f0e077b6760042aa59f8d0592a0678d79187e79
+Author: Will "Coke" Coleda <will@coleda.com>
+Date:   Thu Jan 7 15:05:13 2016 -0500
 
-    Merge pull request #321 from CIAvash/unicode_entry_emacs_rfc1345_input_method
+    Revert "Add index flag for EXPORT"
     
-    Add another way of entering unicode characters in Emacs
-
-commit c3bd98209ea3d75304d94e48c74a0d4f0659e5fd
-Author: Siavash Askari Nasr <siavash.askari.nasr@gmail.com>
-Date:   Wed Jan 6 23:17:24 2016 +0330
-
-    Add another way of entering unicode chars in Emacs
+    This reverts commit d9305216e0dd3c1b8bf6a5961946eb9884d6cdfe.
+    
+    This breaks the build.
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

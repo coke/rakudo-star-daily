@@ -1,9 +1,9 @@
 MoarVM
-2015.12-25-g70cf598
+2015.12-31-ge2d6f75
 Rakudo
-v6.c-138-ged6ec7a
+v6.c-148-g2d91f08
 NQP
-2015.12-28-g460c042
+2015.12-32-g93a608c
 modules
 --------
 Bailador
@@ -37,11 +37,11 @@ Date:   Sun Mar 29 15:48:59 2015 +0200
     add provides section for latest panda (S11 support)
 --------
 Linenoise
-commit 9b378e467830599356234ffa4aceec9a0185d399
+commit a6f05b98f35092b2197d99e5c48bfb3fc3ca1a31
 Author: Rob Hoelz <rob@hoelz.ro>
-Date:   Tue Jan 5 22:50:58 2016 -0600
+Date:   Thu Jan 7 22:04:33 2016 -0600
 
-    Update source-url to use HTTPS
+    Convert to use Native::Resources
 --------
 MODULES.txt
 commit effb7abd8d7915788e1c86aca4cf2d9a52efc789
@@ -149,11 +149,20 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 838a43d882532932baced7efedd7f0d3ea7d5411
-Author: Will "Coke" Coleda <will@coleda.com>
-Date:   Thu Jan 7 14:05:40 2016 -0500
+commit b80697ab24b5bc81d8a0e6b08ae30df9226512c5
+Merge: 4a47be5 8660e53
+Author: Wenzel P. P. Peppmeyer <wenzel.peppmeyer@gmx.de>
+Date:   Fri Jan 8 12:55:14 2016 +0100
 
-    remove trailing whitespace
+    Merge pull request #331 from gfldex/master
+    
+    better example for C<temp>
+
+commit 8660e53447cd978f79eddf20a9b197fd14adb05c
+Author: Wenzel P. P. Peppmeyer <wenzel.peppmeyer@gmx.de>
+Date:   Fri Jan 8 12:54:05 2016 +0100
+
+    better example for C<temp>
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -248,30 +257,11 @@ Date:   Fri Dec 11 20:09:16 2015 -0500
     Update docs for %?RESOURCES
 --------
 p6-File-Temp
-commit 2c12fb58df24b082719ba57efb7f978242c65307
-Merge: 8e9b3e7 4561dc1
-Author: Jonathan Scott Duff <perlpilot@pobox.com>
-Date:   Wed Dec 30 15:01:24 2015 -0600
+commit be3c5622d5104cda89cda5607e91e5f7ded7f718
+Author: Jonathan Scott Duff <duff@pobox.com>
+Date:   Thu Jan 7 22:35:05 2016 -0600
 
-    Merge pull request #14 from skids/master
-    
-    Address issue #11 (for files, but not directories)
-
-commit 4561dc1c65696536d42715cfb6ad37c96808f5e3
-Author: skids <bri@abrij.org>
-Date:   Sun Nov 29 04:02:53 2015 -0500
-
-    Address issue #11 (for files, but not directories)
-    
-    Allows files to be deleted when file handles are garbage collected,
-    in addition to during END.  Note that this means we no can longer
-    ensure .close is called before deletion since we cannot hold onto
-    the handle or it will never get collected.  If that is important
-    it can be made an option at the cost of potential leakiness.
-    
-    Since directories do not produce a handle to discard, they will
-    still accrue.  Adding a form of tempdir() that returns an open
-    dirhandle would allow the same treatment.
+    update author with email address
 --------
 p6-Template-Mustache
 commit 223a8fb24732a7869279de3a42b465407644fe8e

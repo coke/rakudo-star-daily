@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-v6.c-178-g42a5832
+v6.c-199-g5ed58f6
 NQP
-2015.12-38-gab366b6
+2015.12-46-gd667c8e
 modules
 --------
 Bailador
@@ -14,11 +14,20 @@ Date:   Mon Dec 28 19:43:44 2015 +0100
     Rollback one change that doesn't actually work
 --------
 DBIish
-commit 44925b4a4f4d530d827cb2c7dac2135ba6893f00
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Thu Dec 31 16:41:08 2015 +0100
+commit 12e2212cb3b2a7a9068e22f7294012e607e9ded7
+Merge: 44925b4 0633711
+Author: Skarsnik <scolinet@gmail.com>
+Date:   Tue Jan 12 18:22:45 2016 +0100
 
-    Typo
+    Merge pull request #48 from Skarsnik/master
+    
+    To have array in a hash we need to bind with :=
+
+commit 0633711aa67b2ab8dd3e0fa5d8e6cca3a58eea3c
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Tue Jan 12 18:03:29 2016 +0100
+
+    To have array in a hash we need to bind with :=
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -149,11 +158,20 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 5b939ec5dfcf9b0529e6be8484eb976aede3f540
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Mon Jan 11 11:07:00 2016 -0500
+commit c4076e859e1ac7daf2fd5d15d14c138ff4f1a64a
+Merge: fcaf3ec c63d94b
+Author: Wenzel P. P. Peppmeyer <wenzel.peppmeyer@gmx.de>
+Date:   Tue Jan 12 10:59:56 2016 +0100
 
-    Explicilty mention ^ and $ anchor to string and not line. mspo++
+    Merge pull request #343 from gfldex/master
+    
+    glosarify thunk
+
+commit c63d94b33ef2bd8abff06ee31422dc4b4b8b14b6
+Author: Wenzel P. P. Peppmeyer <wenzel.peppmeyer@gmx.de>
+Date:   Tue Jan 12 10:58:52 2016 +0100
+
+    glosarify thunk
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -209,20 +227,20 @@ Date:   Sun Nov 29 16:22:09 2015 -0500
     @*INC is dead, long live CURLI
 --------
 json_fast
-commit 8ad8c77954090495856a11ae9da1e38d74128706
-Merge: be150dd c3bc033
+commit b177612b847cd0e34c02dc1a21c2dd5255c58a18
+Merge: 8ad8c77 fb90aaf
 Author: timo <timonator@perpetuum-immobile.de>
-Date:   Wed Dec 9 13:06:41 2015 +0100
+Date:   Tue Jan 12 20:27:13 2016 +0100
 
-    Merge pull request #8 from zoffixznet/fix-freeze
+    Merge pull request #10 from zoffixznet/docs
     
-    Fix freezing issue during tests (zoffix++ lucasb++)
+    Document exported subs  -  thank you, Zoffix++
 
-commit c3bc0331743f112aa08fd73ba32e89a6ece7d194
+commit fb90aafd2b521fc78f6321eabadfc2a98ba9b8b5
 Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Tue Dec 8 19:28:51 2015 -0500
+Date:   Tue Jan 12 14:20:53 2016 -0500
 
-    Fix freezing issue during tests
+    Document exported subs
 --------
 jsonrpc
 commit 2aaf5bf096ca5b40c59d49972ccaf5b8b988665e

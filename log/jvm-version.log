@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.3) (7u91-2.6.3-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.91-b01, mixed mode)
 Rakudo
-v6.c-199-g5ed58f6
+v6.c-208-g007f027
 NQP
-2015.12-46-gd667c8e
+2015.12-55-gabd74b2
 modules
 --------
 Bailador
@@ -14,20 +14,11 @@ Date:   Mon Dec 28 19:43:44 2015 +0100
     Rollback one change that doesn't actually work
 --------
 DBIish
-commit 12e2212cb3b2a7a9068e22f7294012e607e9ded7
-Merge: 44925b4 0633711
-Author: Skarsnik <scolinet@gmail.com>
-Date:   Tue Jan 12 18:22:45 2016 +0100
-
-    Merge pull request #48 from Skarsnik/master
-    
-    To have array in a hash we need to bind with :=
-
-commit 0633711aa67b2ab8dd3e0fa5d8e6cca3a58eea3c
+commit e998b51bc37381587ea7e227ebe32c453e9809e3
 Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Tue Jan 12 18:03:29 2016 +0100
+Date:   Tue Jan 12 20:42:45 2016 +0000
 
-    To have array in a hash we need to bind with :=
+    Return Hash instead of Any when no result left
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -158,20 +149,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit c4076e859e1ac7daf2fd5d15d14c138ff4f1a64a
-Merge: fcaf3ec c63d94b
-Author: Wenzel P. P. Peppmeyer <wenzel.peppmeyer@gmx.de>
-Date:   Tue Jan 12 10:59:56 2016 +0100
+commit b333245f41016d3ed778d7846abf7bfac47bec29
+Author: Jim Davis <revhippie@gmail.com>
+Date:   Wed Jan 13 09:15:48 2016 -0600
 
-    Merge pull request #343 from gfldex/master
-    
-    glosarify thunk
-
-commit c63d94b33ef2bd8abff06ee31422dc4b4b8b14b6
-Author: Wenzel P. P. Peppmeyer <wenzel.peppmeyer@gmx.de>
-Date:   Tue Jan 12 10:58:52 2016 +0100
-
-    glosarify thunk
+    C<...> to C<<...>> for example containing single <
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -211,36 +193,18 @@ Date:   Thu Oct 22 15:41:35 2015 +0200
     See: https://github.com/rakudo/rakudo/commit/5d83db
 --------
 json
-commit c75a04c1b31665b6a569dc954916a96ad7763edc
-Merge: 2484983 ef41b31
-Author: Jonathan Worthington <jnthn@jnthn.net>
-Date:   Sun Nov 29 22:43:27 2015 +0100
+commit 988832977173057496719704a1e7fb01d08d389d
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Jan 12 21:33:09 2016 +0100
 
-    Merge pull request #20 from Mouq/master
-    
-    Fix tests on latest Rakudo
-
-commit ef41b3160abcc41f42755f3c86b57dd0619b25fe
-Author: Mouq <alexmoquin@gmail.com>
-Date:   Sun Nov 29 16:22:09 2015 -0500
-
-    @*INC is dead, long live CURLI
+    Implement RFC7159. Closes #22
 --------
 json_fast
-commit b177612b847cd0e34c02dc1a21c2dd5255c58a18
-Merge: 8ad8c77 fb90aaf
-Author: timo <timonator@perpetuum-immobile.de>
-Date:   Tue Jan 12 20:27:13 2016 +0100
+commit c76eb61d72380fc85e86687a2e2a3f04105baf67
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Wed Jan 13 13:04:52 2016 +0100
 
-    Merge pull request #10 from zoffixznet/docs
-    
-    Document exported subs  -  thank you, Zoffix++
-
-commit fb90aafd2b521fc78f6321eabadfc2a98ba9b8b5
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Tue Jan 12 14:20:53 2016 -0500
-
-    Document exported subs
+    remove leading v in perl version definition in meta info
 --------
 jsonrpc
 commit 2aaf5bf096ca5b40c59d49972ccaf5b8b988665e

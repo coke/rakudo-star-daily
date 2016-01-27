@@ -1,9 +1,9 @@
 MoarVM
 2015.12-43-g6ae4e7f
 Rakudo
-v6.c-220-gcf7706f
+v6.c-221-g85d20f3
 NQP
-2015.12-66-g3656f4d
+2015.12-71-g00f430b
 modules
 --------
 Bailador
@@ -132,15 +132,13 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit f52538b5fae4062da47a499164290248d0c896d4
-Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
-Date:   Tue Jan 26 08:43:29 2016 +0000
+commit 94a777db8908707ca853d1a9cafdef0ff436bfa4
+Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
+Date:   Wed Jan 27 07:21:04 2016 -0500
 
-    document Channel.Supply,  Promise.Supply
+    Remove left-over autofocus code
     
-    Also add link to concurrency doc
-    
-    Closes #366
+    Part of the removal of autofocus search box in PR https://github.com/perl6/doc/pull/370
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -187,11 +185,22 @@ Date:   Tue Jan 12 21:33:09 2016 +0100
     Implement RFC7159. Closes #22
 --------
 json_fast
-commit c76eb61d72380fc85e86687a2e2a3f04105baf67
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Wed Jan 13 13:04:52 2016 +0100
+commit 6d9620956d1606441ad32bb23193d997772c615a
+Merge: c76eb61 acb56ba
+Author: timo <timonator@perpetuum-immobile.de>
+Date:   Tue Jan 26 23:24:45 2016 +0100
 
-    remove leading v in perl version definition in meta info
+    Merge pull request #11 from moritz/meta
+    
+    Remove the leading "v" in the version
+
+commit acb56bafb8a72c585e50a8d5aa0c87d058c3a691
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Tue Jan 26 21:59:38 2016 +0100
+
+    Remove the leading "v" in the version
+    
+    panda complains about it
 --------
 jsonrpc
 commit 2aaf5bf096ca5b40c59d49972ccaf5b8b988665e
@@ -241,11 +250,11 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit 993fcea8115588ba5a26934ccfbe40dbac47384b
+commit 800974ae92166e5ba1616c6b59d838867d6e81ff
 Author: Tobias Leich <email@froggs.de>
-Date:   Tue Jan 26 19:35:42 2016 +0100
+Date:   Tue Jan 26 21:34:24 2016 +0100
 
-    try setting bindir, resolves #290
+    fix setting bin-dir to not include cur spec (#inst)
 --------
 perl6-digest-md5
 commit 41dc67c08d417cf395939a2a546829ff1fe30a81

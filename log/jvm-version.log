@@ -3,7 +3,7 @@ OpenJDK 64-Bit Server VM (build 24.95-b01, mixed mode)
 Rakudo
 v6.c-225-g7801920
 NQP
-2015.12-72-g175e8a7
+2016.01-RC1
 modules
 --------
 Bailador
@@ -239,20 +239,15 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit d83944cd4a45b5942f462b52b1d8b83006090d3c
-Merge: 41888ba 3f35e50
-Author: Tobias Leich <email@froggs.de>
-Date:   Wed Jan 27 21:27:24 2016 +0100
+commit 04a9c3d50ba0f976b81756be6c9e4c6b73296bf6
+Author: Stefan Seifert <nine@detonation.org>
+Date:   Fri Jan 29 14:37:09 2016 +0100
 
-    Merge pull request #291 from ginkoms/master
+    Install up-to-date meta data instead of possibly outdated from ecosystem
     
-    Make requirement fulfiller work with copy/paste
-
-commit 3f35e5006dd8199dd4e8e4b2a1520521ba534deb
-Author: Andreas Louv <aalouv@gmail.com>
-Date:   Wed Jan 27 21:21:47 2016 +0100
-
-    Update README.md
+    We now update the Panda::Project with the meta data found in the fetched
+    project, so we always install the correct meta data instead of possibly
+    outdated data from the ecosystem or panda's cache.
 --------
 perl6-digest-md5
 commit 41dc67c08d417cf395939a2a546829ff1fe30a81

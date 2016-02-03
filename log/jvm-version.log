@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.6.4) (7u95-2.6.4-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.95-b01, mixed mode)
 Rakudo
-v6.c-232-ga5fe347
+v6.c-235-g172a92b
 NQP
 2016.01
 modules
@@ -44,11 +44,11 @@ Date:   Thu Jan 7 22:04:33 2016 -0600
     Convert to use Native::Resources
 --------
 MODULES.txt
-commit 27b768224e2249044bb05613b625a6b6b8d35736
-Author: Tobias Leich <email@froggs.de>
-Date:   Wed Jan 27 21:22:50 2016 +0100
+commit ba92e0b4adfa93284bf179186075a5f4b71616f4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Feb 3 13:29:05 2016 +0000
 
-    updated submodules
+    yet another year bump
 --------
 PSGI
 commit 624b70f4abac85d743870fc2bbab5da8fcf41f8b
@@ -123,11 +123,32 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit fc4ec54cb8ae5ec406359bd670f73e10cfac5acc
-Author: raiph <raiph.mellor@gmail.com>
-Date:   Tue Feb 2 09:35:23 2016 -0500
+commit bdf35b15927c38b5737fe2fddd538db5ea5c3c77
+Merge: 7f4a641 5952ee5
+Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
+Date:   Wed Feb 3 14:43:55 2016 -0500
 
-    Typos and fix a link
+    Merge pull request #378 from pdl/pr-index-more-operators
+    
+    Index more operators
+
+commit 5952ee517e7b0c5d87c943a7e2bb909e555cd927
+Author: Daniel Perrett <perrettdl@googlemail.com>
+Date:   Mon Feb 1 17:51:25 2016 +0000
+
+    Add index entries for postfix and prefix call
+
+commit 4caa0dcfcc19a7a04cfd8dcaa6243cc319abb271
+Author: Daniel Perrett <perrettdl@googlemail.com>
+Date:   Mon Feb 1 17:35:28 2016 +0000
+
+    Trim trailing spaces in operators.pod
+
+commit 0f8387b49d64fb3a5312afab593ad287c884ab9d
+Author: Daniel Perrett <perrettdl@googlemail.com>
+Date:   Mon Feb 1 08:37:38 2016 +0000
+
+    Added index terms for doc/Langualge/setbagmix.pod
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -239,15 +260,11 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit 04a9c3d50ba0f976b81756be6c9e4c6b73296bf6
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Fri Jan 29 14:37:09 2016 +0100
+commit 9987e29d954af33d8375582044678c7b59ae7e37
+Author: Tobias Leich <email@froggs.de>
+Date:   Wed Feb 3 20:41:54 2016 +0100
 
-    Install up-to-date meta data instead of possibly outdated from ecosystem
-    
-    We now update the Panda::Project with the meta data found in the fetched
-    project, so we always install the correct meta data instead of possibly
-    outdated data from the ecosystem or panda's cache.
+    remove leading v in version of JSON::Fast
 --------
 perl6-digest-md5
 commit 41dc67c08d417cf395939a2a546829ff1fe30a81
@@ -379,15 +396,20 @@ Date:   Fri Nov 6 03:02:13 2015 -0500
     .map returs a Seq, use hyper op instead.
 --------
 uri
-commit 089c2340abe45c2ce8c3633d36157bfb4971432a
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Thu Dec 24 09:35:00 2015 +0100
+commit 2e78b6c1ccf5795ab95b883244a7fb4dc9e12629
+Merge: 089c234 b4c8c40
+Author: Ronald Schmidt <ronaldxs@software-path.com>
+Date:   Tue Feb 2 20:29:42 2016 -0500
 
-    .fmt has always been better than .unpack here.
+    Merge pull request #29 from ronaldxs/master
     
-    also gets rid of use experimental in a common module.
-    
-    so yay!
+    fix broken pod commands
+
+commit b4c8c409aa9ff4ec4feab04c7764039dd57732c2
+Author: Ronald Schmidt <ronaldxs@software-path.com>
+Date:   Tue Feb 2 20:16:22 2016 -0500
+
+    fix broken pod commands
 --------
 xml-writer
 commit c230464a2cd5ed1c19fcba9acd496d72d227fd1f

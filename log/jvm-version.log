@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.4) (7u95-2.6.4-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.95-b01, mixed mode)
 Rakudo
-v6.c-235-g172a92b
+v6.c-241-gf99bdbe
 NQP
-2016.01
+2016.01-1-gbc5b1df
 modules
 --------
 Bailador
@@ -44,11 +44,11 @@ Date:   Thu Jan 7 22:04:33 2016 -0600
     Convert to use Native::Resources
 --------
 MODULES.txt
-commit ba92e0b4adfa93284bf179186075a5f4b71616f4
-Author: Steve Mynott <steve.mynott@gmail.com>
-Date:   Wed Feb 3 13:29:05 2016 +0000
+commit ec0dea1e4df9c4192d50cc5d747c8a3ceb451bc6
+Author: Tobias Leich <email@froggs.de>
+Date:   Wed Feb 3 23:52:47 2016 +0100
 
-    yet another year bump
+    choose to set PATH in wizard on windows
 --------
 PSGI
 commit 624b70f4abac85d743870fc2bbab5da8fcf41f8b
@@ -65,11 +65,20 @@ Date:   Thu Dec 24 02:55:01 2015 +0100
     Adjust to pack being made experimental.
 --------
 Pod-To-HTML
-commit 6af3e408138551a42b12db4aaf29a0d5e19acd1e
-Author: Moritz Lenz <moritz@faui2k3.org>
-Date:   Mon Jan 25 22:28:09 2016 +0100
+commit fcf7d00edb03fbdf12d6d28ab13780ff41ab1a66
+Merge: 6af3e40 7b9f81b
+Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
+Date:   Thu Feb 4 13:04:34 2016 -0500
 
-    Use protocol-relative URL to .css file, autarch++
+    Merge pull request #12 from gfldex/master
+    
+    Headings can contain "
+
+commit 7b9f81b8d6b98e6550e347c1e7d724da2f5b2b70
+Author: Wenzel P. P. Peppmeyer <wenzel.peppmeyer@gmx.de>
+Date:   Thu Feb 4 18:51:45 2016 +0100
+
+    Headings can contain "
 --------
 Template-Mojo
 commit 351fee475a36ce922745dc203980c857db0d1304
@@ -123,32 +132,27 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit bdf35b15927c38b5737fe2fddd538db5ea5c3c77
-Merge: 7f4a641 5952ee5
+commit 1c0c5062399c911e50744bc26b7e4dc72bbdd0bd
+Merge: c1683e9 2ba2245
+Author: Wenzel P. P. Peppmeyer <wenzel.peppmeyer@gmx.de>
+Date:   Thu Feb 4 18:11:16 2016 +0100
+
+    Merge branch 'master' of https://github.com/perl6/doc
+
+commit 2ba22455b806114cb73bb045d886bfa8bd1f2d4e
+Merge: 2e6962b 7498cae
 Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
-Date:   Wed Feb 3 14:43:55 2016 -0500
+Date:   Thu Feb 4 11:17:33 2016 -0500
 
-    Merge pull request #378 from pdl/pr-index-more-operators
+    Merge pull request #379 from c0nspiracy/patch-1
     
-    Index more operators
+    s/than must/that must/
 
-commit 5952ee517e7b0c5d87c943a7e2bb909e555cd927
-Author: Daniel Perrett <perrettdl@googlemail.com>
-Date:   Mon Feb 1 17:51:25 2016 +0000
+commit 7498cae937dec0aca34fd9eb0d8428f098467c32
+Author: Robert Newbould <robert.newbould@gmail.com>
+Date:   Thu Feb 4 16:14:56 2016 +0000
 
-    Add index entries for postfix and prefix call
-
-commit 4caa0dcfcc19a7a04cfd8dcaa6243cc319abb271
-Author: Daniel Perrett <perrettdl@googlemail.com>
-Date:   Mon Feb 1 17:35:28 2016 +0000
-
-    Trim trailing spaces in operators.pod
-
-commit 0f8387b49d64fb3a5312afab593ad287c884ab9d
-Author: Daniel Perrett <perrettdl@googlemail.com>
-Date:   Mon Feb 1 08:37:38 2016 +0000
-
-    Added index terms for doc/Langualge/setbagmix.pod
+    s/than must/that must/
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

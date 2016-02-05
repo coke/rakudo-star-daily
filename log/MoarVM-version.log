@@ -1,9 +1,9 @@
 MoarVM
-2016.01-7-ge6b527d
+2016.01-17-g4671fae
 Rakudo
-v6.c-241-gf99bdbe
+v6.c-247-g15ec392
 NQP
-2016.01-1-gbc5b1df
+2016.01-14-g459b36d
 modules
 --------
 Bailador
@@ -44,11 +44,22 @@ Date:   Thu Jan 7 22:04:33 2016 -0600
     Convert to use Native::Resources
 --------
 MODULES.txt
-commit ec0dea1e4df9c4192d50cc5d747c8a3ceb451bc6
-Author: Tobias Leich <email@froggs.de>
-Date:   Wed Feb 3 23:52:47 2016 +0100
+commit efd255b0bd5f023b4b55bfde5b7dcf26cd5a6e2a
+Merge: ec0dea1 2fed8a4
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Thu Feb 4 21:49:46 2016 +0000
 
-    choose to set PATH in wizard on windows
+    Merge pull request #64 from hoelzro/master
+    
+    Add LibraryMake and Linenoise to MODULES.txt
+
+commit 2fed8a4207d241c24bae2dd67b1ff4b3281e5124
+Author: Rob Hoelz <rob@hoelz.ro>
+Date:   Thu Feb 4 08:40:31 2016 -0600
+
+    Add LibraryMake and Linenoise to MODULES.txt
+    
+    Otherwise, they don't get built and installed
 --------
 PSGI
 commit 624b70f4abac85d743870fc2bbab5da8fcf41f8b
@@ -132,27 +143,22 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 1c0c5062399c911e50744bc26b7e4dc72bbdd0bd
-Merge: c1683e9 2ba2245
-Author: Wenzel P. P. Peppmeyer <wenzel.peppmeyer@gmx.de>
-Date:   Thu Feb 4 18:11:16 2016 +0100
+commit 7b80938dd02bf1eea67084231063642d3422438c
+Merge: a30c00d 7195760
+Author: Salvador Ortiz <sog@msg.com.mx>
+Date:   Fri Feb 5 04:52:41 2016 -0600
 
-    Merge branch 'master' of https://github.com/perl6/doc
-
-commit 2ba22455b806114cb73bb045d886bfa8bd1f2d4e
-Merge: 2e6962b 7498cae
-Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
-Date:   Thu Feb 4 11:17:33 2016 -0500
-
-    Merge pull request #379 from c0nspiracy/patch-1
+    Merge pull request #384 from perl6/salortiz-remove-bat
     
-    s/than must/that must/
+    Delete p6doc.bat, unneded with CURLI
 
-commit 7498cae937dec0aca34fd9eb0d8428f098467c32
-Author: Robert Newbould <robert.newbould@gmail.com>
-Date:   Thu Feb 4 16:14:56 2016 +0000
+commit 7195760740d8f7783b328d0dfd69e3438bafa83b
+Author: Salvador Ortiz <sog@msg.com.mx>
+Date:   Fri Feb 5 04:17:51 2016 -0600
 
-    s/than must/that must/
+    Delete p6doc.bat, unneded with CURLI
+    
+    In windows, at install time CURLI creates a bat file when needed, and this file results in an non-functional perl6 wrapper created in ..\\site\\bin.
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

@@ -1,9 +1,9 @@
 MoarVM
-2016.01-17-g4671fae
+2016.01-23-gdb9c558
 Rakudo
-v6.c-247-g15ec392
+v6.c-260-g463b6c8
 NQP
-2016.01-14-g459b36d
+2016.01-16-gf77aa4c
 modules
 --------
 Bailador
@@ -143,22 +143,12 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 7b80938dd02bf1eea67084231063642d3422438c
-Merge: a30c00d 7195760
-Author: Salvador Ortiz <sog@msg.com.mx>
-Date:   Fri Feb 5 04:52:41 2016 -0600
+commit f306dfc3010876b00c95d19238fc2f0af347eb0c
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Sat Feb 6 17:22:07 2016 +0000
 
-    Merge pull request #384 from perl6/salortiz-remove-bat
-    
-    Delete p6doc.bat, unneded with CURLI
-
-commit 7195760740d8f7783b328d0dfd69e3438bafa83b
-Author: Salvador Ortiz <sog@msg.com.mx>
-Date:   Fri Feb 5 04:17:51 2016 -0600
-
-    Delete p6doc.bat, unneded with CURLI
-    
-    In windows, at install time CURLI creates a bat file when needed, and this file results in an non-functional perl6 wrapper created in ..\\site\\bin.
+    Use CompUnit::DependencySpecification to find pod file niner++
+    Specify -IFakeDir to prevent 'shell perl6..." blocking on a precomp write lock ugexe++
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

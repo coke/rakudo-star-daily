@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install" --backends=moar && make
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2016.01-38-gac4325c / MoarVM 2016.01-29-g3a38749).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2016.01-42-g2a21a59 / MoarVM 2016.01-31-gf2ae11b).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -49,12 +49,12 @@ gcc  -L/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/instal
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm gen/moar/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  51.917
+Stage parse      :  54.755
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   9.461
-Stage mast       :  16.602
-Stage mbc        :   0.168
+Stage optimize   :   9.060
+Stage mast       :  16.489
+Stage mbc        :   0.171
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" perl6.moarvm --target=mbc --ll-exception --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e rm_f perl6-m
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" .
@@ -123,7 +123,7 @@ cd modules/panda && /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star
 ==> Testing File::Find
 t/01-file-find.t .. ok
 All tests successful.
-Files=1, Tests=11,  3 wallclock secs ( 0.03 usr  0.00 sys +  2.90 cusr  0.16 csys =  3.09 CPU)
+Files=1, Tests=11,  3 wallclock secs ( 0.02 usr  0.00 sys +  3.22 cusr  0.09 csys =  3.33 CPU)
 Result: PASS
 ==> Installing File::Find
 ==> Successfully installed File::Find
@@ -132,7 +132,7 @@ Result: PASS
 ==> Testing Shell::Command
 t/02-shell-command.t .. ok
 All tests successful.
-Files=1, Tests=12,  4 wallclock secs ( 0.03 usr  0.00 sys +  3.44 cusr  0.15 csys =  3.62 CPU)
+Files=1, Tests=12,  3 wallclock secs ( 0.02 usr  0.00 sys +  3.50 cusr  0.17 csys =  3.69 CPU)
 Result: PASS
 ==> Installing Shell::Command
 ==> Successfully installed Shell::Command
@@ -145,7 +145,7 @@ t/02-structure.t .. ok
 t/03-unicode.t .... ok
 t/04-roundtrip.t .. ok
 All tests successful.
-Files=4, Tests=120,  5 wallclock secs ( 0.04 usr  0.01 sys +  4.88 cusr  0.23 csys =  5.16 CPU)
+Files=4, Tests=120,  4 wallclock secs ( 0.05 usr  0.00 sys +  4.48 cusr  0.23 csys =  4.76 CPU)
 Result: PASS
 ==> Installing JSON::Fast
 ==> Successfully installed JSON::Fast
@@ -155,17 +155,17 @@ Result: PASS
 t/builder.t .... ok
 t/common.t ..... ok
 t/ecosystem.t .. ok
-Copying lib/bar.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1455480375_4/removeme/lib/bar.pod
-Copying lib/foo.jar to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1455480375_4/removeme/lib/foo.jar
-Copying lib/baz.js to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1455480375_4/removeme/lib/baz.js
-Copying lib/foo.pm to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1455480375_4/removeme/lib/foo.pm
-Copying lib/foo.pir to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1455480375_4/removeme/lib/foo.pir
-Copying lib/foo.moarvm to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1455480375_4/removeme/lib/foo.moarvm
-Copying bin/bar to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1455480375_4/removeme/bin/bar
+Copying lib/bar.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1455566803_4/removeme/lib/bar.pod
+Copying lib/foo.jar to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1455566803_4/removeme/lib/foo.jar
+Copying lib/baz.js to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1455566803_4/removeme/lib/baz.js
+Copying lib/foo.pm to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1455566803_4/removeme/lib/foo.pm
+Copying lib/foo.pir to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1455566803_4/removeme/lib/foo.pir
+Copying lib/foo.moarvm to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1455566803_4/removeme/lib/foo.moarvm
+Copying bin/bar to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1455566803_4/removeme/bin/bar
 t/installer.t .. ok
 t/tester.t ..... ok
 All tests successful.
-Files=5, Tests=28, 16 wallclock secs ( 0.04 usr  0.01 sys + 14.49 cusr  0.97 csys = 15.51 CPU)
+Files=5, Tests=28, 16 wallclock secs ( 0.04 usr  0.00 sys + 14.60 cusr  0.88 csys = 15.52 CPU)
 Result: PASS
 ==> Installing panda
 ==> Successfully installed panda
@@ -178,7 +178,7 @@ Result: PASS
 t/escaping.t ... ok
 t/structure.t .. ok
 All tests successful.
-Files=2, Tests=11,  3 wallclock secs ( 0.02 usr  0.01 sys +  2.96 cusr  0.15 csys =  3.14 CPU)
+Files=2, Tests=11,  3 wallclock secs ( 0.02 usr  0.00 sys +  2.94 cusr  0.14 csys =  3.10 CPU)
 Result: PASS
 ==> Installing XML::Writer
 ==> Successfully installed XML::Writer
@@ -188,7 +188,7 @@ Result: PASS
 ==> Testing SVG
 t/basics.t .. ok
 All tests successful.
-Files=1, Tests=3,  3 wallclock secs ( 0.02 usr  0.00 sys +  2.98 cusr  0.20 csys =  3.20 CPU)
+Files=1, Tests=3,  3 wallclock secs ( 0.02 usr  0.01 sys +  2.94 cusr  0.19 csys =  3.16 CPU)
 Result: PASS
 ==> Installing SVG
 ==> Successfully installed SVG
@@ -199,7 +199,7 @@ Result: PASS
 t/series.t .. ok
 t/ticks.t ... ok
 All tests successful.
-Files=2, Tests=10,  6 wallclock secs ( 0.03 usr  0.00 sys +  4.97 cusr  0.26 csys =  5.26 CPU)
+Files=2, Tests=10,  5 wallclock secs ( 0.02 usr  0.00 sys +  4.91 cusr  0.26 csys =  5.19 CPU)
 Result: PASS
 ==> Installing SVG::Plot
 ==> Successfully installed SVG::Plot
@@ -209,7 +209,7 @@ Result: PASS
 ==> Testing Terminal::ANSIColor
 t/00-load.t .. ok
 All tests successful.
-Files=1, Tests=1,  3 wallclock secs ( 0.02 usr  0.01 sys +  2.38 cusr  0.14 csys =  2.55 CPU)
+Files=1, Tests=1,  2 wallclock secs ( 0.02 usr  0.01 sys +  2.36 cusr  0.14 csys =  2.53 CPU)
 Result: PASS
 ==> Installing Terminal::ANSIColor
 ==> Successfully installed Terminal::ANSIColor
@@ -221,7 +221,7 @@ t/returning.t .. ok
 t/synopsis.t ... ok
 t/with.t ....... ok
 All tests successful.
-Files=3, Tests=13,  3 wallclock secs ( 0.02 usr  0.00 sys +  3.22 cusr  0.25 csys =  3.49 CPU)
+Files=3, Tests=13,  4 wallclock secs ( 0.03 usr  0.01 sys +  3.36 cusr  0.20 csys =  3.60 CPU)
 Result: PASS
 ==> Installing Test::Mock
 ==> Successfully installed Test::Mock
@@ -231,7 +231,7 @@ Result: PASS
 ==> Testing Grammar::Profiler::Simple
 t/csv.t .. ok
 All tests successful.
-Files=1, Tests=15,  3 wallclock secs ( 0.03 usr  0.00 sys +  2.41 cusr  0.12 csys =  2.56 CPU)
+Files=1, Tests=15,  3 wallclock secs ( 0.02 usr  0.00 sys +  2.38 cusr  0.11 csys =  2.51 CPU)
 Result: PASS
 ==> Installing Grammar::Profiler::Simple
 ==> Successfully installed Grammar::Profiler::Simple
@@ -242,7 +242,7 @@ Result: PASS
 t/debugger.t .. ok
 t/tracer.t .... ok
 All tests successful.
-Files=2, Tests=2,  5 wallclock secs ( 0.02 usr  0.01 sys +  4.51 cusr  0.24 csys =  4.78 CPU)
+Files=2, Tests=2,  5 wallclock secs ( 0.02 usr  0.01 sys +  4.47 cusr  0.26 csys =  4.76 CPU)
 Result: PASS
 ==> Installing Grammar::Debugger
 ==> Successfully installed Grammar::Debugger
@@ -255,7 +255,7 @@ t/binary-and-long-line.t .. ok
 t/oneline.t ............... ok
 t/rfc4648-test-vector.t ... ok
 All tests successful.
-Files=4, Tests=47,  6 wallclock secs ( 0.03 usr  0.00 sys +  5.06 cusr  0.39 csys =  5.48 CPU)
+Files=4, Tests=47,  6 wallclock secs ( 0.03 usr  0.00 sys +  5.16 cusr  0.38 csys =  5.57 CPU)
 Result: PASS
 ==> Installing MIME::Base64
 ==> Successfully installed MIME::Base64
@@ -268,7 +268,7 @@ t/escape.t ............... ok
 t/november-urlencoded.t .. ok
 t/rfc-3986-examples.t .... ok
 All tests successful.
-Files=4, Tests=93,  8 wallclock secs ( 0.05 usr  0.00 sys +  7.95 cusr  0.50 csys =  8.50 CPU)
+Files=4, Tests=93,  9 wallclock secs ( 0.04 usr  0.01 sys +  7.98 cusr  0.43 csys =  8.46 CPU)
 Result: PASS
 ==> Installing URI
 ==> Successfully installed URI
@@ -290,7 +290,7 @@ t/parse-url.t ................... ok
 t/socket-sanity.t ............... ok
 t/stringify-headers.t ........... ok
 All tests successful.
-Files=13, Tests=56, 23 wallclock secs ( 0.06 usr  0.01 sys + 18.70 cusr  1.07 csys = 19.84 CPU)
+Files=13, Tests=56, 23 wallclock secs ( 0.06 usr  0.01 sys + 18.03 cusr  1.04 csys = 19.14 CPU)
 Result: PASS
 ==> Installing LWP::Simple
 ==> Successfully installed LWP::Simple
@@ -304,7 +304,7 @@ t/03-unicode.t .... ok
 t/04-roundtrip.t .. ok
 t/05-utf16.t ...... ok
 All tests successful.
-Files=5, Tests=122,  6 wallclock secs ( 0.06 usr  0.00 sys +  5.67 cusr  0.34 csys =  6.07 CPU)
+Files=5, Tests=122,  6 wallclock secs ( 0.04 usr  0.02 sys +  5.86 cusr  0.37 csys =  6.29 CPU)
 Result: PASS
 ==> Installing JSON::Tiny
 ==> Successfully installed JSON::Tiny
@@ -316,7 +316,7 @@ t/0-load-module.t .. ok
 t/1-readme.t ....... ok
 t/perl5-compat.t ... ok
 All tests successful.
-Files=3, Tests=28,  6 wallclock secs ( 0.02 usr  0.01 sys +  5.77 cusr  0.24 csys =  6.04 CPU)
+Files=3, Tests=28,  7 wallclock secs ( 0.03 usr  0.00 sys +  5.91 cusr  0.23 csys =  6.17 CPU)
 Result: PASS
 ==> Installing Digest::MD5
 ==> Successfully installed Digest::MD5
@@ -327,7 +327,7 @@ Result: PASS
 t/01-basic.t ..... ok
 t/02-is-tests.t .. ok
 All tests successful.
-Files=2, Tests=46,  2 wallclock secs ( 0.03 usr  0.00 sys +  2.69 cusr  0.15 csys =  2.87 CPU)
+Files=2, Tests=46,  2 wallclock secs ( 0.02 usr  0.02 sys +  2.67 cusr  0.16 csys =  2.87 CPU)
 Result: PASS
 ==> Installing HTTP::Status
 ==> Successfully installed HTTP::Status
@@ -345,7 +345,7 @@ t/50-readme.t ...... ok
 t/91-specs.t ....... ok
 t/92-specs-file.t .. ok
 All tests successful.
-Files=8, Tests=27,  9 wallclock secs ( 0.03 usr  0.01 sys +  8.39 cusr  0.43 csys =  8.86 CPU)
+Files=8, Tests=27,  9 wallclock secs ( 0.04 usr  0.01 sys +  8.78 cusr  0.34 csys =  9.17 CPU)
 Result: PASS
 ==> Installing Template::Mustache
 ==> Successfully installed Template::Mustache
@@ -356,7 +356,7 @@ Result: PASS
 t/encode-psgi-response.t .. ok
 t/populate-psgi-env.t ..... ok
 All tests successful.
-Files=2, Tests=28,  4 wallclock secs ( 0.03 usr  0.00 sys +  3.50 cusr  0.24 csys =  3.77 CPU)
+Files=2, Tests=28,  4 wallclock secs ( 0.03 usr  0.00 sys +  3.69 cusr  0.17 csys =  3.89 CPU)
 Result: PASS
 ==> Installing PSGI
 ==> Successfully installed PSGI
@@ -366,7 +366,7 @@ Result: PASS
 ==> Testing HTTP::Easy
 t/01-load.t .. ok
 All tests successful.
-Files=1, Tests=2,  5 wallclock secs ( 0.03 usr  0.00 sys +  4.65 cusr  0.32 csys =  5.00 CPU)
+Files=1, Tests=2,  5 wallclock secs ( 0.02 usr  0.00 sys +  4.60 cusr  0.30 csys =  4.92 CPU)
 Result: PASS
 ==> Installing HTTP::Easy
 ==> Successfully installed HTTP::Easy
@@ -375,16 +375,16 @@ Result: PASS
 Please remove leading 'v' from perl version in Template::Mojo's meta info.
 ==> Building Template::Mojo
 ==> Testing Template::Mojo
-WARNINGS for /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1455480622_1/EVAL_7:
+WARNINGS for /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1455567047_1/EVAL_7:
 Useless use of constant string "blarg" in sink context (line 1)
-WARNINGS for /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1455480622_1/EVAL_13:
+WARNINGS for /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1455567047_1/EVAL_13:
 Useless use of constant integer 0 in sink context (line 1)
 t/00-basic.t ..... ok
 t/01-template.t .. ok
 t/02-complex.t ... ok
 t/03-capture.t ... ok
 All tests successful.
-Files=4, Tests=22,  5 wallclock secs ( 0.03 usr  0.02 sys +  4.40 cusr  0.20 csys =  4.65 CPU)
+Files=4, Tests=22,  5 wallclock secs ( 0.03 usr  0.01 sys +  4.48 cusr  0.26 csys =  4.78 CPU)
 Result: PASS
 ==> Installing Template::Mojo
 ==> Successfully installed Template::Mojo
@@ -400,7 +400,7 @@ t/05-post-content.t ........ ok
 t/06-cookies.t ............. ok
 t/07-errors.t .............. ok
 All tests successful.
-Files=7, Tests=551, 30 wallclock secs ( 0.13 usr  0.02 sys + 28.35 cusr  1.33 csys = 29.83 CPU)
+Files=7, Tests=551, 29 wallclock secs ( 0.16 usr  0.01 sys + 26.97 cusr  1.37 csys = 28.51 CPU)
 Result: PASS
 ==> Installing Bailador
 ==> Successfully installed Bailador
@@ -410,23 +410,120 @@ Result: PASS
 ==> Testing DBIish
 # Using PGDATABASE: (none)
 t/01-connectconfig-pg.t ... ok
-t/05-mock.t ............... ok
-# Connect failed with error Cannot locate native library 'libmysqlclient.so': libmysqlclient.so: cannot open shared object file: No such file or directory
-t/10-mysql.t .............. ok
-# Connect failed with error Cannot locate native library 'libmysqlclient.so': libmysqlclient.so: cannot open shared object file: No such file or directory
-t/25-mysql-common.t ....... ok
-t/30-pg.t ................. ok
-# Connect failed with error FATAL:  role "coke" does not exist
+Failed
+  in method connect at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1455567103_1/lib/DBIish.pm6 line 7
+  in block <unit> at t/05-mock.t line 6
 
-t/35-pg-common.t .......... ok
-# Connect failed with error Cannot locate native library 'libsqlite3.so': libsqlite3.so: cannot open shared object file: No such file or directory
-t/40-sqlite-common.t ...... ok
+Actually thrown at:
+  in any  at gen/moar/m-Metamodel.nqp line 3041
+  in method connect at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1455567103_1/lib/DBIish.pm6 line 9
+  in block <unit> at t/05-mock.t line 6
+
+t/05-mock.t ............... 
+Dubious, test returned 255 (wstat 65280, 0xff00)
+Failed 9/9 subtests 
+
+# Failed test 'Install driver'
+# at t/10-mysql.t line 66
+Failed
+  in block <unit> at t/10-mysql.t line 65
+
+Actually thrown at:
+  in any  at gen/moar/m-Metamodel.nqp line 3041
+  in block <unit> at t/10-mysql.t line 68
+
+# Looks like you planned 87 tests, but ran 1
+# Looks like you failed 1 test of 1
+t/10-mysql.t .............. 
+Dubious, test returned 1 (wstat 256, 0x100)
+Failed 87/87 subtests 
+
+# Failed test 'Install driver'
+# at EVAL_0 line 28
+Failed
+  in block <unit> at EVAL_0 line 27
+  in block <unit> at t/25-mysql-common.t line 17
+
+Actually thrown at:
+  in any  at gen/moar/m-Metamodel.nqp line 3041
+  in block <unit> at EVAL_0 line 30
+  in block <unit> at t/25-mysql-common.t line 17
+
+# Looks like you planned 58 tests, but ran 1
+# Looks like you failed 1 test of 1
+t/25-mysql-common.t ....... 
+Dubious, test returned 1 (wstat 256, 0x100)
+Failed 58/58 subtests 
+t/30-pg.t ................. ok
+
+# Failed test 'Install driver'
+# at EVAL_0 line 28
+Failed
+  in block <unit> at EVAL_0 line 27
+  in block <unit> at t/35-pg-common.t line 25
+
+Actually thrown at:
+  in any  at gen/moar/m-Metamodel.nqp line 3041
+  in block <unit> at EVAL_0 line 30
+  in block <unit> at t/35-pg-common.t line 25
+
+# Looks like you planned 58 tests, but ran 1
+# Looks like you failed 1 test of 1
+t/35-pg-common.t .......... 
+Dubious, test returned 1 (wstat 256, 0x100)
+Failed 58/58 subtests 
+
+# Failed test 'Install driver'
+# at EVAL_0 line 28
+Failed
+  in block <unit> at EVAL_0 line 27
+  in block <unit> at t/40-sqlite-common.t line 12
+
+Actually thrown at:
+  in any  at gen/moar/m-Metamodel.nqp line 3041
+  in block <unit> at EVAL_0 line 30
+  in block <unit> at t/40-sqlite-common.t line 12
+
+# Looks like you planned 58 tests, but ran 1
+# Looks like you failed 1 test of 1
+t/40-sqlite-common.t ...... 
+Dubious, test returned 1 (wstat 256, 0x100)
+Failed 58/58 subtests 
 t/41-sqlite-exec-error.t .. ok
-All tests successful.
-Files=8, Tests=290, 48 wallclock secs ( 0.08 usr  0.01 sys + 46.19 cusr  1.87 csys = 48.15 CPU)
-Result: PASS
-==> Installing DBIish
-==> Successfully installed DBIish
+
+Test Summary Report
+-------------------
+t/05-mock.t             (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 9 tests but ran 0.
+t/10-mysql.t            (Wstat: 256 Tests: 1 Failed: 1)
+  Failed test:  1
+  Non-zero exit status: 1
+  Parse errors: Bad plan.  You planned 87 tests but ran 1.
+t/25-mysql-common.t     (Wstat: 256 Tests: 1 Failed: 1)
+  Failed test:  1
+  Non-zero exit status: 1
+  Parse errors: Bad plan.  You planned 58 tests but ran 1.
+t/35-pg-common.t        (Wstat: 256 Tests: 1 Failed: 1)
+  Failed test:  1
+  Non-zero exit status: 1
+  Parse errors: Bad plan.  You planned 58 tests but ran 1.
+t/40-sqlite-common.t    (Wstat: 256 Tests: 1 Failed: 1)
+  Failed test:  1
+  Non-zero exit status: 1
+  Parse errors: Bad plan.  You planned 58 tests but ran 1.
+Files=8, Tests=24, 48 wallclock secs ( 0.05 usr  0.01 sys + 46.18 cusr  1.78 csys = 48.02 CPU)
+Result: FAIL
+The spawned process exited unsuccessfully (exit code: 1)
+  in sub run-and-gather-output at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/sources/DAD29535955E677E319FDF0ACA9A926766180A75 line 85
+  in block  at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/sources/1DCE07CA986A927E98F9EEDC8B5DF87C995E3619 line 22
+  in sub indir at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/sources/DAD29535955E677E319FDF0ACA9A926766180A75 line 20
+  in method test at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/sources/1DCE07CA986A927E98F9EEDC8B5DF87C995E3619 line 5
+  in method install at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/sources/5538417AF9CC9DF68B79F613F1F4897C2AEC2F05 line 156
+  in method resolve at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/sources/5538417AF9CC9DF68B79F613F1F4897C2AEC2F05 line 234
+  in sub MAIN at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/resources/76CD539C815A33F2891D2EF3D6D96B1081567AD1 line 18
+  in block <unit> at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/resources/76CD539C815A33F2891D2EF3D6D96B1081567AD1 line 150
+
 ==> Installing JSON::RPC from a local directory 'modules/jsonrpc'
 ==> Fetching JSON::RPC
 ==> Building JSON::RPC
@@ -434,7 +531,7 @@ Result: PASS
 t/client.t .. ok
 t/server.t .. ok
 All tests successful.
-Files=2, Tests=68, 25 wallclock secs ( 0.04 usr  0.00 sys + 23.62 cusr  0.99 csys = 24.65 CPU)
+Files=2, Tests=68, 24 wallclock secs ( 0.03 usr  0.01 sys + 22.61 cusr  1.15 csys = 23.80 CPU)
 Result: PASS
 ==> Installing JSON::RPC
 ==> Successfully installed JSON::RPC
@@ -448,7 +545,7 @@ t/03-comment.t ........... ok
 t/04-lists.t ............. ok
 t/05-zero-width-index.t .. ok
 All tests successful.
-Files=5, Tests=10,  8 wallclock secs ( 0.04 usr  0.00 sys +  7.77 cusr  0.44 csys =  8.25 CPU)
+Files=5, Tests=10,  8 wallclock secs ( 0.03 usr  0.00 sys +  7.60 cusr  0.35 csys =  7.98 CPU)
 Result: PASS
 ==> Installing Pod::To::HTML
 ==> Successfully installed Pod::To::HTML
@@ -458,7 +555,7 @@ Result: PASS
 ==> Testing File::Directory::Tree
 t/basic.t .. ok
 All tests successful.
-Files=1, Tests=7,  3 wallclock secs ( 0.02 usr  0.00 sys +  2.44 cusr  0.13 csys =  2.59 CPU)
+Files=1, Tests=7,  2 wallclock secs ( 0.02 usr  0.00 sys +  2.25 cusr  0.14 csys =  2.41 CPU)
 Result: PASS
 ==> Installing File::Directory::Tree
 ==> Successfully installed File::Directory::Tree
@@ -469,7 +566,7 @@ Result: PASS
 t/stress_gc.t .. ok
 t/tempfile.t ... ok
 All tests successful.
-Files=2, Tests=16,  6 wallclock secs ( 0.02 usr  0.01 sys +  5.67 cusr  0.28 csys =  5.98 CPU)
+Files=2, Tests=16,  5 wallclock secs ( 0.02 usr  0.01 sys +  5.39 cusr  0.23 csys =  5.65 CPU)
 Result: PASS
 ==> Installing File::Temp
 ==> Successfully installed File::Temp
@@ -477,281 +574,11 @@ Result: PASS
 panda provides the requested Panda
 ==> Fetching p6doc
 ==> Building p6doc
-Copying doc/Type/BagHash.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/BagHash.pod
-Copying doc/Type/Bool.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Bool.pod
-Copying doc/Type/Code.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Code.pod
-Copying doc/Type/Variable.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Variable.pod
-Copying doc/Type/IO.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/IO.pod
-Copying doc/Type/Stash.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Stash.pod
-Copying doc/Type/Positional.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Positional.pod
-Copying doc/Type/Lock.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Lock.pod
-Copying doc/Type/Rational.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Rational.pod
-Copying doc/Type/Capture.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Capture.pod
-Copying doc/Type/Instant.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Instant.pod
-Copying doc/Type/Thread.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Thread.pod
-Copying doc/Type/Proc.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Proc.pod
-Copying doc/Type/NFD.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/NFD.pod
-Copying doc/Type/Int.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Int.pod
-Copying doc/Type/Proxy.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Proxy.pod
-Copying doc/Type/Duration.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Duration.pod
-Copying doc/Type/Associative.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Associative.pod
-Copying doc/Type/NFC.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/NFC.pod
-Copying doc/Type/Seq.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Seq.pod
-Copying doc/Type/Routine.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Routine.pod
-Copying doc/Type/Array.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Array.pod
-Copying doc/Type/Cool.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Cool.pod
-Copying doc/Type/Any.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Any.pod
-Copying doc/Type/Real.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Real.pod
-Copying doc/Type/Supply.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Supply.pod
-Copying doc/Type/Baggy.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Baggy.pod
-Copying doc/Type/Grammar.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Grammar.pod
-Copying doc/Type/Macro.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Macro.pod
-Copying doc/Type/CurrentThreadScheduler.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/CurrentThreadScheduler.pod
-Copying doc/Type/Slip.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Slip.pod
-Copying doc/Type/Failure.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Failure.pod
-Copying doc/Type/Regex.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Regex.pod
-Copying doc/Type/Whatever.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Whatever.pod
-Copying doc/Type/Set.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Set.pod
-Copying doc/Type/Mixy.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Mixy.pod
-Copying doc/Type/Dateish.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Dateish.pod
-Copying doc/Type/Bag.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Bag.pod
-Copying doc/Type/Num.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Num.pod
-Copying doc/Type/Buf.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Buf.pod
-Copying doc/Type/Scalar.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Scalar.pod
-Copying doc/Type/Promise.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Promise.pod
-Copying doc/Type/SetHash.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/SetHash.pod
-Copying doc/Type/Stringy.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Stringy.pod
-Copying doc/Type/AST.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/AST.pod
-Copying doc/Type/Setty.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Setty.pod
-Copying doc/Type/Iterator.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Iterator.pod
-Copying doc/Type/Supplier.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Supplier.pod
-Copying doc/Type/Date.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Date.pod
-Copying doc/Type/Tap.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Tap.pod
-Copying doc/Type/Mu.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Mu.pod
-Copying doc/Type/QuantHash.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/QuantHash.pod
-Copying doc/Type/Mix.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Mix.pod
-Copying doc/Type/Attribute.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Attribute.pod
-Copying doc/Type/WhateverCode.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/WhateverCode.pod
-Copying doc/Type/Uni.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Uni.pod
-Copying doc/Type/Rat.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Rat.pod
-Copying doc/Type/Method.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Method.pod
-Copying doc/Type/Blob.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Blob.pod
-Copying doc/Type/Channel.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Channel.pod
-Copying doc/Type/Nil.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Nil.pod
-Copying doc/Type/DateTime.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/DateTime.pod
-Copying doc/Type/NFKC.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/NFKC.pod
-Copying doc/Type/NFKD.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/NFKD.pod
-Copying doc/Type/Label.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Label.pod
-Copying doc/Type/Backtrace.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Backtrace.pod
-Copying doc/Type/Hash.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Hash.pod
-Copying doc/Type/PositionalBindFailover.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/PositionalBindFailover.pod
-Copying doc/Type/MixHash.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/MixHash.pod
-Copying doc/Type/Callable.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Callable.pod
-Copying doc/Type/Parameter.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Parameter.pod
-Copying doc/Type/Str.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Str.pod
-Copying doc/Type/Block.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Block.pod
-Copying doc/Type/ThreadPoolScheduler.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/ThreadPoolScheduler.pod
-Copying doc/Type/Pair.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Pair.pod
-Copying doc/Type/Map.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Map.pod
-Copying doc/Type/Submethod.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Submethod.pod
-Copying doc/Type/Signature.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Signature.pod
-Copying doc/Type/Cursor.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Cursor.pod
-Copying doc/Type/nativeInt.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/nativeInt.pod
-Copying doc/Type/Complex.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Complex.pod
-Copying doc/Type/Junction.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Junction.pod
-Copying doc/Type/Exception.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Exception.pod
-Copying doc/Type/Numeric.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Numeric.pod
-Copying doc/Type/Range.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Range.pod
-Copying doc/Type/Match.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Match.pod
-Copying doc/Type/ObjAt.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/ObjAt.pod
-Copying doc/Type/Sub.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Sub.pod
-Copying doc/Type/Iterable.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Iterable.pod
-Copying doc/Type/FatRat.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/FatRat.pod
-Copying doc/Type/Scheduler.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Scheduler.pod
-Copying doc/Type/Version.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Version.pod
-Copying doc/Type/List.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/List.pod
-Copying doc/Language/about.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/about.pod
-Copying doc/Language/nativecall.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/nativecall.pod
-Copying doc/Language/regexes.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/regexes.pod
-Copying doc/Language/traps.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/traps.pod
-Copying doc/Language/unicode_texas.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/unicode_texas.pod
-Copying doc/Language/performance.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/performance.pod
-Copying doc/Language/modules-extra.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/modules-extra.pod
-Copying doc/Language/objects.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/objects.pod
-Copying doc/Language/io.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/io.pod
-Copying doc/Language/mop.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/mop.pod
-Copying doc/Language/modules.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/modules.pod
-Copying doc/Language/glossary.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/glossary.pod
-Copying doc/Language/5to6-perlsyn.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/5to6-perlsyn.pod
-Copying doc/Language/list.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/list.pod
-Copying doc/Language/functions.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/functions.pod
-Copying doc/Language/syntax.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/syntax.pod
-Copying doc/Language/testing.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/testing.pod
-Copying doc/Language/concurrency.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/concurrency.pod
-Copying doc/Language/grammars.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/grammars.pod
-Copying doc/Language/quoting.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/quoting.pod
-Copying doc/Language/control.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/control.pod
-Copying doc/Language/5to6-perlop.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/5to6-perlop.pod
-Copying doc/Language/setbagmix.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/setbagmix.pod
-Copying doc/Language/exceptions.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/exceptions.pod
-Copying doc/Language/variables.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/variables.pod
-Copying doc/Language/classtut.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/classtut.pod
-Copying doc/Language/phasers.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/phasers.pod
-Copying doc/Language/typesystem.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/typesystem.pod
-Copying doc/Language/5to6-nutshell.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/5to6-nutshell.pod
-Copying doc/Language/faq.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/faq.pod
-Copying doc/Language/containers.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/containers.pod
-Copying doc/Language/contributors.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/contributors.pod
-Copying doc/Language/5to6-perlfunc.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/5to6-perlfunc.pod
-Copying doc/Language/terms.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/terms.pod
-Copying doc/Language/5to6-perlvar.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/5to6-perlvar.pod
-Copying doc/Language/subscripts.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/subscripts.pod
-Copying doc/Language/packages.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/packages.pod
-Copying doc/Language/operators.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/operators.pod
-Copying doc/Language/unicode_entry.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Language/unicode_entry.pod
-Copying doc/Type/X/IO.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/IO.pod
-Copying doc/Type/X/NoDispatcher.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/NoDispatcher.pod
-Copying doc/Type/X/OutOfRange.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/OutOfRange.pod
-Copying doc/Type/X/Comp.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Comp.pod
-Copying doc/Type/X/Obsolete.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Obsolete.pod
-Copying doc/Type/X/NYI.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/NYI.pod
-Copying doc/Type/X/Redeclaration.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Redeclaration.pod
-Copying doc/Type/X/TypeCheck.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/TypeCheck.pod
-Copying doc/Type/X/Undeclared.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Undeclared.pod
-Copying doc/Type/X/ControlFlow.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/ControlFlow.pod
-Copying doc/Type/X/Syntax.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax.pod
-Copying doc/Type/X/Pod.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Pod.pod
-Copying doc/Type/X/StubCode.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/StubCode.pod
-Copying doc/Type/X/Bind.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Bind.pod
-Copying doc/Type/X/Temporal.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Temporal.pod
-Copying doc/Type/X/OS.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/OS.pod
-Copying doc/Type/X/AdHoc.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/AdHoc.pod
-Copying doc/Type/Backtrace/Frame.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Backtrace/Frame.pod
-Copying doc/Type/Proc/Status.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Proc/Status.pod
-Copying doc/Type/Proc/Async.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Proc/Async.pod
-Copying doc/Type/Pod/Item.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Pod/Item.pod
-Copying doc/Type/Pod/Block.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Pod/Block.pod
-Copying doc/Type/Metamodel/PrivateMethodContainer.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Metamodel/PrivateMethodContainer.pod
-Copying doc/Type/Metamodel/Finalization.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Metamodel/Finalization.pod
-Copying doc/Type/Metamodel/MROBasedMethodDispatch.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Metamodel/MROBasedMethodDispatch.pod
-Copying doc/Type/Metamodel/MethodContainer.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Metamodel/MethodContainer.pod
-Copying doc/Type/Metamodel/RoleContainer.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Metamodel/RoleContainer.pod
-Copying doc/Type/Metamodel/Trusting.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Metamodel/Trusting.pod
-Copying doc/Type/Metamodel/MultipleInheritance.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Metamodel/MultipleInheritance.pod
-Copying doc/Type/Metamodel/ClassHOW.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Metamodel/ClassHOW.pod
-Copying doc/Type/Metamodel/C3MRO.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Metamodel/C3MRO.pod
-Copying doc/Type/Metamodel/Primitives.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Metamodel/Primitives.pod
-Copying doc/Type/Metamodel/AttributeContainer.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Metamodel/AttributeContainer.pod
-Copying doc/Type/Metamodel/Naming.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Metamodel/Naming.pod
-Copying doc/Type/IO/Handle.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/IO/Handle.pod
-Copying doc/Type/IO/Notification.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/IO/Notification.pod
-Copying doc/Type/IO/Socket.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/IO/Socket.pod
-Copying doc/Type/IO/Path.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/IO/Path.pod
-Copying doc/Type/IO/Pipe.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/IO/Pipe.pod
-Copying doc/Type/IO/Spec.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/IO/Spec.pod
-Copying doc/Type/IO/ArgFiles.pm to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/IO/ArgFiles.pm
-Copying doc/Type/X/ControlFlow/Return.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/ControlFlow/Return.pod
-Copying doc/Type/X/Mixin/NotComposable.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Mixin/NotComposable.pod
-Copying doc/Type/X/Augment/NoSuchType.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Augment/NoSuchType.pod
-Copying doc/Type/X/Eval/NoSuchLang.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Eval/NoSuchLang.pod
-Copying doc/Type/X/Bind/Slice.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Bind/Slice.pod
-Copying doc/Type/X/Bind/NativeType.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Bind/NativeType.pod
-Copying doc/Type/X/Phaser/PrePost.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Phaser/PrePost.pod
-Copying doc/Type/X/Phaser/Multiple.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Phaser/Multiple.pod
-Copying doc/Type/X/TypeCheck/Splice.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/TypeCheck/Splice.pod
-Copying doc/Type/X/TypeCheck/Assignment.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/TypeCheck/Assignment.pod
-Copying doc/Type/X/TypeCheck/Binding.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/TypeCheck/Binding.pod
-Copying doc/Type/X/TypeCheck/Return.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/TypeCheck/Return.pod
-Copying doc/Type/X/Temporal/Truncation.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Temporal/Truncation.pod
-Copying doc/Type/X/Placeholder/Mainline.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Placeholder/Mainline.pod
-Copying doc/Type/X/Placeholder/Block.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Placeholder/Block.pod
-Copying doc/Type/X/Signature/NameClash.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Signature/NameClash.pod
-Copying doc/Type/X/Signature/Placeholder.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Signature/Placeholder.pod
-Copying doc/Type/X/Str/Numeric.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Str/Numeric.pod
-Copying doc/Type/X/Export/NameClash.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Export/NameClash.pod
-Copying doc/Type/X/Numeric/Real.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Numeric/Real.pod
-Copying doc/Type/X/Method/InvalidQualifier.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Method/InvalidQualifier.pod
-Copying doc/Type/X/Method/NotFound.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Method/NotFound.pod
-Copying doc/Type/X/Composition/NotComposable.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Composition/NotComposable.pod
-Copying doc/Type/X/Assignment/RO.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Assignment/RO.pod
-Copying doc/Type/X/Constructor/Positional.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Constructor/Positional.pod
-Copying doc/Type/X/Channel/SendOnClosed.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Channel/SendOnClosed.pod
-Copying doc/Type/X/Channel/ReceiveOnClosed.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Channel/ReceiveOnClosed.pod
-Copying doc/Type/X/Syntax/Malformed.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Malformed.pod
-Copying doc/Type/X/Syntax/UnlessElse.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/UnlessElse.pod
-Copying doc/Type/X/Syntax/Reserved.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Reserved.pod
-Copying doc/Type/X/Syntax/Missing.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Missing.pod
-Copying doc/Type/X/Syntax/NoSelf.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/NoSelf.pod
-Copying doc/Type/X/Syntax/InfixInTermPosition.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/InfixInTermPosition.pod
-Copying doc/Type/X/Syntax/Confused.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Confused.pod
-Copying doc/Type/X/Syntax/NegatedPair.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/NegatedPair.pod
-Copying doc/Type/X/Syntax/P5.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/P5.pod
-Copying doc/Type/X/Does/TypeObject.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Does/TypeObject.pod
-Copying doc/Type/X/Role/Initialization.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Role/Initialization.pod
-Copying doc/Type/X/Promise/CauseOnlyValidOnBroken.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Promise/CauseOnlyValidOnBroken.pod
-Copying doc/Type/X/Proc/Async.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Proc/Async.pod
-Copying doc/Type/X/Sequence/Deduction.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Sequence/Deduction.pod
-Copying doc/Type/X/Attribute/Undeclared.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Attribute/Undeclared.pod
-Copying doc/Type/X/Attribute/Package.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Attribute/Package.pod
-Copying doc/Type/X/Attribute/NoPackage.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Attribute/NoPackage.pod
-Copying doc/Type/X/Inheritance/NotComposed.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Inheritance/NotComposed.pod
-Copying doc/Type/X/Inheritance/Unsupported.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Inheritance/Unsupported.pod
-Copying doc/Type/X/Declaration/Scope.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Declaration/Scope.pod
-Copying doc/Type/X/Anon/Multi.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Anon/Multi.pod
-Copying doc/Type/X/Anon/Augment.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Anon/Augment.pod
-Copying doc/Type/X/Package/Stubbed.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Package/Stubbed.pod
-Copying doc/Type/X/Parameter/WrongOrder.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Parameter/WrongOrder.pod
-Copying doc/Type/X/Parameter/Default.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Parameter/Default.pod
-Copying doc/Type/X/Parameter/MultipleTypeConstraints.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Parameter/MultipleTypeConstraints.pod
-Copying doc/Type/X/Parameter/Placeholder.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Parameter/Placeholder.pod
-Copying doc/Type/X/Parameter/Twigil.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Parameter/Twigil.pod
-Copying doc/Type/X/IO/Rename.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/IO/Rename.pod
-Copying doc/Type/X/IO/Copy.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/IO/Copy.pod
-Copying doc/Type/X/IO/Cwd.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/IO/Cwd.pod
-Copying doc/Type/X/IO/Unlink.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/IO/Unlink.pod
-Copying doc/Type/X/IO/Chmod.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/IO/Chmod.pod
-Copying doc/Type/X/IO/Chdir.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/IO/Chdir.pod
-Copying doc/Type/X/IO/Mkdir.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/IO/Mkdir.pod
-Copying doc/Type/X/IO/Rmdir.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/IO/Rmdir.pod
-Copying doc/Type/X/IO/Dir.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/IO/Dir.pod
-Copying doc/Type/Pod/Block/Code.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Pod/Block/Code.pod
-Copying doc/Type/Pod/Block/Para.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Pod/Block/Para.pod
-Copying doc/Type/Pod/Block/Named.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/Pod/Block/Named.pod
-Copying doc/Type/IO/Spec/Win32.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/IO/Spec/Win32.pod
-Copying doc/Type/IO/Spec/QNX.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/IO/Spec/QNX.pod
-Copying doc/Type/IO/Spec/Cygwin.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/IO/Spec/Cygwin.pod
-Copying doc/Type/IO/Spec/Unix.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/IO/Spec/Unix.pod
-Copying doc/Type/IO/Socket/INET.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/IO/Socket/INET.pod
-Copying doc/Type/IO/Socket/Async.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/IO/Socket/Async.pod
-Copying doc/Type/X/Method/Private/Unqualified.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Method/Private/Unqualified.pod
-Copying doc/Type/X/Method/Private/Permission.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Method/Private/Permission.pod
-Copying doc/Type/X/Syntax/Augment/Role.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Augment/Role.pod
-Copying doc/Type/X/Syntax/Augment/WithoutMonkeyTyping.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Augment/WithoutMonkeyTyping.pod
-Copying doc/Type/X/Syntax/Comment/Embedded.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Comment/Embedded.pod
-Copying doc/Type/X/Syntax/Variable/Numeric.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Variable/Numeric.pod
-Copying doc/Type/X/Syntax/Variable/Twigil.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Variable/Twigil.pod
-Copying doc/Type/X/Syntax/Variable/Match.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Variable/Match.pod
-Copying doc/Type/X/Syntax/Signature/InvocantMarker.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Signature/InvocantMarker.pod
-Copying doc/Type/X/Syntax/Term/MissingInitializer.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Term/MissingInitializer.pod
-Copying doc/Type/X/Syntax/Regex/Adverb.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Regex/Adverb.pod
-Copying doc/Type/X/Syntax/Regex/SolitaryQuantifier.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Regex/SolitaryQuantifier.pod
-Copying doc/Type/X/Syntax/Self/WithoutObject.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Self/WithoutObject.pod
-Copying doc/Type/X/Syntax/Number/RadixOutOfRange.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Syntax/Number/RadixOutOfRange.pod
-Copying doc/Type/X/Proc/Async/TapBeforeSpawn.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Proc/Async/TapBeforeSpawn.pod
-Copying doc/Type/X/Proc/Async/OpenForWriting.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Proc/Async/OpenForWriting.pod
-Copying doc/Type/X/Proc/Async/MustBeStarted.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Proc/Async/MustBeStarted.pod
-Copying doc/Type/X/Proc/Async/CharsOrBytes.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Proc/Async/CharsOrBytes.pod
-Copying doc/Type/X/Proc/Async/AlreadyStarted.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Proc/Async/AlreadyStarted.pod
-Copying doc/Type/X/Declaration/Scope/Multi.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/../doc/Type/X/Declaration/Scope/Multi.pod
 ==> Testing p6doc
-t/pod-convenience.t .. ok
-t/pod-htmlify.t ...... ok
-t/typegraph.t ........ ok
-All tests successful.
-Files=3, Tests=22, 10 wallclock secs ( 0.03 usr  0.00 sys +  9.80 cusr  0.58 csys = 10.41 CPU)
-Result: PASS
-==> Installing p6doc
-==> Successfully installed p6doc
+[31m===[0mSORRY![31m===[0m Error while compiling /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1455567219_1/Build.pm
+Redeclaration of symbol Build
+at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1455567219_1/Build.pm:11
+------> [32mclass Build is Panda::Builder[33m⏏[31m {[0m
 ==> Installing Debugger::UI::CommandLine from a local directory 'modules/debugger-ui-commandline'
 ==> Fetching Debugger::UI::CommandLine
 ==> Building Debugger::UI::CommandLine
@@ -764,7 +591,7 @@ Result: PASS
 ==> Testing LibraryMake
 t/01-basic.t .. ok
 All tests successful.
-Files=1, Tests=7,  4 wallclock secs ( 0.02 usr  0.01 sys +  4.14 cusr  0.26 csys =  4.43 CPU)
+Files=1, Tests=7,  4 wallclock secs ( 0.02 usr  0.00 sys +  3.96 cusr  0.25 csys =  4.23 CPU)
 Result: PASS
 ==> Installing LibraryMake
 ==> Successfully installed LibraryMake
@@ -777,18 +604,11 @@ Result: PASS
 ==> Successfully installed Native::Resources
 ==> Fetching Linenoise
 ==> Building Linenoise
-make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1455480907_2'
-gcc -c -fPIC -Wdeclaration-after-statement -Werror=declaration-after-statement -O3 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC -o linenoise.o linenoise.c
-perl6 -e "mkdir 'resources'; mkdir 'resources/lib'"
-gcc -shared -fPIC  -O3 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/lib -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib -lm -lpthread -lrt -ldl -o resources/lib/liblinenoise.so linenoise.o
-perl6 -e "print ''" > resources/lib/liblinenoise.dll
-perl6 -e "print ''" > resources/lib/liblinenoise.dylib
-gcc -o constant-helper -Wdeclaration-after-statement -Werror=declaration-after-statement -O3 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC constant-helper.c
-perl6 fill-constants.pl < lib/Linenoise.pm.in > lib/Linenoise.pm
-make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1455480907_2'
 ==> Testing Linenoise
-==> Installing Linenoise
-==> Successfully installed Linenoise
+[31m===[0mSORRY![31m===[0m Error while compiling /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1455567247_2/Build.pm
+Redeclaration of symbol Build
+at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1455567247_2/Build.pm:6
+------> [32mclass Build is Panda::Builder[33m⏏[31m {[0m
 
 Rakudo Star has been built and installed successfully.
 Please make sure that the following directories are in PATH:

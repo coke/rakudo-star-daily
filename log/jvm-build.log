@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix="/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install" --backends=jvm && make
-Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2016.01-42-g2a21a59 / OpenJDK 1.7.0_95).
+Using /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/bin/nqp-j (version 2016.01-45-g56f5d83 / OpenJDK 1.7.0_95).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -42,12 +42,12 @@ java -Xss1m -Xms500m -Xmx2000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-sta
 The following step can take a long time, please be patient.
 java -Xss1m -Xms500m -Xmx2000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar:rakudo-runtime.jar:perl6.jar -cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib perl6 --setting=NULL --ll-exception --optimize=3 --target=jar --stagestats --output=CORE.setting.jar gen/jvm/CORE.setting
 Stage start      :   0.000
-Stage parse      : 101.394
-Stage syntaxcheck:   0.001
+Stage parse      : 112.110
+Stage syntaxcheck:   0.000
 Stage ast        :   0.001
-Stage optimize   :  12.267
-Stage jast       :  34.035
-Stage classfile  :   7.390
+Stage optimize   :  13.011
+Stage jast       :  47.005
+Stage classfile  :  11.982
 Stage jar        :   0.000
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-jvm-runner.pl dev . . /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar
 Creating './perl6-j'
@@ -417,9 +417,9 @@ Cannot unbox a type object
   in <mainline> (gen/jvm/main.nqp:33)
   in  (gen/jvm/main.nqp)
 Cannot unbox a type object
-  in throw (gen/jvm/CORE.setting:19822)
-  in  (gen/jvm/CORE.setting:34068)
-  in  (gen/jvm/CORE.setting:34066)
+  in throw (gen/jvm/CORE.setting:19837)
+  in  (gen/jvm/CORE.setting:34083)
+  in  (gen/jvm/CORE.setting:34081)
   in  (gen/jvm/CORE.setting)
   in result (gen/jvm/stage2/QAST.nqp)
   in compile_var (gen/jvm/stage2/QAST.nqp:4419)
@@ -514,14 +514,14 @@ Cannot unbox a type object
   in jast (gen/jvm/stage2/QAST.nqp:3153)
   in jast (gen/jvm/stage2/NQPHLL.nqp:68)
   in compile (gen/jvm/stage2/NQPHLL.nqp:1446)
-  in load-source (gen/jvm/CORE.setting:34058)
-  in load-source-file (gen/jvm/CORE.setting:34050)
-  in  (gen/jvm/CORE.setting:34941)
-  in METAOP_TEST_ASSIGN:<//> (gen/jvm/CORE.setting:29220)
-  in  (gen/jvm/CORE.setting:34941)
-  in need (gen/jvm/CORE.setting:34932)
-  in need (gen/jvm/CORE.setting:34952)
-  in need (gen/jvm/CORE.setting:34952)
+  in load-source (gen/jvm/CORE.setting:34073)
+  in load-source-file (gen/jvm/CORE.setting:34065)
+  in  (gen/jvm/CORE.setting:34956)
+  in METAOP_TEST_ASSIGN:<//> (gen/jvm/CORE.setting:29235)
+  in  (gen/jvm/CORE.setting:34956)
+  in need (gen/jvm/CORE.setting:34947)
+  in need (gen/jvm/CORE.setting:34967)
+  in need (gen/jvm/CORE.setting:34967)
   in load_module (src/Perl6/World.nqp:978)
   in do_pragma_or_load_module (src/Perl6/World.nqp:909)
   in statement_control:sym<use> (src/Perl6/Grammar.nqp:1530)
@@ -549,15 +549,15 @@ Cannot unbox a type object
   in parse (gen/jvm/stage2/QRegex.nqp:2093)
   in parse (gen/jvm/stage2/NQPHLL.nqp:1487)
   in compile (gen/jvm/stage2/NQPHLL.nqp:1443)
-  in load-source (gen/jvm/CORE.setting:34058)
-  in load-source-file (gen/jvm/CORE.setting:34050)
-  in  (gen/jvm/CORE.setting:34941)
-  in METAOP_TEST_ASSIGN:<//> (gen/jvm/CORE.setting:29220)
-  in  (gen/jvm/CORE.setting:34941)
-  in need (gen/jvm/CORE.setting:34932)
-  in need (gen/jvm/CORE.setting:34952)
-  in need (gen/jvm/CORE.setting:34952)
-  in need (gen/jvm/CORE.setting:34952)
+  in load-source (gen/jvm/CORE.setting:34073)
+  in load-source-file (gen/jvm/CORE.setting:34065)
+  in  (gen/jvm/CORE.setting:34956)
+  in METAOP_TEST_ASSIGN:<//> (gen/jvm/CORE.setting:29235)
+  in  (gen/jvm/CORE.setting:34956)
+  in need (gen/jvm/CORE.setting:34947)
+  in need (gen/jvm/CORE.setting:34967)
+  in need (gen/jvm/CORE.setting:34967)
+  in need (gen/jvm/CORE.setting:34967)
   in load_module (src/Perl6/World.nqp:978)
   in do_pragma_or_load_module (src/Perl6/World.nqp:909)
   in statement_control:sym<use> (src/Perl6/Grammar.nqp:1530)
@@ -572,15 +572,15 @@ Cannot unbox a type object
   in parse (gen/jvm/stage2/QRegex.nqp:2093)
   in parse (gen/jvm/stage2/NQPHLL.nqp:1487)
   in compile (gen/jvm/stage2/NQPHLL.nqp:1443)
-  in load-source (gen/jvm/CORE.setting:34058)
-  in load-source-file (gen/jvm/CORE.setting:34050)
-  in  (gen/jvm/CORE.setting:34941)
-  in METAOP_TEST_ASSIGN:<//> (gen/jvm/CORE.setting:29220)
-  in  (gen/jvm/CORE.setting:34941)
-  in need (gen/jvm/CORE.setting:34932)
-  in need (gen/jvm/CORE.setting:34952)
-  in need (gen/jvm/CORE.setting:34952)
-  in need (gen/jvm/CORE.setting:34952)
+  in load-source (gen/jvm/CORE.setting:34073)
+  in load-source-file (gen/jvm/CORE.setting:34065)
+  in  (gen/jvm/CORE.setting:34956)
+  in METAOP_TEST_ASSIGN:<//> (gen/jvm/CORE.setting:29235)
+  in  (gen/jvm/CORE.setting:34956)
+  in need (gen/jvm/CORE.setting:34947)
+  in need (gen/jvm/CORE.setting:34967)
+  in need (gen/jvm/CORE.setting:34967)
+  in need (gen/jvm/CORE.setting:34967)
   in load_module (src/Perl6/World.nqp:978)
   in do_pragma_or_load_module (src/Perl6/World.nqp:909)
   in statement_control:sym<use> (src/Perl6/Grammar.nqp:1530)

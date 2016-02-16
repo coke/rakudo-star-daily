@@ -1,9 +1,9 @@
 MoarVM
-2016.01-31-gf2ae11b
+2016.01-34-g7d0e60f
 Rakudo
-v6.c-362-g4cd2875
+v6.c-371-g6c44df4
 NQP
-2016.01-42-g2a21a59
+2016.01-45-g56f5d83
 modules
 --------
 Bailador
@@ -132,11 +132,22 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 24cb91d6dde972c0bc4ac1f75d05940d380800f1
-Author: jnthn <jnthn@jnthn.net>
-Date:   Mon Feb 15 20:32:41 2016 +0100
+commit aa656c6a8952d08c8d31a41f142283e91de924c2
+Merge: 976fa40 438f3f5
+Author: Jonathan Stowe <jns@gellyfish.co.uk>
+Date:   Tue Feb 16 18:51:53 2016 +0000
 
-    Document EVALFILE.
+    Merge pull request #399 from dbrunton/patch-11
+    
+    replace Supply.new in grep and map
+
+commit 438f3f5772215ce931413b23388a770796e92bdc
+Author: David Brunton <dbrunton@gmail.com>
+Date:   Tue Feb 16 13:20:14 2016 -0500
+
+    replace Supply.new in grep and map
+    
+    Also, emit() is called on a Supplier rather than Supply.
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

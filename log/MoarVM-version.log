@@ -1,7 +1,7 @@
 MoarVM
-2016.01-34-g7d0e60f
+2016.01-38-g6f9be70
 Rakudo
-v6.c-371-g6c44df4
+v6.c-380-g6159b5e
 NQP
 2016.01-45-g56f5d83
 modules
@@ -14,11 +14,11 @@ Date:   Mon Dec 28 19:43:44 2015 +0100
     Rollback one change that doesn't actually work
 --------
 DBIish
-commit eedf43c177f1b040fd4476ad549a7c76e0c1f8a4
-Author: Sylvain Colinet <scolinet@gmail.com>
-Date:   Tue Feb 2 14:35:32 2016 +0100
+commit c4d3ff68627c97d6bbfadb8096ab12f19954cefa
+Author: Salvador Ortiz <sog@msg.com.mx>
+Date:   Wed Feb 17 08:28:14 2016 -0600
 
-    fix type on install
+    Update copyright
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -132,22 +132,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit aa656c6a8952d08c8d31a41f142283e91de924c2
-Merge: 976fa40 438f3f5
-Author: Jonathan Stowe <jns@gellyfish.co.uk>
-Date:   Tue Feb 16 18:51:53 2016 +0000
+commit 486d2bf32eb19fd1f6bbbe592942a1b21a831ebf
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Wed Feb 17 13:56:58 2016 +0000
 
-    Merge pull request #399 from dbrunton/patch-11
-    
-    replace Supply.new in grep and map
-
-commit 438f3f5772215ce931413b23388a770796e92bdc
-Author: David Brunton <dbrunton@gmail.com>
-Date:   Tue Feb 16 13:20:14 2016 -0500
-
-    replace Supply.new in grep and map
-    
-    Also, emit() is called on a Supplier rather than Supply.
+    mention quietly block
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -259,11 +248,27 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit 9987e29d954af33d8375582044678c7b59ae7e37
-Author: Tobias Leich <email@froggs.de>
-Date:   Wed Feb 3 20:41:54 2016 +0100
+commit 5990e4d70da2a7cd15b3fd3c1c8fed99939e7c75
+Merge: 9987e29 af359ae
+Author: niner <nine@detonation.org>
+Date:   Wed Feb 17 19:36:07 2016 +0100
 
-    remove leading v in version of JSON::Fast
+    Merge pull request #293 from jonathanstowe/master
+    
+    Test that the Build.pm is loaded correctly
+
+commit af359ae77563f7335a0f3ae8ea5f3ce1bac91b0f
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Wed Feb 17 18:30:10 2016 +0000
+
+    Test that the Build.pm is loaded and the method
+    run.
+    
+    This was broken for a short while by rakudo.
+    
+    Fixed again as of Rakudo version 2015.12-380-g6159b5e
+    
+    Closes #292
 --------
 perl6-digest-md5
 commit 41dc67c08d417cf395939a2a546829ff1fe30a81

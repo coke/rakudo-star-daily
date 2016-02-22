@@ -241,10 +241,6 @@ config.status: creating src/config.h
 config.status: executing depfiles commands
 config.status: executing default commands
 make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/MoarVM/3rdparty/libatomic_ops/src'
-sed -e s:XSIZE:char:g -e s:XCTYPE:unsigned/**/char:g atomic_ops/generalize-arithm.template > atomic_ops/generalize-arithm.h
-sed -e s:XSIZE:short:g -e s:XCTYPE:unsigned/**/short:g atomic_ops/generalize-arithm.template >> atomic_ops/generalize-arithm.h
-sed -e s:XSIZE:int:g -e s:XCTYPE:unsigned:g atomic_ops/generalize-arithm.template >> atomic_ops/generalize-arithm.h
-sed -e s:XSIZE_::g -e s:XCTYPE:AO_t:g atomic_ops/generalize-arithm.template >> atomic_ops/generalize-arithm.h
 make  all-am
 make[2]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/MoarVM/3rdparty/libatomic_ops/src'
 gcc -DHAVE_CONFIG_H   -I../src -I../src  -fPIC -Wall -Wextra -Wdeclaration-after-statement -Werror=declaration-after-statement -O3 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC -DMVM_TRACING=0 -DMVM_CGOTO=1 -MT atomic_ops.o -MD -MP -MF .deps/atomic_ops.Tpo -c -o atomic_ops.o atomic_ops.c
@@ -619,7 +615,7 @@ Cleaning up ...
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e chmod 755 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp
 
 NQP has been built and installed.
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2016.01-49-g1eb9b97 / MoarVM 2016.02).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2016.02-2-g6327fc9 / MoarVM 2016.02).
 
 Creating Makefile ...
 Cleaning up ...

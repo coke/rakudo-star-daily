@@ -1,7 +1,7 @@
 MoarVM
 2016.02
 Rakudo
-2016.02-14-g6952bec
+2016.02-29-gac88669
 NQP
 2016.02-9-gfcecdf1
 modules
@@ -14,11 +14,764 @@ Date:   Mon Dec 28 19:43:44 2015 +0100
     Rollback one change that doesn't actually work
 --------
 DBIish
-commit 5250f2af03db1cccd0e76fed4f6ee394d93f5160
+commit 008eab6e111df985020383c7ad943b050a9d025e
+Merge: f042c03 fb76c83
 Author: Salvador Ortiz <sog@msg.com.mx>
-Date:   Wed Feb 24 11:09:13 2016 -0600
+Date:   Thu Feb 25 10:38:51 2016 -0600
 
-    Use exported typed Pointers for type safety
+    Merge pull request #54 from perl6/oracle
+    
+    Merge oracle branch
+
+commit fb76c83655d2a78c8512f181f7000c5ea1e8f2a6
+Author: Salvador Ortiz <sog@msg.com.mx>
+Date:   Thu Feb 25 10:23:53 2016 -0600
+
+    Fix the mysql problem, remove old tests
+
+commit 087d38cb7725c1ff07847f814bbeb86732d1d8b2
+Author: Salvador Ortiz <sog@msg.com.mx>
+Date:   Thu Feb 25 08:38:10 2016 -0600
+
+    Mysql by default uses the old test harness.
+    
+    Mysql fails the new tests in oracle branch, but pass the old ones,
+    so to facilitate de merge, it can use both, ENV var controlled.
+
+commit 136f8dc1d5ba7c033ab22893942a4e5e8f5c1688
+Author: Salvador Ortiz <sog@msg.com.mx>
+Date:   Thu Feb 25 08:36:07 2016 -0600
+
+    Pg pass all TODO tests
+
+commit 39a5fa851fa0e5b9be12111ba6925ed694918aa9
+Author: Salvador Ortiz <sog@msg.com.mx>
+Date:   Thu Feb 25 08:32:54 2016 -0600
+
+    Fix improper .finish and cleanup
+
+commit 79d962fb5bada9f91b6027392c3a044f30f9827f
+Merge: 90e295a f042c03
+Author: Salvador Ortiz <sog@msg.com.mx>
+Date:   Thu Feb 25 02:19:13 2016 -0600
+
+    Pull master into oracle
+
+commit 90e295a43d6bde997a5830b7f956814c1ab4cd13
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Wed Feb 24 14:51:03 2016 +0100
+
+    Put the numeric untyped ref data as the right Str
+
+commit b4b0bad4748cc7f7c881e65045dc5d5427676a91
+Author: Sylvain Colinet <scolinet@gmail.com>
+Date:   Wed Feb 24 14:26:59 2016 +0100
+
+    Remove all the Num stuff in Pg/sqlite/mysql, everything is Rat. Fix the tests
+
+commit 67953e2062f8bfadf903e98c21480b0cb6f940b5
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Mon Feb 22 17:42:51 2016 +0000
+
+    MySQL didn't handle Num
+
+commit 5697bd5e05a5dd0299239f91e7affa4b407f176e
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Mon Feb 22 17:24:17 2016 +0000
+
+    Add the missing MySQL type
+
+commit 4b2c4747fd61bf5da2577abbaced4b03200faf6d
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Mon Feb 22 17:01:15 2016 +0000
+
+    Fix test expected results for the time being
+
+commit 61c27c9f7ee3a8cdc279e26302ccb15ec6c172ad
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Mon Feb 22 16:14:10 2016 +0000
+
+    Reformat
+
+commit b3bcd38cb53a495f0efb3ae3a63c99e874b04753
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Mon Feb 22 16:12:55 2016 +0000
+
+    needs to be 'package' to avoid merge fault
+
+commit 10c150a79f9566da97ff851a64db0c6be7a3ebfb
+Merge: c3df49b c4d3ff6
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Mon Feb 22 14:18:03 2016 +0000
+
+    Merge branch 'master' of github.com:perl6/DBIish into oracle
+    
+    Brings this to a mergeable condition
+
+commit c3df49bae312287fcfea4aff8729cbafd526b19a
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Sun Feb 7 13:29:19 2016 +0000
+
+    Add .precomp to .gitignore
+
+commit 2202e81943bdf4692171d1bfd10a676aef148560
+Author: Jonathan Stowe <jns+git@gellyfish.co.uk>
+Date:   Sun Feb 7 13:28:41 2016 +0000
+
+    Just skip the test if PGDATABASE not set
+
+commit 7019a590e6633e1f60ead375c3784dccff81e0c9
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Jan 28 23:29:52 2016 +0100
+
+    install panda and deps in Travis install step
+    
+    as per current Travis Perl 6 docs
+
+commit ea41b2027665a6ff2561087a1ddd6eb3ae11c92c
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Jan 28 23:21:52 2016 +0100
+
+    we only require Data::Dump for testing
+
+commit 7294f2cc7696a65ac680793702ca7962b7023b31
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Jan 28 22:55:37 2016 +0100
+
+    install panda for Travis
+
+commit dfc3a3878f9d1e41fb3f1e2e85246b1302877388
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Jan 28 22:42:30 2016 +0100
+
+    install dependencies for Travis
+
+commit cfffe8845c46d8b7b5c519f2316de3de97854ddb
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Fri Jan 8 01:19:04 2016 +0100
+
+    remove two todos and update one in Test::DBDish
+
+commit e29674dca452686dd1bc5613abc85057f3ceead5
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Fri Jan 8 00:38:42 2016 +0100
+
+    refactor t/99-common.pl6 to Test::DBDish
+
+commit 5ca2268d4b0cc6265da416191003c978195194e9
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Fri Jan 8 00:36:08 2016 +0100
+
+    also use dbdishmysqltest in 10-mysql.t
+
+commit d64d12ea7114597694ae8088166617a33bff8075
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Fri Jan 8 00:29:02 2016 +0100
+
+    rename SQLite test db to dbdish-sqlite-test.sqlite3
+
+commit e578bc62f78c7bdbfd27eed5d805953d989cb7cd
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Fri Jan 8 00:07:12 2016 +0100
+
+    use Data::Dump in tests
+
+commit 5b240857392c507fb92fab6a5be93fdd19543d67
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Fri Jan 8 00:01:24 2016 +0100
+
+    add DBDish::Oracle modules to META.info
+
+commit 18905a0a2eedb561c9be375b92dcc4cacc023d86
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Fri Jan 8 00:01:09 2016 +0100
+
+    sort META.info provides alphabetically
+
+commit 7abbba068b6e9b2759e65800571aa8e62fb8292f
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Jan 7 23:57:05 2016 +0100
+
+    rename mysql test database to dbdishmysqltest
+
+commit a06619e0d821921131511a9d52f91af612f5100b
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Jan 7 23:53:56 2016 +0100
+
+    perltidy
+
+commit 8e17f3c7da32f12097f4006acbade288f65c485d
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Jan 7 23:52:37 2016 +0100
+
+    fix missing MYSQL_TYPE_VAR_STRING to Perl 6 type mapping
+
+commit be973a28fc36dac95dd91fe4ed634bc647f70e83
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Jan 7 23:52:12 2016 +0100
+
+    fix mysql NULL handling
+
+commit 89d50ea10c7f33ae5ec99b5ef2bc588effe90344
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Jan 7 23:51:15 2016 +0100
+
+    fix float returning Rat for mysql
+
+commit c2da2696345801c2280034665858c819f6b65bba
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Jan 7 23:48:58 2016 +0100
+
+    define mysql library version
+
+commit 8a3c45ebfe87e0e708934a8598ce8fcdbf8ad0a2
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Jan 7 23:13:33 2016 +0100
+
+    fix float returning Rat for Pg
+
+commit ed77f2c32c0ac31d2488ccb29b92d2219ce5e4f0
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Jan 7 23:11:37 2016 +0100
+
+    float values should be returned as Rat
+
+commit cdbf4d59b01310fbba5141af457f9bfa88ce3693
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Jan 7 22:59:08 2016 +0100
+
+    fix Pg NULL handling
+
+commit 1fc95159d41ef56e7a6fe0bb5319903d57a35e4f
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Jan 7 20:45:37 2016 +0100
+
+    document that we use UTF-8 everywhere for Oracle
+
+commit cd67dede04378df97d79fbc69235a9b5aa0b1a71
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Jan 7 20:45:08 2016 +0100
+
+    DBDish::Oracle::Native requires v6.c
+
+commit d61e7f4313ed6d5c0c6fdc1add4810de535f929b
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Jan 5 15:59:04 2016 +0100
+
+    remove execute bit from README.pod
+
+commit 3efbe75d5181246eebae0630d561c4df4ce6f1f8
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Jan 5 15:29:31 2016 +0100
+
+    workaround for RT#127001 (localhost :P)
+
+commit 8dcf80adb6ae0a5895f3a5f8be49cc90dc020e05
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Fri Dec 25 12:29:35 2015 +0100
+
+    add Alexander Hartmaier to CREDITS
+
+commit 5b9f438c3ab71e736f83210eee9ca18093ab7bd7
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Dec 23 21:22:26 2015 +0100
+
+    add NativeCall::TypeDiag tests for Oracle
+
+commit 8211ddcd5fa00dea0d6e72a4fc41872a5431e7ae
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Dec 23 21:21:37 2015 +0100
+
+    make compatible with v6.c release
+
+commit d8f9febceb6c4109487d53cef4af60793a6e4fcf
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Dec 23 15:05:20 2015 +0100
+
+    enable magic_cmp to handle arbitrary queries
+    
+    and also NULL return values which are type objects
+
+commit 82e690a7263903298ca326f81c15d9a9767d0913
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Dec 23 15:03:14 2015 +0100
+
+    handle sorting of NULL values
+    
+    SQLite, Postgres and MySQL/MariaDB sort NULLs first, Oracle last
+
+commit ad831f7a9e1c1f1b5ff6ebc30fb2b3aa998695cb
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Dec 23 14:58:22 2015 +0100
+
+    update common tests for typed return values and additional tests
+    
+    fetchall_arrayref is implemented on DBIish::StatementHandle so all DBDish
+    modules support it
+    Str, Int and Rat tests have been added in 15bef44
+
+commit 5715db5df7b70cd9e678853e6e78e1e894913fea
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Dec 23 13:41:09 2015 +0100
+
+    fix SELECT NULL for Oracle
+
+commit 1cf777a1a287cd72ceb69b6c66d6be72014fdf86
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Dec 23 13:22:10 2015 +0100
+
+    fix driver name in tests
+
+commit e0d01c1c43197055b751ea465c4f0b07ed98ebaa
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Dec 23 12:56:04 2015 +0100
+
+    update DBDish::Oracle pod
+
+commit 0ab492c892bf78c1128df6bc934cb1e4a9f4799c
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Dec 23 11:25:37 2015 +0100
+
+    small cleanups
+
+commit eea12e5fa28df931db2082d6ad4341188a21cedf
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Dec 23 11:23:48 2015 +0100
+
+    fix typo in DBDish::Oracle
+    
+    no idea how this didn't cause a syntax error and go unnoticed for so long
+
+commit bdedc5b01be1c44e6c2778b3d0a2e9d58b07e344
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Dec 16 18:56:32 2015 +0100
+
+    refactor DBDish::Oracle into separate files per class
+    
+    as done in 9571736 for the other DBDish modules
+
+commit cacb33466b4187c4b0c30246a87b37714438c540
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Dec 16 15:14:39 2015 +0100
+
+    fix number of tests
+
+commit 00285abfa14679d859c1141eed45249abdc50d09
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Dec 16 15:11:31 2015 +0100
+
+    fix ORA-00911: invalid character in tests
+    
+    Oracle returns ORA-00911: invalid character if SQL queries end in ;
+
+commit d129256822762ee473a1dce6d44f6f424864f7f9
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Dec 16 15:06:03 2015 +0100
+
+    fix out-binds and everything else to pass the tests
+
+commit 9742170a953ee9c89d8a44430f69b82e4878ef7c
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Mon Dec 14 14:24:26 2015 +0100
+
+    fix Int and Real in-binds
+
+commit 978f23259d718978e2ce65923d5f691691c05051
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Mon Dec 14 12:37:32 2015 +0100
+
+    use long for Ints to have the maximum precision supported by the platform
+
+commit b39016693c7ee6e99f47e21c6ed8a135253f2175
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Mon Dec 14 12:09:17 2015 +0100
+
+    try to get Int and Real in-binds working
+
+commit 16457a8b515e04f764c12ea75be8fd5cc2fa05eb
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Mon Dec 14 12:07:18 2015 +0100
+
+    fix Str in-binds
+
+commit 97def285d19fd1605610495f02c00d6bff85b435
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Sep 9 23:55:34 2015 +0200
+
+    NativeCalls deref does work
+
+commit 82fcb5e74bf27f01413d14058917dd07d89ce557
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Sep 9 23:35:26 2015 +0200
+
+    a statement handle needs to be allocated
+
+commit 1af703cba093147e064e86efc4df9ccd5a1ee372
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Sep 9 19:57:21 2015 +0200
+
+    add FIXME and TODOs
+
+commit f6dcd21b2276451e7f761b29715c9e95784fe90b
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Sep 9 19:56:42 2015 +0200
+
+    die if fetch is called before execute
+
+commit 3cc5b2d0aaa0c7df62ff7ebd3e9b0ce1f039b909
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Sep 9 19:54:52 2015 +0200
+
+    out select list items are declared using OCIDefineByPos2 not OCIBindByPos2
+
+commit e04f49abdc473de1af7df9433234d678bd4cd843
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Sep 8 23:59:49 2015 +0200
+
+    more progress for fetchrow
+
+commit 99bb8ae1753299e8dc3d4d3cd6d11f34115460dd
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Sep 8 20:54:48 2015 +0200
+
+    fixed getting the column name
+
+commit 99531203a41e0eeb59e6d3aec11934a3ddf974b1
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Sep 8 20:18:55 2015 +0200
+
+    first take at fetchrow for Oracle
+
+commit 78b33b920082bc4913c655736c2aabc4fae1459c
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Sep 8 18:36:28 2015 +0200
+
+    add method field_count to DBDish::Oracle
+
+commit 87d9682bb75e46f2040f238de060680467b6a2c5
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Sep 8 14:22:41 2015 +0200
+
+    fix all common tests
+    
+    failing since a95a0aa8
+
+commit df56f9382315c63e8882538388f289661b046b55
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Sep 8 14:20:54 2015 +0200
+
+    fix 45-oracle-common.t
+    
+    Oracle has different datatypes
+
+commit f78951a63bd32d5c548e358f6af096cd0ddc18c2
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Sep 8 13:36:34 2015 +0200
+
+    fix OCIAttrGet signature
+
+commit 04294fccf26e51a527381f21a5dccd8cd19d8f5c
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Sep 8 10:54:21 2015 +0200
+
+    fix t/25-mysql-common.t for DBDish::Oracle additions
+
+commit 63e9b6c0cdd13751be47bab092b782d55cf3a038
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Apr 7 21:01:59 2015 +0200
+
+    test executes' return value and .rows for each execute call
+
+commit ea37c368c60c31565ba6c7efa9e03d810f7ac95e
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Apr 7 20:58:47 2015 +0200
+
+    implement .rows and make execute use it for its return value
+
+commit 150fc7adc6a429536355ad5616db36e98188f650
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Apr 7 20:04:51 2015 +0200
+
+    fix precedence error in execute that lead to wrong row count
+
+commit bb1acd33e2376315ae8bbc7b313a46884b321efe
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Apr 7 20:02:08 2015 +0200
+
+    fix Oracle statement type fetching
+
+commit 85e95c6f0f60b0b3aff752d597b3db7b82157776
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Apr 7 18:45:10 2015 +0200
+
+    fix Oracle test environment setup statements
+    
+    I haven't figured out how to connect with a case sensitive username.
+    The case-sensitivity of the password is dependent on the database parameter
+    'sec_case_sensitive_logon' which is true by default since Oracle 11g.
+
+commit ff94f173c920be175266b9a2bc249a19f9a8a481
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Apr 7 18:08:21 2015 +0200
+
+    use Pointer instead of OpaquePointer
+
+commit a8b04cb53e69f9e84fad1c3035a05c5b8e32d153
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Apr 7 18:03:26 2015 +0200
+
+    looks like we won't need OCIEnvCreate
+
+commit ef2a215dfdf97120b8e33d04ad472589fdcb34d1
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Apr 7 17:59:05 2015 +0200
+
+    fix Oracle statements with binds
+    
+    OCI requires NULL pointers for array specific bind parameters which prevents
+    the use of the rw trait which doesn't support passing NULL pointers.
+
+commit 22adf1cf8e1e517b3f566a78bc0ce05d9b54c21e
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Apr 7 17:55:41 2015 +0200
+
+    remove constant SQLT_STR as we don't use it
+
+commit 8d281d189e5aa210bb2da4d1b27da63d8067c284
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Apr 7 17:49:04 2015 +0200
+
+    NativeCall now supports unsigned integers
+
+commit cdeb80a57006d2163bc778129347a98e77a70a94
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Apr 7 16:57:13 2015 +0200
+
+    add tests for integer and float only insert bind + execute
+
+commit a6f6bab81926abc1366b439a25a04182ee96f57c
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Sun Mar 29 21:28:22 2015 +0200
+
+    add commit and rollback
+
+commit 53bf31d6536d006c69bc4187febe874a12bae764
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Sun Mar 29 21:27:18 2015 +0200
+
+    rename valuebuf to valuep to match method signature
+
+commit 65267047296e5bb65aea5c6fa31cf945dac6df5c
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Sun Mar 29 21:19:21 2015 +0200
+
+    add AutoCommit support
+
+commit f743b24bcafc28872df3987fbc2f979861a3866a
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Sun Mar 29 19:31:20 2015 +0200
+
+    add Connection::do
+
+commit f3302c06c05bb2301b22fcb0f9cac9a4adc689b7
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Fri Mar 20 14:51:43 2015 +0100
+
+    Str and Int binding works
+
+commit 3c1ee772c60a877eb0e4ff39b517fe0dfbacff02
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Mar 19 12:46:47 2015 +0100
+
+    first try at bind parameter support
+
+commit 8013189ea50185ce06d7f55105d46fd7921c907e
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Mar 18 20:07:14 2015 +0100
+
+    code cleanups
+
+commit 02dd5676265b811b34b3580b83bb49285f11fb1f
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Mar 18 20:05:58 2015 +0100
+
+    switch to UTF-8
+    
+    thanks to mje!
+
+commit e813bab2c31f9ea2bad65da29c7d242dfae36aa2
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Mar 18 20:00:35 2015 +0100
+
+    define and use all OCI datatypes
+
+commit 0a40236c8be118c9b4bb3ede9171ece908934fff
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Wed Mar 18 19:52:39 2015 +0100
+
+    don't end exception messages with a line feed
+
+commit 652630b8e5aefc2fa512d56c4e9df14617d7c608
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Thu Mar 5 12:19:57 2015 +0100
+
+    use Buf.bytes instead of .elems * 2
+    
+    since it was fixed in Rakudo 2015.02
+
+commit b459e7caebf559b1a1da7781f6260722cdbfccfe
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Sat Jan 3 03:57:33 2015 +0100
+
+    fix username case in Oracle XE setup commands
+
+commit d00b2dae1ba8654879cf0f792298318d205e22f7
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Mon Oct 20 10:30:40 2014 +0200
+
+    replace SQL placeholders with OCI named parameters
+
+commit d342c61f9ab199949c385a6151005c7c99957267
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Sun Oct 19 13:26:04 2014 +0200
+
+    [Oracle] implement execution of statements without placeholders
+
+commit dd77e1bf3c9d70a4c1f5bfbf53f3ee1db2dbc808
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Sun Oct 19 13:22:27 2014 +0200
+
+    DBDish::Oracle doesn't allow to pass host and port at the moment
+
+commit 0068890b575021e3bd91d499f050c0fab8bad7f7
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Oct 7 20:09:06 2014 +0200
+
+    determine statement type and pass to StatementHandle
+
+commit 2b22c0d3bc19d14d9bec937074015eafaf19d4b1
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Oct 7 20:03:09 2014 +0200
+
+    fix indention
+
+commit 27167c8f44ba87d4fe1f96178940f3d85d43428f
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Oct 7 20:02:12 2014 +0200
+
+    support non-Linux platforms
+
+commit df2402a19e1efb428a07a9c413ad96749cca23c8
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Oct 7 12:41:50 2014 +0200
+
+    conform to the DBD connect interface
+
+commit 9be20a9dd513821c654e7636c9c86013b70529b6
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Oct 7 11:17:11 2014 +0200
+
+    add Connection::prepare and DBDish::Oracle::StatementHandle
+
+commit bc91b4db6cb8bb300acd69d8f16f6b2164eff892
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Oct 7 11:11:20 2014 +0200
+
+    BUILD should be a submethod, svchp and errhp are required
+
+commit 930b38a52861b9add21b22aff1aab4f2192e7d80
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Oct 7 11:06:44 2014 +0200
+
+    check returncode of error handle allocation
+
+commit edda8a92d3f67b2ede3819348e14592e6cc12298
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Oct 7 11:05:47 2014 +0200
+
+    change get_errortext from connection method to sub
+
+commit 1731d18e1fa8dcf8ff14c3474b9bf41aea56c0d6
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Tue Oct 7 11:03:19 2014 +0200
+
+    comment out OCIEnvCreate for now
+    
+    we use OCIEnvNlsCreate until we need OCIEnvCreate for backcompat
+
+commit 3c3f9331461910070bca8da91bcf629302aa4533
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Mon Oct 6 19:36:40 2014 +0200
+
+    add class DBDish::Oracle::Connection
+
+commit 1ba62e9e711fd0d23e4fbcffb601d0518b77ea45
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Mon Oct 6 19:35:22 2014 +0200
+
+    fix OCILogon2 using workaround for number of bytes
+
+commit 7e66727c7ac1146cb7e24bd9ef24c8e456356c2b
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Mon Oct 6 19:33:26 2014 +0200
+
+    use get_errortext for OCILogon2 error handling
+
+commit 1aa28fefd704e988194d8975be68b949a4c9c26f
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Mon Oct 6 19:31:58 2014 +0200
+
+    add OCIHandleAlloc and allocate error handle
+
+commit a24f6751242eb4c970e311087b6a5378c726c5dd
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Mon Oct 6 19:26:38 2014 +0200
+
+    fix OCIEnvNlsCreate call
+    
+    by not passing usrmempp
+
+commit 4e965acbb89a93ba0da617969cc12603195cb570
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Mon Oct 6 19:25:55 2014 +0200
+
+    fetch envhp after creating it
+
+commit a7f6f3b73b4b46775c1a968e9faf98b4b75e7fd3
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Mon Oct 6 19:20:37 2014 +0200
+
+    wrap OCIErrorGet in more convenient get_errortext method
+
+commit bbfe5063f8a955f96ceabc36414c82c4799beafa
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Mon Oct 6 16:08:58 2014 +0200
+
+    fix OCIErrorGet definition and call
+
+commit e9fa8927ec842c762d6a751f93ed416928d1e9e6
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Mon Oct 6 14:38:16 2014 +0200
+
+    fix Oracle test prerequisites
+
+commit b745556125763bf21172a6852b00c8e299947113
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Mon Oct 6 14:36:23 2014 +0200
+
+    add OCIErrorGet and error handling after OCIEnvNlsCreate
+
+commit f656546d1c1f1a18b1d706712ce5756aa870e893
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Sat Sep 13 18:51:38 2014 +0200
+
+    fix NativeCall error
+
+commit cb1386158b2c5ac290361acb251e1a4ac4d702de
+Author: Alexander Hartmaier <abraxxa@cpan.org>
+Date:   Fri Sep 12 22:44:56 2014 +0200
+
+    first take at Oracle support
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -132,11 +885,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 5dab0802c955f4ee53434b55d760ccc863a163c2
-Author: Simon Ruderich <simon@ruderich.org>
-Date:   Mon Feb 22 23:42:42 2016 +0100
+commit 11ebd2b26ffc84c188e67e97823081a2c159fa82
+Author: Claudio Ramirez <pub.claudio@gmail.com>
+Date:   Thu Feb 25 14:27:53 2016 +0100
 
-    nativecall: add DESTROY to example
+    META6.info -> META6.json
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

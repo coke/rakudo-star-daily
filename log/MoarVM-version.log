@@ -1,7 +1,7 @@
 MoarVM
 2016.02-1-g24b3867
 Rakudo
-2016.02-39-g138441c
+2016.02-59-gbc0070f
 NQP
 2016.02-11-g95c349f
 modules
@@ -14,11 +14,15 @@ Date:   Mon Dec 28 19:43:44 2015 +0100
     Rollback one change that doesn't actually work
 --------
 DBIish
-commit f936ec43179825721471b6d5616e39c7f49da64b
+commit 91d8cb9f97bea4b3b2fc5c0fa9134856944bb6c9
 Author: Salvador Ortiz <sog@msg.com.mx>
-Date:   Fri Feb 26 07:21:37 2016 -0600
+Date:   Sun Feb 28 06:52:07 2016 -0600
 
-    SQLite: Optout typed NULLs
+    Adjust test suite
+    
+    Version test now expect a Version.
+    Remove the explicit test for perl5 '0E0', now test boolean and
+    numeric values.
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -132,11 +136,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit a4dcf9ca0401a3aea2fa9b4481f6ba90c6b25227
+commit 9f71be28526cb2c5cc43ea2755e367cca3350649
 Author: Simon Ruderich <simon@ruderich.org>
-Date:   Fri Feb 26 19:06:58 2016 +0100
+Date:   Sun Feb 28 17:45:37 2016 +0100
 
-    IO::Path: document slurp and spurt methods
+    DateTime: mention "epoch" in .posix
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

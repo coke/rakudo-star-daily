@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.4) (7u95-2.6.4-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.95-b01, mixed mode)
 Rakudo
-2016.02-59-gbc0070f
+2016.02-63-g9dc21a0
 NQP
-2016.02-11-g95c349f
+2016.02-14-gd023883
 modules
 --------
 Bailador
@@ -14,15 +14,22 @@ Date:   Mon Dec 28 19:43:44 2015 +0100
     Rollback one change that doesn't actually work
 --------
 DBIish
-commit 91d8cb9f97bea4b3b2fc5c0fa9134856944bb6c9
+commit 49865237dec0164d88293d5cb586f283fe0bf42c
+Merge: 2baf7aa 6f4452f
 Author: Salvador Ortiz <sog@msg.com.mx>
-Date:   Sun Feb 28 06:52:07 2016 -0600
+Date:   Mon Feb 29 09:27:20 2016 -0600
 
-    Adjust test suite
+    Merge branch 'master' of github.com:perl6/DBIish
     
-    Version test now expect a Version.
-    Remove the explicit test for perl5 '0E0', now test boolean and
-    numeric values.
+    A local change in .travis-yml
+
+commit 6f4452f97a589cd68d59428a001d40bcd2d3d5ce
+Author: Salvador Ortiz <sog@msg.com.mx>
+Date:   Mon Feb 29 06:08:19 2016 -0600
+
+    Make travis-ci do an install
+    
+    For a more complete testing.
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -136,11 +143,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 9f71be28526cb2c5cc43ea2755e367cca3350649
+commit 45447c705ef6171aedccf6eaf1d521ade64452c5
 Author: Simon Ruderich <simon@ruderich.org>
-Date:   Sun Feb 28 17:45:37 2016 +0100
+Date:   Mon Feb 29 12:27:53 2016 +0100
 
-    DateTime: mention "epoch" in .posix
+    Str: split: add splitting the empty string as example
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

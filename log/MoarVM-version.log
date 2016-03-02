@@ -1,9 +1,9 @@
 MoarVM
-2016.02-3-gb41c30d
+2016.02-8-ga329e2d
 Rakudo
-2016.02-70-g609e54a
+2016.02-76-g3176cb1
 NQP
-2016.02-14-gd023883
+2016.02-17-gbe15097
 modules
 --------
 Bailador
@@ -132,11 +132,15 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 45447c705ef6171aedccf6eaf1d521ade64452c5
+commit e9056d02343891290005a75b135bb8c3c7847bc2
 Author: Simon Ruderich <simon@ruderich.org>
-Date:   Mon Feb 29 12:27:53 2016 +0100
+Date:   Tue Mar 1 23:15:37 2016 +0100
 
-    Str: split: add splitting the empty string as example
+    Revert "List: add example to classify to split a list based on condition"
+    
+    This reverts commit 531e97fa509e75fff9920828c45f778ed1df5d72.
+    
+    The proposed solution doesn't work if one result array would be empty.
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

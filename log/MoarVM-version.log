@@ -1,9 +1,9 @@
 MoarVM
 2016.02-8-ga329e2d
 Rakudo
-2016.02-76-g3176cb1
+2016.02-77-g855de77
 NQP
-2016.02-17-gbe15097
+2016.02-18-gd8dab2f
 modules
 --------
 Bailador
@@ -14,11 +14,11 @@ Date:   Mon Dec 28 19:43:44 2015 +0100
     Rollback one change that doesn't actually work
 --------
 DBIish
-commit f979c709664413305bf9db6976ed73aaab572730
+commit e63c135376c86088f17cbb13bce2ccc0ecf2a098
 Author: Salvador Ortiz <sog@msg.com.mx>
-Date:   Mon Feb 29 23:27:16 2016 -0600
+Date:   Thu Mar 3 03:22:35 2016 -0600
 
-    mysql: Better error handling at connect
+    For the happiness of panda's users: v0.1.2
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -132,15 +132,44 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit e9056d02343891290005a75b135bb8c3c7847bc2
-Author: Simon Ruderich <simon@ruderich.org>
-Date:   Tue Mar 1 23:15:37 2016 +0100
+commit 997e03d3d57122c8ef25205163b2d1088f904a21
+Merge: ff3da18 7d40fbf
+Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
+Date:   Thu Mar 3 14:02:35 2016 -0500
 
-    Revert "List: add example to classify to split a list based on condition"
+    Merge pull request #406 from jjatria/regex-missing-adverb
     
-    This reverts commit 531e97fa509e75fff9920828c45f778ed1df5d72.
-    
-    The proposed solution doesn't work if one result array would be empty.
+    Improved consistency and formatting of examples in regex pod
+
+commit 7d40fbf59d7407ee65359df835d2a1d65de43e13
+Author: jjatria <jjatria@gmail.com>
+Date:   Thu Mar 3 18:31:41 2016 +0000
+
+    More consistent use of so instead of Bool in regex examples
+
+commit b8837d2eeaea74029f28aa8acc9d543d26df7243
+Author: jjatria <jjatria@gmail.com>
+Date:   Thu Mar 3 14:26:39 2016 +0000
+
+    Added missing output comment in regex pod
+
+commit b4dec1e126f67ba9873f8112c84bc6079ec6c15f
+Author: jjatria <jjatria@gmail.com>
+Date:   Thu Mar 3 14:24:38 2016 +0000
+
+    More consistent true/false comments in regex pod
+
+commit 3c0da4f83ff4c868804be476cf78ae04efe37aa4
+Author: jjatria <jjatria@gmail.com>
+Date:   Thu Mar 3 14:12:18 2016 +0000
+
+    Removed whitespace warning from regex example
+
+commit 84e80fa4f2782fe05df4df722efdf18f48771566
+Author: jjatria <jjatria@gmail.com>
+Date:   Thu Mar 3 14:11:48 2016 +0000
+
+    Added missing adverb to regex pod
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

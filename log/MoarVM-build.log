@@ -1,6 +1,6 @@
 == Configuring and building Rakudo
 cd rakudo && /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl Configure.pl --prefix="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install" --backends=moar && make
-Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2016.02-17-gbe15097 / MoarVM 2016.02-8-ga329e2d).
+Using /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/nqp-m (version 2016.02-18-gd8dab2f / MoarVM 2016.02-8-ga329e2d).
 Cleaning up ...
 
 You can now use 'make' to build Rakudo.
@@ -49,12 +49,12 @@ gcc  -L/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/instal
 The following step can take a long time, please be patient.
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" perl6.moarvm --setting=NULL --ll-exception --optimize=3 --target=mbc --stagestats --output=CORE.setting.moarvm gen/moar/m-CORE.setting
 Stage start      :   0.000
-Stage parse      :  52.335
+Stage parse      :  52.876
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   7.843
-Stage mast       :  16.287
-Stage mbc        :   0.169
+Stage optimize   :   7.383
+Stage mast       :  16.183
+Stage mbc        :   0.171
 /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar --libpath="/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" perl6.moarvm --target=mbc --ll-exception --output=RESTRICTED.setting.moarvm src/RESTRICTED.setting
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl -MExtUtils::Command -e rm_f perl6-m
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-moar-runner.pl "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/bin/moar" perl6.moarvm perl6-m . "" "/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/nqp/lib" .
@@ -123,7 +123,7 @@ cd modules/panda && /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star
 ==> Testing File::Find
 t/01-file-find.t .. ok
 All tests successful.
-Files=1, Tests=11,  3 wallclock secs ( 0.02 usr  0.00 sys +  2.74 cusr  0.15 csys =  2.91 CPU)
+Files=1, Tests=11,  3 wallclock secs ( 0.03 usr  0.00 sys +  2.75 cusr  0.14 csys =  2.92 CPU)
 Result: PASS
 ==> Installing File::Find
 ==> Successfully installed File::Find
@@ -132,7 +132,7 @@ Result: PASS
 ==> Testing Shell::Command
 t/02-shell-command.t .. ok
 All tests successful.
-Files=1, Tests=16,  3 wallclock secs ( 0.02 usr  0.00 sys +  3.50 cusr  0.19 csys =  3.71 CPU)
+Files=1, Tests=16,  4 wallclock secs ( 0.02 usr  0.01 sys +  3.40 cusr  0.17 csys =  3.60 CPU)
 Result: PASS
 ==> Installing Shell::Command
 ==> Successfully installed Shell::Command
@@ -144,7 +144,7 @@ t/02-structure.t .. ok
 t/03-unicode.t .... ok
 t/04-roundtrip.t .. ok
 All tests successful.
-Files=4, Tests=120,  5 wallclock secs ( 0.04 usr  0.01 sys +  4.35 cusr  0.22 csys =  4.62 CPU)
+Files=4, Tests=120,  5 wallclock secs ( 0.05 usr  0.01 sys +  4.18 cusr  0.27 csys =  4.51 CPU)
 Result: PASS
 ==> Installing JSON::Fast
 ==> Successfully installed JSON::Fast
@@ -155,17 +155,17 @@ t/build-hook.t .. ok
 t/builder.t ..... ok
 t/common.t ...... ok
 t/ecosystem.t ... ok
-Copying lib/bar.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1456949200_4/removeme/lib/bar.pod
-Copying lib/foo.jar to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1456949200_4/removeme/lib/foo.jar
-Copying lib/baz.js to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1456949200_4/removeme/lib/baz.js
-Copying lib/foo.pm to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1456949200_4/removeme/lib/foo.pm
-Copying lib/foo.pir to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1456949200_4/removeme/lib/foo.pir
-Copying lib/foo.moarvm to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1456949200_4/removeme/lib/foo.moarvm
-Copying bin/bar to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1456949200_4/removeme/bin/bar
+Copying lib/bar.pod to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1457035600_4/removeme/lib/bar.pod
+Copying lib/foo.jar to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1457035600_4/removeme/lib/foo.jar
+Copying lib/baz.js to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1457035600_4/removeme/lib/baz.js
+Copying lib/foo.pm to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1457035600_4/removeme/lib/foo.pm
+Copying lib/foo.pir to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1457035600_4/removeme/lib/foo.pir
+Copying lib/foo.moarvm to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1457035600_4/removeme/lib/foo.moarvm
+Copying bin/bar to /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/modules/panda/.panda-work/1457035600_4/removeme/bin/bar
 t/installer.t ... ok
 t/tester.t ...... ok
 All tests successful.
-Files=6, Tests=33, 19 wallclock secs ( 0.04 usr  0.01 sys + 17.80 cusr  0.92 csys = 18.77 CPU)
+Files=6, Tests=33, 19 wallclock secs ( 0.04 usr  0.01 sys + 17.88 cusr  0.96 csys = 18.89 CPU)
 Result: PASS
 ==> Installing panda
 ==> Successfully installed panda
@@ -178,7 +178,7 @@ Result: PASS
 t/escaping.t ... ok
 t/structure.t .. ok
 All tests successful.
-Files=2, Tests=11,  3 wallclock secs ( 0.03 usr  0.00 sys +  2.84 cusr  0.14 csys =  3.01 CPU)
+Files=2, Tests=11,  3 wallclock secs ( 0.03 usr  0.00 sys +  2.92 cusr  0.16 csys =  3.11 CPU)
 Result: PASS
 ==> Installing XML::Writer
 ==> Successfully installed XML::Writer
@@ -188,7 +188,7 @@ Result: PASS
 ==> Testing SVG
 t/basics.t .. ok
 All tests successful.
-Files=1, Tests=3,  3 wallclock secs ( 0.02 usr  0.00 sys +  2.91 cusr  0.16 csys =  3.09 CPU)
+Files=1, Tests=3,  3 wallclock secs ( 0.03 usr  0.00 sys +  2.84 cusr  0.14 csys =  3.01 CPU)
 Result: PASS
 ==> Installing SVG
 ==> Successfully installed SVG
@@ -199,7 +199,7 @@ Result: PASS
 t/series.t .. ok
 t/ticks.t ... ok
 All tests successful.
-Files=2, Tests=10,  6 wallclock secs ( 0.02 usr  0.01 sys +  4.98 cusr  0.24 csys =  5.25 CPU)
+Files=2, Tests=10,  5 wallclock secs ( 0.03 usr  0.00 sys +  4.80 cusr  0.24 csys =  5.07 CPU)
 Result: PASS
 ==> Installing SVG::Plot
 ==> Successfully installed SVG::Plot
@@ -209,7 +209,7 @@ Result: PASS
 ==> Testing Terminal::ANSIColor
 t/00-load.t .. ok
 All tests successful.
-Files=1, Tests=1,  2 wallclock secs ( 0.02 usr  0.00 sys +  2.29 cusr  0.10 csys =  2.41 CPU)
+Files=1, Tests=1,  3 wallclock secs ( 0.02 usr  0.00 sys +  2.30 cusr  0.12 csys =  2.44 CPU)
 Result: PASS
 ==> Installing Terminal::ANSIColor
 ==> Successfully installed Terminal::ANSIColor
@@ -221,7 +221,7 @@ t/returning.t .. ok
 t/synopsis.t ... ok
 t/with.t ....... ok
 All tests successful.
-Files=3, Tests=13,  3 wallclock secs ( 0.02 usr  0.01 sys +  3.13 cusr  0.16 csys =  3.32 CPU)
+Files=3, Tests=13,  4 wallclock secs ( 0.02 usr  0.00 sys +  3.32 cusr  0.16 csys =  3.50 CPU)
 Result: PASS
 ==> Installing Test::Mock
 ==> Successfully installed Test::Mock
@@ -231,7 +231,7 @@ Result: PASS
 ==> Testing Grammar::Profiler::Simple
 t/csv.t .. ok
 All tests successful.
-Files=1, Tests=15,  2 wallclock secs ( 0.03 usr  0.00 sys +  2.26 cusr  0.11 csys =  2.40 CPU)
+Files=1, Tests=15,  3 wallclock secs ( 0.02 usr  0.01 sys +  2.36 cusr  0.10 csys =  2.49 CPU)
 Result: PASS
 ==> Installing Grammar::Profiler::Simple
 ==> Successfully installed Grammar::Profiler::Simple
@@ -242,7 +242,7 @@ Result: PASS
 t/debugger.t .. ok
 t/tracer.t .... ok
 All tests successful.
-Files=2, Tests=2,  5 wallclock secs ( 0.02 usr  0.00 sys +  4.55 cusr  0.22 csys =  4.79 CPU)
+Files=2, Tests=2,  4 wallclock secs ( 0.02 usr  0.01 sys +  4.25 cusr  0.28 csys =  4.56 CPU)
 Result: PASS
 ==> Installing Grammar::Debugger
 ==> Successfully installed Grammar::Debugger
@@ -252,9 +252,9 @@ Result: PASS
 ==> Testing MIME::Base64
 This type does not support elems
   in any  at gen/moar/m-Metamodel.nqp line 1723
-  in method decode at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949320_1/lib/MIME/Base64/Perl.pm6 line 103
-  in method decode-str at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949320_1/lib/MIME/Base64.pm6 line 10
-  in method decode_base64 at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949320_1/lib/MIME/Base64.pm6 line 19
+  in method decode at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035719_1/lib/MIME/Base64/Perl.pm6 line 103
+  in method decode-str at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035719_1/lib/MIME/Base64.pm6 line 10
+  in method decode_base64 at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035719_1/lib/MIME/Base64.pm6 line 19
   in block <unit> at t/basic.t line 14
 
 # Looks like you planned 18 tests, but ran 1
@@ -265,8 +265,8 @@ t/binary-and-long-line.t .. ok
 t/oneline.t ............... ok
 This type does not support elems
   in any  at gen/moar/m-Metamodel.nqp line 1723
-  in method decode at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949320_1/lib/MIME/Base64/Perl.pm6 line 103
-  in method decode-str at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949320_1/lib/MIME/Base64.pm6 line 10
+  in method decode at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035719_1/lib/MIME/Base64/Perl.pm6 line 103
+  in method decode-str at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035719_1/lib/MIME/Base64.pm6 line 10
   in block <unit> at t/rfc4648-test-vector.t line 23
 
 # Looks like you planned 16 tests, but ran 7
@@ -282,7 +282,7 @@ t/basic.t               (Wstat: 65280 Tests: 1 Failed: 0)
 t/rfc4648-test-vector.t (Wstat: 65280 Tests: 7 Failed: 0)
   Non-zero exit status: 255
   Parse errors: Bad plan.  You planned 16 tests but ran 7.
-Files=4, Tests=21,  7 wallclock secs ( 0.02 usr  0.01 sys +  6.54 cusr  0.29 csys =  6.86 CPU)
+Files=4, Tests=21,  7 wallclock secs ( 0.03 usr  0.01 sys +  6.35 cusr  0.32 csys =  6.71 CPU)
 Result: FAIL
 The spawned process exited unsuccessfully (exit code: 1)
   in sub run-and-gather-output at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/sources/DAD29535955E677E319FDF0ACA9A926766180A75 line 85
@@ -303,7 +303,7 @@ t/escape.t ............... ok
 t/november-urlencoded.t .. ok
 t/rfc-3986-examples.t .... ok
 All tests successful.
-Files=4, Tests=93,  9 wallclock secs ( 0.05 usr  0.00 sys +  8.56 cusr  0.44 csys =  9.05 CPU)
+Files=4, Tests=93,  9 wallclock secs ( 0.04 usr  0.01 sys +  8.62 cusr  0.43 csys =  9.10 CPU)
 Result: PASS
 ==> Installing URI
 ==> Successfully installed URI
@@ -314,9 +314,9 @@ Result: PASS
 ==> Testing MIME::Base64
 This type does not support elems
   in any  at gen/moar/m-Metamodel.nqp line 1723
-  in method decode at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949349_1/lib/MIME/Base64/Perl.pm6 line 103
-  in method decode-str at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949349_1/lib/MIME/Base64.pm6 line 10
-  in method decode_base64 at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949349_1/lib/MIME/Base64.pm6 line 19
+  in method decode at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035748_1/lib/MIME/Base64/Perl.pm6 line 103
+  in method decode-str at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035748_1/lib/MIME/Base64.pm6 line 10
+  in method decode_base64 at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035748_1/lib/MIME/Base64.pm6 line 19
   in block <unit> at t/basic.t line 14
 
 # Looks like you planned 18 tests, but ran 1
@@ -327,8 +327,8 @@ t/binary-and-long-line.t .. ok
 t/oneline.t ............... ok
 This type does not support elems
   in any  at gen/moar/m-Metamodel.nqp line 1723
-  in method decode at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949349_1/lib/MIME/Base64/Perl.pm6 line 103
-  in method decode-str at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949349_1/lib/MIME/Base64.pm6 line 10
+  in method decode at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035748_1/lib/MIME/Base64/Perl.pm6 line 103
+  in method decode-str at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035748_1/lib/MIME/Base64.pm6 line 10
   in block <unit> at t/rfc4648-test-vector.t line 23
 
 # Looks like you planned 16 tests, but ran 7
@@ -344,7 +344,7 @@ t/basic.t               (Wstat: 65280 Tests: 1 Failed: 0)
 t/rfc4648-test-vector.t (Wstat: 65280 Tests: 7 Failed: 0)
   Non-zero exit status: 255
   Parse errors: Bad plan.  You planned 16 tests but ran 7.
-Files=4, Tests=21,  7 wallclock secs ( 0.04 usr  0.01 sys +  6.29 cusr  0.34 csys =  6.68 CPU)
+Files=4, Tests=21,  7 wallclock secs ( 0.03 usr  0.00 sys +  6.33 cusr  0.30 csys =  6.66 CPU)
 Result: FAIL
 The spawned process exited unsuccessfully (exit code: 1)
   in sub run-and-gather-output at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/sources/DAD29535955E677E319FDF0ACA9A926766180A75 line 85
@@ -367,7 +367,7 @@ t/03-unicode.t .... ok
 t/04-roundtrip.t .. ok
 t/05-utf16.t ...... ok
 All tests successful.
-Files=5, Tests=122,  5 wallclock secs ( 0.05 usr  0.01 sys +  5.23 cusr  0.36 csys =  5.65 CPU)
+Files=5, Tests=122,  6 wallclock secs ( 0.06 usr  0.00 sys +  5.30 cusr  0.37 csys =  5.73 CPU)
 Result: PASS
 ==> Installing JSON::Tiny
 ==> Successfully installed JSON::Tiny
@@ -379,7 +379,7 @@ t/0-load-module.t .. ok
 t/1-readme.t ....... ok
 t/perl5-compat.t ... ok
 All tests successful.
-Files=3, Tests=28,  7 wallclock secs ( 0.03 usr  0.01 sys +  6.90 cusr  0.23 csys =  7.17 CPU)
+Files=3, Tests=28,  7 wallclock secs ( 0.03 usr  0.01 sys +  6.28 cusr  0.18 csys =  6.50 CPU)
 Result: PASS
 ==> Installing Digest::MD5
 ==> Successfully installed Digest::MD5
@@ -390,7 +390,7 @@ Result: PASS
 t/01-basic.t ..... ok
 t/02-is-tests.t .. ok
 All tests successful.
-Files=2, Tests=46,  3 wallclock secs ( 0.02 usr  0.01 sys +  2.52 cusr  0.16 csys =  2.71 CPU)
+Files=2, Tests=46,  3 wallclock secs ( 0.02 usr  0.00 sys +  2.60 cusr  0.18 csys =  2.80 CPU)
 Result: PASS
 ==> Installing HTTP::Status
 ==> Successfully installed HTTP::Status
@@ -408,7 +408,7 @@ t/50-readme.t ...... ok
 t/91-specs.t ....... ok
 t/92-specs-file.t .. ok
 All tests successful.
-Files=8, Tests=27,  8 wallclock secs ( 0.05 usr  0.01 sys +  8.32 cusr  0.34 csys =  8.72 CPU)
+Files=8, Tests=27,  8 wallclock secs ( 0.04 usr  0.02 sys +  8.33 cusr  0.38 csys =  8.77 CPU)
 Result: PASS
 ==> Installing Template::Mustache
 ==> Successfully installed Template::Mustache
@@ -419,7 +419,7 @@ Result: PASS
 t/encode-psgi-response.t .. ok
 t/populate-psgi-env.t ..... ok
 All tests successful.
-Files=2, Tests=28,  3 wallclock secs ( 0.03 usr  0.00 sys +  3.40 cusr  0.18 csys =  3.61 CPU)
+Files=2, Tests=28,  3 wallclock secs ( 0.03 usr  0.00 sys +  3.33 cusr  0.21 csys =  3.57 CPU)
 Result: PASS
 ==> Installing PSGI
 ==> Successfully installed PSGI
@@ -429,7 +429,7 @@ Result: PASS
 ==> Testing HTTP::Easy
 t/01-load.t .. ok
 All tests successful.
-Files=1, Tests=2,  5 wallclock secs ( 0.02 usr  0.00 sys +  4.40 cusr  0.26 csys =  4.68 CPU)
+Files=1, Tests=2,  5 wallclock secs ( 0.02 usr  0.00 sys +  4.41 cusr  0.28 csys =  4.71 CPU)
 Result: PASS
 ==> Installing HTTP::Easy
 ==> Successfully installed HTTP::Easy
@@ -438,16 +438,16 @@ Result: PASS
 Please remove leading 'v' from perl version in Template::Mojo's meta info.
 ==> Building Template::Mojo
 ==> Testing Template::Mojo
-WARNINGS for /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949422_1/EVAL_7:
+WARNINGS for /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035821_1/EVAL_7:
 Useless use of constant string "blarg" in sink context (line 1)
-WARNINGS for /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949422_1/EVAL_13:
+WARNINGS for /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035821_1/EVAL_13:
 Useless use of constant integer 0 in sink context (line 1)
 t/00-basic.t ..... ok
 t/01-template.t .. ok
 t/02-complex.t ... ok
 t/03-capture.t ... ok
 All tests successful.
-Files=4, Tests=22,  4 wallclock secs ( 0.04 usr  0.00 sys +  4.37 cusr  0.24 csys =  4.65 CPU)
+Files=4, Tests=22,  4 wallclock secs ( 0.03 usr  0.00 sys +  4.22 cusr  0.23 csys =  4.48 CPU)
 Result: PASS
 ==> Installing Template::Mojo
 ==> Successfully installed Template::Mojo
@@ -463,7 +463,7 @@ t/05-post-content.t ........ ok
 t/06-cookies.t ............. ok
 t/07-errors.t .............. ok
 All tests successful.
-Files=7, Tests=551, 27 wallclock secs ( 0.13 usr  0.04 sys + 25.68 cusr  1.28 csys = 27.13 CPU)
+Files=7, Tests=551, 28 wallclock secs ( 0.15 usr  0.01 sys + 26.30 cusr  1.17 csys = 27.63 CPU)
 Result: PASS
 ==> Installing Bailador
 ==> Successfully installed Bailador
@@ -478,28 +478,34 @@ t/01-hash.t ... ok
 t/02-obj.t .... ok
 t/03-array.t .. ok
 All tests successful.
-Files=4, Tests=4,  5 wallclock secs ( 0.03 usr  0.00 sys +  4.26 cusr  0.20 csys =  4.49 CPU)
+Files=4, Tests=4,  4 wallclock secs ( 0.03 usr  0.00 sys +  3.97 cusr  0.20 csys =  4.20 CPU)
 Result: PASS
 ==> Installing Data::Dump
 ==> Successfully installed Data::Dump
 ==> Fetching DBIish
 ==> Building DBIish
 ==> Testing DBIish
+t/01-Basic.t .............. ok
 t/05-mock.t ............... ok
-# Connect failed with error DBD::mysql connection failed: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+DBIish::install_driver is DEPRECATED, please use install-driver  in block <unit> at t/10-mysql.t line 67
+# Connect failed with error DBDish::mysql: Can't connect: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
 t/10-mysql.t .............. ok
-# Connect failed with error DBD::mysql connection failed: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+# DBDish::mysql: Can't connect: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+# Can't continue.
 t/25-mysql-common.t ....... ok
 t/30-pg.t ................. ok
-# Connect failed with error FATAL:  Peer authentication failed for user "postgres"
-
+# DBDish::Pg: Can't connect: FATAL:  Peer authentication failed for user "postgres"
+#  (1)
+# Can't continue.
 t/35-pg-common.t .......... ok
 t/40-sqlite-common.t ...... ok
+# DBDish::SQLite: Error: UNIQUE constraint failed: with_unique.a, with_unique.b (SQLITE_CONSTRAINT)
 t/41-sqlite-exec-error.t .. ok
-# Connect failed with error Cannot locate native library 'libclntsh.so.12.1': libclntsh.so.12.1: cannot open shared object file: No such file or directory
+# DBIish: DBDish::Oracle needs 'libclntsh.so.12.1', not found
+# Can't continue.
 t/45-oracle-common.t ...... ok
 All tests successful.
-Files=8, Tests=397, 45 wallclock secs ( 0.10 usr  0.00 sys + 43.48 cusr  2.04 csys = 45.62 CPU)
+Files=9, Tests=448, 53 wallclock secs ( 0.09 usr  0.01 sys + 49.96 cusr  2.20 csys = 52.26 CPU)
 Result: PASS
 ==> Installing DBIish
 ==> Successfully installed DBIish
@@ -512,9 +518,9 @@ URI provides the requested URI::Escape
 ==> Testing MIME::Base64
 This type does not support elems
   in any  at gen/moar/m-Metamodel.nqp line 1723
-  in method decode at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949592_1/lib/MIME/Base64/Perl.pm6 line 103
-  in method decode-str at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949592_1/lib/MIME/Base64.pm6 line 10
-  in method decode_base64 at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949592_1/lib/MIME/Base64.pm6 line 19
+  in method decode at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035999_1/lib/MIME/Base64/Perl.pm6 line 103
+  in method decode-str at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035999_1/lib/MIME/Base64.pm6 line 10
+  in method decode_base64 at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035999_1/lib/MIME/Base64.pm6 line 19
   in block <unit> at t/basic.t line 14
 
 # Looks like you planned 18 tests, but ran 1
@@ -525,8 +531,8 @@ t/binary-and-long-line.t .. ok
 t/oneline.t ............... ok
 This type does not support elems
   in any  at gen/moar/m-Metamodel.nqp line 1723
-  in method decode at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949592_1/lib/MIME/Base64/Perl.pm6 line 103
-  in method decode-str at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949592_1/lib/MIME/Base64.pm6 line 10
+  in method decode at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035999_1/lib/MIME/Base64/Perl.pm6 line 103
+  in method decode-str at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457035999_1/lib/MIME/Base64.pm6 line 10
   in block <unit> at t/rfc4648-test-vector.t line 23
 
 # Looks like you planned 16 tests, but ran 7
@@ -542,7 +548,7 @@ t/basic.t               (Wstat: 65280 Tests: 1 Failed: 0)
 t/rfc4648-test-vector.t (Wstat: 65280 Tests: 7 Failed: 0)
   Non-zero exit status: 255
   Parse errors: Bad plan.  You planned 16 tests but ran 7.
-Files=4, Tests=21,  6 wallclock secs ( 0.04 usr  0.00 sys +  6.00 cusr  0.28 csys =  6.32 CPU)
+Files=4, Tests=21,  6 wallclock secs ( 0.04 usr  0.00 sys +  6.14 cusr  0.28 csys =  6.46 CPU)
 Result: FAIL
 The spawned process exited unsuccessfully (exit code: 1)
   in sub run-and-gather-output at /home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/sources/DAD29535955E677E319FDF0ACA9A926766180A75 line 85
@@ -565,7 +571,7 @@ t/03-comment.t ........... ok
 t/04-lists.t ............. ok
 t/05-zero-width-index.t .. ok
 All tests successful.
-Files=5, Tests=10,  8 wallclock secs ( 0.03 usr  0.00 sys +  7.51 cusr  0.34 csys =  7.88 CPU)
+Files=5, Tests=10,  7 wallclock secs ( 0.04 usr  0.00 sys +  7.31 cusr  0.41 csys =  7.76 CPU)
 Result: PASS
 ==> Installing Pod::To::HTML
 ==> Successfully installed Pod::To::HTML
@@ -575,7 +581,7 @@ Result: PASS
 ==> Testing File::Directory::Tree
 t/basic.t .. ok
 All tests successful.
-Files=1, Tests=7,  2 wallclock secs ( 0.02 usr  0.00 sys +  2.16 cusr  0.13 csys =  2.31 CPU)
+Files=1, Tests=7,  3 wallclock secs ( 0.03 usr  0.00 sys +  2.16 cusr  0.16 csys =  2.35 CPU)
 Result: PASS
 ==> Installing File::Directory::Tree
 ==> Successfully installed File::Directory::Tree
@@ -586,7 +592,7 @@ Result: PASS
 t/stress_gc.t .. ok
 t/tempfile.t ... ok
 All tests successful.
-Files=2, Tests=16,  5 wallclock secs ( 0.03 usr  0.00 sys +  5.22 cusr  0.20 csys =  5.45 CPU)
+Files=2, Tests=16,  6 wallclock secs ( 0.03 usr  0.00 sys +  5.84 cusr  0.25 csys =  6.12 CPU)
 Result: PASS
 ==> Installing File::Temp
 ==> Successfully installed File::Temp
@@ -866,7 +872,7 @@ t/pod-convenience.t .. ok
 t/pod-htmlify.t ...... ok
 t/typegraph.t ........ ok
 All tests successful.
-Files=3, Tests=22, 10 wallclock secs ( 0.03 usr  0.00 sys +  9.23 cusr  0.57 csys =  9.83 CPU)
+Files=3, Tests=22, 10 wallclock secs ( 0.04 usr  0.01 sys +  9.15 cusr  0.60 csys =  9.80 CPU)
 Result: PASS
 ==> Installing p6doc
 ==> Successfully installed p6doc
@@ -882,7 +888,7 @@ Result: PASS
 ==> Testing LibraryMake
 t/01-basic.t .. ok
 All tests successful.
-Files=1, Tests=7,  4 wallclock secs ( 0.03 usr  0.00 sys +  3.80 cusr  0.22 csys =  4.05 CPU)
+Files=1, Tests=7,  4 wallclock secs ( 0.03 usr  0.00 sys +  3.89 cusr  0.20 csys =  4.12 CPU)
 Result: PASS
 ==> Installing LibraryMake
 ==> Successfully installed LibraryMake
@@ -895,7 +901,7 @@ Result: PASS
 ==> Successfully installed Native::Resources
 ==> Fetching Linenoise
 ==> Building Linenoise
-make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949682_2'
+make[1]: Entering directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457036090_2'
 gcc -c -fPIC -Wdeclaration-after-statement -Werror=declaration-after-statement -O3 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC -o linenoise.o linenoise.c
 perl6 -e "mkdir 'resources'; mkdir 'resources/lib'"
 gcc -shared -fPIC  -O3 -DNDEBUG -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/lib -Wl,-rpath,/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/install/share/perl6/site/lib -lm -lpthread -lrt -ldl -o resources/lib/liblinenoise.so linenoise.o
@@ -903,7 +909,7 @@ perl6 -e "print ''" > resources/lib/liblinenoise.dll
 perl6 -e "print ''" > resources/lib/liblinenoise.dylib
 gcc -o constant-helper -Wdeclaration-after-statement -Werror=declaration-after-statement -O3 -DNDEBUG  -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fPIC constant-helper.c
 perl6 fill-constants.pl < lib/Linenoise.pm.in > lib/Linenoise.pm
-make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1456949682_2'
+make[1]: Leaving directory '/home/coke/sandbox/rakudo-star-daily/star-MoarVM/rakudo-star-daily/.panda-work/1457036090_2'
 ==> Testing Linenoise
 ==> Installing Linenoise
 ==> Successfully installed Linenoise

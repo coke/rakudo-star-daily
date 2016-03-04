@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.6.4) (7u95-2.6.4-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.95-b01, mixed mode)
 Rakudo
-2016.02-77-g855de77
+2016.02-79-g7bdebae
 NQP
 2016.02-18-gd8dab2f
 modules
@@ -132,44 +132,20 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 997e03d3d57122c8ef25205163b2d1088f904a21
-Merge: ff3da18 7d40fbf
-Author: Zoffix Znet <zoffixznet@users.noreply.github.com>
-Date:   Thu Mar 3 14:02:35 2016 -0500
+commit 9d5c0c7d821341331ce4e6819a6a8cd71e34faa0
+Merge: e0099d0 fb32bd0
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Fri Mar 4 15:14:20 2016 +0200
 
-    Merge pull request #406 from jjatria/regex-missing-adverb
+    Merge pull request #410 from azawawi/master
     
-    Improved consistency and formatting of examples in regex pod
+    Fix #407 again with less duplication
 
-commit 7d40fbf59d7407ee65359df835d2a1d65de43e13
-Author: jjatria <jjatria@gmail.com>
-Date:   Thu Mar 3 18:31:41 2016 +0000
+commit fb32bd0062a22cb28daf4acb956f40898d1f722a
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Fri Mar 4 14:38:14 2016 +0200
 
-    More consistent use of so instead of Bool in regex examples
-
-commit b8837d2eeaea74029f28aa8acc9d543d26df7243
-Author: jjatria <jjatria@gmail.com>
-Date:   Thu Mar 3 14:26:39 2016 +0000
-
-    Added missing output comment in regex pod
-
-commit b4dec1e126f67ba9873f8112c84bc6079ec6c15f
-Author: jjatria <jjatria@gmail.com>
-Date:   Thu Mar 3 14:24:38 2016 +0000
-
-    More consistent true/false comments in regex pod
-
-commit 3c0da4f83ff4c868804be476cf78ae04efe37aa4
-Author: jjatria <jjatria@gmail.com>
-Date:   Thu Mar 3 14:12:18 2016 +0000
-
-    Removed whitespace warning from regex example
-
-commit 84e80fa4f2782fe05df4df722efdf18f48771566
-Author: jjatria <jjatria@gmail.com>
-Date:   Thu Mar 3 14:11:48 2016 +0000
-
-    Added missing adverb to regex pod
+    Fix #407 again with less duplication
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -234,20 +210,11 @@ Date:   Tue Jan 26 21:59:38 2016 +0100
     panda complains about it
 --------
 jsonrpc
-commit 2aaf5bf096ca5b40c59d49972ccaf5b8b988665e
-Merge: 8fe75ac 9b29320
-Author: Pawel Pabian <bbkr@post.pl>
-Date:   Sat Dec 5 22:14:28 2015 +0100
+commit d75c3a7aca326b590b3ad737f5714e8b510ea455
+Author: Pawel bbkr Pabian <bbkr@post.pl>
+Date:   Fri Mar 4 00:51:33 2016 +0100
 
-    Merge pull request #24 from zoffixznet/fix-inc
-    
-    Fix removed @*INC
-
-commit 9b29320a9fa8749c95469cf8f6ccff56d3e32924
-Author: Zoffix Znet <cpan@zoffix.com>
-Date:   Fri Dec 4 18:49:06 2015 -0500
-
-    Fix removed @*INC
+    fix unique ID - https://github.com/bbkr/jsonrpc/issues/26
 --------
 library-make
 commit 8ab4b23a981ebfd63a74c11d1398750a472195aa

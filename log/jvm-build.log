@@ -42,12 +42,12 @@ java -Xss1m -Xms500m -Xmx2000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-sta
 The following step can take a long time, please be patient.
 java -Xss1m -Xms500m -Xmx2000m -Xbootclasspath/a:.:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar:rakudo-runtime.jar:perl6.jar -cp /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib perl6 --setting=NULL --ll-exception --optimize=3 --target=jar --stagestats --output=CORE.setting.jar gen/jvm/CORE.setting
 Stage start      :   0.000
-Stage parse      : 102.653
+Stage parse      : 104.059
 Stage syntaxcheck:   0.000
 Stage ast        :   0.001
-Stage optimize   :  11.620
-Stage jast       :  36.560
-Stage classfile  :   2.803
+Stage optimize   :  12.678
+Stage jast       :  40.746
+Stage classfile  :   3.210
 Stage jar        :   0.000
 /home/coke/perl5/perlbrew/perls/perl-5.20.1/bin/perl tools/build/create-jvm-runner.pl dev . . /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install /home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/asm-tree-4.1.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jline-1.0.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/jna.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/runtime/nqp-runtime.jar:/home/coke/sandbox/rakudo-star-daily/star-jvm/rakudo-star-daily/install/share/nqp/lib/nqp.jar
 Creating './perl6-j'
@@ -211,15 +211,15 @@ Cannot unbox a type object
   in <mainline> (gen/jvm/main.nqp:33)
   in  (gen/jvm/main.nqp)
 
-  in throw (gen/jvm/CORE.setting:20317)
+  in throw (gen/jvm/CORE.setting:20432)
   in die (gen/jvm/CORE.setting:736)
   in die (gen/jvm/CORE.setting:725)
-  in precompile (gen/jvm/CORE.setting:34891)
-  in try-load (gen/jvm/CORE.setting:34761)
-  in  (gen/jvm/CORE.setting:35466)
-  in need (gen/jvm/CORE.setting:35459)
-  in need (gen/jvm/CORE.setting:35479)
-  in need (gen/jvm/CORE.setting:35479)
+  in precompile (gen/jvm/CORE.setting:35006)
+  in try-load (gen/jvm/CORE.setting:34876)
+  in  (gen/jvm/CORE.setting:35581)
+  in need (gen/jvm/CORE.setting:35574)
+  in need (gen/jvm/CORE.setting:35594)
+  in need (gen/jvm/CORE.setting:35594)
   in load_module (src/Perl6/World.nqp:981)
   in do_pragma_or_load_module (src/Perl6/World.nqp:912)
   in statement_control:sym<use> (src/Perl6/Grammar.nqp:1537)
@@ -257,16 +257,16 @@ Cannot unbox a type object
   in <mainline> (gen/jvm/main.nqp:33)
   in  (gen/jvm/main.nqp)
 
-  in throw (gen/jvm/CORE.setting:20317)
+  in throw (gen/jvm/CORE.setting:20432)
   in die (gen/jvm/CORE.setting:736)
   in die (gen/jvm/CORE.setting:725)
-  in precompile (gen/jvm/CORE.setting:34891)
-  in try-load (gen/jvm/CORE.setting:34761)
-  in  (gen/jvm/CORE.setting:35466)
-  in need (gen/jvm/CORE.setting:35459)
-  in need (gen/jvm/CORE.setting:35479)
-  in need (gen/jvm/CORE.setting:35479)
-  in need (gen/jvm/CORE.setting:35479)
+  in precompile (gen/jvm/CORE.setting:35006)
+  in try-load (gen/jvm/CORE.setting:34876)
+  in  (gen/jvm/CORE.setting:35581)
+  in need (gen/jvm/CORE.setting:35574)
+  in need (gen/jvm/CORE.setting:35594)
+  in need (gen/jvm/CORE.setting:35594)
+  in need (gen/jvm/CORE.setting:35594)
   in load_module (src/Perl6/World.nqp:981)
   in do_pragma_or_load_module (src/Perl6/World.nqp:912)
   in statement_control:sym<use> (src/Perl6/Grammar.nqp:1537)
@@ -291,16 +291,16 @@ Cannot unbox a type object
   in <mainline> (gen/jvm/main.nqp:33)
   in  (gen/jvm/main.nqp)
 
-  in throw (gen/jvm/CORE.setting:20317)
+  in throw (gen/jvm/CORE.setting:20432)
   in die (gen/jvm/CORE.setting:736)
   in die (gen/jvm/CORE.setting:725)
-  in precompile (gen/jvm/CORE.setting:34891)
-  in try-load (gen/jvm/CORE.setting:34761)
-  in  (gen/jvm/CORE.setting:35466)
-  in need (gen/jvm/CORE.setting:35459)
-  in need (gen/jvm/CORE.setting:35479)
-  in need (gen/jvm/CORE.setting:35479)
-  in need (gen/jvm/CORE.setting:35479)
+  in precompile (gen/jvm/CORE.setting:35006)
+  in try-load (gen/jvm/CORE.setting:34876)
+  in  (gen/jvm/CORE.setting:35581)
+  in need (gen/jvm/CORE.setting:35574)
+  in need (gen/jvm/CORE.setting:35594)
+  in need (gen/jvm/CORE.setting:35594)
+  in need (gen/jvm/CORE.setting:35594)
   in load_module (src/Perl6/World.nqp:981)
   in do_pragma_or_load_module (src/Perl6/World.nqp:912)
   in statement_control:sym<use> (src/Perl6/Grammar.nqp:1537)

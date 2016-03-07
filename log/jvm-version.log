@@ -1,7 +1,7 @@
 OpenJDK Runtime Environment (IcedTea 2.6.4) (7u95-2.6.4-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.95-b01, mixed mode)
 Rakudo
-2016.02-86-g0ad8b36
+2016.02-100-g4a0ba74
 NQP
 2016.02-18-gd8dab2f
 modules
@@ -14,11 +14,11 @@ Date:   Mon Dec 28 19:43:44 2015 +0100
     Rollback one change that doesn't actually work
 --------
 DBIish
-commit e63c135376c86088f17cbb13bce2ccc0ecf2a098
+commit 17b9fd318f1c8137330a87a3c29c7a819155c321
 Author: Salvador Ortiz <sog@msg.com.mx>
-Date:   Thu Mar 3 03:22:35 2016 -0600
+Date:   Mon Mar 7 07:52:45 2016 -0600
 
-    For the happiness of panda's users: v0.1.2
+    Pg: Example of object constructor from a $sth.row
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -58,11 +58,20 @@ Date:   Wed Dec 2 10:51:33 2015 -0800
     META.info -> META6.json, added .travis.yml from hiroraba.
 --------
 Perl6-MIME-Base64
-commit bd197ed16935de3a264726a8669055c945515390
-Author: Justin DeVuyst <justin@devuyst.com>
-Date:   Thu Dec 24 02:55:01 2015 +0100
+commit 908be4eb73d77b6c1fae20815836371f5028fcd3
+Merge: bd197ed 4316dbc
+Author: Jonathan Stowe <jns@gellyfish.co.uk>
+Date:   Sun Mar 6 09:07:04 2016 +0000
 
-    Adjust to pack being made experimental.
+    Merge pull request #9 from ronaldxs/master
+    
+    Workaround for issue #8
+
+commit 4316dbc86aa6003fc71b6db44b8b16ab9cff26c3
+Author: Ronald Schmidt <ronaldxs@software-path.com>
+Date:   Sat Mar 5 22:32:57 2016 -0500
+
+    workaround for my @a; Buf.new(@a) problem with creating Bufs from empty arrays
 --------
 Pod-To-HTML
 commit fcf7d00edb03fbdf12d6d28ab13780ff41ab1a66
@@ -132,11 +141,20 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 6f0c1182e3882ea895d23f74581a78d63f7464d2
-Author: Elizabeth Mattijsen <liz@dijkmat.nl>
-Date:   Sat Mar 5 18:39:08 2016 +0100
+commit 1fd720cab1ee164f1dfa4d84fdba3d92187d012d
+Merge: ecba519 c2e3e18
+Author: sylvarant <adriaan.larmuseau@gmail.com>
+Date:   Sun Mar 6 15:29:31 2016 +0100
 
-    Make 5to6 docs for @INC/%INC slightly better
+    Merge pull request #415 from jjatria/fix-nutshell-headers
+    
+    Fix markup in nutshell headers
+
+commit c2e3e187f1f517651905a18c4460f94fe22a0466
+Author: jjatria <jjatria@gmail.com>
+Date:   Sun Mar 6 13:06:04 2016 +0000
+
+    Fix markup in nutshell headers
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -215,11 +233,11 @@ Date:   Fri Dec 11 20:09:16 2015 -0500
     Update docs for %?RESOURCES
 --------
 p6-File-Temp
-commit be3c5622d5104cda89cda5607e91e5f7ded7f718
+commit 3365d14a9fc2a4ef7eddc361fb1501105c64f750
 Author: Jonathan Scott Duff <duff@pobox.com>
-Date:   Thu Jan 7 22:35:05 2016 -0600
+Date:   Sun Mar 6 01:07:33 2016 -0600
 
-    update author with email address
+    finish the sentence at the end of the README
 --------
 p6-Template-Mustache
 commit 223a8fb24732a7869279de3a42b465407644fe8e

@@ -1,17 +1,26 @@
 OpenJDK Runtime Environment (IcedTea 2.6.4) (7u95-2.6.4-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.95-b01, mixed mode)
 Rakudo
-2016.02-107-g693be1d
+2016.02-120-g04c46cc
 NQP
-2016.02-37-gd257c27
+2016.02-41-gfcdb29f
 modules
 --------
 Bailador
-commit 840278082d9fb5dfee2193a65bf6dfdcb9c03e59
-Author: Tadeusz “tadzik” Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Mon Dec 28 19:43:44 2015 +0100
+commit a471c8efaaf0f39f1a3d6e315605842322f39abf
+Merge: 8402780 a6b168e
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Thu Mar 10 10:08:17 2016 +0100
 
-    Rollback one change that doesn't actually work
+    Merge pull request #46 from garu/garu/travis-on-stable-version
+    
+    travis: testing only on stable and latest perl 6 releases
+
+commit a6b168ea9bb8abf1d432cf754c11bd0ed31c6921
+Author: Breno G. de Oliveira <garu@cpan.org>
+Date:   Wed Mar 9 20:47:57 2016 -0300
+
+    travis: testing only on stable and latest perl 6 releases
 --------
 DBIish
 commit 17b9fd318f1c8137330a87a3c29c7a819155c321
@@ -224,11 +233,11 @@ Date:   Fri Dec 11 20:09:16 2015 -0500
     Update docs for %?RESOURCES
 --------
 p6-File-Temp
-commit 3365d14a9fc2a4ef7eddc361fb1501105c64f750
+commit ef3187b162308d9b628526acead79da3a478b90c
 Author: Jonathan Scott Duff <duff@pobox.com>
-Date:   Sun Mar 6 01:07:33 2016 -0600
+Date:   Thu Mar 10 10:42:26 2016 -0600
 
-    finish the sentence at the end of the README
+    Set directory permissions upon creation
 --------
 p6-Template-Mustache
 commit 223a8fb24732a7869279de3a42b465407644fe8e
@@ -248,27 +257,38 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit 5f3781ddc07192d4ad74fab7e14ef1d72c4edc7d
-Merge: e1f169d 899dbdf
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Mon Feb 22 15:48:34 2016 +0100
+commit b5f6440dab523f9eab589846571e5b42c7736607
+Merge: 5f3781d b55b492
+Author: lizmat <liz@dijkmat.nl>
+Date:   Wed Mar 9 22:08:00 2016 +0100
 
-    Merge commit '899dbdf5c64b3fadadea28409674bb6d78977d09'
-
-commit 899dbdf5c64b3fadadea28409674bb6d78977d09
-Author: Stefan Seifert <nine@detonation.org>
-Date:   Mon Feb 22 15:48:34 2016 +0100
-
-    Squashed 'ext/JSON__Fast/' changes from 8ad8c77..6d96209
+    Merge pull request #296 from dwarring/patch-reporter
     
-    6d96209 Merge pull request #11 from moritz/meta
-    acb56ba Remove the leading "v" in the version
-    c76eb61 remove leading v in perl version definition in meta info
-    b177612 Merge pull request #10 from zoffixznet/docs
-    fb90aaf Document exported subs
+    send smoke reports JSON as strict utf-8
+
+commit b55b492758b7c2a5afaf245c92d4feab1a908694
+Author: David Warring <david.warring@gmail.com>
+Date:   Thu Mar 10 09:55:14 2016 +1300
+
+    send smoke reports JSON as strict
+    utf-8
     
-    git-subtree-dir: ext/JSON__Fast
-    git-subtree-split: 6d9620956d1606441ad32bb23193d997772c615a
+    This fixes the current breakage of Compress::Zlib::Raw and downstream
+    modules:
+    
+    ```
+    PANDA_SUBMIT_TESTREPORTS=1 perl6 -I ../panda/lib/ ../panda/bin/panda --force --notests install Compress::Zlib::Raw
+    ==> Fetching Compress::Zlib::Raw
+    ==> Building Compress::Zlib::Raw
+    Found system zlib library.
+    ==> Installing Compress::Zlib::Raw
+    Potential difficulties:
+        In 'deflateBound' routine declaration - Not an accepted NativeCall type for parameter [2]  : int
+         --> For Numerical type, use the appropriate int32/int64/num64...
+        at /home/david/git/rakudo/install/share/perl6/site/sources/FE992CD05870773DBDC05495667F45237164C142:155
+        ------> ong is native(&find-lib) is export { * }⏏<EOL>
+    ... # etc
+    ==> Test report submitted as: http://testers.perl6.org/reports/invalid character encountered while parsing JSON string, at character offset 13827 (before "\x{1b}[32mong is nat...") at /home/testers.perl6.org/FlightRecorder/bin/app.pl line 14..html
 --------
 perl6-digest-md5
 commit 41dc67c08d417cf395939a2a546829ff1fe30a81
@@ -328,20 +348,36 @@ Date:   Thu Dec 24 09:44:36 2015 +0100
     Replace "as Int" with proper coercion type to fix build
 --------
 shell-command
-commit 1a7eafc57991f5d4574d1731f93394a7fabb967d
-Merge: 8a6381c 54e98c2
-Author: lizmat <liz@dijkmat.nl>
-Date:   Thu Dec 24 08:50:53 2015 +0100
+commit 2aeb2c38bb2be79d1f5a8269e11ddb4a50bc858c
+Merge: 1a7eafc 8160e17
+Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
+Date:   Thu Mar 10 10:22:38 2016 +0100
 
-    Merge pull request #8 from LLFourn/master
+    Merge pull request #10 from azawawi/master
     
-    'as' is no longer a thing :\
+    Shell::Command Windows fixes and testing/documentation updates
 
-commit 54e98c2b7636e792a0a5527e0102ddd7485a5acb
-Author: LLFourn <lloyd.fourn@gmail.com>
-Date:   Thu Dec 24 13:07:53 2015 +1100
+commit 8160e172eb18f80cd29e9b9c8d212e131e51b53e
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Sat Mar 5 12:51:08 2016 +0200
 
-    'as' is no longer a thing :\
+    Fix testing for windows
+
+commit 823c88cd411216f279be622602e8cd1650b3b575
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Sat Mar 5 12:38:30 2016 +0200
+
+    Remove old README
+
+commit afc6ffaa1570f4165970fe9d5bd9ac07305eea7b
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Sat Mar 5 12:30:48 2016 +0200
+
+    - Use File::Which for a true cross platform which. This will fix windows-bas
+    - use lib 'lib' in tests
+    - Add a proper README.md
+    - Add AppVeyor build support
+    - Ignore precompiled files
 --------
 svg
 commit 26edc3bd93e3532163b9f2424ca9058c7bb946a5

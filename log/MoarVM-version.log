@@ -1,9 +1,9 @@
 MoarVM
-2016.02-22-g8ee9b92
+2016.02-25-gada3752
 Rakudo
-2016.02-120-g04c46cc
+2016.02-132-g41d0007
 NQP
-2016.02-41-gfcdb29f
+2016.02-46-g9b10c93
 modules
 --------
 Bailador
@@ -150,11 +150,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit f608482aa453fe3de46a4a8319276c5079d9617a
-Author: Aleks-Daniel Jakimenko-Aleksejev <alex.jakimenko@gmail.com>
-Date:   Wed Mar 9 16:13:45 2016 +0200
+commit 3b5bd2271801026d04593af421f73a32b9527001
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Fri Mar 11 18:29:41 2016 +0100
 
-    Correct link to compile-time variables. This fixes #417
+    Document the can-ok() test function
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -257,38 +257,11 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit b5f6440dab523f9eab589846571e5b42c7736607
-Merge: 5f3781d b55b492
-Author: lizmat <liz@dijkmat.nl>
-Date:   Wed Mar 9 22:08:00 2016 +0100
+commit f675d811606479fa85a7d2d6210419b5c13efda9
+Author: Paul Cochrane <paul@liekut.de>
+Date:   Fri Mar 11 15:00:44 2016 +0100
 
-    Merge pull request #296 from dwarring/patch-reporter
-    
-    send smoke reports JSON as strict utf-8
-
-commit b55b492758b7c2a5afaf245c92d4feab1a908694
-Author: David Warring <david.warring@gmail.com>
-Date:   Thu Mar 10 09:55:14 2016 +1300
-
-    send smoke reports JSON as strict
-    utf-8
-    
-    This fixes the current breakage of Compress::Zlib::Raw and downstream
-    modules:
-    
-    ```
-    PANDA_SUBMIT_TESTREPORTS=1 perl6 -I ../panda/lib/ ../panda/bin/panda --force --notests install Compress::Zlib::Raw
-    ==> Fetching Compress::Zlib::Raw
-    ==> Building Compress::Zlib::Raw
-    Found system zlib library.
-    ==> Installing Compress::Zlib::Raw
-    Potential difficulties:
-        In 'deflateBound' routine declaration - Not an accepted NativeCall type for parameter [2]  : int
-         --> For Numerical type, use the appropriate int32/int64/num64...
-        at /home/david/git/rakudo/install/share/perl6/site/sources/FE992CD05870773DBDC05495667F45237164C142:155
-        ------> ong is native(&find-lib) is export { * }⏏<EOL>
-    ... # etc
-    ==> Test report submitted as: http://testers.perl6.org/reports/invalid character encountered while parsing JSON string, at character offset 13827 (before "\x{1b}[32mong is nat...") at /home/testers.perl6.org/FlightRecorder/bin/app.pl line 14..html
+    Add and document a --help option
 --------
 perl6-digest-md5
 commit 41dc67c08d417cf395939a2a546829ff1fe30a81

@@ -1,9 +1,9 @@
 MoarVM
-2016.02-31-g14ae31e
+2016.02-32-g79dce11
 Rakudo
-2016.02-139-g7358690
+2016.02-142-gb6f3ecd
 NQP
-2016.02-49-g0ccafe5
+2016.02-50-g95b9baf
 modules
 --------
 Bailador
@@ -53,11 +53,11 @@ Date:   Sat Feb 6 19:15:17 2016 -0600
     Use META6.json as our canonical meta file
 --------
 MODULES.txt
-commit 4b44be8f035e593d553110ce1885cc45b29181c4
-Author: Tobias Leich <email@froggs.de>
-Date:   Fri Feb 12 11:15:22 2016 +0100
+commit 41981e7bbbb1f424ad053e791c7c279ca6690d2c
+Author: Moritz Lenz <moritz@faui2k3.org>
+Date:   Sun Mar 13 20:00:54 2016 +0000
 
-    fix typo
+    Attempt to fix Makefile when installed with -j4
 --------
 PSGI
 commit 624b70f4abac85d743870fc2bbab5da8fcf41f8b
@@ -150,11 +150,22 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit be1f0cca4245edca6a56cdc19c793b763aa28353
-Author: Siavash Askari Nasr <siavash.askari.nasr@gmail.com>
-Date:   Sat Mar 12 16:00:48 2016 +0330
+commit 2807db5beae0553171750f4b0041cd3ed3b87067
+Merge: dcd7218 775f029
+Author: Brock Wilcox <awwaiid@thelackthereof.org>
+Date:   Sun Mar 13 12:56:20 2016 -0400
 
-    Add missing commas for can-ok
+    Merge pull request #421 from perl6/pipeline-operators
+    
+    Add documentation for pipeline operators
+
+commit 775f0298021f34fbe159da1e1bb19d122294d950
+Author: Brock Wilcox <awwaiid@thelackthereof.org>
+Date:   Sun Mar 13 12:35:57 2016 -0400
+
+    Add documentation for pipeline operators
+    
+    I left out ==>> and <<== since they are not implemented in Rakudo.
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

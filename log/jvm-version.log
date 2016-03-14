@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.4) (7u95-2.6.4-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.95-b01, mixed mode)
 Rakudo
-2016.02-142-gb6f3ecd
+2016.02-148-ga647a05
 NQP
-2016.02-50-g95b9baf
+2016.02-58-g467f2fc
 modules
 --------
 Bailador
@@ -150,20 +150,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 4db9cef78d1565f38c0f9039d416329d4d7b3431
-Merge: 2807db5 9538b1e
-Author: Tobias Leich <email@froggs.de>
-Date:   Sun Mar 13 21:25:50 2016 +0100
+commit 8ff5d14fbf5076b754c0e87a5c9593fdabfb4bad
+Author: Jake Russo <madcap.russo@gmail.com>
+Date:   Mon Mar 14 13:54:17 2016 -0500
 
-    Merge pull request #422 from Emeric54/patch-1
-    
-    Replace a dead link
-
-commit 9538b1e04422a24c3e3a2165cd825d171b567bca
-Author: Emeric54 <fischer.emeric@gmail.com>
-Date:   Sun Mar 13 21:18:55 2016 +0100
-
-    new link
+    A few spelling adjustments
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -249,14 +240,26 @@ Date:   Thu Mar 10 10:42:26 2016 -0600
     Set directory permissions upon creation
 --------
 p6-Template-Mustache
-commit 223a8fb24732a7869279de3a42b465407644fe8e
+commit a785e401d198209c13a52cd1412f61fff1754158
+Merge: 223a8fb 58e8388
 Author: Tim Smith <tim.dolores@gmail.com>
-Date:   Sat Oct 17 22:30:59 2015 -0600
+Date:   Mon Mar 14 13:00:49 2016 -0600
 
-    Switch from LGPL to Artistic 2.0
+    Merge pull request #13 from daleevans/patch-1
     
-    No big reason here, but Artistic is conventional for Perl modules.
-    [ci skip]
+    make META.info spec compliant
+
+commit 58e838835a5c6715aa3580ea7484e2427a652840
+Author: Dale Evans <dale.evans@mycanadapayday.com>
+Date:   Sat Jan 9 21:48:35 2016 -0800
+
+    make META.info spec compliant
+    
+    the leading v in the perl version has been deprecated
+    
+    this is a build message: "Please remove leading 'v' from perl version in Template::Mustache's meta info."
+    
+    and there's no author attribute in the spec right now, it's just authors
 --------
 p6-file-directory-tree
 commit 9970d80c0404f640eeda3c623c39a13496c9a0b2

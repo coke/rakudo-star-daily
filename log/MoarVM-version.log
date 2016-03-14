@@ -1,9 +1,9 @@
 MoarVM
-2016.02-32-g79dce11
+2016.02-33-g1e3d2ac
 Rakudo
-2016.02-142-gb6f3ecd
+2016.02-148-ga647a05
 NQP
-2016.02-50-g95b9baf
+2016.02-58-g467f2fc
 modules
 --------
 Bailador
@@ -150,22 +150,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 2807db5beae0553171750f4b0041cd3ed3b87067
-Merge: dcd7218 775f029
-Author: Brock Wilcox <awwaiid@thelackthereof.org>
-Date:   Sun Mar 13 12:56:20 2016 -0400
+commit 8ff5d14fbf5076b754c0e87a5c9593fdabfb4bad
+Author: Jake Russo <madcap.russo@gmail.com>
+Date:   Mon Mar 14 13:54:17 2016 -0500
 
-    Merge pull request #421 from perl6/pipeline-operators
-    
-    Add documentation for pipeline operators
-
-commit 775f0298021f34fbe159da1e1bb19d122294d950
-Author: Brock Wilcox <awwaiid@thelackthereof.org>
-Date:   Sun Mar 13 12:35:57 2016 -0400
-
-    Add documentation for pipeline operators
-    
-    I left out ==>> and <<== since they are not implemented in Rakudo.
+    A few spelling adjustments
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -251,14 +240,26 @@ Date:   Thu Mar 10 10:42:26 2016 -0600
     Set directory permissions upon creation
 --------
 p6-Template-Mustache
-commit 223a8fb24732a7869279de3a42b465407644fe8e
+commit a785e401d198209c13a52cd1412f61fff1754158
+Merge: 223a8fb 58e8388
 Author: Tim Smith <tim.dolores@gmail.com>
-Date:   Sat Oct 17 22:30:59 2015 -0600
+Date:   Mon Mar 14 13:00:49 2016 -0600
 
-    Switch from LGPL to Artistic 2.0
+    Merge pull request #13 from daleevans/patch-1
     
-    No big reason here, but Artistic is conventional for Perl modules.
-    [ci skip]
+    make META.info spec compliant
+
+commit 58e838835a5c6715aa3580ea7484e2427a652840
+Author: Dale Evans <dale.evans@mycanadapayday.com>
+Date:   Sat Jan 9 21:48:35 2016 -0800
+
+    make META.info spec compliant
+    
+    the leading v in the perl version has been deprecated
+    
+    this is a build message: "Please remove leading 'v' from perl version in Template::Mustache's meta info."
+    
+    and there's no author attribute in the spec right now, it's just authors
 --------
 p6-file-directory-tree
 commit 9970d80c0404f640eeda3c623c39a13496c9a0b2

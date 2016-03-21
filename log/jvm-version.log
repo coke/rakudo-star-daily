@@ -1,9 +1,9 @@
 OpenJDK Runtime Environment (IcedTea 2.6.4) (7u95-2.6.4-1~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.95-b01, mixed mode)
 Rakudo
-2016.02-194-g5eaa15d
+2016.02-200-g54ce66e
 NQP
-2016.03
+2016.03-8-g183c972
 modules
 --------
 Bailador
@@ -23,11 +23,58 @@ Date:   Wed Mar 9 20:47:57 2016 -0300
     travis: testing only on stable and latest perl 6 releases
 --------
 DBIish
-commit bf21be9f72d6fc39b7000abd76cbe6b57729697e
+commit f174fa63c996706780c3dd7b86f094299248b3d8
+Merge: bf21be9 19cbc75
 Author: Salvador Ortiz <sog@msg.com.mx>
-Date:   Wed Mar 16 21:31:13 2016 -0600
+Date:   Sun Mar 20 19:37:34 2016 -0600
 
-    Hide some frames of the error handling path
+    Merge pull request #56 from perl6/myGLR
+    
+    GLRish for DBDish
+
+commit 19cbc75cd08eb923f2d94599503d1ed8d019b8cc
+Author: Salvador Ortiz <sog@msg.com.mx>
+Date:   Sat Mar 19 23:56:50 2016 -0600
+
+    Retab only
+
+commit 38fdc10c516d991d32d0cbfe6cfac53c39107c24
+Author: Salvador Ortiz <sog@msg.com.mx>
+Date:   Sat Mar 19 23:51:57 2016 -0600
+
+    Remove remaining trailing zero
+
+commit 4ae1c574752db69f575ef891fd2e910395d49c50
+Author: Salvador Ortiz <sog@msg.com.mx>
+Date:   Sat Mar 19 04:21:27 2016 -0600
+
+    Bump to v0.5.0
+    
+    DBDish's changes deserve the version incremented.
+
+commit d20be30e1b2c96cdfc639781480f6f885daa713e
+Author: Salvador Ortiz <sog@msg.com.mx>
+Date:   Sat Mar 19 04:17:52 2016 -0600
+
+    Simplify drivers for post GLR role
+
+commit 3849814c551e47e6158bf5bf4ed4ffb312434a25
+Author: Salvador Ortiz <sog@msg.com.mx>
+Date:   Sat Mar 19 03:26:38 2016 -0600
+
+    The GLR of DBDIsh. $sth.allrows now returns Seq
+    
+    Fetching rows is now lazy, plus:
+    - named ':hash' of .row method is now implemented by the role.
+    - legacy '.fetchrow' requirement removed from drivers, a simple one
+      implement by the role.
+    - Allows driver's ._row method return a simple list of typed values
+
+commit 0055e683e56e8ffb62933c1884833d50a220fb2b
+Author: Salvador Ortiz <sog@msg.com.mx>
+Date:   Sat Mar 19 03:21:39 2016 -0600
+
+    GLR test target
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -233,11 +280,20 @@ Date:   Fri Dec 11 20:09:16 2015 -0500
     Update docs for %?RESOURCES
 --------
 p6-File-Temp
-commit ef3187b162308d9b628526acead79da3a478b90c
-Author: Jonathan Scott Duff <duff@pobox.com>
-Date:   Thu Mar 10 10:42:26 2016 -0600
+commit 11cf08f6a64aad19b9b60793200f212a8dcb48be
+Merge: ef3187b b7d32a6
+Author: Jonathan Scott Duff <perlpilot@pobox.com>
+Date:   Mon Mar 21 12:22:34 2016 -0500
 
-    Set directory permissions upon creation
+    Merge pull request #17 from Emeric54/master
+    
+    tests
+
+commit b7d32a6c421584a5ce06ccc43eaee4e0f72cfcb1
+Author: Emeric54 <fischer.emeric@gmail.com>
+Date:   Sat Mar 19 22:21:43 2016 +0100
+
+    tests
 --------
 p6-Template-Mustache
 commit a785e401d198209c13a52cd1412f61fff1754158

@@ -1,33 +1,54 @@
 MoarVM
-2016.03-78-gbccdea1
+2016.03-79-g9c885bc
 Rakudo
-2016.03-51-g5bd1e96
+2016.03-62-g7d4b3a3
 NQP
-2016.03-35-g48fd5f9
+2016.03-38-gb403469
 modules
 --------
 Bailador
-commit a471c8efaaf0f39f1a3d6e315605842322f39abf
-Merge: 8402780 a6b168e
+commit 9ecabd32a0fcb8d958e4313b51850408d29e65b2
+Merge: a471c8e 5a78783
 Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Thu Mar 10 10:08:17 2016 +0100
+Date:   Thu Mar 31 18:55:43 2016 +0200
 
-    Merge pull request #46 from garu/garu/travis-on-stable-version
+    Merge pull request #50 from garu/garu/improving_requests
     
-    travis: testing only on stable and latest perl 6 releases
+    incrementing Bailador::Request
 
-commit a6b168ea9bb8abf1d432cf754c11bd0ed31c6921
+commit 5a78783ade8810a48bce67a6f2d5984e2ef42209
 Author: Breno G. de Oliveira <garu@cpan.org>
-Date:   Wed Mar 9 20:47:57 2016 -0300
+Date:   Thu Mar 31 13:46:22 2016 -0300
 
-    travis: testing only on stable and latest perl 6 releases
+    making a more idiomatic substitution
+
+commit e508dad10b46771d69989e954f52d9e6a79951f6
+Author: Breno G. de Oliveira <garu@cpan.org>
+Date:   Sun Mar 20 13:19:01 2016 -0300
+
+    testing for defined instead of char count
+
+commit fc889ce4edca5328f7d3f894f7a4438ce1633e53
+Author: Breno G. de Oliveira <garu@cpan.org>
+Date:   Sun Mar 20 12:38:59 2016 -0300
+
+    header keys should be case insensitive
+
+commit 097b34a549f53e1a5d0a0456b6e8df45e6eca2b2
+Author: Breno G. de Oliveira <garu@cpan.org>
+Date:   Sun Mar 20 03:04:34 2016 -0300
+
+    incrementing Bailador::Request
+    
+    This commit implements some missing methods from Dancer2::Request,
+    fixes an issue with request parameter parsing and adds tests.
 --------
 DBIish
-commit 666635dc93341846ce81e300187d4325796a0f7c
+commit 91594d76aaca9288f492469fca5739586f03c2bc
 Author: Alexander Hartmaier <abraxxa@cpan.org>
-Date:   Wed Mar 30 21:07:23 2016 +0200
+Date:   Thu Mar 31 12:16:41 2016 +0200
 
-    fix mode of t/36-pg-array.t
+    fix typo
 --------
 Grammar-Profiler-Simple
 commit f828d80e3774a5c81033027e8d8be4f66d1e7db1
@@ -159,12 +180,14 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit a256055401f2d77858d2af7c37d8c8910278f4fd
-Author: Wenzel P. P. Peppmeyer <wenzel.peppmeyer@gmx.de>
-Date:   Wed Mar 30 16:44:04 2016 +0200
+commit 7658f8a00365a0363a10b6c52e1aaf8c0f90c5a8
+Author: Timo Paulssen <timonator@perpetuum-immobile.de>
+Date:   Thu Mar 31 19:11:41 2016 +0200
 
-    the renderer doesn't like C<I<foo>>, trying I<C<foo>> what is righter
-    anyways
+    remove section "Process lazily" that looks a bit bit-rotted
+    
+    anyone can feel free to write up a new version of this
+    with a more up-to-date and correct example, though.
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83

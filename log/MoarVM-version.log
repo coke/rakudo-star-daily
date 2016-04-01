@@ -1,47 +1,10 @@
 MoarVM
-2016.03-79-g9c885bc
+2016.03-84-g4afd7b6
 Rakudo
-2016.03-62-g7d4b3a3
+2016.03-72-ga87fb43
 NQP
-2016.03-38-gb403469
+2016.03-50-g512c9a1
 modules
---------
-Bailador
-commit 9ecabd32a0fcb8d958e4313b51850408d29e65b2
-Merge: a471c8e 5a78783
-Author: Tadeusz Sośnierz <tadeusz.sosnierz@onet.pl>
-Date:   Thu Mar 31 18:55:43 2016 +0200
-
-    Merge pull request #50 from garu/garu/improving_requests
-    
-    incrementing Bailador::Request
-
-commit 5a78783ade8810a48bce67a6f2d5984e2ef42209
-Author: Breno G. de Oliveira <garu@cpan.org>
-Date:   Thu Mar 31 13:46:22 2016 -0300
-
-    making a more idiomatic substitution
-
-commit e508dad10b46771d69989e954f52d9e6a79951f6
-Author: Breno G. de Oliveira <garu@cpan.org>
-Date:   Sun Mar 20 13:19:01 2016 -0300
-
-    testing for defined instead of char count
-
-commit fc889ce4edca5328f7d3f894f7a4438ce1633e53
-Author: Breno G. de Oliveira <garu@cpan.org>
-Date:   Sun Mar 20 12:38:59 2016 -0300
-
-    header keys should be case insensitive
-
-commit 097b34a549f53e1a5d0a0456b6e8df45e6eca2b2
-Author: Breno G. de Oliveira <garu@cpan.org>
-Date:   Sun Mar 20 03:04:34 2016 -0300
-
-    incrementing Bailador::Request
-    
-    This commit implements some missing methods from Dancer2::Request,
-    fixes an issue with request parameter parsing and adds tests.
 --------
 DBIish
 commit 91594d76aaca9288f492469fca5739586f03c2bc
@@ -74,20 +37,11 @@ Date:   Sat Feb 6 19:15:17 2016 -0600
     Use META6.json as our canonical meta file
 --------
 MODULES.txt
-commit 55c7d9fc8404de89ce6380452b5cb0bef9f6f743
-Merge: 41981e7 e5e742e
-Author: lizmat <liz@dijkmat.nl>
-Date:   Fri Mar 25 13:20:43 2016 +0100
+commit b2cbb4e7d75f875af9c71ae51534c6e74c9f1f09
+Author: Steve Mynott <steve.mynott@gmail.com>
+Date:   Fri Apr 1 18:25:14 2016 +0100
 
-    Merge pull request #66 from hankache/master
-    
-    update perl6intro
-
-commit e5e742ea663f91b9da3ff7eee455df79d4063ad0
-Author: Naoum Hankache <naoum88@gmail.com>
-Date:   Fri Mar 25 09:09:31 2016 +0200
-
-    update perl6intro
+    remove Bailador directory
 --------
 PSGI
 commit 624b70f4abac85d743870fc2bbab5da8fcf41f8b
@@ -180,14 +134,11 @@ Date:   Mon Sep 14 16:56:20 2015 +0200
     Switch to renamed Terminal::ANSIColor
 --------
 doc
-commit 7658f8a00365a0363a10b6c52e1aaf8c0f90c5a8
-Author: Timo Paulssen <timonator@perpetuum-immobile.de>
-Date:   Thu Mar 31 19:11:41 2016 +0200
+commit f711a3a9360bd822bcf76c4f920635b73fec4bd9
+Author: Wenzel P. P. Peppmeyer <wenzel.peppmeyer@gmx.de>
+Date:   Thu Mar 31 23:46:32 2016 +0200
 
-    remove section "Process lazily" that looks a bit bit-rotted
-    
-    anyone can feel free to write up a new version of this
-    with a more up-to-date and correct example, though.
+    X<C<foo>|foo> requires the alternate name
 --------
 file-find
 commit d3e2be709aeb2479dc02b154fdc179fe7a077d83
@@ -311,11 +262,13 @@ Date:   Sat Dec 19 01:49:33 2015 -0800
     Add Travis CI
 --------
 panda
-commit cd3fadef8b38c4f3945dfe30de00f21e0d2a81cf
-Author: Paul Cochrane <paul@liekut.de>
-Date:   Sat Mar 12 16:00:55 2016 +0100
+commit 2beabe8745c1a0052c2c25c268b39cfc039b691a
+Author: Stefan Seifert <nine@detonation.org>
+Date:   Fri Apr 1 20:59:01 2016 +0200
 
-    Minor textual improvements to README
+    Fix issues with paths containing spaces
+    
+    Fixes GH #302
 --------
 perl6-digest-md5
 commit 41dc67c08d417cf395939a2a546829ff1fe30a81
@@ -334,6 +287,13 @@ Date:   Wed Nov 25 22:51:16 2015 -0500
     Updated to conform to new newline handling
     
     This stops the test from breaking on windows due to automatic conversion of "\n" to "\r\n"
+--------
+perl6-file-which
+commit 763568245a2d40831322084d22c67e3fe64e2785
+Author: Ahmad M. Zawawi <ahmad.zawawi@gmail.com>
+Date:   Thu Mar 31 10:18:32 2016 +0200
+
+    More documentation
 --------
 perl6-http-easy
 commit 15659be138eac87be3c1865a1ee2989a0fb11a3d
@@ -444,23 +404,6 @@ Author: laben <labensigma@gmail.com>
 Date:   Sun Aug 30 20:09:25 2015 +0200
 
     Adjust code for glr
---------
-ufo
-commit 425ba45fed64644788fdf6b0997ef1c4a807e3b6
-Merge: 915a2ae 5966dbe
-Author: Carl Mäsak <cmasak@gmail.com>
-Date:   Thu Nov 12 13:51:27 2015 +0100
-
-    Merge pull request #29 from andreoss/master
-    
-    Fix .buildrule for GLR.
-
-commit 5966dbea10301a240c6a6d40427ec00582666663
-Author: andreoss <andreoss@sdf.org>
-Date:   Fri Nov 6 03:02:13 2015 -0500
-
-    Fix .buildrule for GLR.
-    .map returs a Seq, use hyper op instead.
 --------
 uri
 commit 2e78b6c1ccf5795ab95b883244a7fb4dc9e12629
